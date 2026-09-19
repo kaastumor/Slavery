@@ -91,50 +91,50 @@ def extract_global_evidence(sheet_rows: dict[str, list[list[Any]]]) -> list[dict
 
 
 POSITIVE_PLAN: dict[str, dict[str, Any]] = {
-    "v0.4.7 Evidence!5": {
+    "v0.4.7 Evidence!4": {
         "spatial_type": "polity",
         "targets": [{"kind": "territorial_practice", "practice_type": "slavery_enslavement", "coverage_state": "classified", "classification_status": "strong workbook classification"}],
     },
-    "v0.4.7 Evidence!6": {
+    "v0.4.7 Evidence!5": {
         "spatial_type": "region",
         "targets": [{"kind": "territorial_practice", "practice_type": "slavery_enslavement", "coverage_state": "classified", "classification_status": "strong compound regional classification; geometry unresolved"}],
     },
-    "v0.4.7 Evidence!7": {
+    "v0.4.7 Evidence!6": {
         "spatial_type": "region",
         "targets": [{"kind": "external_participation", "participation_type": "trade_route", "role_text": "slave-trade / captive-movement route"}],
     },
-    "v0.4.7 Evidence!8": {
+    "v0.4.7 Evidence!7": {
         "spatial_type": "region",
         "targets": [
             {"kind": "territorial_practice", "practice_type": "slavery_enslavement", "coverage_state": "classified", "classification_status": "strong workbook classification"},
             {"kind": "legal_event", "event_type": "suppression_restrictions", "legal_status_after": "mixed_conflicting_or_subnational", "scope": "piecemeal restrictions on markets and trade routes; not a single clean abolition date"},
         ],
     },
-    "v0.4.7 Evidence!9": {
+    "v0.4.7 Evidence!8": {
         "spatial_type": "region",
         "targets": [{"kind": "territorial_practice", "practice_type": "state_forced_labour", "coverage_state": "classified", "classification_status": "strong workbook classification"}],
     },
-    "v0.4.7 Evidence!10": {
+    "v0.4.7 Evidence!8": {
         "spatial_type": "polity",
         "targets": [{"kind": "territorial_practice", "practice_type": "penal_labour", "coverage_state": "classified", "classification_status": "strong workbook classification; not chattel slavery"}],
     },
-    "v0.4.7 Evidence!11": {
+    "v0.4.7 Evidence!10": {
         "spatial_type": "polity",
         "targets": [{"kind": "territorial_practice", "practice_type": "state_forced_labour", "coverage_state": "classified", "classification_status": "forced labour secure; possible slavery/servitude language retained as qualification"}],
     },
-    "v0.4.7 Evidence!12": {
+    "v0.4.7 Evidence!11": {
         "spatial_type": "region",
         "targets": [{"kind": "territorial_practice", "practice_type": "forced_labour", "coverage_state": "reviewed", "classification_status": "current rights evidence with contested/alleged elements"}],
     },
-    "v0.4.7 Evidence!13": {
+    "v0.4.7 Evidence!12": {
         "spatial_type": "polity",
         "targets": [{"kind": "territorial_practice", "practice_type": "debt_bondage", "coverage_state": "classified", "classification_status": "strong workbook classification"}],
     },
-    "v0.4.7 Evidence!14": {
+    "v0.4.7 Evidence!13": {
         "spatial_type": "region",
         "targets": [{"kind": "territorial_practice", "practice_type": "debt_bondage", "coverage_state": "classified", "classification_status": "strong workbook classification"}],
     },
-    "v0.4.8 Evidence!5": {
+    "v0.4.8 Evidence!4": {
         "spatial_type": "region",
         "from_year": 1933,
         "to_year": 1945,
@@ -142,11 +142,11 @@ POSITIVE_PLAN: dict[str, dict[str, Any]] = {
         "temporal_precision": "year_range",
         "targets": [{"kind": "territorial_practice", "practice_type": "state_forced_labour", "coverage_state": "classified", "classification_status": "strong workbook classification"}],
     },
-    "v0.4.8 Evidence!6": {
+    "v0.4.8 Evidence!5": {
         "spatial_type": "region",
         "targets": [{"kind": "territorial_practice", "practice_type": "forced_labour", "coverage_state": "classified", "classification_status": "strong contemporary regional classification"}],
     },
-    "v0.4.8 Evidence!7": {
+    "v0.4.8 Evidence!6": {
         "spatial_type": "region",
         "from_year": 2014,
         "to_year": None,
@@ -158,11 +158,11 @@ POSITIVE_PLAN: dict[str, dict[str, Any]] = {
             {"kind": "external_participation", "participation_type": "slave_trade_network", "role_text": "sale / transfer of enslaved Yazidi women and girls"},
         ],
     },
-    "v0.4.9 Evidence!5": {
+    "v0.4.9 Evidence!4": {
         "spatial_type": "region",
         "targets": [{"kind": "territorial_practice", "practice_type": "slavery_enslavement", "coverage_state": "classified", "classification_status": "slavery secure; status internally differentiated"}],
     },
-    "v0.4.9 Evidence!6": {
+    "v0.4.9 Evidence!5": {
         "spatial_type": "polity",
         "from_year": -2129,
         "to_year": -2109,
@@ -170,18 +170,18 @@ POSITIVE_PLAN: dict[str, dict[str, Any]] = {
         "temporal_precision": "approximate_range",
         "targets": [{"kind": "external_participation", "participation_type": "slave_trade_network", "role_text": "captive/slave influx, export, purchase, tribute and gifting network"}],
     },
-    "v0.4.9 Evidence!9": {
+    "v0.4.9 Evidence!8": {
         "spatial_type": "region",
         "targets": [{"kind": "territorial_practice", "practice_type": "other_servile_dependency", "coverage_state": "reviewed", "classification_status": "provisional; dāsa/dāsī terminology semantically unstable"}],
     },
-    "v0.4.9 Evidence!11": {
+    "v0.4.9 Evidence!10": {
         "spatial_type": "polity",
         "targets": [
             {"kind": "territorial_practice", "practice_type": "captive_taking_incorporation", "coverage_state": "reviewed", "classification_status": "captivity/sacrifice secure; not itself proof of slave society"},
             {"kind": "territorial_practice", "practice_type": "slavery_enslavement", "coverage_state": "disputed", "classification_status": "disputed interpretation of captives as slaves"},
         ],
     },
-    "v0.5.0 Evidence!5": {
+    "v0.5.0 Evidence!4": {
         "spatial_type": "region",
         "targets": [{"kind": "territorial_practice", "practice_type": "other_servile_dependency", "coverage_state": "reviewed", "classification_status": "provisional linguistic reconstruction; no high-intensity inference"}],
     },
