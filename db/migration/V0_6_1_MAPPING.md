@@ -142,47 +142,47 @@ Row keys below use the importer's preserved **logical row sequence** (blank work
 
 | Workbook row | Area | Legacy | Semantic target |
 |---|---|---:|---|
-| v0.4.7!5 | Carolingian Empire | S | territorial practice: `slavery_enslavement` |
-| v0.4.7!6 | Anglo-Saxon England / Northern Europe | S | territorial practice: `slavery_enslavement`; preserve compound spatial scope and unresolved geometry |
-| v0.4.7!7 | Eastern Europe / Baltic–Black Sea networks | S | external participation: `trade_route` / slave-trade network; **not** territorial prevalence |
-| v0.4.7!8 | Ottoman Middle East | S | split: territorial `slavery_enslavement` + legal/suppression event |
-| v0.4.7!9 | Soviet Kazakhstan / Central Asia | S | territorial practice: `state_forced_labour` |
-| v0.4.7!10 | People's Republic of China, early decades | S | territorial practice: `penal_labour` |
-| v0.4.7!11 | DPRK | S | territorial practice: `state_forced_labour`; possible slavery language remains a qualification, not a second automatic classification |
-| v0.4.7!12 | Xinjiang / China | S | territorial practice candidate: `forced_labour`; retain contested/current-rights qualification |
-| v0.4.7!13 | Brazil | S | territorial practice: `debt_bondage` |
-| v0.4.7!14 | Peruvian Amazon | S | territorial practice: `debt_bondage` |
-| v0.4.8!5 | Nazi Germany and occupied Europe, 1933–1945 | S | territorial practice: `state_forced_labour` |
-| v0.4.8!6 | Europe and Central Asia, contemporary | S | territorial practice: `forced_labour` |
-| v0.4.8!7 | Iraq/Syria under ISIL, Yazidi population from 2014 | S | split: territorial `slavery_enslavement`, `sexual_slavery`, and external/network `slave_trade_network`; forced-labour wording retained in notes pending finer review |
-| v0.4.9!5 | Mycenaean Greece (Pylos/Knossos) | S | territorial practice: `slavery_enslavement`; preserve internally differentiated status note |
-| v0.4.9!6 | Anshan / Elam, c. 2130–2110 BCE | P | external participation: `slave_trade_network`; no territorial prevalence claim |
-| v0.4.9!9 | Vedic-period South Asia | P | territorial practice candidate: `other_servile_dependency`; terminology uncertainty preserved |
-| v0.4.9!11 | Shang China | D | split: secure `captive_taking_incorporation` context + disputed `slavery_enslavement` interpretation; no P-level |
-| v0.5.0!5 | Late Proto-Indo-European / Early Bronze Age Europe | P | territorial/regional practice candidate: `other_servile_dependency`; provisional linguistic reconstruction, no high-intensity inference |
+| v0.4.7 Evidence!4 | Carolingian Empire | S | territorial practice: `slavery_enslavement` |
+| v0.4.7 Evidence!5 | Anglo-Saxon England / Northern Europe | S | territorial practice: `slavery_enslavement`; preserve compound spatial scope and unresolved geometry |
+| v0.4.7 Evidence!6 | Eastern Europe / Baltic–Black Sea networks | S | external participation: `trade_route` / slave-trade network; **not** territorial prevalence |
+| v0.4.7 Evidence!7 | Ottoman Middle East | S | split: territorial `slavery_enslavement` + legal/suppression event |
+| v0.4.7 Evidence!8 | Soviet Kazakhstan / Central Asia | S | territorial practice: `state_forced_labour` |
+| v0.4.7 Evidence!9 | People's Republic of China, early decades | S | territorial practice: `penal_labour` |
+| v0.4.7 Evidence!10 | DPRK | S | territorial practice: `state_forced_labour`; possible slavery language remains a qualification, not a second automatic classification |
+| v0.4.7 Evidence!11 | Xinjiang / China | S | territorial practice candidate: `forced_labour`; retain contested/current-rights qualification |
+| v0.4.7 Evidence!12 | Brazil | S | territorial practice: `debt_bondage` |
+| v0.4.7 Evidence!13 | Peruvian Amazon | S | territorial practice: `debt_bondage` |
+| v0.4.8 Evidence!4 | Nazi Germany and occupied Europe, 1933–1945 | S | territorial practice: `state_forced_labour` |
+| v0.4.8 Evidence!5 | Europe and Central Asia, contemporary | S | territorial practice: `forced_labour` |
+| v0.4.8 Evidence!6 | Iraq/Syria under ISIL, Yazidi population from 2014 | S | split: territorial `slavery_enslavement`, `sexual_slavery`, and external/network `slave_trade_network`; forced-labour wording retained in notes pending finer review |
+| v0.4.9 Evidence!4 | Mycenaean Greece (Pylos/Knossos) | S | territorial practice: `slavery_enslavement`; preserve internally differentiated status note |
+| v0.4.9 Evidence!5 | Anshan / Elam, c. 2130–2110 BCE | P | external participation: `slave_trade_network`; no territorial prevalence claim |
+| v0.4.9 Evidence!8 | Vedic-period South Asia | P | territorial practice candidate: `other_servile_dependency`; terminology uncertainty preserved |
+| v0.4.9 Evidence!10 | Shang China | D | split: secure `captive_taking_incorporation` context + disputed `slavery_enslavement` interpretation; no P-level |
+| v0.5.0 Evidence!4 | Late Proto-Indo-European / Early Bronze Age Europe | P | territorial/regional practice candidate: `other_servile_dependency`; provisional linguistic reconstruction, no high-intensity inference |
 
 ### Researched-inconclusive rows
 
 The following rows create no positive historical practice claim. Their exact source versions are attached to the matching research-coverage assessment through `audit.research_coverage_source`.
 
-- v0.4.8!8 — Prehistoric / Iron Age Southeast Asia
-- v0.4.8!9 — Early West/Central African societies, 1000–1 BCE
-- v0.4.8!10 — Early northeastern/eastern African societies, 1000–1 BCE
-- v0.4.9!7 — Middle Elam / Susa–Anshan
-- v0.4.9!8 — Indus Civilization
-- v0.4.9!10 — Longshan / Erlitou transition
-- v0.4.9!12 — Formative Mesoamerica
-- v0.4.9!13 — Proto-Oceanic / Lapita societies, 1000–1 BCE
-- v0.5.0!6 — Neolithic mainland/island Southeast Asia
-- v0.5.0!7 — Neolithic–Bronze Age Southeast Asia
-- v0.5.0!8 — Early West/Central African societies, 3000–2001 BCE
-- v0.5.0!9 — Early West/Central African societies, 2000–1001 BCE
-- v0.5.0!10 — Northeastern / eastern African societies, 3000–2001 BCE
-- v0.5.0!11 — Northeastern / eastern African societies, 2000–1001 BCE
-- v0.5.0!12 — Archaic / early Formative Americas
-- v0.5.0!13 — Early Formative Americas
-- v0.5.0!14 — Near Oceania before Lapita expansion
-- v0.5.0!15 — Lapita / Proto-Oceanic world, 2000–1001 BCE
+- v0.4.8 Evidence!7 — Prehistoric / Iron Age Southeast Asia
+- v0.4.8 Evidence!8 — Early West/Central African societies, 1000–1 BCE
+- v0.4.8 Evidence!9 — Early northeastern/eastern African societies, 1000–1 BCE
+- v0.4.9 Evidence!6 — Middle Elam / Susa–Anshan
+- v0.4.9 Evidence!7 — Indus Civilization
+- v0.4.9 Evidence!9 — Longshan / Erlitou transition
+- v0.4.9 Evidence!11 — Formative Mesoamerica
+- v0.4.9 Evidence!12 — Proto-Oceanic / Lapita societies, 1000–1 BCE
+- v0.5.0 Evidence!5 — Neolithic mainland/island Southeast Asia
+- v0.5.0 Evidence!6 — Neolithic–Bronze Age Southeast Asia
+- v0.5.0 Evidence!7 — Early West/Central African societies, 3000–2001 BCE
+- v0.5.0 Evidence!8 — Early West/Central African societies, 2000–1001 BCE
+- v0.5.0 Evidence!9 — Northeastern / eastern African societies, 3000–2001 BCE
+- v0.5.0 Evidence!10 — Northeastern / eastern African societies, 2000–1001 BCE
+- v0.5.0 Evidence!11 — Archaic / early Formative Americas
+- v0.5.0 Evidence!12 — Early Formative Americas
+- v0.5.0 Evidence!13 — Near Oceania before Lapita expansion
+- v0.5.0 Evidence!14 — Lapita / Proto-Oceanic world, 2000–1001 BCE
 
 ### Temporal handling
 
