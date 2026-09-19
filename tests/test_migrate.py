@@ -12,7 +12,7 @@ class MigrationRunnerTests(unittest.TestCase):
         names = [p.name for p in discover()]
         self.assertEqual(names[0], "0001_bootstrap.sql")
         self.assertEqual(names[-1], "0012_publish_map_geometry_land_clip.sql")
-        self.assertEqual(len(names), 11)
+        self.assertEqual(len(names), 12)
 
     def test_legacy_transaction_wrappers_are_removed(self):
         for path in discover():
