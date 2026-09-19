@@ -1,7 +1,7 @@
 # Database Schema Implementation — Foundation v0.3
 
 **Status:** executable migration package created; live PostgreSQL/PostGIS execution pending.  
-**Schema draft:** draft-0.10.  
+**Schema draft:** draft-0.11.  
 **Canonical data:** remains v0.6.1 workbook.
 
 ## What this implementation adds
@@ -44,7 +44,7 @@ This correction prevents a provenance model that would attach ownership facts to
 
 This environment has no PostgreSQL server, so the migrations have not been executed. Runtime validation must verify:
 
-1. migrations 0001–0011 execute cleanly on the chosen PostgreSQL/PostGIS version;
+1. migrations 0001–0012 execute cleanly on the chosen PostgreSQL/PostGIS version;
 2. `001_schema_smoke.sql` passes;
 3. the v0.6.1 importer creates the expected crosswalks;
 4. `002_v061_reconciliation.sql` passes;
