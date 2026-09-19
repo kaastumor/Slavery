@@ -1,6 +1,6 @@
 # Development Environment
 
-**Status:** reproducible development environment prepared; live PostgreSQL/PostGIS execution still required.
+**Status:** reproducible development environment prepared; core PostgreSQL/PostGIS CI has executed successfully. Exact canonical-release import/reconciliation remains artifact-gated.
 
 ## Purpose
 
@@ -10,12 +10,14 @@ The environment contains:
 
 - PostgreSQL 17 + PostGIS 3.5 in Docker;
 - Python 3.12 migration/import tooling in Docker;
-- the immutable v0.6.1 canonical workbook under `data/releases/v0.6.1/`;
+- release metadata/checksums under `data/releases/`;
 - checksum-enforced SQL migration tracking;
 - schema, importer, reconciliation and non-Atlantic tests;
 - local backup/restore scripts;
 - GitHub Actions CI;
 - optional VS Code Dev Container support.
+
+The canonical v0.6.1 workbook binary is an external immutable release artifact. It is not stored as an ordinary Git blob. When supplied locally for release validation, its exact SHA-256 must match the committed release metadata.
 
 ## Environment boundaries
 
@@ -27,7 +29,9 @@ Data may be reset at any time. A successful local import does not make the datab
 
 ### CI
 
-Purpose: reproduce migrations/import/tests from a clean database on every proposed code/schema change.
+Purpose: reproduce migrations and foundation tests from a clean database on every proposed code/schema change.
+
+Foundation CI does not substitute synthetic data for the canonical workbook. Exact v0.6.1 import/reconciliation runs only when the checksum-matching artifact is explicitly supplied.
 
 CI is a validation gate, not durable storage.
 
@@ -60,7 +64,7 @@ The runner:
 
 The `atlas_meta` schema contains deployment/schema-history metadata, not historical research data.
 
-## One-command Windows setup
+## Windows bootstrap
 
 With Docker Desktop running:
 
@@ -68,9 +72,9 @@ With Docker Desktop running:
 .\scripts\bootstrap-dev.ps1
 ```
 
-This creates `.env` with a random local password, builds the tooling container, starts PostGIS, applies migrations, runs all current tests, imports v0.6.1 into the local development DB, runs reconciliation/non-Atlantic tests and creates a backup.
+The bootstrap always validates the database foundation. If the exact canonical v0.6.1 workbook is present at the expected local release path, it additionally verifies the checksum and runs the release-specific dry-run/import/reconciliation path.
 
-Re-run validation with:
+Re-run all currently available checks with:
 
 ```powershell
 .\scripts\verify-dev.ps1
@@ -78,8 +82,8 @@ Re-run validation with:
 
 ## Git / GitHub
 
-The private repository `kaastumor/Slavery` is the persistent engineering home. `main` is the integration branch; substantive changes should use short-lived branches and pull requests with CI before merge.
+The private repository `kaastumor/Slavery` is the persistent engineering home. `main` is the integration branch; substantive changes use short-lived branches and pull requests with CI before merge.
 
-The included GitHub Actions workflow runs the full foundation validation from a clean database. Repository-local generated output, `.env`, database dumps and local backups remain ignored. Canonical input releases under `data/releases/` are committed intentionally and checksum-locked.
+Repository-local generated output, `.env`, database dumps and local backups remain ignored. Git stores release manifests/checksums, not ordinary copies of canonical research binaries.
 
 GitHub integration is available to ChatGPT for repository-aware maintenance, issue/PR work and CI inspection.

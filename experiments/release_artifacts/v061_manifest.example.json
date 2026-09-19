@@ -1,0 +1,20 @@
+{
+  "release_version": "0.6.1",
+  "status": "canonical_external_workbook",
+  "schema_version": "workbook_v0.6.1",
+  "artifacts": [
+    {
+      "role": "canonical_input",
+      "filename": "Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx",
+      "sha256": "0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4",
+      "size_bytes": 57140,
+      "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "storage": {
+        "status": "external",
+        "locator": null
+      }
+    }
+  ],
+  "database_membership": [],
+  "notes": "v0.6.1 remains a workbook release. Database membership becomes mandatory for a future canonical database release."
+}
