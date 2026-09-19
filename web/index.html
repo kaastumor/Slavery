@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#171716" />
+    <meta name="theme-color" content="#1d211f" />
     <meta
       name="description"
       content="Historical Slavery Atlas: a time-aware evidence synthesis of slavery, coerced labour and servile dependency."
@@ -12,43 +12,56 @@
   </head>
   <body>
     <div id="app">
-      <header class="topbar">
+      <header class="appbar">
         <div class="brand">
-          <div class="eyebrow">Historical evidence atlas</div>
-          <h1>Historical Slavery Atlas</h1>
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <div class="eyebrow">Historical evidence atlas</div>
+            <h1>Historical Slavery Atlas</h1>
+          </div>
         </div>
 
         <div class="timeline">
-          <div class="timeline-heading">
-            <label for="year">Selected year</label>
+          <div class="timeline-topline">
+            <span class="timeline-label">Year</span>
             <output id="year-label" for="year">Loading…</output>
           </div>
           <input id="year" type="range" step="1" aria-label="Historical year" />
           <div id="timeline-range" class="timeline-range"></div>
         </div>
 
-        <div class="release-block">
+        <div class="app-status">
           <div id="release-badge" class="release-badge">Loading release…</div>
-          <div id="status" class="status">Loading published evidence…</div>
+          <div id="status" class="status">Loading evidence…</div>
         </div>
       </header>
 
-      <main class="layout">
+      <main class="workspace">
         <section class="map-shell" aria-label="Historical map">
           <div id="map"></div>
-          <div id="map-warning" class="map-warning" hidden>MapLibre reported a rendering error. Check the browser console for details.</div>
-          <div class="legend" aria-label="Map legend">
-            <div class="legend-title">Territorial practice</div>
-            <div class="legend-scale">
-              <span class="level level-1"></span><span>P1</span>
-              <span class="level level-2"></span><span>P2</span>
-              <span class="level level-3"></span><span>P3</span>
-              <span class="level level-4"></span><span>P4</span>
-            </div>
-            <div><span class="swatch disputed"></span>genuinely disputed classification</div>
-            <div><span class="swatch inactive"></span>geometry visible, evidence inactive</div>
-            <div class="legend-note">Intensity reflects reviewed P-levels, never source counts.</div>
+
+          <div id="map-warning" class="map-warning" hidden>
+            MapLibre reported a rendering error. Check the browser console for details.
           </div>
+
+          <div class="map-toolbar" aria-label="Map view controls">
+            <button id="fit-active" type="button" title="Fit all active evidence">Active evidence</button>
+            <button id="fit-world" type="button" title="Reset to world view">World</button>
+          </div>
+
+          <details class="legend">
+            <summary>Legend</summary>
+            <div class="legend-body">
+              <div class="legend-row legend-levels">
+                <span class="legend-chip p1">P1</span>
+                <span class="legend-chip p2">P2</span>
+                <span class="legend-chip p3">P3</span>
+                <span class="legend-chip p4">P4</span>
+              </div>
+              <div class="legend-row"><span class="legend-dot disputed"></span><span>Genuinely disputed</span></div>
+              <div class="legend-note">P-level reflects the interpreted evidence package, never source count.</div>
+            </div>
+          </details>
         </section>
 
         <aside id="panel" class="panel" aria-live="polite">
@@ -56,6 +69,7 @@
         </aside>
       </main>
     </div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
