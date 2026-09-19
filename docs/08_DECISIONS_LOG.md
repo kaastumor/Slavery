@@ -136,3 +136,14 @@ This file records durable methodological choices. Add a dated entry whenever a f
 **Date:** 2026-09-19  
 **Decision:** the v0.6.1 importer verifies the exact SHA-256 of the canonical workbook in addition to semantic/count invariants. A byte-different workbook is not accepted as v0.6.1; it must be treated as a new release/version even if its visible contents appear equivalent.  
 **Reason:** immutable release identity requires detecting accidental re-saves, edits or substitutions. Semantic invariants protect meaning, while the checksum protects exact release provenance.
+
+
+## D-030 — Direct research entry uses the canonical relational model
+**Date:** 2026-09-19  
+**Decision:** New hand-researched historical cases should be entered directly into PostgreSQL/PostGIS through the normalized `SOURCE → SOURCE_VERSION → SPATIAL_ENTITY → CLAIM → specialized claim → CLAIM_SOURCE → GEOMETRY` path. A new Excel workbook is not an intermediate authoring requirement. New claims default to unpublished and must pass review/publication gates separately.  
+**Reason:** the atlas now has a working relational research store; routing new manual research through spreadsheets would duplicate work and recreate migration overhead while weakening claim-level provenance.
+
+## D-031 — Public MVP previews do not imply a canonical data switch
+**Date:** 2026-09-19  
+**Decision:** The project may publish explicitly non-canonical preview releases for end-to-end product validation. Every such preview must have immutable release membership, QC summary, changelog and unresolved-issues metadata, and public services must resolve data through the release manifest plus publish boundary. The canonical v0.6.1 release remains unchanged until the documented canonical-switch criteria are met.  
+**Reason:** the web product needs real public slices before the historical workbook migration is complete, but a functioning preview must not silently redefine the canonical research release.
