@@ -144,10 +144,6 @@ POSITIVE_PLAN: dict[str, dict[str, Any]] = {
         "spatial_type": "polity",
         "targets": [_tp("penal_labour", "classified", "strong workbook classification; not chattel slavery")],
     },
-    "v0.4.7 Evidence!9": {
-        "spatial_type": "polity",
-        "targets": [_tp("penal_labour", "classified", "strong workbook classification; not chattel slavery")],
-    },
     "v0.4.7 Evidence!10": {
         "spatial_type": "polity",
         "targets": [_tp("state_forced_labour", "classified", "forced labour secure; possible slavery/servitude language retained as qualification")],
