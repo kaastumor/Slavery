@@ -18,6 +18,12 @@ import sys
 from typing import Any
 
 from xlsx_minimal import XlsxReader, table_dicts
+from v061_global_evidence import (
+    POSITIVE_PLAN,
+    extract_global_evidence,
+    temporal_fields,
+    validate_global_evidence,
+)
 
 EXPECTED_WORKBOOK_SHA256 = "0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4"
 
@@ -135,6 +141,7 @@ def workbook_tables(path: Path) -> dict[str, Any]:
         evidence = table_dicts(sheet_rows["Atlantic Owner Evidence"], "Evidence ID")
         sources = table_dicts(sheet_rows["Atlantic Sources"], "Source ID")
         coverage_rows = table_dicts(sheet_rows["Coverage Matrix"], "Region")
+        global_evidence = extract_global_evidence(sheet_rows)
     return {
         "voyages": voyages,
         "owners": owners,
@@ -142,6 +149,7 @@ def workbook_tables(path: Path) -> dict[str, Any]:
         "evidence": evidence,
         "sources": sources,
         "coverage_rows": coverage_rows,
+        "global_evidence": global_evidence,
         "workbook_sheets": list(sheet_rows),
         "raw_rows": raw_rows,
         "raw_sheet_row_counts": raw_sheet_row_counts,
@@ -211,6 +219,7 @@ def evidence_plan() -> dict[str, list[dict[str, Any]]]:
 def validate_and_normalize(path: Path) -> dict[str, Any]:
     t = workbook_tables(path)
     coverage = flatten_coverage(t["coverage_rows"])
+    global_validation = validate_global_evidence(t["global_evidence"])
     url_index = source_url_index(t["sources"])
 
     owner_rows = t["owners"]
@@ -233,6 +242,7 @@ def validate_and_normalize(path: Path) -> dict[str, Any]:
         "workbook_nonempty_rows": len(t["raw_rows"]),
     }
     errors = [f"{k}: expected {EXPECTED[k]}, found {v}" for k, v in actual.items() if EXPECTED[k] != v]
+    errors.extend(global_validation["errors"])
 
     voyages_by_id = {str(as_int(r["Voyage ID"])): r for r in t["voyages"]}
     owners_by_id = {str(clean(r["Owner ID"])): r for r in owner_rows}
@@ -291,10 +301,11 @@ def validate_and_normalize(path: Path) -> dict[str, Any]:
         "evidence_mapping_rows": mapping_rows,
         "source_registry_gaps": registry_gaps,
         "raw_sheet_row_counts": t["raw_sheet_row_counts"],
+        "global_evidence": global_validation,
         "warnings": (
             (["Fredensborg's exact SlaveVoyages voyage URL is referenced by workbook rows but absent from the 17-row Atlantic Sources registry; migration will create an explicit unregistered-source record and QC warning."]
              if "https://www.slavevoyages.org/voyage/35181/variables" in registry_gaps else [])
-            + ["All 18 workbook tabs will be raw-preserved on apply, but the global evidence sheets v0.4.7/v0.4.8/v0.4.9/v0.5.0 are not yet semantically normalized into canonical claim/source structures; canonical switch remains blocked until that migration is reviewed and completed."]
+            + ["Global evidence rows are explicitly semantically mapped; conceptual bibliographic metadata for workbook-only URLs remains migration-generated until enriched from the cited publications."]
         ),
         "errors": errors,
         "ok": not errors,
@@ -317,6 +328,7 @@ def apply_to_database(path: Path, dsn: str, normalized: dict[str, Any]) -> dict[
 
     t = normalized["tables"]
     coverage = normalized["coverage"]
+    global_evidence = t["global_evidence"]
     report = normalized["report"]
     if not report["ok"]:
         raise SystemExit("Refusing database apply because dry-run validation failed")
@@ -419,6 +431,43 @@ def apply_to_database(path: Path, dsn: str, normalized: dict[str, Any]) -> dict[
                      "Canonical workbook references this source URL outside the Atlantic Sources registry; migration created an explicit source/version so provenance remains exact."),
                 )
 
+            # Exact source versions cited by the four global evidence sheets.
+            # The workbook contains URLs but not full bibliographic metadata, so titles are
+            # deliberately migration-generated and may be enriched later without changing
+            # the exact URL/version lineage.
+            first_global_row_by_url: dict[str, dict[str, Any]] = {}
+            for row in global_evidence:
+                first_global_row_by_url.setdefault(str(row["source_url"]), row)
+            for url, row in first_global_row_by_url.items():
+                if url in source_version_by_url:
+                    continue
+                cur.execute(
+                    """INSERT INTO atlas.source(title, source_type, source_classification, geographic_scope,
+                                                temporal_scope, notes)
+                       VALUES (%s,%s,%s,%s,%s,%s) RETURNING source_id""",
+                    (
+                        f"v0.6.1 global evidence source — {row['area']}",
+                        "Workbook-linked historical source",
+                        None,
+                        row["region"],
+                        row["period"],
+                        f"Migration-generated bibliographic label for {row['evidence_key']}; exact cited URL preserved. "
+                        "Bibliographic enrichment must not replace or merge the source version silently.",
+                    ),
+                )
+                sid = cur.fetchone()[0]
+                cur.execute(
+                    """INSERT INTO atlas.source_version(source_id, version_label, url_or_identifier, notes)
+                       VALUES (%s,%s,%s,%s) RETURNING source_version_id""",
+                    (
+                        sid,
+                        f"exact URL cited by canonical v0.6.1 ({row['sheet_name']})",
+                        url,
+                        "Exact URL as recorded in the canonical workbook global evidence sheet.",
+                    ),
+                )
+                source_version_by_url[url] = cur.fetchone()[0]
+
             # Raw source rows should remain queryable independent of normalization.
             def raw(record_type: str, source_native_id: str | None, payload: dict[str, Any]):
                 cur.execute(
@@ -439,6 +488,25 @@ def apply_to_database(path: Path, dsn: str, normalized: dict[str, Any]) -> dict[
 
             for row in t["sources"]:
                 raw("v061_source", str(clean(row.get("Source ID"))), row)
+
+            # Research coverage is project-transparency metadata, never territorial P-level.
+            # Keep IDs so evidence-sheet sources can be linked to the exact assessment they informed.
+            coverage_assessment_by_key: dict[tuple[str, str], Any] = {}
+            for item in coverage:
+                raw("v061_coverage_cell", f"{item['region_label_raw']}|{item['period_label_raw']}", item)
+                cur.execute(
+                    """INSERT INTO audit.research_coverage_assessment(
+                         region_label_raw,period_label_raw,from_year,to_year,legacy_coverage_code,
+                         normalized_coverage_state_code,coverage_points,release_version,review_status,publication_status,notes)
+                       VALUES (%s,%s,%s,%s,%s,%s,%s,'0.6.1','reviewed','unpublished',%s)
+                       RETURNING coverage_assessment_id""",
+                    (
+                        item["region_label_raw"], item["period_label_raw"], item["from_year"], item["to_year"],
+                        item["legacy_coverage_code"], item["normalized_coverage_state_code"], item["coverage_points"],
+                        "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+                    ),
+                )
+                coverage_assessment_by_key[(item["region_label_raw"], item["period_label_raw"])] = cur.fetchone()[0]
 
             # Actors: OWN-0011 is documented missingness, never an identity.
             actor_by_legacy: dict[str, Any] = {}
@@ -540,6 +608,149 @@ def apply_to_database(path: Path, dsn: str, normalized: dict[str, Any]) -> dict[
                 )
                 return cur.fetchone()[0]
 
+            # Semantic migration of the four global evidence sheets.
+            # Every row contributes research-coverage provenance. RI rows stop there.
+            spatial_by_global_key: dict[str, Any] = {}
+            global_claim_count = 0
+            for row in global_evidence:
+                evidence_key = str(row["evidence_key"])
+                url = str(row["source_url"])
+                source_version_id = source_version_by_url[url]
+                coverage_key = (str(row["region"]), str(row["period"]))
+                coverage_assessment_id = coverage_assessment_by_key.get(coverage_key)
+                if coverage_assessment_id is None:
+                    raise RuntimeError(f"No research coverage assessment for global evidence row {evidence_key}: {coverage_key}")
+                cur.execute(
+                    """INSERT INTO audit.research_coverage_source(
+                         coverage_assessment_id,source_version_id,source_role,locator,notes)
+                       VALUES (%s,%s,'evidence_sheet_source',%s,%s)
+                       ON CONFLICT DO NOTHING""",
+                    (
+                        coverage_assessment_id, source_version_id, evidence_key,
+                        f"Reviewed source cited by {evidence_key}; coverage={row['coverage']}.",
+                    ),
+                )
+                if row["coverage"] == "RI":
+                    continue
+
+                plan = POSITIVE_PLAN[evidence_key]
+                cur.execute(
+                    """INSERT INTO atlas.spatial_entity(
+                         entity_type_code,canonical_name,display_name,from_year,to_year,notes,review_status)
+                       VALUES (%s,%s,%s,%s,%s,%s,'reviewed') RETURNING spatial_entity_id""",
+                    (
+                        plan["spatial_type"], row["area"], row["area"], row["from_year"], row["to_year"],
+                        f"Migrated historical/analytical target from {evidence_key}; geometry unresolved pending the documented resolver hierarchy.",
+                    ),
+                )
+                spatial_id = cur.fetchone()[0]
+                spatial_by_global_key[evidence_key] = spatial_id
+                from_year, to_year, date_text, precision = temporal_fields(row, plan)
+
+                for target in plan["targets"]:
+                    kind = target["kind"]
+                    if kind == "territorial_practice":
+                        summary = str(row["decision"])
+                        cur.execute(
+                            """INSERT INTO atlas.claim(
+                                 claim_kind_code,from_year,to_year,date_text_original,temporal_precision,
+                                 spatial_precision,summary,confidence,review_status,publication_status,notes)
+                               VALUES ('territorial_practice',%s,%s,%s,%s,%s,%s,%s,'reviewed','unpublished',%s)
+                               RETURNING claim_id""",
+                            (
+                                from_year, to_year, date_text, precision, "workbook area/region label",
+                                summary, row["coverage"],
+                                f"v061_global_evidence={evidence_key}; practice_issue={row['practice_issue']}.",
+                            ),
+                        )
+                        claim_id = cur.fetchone()[0]
+                        cur.execute(
+                            """INSERT INTO atlas.territorial_practice_claim(
+                                 claim_id,spatial_entity_id,practice_type_code,practice_level,
+                                 coverage_state_code,classification_status,notes)
+                               VALUES (%s,%s,%s,NULL,%s,%s,%s)""",
+                            (
+                                claim_id, spatial_id, target["practice_type"], target["coverage_state"],
+                                target["classification_status"],
+                                "P-level intentionally unassigned during workbook semantic migration.",
+                            ),
+                        )
+                        mapping_role = f"territorial_practice:{target['practice_type']}"
+                    elif kind == "external_participation":
+                        summary = str(row["decision"])
+                        cur.execute(
+                            """INSERT INTO atlas.claim(
+                                 claim_kind_code,from_year,to_year,date_text_original,temporal_precision,
+                                 spatial_precision,summary,confidence,review_status,publication_status,notes)
+                               VALUES ('external_participation',%s,%s,%s,%s,%s,%s,%s,'reviewed','unpublished',%s)
+                               RETURNING claim_id""",
+                            (
+                                from_year, to_year, date_text, precision, "workbook area/region label",
+                                summary, row["coverage"],
+                                f"v061_global_evidence={evidence_key}; practice_issue={row['practice_issue']}.",
+                            ),
+                        )
+                        claim_id = cur.fetchone()[0]
+                        cur.execute(
+                            """INSERT INTO atlas.external_participation_claim(
+                                 claim_id,spatial_entity_id,participation_type_code,role_text,notes)
+                               VALUES (%s,%s,%s,%s,%s)""",
+                            (
+                                claim_id, spatial_id, target["participation_type"], target.get("role_text"),
+                                "External/network participation is analytically separate from territorial practice.",
+                            ),
+                        )
+                        mapping_role = f"external_participation:{target['participation_type']}"
+                    elif kind == "legal_event":
+                        summary = str(row["decision"])
+                        cur.execute(
+                            """INSERT INTO atlas.claim(
+                                 claim_kind_code,from_year,to_year,date_text_original,temporal_precision,
+                                 spatial_precision,summary,confidence,review_status,publication_status,notes)
+                               VALUES ('legal_event',%s,%s,%s,%s,%s,%s,%s,'reviewed','unpublished',%s)
+                               RETURNING claim_id""",
+                            (
+                                from_year, to_year, date_text, precision, "workbook area/region label",
+                                summary, row["coverage"],
+                                f"v061_global_evidence={evidence_key}; legal context split from practice claim.",
+                            ),
+                        )
+                        claim_id = cur.fetchone()[0]
+                        cur.execute(
+                            """INSERT INTO atlas.legal_event(
+                                 claim_id,jurisdiction_spatial_entity_id,event_type,legal_status_after,scope,notes)
+                               VALUES (%s,%s,%s,%s,%s,%s)""",
+                            (
+                                claim_id, spatial_id, target["event_type"], target.get("legal_status_after"),
+                                target.get("scope"), "Workbook row describes a legal/suppression process, not a single clean abolition date.",
+                            ),
+                        )
+                        mapping_role = f"legal_event:{target['event_type']}"
+                    else:
+                        raise RuntimeError(f"Unknown global evidence target kind {kind!r} for {evidence_key}")
+
+                    ensure_claim_source(
+                        claim_id, source_version_id, "global workbook evidence row",
+                        "exact source URL cited by workbook", "supports",
+                        f"{evidence_key}; legacy_coverage={row['coverage']}; area={row['area']}.",
+                    )
+                    cur.execute(
+                        """INSERT INTO audit.v061_evidence_claim_map(
+                             legacy_evidence_id,claim_id,mapping_role,notes)
+                           VALUES (%s,%s,%s,%s)""",
+                        (
+                            evidence_key, claim_id, mapping_role,
+                            "Explicit semantic migration of canonical global evidence row.",
+                        ),
+                    )
+                    global_claim_count += 1
+
+            if global_claim_count != report["global_evidence"]["claim_targets"]:
+                raise RuntimeError(
+                    f"Global evidence claim target count mismatch: expected {report['global_evidence']['claim_targets']}, "
+                    f"inserted {global_claim_count}"
+                )
+
             relation_claim: dict[tuple[str, str], Any] = {}
             for row in t["voyage_owners"]:
                 legacy_voyage = str(as_int(row["Voyage ID"]))
@@ -630,33 +841,6 @@ def apply_to_database(path: Path, dsn: str, normalized: dict[str, Any]) -> dict[
                         (evidence_id, claim_id, target["kind"], f"Semantic migration from {clean(row.get('Claim type'))}."),
                     )
 
-            # The workbook's global historical evidence sheets are byte-preserved in the source asset
-            # and row-preserved above, but are not yet semantically normalized by this controlled importer.
-            # Keep this as a blocking QC issue so a successful Atlantic/coverage migration cannot be
-            # mistaken for a complete canonical-workbook migration.
-            cur.execute(
-                """INSERT INTO audit.qc_issue(ingest_run_id, severity, issue_code, object_type,
-                                              object_identifier, description)
-                   VALUES (%s,'blocking','V061_GLOBAL_EVIDENCE_SEMANTIC_MIGRATION_PENDING',
-                           'workbook_sheets',%s,%s)""",
-                (ingest_run_id,
-                 'v0.4.7 Evidence; v0.4.8 Evidence; v0.4.9 Evidence; v0.5.0 Evidence',
-                 'Rows are preserved from the canonical workbook, but their historical assertions and source links still require reviewed semantic migration before the database can replace v0.6.1 as canonical.'),
-            )
-
-            # Research coverage: transparency metadata, never P-level.
-            for item in coverage:
-                raw("v061_coverage_cell", f"{item['region_label_raw']}|{item['period_label_raw']}", item)
-                cur.execute(
-                    """INSERT INTO audit.research_coverage_assessment(
-                         region_label_raw,period_label_raw,from_year,to_year,legacy_coverage_code,
-                         normalized_coverage_state_code,coverage_points,release_version,review_status,publication_status,notes)
-                       VALUES (%s,%s,%s,%s,%s,%s,%s,'0.6.1','reviewed','unpublished',%s)""",
-                    (item["region_label_raw"],item["period_label_raw"],item["from_year"],item["to_year"],item["legacy_coverage_code"],
-                     item["normalized_coverage_state_code"],item["coverage_points"],
-                     "Project research-coverage metadata; not historical prevalence or territorial P-level."),
-                )
-
             # Candidate migration manifest, explicitly not the canonical switch.
             manifest_version = "0.6.1-db-migration-candidate"
             cur.execute(
@@ -665,7 +849,7 @@ def apply_to_database(path: Path, dsn: str, normalized: dict[str, Any]) -> dict[
                 (manifest_version,
                  "Foundation migration candidate generated from canonical v0.6.1 workbook.",
                  json.dumps(report["counts"], ensure_ascii=False),
-                 "Fredensborg disembarkation unresolved; Fredensborg voyage URL absent from legacy source registry; global evidence sheets raw-preserved but semantic migration pending.",
+                 "Fredensborg disembarkation unresolved; Fredensborg voyage URL absent from legacy source registry; global evidence bibliographic metadata remains partially migration-generated pending enrichment.",
                  Jsonb({"workbook_sha256": report["sha256"], "canonical_workbook_version": "0.6.1"})),
             )
             # Link historical evidence source versions, including migration-generated direct references; exclude workbook ingest provenance.

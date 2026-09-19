@@ -111,3 +111,118 @@ The migration is incomplete until:
 3. selected non-Atlantic evidence rows can be represented without category collapse or false precision;
 4. the migration report lists unresolved differences;
 5. the workbook remains unchanged throughout validation.
+
+## 10. Global evidence semantic migration — explicit row mapping
+
+The four historical evidence sheets contain **36 substantive rows**:
+
+- 14 Strong (`S`)
+- 3 Provisional (`P`)
+- 1 Disputed (`D`)
+- 18 Researched-inconclusive (`RI`)
+- 29 unique source URLs
+
+The migration is intentionally explicit rather than classifier-driven.
+
+### General rules
+
+- Every row remains preserved in `raw.raw_record`.
+- Every exact source URL becomes or resolves to an exact `SOURCE_VERSION`.
+- `RI` rows create **research-coverage provenance only** through `RESEARCH_COVERAGE_SOURCE`; they do not create positive territorial-practice claims.
+- `S`, `P`, and `D` rows may create one or more historical claims where the workbook text supports them.
+- `practice_level` stays **NULL** for all migrated global evidence rows. P0–P4 requires a separate interpreted evidence-package assessment.
+- All migrated historical claims remain `unpublished` until later public-release review.
+- Compound workbook rows may split into multiple claims when they bundle analytically distinct assertions.
+- A trade/network row does not become a territorial-practice claim merely because enslaved people moved through or from the named region.
+
+### Positive / disputed rows
+
+Row keys below use the importer's preserved **logical row sequence** (blank worksheet rows are skipped), matching `raw.raw_record.source_native_id`.
+
+
+| Workbook row | Area | Legacy | Semantic target |
+|---|---|---:|---|
+| v0.4.7!5 | Carolingian Empire | S | territorial practice: `slavery_enslavement` |
+| v0.4.7!6 | Anglo-Saxon England / Northern Europe | S | territorial practice: `slavery_enslavement`; preserve compound spatial scope and unresolved geometry |
+| v0.4.7!7 | Eastern Europe / Baltic–Black Sea networks | S | external participation: `trade_route` / slave-trade network; **not** territorial prevalence |
+| v0.4.7!8 | Ottoman Middle East | S | split: territorial `slavery_enslavement` + legal/suppression event |
+| v0.4.7!9 | Soviet Kazakhstan / Central Asia | S | territorial practice: `state_forced_labour` |
+| v0.4.7!10 | People's Republic of China, early decades | S | territorial practice: `penal_labour` |
+| v0.4.7!11 | DPRK | S | territorial practice: `state_forced_labour`; possible slavery language remains a qualification, not a second automatic classification |
+| v0.4.7!12 | Xinjiang / China | S | territorial practice candidate: `forced_labour`; retain contested/current-rights qualification |
+| v0.4.7!13 | Brazil | S | territorial practice: `debt_bondage` |
+| v0.4.7!14 | Peruvian Amazon | S | territorial practice: `debt_bondage` |
+| v0.4.8!5 | Nazi Germany and occupied Europe, 1933–1945 | S | territorial practice: `state_forced_labour` |
+| v0.4.8!6 | Europe and Central Asia, contemporary | S | territorial practice: `forced_labour` |
+| v0.4.8!7 | Iraq/Syria under ISIL, Yazidi population from 2014 | S | split: territorial `slavery_enslavement`, `sexual_slavery`, and external/network `slave_trade_network`; forced-labour wording retained in notes pending finer review |
+| v0.4.9!5 | Mycenaean Greece (Pylos/Knossos) | S | territorial practice: `slavery_enslavement`; preserve internally differentiated status note |
+| v0.4.9!6 | Anshan / Elam, c. 2130–2110 BCE | P | external participation: `slave_trade_network`; no territorial prevalence claim |
+| v0.4.9!9 | Vedic-period South Asia | P | territorial practice candidate: `other_servile_dependency`; terminology uncertainty preserved |
+| v0.4.9!11 | Shang China | D | split: secure `captive_taking_incorporation` context + disputed `slavery_enslavement` interpretation; no P-level |
+| v0.5.0!5 | Late Proto-Indo-European / Early Bronze Age Europe | P | territorial/regional practice candidate: `other_servile_dependency`; provisional linguistic reconstruction, no high-intensity inference |
+
+### Researched-inconclusive rows
+
+The following rows create no positive historical practice claim. Their exact source versions are attached to the matching research-coverage assessment through `audit.research_coverage_source`.
+
+- v0.4.8!8 — Prehistoric / Iron Age Southeast Asia
+- v0.4.8!9 — Early West/Central African societies, 1000–1 BCE
+- v0.4.8!10 — Early northeastern/eastern African societies, 1000–1 BCE
+- v0.4.9!7 — Middle Elam / Susa–Anshan
+- v0.4.9!8 — Indus Civilization
+- v0.4.9!10 — Longshan / Erlitou transition
+- v0.4.9!12 — Formative Mesoamerica
+- v0.4.9!13 — Proto-Oceanic / Lapita societies, 1000–1 BCE
+- v0.5.0!6 — Neolithic mainland/island Southeast Asia
+- v0.5.0!7 — Neolithic–Bronze Age Southeast Asia
+- v0.5.0!8 — Early West/Central African societies, 3000–2001 BCE
+- v0.5.0!9 — Early West/Central African societies, 2000–1001 BCE
+- v0.5.0!10 — Northeastern / eastern African societies, 3000–2001 BCE
+- v0.5.0!11 — Northeastern / eastern African societies, 2000–1001 BCE
+- v0.5.0!12 — Archaic / early Formative Americas
+- v0.5.0!13 — Early Formative Americas
+- v0.5.0!14 — Near Oceania before Lapita expansion
+- v0.5.0!15 — Lapita / Proto-Oceanic world, 2000–1001 BCE
+
+### Temporal handling
+
+Use the workbook period only as the normalized broad interval when the row itself provides no narrower defensible interval, and preserve the original wording/precision.
+
+Astronomical-year conversions:
+
+- 3000–2001 BCE → -2999 to -2000
+- 2000–1001 BCE → -1999 to -1000
+- 1000–1 BCE → -999 to 0
+- 500–999 CE → 500 to 999
+- 1800–1899 → 1800 to 1899
+- 1900–present → 1900 to open-ended
+
+Use narrower explicit row text when available:
+
+- Anshan / Elam c. 2130–2110 BCE → -2129 to -2109
+- Nazi Germany / occupied Europe 1933–1945 → 1933 to 1945
+- ISIL/Yazidi evidence “from 2014” → 2014 to open-ended, subject to later source-specific refinement
+
+### Source handling
+
+The 36 rows contain 29 unique exact URLs. During migration:
+
+1. preserve the URL exactly;
+2. create/reuse one exact `SOURCE_VERSION` per unique reviewed URL;
+3. keep migration-generated bibliographic labels clearly marked when the workbook does not contain enough metadata for a polished conceptual source record;
+4. do not silently merge different URLs/versions;
+5. add later bibliographic enrichment without changing the original evidence-row lineage.
+
+### Completion check for this section
+
+The global-evidence migration is complete only when:
+
+- all 36 substantive rows are crosswalked;
+- all 18 RI rows have coverage-source provenance and no fabricated positive claim;
+- all 18 S/P/D rows are represented by the explicit semantic targets above;
+- all 29 unique source URLs resolve to exact source-version records;
+- all territorial claims have `practice_level IS NULL`;
+- the Anshan/Elam row creates no territorial-practice claim;
+- the Shang row preserves the distinction between secure captivity evidence and disputed slavery interpretation;
+- all rows remain unpublished until later release review.
+
