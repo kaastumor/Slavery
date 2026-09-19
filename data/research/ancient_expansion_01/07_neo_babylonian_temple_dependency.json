@@ -1,0 +1,55 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Neo-Babylonian temple households",
+    "display_name": "Neo-Babylonian temple households",
+    "entity_type_code": "other",
+    "notes": "Institutional temple-household context in sixth-century BCE Babylonia; no single territorial polygon is assigned."
+  },
+  "claim": {
+    "from_year": -599,
+    "to_year": -500,
+    "date_text_original": "sixth century BCE",
+    "temporal_precision": "century",
+    "spatial_precision": "institutional_context",
+    "summary": "Neo-Babylonian širkus were institutional temple dependents whose freedom was limited by social subordination to temple households. Specialist comparison of their legal, economic and social position with chattel slaves argues that širkūtu should not be subsumed under slavery.",
+    "review_status": "reviewed",
+    "territorial_practice": {
+      "practice_type_code": "other_servile_dependency",
+      "practice_level": "P3",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P3 reflects an institutionalized dependency regime within temple households. The source explicitly argues against classifying širkus as slaves."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Neither Slave nor Truly Free: The Status of the Dependents of Babylonian Temple Households",
+        "author_or_institution": "Kristin Kleber",
+        "source_type": "book_chapter",
+        "source_classification": "secondary",
+        "independence_notes": "Dedicated specialist analysis of Neo-Babylonian temple dependency using legal, economic and social evidence.",
+        "reliability_limitations": "The claim concerns the širkūtu institution in temple households; it should not be generalized to every dependent person in Babylonia."
+      },
+      "version": {
+        "version_label": "Oriental Institute Seminars 7 PDF, 2011",
+        "url_or_identifier": "https://isac.uchicago.edu/sites/default/files/uploads/shared/docs/ois7.pdf",
+        "publication_year": 2011,
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "specialist status classification",
+      "independence_group": "kleber_sirku",
+      "directness": "specialist comparison of legal, economic and social status",
+      "direction": "supports",
+      "locator": "Chapter 7, pp. 101–111; especially p. 101"
+    }
+  ],
+  "geometry": {
+    "from_year": -599,
+    "to_year": -500,
+    "accuracy_status": "unresolved",
+    "resolution_method": "The claim concerns a class of institutional dependents distributed among temple households in Babylonia; no single defensible territorial geometry is assigned.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}

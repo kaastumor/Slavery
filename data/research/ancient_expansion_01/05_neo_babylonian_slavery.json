@@ -1,0 +1,66 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Neo-Babylonian Babylonia",
+    "display_name": "Neo-Babylonian Babylonia",
+    "entity_type_code": "polity",
+    "notes": "Polity slice limited to 600–539 BCE for which Cliopatria geometry and evidence are both available."
+  },
+  "claim": {
+    "from_year": -599,
+    "to_year": -538,
+    "date_text_original": "600–539 BCE",
+    "temporal_precision": "bounded_slice",
+    "spatial_precision": "polity",
+    "summary": "Slavery was an established institution in Neo-Babylonian urban society. Specialist scholarship finds ownership concentrated among elites, with some wealthy families holding very large numbers of enslaved people; slave labour was not the cheapest or dominant labour source, but it played an important role in entrepreneurial management. Surviving Babylonian tablets directly document slave sales.",
+    "review_status": "reviewed",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P3",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P3 denotes a strongly supported institutional practice without treating Babylonia as a slave society comparable to classical Athens or Rome."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Babylonia: The Seventh–Fifth Centuries BC",
+        "author_or_institution": "David M. Lewis",
+        "source_type": "book_chapter",
+        "source_classification": "secondary",
+        "independence_notes": "Specialist comparative study of Babylonian slave systems.",
+        "reliability_limitations": "Elite archives overrepresent propertied urban households; slave labour's wider demographic share remains different from its visibility in business archives."
+      },
+      "version": {
+        "version_label": "Oxford Scholarship Online chapter, published 2018",
+        "url_or_identifier": "https://academic.oup.com/book/25688/chapter-abstract/193165265",
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "specialist prevalence and economic interpretation",
+      "independence_group": "babylonia_lewis",
+      "directness": "specialist secondary synthesis",
+      "direction": "supports",
+      "locator": "Chapter abstract and conclusions"
+    },
+    {
+      "source": {
+        "title": "Cuneiform tablet: slave sale, Egibi archive",
+        "author_or_institution": "The Metropolitan Museum of Art",
+        "source_type": "primary_object_record",
+        "source_classification": "primary",
+        "independence_notes": "Museum catalogue record for a Neo-Babylonian slave-sale tablet.",
+        "reliability_limitations": "One transaction proves a bounded sale, not prevalence by itself."
+      },
+      "version": {
+        "version_label": "Met object 86.11.145, ca. 547 BCE",
+        "url_or_identifier": "https://www.metmuseum.org/art/collection/search/321724",
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "bounded primary transaction",
+      "independence_group": "egibi_met_547",
+      "directness": "primary legal transaction",
+      "direction": "supports",
+      "locator": "Object 86.11.145"
+    }
+  ]
+}

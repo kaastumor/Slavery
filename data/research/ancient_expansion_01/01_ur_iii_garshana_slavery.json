@@ -1,0 +1,73 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Garshana construction project (Ur III)",
+    "display_name": "Garshana construction project",
+    "entity_type_code": "site",
+    "notes": "Royal construction-project context in Umma province; exact archaeological location remains unknown."
+  },
+  "claim": {
+    "from_year": -2036,
+    "to_year": -2028,
+    "date_text_original": "Šu-Suen reign, 2037–2029 BCE",
+    "temporal_precision": "bounded_reign",
+    "spatial_precision": "site_context",
+    "summary": "The Garshana construction project employed many hundreds of enslaved and hired workers; the archive presents enslaved labour as an ongoing, regular component of the workforce, with household slaves engaged in craft production, laundering, construction and related work.",
+    "review_status": "reviewed",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P3",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P3 is restricted to the bounded Garshana institutional/workplace context, not mechanically generalized to the entire Ur III population."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Slavery and Freedom in the Third Dynasty of Ur: Implications of the Garshana Archives",
+        "author_or_institution": "Robert McC. Adams / Cuneiform Digital Library Initiative",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Specialist synthesis based on the Garshana archive and prior Assyriological scholarship.",
+        "reliability_limitations": "Garshana's exact location is unknown; status terminology and boundaries between slavery and other dependency remain complex."
+      },
+      "version": {
+        "version_label": "CDLJ 2010:2 web edition",
+        "url_or_identifier": "https://cdli.earth/articles/cdlj/2010-2",
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "specialist interpretation of workforce and status",
+      "independence_group": "garshana_adams",
+      "directness": "specialist synthesis of cuneiform archive",
+      "direction": "supports",
+      "locator": "§§2.3–2.4, 3.1, 4.1–4.4"
+    },
+    {
+      "source": {
+        "title": "Slavery in Third-Millennium Mesopotamia: An Overview of Sources and Studies",
+        "author_or_institution": "Lorenzo Verderame",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Independent specialist overview of third-millennium Mesopotamian slavery and forced/bonded labour.",
+        "reliability_limitations": "Broad regional synthesis; not specific to Garshana prevalence."
+      },
+      "version": {
+        "version_label": "IRIS repository record for Journal of Global Slavery 3 (2018)",
+        "url_or_identifier": "https://iris.uniroma1.it/handle/11573/1067674",
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "regional contextual interpretation",
+      "independence_group": "uriii_verderame",
+      "directness": "specialist secondary overview",
+      "direction": "context"
+    }
+  ],
+  "geometry": {
+    "from_year": -2036,
+    "to_year": -2028,
+    "accuracy_status": "unresolved",
+    "resolution_method": "The Garshana archive places the project in Umma province, probably near Zabalam, but the exact site has not been securely located.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}

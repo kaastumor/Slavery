@@ -1,0 +1,68 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Qin Empire (221–209 BCE slice)",
+    "display_name": "Qin Empire",
+    "entity_type_code": "polity",
+    "notes": "Bounded Qin imperial slice chosen to match evidence and available Cliopatria time slices."
+  },
+  "claim": {
+    "from_year": -220,
+    "to_year": -208,
+    "date_text_original": "221–209 BCE",
+    "temporal_precision": "bounded_slice",
+    "spatial_precision": "polity",
+    "summary": "Qin convict labour formed a complex state-administered system that coerced legally degraded men, women and children into work for state projects. Excavated statutes and administrative records show penal labour as a routine punishment and a major labour source; Liye evidence from newly conquered Qianling documents the management of laborer-servants through supervision and punishment.",
+    "review_status": "reviewed",
+    "territorial_practice": {
+      "practice_type_code": "penal_labour",
+      "practice_level": "P3",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P3 reflects an institutional state convict-labour regime. Evidence from exceptionally well-documented Qianling is not mechanically generalized into a population estimate for the entire Qin Empire."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "From the “Empire of Convicts” to Labor Market: Convict Labor Regime in the Early Chinese Empires and Its Legacy",
+        "author_or_institution": "Maxim Korolkov",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Recent specialist synthesis centered on excavated Qin and Han legal/administrative documents.",
+        "reliability_limitations": "Qianling is exceptionally well documented; its local demographic proportions should not be generalized empire-wide."
+      },
+      "version": {
+        "version_label": "Asia Major 37.1 (2024), pp. 1–26",
+        "url_or_identifier": "https://www1.ihp.sinica.edu.tw/en/Publications/AsiaMajor/1190/Article/923",
+        "publication_year": 2024,
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "specialist interpretation of Qin convict-labour regime",
+      "independence_group": "qin_excavated_admin_corpus",
+      "directness": "specialist synthesis of excavated legal and administrative texts",
+      "direction": "supports",
+      "locator": "Abstract and section 'Convict-Labor Institutions in Qin and Early-Western Han'"
+    },
+    {
+      "source": {
+        "title": "Categorizing Laborers: Glimpses of Qin Management of Human Resources from an Administrative Document from Liye, Hunan Province",
+        "author_or_institution": "Tsang Wing Ma",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Contextual study of a Liye multi-slip administrative manuscript with related Qin excavated sources.",
+        "reliability_limitations": "The focal manuscript concerns Qianling County and does not by itself quantify the whole Qin Empire."
+      },
+      "version": {
+        "version_label": "Early China 44 (2021), pp. 351–391",
+        "url_or_identifier": "https://www.cambridge.org/core/journals/early-china/article/abs/categorizing-laborers-glimpses-of-qin-management-of-human-resources-from-an-administrative-document-from-liye-hunan-province/AE22A9F579DB0BB5732AD4464553CBB2",
+        "publication_year": 2021,
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "administrative labour-management case study",
+      "independence_group": "qin_excavated_admin_corpus",
+      "directness": "specialist study of excavated Qin administrative manuscript",
+      "direction": "supports",
+      "locator": "Abstract and discussion of tuli labourer-servants"
+    }
+  ]
+}

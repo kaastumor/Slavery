@@ -1,0 +1,66 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+    "display_name": "Western Han China",
+    "entity_type_code": "polity",
+    "notes": "Bounded map slice chosen to align with available Cliopatria Western Han geometry while avoiding the later Xin transition."
+  },
+  "claim": {
+    "from_year": -201,
+    "to_year": 5,
+    "date_text_original": "202 BCE–5 CE",
+    "temporal_precision": "bounded_slice",
+    "spatial_precision": "polity",
+    "summary": "Private and government slavery are well attested under the Western Han, but the evidence does not support treating slave labour as a dominant industrial or agricultural system. Earlier scholarship describes marked growth in private and government slavery, while recent work argues that fiscal and labour-market changes produced very low levels of slave ownership in the mature Han private economy.",
+    "review_status": "reviewed",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P2",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P2 records repeated and institutionally recognized slavery while preserving the specialist finding that mature Han slave ownership was low and large-scale private slave labour was discouraged."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Industrial Slavery in China During the Former Han Dynasty (206 B.C.–A.D. 25)",
+        "author_or_institution": "C. Martin Wilbur",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Classic dedicated study of Former Han slavery.",
+        "reliability_limitations": "Originally published in 1943; interpretation must be balanced against more recent scholarship."
+      },
+      "version": {
+        "version_label": "Journal of Economic History article page, Cambridge Core",
+        "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-economic-history/article/abs/industrial-slavery-in-china-during-the-former-han-dynasty-206-bcad-25/0B268B57193E3634DA61B8DEEBA38213",
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "institutional and economic interpretation",
+      "independence_group": "han_wilbur",
+      "directness": "specialist secondary study",
+      "direction": "supports",
+      "locator": "Article extract"
+    },
+    {
+      "source": {
+        "title": "From the 'Empire of Convicts' to Labor Market: Convict Labor Regime in the Early Chinese Empires and Its Legacy",
+        "author_or_institution": "Maxim Korolkov",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Recent specialist reassessment of state labour mobilization and slavery in Qin/Han China.",
+        "reliability_limitations": "Focus is primarily convict labour and state manpower policy rather than a complete census of slaveholding."
+      },
+      "version": {
+        "version_label": "Asia Major 37.1 article record",
+        "url_or_identifier": "https://www1.ihp.sinica.edu.tw/en/Publications/AsiaMajor/1190/Article/923",
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "recent limiting/counterevidence on scale",
+      "independence_group": "han_korolkov",
+      "directness": "specialist secondary reassessment",
+      "direction": "qualifies",
+      "locator": "Abstract"
+    }
+  ]
+}
