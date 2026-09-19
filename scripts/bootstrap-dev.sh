@@ -17,6 +17,7 @@ docker compose up -d db
 ./scripts/db-test-schema.sh
 ./scripts/test-python.sh
 ./scripts/db-test-non-atlantic.sh
+./scripts/db-test-release-reconstruction.sh
 
 workbook="data/releases/v0.6.1/Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx"
 if [[ -f "$workbook" ]]; then
