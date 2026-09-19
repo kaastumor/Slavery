@@ -1,5 +1,5 @@
 -- v0.6.1 reconciliation tests. Run only after the controlled workbook seed has been migrated.
--- Expected values come from the canonical v0.6.1 Atlantic Summary / source / relation sheets.
+-- Expected values come from the canonical v0.6.1 Atlantic sheets plus the four global evidence sheets.
 
 DO $$
 DECLARE n integer;
@@ -23,7 +23,7 @@ BEGIN
     IF n <> 17 THEN RAISE EXCEPTION 'Expected 17 legacy source mappings, found %', n; END IF;
 
     SELECT count(DISTINCT legacy_evidence_id) INTO n FROM audit.v061_evidence_claim_map;
-    IF n <> 11 THEN RAISE EXCEPTION 'Expected all 11 legacy OWNER_EVIDENCE IDs to map to claims, found %', n; END IF;
+    IF n <> 29 THEN RAISE EXCEPTION 'Expected 11 Atlantic evidence IDs + 18 positive/disputed global evidence rows to map to claims, found %', n; END IF;
 END $$;
 
 DO $$
@@ -61,7 +61,7 @@ DO $$
 DECLARE n integer;
 BEGIN
     SELECT count(*) INTO n FROM audit.v061_evidence_claim_map;
-    IF n <> 17 THEN RAISE EXCEPTION 'Expected 17 evidence-to-claim mappings after semantic split, found %', n; END IF;
+    IF n <> 39 THEN RAISE EXCEPTION 'Expected 17 Atlantic + 22 global evidence-to-claim mappings after semantic split, found %', n; END IF;
     SELECT count(*) INTO n FROM audit.v061_evidence_claim_map WHERE legacy_evidence_id = 'E-011';
     IF n <> 5 THEN RAISE EXCEPTION 'E-011 should support five Martha co-owner claims, found %', n; END IF;
     SELECT count(*) INTO n FROM audit.v061_evidence_claim_map WHERE legacy_evidence_id = 'E-003';
@@ -95,9 +95,85 @@ BEGIN
     IF n <> 14 THEN RAISE EXCEPTION 'Expected 14 raw rows from v0.5.0 Evidence, found %', n; END IF;
 END $$;
 
-DO $$
+DO $
 DECLARE n integer;
 BEGIN
-    SELECT count(*) INTO n FROM audit.qc_issue WHERE issue_code = 'V061_GLOBAL_EVIDENCE_SEMANTIC_MIGRATION_PENDING' AND severity = 'blocking' AND resolved = false;
-    IF n <> 1 THEN RAISE EXCEPTION 'Expected one unresolved blocking global-evidence semantic-migration QC issue, found %', n; END IF;
-END $$;
+    SELECT count(*) INTO n
+    FROM audit.v061_evidence_claim_map
+    WHERE legacy_evidence_id LIKE 'v0.% Evidence!%';
+    IF n <> 22 THEN RAISE EXCEPTION 'Expected 22 global evidence-to-claim mappings, found %', n; END IF;
+
+    SELECT count(DISTINCT legacy_evidence_id) INTO n
+    FROM audit.v061_evidence_claim_map
+    WHERE legacy_evidence_id LIKE 'v0.% Evidence!%';
+    IF n <> 18 THEN RAISE EXCEPTION 'Expected 18 positive/disputed global evidence rows to map to claims, found %', n; END IF;
+
+    SELECT count(*) INTO n
+    FROM audit.research_coverage_source
+    WHERE source_role = 'evidence_sheet_source';
+    IF n <> 36 THEN RAISE EXCEPTION 'Expected all 36 global evidence rows to retain coverage-source provenance, found %', n; END IF;
+
+    SELECT count(DISTINCT source_version_id) INTO n
+    FROM audit.research_coverage_source
+    WHERE source_role = 'evidence_sheet_source';
+    IF n <> 29 THEN RAISE EXCEPTION 'Expected 29 unique global evidence source versions, found %', n; END IF;
+END $;
+
+DO $
+DECLARE n integer;
+BEGIN
+    SELECT count(*) INTO n
+    FROM audit.v061_evidence_claim_map m
+    JOIN atlas.territorial_practice_claim tpc ON tpc.claim_id = m.claim_id
+    WHERE m.legacy_evidence_id LIKE 'v0.% Evidence!%';
+    IF n <> 18 THEN RAISE EXCEPTION 'Expected 18 migrated global territorial-practice claims, found %', n; END IF;
+
+    SELECT count(*) INTO n
+    FROM audit.v061_evidence_claim_map m
+    JOIN atlas.territorial_practice_claim tpc ON tpc.claim_id = m.claim_id
+    WHERE m.legacy_evidence_id LIKE 'v0.% Evidence!%'
+      AND tpc.practice_level IS NOT NULL;
+    IF n <> 0 THEN RAISE EXCEPTION 'Global workbook migration must not auto-assign P0-P4; found % assigned levels', n; END IF;
+
+    SELECT count(*) INTO n
+    FROM audit.v061_evidence_claim_map m
+    JOIN atlas.external_participation_claim epc ON epc.claim_id = m.claim_id
+    WHERE m.legacy_evidence_id LIKE 'v0.% Evidence!%';
+    IF n <> 3 THEN RAISE EXCEPTION 'Expected 3 global external-participation claims, found %', n; END IF;
+
+    SELECT count(*) INTO n
+    FROM audit.v061_evidence_claim_map m
+    JOIN atlas.legal_event le ON le.claim_id = m.claim_id
+    WHERE m.legacy_evidence_id LIKE 'v0.% Evidence!%';
+    IF n <> 1 THEN RAISE EXCEPTION 'Expected 1 global legal-event claim, found %', n; END IF;
+END $;
+
+DO $
+DECLARE n integer;
+BEGIN
+    SELECT count(*) INTO n
+    FROM audit.v061_evidence_claim_map
+    WHERE legacy_evidence_id = 'v0.4.9 Evidence!5'
+      AND mapping_role = 'external_participation:slave_trade_network';
+    IF n <> 1 THEN RAISE EXCEPTION 'Anshan/Elam must remain external participation only'; END IF;
+
+    SELECT count(*) INTO n
+    FROM audit.v061_evidence_claim_map
+    WHERE legacy_evidence_id = 'v0.4.9 Evidence!10'
+      AND mapping_role IN (
+          'territorial_practice:captive_taking_incorporation',
+          'territorial_practice:slavery_enslavement'
+      );
+    IF n <> 2 THEN RAISE EXCEPTION 'Shang must preserve captive-taking and disputed slavery as two separate mappings'; END IF;
+END $;
+
+DO $
+DECLARE n integer;
+BEGIN
+    SELECT count(*) INTO n
+    FROM audit.qc_issue
+    WHERE issue_code = 'V061_GLOBAL_EVIDENCE_SEMANTIC_MIGRATION_PENDING'
+      AND severity = 'blocking'
+      AND resolved = false;
+    IF n <> 0 THEN RAISE EXCEPTION 'Global evidence semantic-migration blocking issue should be absent after completed migration, found %', n; END IF;
+END $;
