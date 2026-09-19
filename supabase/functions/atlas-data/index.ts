@@ -14,7 +14,40 @@ Deno.serve(async (req) => {
   const sql = postgres(Deno.env.get("SUPABASE_DB_URL")!, { prepare: false });
 
   try {
+    const releases = await sql`
+      select release_version, schema_version, manifest
+      from audit.release_manifest
+      where status='published'
+        and manifest->>'purpose'='public_mvp_preview'
+      order by created_at desc
+      limit 1
+    `;
+
+    if (releases.length === 0) {
+      return new Response(JSON.stringify({ error: "No published MVP preview release" }), {
+        status: 503,
+        headers: { ...corsHeaders, "content-type": "application/json; charset=utf-8" },
+      });
+    }
+
     const places = await sql`
+      with release as (
+        select manifest
+        from audit.release_manifest
+        where status='published'
+          and manifest->>'purpose'='public_mvp_preview'
+        order by created_at desc
+        limit 1
+      ),
+      release_claim as (
+        select jsonb_array_elements_text(manifest->'claim_ids')::uuid as claim_id
+        from release
+      ),
+      released_practice as (
+        select t.*
+        from publish.territorial_practice_claim t
+        join release_claim rc using (claim_id)
+      )
       select
         se.spatial_entity_id,
         se.canonical_name as name,
@@ -30,10 +63,10 @@ Deno.serve(async (req) => {
               'summary', c.summary,
               'review_status', c.review_status,
               'publication_status', c.publication_status,
-              'practice_type', t.practice_type_code,
-              'practice_level', t.practice_level,
-              'coverage_state', t.coverage_state_code,
-              'classification_status', t.classification_status,
+              'practice_type', c.practice_type_code,
+              'practice_level', c.practice_level,
+              'coverage_state', c.coverage_state_code,
+              'classification_status', c.classification_status,
               'sources', coalesce((
                 select jsonb_agg(
                   jsonb_build_object(
@@ -56,10 +89,8 @@ Deno.serve(async (req) => {
             )
             order by c.from_year, c.claim_id
           )
-          from atlas.territorial_practice_claim t
-          join atlas.claim c on c.claim_id = t.claim_id
-          where t.spatial_entity_id = se.spatial_entity_id
-            and c.review_status = 'reviewed'
+          from released_practice c
+          where c.spatial_entity_id = se.spatial_entity_id
         ), '[]'::jsonb) as claims,
         coalesce((
           select jsonb_agg(
@@ -77,34 +108,38 @@ Deno.serve(async (req) => {
             )
             order by g.from_year nulls first, g.geometry_id
           )
-          from atlas.geometry g
+          from publish.geometry g
           left join atlas.source_version gsv on gsv.source_version_id = g.geometry_source_version_id
           left join atlas.source gs on gs.source_id = gsv.source_id
           where g.spatial_entity_id = se.spatial_entity_id
-            and g.review_status = 'reviewed'
+            and g.geometry_id::text in (
+              select jsonb_array_elements_text(manifest->'geometry_ids')
+              from release
+            )
         ), '[]'::jsonb) as geometries
-      from atlas.spatial_entity se
-      where se.review_status = 'reviewed'
-        and exists (
-          select 1
-          from atlas.territorial_practice_claim t
-          join atlas.claim c on c.claim_id = t.claim_id
-          where t.spatial_entity_id = se.spatial_entity_id
-            and c.review_status = 'reviewed'
-        )
+      from publish.spatial_entity se
+      where exists (
+        select 1
+        from released_practice c
+        where c.spatial_entity_id = se.spatial_entity_id
+      )
       order by se.canonical_name
     `;
 
+    const release = releases[0];
     return new Response(JSON.stringify({
-      status: "research_preview",
-      data_boundary: "reviewed_atlas_records_not_yet_canonical_public_release",
+      status: "published_preview",
+      release_version: release.release_version,
+      schema_version: release.schema_version,
+      canonical: release.manifest?.canonical ?? false,
+      data_boundary: "release_manifest_plus_publish_views",
       date_model: "astronomical_year_numbering",
       places,
     }), {
       headers: {
         ...corsHeaders,
         "content-type": "application/json; charset=utf-8",
-        "cache-control": "no-store",
+        "cache-control": "public, max-age=60",
       },
     });
   } finally {
