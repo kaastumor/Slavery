@@ -221,6 +221,39 @@ It intentionally:
 
 This becomes the baseline a DVC trial must beat in usability without weakening preservation/audit semantics.
 
+
+## DVC bounded trial result — 2026-09-19
+
+A real isolated GitHub Actions trial was executed with DVC 3.66.0 and a 4 MiB deterministic synthetic artifact.
+
+Sequence:
+
+1. initialize temporary Git + DVC repository;
+2. configure temporary filesystem DVC remote;
+3. compute original SHA-256;
+4. `dvc add`;
+5. `dvc push`;
+6. delete workspace artifact;
+7. delete local DVC cache;
+8. `dvc pull`;
+9. recompute SHA-256.
+
+Result:
+
+- roundtrip: **passed**;
+- restored bytes: 4,194,304;
+- atlas-side SHA-256 before/after: `d4093f28a49d61c459a09647038e6d9c9e0686811f382a447a38969032583773`;
+- DVC pointer recorded MD5 `d65067deec71e3472f2647b1089f90af` and size 4,194,304;
+- remote object count: 1.
+
+Interpretation:
+
+- DVC demonstrably restores byte-identical artifacts and gives a convenient add/push/pull workflow;
+- its metadata/checksum mechanism is useful operationally, but the atlas should continue to verify SHA-256 independently for canonical release identity;
+- DVC still does not define database release membership, QC, unresolved issues, methodology version, or scholarly preservation identifiers.
+
+**Revised outcome:** DVC is a viable optional working-data layer. It should not replace the provider-neutral atlas release manifest. Adoption can wait until source/geometry volume or multi-researcher workflow makes the convenience worthwhile.
+
 ## Current recommendation
 
 For the next architecture phase:
