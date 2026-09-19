@@ -39,6 +39,13 @@ jobs:
       - name: Non-Atlantic rollback fixtures
         run: ./scripts/db-test-non-atlantic.sh
 
+      - name: Prototype map sanity
+        run: |
+          python -m json.tool prototype/map/data/world-land.geojson >/dev/null
+          python -m json.tool prototype/map/data/brazil-modern-proxy.geojson >/dev/null
+          python -m json.tool prototype/map/data/slice.json >/dev/null
+          node --input-type=module --check < prototype/map/app.js
+
       - name: Migration ledger status
         run: ./scripts/db-status.sh
 
