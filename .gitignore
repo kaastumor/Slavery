@@ -1,0 +1,21 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db
+
+# Local build/runtime outputs
+build/*
+!build/.gitkeep
+backups/*
+!backups/.gitkeep
+
+# IDE/editor state
+.vscode/
+.idea/
+
+# Never commit local database volumes/exports outside controlled release paths
+*.dump
+*.sql.gz

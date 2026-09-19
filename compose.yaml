@@ -1,0 +1,37 @@
+services:
+  db:
+    image: postgis/postgis:17-3.5
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-slavery_atlas}
+      POSTGRES_USER: ${POSTGRES_USER:-atlas}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    ports:
+      - "${POSTGRES_PORT:-54329}:5432"
+    volumes:
+      - atlas_pgdata:/var/lib/postgresql/data
+      - ./db:/workspace/db:ro
+      - ./backups:/workspace/backups
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 5s
+    restart: unless-stopped
+
+  tooling:
+    build:
+      context: .
+      dockerfile: docker/tooling.Dockerfile
+    working_dir: /workspace
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-atlas}:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/${POSTGRES_DB:-slavery_atlas}
+      HSA_V061_WORKBOOK: /workspace/${HSA_CANONICAL_WORKBOOK:-data/releases/v0.6.1/Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx}
+    volumes:
+      - ./:/workspace
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  atlas_pgdata:

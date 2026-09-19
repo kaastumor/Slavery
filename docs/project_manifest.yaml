@@ -1,0 +1,117 @@
+project: Historical Slavery Atlas
+status_date: 2026-09-19
+phase: reproducible_development_environment_prepared_live_runtime_pending
+canonical_data_release:
+  version: 0.6.1
+  filename: Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx
+  sha256: 0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4
+  storage_model: workbook
+  status: canonical_until_validated_database_migration
+baseline_release:
+  version: 0.5.0
+  filename: Historical_Slavery_Atlas_Global_Coverage_Audit_v0.5.0.xlsx
+coverage_audit:
+  total_region_period_cells: 99
+  strong: 57
+  provisional: 18
+  disputed: 4
+  researched_inconclusive: 20
+  not_researched: 0
+atlantic_seed:
+  voyages: 8
+  status: controlled_QA_seed
+architecture:
+  target_database: PostgreSQL_PostGIS
+  schema_draft: draft-0.10
+  map_client_preferred: MapLibre_GL_JS
+  initial_tile_server_preferred: Martin
+  initial_tile_server_locked: false
+  pmtiles_required: false
+  excel_required_for_future_releases: false
+  publication_boundary_required: true
+  database_foundation_sql: v0.3_migrations_importer_and_non_atlantic_tests_defined_not_live_runtime_validated
+  internal_id_strategy: uuid_with_source_native_ids_preserved
+  missingness_strategy: null_or_status_not_fake_entities
+  local_runtime: docker_compose_postgis_17_3_5
+  local_runtime_locked_for_production: false
+legacy_implemented_tables:
+- VOYAGE
+- OWNER
+- VOYAGE_OWNER
+- OWNER_EVIDENCE
+- SOURCE
+migration_target_entities:
+- ACTOR
+- ACTOR_NAME
+- SPATIAL_ENTITY
+- POLITY
+- SPATIAL_RELATION
+- GEOMETRY
+- CLAIM
+- TERRITORIAL_PRACTICE_CLAIM
+- LEGAL_EVENT
+- ACTOR_ATTRIBUTE_CLAIM
+- EXTERNAL_PARTICIPATION_CLAIM
+- SOURCE
+- SOURCE_VERSION
+- SOURCE_ASSET
+- CLAIM_SOURCE
+- INGEST_RUN
+- RAW_RECORD
+- RESEARCH_COVERAGE_ASSESSMENT
+- RESEARCH_COVERAGE_SOURCE
+- VOYAGE
+- VOYAGE_OWNER
+- VOYAGE_FINANCE
+- VOYAGE_STOP
+next_milestone:
+  name: live_database_migration_reconciliation
+  requirements:
+  - run_migrations_0001_0011
+  - run_schema_smoke_test
+  - apply_v0_6_1_importer
+  - run_v0_6_1_reconciliation
+  - run_non_atlantic_acceptance_test
+  - semantically_migrate_global_evidence_sheets
+  - thin_map_proof
+previously_planned_participation_work:
+  status: deferred_until_database_foundation_validated
+  items:
+  - financier_relationships
+  - normalized_ports
+  - source_metadata_cleanup
+  - Fredensborg_reconciliation
+known_unresolved:
+- id: voyage_35181_fredensborg_disembarkation
+  detail: Published reconstructions differ between 235 and about 241 at St. Croix;
+    keep unresolved pending source reconciliation.
+database_foundation:
+  package: Historical_Slavery_Atlas_DB_Foundation_v0.3
+  migrations_defined: 11
+  workbook_importer: implemented
+  canonical_workbook_dry_run: passed
+  live_postgresql_execution: pending
+  source_registry_gap_fredensborg_exact_url: explicit_qc_warning
+  non_atlantic_acceptance_sql: implemented_rollback_only_not_live_executed
+  p_level_null_semantics: null_unassigned_distinct_from_explicit_P0
+  research_coverage_source_provenance: implemented_separate_from_claim_evidence
+  full_workbook_raw_preservation:
+    sheets: 18
+    nonempty_rows: 288
+    status: implemented_on_apply
+  global_evidence_semantic_migration: blocking_pending
+  canonical_workbook_checksum_enforced: true
+  external_participation_claim: implemented
+
+development_environment:
+  version: v0.4
+  local_runtime: docker_compose
+  python_tooling: containerized_python_3_12_11
+  migration_ledger: atlas_meta.schema_migration_checksum_enforced
+  canonical_workbook_in_repo: true
+  windows_one_command_bootstrap: true
+  github_actions_ci: prepared
+  devcontainer: prepared
+  backup_restore_scripts: prepared
+  live_external_execution: pending
+  production_hosting_provider: undecided

@@ -1,0 +1,250 @@
+schema_version: draft-0.10
+status: executable_foundation_importer_and_non_atlantic_tests_defined_not_live_runtime_validated
+principle: identities, claims, relationships, source versions, time and geometry are
+  separate
+database_target: PostgreSQL_PostGIS
+logical_schemas:
+  atlas_meta: deployment_and_schema_migration_metadata_not_historical_data
+  raw: source_native_imports_when_stored
+  staging: parsed_normalized_candidates
+  atlas: canonical_research_data_after_migration
+  publish: reviewed_published_views_or_materializations
+  audit: ingest_qc_reconciliation
+time_model:
+  internal_year_system: astronomical_integer
+  one_ce: 1
+  one_bce: 0
+  two_bce: -1
+  query_range_type: int4range
+  range_semantics: research bounds inclusive; database range represented half-open
+    [from_year,to_year+1) when both bounds known
+  preserve_fields:
+  - from_year
+  - to_year
+  - valid_years
+  - temporal_precision
+  - temporal_certainty
+  - date_text_original
+entities:
+  ACTOR:
+    key: actor_id
+    purpose: person_or_organization_identity
+  SPATIAL_ENTITY:
+    key: spatial_entity_id
+    purpose: generic_geographic_identity
+  POLITY:
+    key: spatial_entity_id
+    foreign_keys:
+    - spatial_entity_id
+    purpose: political_specialization_of_spatial_entity
+  SPATIAL_RELATION:
+    key: spatial_relation_id
+    foreign_keys:
+    - subject_spatial_entity_id
+    - object_spatial_entity_id
+    temporal: true
+  GEOMETRY:
+    key: geometry_id
+    foreign_keys:
+    - spatial_entity_id
+    - geometry_source_version_id
+    temporal: true
+    spatial: true
+  CLAIM:
+    key: claim_id
+    temporal: true
+    purpose: universal_provenanced_assertion
+  TERRITORIAL_PRACTICE_CLAIM:
+    key: claim_id
+    foreign_keys:
+    - claim_id
+    - spatial_entity_id
+    practice_level_nullable_until_explicit_assessment: true
+    null_practice_level_semantics: no_P0_P4_assessment_recorded
+  LEGAL_EVENT:
+    key: claim_id
+    foreign_keys:
+    - claim_id
+    - jurisdiction_spatial_entity_id
+  ACTOR_ATTRIBUTE_CLAIM:
+    key: claim_id
+    foreign_keys:
+    - claim_id
+    - actor_id
+  SOURCE:
+    key: source_id
+    purpose: conceptual_source
+  SOURCE_VERSION:
+    key: source_version_id
+    foreign_keys:
+    - source_id
+    purpose: exact_edition_release_snapshot_or_item
+  SOURCE_ASSET:
+    key: source_asset_id
+    foreign_keys:
+    - source_version_id
+    optional: true
+  CLAIM_SOURCE:
+    key: claim_source_id
+    foreign_keys:
+    - claim_id
+    - source_version_id
+  INGEST_RUN:
+    key: ingest_run_id
+    foreign_keys:
+    - source_version_id
+  RAW_RECORD:
+    key: raw_record_id
+    foreign_keys:
+    - ingest_run_id
+    optional: true
+  VOYAGE:
+    key: voyage_id
+    id_type: uuid
+    source_native_identifier_fields:
+    - source_dataset
+    - source_native_voyage_id
+    foreign_keys:
+    - primary_source_version_id
+  VOYAGE_OWNER:
+    key: voyage_owner_id
+    foreign_keys:
+    - voyage_id
+    - actor_id
+    - claim_id
+    actor_id_nullable_only_for: explicit_missing_owner
+    claimable_relationship: true
+  VOYAGE_FINANCE:
+    key: voyage_finance_id
+    foreign_keys:
+    - voyage_id
+    - actor_id
+    - claim_id
+    claimable_relationship: true
+  VOYAGE_STOP:
+    key: voyage_stop_id
+    foreign_keys:
+    - voyage_id
+    - spatial_entity_id
+    - claim_id
+    spatial_entity_nullable_when_raw_place_unresolved: true
+    claimable_relationship: true
+  ACTOR_NAME:
+    key: actor_name_id
+    foreign_keys:
+    - actor_id
+    - source_version_id
+    purpose: aliases_and_source_raw_names
+  RESEARCH_COVERAGE_ASSESSMENT:
+    key: coverage_assessment_id
+    schema: audit
+    foreign_keys:
+    - spatial_entity_id
+    purpose: project_research_coverage_not_historical_prevalence
+    publication_control: true
+  RESEARCH_COVERAGE_SOURCE:
+    key: coverage_assessment_id_plus_source_version_id_plus_role
+    schema: audit
+    foreign_keys:
+    - coverage_assessment_id
+    - source_version_id
+    purpose: exact_sources_reviewed_for_research_coverage_not_practice_claim_evidence
+  EXTERNAL_PARTICIPATION_CLAIM:
+    key: claim_id
+    foreign_keys:
+    - claim_id
+    - spatial_entity_id
+    - actor_id
+    purpose: non_voyage_external_or_network_participation_separate_from_territorial_practice
+    requires_spatial_or_actor_subject: true
+  PARTICIPATION_TYPE:
+    key: code
+    purpose: evolving_external_participation_vocabulary
+legacy_mappings:
+  OWNER: ACTOR
+  OWNER_EVIDENCE: semantic_claim_mapping_actor_attributes_or_relationship_claims_one_to_many_allowed
+  FINANCIER: ACTOR_with_finance_role
+  VOYAGE_FINANCIER: VOYAGE_FINANCE
+  PORT: SPATIAL_ENTITY_with_entity_type_port
+  POLITY: SPATIAL_ENTITY_plus_POLITY_specialization
+  UNKNOWN_OWNER_PLACEHOLDER: no_actor_create_missing_owner_relationship_status
+publication:
+  public_services_read_from: publish_layer_only
+  draft_research_public_by_default: false
+  releases_must_be_reconstructible: true
+  research_coverage_may_be_published_separately: true
+forbidden_derivations:
+- actor_nationality_from_vessel_flag
+- actor_nationality_from_port
+- actor_nationality_from_residence
+- actor_nationality_from_business_base
+- actor_nationality_from_surname
+- actor_role_from_another_actor_role_without_evidence
+- territorial_practice_level_from_voyage_count
+- territorial_practice_level_from_record_count
+- practice_absence_from_researched_inconclusive
+- historical_polity_from_modern_boundary_without_proxy_flag
+- timeless_port_polity_relation_when_jurisdiction_changes
+- normalized_value_overwriting_only_raw_source_value
+- source_version_silent_replacement
+- uncertain_date_stored_as_exact_without_precision_metadata
+- draft_claim_exposed_as_published_without_review
+- fake_entity_from_missing_value
+- internal_id_overwriting_source_native_id
+- coverage_code_used_as_practice_level
+- disputed_or_researched_inconclusive_coerced_to_P0
+- legacy_S_P_D_RI_mapped_mechanically_to_P0_P4
+- research_coverage_source_link_treated_as_practice_claim_evidence
+- external_network_participation_forced_into_territorial_practice
+- partial_workbook_migration_declared_canonical
+- raw_preservation_treated_as_substitute_for_semantic_migration
+identity_policy:
+  internal_primary_keys: uuid
+  source_native_ids: preserve_separately
+  missingness: status_or_null_relationship_not_fake_entity
+controlled_vocabulary_policy:
+  evolving_research_vocabularies: lookup_tables
+  stable_technical_states: domains_or_checks
+controlled_values:
+  practice_level:
+    P0: unknown_or_no_usable_classification
+    P1: isolated_direct_attestation
+    P2: repeated_independent_attestations
+    P3: systemic_or_institutional_strongly_supported
+    P4: widespread_or_structurally_major_scholarship_supported
+  coverage_state:
+  - not_researched
+  - source_identified
+  - reviewed
+  - classified
+  - disputed
+  - researched_inconclusive
+  legal_status:
+  - institutionalized_or_recognized
+  - prohibited_abolished_or_criminalized
+  - mixed_conflicting_or_subnational
+  - unknown
+  geometry_accuracy:
+  - exact
+  - specialist
+  - approximate_historical
+  - modern_proxy
+  - unresolved
+  review_status:
+  - draft
+  - reviewed
+  - rejected
+  publication_status:
+  - unpublished
+  - published
+  - superseded
+  - withdrawn
+practice_level_assignment_policy:
+  'null': no_P0_P4_assessment_recorded
+  P0: explicit_unknown_or_no_usable_classification_not_absence
+  legacy_coverage_codes_do_not_map_mechanically_to_P_levels: true
+canonical_workbook_migration_policy:
+  raw_preserve_all_nonempty_rows: true
+  expected_sheets: 18
+  expected_nonempty_rows: 288
+  global_evidence_semantic_migration_required_before_canonical_switch: true

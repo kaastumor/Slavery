@@ -1,0 +1,8 @@
+# Initial repository owner. Expand when additional maintainers join.
+* @kaastumor
+
+# High-risk areas should always receive owner review.
+/db/migrations/ @kaastumor
+/db/tests/ @kaastumor
+/docs/08_DECISIONS_LOG.md @kaastumor
+/data/releases/ @kaastumor

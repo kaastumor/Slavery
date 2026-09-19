@@ -1,0 +1,86 @@
+# Geography and Map Rules
+
+## Base layer
+
+Always render a neutral world land outline. No-data areas remain land.
+
+Missing historical political geometry must never be rendered as ocean, disappearance, or evidence of no slavery.
+
+## Spatial identity
+
+Map targets are not limited to polities. Use `SPATIAL_ENTITY` for polities, regions, provinces, cities, ports, sites and other defensible geographic units.
+
+`POLITY` is a specialization of `SPATIAL_ENTITY`.
+
+A place such as a port must not carry one timeless political owner. Historical containment/control is represented through time-bounded spatial relationships.
+
+## Historical boundary backbone
+
+Intended backbone: Cliopatria / Seshat Global History Databank historical political polygons, using valid date ranges and source identifiers where available.
+
+## Geometry resolver hierarchy
+
+For a selected year:
+
+1. Exact Cliopatria polygon valid for that year
+2. Better specialist historical geometry where available and defensible
+3. Nearest defensible historical geometry, marked `approximate_historical`
+4. Modern geographic proxy, marked `modern_proxy`
+5. No political polygon; retain neutral world land only and mark geometry unresolved
+
+Never silently substitute a modern boundary for a historical one.
+
+## Required geometry metadata
+
+Every mapped historical geometry should expose:
+
+- `spatial_entity_id`
+- target year / interval
+- source version
+- source-native spatial/polity identifier
+- validity interval
+- temporal precision where relevant
+- resolution method
+- accuracy status
+- whether geometry is exact, specialist, approximate or proxy
+
+## Temporal rule
+
+A claim and a geometry must overlap in time to be joined.
+
+Do not attach a historical claim to a later nation-state solely because the modern location falls within it.
+
+Internally, temporal joins should use the project historical-year convention defined in `04_DATA_MODEL.md` and `11_SYSTEM_ARCHITECTURE.md`.
+
+## Visual separation
+
+Conceptual layers:
+
+- neutral land base
+- historical polity/other geometry
+- territorial practice fill P0–P4
+- legal status overlay
+- research coverage / uncertainty overlay
+- participation networks: voyages, ports, actors, companies, finance
+
+Do not let voyage density recolor territorial practice.
+
+## Web-map delivery
+
+The map client should not dictate the research data model.
+
+Preferred client: MapLibre GL JS.
+
+Use the simplest suitable delivery format per layer:
+
+- GeoJSON is acceptable for small/simple/static layers
+- vector tiles are preferred for large, detailed or dense global layers
+- detailed claims/sources should normally be loaded through an API rather than embedded fully in map tiles
+
+Martin is the preferred initial/prototype PostGIS/vector-tile server, but it is not a permanent methodological dependency.
+
+PMTiles may later be used for stable/read-heavy published layers or release snapshots; it is optional rather than required.
+
+## Map-query principle
+
+The selected year and selected layer/filter determine the visible state. Do not pre-create one duplicated full-world dataset for every year when the same result can be obtained from time-bounded records.

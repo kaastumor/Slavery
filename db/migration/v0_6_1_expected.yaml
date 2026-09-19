@@ -1,0 +1,36 @@
+source_workbook: Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx
+canonical_version: 0.6.1
+foundation_expectations:
+  voyages: 8
+  real_actors_after_missing_placeholder_removal: 11
+  voyage_owner_rows_total: 12
+  voyage_owner_actor_linked: 11
+  voyage_owner_missing_owner_rows: 1
+  legacy_sources: 17
+  legacy_owner_evidence_ids: 11
+special_cases:
+  - voyage_id: "36144"
+    vessel: Westmoreland
+    requirement: preserve_raw_documented_flag
+    expected_value: "U.S.A."
+  - voyage_id: "557"
+    vessel: Orestes
+    requirement: no_fake_owner_from_imputed_carrier
+    expected_missing_owner_rows: 1
+  - voyage_id: "35181"
+    vessel: Fredensborg
+    requirement: unresolved_disembarkation_preserved
+    expected_disembarked_count: null
+    expected_status: "Needs source reconciliation"
+  - voyage_id: "32359"
+    vessel: Aurore
+    requirement: independent_owner_nationality_positive_control
+    expected_actor_attribute_type: nationality_political_identity
+    expected_value: French
+coverage_audit:
+  cells: 99
+  strong: 57
+  provisional: 18
+  disputed: 4
+  researched_inconclusive: 20
+  not_researched: 0

@@ -1,0 +1,26 @@
+name: Engineering / database issue
+description: Report a schema, importer, CI, tooling, map, API, or infrastructure problem.
+title: "[engineering] "
+labels: []
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is failing or needs improvement?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction / context
+      description: Include commands, migration numbers, logs, or affected files where relevant.
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+  - type: textarea
+    id: safety
+    attributes:
+      label: Data / methodology impact
+      description: Note whether this could affect provenance, canonical data, publication state, time, geography, or classification.
