@@ -105,9 +105,10 @@ def main() -> None:
         content_md5,
         content_sha256,
         active,
-        geom
+        geom,
+        created_at
     )
-    select %s,%s,%s,%s,%s,%s,%s,%s,true,geom
+    select %s,%s,%s,%s,%s,%s,%s,%s,true,geom,now()
     from land
     on conflict (fabric_id) do update set
         source_name=excluded.source_name,
