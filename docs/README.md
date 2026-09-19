@@ -34,11 +34,11 @@ The canonical dataset must never be treated as self-explanatory. These files con
 
 ## Database implementation package
 
-The architecture now has DB Foundation v0.3 (`db/migrations/0001`–`0011`, schema/v0.6.1/non-Atlantic acceptance tests, and the automated v0.6.1 importer). It has not yet been executed against a live PostgreSQL/PostGIS instance, so the workbook remains canonical.
+The repository database foundation now has migrations `0001`–`0012`, schema/non-Atlantic/release-reconstruction acceptance tests, and the automated v0.6.1 importer. Core migrations and acceptance tests execute successfully against live PostgreSQL/PostGIS in GitHub Actions. The workbook remains canonical because exact-artifact import/reconciliation and semantic migration of the global evidence sheets are still pending.
 
 
 The v0.3 importer validates and raw-preserves all 18 workbook tabs / 288 non-empty rows. The global evidence sheets still require reviewed semantic migration, which remains a blocking condition before the database can replace v0.6.1 as canonical.
 
 ## Development environment v0.4
 
-A repository-shaped Docker development environment now wraps DB Foundation v0.3. It includes containerized Python tooling, checksum-tracked migrations, the exact v0.6.1 release file/checksum, one-command Windows bootstrap, backup/restore, GitHub Actions CI and staging/production boundary documentation. Live PostgreSQL/PostGIS execution remains pending.
+A repository-shaped Docker development environment wraps the database foundation. It includes containerized Python tooling, checksum-tracked migrations, v0.6.1 release metadata/checksum, one-command Windows bootstrap, backup/restore, GitHub Actions CI and staging/production boundary documentation. The canonical workbook binary remains external and artifact-gated.
