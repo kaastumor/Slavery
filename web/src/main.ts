@@ -10,7 +10,7 @@ type SourceRef = {
   source_classification: string | null;
   version_label: string | null;
   url: string | null;
-  direction: string;
+  direction: "supports" | "challenges" | "qualifies" | "context" | string;
   locator: string | null;
 };
 
@@ -69,19 +69,15 @@ const panel = document.querySelector<HTMLElement>("#panel")!;
 const status = document.querySelector<HTMLElement>("#status")!;
 const slider = document.querySelector<HTMLInputElement>("#year")!;
 const yearLabel = document.querySelector<HTMLOutputElement>("#year-label")!;
+const timelineRange = document.querySelector<HTMLElement>("#timeline-range")!;
+const releaseBadge = document.querySelector<HTMLElement>("#release-badge")!;
 
 const map = new Map({
   container: "map",
   style: {
     version: 8,
     sources: {},
-    layers: [
-      {
-        id: "background",
-        type: "background",
-        paint: { "background-color": "#dce3e5" },
-      },
-    ],
+    layers: [{ id: "background", type: "background", paint: { "background-color": "#dce3e5" } }],
   },
   center: [15, 24],
   zoom: 1.35,
@@ -93,6 +89,7 @@ map.addControl(new NavigationControl({ showCompass: false }), "top-left");
 
 let places: Place[] = [];
 let selectedPlaceId: string | null = null;
+let release: ApiResponse | null = null;
 
 function activeInYear(fromYear: number | null, toYear: number | null, year: number): boolean {
   return (fromYear === null || year >= fromYear) && (toYear === null || year <= toYear);
@@ -105,17 +102,17 @@ function formatYear(year: number): string {
 function formatInterval(fromYear: number | null, toYear: number | null): string {
   const from = fromYear === null ? "unknown start" : formatYear(fromYear);
   const to = toYear === null ? "open-ended" : formatYear(toYear);
-  return `${from}–${to}`;
+  return from === to ? from : `${from}–${to}`;
 }
 
 function escapeHtml(value: unknown): string {
   return String(value ?? "").replace(/[&<>"']/g, (char) => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#039;",
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;",
   })[char]!);
+}
+
+function readable(value: string): string {
+  return value.replaceAll("_", " ");
 }
 
 function activeClaims(place: Place, year: number): Claim[] {
@@ -123,23 +120,17 @@ function activeClaims(place: Place, year: number): Claim[] {
 }
 
 function geometryForYear(place: Place, year: number): GeometryRecord | null {
-  return (
-    place.geometries.find(
-      (geometry) =>
-        geometry.geometry !== null &&
-        activeInYear(geometry.from_year, geometry.to_year, year),
-    ) ?? null
-  );
+  return place.geometries.find(
+    (geometry) => geometry.geometry !== null && activeInYear(geometry.from_year, geometry.to_year, year),
+  ) ?? null;
 }
 
 function unresolvedGeometryForYear(place: Place, year: number): GeometryRecord | null {
-  return (
-    place.geometries.find(
-      (geometry) =>
-        geometry.accuracy_status === "unresolved" &&
-        activeInYear(geometry.from_year, geometry.to_year, year),
-    ) ?? null
-  );
+  return place.geometries.find(
+    (geometry) =>
+      geometry.accuracy_status === "unresolved" &&
+      activeInYear(geometry.from_year, geometry.to_year, year),
+  ) ?? null;
 }
 
 function highestPracticeLevel(claims: Claim[]): number {
@@ -179,29 +170,41 @@ function buildFeatureCollection(year: number): FeatureCollection {
   return { type: "FeatureCollection", features };
 }
 
+function directionBadge(direction: string): string {
+  const safe = ["supports", "challenges", "qualifies", "context"].includes(direction) ? direction : "context";
+  return `<span class="badge ${safe}">${escapeHtml(direction)}</span>`;
+}
+
 function claimHtml(claim: Claim): string {
   const sources = claim.sources.length
-    ? `<ul class="source-list">${claim.sources
-        .map((source) => {
-          const title = escapeHtml(source.title);
-          const label = source.locator ? `${title} — ${escapeHtml(source.locator)}` : title;
-          return source.url
-            ? `<li><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${label}</a></li>`
-            : `<li>${label}</li>`;
-        })
-        .join("")}</ul>`
+    ? `<ul class="source-list">${claim.sources.map((source) => {
+        const title = escapeHtml(source.title);
+        const locator = source.locator ? ` · ${escapeHtml(source.locator)}` : "";
+        const author = source.author_or_institution
+          ? `<div class="meta source-meta">${escapeHtml(source.author_or_institution)}${locator}</div>`
+          : locator
+            ? `<div class="meta source-meta">${locator.slice(3)}</div>`
+            : "";
+        const link = source.url
+          ? `<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${title}</a>`
+          : title;
+        return `<li>${directionBadge(source.direction)} ${link}${author}</li>`;
+      }).join("")}</ul>`
     : `<p class="meta">No claim-source link returned.</p>`;
 
   return `
     <article class="claim">
-      <h3>${escapeHtml(claim.practice_type.replaceAll("_", " "))}</h3>
-      <div class="badges">
-        <span class="badge ${claim.coverage_state === "disputed" ? "disputed" : ""}">${escapeHtml(claim.coverage_state)}</span>
-        <span class="badge">${escapeHtml(claim.practice_level ?? "P-level unassigned")}</span>
+      <div class="claim-title-row">
+        <h3>${escapeHtml(readable(claim.practice_type))}</h3>
+        <span class="practice-level">${escapeHtml(claim.practice_level ?? "P-level unassigned")}</span>
       </div>
-      <p class="meta">${formatInterval(claim.from_year, claim.to_year)} · ${escapeHtml(claim.publication_status)}</p>
+      <div class="badges">
+        <span class="badge ${claim.coverage_state === "disputed" ? "disputed" : ""}">${escapeHtml(readable(claim.coverage_state))}</span>
+        ${claim.classification_status ? `<span class="badge">${escapeHtml(readable(claim.classification_status))}</span>` : ""}
+      </div>
+      <p class="meta">${formatInterval(claim.from_year, claim.to_year)}</p>
       <p>${escapeHtml(claim.summary)}</p>
-      <strong>Evidence</strong>
+      <strong>Evidence package</strong>
       ${sources}
     </article>
   `;
@@ -213,63 +216,81 @@ function renderPlace(place: Place, year: number): void {
   const geometry = geometryForYear(place, year);
   const unresolved = unresolvedGeometryForYear(place, year);
 
+  const geometrySource = geometry?.source_title
+    ? geometry.source_url
+      ? `<a href="${escapeHtml(geometry.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(geometry.source_title)}</a>`
+      : escapeHtml(geometry.source_title)
+    : "";
+
   panel.innerHTML = `
+    <button id="back-overview" class="back-button" type="button">← Year overview</button>
     <h2>${escapeHtml(place.display_name || place.name)}</h2>
     <div class="badges">
-      <span class="badge">${escapeHtml(place.entity_type_code)}</span>
+      <span class="badge">${escapeHtml(readable(place.entity_type_code))}</span>
       <span class="badge ${!geometry ? "disputed" : ""}">
-        geometry: ${escapeHtml(geometry?.accuracy_status ?? unresolved?.accuracy_status ?? "not resolved for year")}
+        geometry: ${escapeHtml(readable(geometry?.accuracy_status ?? unresolved?.accuracy_status ?? "not resolved for year"))}
       </span>
     </div>
     <p class="meta">Selected year: <strong>${formatYear(year)}</strong></p>
     ${place.notes ? `<p class="meta">${escapeHtml(place.notes)}</p>` : ""}
-    ${claims.length ? claims.map(claimHtml).join("") : "<p>No territorial-practice claim is active here in the selected year.</p>"}
+    ${claims.length
+      ? claims.map(claimHtml).join("")
+      : `<div class="empty-state">No published territorial-practice claim is active here in ${formatYear(year)}.</div>`}
     <div class="geometry-note">
-      <strong>Geometry</strong><br />
+      <strong>Historical geometry</strong><br />
       ${escapeHtml(
         geometry?.resolution_method ??
-          unresolved?.resolution_method ??
-          "No defensible geometry has been attached for this place/year. This is not evidence of absence.",
+        unresolved?.resolution_method ??
+        "No defensible geometry has been attached for this place/year. This is not evidence of absence.",
       )}
-      ${geometry?.source_title ? `<br /><span class="meta">Source: ${escapeHtml(geometry.source_title)}</span>` : ""}
+      ${geometrySource ? `<br /><span class="meta">Source: ${geometrySource}</span>` : ""}
     </div>
   `;
+
+  document.querySelector<HTMLButtonElement>("#back-overview")?.addEventListener("click", () => renderOverview(year));
 }
 
 function renderOverview(year: number): void {
   selectedPlaceId = null;
   const active = places
-    .map((place) => ({
-      place,
-      claims: activeClaims(place, year),
-      geometry: geometryForYear(place, year),
-    }))
+    .map((place) => ({ place, claims: activeClaims(place, year), geometry: geometryForYear(place, year) }))
     .filter(({ claims }) => claims.length > 0);
 
   const unresolvedCount = active.filter(({ geometry }) => geometry === null).length;
+  const activeClaimCount = active.reduce((total, item) => total + item.claims.length, 0);
+
+  const list = active.length
+    ? active.map(({ place, claims, geometry }) => {
+        const level = highestPracticeLevel(claims);
+        const label = claims.map((claim) =>
+          `${readable(claim.practice_type)}${claim.coverage_state === "disputed" ? " — disputed" : ""}`
+        ).join(" · ");
+        return `<button class="place-button" data-place-id="${escapeHtml(place.spatial_entity_id)}">
+          <span class="row">
+            <strong>${escapeHtml(place.display_name || place.name)}</strong>
+            <span class="meta">${level ? `P${level}` : "—"}</span>
+          </span>
+          <span class="meta">${escapeHtml(label)}${geometry ? "" : " · geometry unresolved"}</span>
+        </button>`;
+      }).join("")
+    : `<div class="empty-state">No published territorial-practice evidence is active in this release for ${formatYear(year)}.</div>`;
 
   panel.innerHTML = `
     <h2>${formatYear(year)}</h2>
-    <p>
-      <strong>${active.length}</strong> researched places have active territorial-practice evidence.
-      ${unresolvedCount ? `<strong>${unresolvedCount}</strong> currently lack a defensible map geometry.` : ""}
-    </p>
+    <div class="summary-lead">
+      <strong>${active.length}</strong> place${active.length === 1 ? "" : "s"} ·
+      <strong>${activeClaimCount}</strong> active claim${activeClaimCount === 1 ? "" : "s"}
+      ${unresolvedCount ? ` · <strong>${unresolvedCount}</strong> unresolved map target${unresolvedCount === 1 ? "" : "s"}` : ""}
+    </div>
     <p class="meta">
-      Research coverage, law, network participation and territorial practice remain separate.
-      Missing geometry or evidence is never interpreted as historical absence.
+      This map shows published territorial-practice evidence only. Missing evidence remains unknown; it is never rendered as historical absence.
     </p>
-    <div id="place-list">
-      ${active
-        .map(({ place, claims }) => {
-          const label = claims
-            .map((claim) => `${claim.practice_type.replaceAll("_", " ")}${claim.coverage_state === "disputed" ? " (?)" : ""}`)
-            .join(", ");
-          return `<button class="place-button" data-place-id="${escapeHtml(place.spatial_entity_id)}">
-            <strong>${escapeHtml(place.display_name || place.name)}</strong><br />
-            <span class="meta">${escapeHtml(label)}</span>
-          </button>`;
-        })
-        .join("")}
+    <div id="place-list">${list}</div>
+    <div class="release-note">
+      <strong>Release boundary</strong><br />
+      ${release
+        ? `${escapeHtml(release.release_version)} · schema ${escapeHtml(release.schema_version)} · ${release.canonical ? "canonical release" : "non-canonical research preview"}`
+        : "Loading release metadata…"}
     </div>
   `;
 
@@ -288,8 +309,9 @@ function updateMap(year: number): void {
   const source = map.getSource("evidence") as GeoJSONSource | undefined;
   source?.setData(buildFeatureCollection(year));
 
-  const activeCount = places.reduce((count, place) => count + activeClaims(place, year).length, 0);
-  status.textContent = `${activeCount} active claim${activeCount === 1 ? "" : "s"} · ${places.length} published places`;
+  const activePlaceCount = places.filter((place) => activeClaims(place, year).length > 0).length;
+  const activeClaimCount = places.reduce((count, place) => count + activeClaims(place, year).length, 0);
+  status.textContent = `${activeClaimCount} active claim${activeClaimCount === 1 ? "" : "s"} · ${activePlaceCount} place${activePlaceCount === 1 ? "" : "s"}`;
 
   if (selectedPlaceId) {
     const selected = places.find((place) => place.spatial_entity_id === selectedPlaceId);
@@ -322,19 +344,27 @@ async function boot(): Promise<void> {
       new Promise<void>((resolve) => map.once("load", () => resolve())),
     ]);
 
+    release = apiResponse;
     places = apiResponse.places;
-    status.title = `Release ${apiResponse.release_version} · schema ${apiResponse.schema_version} · ${apiResponse.canonical ? "canonical" : "non-canonical preview"}`;
+    releaseBadge.textContent = `${apiResponse.release_version}${apiResponse.canonical ? "" : " · preview"}`;
+    releaseBadge.classList.toggle("preview", !apiResponse.canonical);
+    releaseBadge.title = `Schema ${apiResponse.schema_version} · ${apiResponse.data_boundary}`;
 
     const years = places.flatMap((place) =>
       place.claims.flatMap((claim) =>
         [claim.from_year, claim.to_year].filter((year): year is number => year !== null),
       ),
     );
-    slider.min = String(Math.min(...years));
-    slider.max = "2026";
-    slider.value = String(years.some((year) => year <= -499) ? -499 : Math.max(...years));
+    if (years.length === 0) throw new Error("Published release contains no dated claims");
 
-    map.addSource("land", { type: "geojson", data: "/world-land.geojson" });
+    const minYear = Math.min(...years);
+    const maxYear = Math.max(...years);
+    slider.min = String(minYear);
+    slider.max = String(maxYear);
+    slider.value = String(-499 >= minYear && -499 <= maxYear ? -499 : maxYear);
+    timelineRange.innerHTML = `<span>${formatYear(minYear)}</span><span>${formatYear(maxYear)}</span>`;
+
+    map.addSource("land", { type: "geojson", data: `${import.meta.env.BASE_URL}world-land.geojson` });
     map.addLayer({
       id: "land-fill",
       type: "fill",
@@ -356,18 +386,16 @@ async function boot(): Promise<void> {
       filter: ["==", ["geometry-type"], "Polygon"],
       paint: {
         "fill-color": [
-          "match",
-          ["get", "state"],
+          "match", ["get", "state"],
           "supported", "#9e493f",
           "disputed", "#c18a31",
           "#b8b7b2",
         ],
         "fill-opacity": [
-          "match",
-          ["get", "state"],
-          "supported", 0.66,
-          "disputed", 0.62,
-          0.1,
+          "case",
+          ["==", ["get", "state"], "inactive"], 0.09,
+          ["==", ["get", "state"], "disputed"], 0.62,
+          ["match", ["get", "p_level"], 4, 0.78, 3, 0.62, 2, 0.46, 1, 0.32, 0.38],
         ],
       },
     });
@@ -378,13 +406,12 @@ async function boot(): Promise<void> {
       filter: ["==", ["geometry-type"], "Polygon"],
       paint: {
         "line-color": [
-          "match",
-          ["get", "state"],
+          "match", ["get", "state"],
           "supported", "#6e2b24",
           "disputed", "#815914",
           "#8f8d88",
         ],
-        "line-width": ["case", ["==", ["get", "state"], "inactive"], 0.7, 1.6],
+        "line-width": ["case", ["==", ["get", "state"], "inactive"], 0.7, 1.5],
       },
     });
     map.addLayer({
@@ -395,13 +422,17 @@ async function boot(): Promise<void> {
       paint: {
         "circle-radius": ["case", ["==", ["get", "state"], "inactive"], 4, 7],
         "circle-color": [
-          "match",
-          ["get", "state"],
+          "match", ["get", "state"],
           "supported", "#9e493f",
           "disputed", "#c18a31",
           "#b8b7b2",
         ],
-        "circle-opacity": ["case", ["==", ["get", "state"], "inactive"], 0.25, 0.85],
+        "circle-opacity": [
+          "case",
+          ["==", ["get", "state"], "inactive"], 0.22,
+          ["==", ["get", "state"], "disputed"], 0.78,
+          ["match", ["get", "p_level"], 4, 0.95, 3, 0.86, 2, 0.76, 1, 0.66, 0.72],
+        ],
         "circle-stroke-width": 1.4,
         "circle-stroke-color": "#4f4841",
       },
@@ -418,8 +449,9 @@ async function boot(): Promise<void> {
     updateMap(currentYear());
   } catch (error) {
     console.error(error);
+    releaseBadge.textContent = "Load error";
     status.textContent = "Failed to load atlas data";
-    panel.innerHTML = `<h2>Could not load the research preview</h2><p>${escapeHtml(error instanceof Error ? error.message : error)}</p>`;
+    panel.innerHTML = `<h2>Could not load the atlas</h2><p>${escapeHtml(error instanceof Error ? error.message : error)}</p>`;
   }
 }
 
