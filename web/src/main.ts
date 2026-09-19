@@ -65,6 +65,17 @@ type Place = {
   geometries: GeometryRecord[];
 };
 
+type CartographyFabric = {
+  fabric_id: string;
+  source_name: string;
+  source_version: string;
+  source_url: string;
+  source_commit_sha: string;
+  source_blob_sha: string;
+  content_md5: string;
+  content_sha256: string;
+};
+
 type ApiResponse = {
   status: string;
   release_version: string;
@@ -72,6 +83,7 @@ type ApiResponse = {
   canonical: boolean;
   data_boundary: string;
   date_model: string;
+  cartography: CartographyFabric | null;
   places: Place[];
 };
 
@@ -314,7 +326,7 @@ function renderPlace(place: Place, year: number): void {
             "No defensible geometry has been attached for this place/year. This is not evidence of absence.",
           )}
           ${geometry?.render_transform === "land_clip"
-  ? `<div class="source-meta">Display geometry is clipped to the neutral land outline; the source historical geometry is preserved unchanged.</div>`
+  ? `<div class="source-meta">Display geometry is clipped to the same canonical 1:10m land fabric used by the basemap; the source historical geometry is preserved unchanged.</div>`
   : ""}
 ${geometrySource ? `<div class="source-meta">Source: ${geometrySource}</div>` : ""}
         </div>
@@ -586,9 +598,13 @@ async function boot(): Promise<void> {
     timelineRange.innerHTML =
       `<span>${formatYear(minYear)}</span><span>${formatYear(maxYear)}</span>`;
 
+    if (!apiResponse.cartography?.source_url) {
+      throw new Error("No active canonical cartographic land fabric");
+    }
+
     map.addSource("land", {
       type: "geojson",
-      data: `${import.meta.env.BASE_URL}world-land.geojson`,
+      data: apiResponse.cartography.source_url,
     });
     map.addLayer({
       id: "land-fill",

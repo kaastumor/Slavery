@@ -105,3 +105,30 @@ Rules:
 
 Purpose: prevent coarse historical source polygons from visually filling modern ocean while preserving the original historical reconstruction intact.
 
+## Canonical cartographic land fabric
+
+The atlas uses one physical land geometry for both the neutral basemap and the coastline constraint applied to historical polygon fills.
+
+Current master fabric:
+
+- Natural Earth `ne_10m_land`
+- Natural Earth release: 5.1.1
+- pinned upstream repository commit: `ca96624a56bd078437bca8184e78163e5039ad19`
+- pinned GeoJSON blob: `2d76878175b8054acd9c5a52917ee9ea59a36fc5`
+- immutable source URL: `https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson`
+
+The active fabric is registered in `cartography.land_fabric` with source identifiers and content checksums.
+
+Rules:
+
+- the browser basemap reads the active fabric URL returned by the release API;
+- `publish.map_geometry` intersects historical polygon fills with the active fabric;
+- therefore basemap coastlines and historical overlay coastlines derive from the same geometry source;
+- no second hand-maintained or independently simplified land outline should be used for normal rendering;
+- source historical geometry remains untouched in `atlas.geometry` and `publish.geometry`;
+- the cartographic fabric constrains physical land/water edges only; it does not replace or modernize inland historical boundaries;
+- higher-quality specialist historical geometry can supersede a Cliopatria polygon without changing this physical-land rule;
+- a future fabric version must be registered as a new version with source and checksum provenance rather than silently replacing the current one.
+
+Natural Earth 1:10m is used because this atlas supports country/region zoom levels. The old 1:110m land outline is retained only as a legacy migration fallback until an active canonical fabric has been loaded; it is not the normal web basemap.
+
