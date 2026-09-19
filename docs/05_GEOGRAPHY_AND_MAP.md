@@ -84,3 +84,24 @@ PMTiles may later be used for stable/read-heavy published layers or release snap
 ## Map-query principle
 
 The selected year and selected layer/filter determine the visible state. Do not pre-create one duplicated full-world dataset for every year when the same result can be obtained from time-bounded records.
+
+## Published coastline clipping
+
+Historical polity polygons may contain coarse reconstructed coastlines that extend into the neutral ocean/land base layer.
+
+For public map rendering only, polygonal reviewed geometry may be intersected with the atlas neutral land mask before delivery.
+
+Rules:
+
+- canonical/research geometry in `atlas.geometry` remains unchanged;
+- reviewed source geometry in `publish.geometry` remains unchanged;
+- coastline clipping is applied only in a dedicated map/render view such as `publish.map_geometry`;
+- points and non-polygon geometries are not land-clipped;
+- the neutral land mask must be versioned and provenance-tracked;
+- API/render metadata must state when `land_clip` was applied;
+- clipping does not improve or reinterpret inland historical boundaries;
+- clipping must never be described as a more historically accurate source polygon;
+- a better specialist historical coastline/geometry may later supersede the display treatment.
+
+Purpose: prevent coarse historical source polygons from visually filling modern ocean while preserving the original historical reconstruction intact.
+

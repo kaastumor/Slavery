@@ -104,11 +104,13 @@ Deno.serve(async (req) => {
               'geometry', case when g.geom is null then null else st_asgeojson(g.geom)::jsonb end,
               'source_title', gs.title,
               'source_version', gsv.version_label,
-              'source_url', gsv.url_or_identifier
+              'source_url', gsv.url_or_identifier,
+              'render_transform', g.render_transform,
+              'render_land_mask_id', g.render_land_mask_id
             )
             order by g.from_year nulls first, g.geometry_id
           )
-          from publish.geometry g
+          from publish.map_geometry g
           left join atlas.source_version gsv on gsv.source_version_id = g.geometry_source_version_id
           left join atlas.source gs on gs.source_id = gsv.source_id
           where g.spatial_entity_id = se.spatial_entity_id

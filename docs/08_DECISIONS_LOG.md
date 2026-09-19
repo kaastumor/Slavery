@@ -168,3 +168,8 @@ This file records durable methodological choices. Add a dated entry whenever a f
 **Decision:** Broad territorial classifications and P-levels must be based on the interpreted evidence package. A primary text, law, inscription, transaction, external observer or individual specialist work is recorded for what it can support, but its wording is not mechanically promoted to the atlas designation. For broad questions, relevant specialist historical synthesis normally determines how bounded evidence should be understood. Contrary evidence remains visible through provenance and evidence direction.  
 **Reason:** Source types answer different historical questions. This preserves both primary evidence and scholarly interpretation while preventing one exceptional document or observer from controlling a territory-wide classification.
 
+## D-036 — Published polygon fills are clipped to the neutral land mask
+**Date:** 2026-09-20  
+**Decision:** Preserve historical/source polygons unchanged in `atlas.geometry` and `publish.geometry`. For public map rendering, polygonal geometry is delivered through a separate render view that intersects it with the versioned neutral world land mask. Points and other non-polygon geometry are unchanged. The render transformation must be exposed in metadata.  
+**Reason:** historical boundary datasets such as Cliopatria can contain coarse reconstructed coastlines that visibly extend into the neutral ocean layer. Clipping the display fill to the same neutral land mask removes this cartographic artifact without silently rewriting the source geometry or claiming improved historical inland boundaries.
+

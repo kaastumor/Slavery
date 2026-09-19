@@ -51,6 +51,8 @@ type GeometryRecord = {
   source_title: string | null;
   source_version: string | null;
   source_url: string | null;
+  render_transform?: "land_clip" | "source_geometry" | "none" | string;
+  render_land_mask_id?: string | null;
 };
 
 type Place = {
@@ -311,7 +313,10 @@ function renderPlace(place: Place, year: number): void {
             unresolved?.resolution_method ??
             "No defensible geometry has been attached for this place/year. This is not evidence of absence.",
           )}
-          ${geometrySource ? `<div class="source-meta">Source: ${geometrySource}</div>` : ""}
+          ${geometry?.render_transform === "land_clip"
+  ? `<div class="source-meta">Display geometry is clipped to the neutral land outline; the source historical geometry is preserved unchanged.</div>`
+  : ""}
+${geometrySource ? `<div class="source-meta">Source: ${geometrySource}</div>` : ""}
         </div>
       </details>
     </div>
