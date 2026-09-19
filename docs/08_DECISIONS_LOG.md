@@ -147,3 +147,24 @@ This file records durable methodological choices. Add a dated entry whenever a f
 **Date:** 2026-09-19  
 **Decision:** The project may publish explicitly non-canonical preview releases for end-to-end product validation. Every such preview must have immutable release membership, QC summary, changelog and unresolved-issues metadata, and public services must resolve data through the release manifest plus publish boundary. The canonical v0.6.1 release remains unchanged until the documented canonical-switch criteria are met.  
 **Reason:** the web product needs real public slices before the historical workbook migration is complete, but a functioning preview must not silently redefine the canonical research release.
+
+## D-032 — The atlas is an evidence-synthesis project, not an original research center
+**Date:** 2026-09-19  
+**Decision:** The Historical Slavery Atlas collects, normalizes, reconciles and digests existing historical evidence and specialist scholarship into transparent claims. It does not present its own ad hoc interpretation of difficult historical controversies as new scholarship when relevant specialist historiography already exists. Primary/source-native evidence anchors bounded facts; specialist historical scholarship is normally the interpretive backbone for classification, prevalence, continuity and structural significance.  
+**Reason:** The atlas's value lies in structured global synthesis, provenance and comparability. Attempting to function as an independent research institute would exceed the project's role, encourage inconsistent interpretation across regions and duplicate specialist scholarship.
+
+## D-033 — Source conflict does not automatically create a disputed atlas designation
+**Date:** 2026-09-19  
+**Decision:** When evidence conflicts, preserve the conflict at claim-source level and synthesize it using ordinary historical source criticism together with the treatment found in relevant specialist historiography. Record the best-supported working designation when historians provide a defensible interpretation. Use `disputed` only when credible specialist scholarship remains materially divided over the historical classification after synthesis. A source marked `challenges` or `qualifies` does not automatically nullify the claim or force `practice_level = NULL`.  
+**Reason:** Historical sources frequently contradict one another because of chronology, genre, transmission, terminology, observer perspective or scope. Treating every contradiction as unresolved would hide rather than represent historical knowledge.
+
+## D-034 — No usable claim means unknown; missingness never becomes historical absence
+**Date:** 2026-09-19  
+**Decision:** If no defensible territorial-practice claim exists for a place/time, the atlas displays the historical condition as unknown. Research coverage records whether the project has researched the target and with what result. No claim is distinct from P0: P0 is an explicit reviewed assessment that the evidence package does not currently support a usable P1–P4 classification. Neither no claim, P0, researched-inconclusive status, nor unresolved geometry implies historical absence.  
+**Reason:** The atlas must distinguish what is historically known from what the project has not established. Otherwise unequal source survival and research coverage would become false negative historical assertions.
+
+## D-035 — Broad atlas designations follow the evidence package, not isolated source wording
+**Date:** 2026-09-19  
+**Decision:** Broad territorial classifications and P-levels must be based on the interpreted evidence package. A primary text, law, inscription, transaction, external observer or individual specialist work is recorded for what it can support, but its wording is not mechanically promoted to the atlas designation. For broad questions, relevant specialist historical synthesis normally determines how bounded evidence should be understood. Contrary evidence remains visible through provenance and evidence direction.  
+**Reason:** Source types answer different historical questions. This preserves both primary evidence and scholarly interpretation while preventing one exceptional document or observer from controlling a territory-wide classification.
+
