@@ -79,26 +79,12 @@ h1 { margin: 3px 0 0; font-size: 21px; font-weight: 650; letter-spacing: -.015em
   overflow: hidden;
   background: #c8d6da;
 }
-.map-fallback {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: #c8d6da;
-  opacity: 1;
-  transition: opacity .2s ease;
-  pointer-events: none;
-}
-.map-fallback.loaded { opacity: 0; }
 #map {
   position: absolute;
   inset: 0;
-  z-index: 1;
   width: 100%;
   height: 100%;
-  background: transparent;
+  background: #c8d6da;
 }
 .map-warning {
   position: absolute;
@@ -300,22 +286,4 @@ a:hover { color: #4f211c; }
   .panel { padding: 15px; }
   .panel h2 { font-size: 21px; }
   .legend { font-size: 10px; transform: scale(.92); transform-origin: bottom left; }
-}
-
-.evidence-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 6;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  pointer-events: none;
-}
-.evidence-overlay .evidence-shape {
-  pointer-events: auto;
-  cursor: pointer;
-  vector-effect: non-scaling-stroke;
-}
-.evidence-overlay .evidence-shape:hover {
-  filter: brightness(.9);
 }

@@ -1,7 +1,10 @@
-import { Map, NavigationControl, type GeoJSONSource, type MapGeoJSONFeature, type MapMouseEvent } from "maplibre-gl";
+import { Map, NavigationControl, setWorkerUrl, type GeoJSONSource, type MapGeoJSONFeature, type MapMouseEvent } from "maplibre-gl";
 import type { Feature, FeatureCollection, Geometry } from "geojson";
 import "maplibre-gl/dist/maplibre-gl.css";
+import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import "./styles.css";
+
+setWorkerUrl(workerUrl);
 
 type SourceRef = {
   title: string;
@@ -71,16 +74,14 @@ const slider = document.querySelector<HTMLInputElement>("#year")!;
 const yearLabel = document.querySelector<HTMLOutputElement>("#year-label")!;
 const timelineRange = document.querySelector<HTMLElement>("#timeline-range")!;
 const releaseBadge = document.querySelector<HTMLElement>("#release-badge")!;
-const mapFallback = document.querySelector<HTMLImageElement>("#map-fallback")!;
 const mapWarning = document.querySelector<HTMLElement>("#map-warning")!;
-const evidenceOverlay = document.querySelector<SVGSVGElement>("#evidence-overlay")!;
 
 const map = new Map({
   container: "map",
   style: {
     version: 8,
     sources: {},
-    layers: [{ id: "background", type: "background", paint: { "background-color": "rgba(0,0,0,0)" } }],
+    layers: [{ id: "background", type: "background", paint: { "background-color": "#c8d6da" } }],
   },
   center: [15, 24],
   zoom: 1.35,
@@ -186,96 +187,6 @@ function buildEvidenceCollections(year: number): { polygons: FeatureCollection; 
     points: { type: "FeatureCollection", features: points },
   };
 }
-
-function evidenceStyle(claims: Claim[]): { fill: string; stroke: string; opacity: number } {
-  const state = featureState(claims);
-  if (state === "disputed") return { fill: "#c18a31", stroke: "#815914", opacity: 0.58 };
-  if (state === "inactive") return { fill: "#b8b7b2", stroke: "#8f8d88", opacity: 0.18 };
-
-  const level = highestPracticeLevel(claims);
-  const opacity = level === 4 ? 0.76 : level === 3 ? 0.62 : level === 2 ? 0.48 : level === 1 ? 0.36 : 0.42;
-  return { fill: "#9e493f", stroke: "#5f2822", opacity };
-}
-
-function svgPoint(lng: number, lat: number): { x: number; y: number } {
-  const point = map.project([lng, lat]);
-  return { x: point.x, y: point.y };
-}
-
-function ringPath(ring: number[][]): string {
-  return ring.map(([lng, lat], index) => {
-    const { x, y } = svgPoint(lng, lat);
-    return `${index === 0 ? "M" : "L"}${x.toFixed(1)},${y.toFixed(1)}`;
-  }).join(" ") + " Z";
-}
-
-function polygonPath(geometry: Geometry): string {
-  if (geometry.type === "Polygon") {
-    return geometry.coordinates.map((ring) => ringPath(ring as number[][])).join(" ");
-  }
-  if (geometry.type === "MultiPolygon") {
-    return geometry.coordinates.flatMap((polygon) =>
-      polygon.map((ring) => ringPath(ring as number[][]))
-    ).join(" ");
-  }
-  return "";
-}
-
-function renderEvidenceOverlay(year: number): void {
-  const rect = evidenceOverlay.getBoundingClientRect();
-  evidenceOverlay.setAttribute("viewBox", `0 0 ${Math.max(1, rect.width)} ${Math.max(1, rect.height)}`);
-  evidenceOverlay.replaceChildren();
-
-  for (const place of places) {
-    const geometryRecord = geometryForYear(place, year);
-    if (!geometryRecord?.geometry) continue;
-
-    const claims = activeClaims(place, year);
-    const style = evidenceStyle(claims);
-    const geometry = geometryRecord.geometry;
-    let element: SVGElement | null = null;
-
-    if (geometry.type === "Polygon" || geometry.type === "MultiPolygon") {
-      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      path.setAttribute("d", polygonPath(geometry));
-      path.setAttribute("fill", style.fill);
-      path.setAttribute("fill-opacity", String(style.opacity));
-      path.setAttribute("stroke", style.stroke);
-      path.setAttribute("stroke-width", "2");
-      path.setAttribute("fill-rule", "evenodd");
-      element = path;
-    } else if (geometry.type === "Point") {
-      const [lng, lat] = geometry.coordinates as number[];
-      const { x, y } = svgPoint(lng, lat);
-      const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-      circle.setAttribute("cx", x.toFixed(1));
-      circle.setAttribute("cy", y.toFixed(1));
-      circle.setAttribute("r", "8");
-      circle.setAttribute("fill", style.fill);
-      circle.setAttribute("fill-opacity", String(Math.max(style.opacity, 0.8)));
-      circle.setAttribute("stroke", "#fffaf1");
-      circle.setAttribute("stroke-width", "2.5");
-      element = circle;
-    }
-
-    if (element) {
-      element.classList.add("evidence-shape");
-      element.dataset.placeId = place.spatial_entity_id;
-      const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
-      title.textContent = place.display_name || place.name;
-      element.appendChild(title);
-      evidenceOverlay.appendChild(element);
-    }
-  }
-
-  const mapped = evidenceOverlay.querySelectorAll(".evidence-shape").length;
-  const activeCount = places.reduce((count, place) => count + activeClaims(place, year).length, 0);
-  if (activeCount > 0 && mapped === 0) {
-    mapWarning.textContent = `Evidence is active for ${formatYear(year)}, but no mapped geometry could be drawn.`;
-    mapWarning.hidden = false;
-  }
-}
-
 
 function directionBadge(direction: string): string {
   const safe = ["supports", "challenges", "qualifies", "context"].includes(direction) ? direction : "context";
@@ -418,7 +329,6 @@ function updateMap(year: number): void {
   const pointSource = map.getSource("evidence-points") as GeoJSONSource | undefined;
   polygonSource?.setData(collections.polygons);
   pointSource?.setData(collections.points);
-  renderEvidenceOverlay(year);
 
   const activePlaceCount = places.filter((place) => activeClaims(place, year).length > 0).length;
   const activeClaimCount = places.reduce((count, place) => count + activeClaims(place, year).length, 0);
@@ -476,12 +386,6 @@ async function boot(): Promise<void> {
     timelineRange.innerHTML = `<span>${formatYear(minYear)}</span><span>${formatYear(maxYear)}</span>`;
 
     map.addSource("land", { type: "geojson", data: `${import.meta.env.BASE_URL}world-land.geojson` });
-    map.once("idle", () => {
-      if (map.isSourceLoaded("land")) {
-        mapFallback.classList.add("loaded");
-        mapWarning.hidden = true;
-      }
-    });
     map.addLayer({
       id: "land-fill",
       type: "fill",
@@ -537,18 +441,6 @@ async function boot(): Promise<void> {
         "circle-stroke-color": "#fffaf1",
       },
     });
-
-    evidenceOverlay.addEventListener("click", (event) => {
-      const target = (event.target as SVGElement).closest<SVGElement>("[data-place-id]");
-      const id = target?.dataset.placeId;
-      if (!id) return;
-      const place = places.find((candidate) => candidate.spatial_entity_id === id);
-      if (place) renderPlace(place, currentYear());
-    });
-
-    map.on("move", () => renderEvidenceOverlay(currentYear()));
-    map.on("resize", () => renderEvidenceOverlay(currentYear()));
-
 
     slider.addEventListener("input", () => updateMap(currentYear()));
     updateMap(currentYear());
