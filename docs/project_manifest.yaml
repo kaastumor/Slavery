@@ -1,6 +1,6 @@
 project: Historical Slavery Atlas
 status_date: 2026-09-19
-phase: reproducible_development_environment_prepared_live_runtime_in_progress
+phase: release_reconstruction_foundation_validated_in_ci
 canonical_data_release:
   version: 0.6.1
   filename: Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx
@@ -19,7 +19,7 @@ atlantic_seed:
   status: controlled_QA_seed
 architecture:
   target_database: PostgreSQL_PostGIS
-  schema_draft: draft-0.10
+  schema_draft: draft-0.11
   map_client_preferred: MapLibre_GL_JS
   initial_tile_server_preferred: Martin
   publication_boundary_required: true
@@ -29,8 +29,8 @@ architecture:
   canonical_binary_in_git: false
   canonical_release_manifest_in_git: true
 database_foundation:
-  migrations_defined: 11
-  live_postgresql_migrations: passed_in_github_actions_2026_09_19
+  migrations_defined: 12
+  live_postgresql_migrations: passed_through_0012_in_github_actions_2026_09_19
   schema_smoke_test: passed_in_github_actions_2026_09_19
   canonical_workbook_dry_run: passed_offline_against_exact_sha256
   canonical_workbook_ci_import: artifact_gated_not_foundation_ci
@@ -38,6 +38,9 @@ database_foundation:
   p_level_null_semantics: null_unassigned_distinct_from_explicit_P0
   research_coverage_source_provenance: implemented_separate_from_claim_evidence
   external_participation_claim: implemented
+  release_reconstruction_membership: implemented_and_live_ci_validated
+  release_membership_freeze_point: validated
+  immutable_release_bundle_required: true
 development_environment:
   version: v0.4
   repository: kaastumor/Slavery
