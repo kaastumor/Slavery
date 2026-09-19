@@ -5,7 +5,7 @@
 
 ## Implementation checkpoint — 2026-09-19
 
-DB Foundation v0.3 now includes executable migrations through `0011`, an automated v0.6.1 importer, and rollback-only non-Atlantic acceptance fixtures. A dry run against the canonical workbook passed the current count and special-case invariants. One workbook provenance issue was discovered: the exact Fredensborg SlaveVoyages voyage URL is referenced in voyage/ownership rows but absent from the 17-row Atlantic Sources registry. The importer creates an explicit source/version plus QC warning rather than silently substituting a related source.
+The repository database foundation now includes executable migrations through `0012`, an automated v0.6.1 importer, rollback-only non-Atlantic acceptance fixtures, and explicit immutable release membership. A dry run against the canonical workbook passed the current count and special-case invariants. One workbook provenance issue was discovered: the exact Fredensborg SlaveVoyages voyage URL is referenced in voyage/ownership rows but absent from the 17-row Atlantic Sources registry. The importer creates an explicit source/version plus QC warning rather than silently substituting a related source.
 
 Migration `0009` corrects one acceptance-test issue discovered before live execution: an unassigned P-level is now stored as NULL rather than forcing P0–P4. P0 remains an explicit unknown/no-usable-classification assessment.
 
@@ -37,6 +37,7 @@ Create PostgreSQL/PostGIS migrations for, in dependency order:
 14. nullable P-level correction (`0009`)
 15. research-coverage source provenance (`0010`)
 16. generic external-participation claims (`0011`) and non-Atlantic acceptance test
+17. typed immutable release membership + release artifacts (`0012`) and rollback-only reconstruction acceptance test
 
 Do not create a standalone long-term `FINANCIER` identity table.
 
