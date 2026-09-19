@@ -3,37 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171716" />
     <meta
       name="description"
-      content="Historical Slavery Atlas research preview: time-bounded evidence, historical geometry, provenance and uncertainty."
+      content="Historical Slavery Atlas: a time-aware evidence synthesis of slavery, coerced labour and servile dependency."
     />
     <title>Historical Slavery Atlas</title>
   </head>
   <body>
     <div id="app">
       <header class="topbar">
-        <div>
-          <div class="eyebrow">Research preview</div>
+        <div class="brand">
+          <div class="eyebrow">Historical evidence atlas</div>
           <h1>Historical Slavery Atlas</h1>
         </div>
+
         <div class="timeline">
-          <label for="year">Year</label>
-          <input id="year" type="range" step="1" />
-          <output id="year-label" for="year"></output>
+          <div class="timeline-heading">
+            <label for="year">Selected year</label>
+            <output id="year-label" for="year">Loading…</output>
+          </div>
+          <input id="year" type="range" step="1" aria-label="Historical year" />
+          <div id="timeline-range" class="timeline-range"></div>
         </div>
-        <div id="status" class="status">Loading evidence…</div>
+
+        <div class="release-block">
+          <div id="release-badge" class="release-badge">Loading release…</div>
+          <div id="status" class="status">Loading published evidence…</div>
+        </div>
       </header>
 
       <main class="layout">
         <section class="map-shell" aria-label="Historical map">
           <div id="map"></div>
           <div class="legend" aria-label="Map legend">
-            <div><span class="swatch supported"></span>supported evidence</div>
-            <div><span class="swatch disputed"></span>disputed classification</div>
-            <div><span class="swatch inactive"></span>researched, outside selected interval</div>
+            <div class="legend-title">Territorial practice</div>
+            <div class="legend-scale">
+              <span class="level level-1"></span><span>P1</span>
+              <span class="level level-2"></span><span>P2</span>
+              <span class="level level-3"></span><span>P3</span>
+              <span class="level level-4"></span><span>P4</span>
+            </div>
+            <div><span class="swatch disputed"></span>genuinely disputed classification</div>
+            <div><span class="swatch inactive"></span>geometry visible, evidence inactive</div>
+            <div class="legend-note">Intensity reflects reviewed P-levels, never source counts.</div>
           </div>
         </section>
-        <aside id="panel" class="panel" aria-live="polite"></aside>
+
+        <aside id="panel" class="panel" aria-live="polite">
+          <div class="panel-loading">Loading published evidence…</div>
+        </aside>
       </main>
     </div>
     <script type="module" src="/src/main.ts"></script>
