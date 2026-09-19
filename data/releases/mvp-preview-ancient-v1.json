@@ -1,0 +1,22 @@
+{
+  "release_version": "mvp-preview-ancient-v1",
+  "schema_version": "0011",
+  "canonical": false,
+  "purpose": "public_mvp_preview",
+  "claim_ids": [
+    "6d4a714b-1899-440f-b8c2-7c2b8b1d2cc9",
+    "7cd1da37-b2f8-4dba-b63b-9cffa6e19b65",
+    "b56b83a9-4a2b-4df6-8279-909089dc2227",
+    "896a3720-d871-495e-b23e-c24d7dde3039",
+    "df374145-bfd5-414b-ba9f-2d85819b7626",
+    "94a4cb96-0300-4dbc-ae79-27318e71a50b",
+    "e8d1cf12-725b-49db-8083-5a50389a1d86",
+    "ae30281b-d7c3-4e89-be55-1471fa6bfa0f",
+    "cfd709dd-55ad-4f92-a6ec-f6c7910b3fe1",
+    "dda25043-a5a8-4564-8531-afb1f3f57722",
+    "ce2feb0a-917f-4bf1-9561-3d1f1f9887d4"
+  ],
+  "changelog": "First non-canonical public MVP preview. Publishes the reviewed ancient hard-case vertical slice without changing the canonical v0.6.1 data release.",
+  "qc_summary": "11/11 claims reviewed; 11/11 have claim-specific source links; every spatial target has reviewed exact/specialist/approximate/unresolved geometry coverage for the claim interval; 0 invalid PostGIS geometries.",
+  "unresolved_issues": "Mycenaean combined archive target has explicitly unresolved territorial geometry. Achaemenid Persis/Elam uses an approximate historical imperial proxy. Shang, Mycenaean and Achaemenid slavery classifications retain disputed status where recorded. This preview is not a canonical data release."
+}

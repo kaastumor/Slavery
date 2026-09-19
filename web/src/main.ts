@@ -53,6 +53,9 @@ type Place = {
 
 type ApiResponse = {
   status: string;
+  release_version: string;
+  schema_version: string;
+  canonical: boolean;
   data_boundary: string;
   date_model: string;
   places: Place[];
@@ -286,7 +289,7 @@ function updateMap(year: number): void {
   source?.setData(buildFeatureCollection(year));
 
   const activeCount = places.reduce((count, place) => count + activeClaims(place, year).length, 0);
-  status.textContent = `${activeCount} active claim${activeCount === 1 ? "" : "s"} · ${places.length} researched places`;
+  status.textContent = `${activeCount} active claim${activeCount === 1 ? "" : "s"} · ${places.length} published places`;
 
   if (selectedPlaceId) {
     const selected = places.find((place) => place.spatial_entity_id === selectedPlaceId);
@@ -320,6 +323,7 @@ async function boot(): Promise<void> {
     ]);
 
     places = apiResponse.places;
+    status.title = `Release ${apiResponse.release_version} · schema ${apiResponse.schema_version} · ${apiResponse.canonical ? "canonical" : "non-canonical preview"}`;
 
     const years = places.flatMap((place) =>
       place.claims.flatMap((claim) =>

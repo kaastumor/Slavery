@@ -1,0 +1,53 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Example ancient site",
+    "display_name": "Example ancient site",
+    "entity_type_code": "site",
+    "notes": "Replace this example with a reviewed research target."
+  },
+  "claim": {
+    "from_year": -999,
+    "to_year": -950,
+    "date_text_original": "c. 1000–951 BCE",
+    "temporal_precision": "approximate_range",
+    "spatial_precision": "site",
+    "summary": "Replace with one bounded historical assertion supported by the evidence package.",
+    "review_status": "draft",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "reviewed",
+      "classification_status": "candidate"
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Replace with conceptual source title",
+        "author_or_institution": "Author or institution",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Record dependence on other sources where relevant.",
+        "reliability_limitations": "Record material limitations."
+      },
+      "version": {
+        "version_label": "Exact reviewed web/edition state",
+        "url_or_identifier": "https://example.org/exact-source",
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "historical interpretation",
+      "independence_group": "example-source-family",
+      "directness": "specialist synthesis",
+      "direction": "supports",
+      "locator": "page/section/record when available"
+    }
+  ],
+  "geometry": {
+    "from_year": -999,
+    "to_year": -950,
+    "accuracy_status": "unresolved",
+    "resolution_method": "No defensible geometry has yet been assigned.",
+    "geojson": null,
+    "review_status": "draft"
+  }
+}

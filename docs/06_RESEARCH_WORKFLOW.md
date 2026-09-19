@@ -71,3 +71,26 @@ A batch is not complete merely because sources were found. It is complete when:
 - raw/source values remain traceable for imported datasets
 - QC passes
 - changelog/decision log is updated where necessary
+
+
+## F. Direct PostgreSQL research entry
+
+New hand-researched cases should normally enter the atlas database directly rather than being staged in a new Excel workbook.
+
+Use `data/research_case_template.json` as the claim-centric input shape and validate it first:
+
+```bash
+python tools/add_research_case.py data/research_case_template.json
+```
+
+The loader creates or reuses the exact `SOURCE_VERSION`, resolves/creates the `SPATIAL_ENTITY`, creates the base `CLAIM`, `TERRITORIAL_PRACTICE_CLAIM`, `CLAIM_SOURCE` rows, and optional geometry. It always creates the claim as `unpublished`; publication is a separate operation.
+
+To apply after review:
+
+```bash
+DATABASE_URL=... python tools/add_research_case.py path/to/case.json --apply
+```
+
+A public preview/release is created separately with `tools/publish_release.py`. That gate checks that every selected claim is reviewed, has claim-level evidence, and that territorial-practice targets have reviewed geometry coverage or an explicit unresolved-geometry record. The publication tool cannot declare a canonical release.
+
+This workflow does not alter the requirement to preserve raw/source-native records for bulk imported datasets.
