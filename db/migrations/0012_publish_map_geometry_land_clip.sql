@@ -9,9 +9,9 @@ CREATE TABLE publish.neutral_land_mask (
     source_version text NOT NULL,
     source_ref text NOT NULL,
     source_blob_sha text NOT NULL,
-    geom extensions.geometry(MultiPolygon, 4326) NOT NULL,
+    geom geometry(MultiPolygon, 4326) NOT NULL,
     created_at timestamptz NOT NULL DEFAULT now(),
-    CONSTRAINT neutral_land_mask_valid CHECK (extensions.st_isvalid(geom))
+    CONSTRAINT neutral_land_mask_valid CHECK (st_isvalid(geom))
 );
 
 WITH source_geojson AS (
@@ -23,12 +23,12 @@ features AS (
     FROM source_geojson
 ),
 land AS (
-    SELECT extensions.st_multi(
-             extensions.st_collectionextract(
-               extensions.st_unaryunion(
-                 extensions.st_collect(
-                   extensions.st_setsrid(
-                     extensions.st_geomfromgeojson((feature->'geometry')::text),
+    SELECT st_multi(
+             st_collectionextract(
+               st_unaryunion(
+                 st_collect(
+                   st_setsrid(
+                     st_geomfromgeojson((feature->'geometry')::text),
                      4326
                    )
                  )
@@ -72,10 +72,10 @@ SELECT
     g.accuracy_status,
     CASE
         WHEN g.geom IS NULL THEN NULL
-        WHEN extensions.geometrytype(g.geom) IN ('POLYGON','MULTIPOLYGON') THEN
-            extensions.st_multi(
-                extensions.st_collectionextract(
-                    extensions.st_intersection(g.geom, m.geom),
+        WHEN geometrytype(g.geom) IN ('POLYGON','MULTIPOLYGON') THEN
+            st_multi(
+                st_collectionextract(
+                    st_intersection(g.geom, m.geom),
                     3
                 )
             )
@@ -86,7 +86,7 @@ SELECT
     g.created_at,
     CASE
         WHEN g.geom IS NULL THEN 'none'
-        WHEN extensions.geometrytype(g.geom) IN ('POLYGON','MULTIPOLYGON')
+        WHEN geometrytype(g.geom) IN ('POLYGON','MULTIPOLYGON')
             THEN 'land_clip'
         ELSE 'source_geometry'
     END AS render_transform,
