@@ -128,7 +128,25 @@ Deno.serve(async (req) => {
       order by se.canonical_name
     `;
 
+    const fabrics = await sql`
+      select
+        fabric_id,
+        source_name,
+        source_version,
+        source_url,
+        source_commit_sha,
+        source_blob_sha,
+        content_md5,
+        content_sha256
+      from cartography.land_fabric
+      where active
+      order by created_at desc
+      limit 1
+    `;
+
     const release = releases[0];
+    const fabric = fabrics[0] ?? null;
+
     return new Response(JSON.stringify({
       status: "published_preview",
       release_version: release.release_version,
@@ -136,6 +154,16 @@ Deno.serve(async (req) => {
       canonical: release.manifest?.canonical ?? false,
       data_boundary: "release_manifest_plus_publish_views",
       date_model: "astronomical_year_numbering",
+      cartography: fabric ? {
+        fabric_id: fabric.fabric_id,
+        source_name: fabric.source_name,
+        source_version: fabric.source_version,
+        source_url: fabric.source_url,
+        source_commit_sha: fabric.source_commit_sha,
+        source_blob_sha: fabric.source_blob_sha,
+        content_md5: fabric.content_md5,
+        content_sha256: fabric.content_sha256,
+      } : null,
       places,
     }), {
       headers: {
