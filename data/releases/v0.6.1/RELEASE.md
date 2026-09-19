@@ -12,4 +12,6 @@ SHA-256:
 
 The binary workbook is deliberately not stored as an ordinary Git blob. Git tracks this immutable release identity and checksum; release validation must be run against the exact external artifact.
 
+Foundation CI never substitutes synthetic data for this release. Canonical-import/reconciliation checks run only when this exact artifact is supplied and the checksum matches.
+
 Do not overwrite or re-save v0.6.1 in place. Any changed bytes must become a new release and pass the normal changelog/QC/versioning process.
