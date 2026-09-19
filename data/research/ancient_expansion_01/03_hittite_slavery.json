@@ -1,0 +1,66 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Hittite central Anatolia",
+    "display_name": "Hittite central Anatolia",
+    "entity_type_code": "polity",
+    "notes": "Hittite polity context; historical polygons resolved separately through Cliopatria."
+  },
+  "claim": {
+    "from_year": -1399,
+    "to_year": -1199,
+    "date_text_original": "1400–1200 BCE",
+    "temporal_precision": "broad_range",
+    "spatial_precision": "polity",
+    "summary": "Hittite evidence supports a distinct enslaved category alongside other forms of dependence: specialist synthesis describes potentially chattel slaves who were priced in law and frequently employed as herdsmen, while the legal corpus also shows status flexibility and warns against treating every non-free designation as equivalent.",
+    "review_status": "reviewed",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P2",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P2 recognizes repeated legal and social attestations while avoiding a claim that all Hittite non-free persons were slaves."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Slavery in the ancient Near East",
+        "author_or_institution": "Daniel C. Snell",
+        "source_type": "book_chapter",
+        "source_classification": "secondary",
+        "independence_notes": "Specialist regional synthesis in The Cambridge World History of Slavery.",
+        "reliability_limitations": "Some Hittite categories are reconstructed from legal terminology and do not map cleanly onto modern slavery categories."
+      },
+      "version": {
+        "version_label": "Cambridge World History of Slavery chapter, online 2011",
+        "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-in-the-ancient-near-east/E9871B0E91F592E905BFC90BA83796CC",
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "specialist classification and practice synthesis",
+      "independence_group": "hittite_snell",
+      "directness": "specialist secondary synthesis",
+      "direction": "supports",
+      "locator": "Hittite slaves section, pp. 19–20"
+    },
+    {
+      "source": {
+        "title": "Corpus of Hittite Laws (CHiL)",
+        "author_or_institution": "Giulia Torri, Antonio Carnevale and Livio Warbinek",
+        "source_type": "digital_primary_edition",
+        "source_classification": "primary",
+        "independence_notes": "Digital scholarly edition of the Hittite law corpus.",
+        "reliability_limitations": "Normative legal texts establish categories and rules but do not by themselves measure prevalence in practice."
+      },
+      "version": {
+        "version_label": "CHiL web edition accessed 2026-09-19",
+        "url_or_identifier": "https://hatti.adwudlit.uni-mainz.de/CHiL/",
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "legal terminology and status rules",
+      "independence_group": "hittite_law_corpus",
+      "directness": "primary legal corpus",
+      "direction": "qualifies",
+      "locator": "Introduction to the Corpus of Hittite Laws"
+    }
+  ]
+}
