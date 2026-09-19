@@ -16,9 +16,9 @@ The atlas must not reduce the question to a binary "slavery / no slavery" map. I
 - v0.6.1 contains a controlled 8-voyage Atlantic seed used to test attribution and schema rules.
 - Claim-level owner evidence, a source registry, normalized owner/entity records, and explicit many-to-many voyage-owner relationships are implemented in v0.6.1.
 - The project is now in an **architecture-foundation phase** before further bulk ingestion.
-- `schema_draft.yaml` draft-0.10 and `11_SYSTEM_ARCHITECTURE.md` describe the migration target; they do not retroactively alter v0.6.1.
+- `schema_draft.yaml` draft-0.11 and `11_SYSTEM_ARCHITECTURE.md` describe the migration target; they do not retroactively alter v0.6.1.
 - PostgreSQL + PostGIS is the target canonical database after a validated migration.
-- DB Foundation v0.3 contains migrations 0001–0011, the v0.6.1 importer, and rollback-only non-Atlantic acceptance fixtures; all 18 workbook tabs are now raw-preserved by the importer; the four global evidence sheets still require reviewed semantic normalization before any canonical switch. Live PostgreSQL/PostGIS execution is also still pending, so the package remains a migration prototype rather than canonical data.
+- The repository database foundation contains migrations 0001–0012, the v0.6.1 importer, rollback-only non-Atlantic fixtures, and explicit release-reconstruction membership. Core PostgreSQL/PostGIS migrations/tests have executed successfully in GitHub Actions; exact v0.6.1 artifact import/reconciliation and reviewed semantic normalization of the four global evidence sheets remain required before any canonical database switch.
 
 ## Non-negotiable principles
 
