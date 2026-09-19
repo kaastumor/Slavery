@@ -1,0 +1,31 @@
+{
+  "batch": "ancient_expansion_01",
+  "status": "reviewed_unpublished",
+  "database_qc": {
+    "claims": 8,
+    "claim_sources": 14,
+    "spatial_entities": 7,
+    "reviewed_claims": 8,
+    "unpublished_claims": 8,
+    "batch_geometry_rows": 23,
+    "release_memberships": 0,
+    "claims_without_source": 0,
+    "invalid_batch_geometries": 0,
+    "claims_without_geometry_resolution": 0,
+    "p_levels": {
+      "P2": 3,
+      "P3": 5
+    },
+    "practice_types": {
+      "penal_labour": 1,
+      "slavery_enslavement": 5,
+      "other_servile_dependency": 2
+    }
+  },
+  "unresolved_issues": [
+    "Garshana exact location remains unresolved.",
+    "Neo-Babylonian temple-household dependency deliberately has unresolved territorial geometry.",
+    "Archive-rich local evidence such as Qianling is not generalized mechanically to empire-wide population proportions.",
+    "No claim in this batch is part of a public release yet."
+  ]
+}
