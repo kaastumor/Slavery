@@ -1,0 +1,88 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+    "display_name": "Mauryan Empire",
+    "entity_type_code": "polity",
+    "notes": "Research slice begins at 318 BCE because that is the earliest continuous Cliopatria Mauryan geometry currently resolved in the atlas."
+  },
+  "claim": {
+    "from_year": -317,
+    "to_year": -184,
+    "date_text_original": "318–185 BCE mapped Mauryan slice",
+    "temporal_precision": "bounded_slice",
+    "spatial_precision": "polity",
+    "summary": "Whether slavery should be characterized as a territorial practice across the Mauryan Empire is treated as disputed. Megasthenes' transmitted account states that Indians were free and did not use slaves, whereas Indian textual evidence reviewed by modern specialists contains repeated references to slavery and servile status. The atlas therefore preserves the contradiction rather than converting either source tradition into an empire-wide yes/no conclusion.",
+    "review_status": "reviewed",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "disputed",
+      "classification_status": "disputed",
+      "notes": "No P-level is assigned. The claim records a genuine evidentiary conflict and does not treat normative texts, Greek ethnography, or later synthesis as a direct measure of Mauryan prevalence."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Ancient India as Described by Megasthenes and Arrian — Megasthenes fragment on slavery",
+        "author_or_institution": "Megasthenes, transmitted by later Greek authors; J. W. McCrindle translation",
+        "source_type": "primary_text_translation",
+        "source_classification": "primary",
+        "independence_notes": "External Greek ethnographic testimony transmitted through later classical authors.",
+        "reliability_limitations": "The original Indica is lost; the statement survives in later quotations and may reflect Greek categories that did not map cleanly onto Indian status relations."
+      },
+      "version": {
+        "version_label": "McCrindle 1877 public-domain edition, p. 69",
+        "url_or_identifier": "https://en.wikisource.org/wiki/Page:Ancient_India_as_described_by_Megasthen%C3%AAs_and_Arrian.djvu/88",
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "external contemporary/near-contemporary counterevidence",
+      "independence_group": "megasthenes_tradition",
+      "directness": "primary ethnographic testimony in later transmission",
+      "direction": "challenges",
+      "locator": "Fragment XXVII / p. 69"
+    },
+    {
+      "source": {
+        "title": "Réflexions sur le problème de l'esclavage dans l'Inde ancienne",
+        "author_or_institution": "Yvonne Bongert",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Specialist legal-historical review explicitly centered on the contradiction between Megasthenes and Indian textual evidence.",
+        "reliability_limitations": "Published in 1963 and dependent on then-current textual scholarship; useful here chiefly for identifying and analyzing the evidentiary contradiction."
+      },
+      "version": {
+        "version_label": "Bulletin de l'École française d'Extrême-Orient 51.1 (1963)",
+        "url_or_identifier": "https://www.persee.fr/doc/befeo_0336-1519_1963_num_51_1_1570",
+        "publication_year": 1963,
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "specialist interpretation of conflicting source traditions",
+      "independence_group": "india_bongert",
+      "directness": "specialist secondary review",
+      "direction": "qualifies",
+      "locator": "pp. 143–194, opening discussion"
+    },
+    {
+      "source": {
+        "title": "Hindus Beyond the Hindu Kush: Indians in the Central Asian Slave Trade",
+        "author_or_institution": "Scott C. Levi",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Independent historical synthesis noting that institutionalized slavery in India predated medieval Islamic polities.",
+        "reliability_limitations": "Ancient India is contextual background rather than the article's principal empirical focus."
+      },
+      "version": {
+        "version_label": "Journal of the Royal Asiatic Society 12.3 (2002)",
+        "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/hindus-beyond-the-hindu-kush-indians-in-the-central-asian-slave-trade/00516BAA0BCD78AD19407E2996F49FAF",
+        "publication_year": 2002,
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "long-run specialist context",
+      "independence_group": "india_levi",
+      "directness": "specialist contextual synthesis",
+      "direction": "supports",
+      "locator": "Abstract"
+    }
+  ]
+}
