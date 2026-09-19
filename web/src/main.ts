@@ -71,13 +71,15 @@ const slider = document.querySelector<HTMLInputElement>("#year")!;
 const yearLabel = document.querySelector<HTMLOutputElement>("#year-label")!;
 const timelineRange = document.querySelector<HTMLElement>("#timeline-range")!;
 const releaseBadge = document.querySelector<HTMLElement>("#release-badge")!;
+const mapFallback = document.querySelector<HTMLImageElement>("#map-fallback")!;
+const mapWarning = document.querySelector<HTMLElement>("#map-warning")!;
 
 const map = new Map({
   container: "map",
   style: {
     version: 8,
     sources: {},
-    layers: [{ id: "background", type: "background", paint: { "background-color": "#dce3e5" } }],
+    layers: [{ id: "background", type: "background", paint: { "background-color": "rgba(0,0,0,0)" } }],
   },
   center: [15, 24],
   zoom: 1.35,
@@ -86,6 +88,11 @@ const map = new Map({
 });
 
 map.addControl(new NavigationControl({ showCompass: false }), "top-left");
+
+map.on("error", (event) => {
+  console.error("MapLibre error", event.error);
+  mapWarning.hidden = false;
+});
 
 let places: Place[] = [];
 let selectedPlaceId: string | null = null;
@@ -365,17 +372,23 @@ async function boot(): Promise<void> {
     timelineRange.innerHTML = `<span>${formatYear(minYear)}</span><span>${formatYear(maxYear)}</span>`;
 
     map.addSource("land", { type: "geojson", data: `${import.meta.env.BASE_URL}world-land.geojson` });
+    map.on("sourcedata", (event) => {
+      if (event.sourceId === "land" && event.isSourceLoaded) {
+        mapFallback.classList.add("loaded");
+        mapWarning.hidden = true;
+      }
+    });
     map.addLayer({
       id: "land-fill",
       type: "fill",
       source: "land",
-      paint: { "fill-color": "#efeee9", "fill-opacity": 1 },
+      paint: { "fill-color": "#e8dfd2", "fill-opacity": 1 },
     });
     map.addLayer({
       id: "land-line",
       type: "line",
       source: "land",
-      paint: { "line-color": "#8f8b83", "line-width": 0.65 },
+      paint: { "line-color": "#626762", "line-width": 0.95 },
     });
 
     map.addSource("evidence", { type: "geojson", data: buildFeatureCollection(currentYear()) });
@@ -420,7 +433,7 @@ async function boot(): Promise<void> {
       source: "evidence",
       filter: ["==", ["geometry-type"], "Point"],
       paint: {
-        "circle-radius": ["case", ["==", ["get", "state"], "inactive"], 4, 7],
+        "circle-radius": ["case", ["==", ["get", "state"], "inactive"], 5, 9],
         "circle-color": [
           "match", ["get", "state"],
           "supported", "#9e493f",
@@ -433,8 +446,8 @@ async function boot(): Promise<void> {
           ["==", ["get", "state"], "disputed"], 0.78,
           ["match", ["get", "p_level"], 4, 0.95, 3, 0.86, 2, 0.76, 1, 0.66, 0.72],
         ],
-        "circle-stroke-width": 1.4,
-        "circle-stroke-color": "#4f4841",
+        "circle-stroke-width": 2,
+        "circle-stroke-color": "#fffaf1",
       },
     });
 
