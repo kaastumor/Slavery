@@ -1,0 +1,118 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Silla Village Register villages (Sŏwŏn-gyŏng area)",
+    "display_name": "Silla Village Register villages",
+    "entity_type_code": "region",
+    "notes": "Four village-register communities associated with the Sŏwŏn-gyŏng/Cheongju area; exact village locations and document date remain debated."
+  },
+  "claim": {
+    "from_year": 695,
+    "to_year": 819,
+    "date_text_original": "Silla Village Register; proposed dates include 695, 755, 815, and 818–819 CE",
+    "temporal_precision": "document_date_disputed",
+    "temporal_certainty": "disputed",
+    "spatial_precision": "four_village_register",
+    "summary": "The Silla Village Register records 25 nobi among 462 persons in four villages and distinguishes their status administratively from free people. Specialist and institutional syntheses interpret the register as direct evidence of private slavery in these communities. The wide 695–819 interval encodes disagreement over the date of the surviving register; it must not be read as a 125-year continuous observation.",
+    "review_status": "reviewed",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P2",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_with_date_dispute",
+      "notes": "P2 is restricted to the documented village-register communities. The register supports an institutional status category but cannot be extrapolated mechanically to all Unified Silla territory."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Unified Silla: Nobi",
+        "author_or_institution": "National Institute of Korean History",
+        "source_type": "institutional_synthesis",
+        "source_classification": "secondary",
+        "independence_notes": "National historical synthesis drawing on the Silla Village Register and specialist studies.",
+        "reliability_limitations": "Some interpretive statements generalize beyond the four surviving village records; this atlas claim is therefore spatially restricted to the register communities."
+      },
+      "version": {
+        "version_label": "신편 한국사 09권 통일신라 — 천민의 생활 — 노비",
+        "url_or_identifier": "https://contents.history.go.kr/mobile/nh/view.do?levelId=nh_009_0040_0040_0020",
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "quantification and status interpretation",
+      "independence_group": "silla_register_synthesis",
+      "directness": "institutional synthesis of register and specialist scholarship",
+      "direction": "supports",
+      "locator": "Sections on 25 nobi among 462 people and private-slave status"
+    },
+    {
+      "source": {
+        "title": "The Slaves in the Silla Village Register of the Shōsōin",
+        "author_or_institution": "Kim Chong-sun",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Dedicated specialist study of nobi in the Silla Village Register.",
+        "reliability_limitations": "Korean-language article; exact arguments should be checked against the full text for any future finer-grained subclassification."
+      },
+      "version": {
+        "version_label": "Yŏksa Hakpo 123 (1989), pp. 45–87; RISS record",
+        "url_or_identifier": "https://www.riss.or.kr/search/Search.do?colName=re_a_kor&isDetailSearch=Y&queryText=znCreator%2C%E9%87%91%E9%8D%BE%E7%92%BF%28Kim+Chong-Sun%29&searchGubun=true",
+        "publication_year": 1989,
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "specialist analysis of nobi in the register",
+      "independence_group": "silla_register_kim",
+      "directness": "dedicated specialist secondary study",
+      "direction": "supports",
+      "locator": "Article: 正倉院 所藏 新羅帳籍에 나타난 奴婢, pp. 45–87"
+    },
+    {
+      "source": {
+        "title": "A comprehensive study on the record date of the Silla Village Register",
+        "author_or_institution": "Yoon Seon Tae",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Modern specialist study focused specifically on dating the register.",
+        "reliability_limitations": "Advocates the 695 CE date; other scholars argue for later dates."
+      },
+      "version": {
+        "version_label": "한국고대사탐구 42 (2022), pp. 317–350",
+        "url_or_identifier": "https://scholarworks.dongguk.edu/item/ea7365b8-8526-4237-bab9-f939c8e6ecf6",
+        "publication_year": 2022,
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "document-date interpretation",
+      "independence_group": "silla_register_date_yoon",
+      "directness": "specialist palaeographic/chronological study",
+      "direction": "qualifies",
+      "locator": "Abstract"
+    },
+    {
+      "source": {
+        "title": "A Study on the Age Classification System of Silla Village Register and the Social Situation of the Villages",
+        "author_or_institution": "Park Namsoo",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Modern specialist study of the register's age categories and village society; its abstract references the author's 818/819 dating.",
+        "reliability_limitations": "Represents a later-date interpretation that conflicts with the 695 proposal."
+      },
+      "version": {
+        "version_label": "역사논총 42 (2022), pp. 351–413; KCI record",
+        "url_or_identifier": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002916053",
+        "publication_year": 2022,
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "document-date counterinterpretation",
+      "independence_group": "silla_register_date_park",
+      "directness": "specialist chronological/social study",
+      "direction": "qualifies",
+      "locator": "Abstract"
+    }
+  ],
+  "geometry": {
+    "from_year": 695,
+    "to_year": 819,
+    "accuracy_status": "unresolved",
+    "resolution_method": "The four village communities are associated with the Sŏwŏn-gyŏng/Cheongju area, but their exact locations remain debated; no whole-Silla polygon is substituted for the narrower evidence target.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}
