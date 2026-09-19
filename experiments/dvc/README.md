@@ -38,3 +38,12 @@ DVC should be adopted only if its researcher convenience materially outweighs:
 - the need to keep DVC metadata consistent with atlas release manifests.
 
 Even if adopted, the atlas release manifest remains the preservation/canonical identity layer.
+
+
+## Executed result
+
+GitHub Actions run `tooling-dvc-evaluation` passed on 2026-09-19 using DVC 3.66.0.
+
+A 4 MiB synthetic file survived add → push → local deletion/cache deletion → pull with the exact same SHA-256.
+
+This establishes DVC as technically viable for working-artifact synchronization. It does not by itself justify making DVC a mandatory atlas dependency.
