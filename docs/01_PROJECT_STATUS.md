@@ -2,7 +2,7 @@
 
 **Status date:** 2026-09-19  
 **Canonical data version:** v0.6.1  
-**Architecture schema draft:** draft-0.10
+**Architecture schema draft:** draft-0.11
 
 ## 1. What has been completed
 
@@ -108,7 +108,7 @@ Important Seshat clarification: detailed slavery variables used in prior work ar
 
 Completed in DB Foundation v0.3:
 
-- executable PostgreSQL/PostGIS migrations through `0011`
+- executable PostgreSQL/PostGIS migrations through `0012`, including immutable release membership
 - read-only automated parser for the canonical v0.6.1 workbook
 - full raw preservation plan for all 18 workbook tabs / 288 non-empty rows on database apply
 - dry-run migration validation against the actual workbook
@@ -132,7 +132,7 @@ The dry-run passed. Live PostgreSQL/PostGIS execution remains pending because th
 
 Next actions:
 
-1. execute the database-foundation SQL migrations through `0011` against a local PostgreSQL/PostGIS instance
+1. run the exact canonical v0.6.1 artifact through the live PostgreSQL/PostGIS import/reconciliation path after migrations through `0012`
 2. run schema smoke tests and fix any runtime issues
 3. migrate the v0.6.1 controlled seed without altering the workbook
 4. reconcile all migrated values and meanings against v0.6.1
@@ -147,7 +147,7 @@ The previously planned participation-normalization work (financiers, ports, sour
 A reproducible repository/development environment has now been prepared around DB Foundation v0.3:
 
 - local PostgreSQL/PostGIS and Python tooling run in Docker;
-- canonical v0.6.1 is included under an immutable `data/releases/v0.6.1/` path;
+- canonical v0.6.1 is identified by immutable release metadata/checksum under `data/releases/v0.6.1/`; the binary remains an external artifact;
 - `atlas_meta.schema_migration` records migration filenames/checksums and rejects edited applied migrations;
 - one-command Windows bootstrap and repeatable verification scripts exist;
 - local backup/restore scripts exist;
