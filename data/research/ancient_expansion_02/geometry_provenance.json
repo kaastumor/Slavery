@@ -1,0 +1,86 @@
+{
+  "batch": "ancient_expansion_02",
+  "geometry_source": {
+    "dataset": "Cliopatria",
+    "version": "v0.2.0-duplicate",
+    "access_path": "Seshat API name__icontains + pagination + explicit source-native ID match",
+    "warning": "The Seshat API id query parameter was previously observed to be ignored. Batch 02 therefore resolves all polity polygons by search pagination and verifies the returned record ID before storage.",
+    "date_conversion": "Negative source-native BCE years are converted to atlas astronomical numbering by adding 1; CE years are unchanged."
+  },
+  "targets": [
+    {
+      "spatial_entity": "Middle Ganga valley state-transition zone",
+      "accuracy_status": "unresolved",
+      "from_year": -599,
+      "to_year": -299,
+      "reason": "Analytical regional state-transition zone spanning multiple evolving polities; no single defensible territorial polygon."
+    },
+    {
+      "spatial_entity": "Mauryan Empire (318–185 BCE mapped slice)",
+      "accuracy_status": "exact",
+      "records": [
+        {
+          "source_native_id": "15465",
+          "from_year": -317,
+          "to_year": -315,
+          "raw_geojson_md5": "997abba8ca3084c20637bc6c2d2a5ea5"
+        },
+        {
+          "source_native_id": "15477",
+          "from_year": -314,
+          "to_year": -301,
+          "raw_geojson_md5": "b2c026b9f30638ea757ed29157678dbf"
+        },
+        {
+          "source_native_id": "15505",
+          "from_year": -300,
+          "to_year": -291,
+          "raw_geojson_md5": "6106c542ed8aa3279b84504becc53494"
+        },
+        {
+          "source_native_id": "15520",
+          "from_year": -290,
+          "to_year": -256,
+          "raw_geojson_md5": "39dcf0cd81f5390d9379bf00d0cc7823"
+        },
+        {
+          "source_native_id": "15654",
+          "from_year": -255,
+          "to_year": -225,
+          "raw_geojson_md5": "ef5fbfded0d89c587308578d51f5089e"
+        },
+        {
+          "source_native_id": "15743",
+          "from_year": -224,
+          "to_year": -188,
+          "raw_geojson_md5": "40dc83acb29138c334e8e47617de63ba"
+        },
+        {
+          "source_native_id": "15965",
+          "from_year": -187,
+          "to_year": -170,
+          "raw_geojson_md5": "2af511bda0025640adc9261f68ed5a92"
+        }
+      ]
+    },
+    {
+      "spatial_entity": "Baekje",
+      "accuracy_status": "exact",
+      "records": [
+        {
+          "source_native_id": "16698",
+          "from_year": 347,
+          "to_year": 391,
+          "raw_geojson_md5": "fe416b076336a10c1920ffa391cb1ead"
+        }
+      ]
+    },
+    {
+      "spatial_entity": "Silla Village Register villages (Sŏwŏn-gyŏng area)",
+      "accuracy_status": "unresolved",
+      "from_year": 695,
+      "to_year": 819,
+      "reason": "Exact village locations remain debated; whole-Silla geometry would overstate the evidence target. The wide date interval represents competing proposed document dates, not continuous observation."
+    }
+  ]
+}
