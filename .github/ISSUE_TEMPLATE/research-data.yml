@@ -1,0 +1,33 @@
+name: Research / data issue
+description: Record a source, evidence, attribution, classification, geography, or unresolved historical-data issue.
+title: "[research] "
+labels: []
+body:
+  - type: textarea
+    id: claim
+    attributes:
+      label: Claim or data issue
+      description: State exactly what historical assertion or record is affected.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source(s) / locator(s)
+      description: Give exact source versions, URLs/identifiers, pages, record IDs, archival locators, or dataset versions where available.
+    validations:
+      required: true
+  - type: textarea
+    id: uncertainty
+    attributes:
+      label: Uncertainty / competing interpretation
+      description: Record disputes, missing evidence, date/space uncertainty, or independence concerns.
+  - type: checkboxes
+    id: safeguards
+    attributes:
+      label: Safeguards
+      options:
+        - label: I have not inferred actor nationality/political identity from flag, port, residence, business base, surname, or company jurisdiction.
+          required: true
+        - label: I have kept territorial practice, legal status, external participation, research coverage, and geometry separate.
+          required: true

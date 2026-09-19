@@ -1,0 +1,72 @@
+{
+  "workbook": "Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx",
+  "sha256": "0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4",
+  "validated_at_utc": "2026-09-19T13:56:10.823208+00:00",
+  "counts": {
+    "voyages": 8,
+    "owner_registry_rows": 12,
+    "real_actors": 11,
+    "voyage_owner_rows": 12,
+    "actor_linked_owner_rows": 11,
+    "missing_owner_rows": 1,
+    "legacy_sources": 17,
+    "legacy_owner_evidence_ids": 11,
+    "coverage_cells": 99,
+    "workbook_sheets": 18,
+    "workbook_nonempty_rows": 288
+  },
+  "coverage_code_counts": {"P": 18, "S": 57, "RI": 20, "D": 4},
+  "evidence_mapping": {
+    "E-001": [{"kind": "actor_attribute", "attribute_type": "business_base", "value": "Rotterdam"}],
+    "E-002": [{"kind": "actor_attribute", "attribute_type": "commercial_role", "value": "Private slave-trading firm"}],
+    "E-003": [
+      {"kind": "actor_attribute", "attribute_type": "commercial_role", "value": "Bahia armador"},
+      {"kind": "actor_attribute", "attribute_type": "business_base", "value": "Bahia"}
+    ],
+    "E-004": [{"kind": "voyage_owner", "voyage": "2364", "owner": "OWN-0008"}],
+    "E-005": [{"kind": "voyage_owner", "voyage": "36144", "owner": "OWN-0009"}],
+    "E-006": [
+      {"kind": "actor_attribute", "attribute_type": "corporate_jurisdiction", "value": "Denmark–Norway"},
+      {"kind": "voyage_owner", "voyage": "35181", "owner": "OWN-0010"}
+    ],
+    "E-007": [{"kind": "voyage_owner", "voyage": "35181", "owner": "OWN-0010"}],
+    "E-008": [{"kind": "voyage_owner", "voyage": "557", "owner": "OWN-0011"}],
+    "E-009": [{"kind": "actor_attribute", "attribute_type": "nationality_political_identity", "value": "French"}],
+    "E-010": [{"kind": "voyage_owner", "voyage": "32359", "owner": "OWN-0012"}],
+    "E-011": [
+      {"kind": "voyage_owner", "voyage": "90080", "owner": "OWN-0001"},
+      {"kind": "voyage_owner", "voyage": "90080", "owner": "OWN-0002"},
+      {"kind": "voyage_owner", "voyage": "90080", "owner": "OWN-0003"},
+      {"kind": "voyage_owner", "voyage": "90080", "owner": "OWN-0004"},
+      {"kind": "voyage_owner", "voyage": "90080", "owner": "OWN-0005"}
+    ]
+  },
+  "evidence_mapping_rows": 17,
+  "source_registry_gaps": ["https://www.slavevoyages.org/voyage/35181/variables"],
+  "raw_sheet_row_counts": {
+    "Coverage Matrix": 14,
+    "Regional Balance": 14,
+    "Research Queue": 45,
+    "v0.4.7 Evidence": 13,
+    "Method": 15,
+    "v0.4.8 Evidence": 9,
+    "v0.4.9 Evidence": 12,
+    "v0.5.0 Evidence": 14,
+    "Atlantic Seed - Voyages": 11,
+    "Atlantic Seed - Owners": 15,
+    "Atlantic Carrier Context": 19,
+    "Atlantic Field Rules": 18,
+    "Atlantic Voyage Owners": 15,
+    "Atlantic Owner Evidence": 14,
+    "Atlantic Sources": 20,
+    "Atlantic Summary": 18,
+    "Atlantic Schema": 12,
+    "v0.6.1 Change Log": 10
+  },
+  "warnings": [
+    "Fredensborg's exact SlaveVoyages voyage URL is referenced by workbook rows but absent from the 17-row Atlantic Sources registry; migration will create an explicit unregistered-source record and QC warning.",
+    "All 18 workbook tabs will be raw-preserved on apply, but the global evidence sheets v0.4.7/v0.4.8/v0.4.9/v0.5.0 are not yet semantically normalized into canonical claim/source structures; canonical switch remains blocked until that migration is reviewed and completed."
+  ],
+  "errors": [],
+  "ok": true
+}

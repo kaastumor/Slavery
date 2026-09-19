@@ -1,0 +1,3 @@
+services:
+  tooling:
+    command: sleep infinity

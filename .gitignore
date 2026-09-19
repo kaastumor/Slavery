@@ -1,0 +1,25 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db
+
+# Local build/runtime outputs
+build/*
+!build/.gitkeep
+backups/*
+!backups/.gitkeep
+
+# IDE/editor state
+.vscode/
+.idea/
+
+# Database exports
+*.dump
+*.sql.gz
+
+# Canonical release binaries are immutable external artifacts, not Git blobs.
+# Git stores release manifests/checksums; local release validation supplies the exact artifact.
+data/releases/**/*.xlsx
