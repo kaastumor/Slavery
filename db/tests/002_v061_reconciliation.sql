@@ -95,7 +95,7 @@ BEGIN
     IF n <> 14 THEN RAISE EXCEPTION 'Expected 14 raw rows from v0.5.0 Evidence, found %', n; END IF;
 END $$;
 
-DO $
+DO $$
 DECLARE n integer;
 BEGIN
     SELECT count(*) INTO n
@@ -117,9 +117,9 @@ BEGIN
     FROM audit.research_coverage_source
     WHERE source_role = 'evidence_sheet_source';
     IF n <> 29 THEN RAISE EXCEPTION 'Expected 29 unique global evidence source versions, found %', n; END IF;
-END $;
+END $$;
 
-DO $
+DO $$
 DECLARE n integer;
 BEGIN
     SELECT count(*) INTO n
@@ -146,9 +146,9 @@ BEGIN
     JOIN atlas.legal_event le ON le.claim_id = m.claim_id
     WHERE m.legacy_evidence_id LIKE 'v0.% Evidence!%';
     IF n <> 1 THEN RAISE EXCEPTION 'Expected 1 global legal-event claim, found %', n; END IF;
-END $;
+END $$;
 
-DO $
+DO $$
 DECLARE n integer;
 BEGIN
     SELECT count(*) INTO n
@@ -165,9 +165,9 @@ BEGIN
           'territorial_practice:slavery_enslavement'
       );
     IF n <> 2 THEN RAISE EXCEPTION 'Shang must preserve captive-taking and disputed slavery as two separate mappings'; END IF;
-END $;
+END $$;
 
-DO $
+DO $$
 DECLARE n integer;
 BEGIN
     SELECT count(*) INTO n
@@ -176,4 +176,4 @@ BEGIN
       AND severity = 'blocking'
       AND resolved = false;
     IF n <> 0 THEN RAISE EXCEPTION 'Global evidence semantic-migration blocking issue should be absent after completed migration, found %', n; END IF;
-END $;
+END $$;
