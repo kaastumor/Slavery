@@ -39,6 +39,9 @@ jobs:
       - name: Non-Atlantic rollback fixtures
         run: ./scripts/db-test-non-atlantic.sh
 
+      - name: Release reconstruction acceptance
+        run: ./scripts/db-test-release-reconstruction.sh
+
       - name: Migration ledger status
         run: ./scripts/db-status.sh
 
