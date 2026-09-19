@@ -29,7 +29,8 @@ The script:
 5. applies pending checksum-tracked migrations;
 6. runs schema and Python tests;
 7. dry-runs and applies the canonical v0.6.1 workbook;
-8. runs v0.6.1 reconciliation and non-Atlantic rollback fixtures;
+8. runs non-Atlantic and release-reconstruction rollback fixtures;
+9. when the exact v0.6.1 artifact is present, runs v0.6.1 checksum/import/reconciliation checks;
 9. creates a local database backup.
 
 ## Repeat validation
