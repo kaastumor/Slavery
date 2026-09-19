@@ -1,0 +1,182 @@
+{
+  "batch": "ancient_expansion_01",
+  "geometry_source": {
+    "dataset": "Cliopatria",
+    "version": "v0.2.0-duplicate",
+    "access_path": "Seshat API name__icontains + explicit source-native ID match",
+    "warning": "The Seshat API id query parameter was observed to be ignored; records were therefore resolved by search pagination and explicit ID matching."
+  },
+  "targets": [
+    {
+      "spatial_entity": "Garshana construction project (Ur III)",
+      "accuracy_status": "unresolved",
+      "from_year": -2036,
+      "to_year": -2028,
+      "reason": "Exact Garshana site not securely located; archive places it in Umma province, probably near Zabalam."
+    },
+    {
+      "spatial_entity": "Kanesh/Kültepe Old Assyrian colony",
+      "accuracy_status": "specialist",
+      "from_year": -1999,
+      "to_year": -1700,
+      "source": "CDLI provenience 291",
+      "source_native_id": "291",
+      "geometry_type": "Point",
+      "coordinates": [
+        35.6365,
+        38.8517
+      ]
+    },
+    {
+      "spatial_entity": "Hittite central Anatolia",
+      "accuracy_status": "exact",
+      "records": [
+        {
+          "source_native_id": "15016",
+          "from_year": -1399,
+          "to_year": -1300,
+          "raw_geojson_md5": "3b95a954e20454d88ac3e5318cab43c6"
+        },
+        {
+          "source_native_id": "15023",
+          "from_year": -1299,
+          "to_year": -1240,
+          "raw_geojson_md5": "dedd5fe81ad0802141ccf1168795999b"
+        },
+        {
+          "source_native_id": "15031",
+          "from_year": -1239,
+          "to_year": -1220,
+          "raw_geojson_md5": "4ac6235cb6a5221414b66f5d3eba3e1f"
+        },
+        {
+          "source_native_id": "15035",
+          "from_year": -1219,
+          "to_year": -1200,
+          "raw_geojson_md5": "2841b9d4c633ed4a0d156bbd19a15b32"
+        },
+        {
+          "source_native_id": "15037",
+          "from_year": -1199,
+          "to_year": -1150,
+          "raw_geojson_md5": "2841b9d4c633ed4a0d156bbd19a15b32"
+        }
+      ]
+    },
+    {
+      "spatial_entity": "Neo-Babylonian Babylonia",
+      "accuracy_status": "exact",
+      "records": [
+        {
+          "source_native_id": "15178",
+          "from_year": -599,
+          "to_year": -550,
+          "raw_geojson_md5": "fe9c3a935a0a042dfab7f36e1041c0bb"
+        },
+        {
+          "source_native_id": "15219",
+          "from_year": -549,
+          "to_year": -540,
+          "raw_geojson_md5": "4721690598e261da99be4332fec2e082"
+        },
+        {
+          "source_native_id": "15223",
+          "from_year": -539,
+          "to_year": -530,
+          "raw_geojson_md5": "3b1bc4d9dccede1fd99b5c6b45152708"
+        }
+      ]
+    },
+    {
+      "spatial_entity": "Neo-Babylonian temple households",
+      "accuracy_status": "unresolved",
+      "from_year": -599,
+      "to_year": -500,
+      "reason": "Institutional temple-household category has no single defensible territorial geometry."
+    },
+    {
+      "spatial_entity": "Western Han China (202 BCE–5 CE slice)",
+      "accuracy_status": "exact",
+      "records": [
+        {
+          "source_native_id": "15925",
+          "from_year": -201,
+          "to_year": -197,
+          "raw_geojson_md5": "786edcb89fa18151270174b9ef387488"
+        },
+        {
+          "source_native_id": "15942",
+          "from_year": -196,
+          "to_year": -126,
+          "raw_geojson_md5": "6d4fcb347acad2b317c18715737cee88"
+        },
+        {
+          "source_native_id": "16040",
+          "from_year": -125,
+          "to_year": -110,
+          "raw_geojson_md5": "0f05fdfa41ca15070d2d535de7e7a40b"
+        },
+        {
+          "source_native_id": "16064",
+          "from_year": -109,
+          "to_year": -91,
+          "raw_geojson_md5": "ff8e6daae24e552f8431bd4610c1e26c"
+        },
+        {
+          "source_native_id": "16073",
+          "from_year": -90,
+          "to_year": -77,
+          "raw_geojson_md5": "dd9a09558a321777e0590697a36958e5"
+        },
+        {
+          "source_native_id": "16123",
+          "from_year": -76,
+          "to_year": -50,
+          "raw_geojson_md5": "4e14829a2a68c7c42cc38c73d2b5ce24"
+        },
+        {
+          "source_native_id": "16165",
+          "from_year": -49,
+          "to_year": -36,
+          "raw_geojson_md5": "54bcf020632b4e67555ec17897c1f240"
+        },
+        {
+          "source_native_id": "16206",
+          "from_year": -35,
+          "to_year": 5,
+          "raw_geojson_md5": "d5b8694c5224aed97e74a1b5c1515e4d"
+        }
+      ]
+    },
+    {
+      "spatial_entity": "Qin Empire (221–209 BCE slice)",
+      "accuracy_status": "exact",
+      "records": [
+        {
+          "source_native_id": "15778",
+          "from_year": -221,
+          "to_year": -218,
+          "raw_geojson_md5": "06b3d22a5b06401d1cb41b02891a516d"
+        },
+        {
+          "source_native_id": "15789",
+          "from_year": -217,
+          "to_year": -212,
+          "raw_geojson_md5": "d0d9b71698652dda3d3165654079980d"
+        },
+        {
+          "source_native_id": "15821",
+          "from_year": -211,
+          "to_year": -210,
+          "raw_geojson_md5": "234a92f46b58bc1eb15b6aaf490e5656"
+        },
+        {
+          "source_native_id": "15830",
+          "from_year": -209,
+          "to_year": -208,
+          "raw_geojson_md5": "8af1b0f2370f61106e71abfb6489c5cf"
+        }
+      ]
+    }
+  ]
+}
