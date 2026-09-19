@@ -269,6 +269,8 @@ Use:
 
 The neutral land outline can be static and independent of historical evidence.
 
+Public map geometry may be a publication/render transformation of reviewed historical geometry. In particular, coarse polygonal coastlines may be intersected with a versioned neutral land mask in a dedicated publish view. The underlying `atlas.geometry` and reviewed `publish.geometry` source geometry remain unchanged and auditable.
+
 ### Tile server
 
 Martin is the preferred prototype/initial tile server because it can expose PostGIS tables/functions and can also serve MBTiles/PMTiles. It is not a permanent architectural dependency; it may be replaced if later requirements justify it.
