@@ -1,5 +1,5 @@
-schema_version: draft-0.10
-status: executable_foundation_importer_and_non_atlantic_tests_defined_not_live_runtime_validated
+schema_version: draft-0.11
+status: executable_foundation_release_reconstruction_live_ci_validated_exact_canonical_import_pending
 principle: identities, claims, relationships, source versions, time and geometry are
   separate
 database_target: PostgreSQL_PostGIS
@@ -160,6 +160,32 @@ entities:
   PARTICIPATION_TYPE:
     key: code
     purpose: evolving_external_participation_vocabulary
+  RELEASE_MANIFEST:
+    key: release_version
+    schema: audit
+    purpose: release_identity_lifecycle_qc_and_manifest
+  RELEASE_ARTIFACT:
+    key: release_artifact_id
+    schema: audit
+    foreign_keys:
+    - release_version
+    purpose: checksummed_release_bundle_or_distribution_artifact
+  RELEASE_MEMBERSHIP:
+    schema: audit
+    strategy: typed_foreign_key_tables
+    object_types:
+    - claim
+    - actor
+    - spatial_entity
+    - geometry
+    - spatial_relation
+    - voyage
+    - voyage_owner
+    - voyage_finance
+    - voyage_stop
+    - source_version
+    - research_coverage_assessment
+    mutable_only_while_release_status: draft
 legacy_mappings:
   OWNER: ACTOR
   OWNER_EVIDENCE: semantic_claim_mapping_actor_attributes_or_relationship_claims_one_to_many_allowed
@@ -172,6 +198,9 @@ publication:
   public_services_read_from: publish_layer_only
   draft_research_public_by_default: false
   releases_must_be_reconstructible: true
+  release_membership_explicit: true
+  release_validation_freezes_membership_and_content: true
+  immutable_checksummed_release_bundle_required: true
   research_coverage_may_be_published_separately: true
 forbidden_derivations:
 - actor_nationality_from_vessel_flag
@@ -198,6 +227,8 @@ forbidden_derivations:
 - external_network_participation_forced_into_territorial_practice
 - partial_workbook_migration_declared_canonical
 - raw_preservation_treated_as_substitute_for_semantic_migration
+- validated_or_published_release_membership_mutation
+- release_artifact_silent_replacement
 identity_policy:
   internal_primary_keys: uuid
   source_native_ids: preserve_separately
