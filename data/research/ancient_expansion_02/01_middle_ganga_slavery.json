@@ -1,0 +1,77 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Middle Ganga valley state-transition zone",
+    "display_name": "Middle Ganga valley",
+    "entity_type_code": "region",
+    "notes": "Analytical regional target for the mid-first-millennium BCE state-transition zone; not a single polity."
+  },
+  "claim": {
+    "from_year": -599,
+    "to_year": -299,
+    "date_text_original": "c. 600–300 BCE",
+    "temporal_precision": "broad_range",
+    "temporal_certainty": "approximate",
+    "spatial_precision": "region",
+    "summary": "Specialist scholarship on the transition from lineage societies to states in the middle Ganga valley identifies slavery as emerging alongside new settlement, social segmentation, urbanization and state formation. This supports a regional practice claim without implying a slave-society economy or uniform conditions across every polity in the valley.",
+    "review_status": "reviewed",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P2",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P2 reflects a specialist regional interpretation of an emerging/recurrent institution. It does not imply that enslaved labour dominated the agrarian economy."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "The Transition to State",
+        "author_or_institution": "Romila Thapar",
+        "source_type": "book_chapter",
+        "source_classification": "secondary",
+        "independence_notes": "Specialist reconstruction of social and political change in the mid-first-millennium BCE Ganga valley.",
+        "reliability_limitations": "Regional synthesis; slavery is one element within a broader state-formation argument and does not provide a census or polity-by-polity prevalence estimate."
+      },
+      "version": {
+        "version_label": "From Lineage to State, Oxford Academic chapter page",
+        "url_or_identifier": "https://academic.oup.com/book/1959/chapter-abstract/141766680",
+        "publication_year": 1991,
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "specialist regional interpretation",
+      "independence_group": "ganga_thapar",
+      "directness": "specialist secondary synthesis",
+      "direction": "supports",
+      "locator": "Chapter III abstract"
+    },
+    {
+      "source": {
+        "title": "Hindus Beyond the Hindu Kush: Indians in the Central Asian Slave Trade",
+        "author_or_institution": "Scott C. Levi",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Independent historical synthesis discussing the long chronology of slavery in South Asia.",
+        "reliability_limitations": "The article's main focus is later India/Central Asia; its ancient discussion is contextual rather than a dedicated reconstruction of the middle Ganga valley."
+      },
+      "version": {
+        "version_label": "Journal of the Royal Asiatic Society 12.3 (2002)",
+        "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/hindus-beyond-the-hindu-kush-indians-in-the-central-asian-slave-trade/00516BAA0BCD78AD19407E2996F49FAF",
+        "publication_year": 2002,
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "chronological context",
+      "independence_group": "india_levi",
+      "directness": "specialist contextual synthesis",
+      "direction": "context",
+      "locator": "Abstract"
+    }
+  ],
+  "geometry": {
+    "from_year": -599,
+    "to_year": -299,
+    "accuracy_status": "unresolved",
+    "resolution_method": "The evidence target is an analytical middle-Ganga transition zone spanning several evolving polities; no single defensible polygon is assigned.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}
