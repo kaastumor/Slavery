@@ -1,4 +1,5 @@
-import { Map, NavigationControl, type GeoJSONSource, type MapGeoJSONFeature, type MapMouseEvent } from "maplibre-gl";\nimport type { Feature, FeatureCollection, Geometry } from "geojson";
+import { Map, NavigationControl, type GeoJSONSource, type MapGeoJSONFeature, type MapMouseEvent } from "maplibre-gl";
+import type { Feature, FeatureCollection, Geometry } from "geojson";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./styles.css";
 
