@@ -1,0 +1,33 @@
+{
+  "validation": "v0.6.1 global evidence semantic dry-run",
+  "validated_at": "2026-09-19",
+  "canonical_workbook": {
+    "filename": "Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx",
+    "sha256": "0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4"
+  },
+  "result": {
+    "ok": true,
+    "global_evidence_rows": 36,
+    "unique_source_urls": 29,
+    "coverage_counts": {
+      "S": 14,
+      "P": 3,
+      "D": 1,
+      "RI": 18
+    },
+    "explicit_claim_targets": 22,
+    "errors": []
+  },
+  "rules_verified": [
+    "RI rows are represented as research-coverage provenance, not positive practice claims",
+    "territorial practice levels remain unassigned during workbook migration",
+    "Anshan/Elam maps to external participation rather than territorial prevalence",
+    "Shang captive-taking context remains distinct from the disputed slavery interpretation"
+  ],
+  "remaining_warnings": [
+    "Fredensborg exact SlaveVoyages URL is referenced by workbook rows but absent from the 17-row Atlantic Sources registry; importer preserves this as an explicit registry gap",
+    "some global conceptual source labels are migration-generated because the workbook provides exact URLs without full bibliographic metadata"
+  ],
+  "canonical_switch": false,
+  "note": "This validates the exact workbook-to-semantic-plan dry run only. A live database apply/reconciliation remains required before replacing the workbook as canonical."
+}
