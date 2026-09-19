@@ -84,7 +84,6 @@ const map = new Map({
   zoom: 1.35,
   minZoom: 1,
   maxZoom: 8,
-  attributionControl: true,
 });
 
 map.addControl(new NavigationControl({ showCompass: false }), "top-left");
