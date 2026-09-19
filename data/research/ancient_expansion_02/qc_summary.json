@@ -1,0 +1,33 @@
+{
+  "batch": "ancient_expansion_02",
+  "status": "reviewed_unpublished",
+  "database_qc": {
+    "claims": 4,
+    "claim_sources": 11,
+    "spatial_entities": 4,
+    "reviewed_claims": 4,
+    "unpublished_claims": 4,
+    "batch_geometry_rows": 10,
+    "release_memberships": 0,
+    "claims_without_source": 0,
+    "invalid_batch_geometries": 0,
+    "claims_without_geometry_resolution": 0,
+    "p_levels": {
+      "P1": 1,
+      "P2": 2,
+      "NULL": 1
+    },
+    "coverage_states": {
+      "classified": 3,
+      "disputed": 1
+    }
+  },
+  "unresolved_issues": [
+    "The Mauryan slavery classification remains disputed and has no P-level.",
+    "Middle Ganga valley is an analytical region with explicit unresolved geometry.",
+    "The Silla Village Register's date remains disputed; the 695–819 interval encodes competing proposed dates, not continuous evidence.",
+    "The four Silla register villages remain spatially unresolved; no whole-Silla polygon is substituted.",
+    "The Baekje 369 claim is a bounded war-captive enslavement event and is not used to infer Baekje-wide prevalence.",
+    "No claim in this batch is part of a public release."
+  ]
+}
