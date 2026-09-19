@@ -1,6 +1,6 @@
 # Source → Evidence → Claim → Release Lifecycle
 
-**Status:** proposed research workflow for evaluation. This document does not yet change canonical methodology or schema. Any promoted change must be recorded in the Decisions Log.
+**Status:** adopted research workflow guidance. Methodological authority comes from the core methodology/source-policy documents and the Decisions Log.
 
 ## Purpose
 
@@ -16,6 +16,8 @@ The lifecycle is designed to prevent common failure modes:
 - inferring actor nationality from indirect context;
 - letting archive density determine P0–P4;
 - confusing legal status, territorial practice, external participation and research coverage;
+- treating any contradiction as an automatic `disputed` classification;
+- attempting to replace specialist historiography with ad hoc project interpretation;
 - publishing draft claims simply because they exist in the database.
 
 ---
@@ -42,13 +44,29 @@ Examples:
 - known uncertainty;
 - search/discovery strategy.
 
-**Tool candidates:** Scite, library catalogues, archival finding aids, OpenAlex/Crossref, specialist bibliographies.
-
 **Forbidden shortcut:** source abundance must not redefine the research target.
 
 ---
 
-## Stage 1 — source discovery candidate
+## Stage 1 — specialist historiography discovery
+
+Before attempting broad classification, identify the relevant historical scholarship.
+
+Look for:
+
+- current or authoritative specialist syntheses;
+- dedicated monographs/articles on the institution or status category;
+- major historiographical disagreements;
+- scholarship identifying the primary/source-native evidence base;
+- newer work that materially revises older interpretations.
+
+A general encyclopedia, search snippet or isolated article can help discovery, but should not substitute for specialist historiography where the question is historically complex.
+
+**Output:** candidate interpretive literature and known controversies.
+
+---
+
+## Stage 2 — source discovery candidate
 
 A search hit, bibliography entry, archive catalogue result, dataset record or recommendation is a **candidate**, not yet atlas evidence.
 
@@ -62,13 +80,11 @@ Capture at minimum:
 - date discovered;
 - why it may be relevant.
 
-**Candidate tools:** Scite, Zotero, archive catalogues, OpenAlex/Crossref.
-
 **Review gate:** relevance screening.
 
 ---
 
-## Stage 2 — SOURCE identity
+## Stage 3 — SOURCE identity
 
 Create or reconcile the conceptual SOURCE only after confirming what the source actually is.
 
@@ -85,13 +101,11 @@ Examples:
 
 A SOURCE is **not** the same thing as a particular edition, scan, snapshot, catalogue item or accessed web state.
 
-**Candidate tool:** Zotero can help initialize bibliographic metadata.
-
 **Canonical authority:** atlas database.
 
 ---
 
-## Stage 3 — SOURCE_VERSION
+## Stage 4 — SOURCE_VERSION
 
 Every evidence link should resolve to the exact source version actually reviewed.
 
@@ -119,7 +133,7 @@ Capture:
 
 ---
 
-## Stage 4 — SOURCE_ASSET / digital object
+## Stage 5 — SOURCE_ASSET / digital object
 
 Optional binary/digital artifact associated with the source version.
 
@@ -141,13 +155,11 @@ Capture:
 - storage locator;
 - licence/redistribution status.
 
-**Candidate tools:** IIIF, immutable object storage, later DVC if justified.
-
-**Boundary:** the asset is not the source claim itself.
+**Boundary:** the asset is not the historical claim itself.
 
 ---
 
-## Stage 5 — machine/human transcription or extraction layer
+## Stage 6 — machine/human transcription or extraction layer
 
 For scanned, manuscript or long-form material, produce a separate derivative.
 
@@ -169,15 +181,13 @@ Capture:
 - correction/review state;
 - raw machine output where practical.
 
-**Candidate tools:** Transkribus, GROBID, OCR/HTR, LLM extraction.
-
 **Hard gate:** no machine-generated extraction becomes a reviewed historical claim automatically.
 
 ---
 
-## Stage 6 — candidate historical assertion
+## Stage 7 — candidate historical assertions
 
-Break source material into bounded assertions before normalization.
+Break source material into bounded assertions before synthesis.
 
 Examples:
 
@@ -185,7 +195,8 @@ Examples:
 - a law prohibited slave trading in jurisdiction J;
 - debt bondage is documented in region R;
 - a polity participated in captive export;
-- a source is inconclusive about territorial practice.
+- a source claims slavery was absent;
+- a specialist argues that a historical status should not be classified as slavery.
 
 Preserve:
 
@@ -198,11 +209,11 @@ Preserve:
 - uncertainty;
 - whether the assertion supports, challenges, qualifies or merely contextualizes another claim.
 
-**Rule:** one paragraph may generate multiple candidate claims; one claim may require multiple sources.
+**Rule:** one paragraph may generate multiple candidate assertions; one atlas claim may require multiple sources.
 
 ---
 
-## Stage 7 — entity/place reconciliation
+## Stage 8 — entity/place reconciliation
 
 Resolve referenced identities without overwriting source-native strings.
 
@@ -226,22 +237,22 @@ Candidate workflow:
 ```text
 raw place string
     ↓
-OpenRefine reconciliation candidates
+authority/reconciliation candidates
     ↓
-WHG / authority identifiers + temporal/place context
+temporal/place context
     ↓
 human judgment
     ↓
 SPATIAL_ENTITY mapping
 ```
 
-OpenRefine reconciliation is semi-automated and preserves the original string alongside reconciliation metadata. WHG can enrich candidates with geometry, alternative names and temporal bounds. These are candidate identity aids, not automatic historical-jurisdiction determinations.
+External authorities can enrich candidates with geometry, alternative names and temporal bounds. They are candidate identity aids, not automatic historical-jurisdiction determinations.
 
 ---
 
-## Stage 8 — normalized claim candidate
+## Stage 9 — normalized claim candidate
 
-Map the assertion into the atlas claim model while preserving uncertainty.
+Map the bounded assertions into the atlas claim model while preserving uncertainty.
 
 Possible dimensions:
 
@@ -266,38 +277,58 @@ Required checks:
 
 ---
 
-## Stage 9 — evidence-package review
+## Stage 10 — evidence-package synthesis
 
-Review the **claim plus its evidence package**, not merely one row.
+Review the **historical question plus the full evidence package**, not merely one row.
 
 Assess:
 
 - directness of evidence;
-- primary vs secondary role;
+- role of primary/source-native evidence;
+- role of specialist interpretation;
 - independence between sources;
-- chronological/spatial fit;
+- chronology and transmission;
+- genre and purpose;
+- geographic/spatial fit;
+- representativeness;
 - competing interpretations;
 - terminology/status ambiguity;
-- specialist scholarship;
+- whether newer scholarship revises older interpretations;
 - whether additional sources are needed.
 
-Primary sources are strongest for bounded events, transactions, terminology, law, dates and locations.
+### Normal synthesis rule
 
-Specialist secondary scholarship is normally necessary for prevalence, continuity, classification and larger structural interpretation.
+The atlas should record the **best-supported designation reflected in the evidence package and specialist historiography**.
+
+Contrary evidence remains attached as `challenges` or `qualifies`.
+
+The atlas does not become blank or `disputed` merely because contradictory evidence exists.
+
+### Genuine dispute rule
+
+Use `disputed` only where credible specialist scholarship remains materially divided over a classification after the evidence has been synthesized.
+
+If historians broadly resolve the contradiction, follow the best-supported interpretation and preserve the losing/limiting evidence as provenance.
+
+### Project-role boundary
+
+The atlas is a collector and synthesizer of historical evidence and scholarship.
+
+It should not independently attempt to settle major philological, archaeological or historiographical controversies from primary material where specialist scholarship already addresses them.
 
 ---
 
-## Stage 10 — classification / P-level where appropriate
+## Stage 11 — classification / P-level where appropriate
 
 Only territorial-practice claims may receive P0–P4.
 
-- P0 = explicit unknown/no usable classification, never absence;
+- P0 = explicit reviewed assessment that no usable P1–P4 classification is currently available; never absence;
 - P1 = isolated direct attestation;
-- P2 = repeated independent attestations;
+- P2 = recurrent/repeatedly evidenced practice;
 - P3 = systemic/institutional practice strongly supported;
 - P4 = widespread or structurally major practice supported by scholarship.
 
-A claim may remain with **NULL practice_level** when an assessment has not been made.
+A positive historical designation may remain with **NULL practice_level** when intensity has not yet been assessed.
 
 Never derive the level mechanically from:
 
@@ -305,11 +336,29 @@ Never derive the level mechanically from:
 - voyage counts;
 - archive size;
 - citation count;
-- number of imported rows.
+- number of imported rows;
+- number of captives in one event.
 
 ---
 
-## Stage 11 — review state
+## Stage 12 — unknown / no-claim handling
+
+If no defensible territorial-practice claim can be produced, the atlas remains **unknown** for that place/time.
+
+Do not create a negative historical assertion from:
+
+- missing sources;
+- unresearched coverage;
+- inconclusive research;
+- unresolved geometry;
+- P0;
+- failure to locate a source during one research pass.
+
+Research coverage records what the project has reviewed; it does not convert missing claims into historical absence.
+
+---
+
+## Stage 13 — review state
 
 Suggested lifecycle:
 
@@ -332,7 +381,7 @@ A reviewed claim is not automatically public.
 
 ---
 
-## Stage 12 — QC / release membership
+## Stage 14 — QC / release membership
 
 A release candidate must define exactly what it contains.
 
@@ -347,11 +396,11 @@ Required release outputs:
 - data dictionary / codebook;
 - methodology/version references.
 
-JSDP's publication model is a useful peer precedent: research data are accompanied by supporting documentation such as data dictionaries/codebooks and deposited for long-term access after review.
+QC should verify that source conflicts have been synthesized rather than converted mechanically into `disputed`, and that challenging evidence remains linked where relevant.
 
 ---
 
-## Stage 13 — publish layer
+## Stage 15 — publish layer
 
 Only reviewed/published release material reaches public services.
 
@@ -372,24 +421,25 @@ The public application must never query unrestricted draft research tables.
 
 | Tool | Allowed role | Must not become |
 |---|---|---|
-| Scite | literature discovery, citation context | automatic truth/ranking engine |
-| Zotero | source library and bibliographic workflow | canonical claim datastore |
-| IIIF | exact digital-object/canvas addressing | interpretation layer |
-| Transkribus/GROBID | transcription/structure extraction | reviewed evidence |
-| OpenRefine | reconciliation workbench | automatic identity authority |
-| WHG | historical-place candidate authority | automatic polity/jurisdiction resolver |
-| DVC/object store | artifact/version distribution | canonical historical interpretation |
-| PostgreSQL/PostGIS | canonical reviewed research model after migration | opaque dump without provenance |
-| ontology/RDF tools | interoperability/validation | mandatory replacement for relational core |
+| literature/citation search | discovery, citation context | automatic truth/ranking engine |
+| bibliographic manager | source library and bibliographic workflow | canonical claim datastore |
+| IIIF/digital object systems | exact digital-object/canvas addressing | interpretation layer |
+| OCR/HTR/LLM extraction | transcription/structure/candidate extraction | reviewed evidence or historical authority |
+| reconciliation tools | candidate entity/place matching | automatic identity authority |
+| historical place authorities | candidate geography/identifier source | automatic polity/jurisdiction resolver |
+| object/version storage | artifact/version distribution | canonical historical interpretation |
+| PostgreSQL/PostGIS | normalized reviewed research model | opaque dump without provenance |
 | MapLibre/API | publication/presentation | research-authoring authority |
 
 ---
 
 ## Immediate implementation implications
 
-1. Add explicit candidate/review states to future research-ingestion tooling rather than inserting directly into canonical claims.
-2. Keep external authority identifiers separate from internal UUIDs.
-3. Preserve reconciliation candidates/decisions in staging or audit data.
-4. Define release membership before database canonical cut-over.
-5. Make exact source-version registration a prerequisite for reviewed CLAIM_SOURCE links.
-6. Treat machine extraction as a derivative with tool/model provenance.
+1. Research tooling should preserve candidate/review states rather than publishing directly.
+2. Exact source-version registration remains a prerequisite for reviewed CLAIM_SOURCE links.
+3. Evidence direction must distinguish support, challenge, qualification and context.
+4. Research templates should encourage specialist-historiography capture for broad classification claims.
+5. QC should flag unsupported use of `disputed` where no actual historiographical dispute is documented.
+6. Public claims should expose contrary evidence where materially relevant.
+7. External authority identifiers remain separate from internal UUIDs.
+8. Machine extraction remains a derivative with tool/model provenance.
