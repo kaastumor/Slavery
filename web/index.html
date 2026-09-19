@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Historical Slavery Atlas research preview: time-bounded evidence, historical geometry, provenance and uncertainty."
+    />
+    <title>Historical Slavery Atlas</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">Research preview</div>
+          <h1>Historical Slavery Atlas</h1>
+        </div>
+        <div class="timeline">
+          <label for="year">Year</label>
+          <input id="year" type="range" step="1" />
+          <output id="year-label" for="year"></output>
+        </div>
+        <div id="status" class="status">Loading evidence…</div>
+      </header>
+
+      <main class="layout">
+        <section class="map-shell" aria-label="Historical map">
+          <div id="map"></div>
+          <div class="legend" aria-label="Map legend">
+            <div><span class="swatch supported"></span>supported evidence</div>
+            <div><span class="swatch disputed"></span>disputed classification</div>
+            <div><span class="swatch inactive"></span>researched, outside selected interval</div>
+          </div>
+        </section>
+        <aside id="panel" class="panel" aria-live="polite"></aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
