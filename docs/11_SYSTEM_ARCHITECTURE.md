@@ -370,3 +370,15 @@ Technology choices above were checked against official documentation:
 - MapLibre GL JS: https://maplibre.org/maplibre-gl-js/docs/
 - Martin PostgreSQL function sources: https://maplibre.org/martin/sources-pg-functions/
 - Martin MBTiles/PMTiles sources: https://maplibre.org/martin/sources-files/
+
+## Cartography fabric boundary
+
+Physical land/coastline geometry is a first-class shared dependency rather than a frontend-owned asset.
+
+`cartography.land_fabric` stores the active versioned physical land geometry and its upstream provenance/checksums. Public map delivery uses that same fabric in two places:
+
+1. the API returns the active immutable source URL for the MapLibre neutral-land source;
+2. `publish.map_geometry` uses the active PostGIS copy as the coastline constraint for historical polygon fills.
+
+This keeps basemap and overlay coastlines structurally identical. Historical inland boundaries remain independent source geometry and are never replaced by the modern physical land fabric.
+
