@@ -364,7 +364,7 @@ async function boot(): Promise<void> {
     slider.value = String(-499 >= minYear && -499 <= maxYear ? -499 : maxYear);
     timelineRange.innerHTML = `<span>${formatYear(minYear)}</span><span>${formatYear(maxYear)}</span>`;
 
-    map.addSource("land", { type: "geojson", data: "/world-land.geojson" });
+    map.addSource("land", { type: "geojson", data: `${import.meta.env.BASE_URL}world-land.geojson` });
     map.addLayer({
       id: "land-fill",
       type: "fill",
