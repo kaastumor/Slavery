@@ -9,7 +9,7 @@ This is the durable MapLibre web client for the atlas.
 - **Language:** TypeScript
 - **Research store:** PostgreSQL + PostGIS
 - **Current API host:** Supabase Edge Function, configured through `VITE_ATLAS_API_URL`
-- **Neutral land:** static GeoJSON
+- **Neutral land:** API-selected canonical Natural Earth 1:10m land fabric, shared with publication geometry clipping
 - **Current evidence delivery:** explicit published release via `atlas-data`
 
 The frontend is intentionally not coupled to Supabase. Replacing the API host should require changing the configured URL, not the map model.
@@ -45,3 +45,10 @@ From `web/`:
 - source evidence exposes support/challenge/qualification/context direction
 - claim detail includes exact source-version links returned by the API
 - release identity and canonical/non-canonical status are visible in the UI
+
+
+## Cartographic fabric
+
+The web client does not maintain its own independent coastline file. `atlas-data` returns the active `cartography.land_fabric` metadata and immutable source URL. MapLibre loads that exact geometry for the neutral land layer, while PostgreSQL uses the same fabric to clip published historical polygon fills.
+
+This guarantees that the physical coastline of the basemap and historical overlays comes from one structure. Historical inland boundaries remain sourced from the historical geometry provider and are not replaced by Natural Earth.
