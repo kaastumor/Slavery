@@ -1,0 +1,33 @@
+{
+  "prototype_status": "static_vertical_slice_from_canonical_v0.6.1",
+  "selected_year_default": 2000,
+  "claim": {
+    "spatial_name": "Brazil",
+    "from_year": 1900,
+    "to_year": null,
+    "claim_kind": "territorial_practice",
+    "practice_type": "debt_bondage",
+    "practice_label": "Debt bondage / private forced labour",
+    "practice_level": null,
+    "coverage_state": "classified",
+    "legacy_coverage": "S",
+    "publication_status": "prototype_only",
+    "summary": "ILO documentation describes debt bondage and coercive forced labour in remote agricultural work and Brazil's state response.",
+    "source": {
+      "title": "ILO source cited by canonical v0.6.1 Brazil evidence row",
+      "exact_url": "https://www.ilo.org/publications/waiting-correntes-forced-labour-brazil",
+      "workbook_locator": "v0.4.7 Evidence — Brazil row"
+    }
+  },
+  "geometry": {
+    "accuracy_status": "modern_proxy",
+    "resolution_method": "Natural Earth modern country boundary used only for the thin map proof",
+    "source": "Natural Earth Admin 0 Countries 1:110m v5.1.1",
+    "source_git_blob_sha": "1e6ab74c7042f97013be69ceec798be8e1aff27d"
+  },
+  "caveats": [
+    "This is a prototype visualization, not a published atlas release.",
+    "The territorial P0–P4 level is intentionally unassigned.",
+    "Modern-proxy geometry must not be interpreted as exact historical jurisdiction for all years in the claim interval."
+  ]
+}
