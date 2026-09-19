@@ -1,0 +1,72 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Kanesh/Kültepe Old Assyrian colony",
+    "display_name": "Kanesh / Kültepe",
+    "entity_type_code": "city",
+    "notes": "Old Assyrian kārum and Anatolian royal-city context at Kültepe."
+  },
+  "claim": {
+    "from_year": -1899,
+    "to_year": -1800,
+    "date_text_original": "ca. 19th century BCE",
+    "temporal_precision": "century",
+    "spatial_precision": "city_archive",
+    "summary": "The Kültepe tablets contain repeated documented slave-sale transactions in the Old Assyrian commercial milieu. One specialist publication adds thirteen newly edited documents and draws on ten further documents concerning enslaved persons, supporting repeated rather than isolated attestation.",
+    "review_status": "reviewed",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P2",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P2 reflects repeated transaction evidence at Kanesh/Kültepe; it does not imply that slavery dominated the city economy."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "The Institution of Slavery in Ancient Anatolia in the Light of New Documents",
+        "author_or_institution": "Sebahattin Bayram and Salih Çeçen",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Publishes, translates and comments on primary Kültepe tablets and situates them in earlier scholarship.",
+        "reliability_limitations": "Evidence is transaction-heavy and archive-specific; prevalence beyond the documented commercial milieu should not be inferred."
+      },
+      "version": {
+        "version_label": "Belleten 60 (1996), DOI 10.37879/belleten.1996.605",
+        "url_or_identifier": "https://belleten.gov.tr/eng/abstarct/2394/eng",
+        "accessed_at": "2026-09-19T00:00:00Z"
+      },
+      "evidence_role": "edited primary transactions plus specialist interpretation",
+      "independence_group": "kultepe_bayram_cecen",
+      "directness": "document edition and synthesis",
+      "direction": "supports",
+      "locator": "Abstract; article pp. 605–630"
+    }
+  ],
+  "geometry": {
+    "from_year": -1999,
+    "to_year": -1700,
+    "accuracy_status": "specialist",
+    "resolution_method": "Representative archaeological-site point for Kanesh/Kültepe; this is a site location, not a territorial boundary.",
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        35.6365,
+        38.8517
+      ]
+    },
+    "review_status": "reviewed",
+    "source": {
+      "title": "Kanesh (mod. Kültepe) - Proveniences",
+      "author_or_institution": "Cuneiform Digital Library Initiative",
+      "source_type": "place_authority",
+      "source_classification": "dataset"
+    },
+    "version": {
+      "version_label": "CDLI provenience record 291",
+      "url_or_identifier": "https://cdli.earth/proveniences/291",
+      "accessed_at": "2026-09-19T00:00:00Z"
+    },
+    "source_native_id": "291"
+  }
+}
