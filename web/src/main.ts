@@ -152,17 +152,17 @@ function featureState(claims: Claim[]): "supported" | "disputed" | "inactive" {
   return claims.some((claim) => claim.coverage_state !== "disputed") ? "supported" : "disputed";
 }
 
-function buildFeatureCollection(year: number): FeatureCollection {
-  const features: Feature[] = [];
+function buildEvidenceCollections(year: number): { polygons: FeatureCollection; points: FeatureCollection } {
+  const polygons: Feature[] = [];
+  const points: Feature[] = [];
 
   for (const place of places) {
     const geometry = geometryForYear(place, year);
     if (!geometry?.geometry) continue;
 
     const claims = activeClaims(place, year);
-    features.push({
+    const feature: Feature = {
       type: "Feature",
-      id: place.spatial_entity_id,
       geometry: geometry.geometry,
       properties: {
         spatial_entity_id: place.spatial_entity_id,
@@ -171,10 +171,19 @@ function buildFeatureCollection(year: number): FeatureCollection {
         p_level: highestPracticeLevel(claims),
         geometry_accuracy: geometry.accuracy_status,
       },
-    });
+    };
+
+    if (geometry.geometry.type === "Polygon" || geometry.geometry.type === "MultiPolygon") {
+      polygons.push(feature);
+    } else if (geometry.geometry.type === "Point" || geometry.geometry.type === "MultiPoint") {
+      points.push(feature);
+    }
   }
 
-  return { type: "FeatureCollection", features };
+  return {
+    polygons: { type: "FeatureCollection", features: polygons },
+    points: { type: "FeatureCollection", features: points },
+  };
 }
 
 function directionBadge(direction: string): string {
@@ -313,8 +322,11 @@ function updateMap(year: number): void {
   yearLabel.value = formatYear(year);
   yearLabel.textContent = formatYear(year);
 
-  const source = map.getSource("evidence") as GeoJSONSource | undefined;
-  source?.setData(buildFeatureCollection(year));
+  const collections = buildEvidenceCollections(year);
+  const polygonSource = map.getSource("evidence-polygons") as GeoJSONSource | undefined;
+  const pointSource = map.getSource("evidence-points") as GeoJSONSource | undefined;
+  polygonSource?.setData(collections.polygons);
+  pointSource?.setData(collections.points);
 
   const activePlaceCount = places.filter((place) => activeClaims(place, year).length > 0).length;
   const activeClaimCount = places.reduce((count, place) => count + activeClaims(place, year).length, 0);
@@ -372,8 +384,8 @@ async function boot(): Promise<void> {
     timelineRange.innerHTML = `<span>${formatYear(minYear)}</span><span>${formatYear(maxYear)}</span>`;
 
     map.addSource("land", { type: "geojson", data: `${import.meta.env.BASE_URL}world-land.geojson` });
-    map.on("sourcedata", (event) => {
-      if (event.sourceId === "land" && event.isSourceLoaded) {
+    map.once("idle", () => {
+      if (map.isSourceLoaded("land")) {
         mapFallback.classList.add("loaded");
         mapWarning.hidden = true;
       }
@@ -391,12 +403,13 @@ async function boot(): Promise<void> {
       paint: { "line-color": "#626762", "line-width": 0.95 },
     });
 
-    map.addSource("evidence", { type: "geojson", data: buildFeatureCollection(currentYear()) });
+    const initialCollections = buildEvidenceCollections(currentYear());
+
+    map.addSource("evidence-polygons", { type: "geojson", data: initialCollections.polygons });
     map.addLayer({
-      id: "evidence-fill",
+      id: "evidence-polygons",
       type: "fill",
-      source: "evidence",
-      filter: ["==", ["geometry-type"], "Polygon"],
+      source: "evidence-polygons",
       paint: {
         "fill-color": [
           "match", ["get", "state"],
@@ -406,57 +419,60 @@ async function boot(): Promise<void> {
         ],
         "fill-opacity": [
           "case",
-          ["==", ["get", "state"], "inactive"], 0.09,
-          ["==", ["get", "state"], "disputed"], 0.62,
-          ["match", ["get", "p_level"], 4, 0.78, 3, 0.62, 2, 0.46, 1, 0.32, 0.38],
+          ["==", ["get", "state"], "inactive"], 0.10,
+          ["==", ["get", "state"], "disputed"], 0.55,
+          ["match", ["get", "p_level"], 4, 0.72, 3, 0.58, 2, 0.44, 1, 0.30, 0.42],
         ],
+        "fill-outline-color": "#4b302c",
       },
     });
-    map.addLayer({
-      id: "evidence-line",
-      type: "line",
-      source: "evidence",
-      filter: ["==", ["geometry-type"], "Polygon"],
-      paint: {
-        "line-color": [
-          "match", ["get", "state"],
-          "supported", "#6e2b24",
-          "disputed", "#815914",
-          "#8f8d88",
-        ],
-        "line-width": ["case", ["==", ["get", "state"], "inactive"], 0.7, 1.5],
-      },
-    });
+
+    map.addSource("evidence-points", { type: "geojson", data: initialCollections.points });
     map.addLayer({
       id: "evidence-points",
       type: "circle",
-      source: "evidence",
-      filter: ["==", ["geometry-type"], "Point"],
+      source: "evidence-points",
       paint: {
-        "circle-radius": ["case", ["==", ["get", "state"], "inactive"], 5, 9],
+        "circle-radius": 9,
         "circle-color": [
           "match", ["get", "state"],
           "supported", "#9e493f",
           "disputed", "#c18a31",
           "#b8b7b2",
         ],
-        "circle-opacity": [
-          "case",
-          ["==", ["get", "state"], "inactive"], 0.22,
-          ["==", ["get", "state"], "disputed"], 0.78,
-          ["match", ["get", "p_level"], 4, 0.95, 3, 0.86, 2, 0.76, 1, 0.66, 0.72],
-        ],
-        "circle-stroke-width": 2,
+        "circle-opacity": ["case", ["==", ["get", "state"], "inactive"], 0.25, 0.92],
+        "circle-stroke-width": 2.5,
         "circle-stroke-color": "#fffaf1",
       },
     });
 
-    map.on("click", "evidence-fill", pickFeature);
+    map.on("click", "evidence-polygons", pickFeature);
     map.on("click", "evidence-points", pickFeature);
-    for (const layer of ["evidence-fill", "evidence-points"]) {
+    for (const layer of ["evidence-polygons", "evidence-points"]) {
       map.on("mouseenter", layer, () => { map.getCanvas().style.cursor = "pointer"; });
       map.on("mouseleave", layer, () => { map.getCanvas().style.cursor = ""; });
     }
+
+    map.on("idle", () => {
+      const currentClaims = places.reduce((count, place) => count + activeClaims(place, currentYear()).length, 0);
+      if (currentClaims === 0) return;
+
+      const sourceFeatureCount =
+        map.querySourceFeatures("evidence-polygons").length +
+        map.querySourceFeatures("evidence-points").length;
+
+      const renderedFeatureCount = map.queryRenderedFeatures().filter((feature) =>
+        feature.layer.id === "evidence-polygons" || feature.layer.id === "evidence-points"
+      ).length;
+
+      if (sourceFeatureCount > 0 && renderedFeatureCount === 0) {
+        mapWarning.textContent =
+          `Evidence loaded (${sourceFeatureCount} map feature${sourceFeatureCount === 1 ? "" : "s"}) but the browser rendered none. The side panel remains authoritative.`;
+        mapWarning.hidden = false;
+      } else if (renderedFeatureCount > 0) {
+        mapWarning.hidden = true;
+      }
+    });
 
     slider.addEventListener("input", () => updateMap(currentYear()));
     updateMap(currentYear());
