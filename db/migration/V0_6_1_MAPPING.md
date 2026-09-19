@@ -137,6 +137,9 @@ The migration is intentionally explicit rather than classifier-driven.
 
 ### Positive / disputed rows
 
+Row keys below use the importer's preserved **logical row sequence** (blank worksheet rows are skipped), matching `raw.raw_record.source_native_id`.
+
+
 | Workbook row | Area | Legacy | Semantic target |
 |---|---|---:|---|
 | v0.4.7!5 | Carolingian Empire | S | territorial practice: `slavery_enslavement` |
