@@ -340,7 +340,7 @@ Before further bulk ingestion:
 
 1. finalize the relational schema from `schema_draft.yaml`
 2. create PostgreSQL/PostGIS migrations
-3. execute migrations 0001–0011 and migrate the v0.6.1 controlled seed
+3. execute migrations 0001–0012, including release-reconstruction acceptance tests, and migrate the v0.6.1 controlled seed
 4. reconcile every migrated value against the workbook
 5. execute the rollback-only non-Atlantic acceptance fixtures so the schema is not accidentally optimized only for SlaveVoyages
 6. build one thin technical map slice: neutral land + selected-year geometry + one practice claim + evidence click-through
