@@ -1,4 +1,4 @@
-import maplibregl, { type GeoJSONSource, type MapGeoJSONFeature } from "maplibre-gl";
+import { Map, NavigationControl, type GeoJSONSource, type MapGeoJSONFeature, type MapMouseEvent } from "maplibre-gl";\nimport type { Feature, FeatureCollection, Geometry } from "geojson";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./styles.css";
 
@@ -34,7 +34,7 @@ type GeometryRecord = {
   accuracy_status: "exact" | "specialist" | "approximate_historical" | "modern_proxy" | "unresolved";
   resolution_method: string;
   source_native_id: string | null;
-  geometry: GeoJSON.Geometry | null;
+  geometry: Geometry | null;
   source_title: string | null;
   source_version: string | null;
   source_url: string | null;
@@ -66,7 +66,7 @@ const status = document.querySelector<HTMLElement>("#status")!;
 const slider = document.querySelector<HTMLInputElement>("#year")!;
 const yearLabel = document.querySelector<HTMLOutputElement>("#year-label")!;
 
-const map = new maplibregl.Map({
+const map = new Map({
   container: "map",
   style: {
     version: 8,
@@ -86,7 +86,7 @@ const map = new maplibregl.Map({
   attributionControl: true,
 });
 
-map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-left");
+map.addControl(new NavigationControl({ showCompass: false }), "top-left");
 
 let places: Place[] = [];
 let selectedPlaceId: string | null = null;
@@ -151,8 +151,8 @@ function featureState(claims: Claim[]): "supported" | "disputed" | "inactive" {
   return claims.some((claim) => claim.coverage_state !== "disputed") ? "supported" : "disputed";
 }
 
-function buildFeatureCollection(year: number): GeoJSON.FeatureCollection {
-  const features: GeoJSON.Feature[] = [];
+function buildFeatureCollection(year: number): FeatureCollection {
+  const features: Feature[] = [];
 
   for (const place of places) {
     const geometry = geometryForYear(place, year);
@@ -301,7 +301,7 @@ function currentYear(): number {
   return Number(slider.value);
 }
 
-function pickFeature(event: maplibregl.MapMouseEvent & { features?: MapGeoJSONFeature[] }): void {
+function pickFeature(event: MapMouseEvent & { features?: MapGeoJSONFeature[] }): void {
   const feature = event.features?.[0];
   const id = feature?.properties?.spatial_entity_id as string | undefined;
   if (!id) return;
