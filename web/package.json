@@ -1,0 +1,19 @@
+{
+  "name": "historical-slavery-atlas-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "maplibre-gl": "6.10.0"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "vite": "8.2.2",
+    "@types/geojson": "7946.0.16"
+  }
+}
