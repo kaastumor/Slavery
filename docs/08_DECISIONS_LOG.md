@@ -136,3 +136,9 @@ This file records durable methodological choices. Add a dated entry whenever a f
 **Date:** 2026-09-19  
 **Decision:** the v0.6.1 importer verifies the exact SHA-256 of the canonical workbook in addition to semantic/count invariants. A byte-different workbook is not accepted as v0.6.1; it must be treated as a new release/version even if its visible contents appear equivalent.  
 **Reason:** immutable release identity requires detecting accidental re-saves, edits or substitutions. Semantic invariants protect meaning, while the checksum protects exact release provenance.
+
+## D-030 — Explicit immutable release membership plus checksummed release bundles
+**Date:** 2026-09-19  
+**Decision:** Published database releases use explicit typed release-membership tables for canonical/publishable objects, backed by foreign keys, together with an immutable checksummed release package/export. Release membership may change only while the release manifest is in `draft`; validation freezes membership, and later lifecycle transitions may not rewrite release content.  
+**Reason:** a checksummed artifact alone does not support database queries such as “which release contained this claim?”, while membership IDs alone do not preserve the exact row state if canonical records later evolve. The hybrid provides relational integrity/queryability plus preservation-grade reconstruction without relying on a particular cloud provider, DVC, GitHub, or RDF store.
+
