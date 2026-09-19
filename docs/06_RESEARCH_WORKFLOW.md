@@ -4,20 +4,50 @@
 
 1. Define the target spatial entity/region/polity and bounded or explicitly uncertain time interval.
 2. Check current coverage state and existing claims before researching.
-3. Identify source families in relevant languages and historiographies.
-4. Look for both positive and limiting/counterevidence; do not search only for confirmation.
-5. Separate direct practice evidence from captive-taking, hierarchy, inequality, legal terminology and trade participation.
-6. Create one or more claim records rather than one narrative blob.
-7. Register the exact source/source version used.
-8. Attach evidence at claim level.
-9. Assess independence of evidence.
-10. Record temporal and spatial precision rather than inventing exactness.
-11. Assign coverage state.
-12. Assign P-level only when the evidence package supports it.
-13. Resolve historical geometry independently.
-14. Run QC before publication/merge into canonical research data.
+3. Identify the relevant specialist historiography, including current or authoritative syntheses and any recognized historiographical disagreements.
+4. Identify the primary/source-native evidence that anchors the historical question where accessible: inscriptions, transactions, law, registers, administrative documents, chronicles, archaeological records, or other bounded evidence.
+5. Determine what each source can actually support. Separate law, terminology, captive-taking, social hierarchy, trade participation and observed territorial practice.
+6. Look for limiting and challenging evidence, not only confirmation.
+7. Determine how specialist historians have interpreted the evidence package.
+8. Record the **best-supported historical designation** rather than mechanically mirroring individual source statements.
+9. Preserve contrary or limiting evidence through claim-source directions such as `challenges` and `qualifies`.
+10. Use `disputed` only when relevant specialist scholarship remains materially divided after synthesis.
+11. If no defensible historical claim can be made, leave the territorial condition unknown and record the appropriate research-coverage state. Do not invent a negative claim.
+12. Create one or more claim records rather than one narrative blob.
+13. Register the exact source/source version used.
+14. Attach evidence at claim level.
+15. Assess source dependence and independence.
+16. Record temporal and spatial precision rather than inventing exactness.
+17. Assign coverage state.
+18. Assign P-level only when the interpreted evidence package supports an intensity assessment. A positive designation may still have `practice_level = NULL` if intensity remains unassessed.
+19. Resolve historical geometry independently from the slavery/coercion evidence.
+20. Run QC before publication/merge into canonical research data.
 
-## B. Ingest a bulk dataset or voyage/network record
+### Research-role rule
+
+The project normally **synthesizes existing scholarship**. It should not attempt to become the primary scholarly authority on a historical controversy.
+
+When specialist scholarship exists, the project should capture and digest that scholarship rather than independently adjudicating difficult philological, archaeological or historiographical questions from raw evidence alone.
+
+When specialist scholarship is genuinely absent, the project may preserve bounded primary evidence as such, but should avoid turning that evidence into a broad structural interpretation unsupported by scholarship.
+
+## B. Resolving conflicting evidence
+
+When sources disagree:
+
+1. confirm that they actually address the same proposition
+2. distinguish primary evidence from later interpretation
+3. assess chronology, provenance, transmission, genre, terminology and scope
+4. identify whether the sources are independent
+5. consult specialist scholarship on the contradiction
+6. determine whether historians generally resolve the contradiction, qualify it, or remain divided
+7. record the best-supported atlas designation
+8. retain the contrary evidence in `CLAIM_SOURCE`
+9. use `disputed` only if the historical classification itself remains genuinely unresolved
+
+Do not use disagreement between two source rows as an automatic reason to blank a classification.
+
+## C. Ingest a bulk dataset or voyage/network record
 
 1. Identify and register the exact source version/snapshot.
 2. Preserve the source/raw identifier and source-native value.
@@ -33,7 +63,7 @@
 12. Preserve import lineage through an ingest-run identifier where applicable.
 13. Never change territorial P-level directly because a voyage/network record exists.
 
-## C. Legal-event research
+## D. Legal-event research
 
 1. Create a claim/legal-event identity.
 2. Record legal instrument/event.
@@ -42,8 +72,10 @@
 5. Record scope, exceptions and subnational variation.
 6. Attach exact source version(s) and locators.
 7. Keep implementation and continuing practice as separate claims.
+8. Do not infer prevalence from legal recognition alone.
+9. Where law is used to interpret a status category, use specialist scholarship to establish how historians understand that category.
 
-## D. Publication workflow
+## E. Publication workflow
 
 Research and publication are separate states.
 
@@ -56,7 +88,9 @@ Preferred lifecycle:
 
 The public web map must consume approved publish views/release materializations, not unrestricted draft research tables.
 
-## E. Research batch completion criteria
+A claim should not be published merely because sources exist. Publication requires that the atlas designation reflects the reviewed evidence synthesis, including relevant counterevidence and historiography.
+
+## F. Research batch completion criteria
 
 A batch is not complete merely because sources were found. It is complete when:
 
@@ -64,7 +98,11 @@ A batch is not complete merely because sources were found. It is complete when:
 - claims are normalized
 - exact source versions are registered where applicable
 - claim-source links and locators are explicit
+- evidence direction is explicit
 - source roles and independence are explicit
+- relevant specialist interpretation has been identified where available
+- contrary/limiting evidence has been checked
+- conflicts have been synthesized rather than automatically marked disputed
 - uncertainties are recorded
 - temporal precision is recorded
 - geography is resolved or explicitly unresolved
@@ -72,8 +110,7 @@ A batch is not complete merely because sources were found. It is complete when:
 - QC passes
 - changelog/decision log is updated where necessary
 
-
-## F. Direct PostgreSQL research entry
+## G. Direct PostgreSQL research entry
 
 New hand-researched cases should normally enter the atlas database directly rather than being staged in a new Excel workbook.
 
