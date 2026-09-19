@@ -33,7 +33,7 @@ class ImportV061Tests(unittest.TestCase):
         ]
         self.assertTrue(territorial)
         self.assertTrue(all("practice_level" not in target for target in territorial))
-        self.assertEqual(POSITIVE_PLAN["v0.4.9 Evidence!6"]["targets"][0]["kind"], "external_participation")
+        self.assertEqual(POSITIVE_PLAN["v0.4.9 Evidence!5"]["targets"][0]["kind"], "external_participation")
 
     def test_canonical_workbook_dry_run(self):
         workbook = os.environ.get("HSA_V061_WORKBOOK")
