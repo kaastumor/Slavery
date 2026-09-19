@@ -6,8 +6,8 @@ Current implementation state: **DB Foundation v0.3, Docker Compose local runtime
 
 Completed:
 
-- draft-0.10 executable relational schema defined
-- migrations `0001`–`0011` created
+- draft-0.11 executable relational schema defined
+- migrations `0001`–`0012` created
 - ACTOR identity and actor-role migration model defined
 - SPATIAL_ENTITY / POLITY / SPATIAL_RELATION / GEOMETRY defined
 - universal CLAIM + specialized claims + CLAIM_SOURCE defined
@@ -35,7 +35,7 @@ Still required before the database can be considered validated:
 ## Priority 0 — live database migration / reconciliation
 
 - provision/run local PostgreSQL + PostGIS development database
-- apply migrations `0001`–`0011` and schema smoke test
+- apply migrations `0001`–`0012` and schema/release-reconstruction tests
 - run the validated v0.6.1 importer against the eight-voyage QA seed without changing the workbook
 - migrate OWNER -> ACTOR
 - migrate OWNER_EVIDENCE -> actor-attribute claims + claim-source links
@@ -120,7 +120,7 @@ After data semantics and the thin map proof are validated:
 ## Development / deployment environment
 
 - [x] containerize Python migration/import tooling
-- [x] include canonical v0.6.1 under immutable repository release path
+- [x] record canonical v0.6.1 filename/version/SHA-256 under immutable repository release metadata; binary remains external
 - [x] add checksum migration ledger
 - [x] add one-command Windows development bootstrap
 - [x] add local backup/restore scripts
