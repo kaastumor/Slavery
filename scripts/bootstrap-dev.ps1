@@ -20,21 +20,23 @@ Write-Host "Starting PostGIS..."
 docker compose up -d db
 & .\scripts\db-wait.ps1
 
-Write-Host "Applying/checking migrations..."
+Write-Host "Applying/checking migrations and foundation tests..."
 & .\scripts\db-migrate.ps1
-
-Write-Host "Running schema and Python tests..."
 & .\scripts\db-test-schema.ps1
-& .\scripts\verify-release.ps1
 & .\scripts\test-python.ps1
-& .\scripts\dry-run-v061.ps1
-
-Write-Host "Importing canonical v0.6.1 into the LOCAL development database..."
-& .\scripts\import-v061.ps1
-& .\scripts\db-test-v061.ps1
 & .\scripts\db-test-non-atlantic.ps1
+
+$workbook = "data/releases/v0.6.1/Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx"
+if (Test-Path $workbook) {
+    Write-Host "Canonical release artifact found; running release-specific validation..."
+    & .\scripts\verify-release.ps1
+    & .\scripts\dry-run-v061.ps1
+    & .\scripts\import-v061.ps1
+    & .\scripts\db-test-v061.ps1
+} else {
+    Write-Host "Canonical v0.6.1 binary is not present. Core development environment is valid; release-import validation was explicitly skipped."
+}
 
 Write-Host "Creating a local validation backup..."
 & .\scripts\backup-db.ps1
-
 Write-Host "Development environment is ready. The local database remains NON-CANONICAL."

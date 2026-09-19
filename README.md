@@ -1,79 +1,67 @@
 # Historical Slavery Atlas — development environment
 
-This repository is the reproducible development/database foundation for the Historical Slavery Atlas. It is **not yet the canonical data store**. The canonical data release remains `data/releases/v0.6.1/Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx` until all migration, semantic-normalization, QC and release gates pass.
+This private repository is the reproducible engineering foundation for the Historical Slavery Atlas. It is **not yet the canonical data store**. The canonical data release remains the external, immutable v0.6.1 workbook identified by the release manifest in `data/releases/v0.6.1/` until database migration, semantic normalization, QC and release gates pass.
+
+## Repository boundary
+
+Git stores code, SQL migrations, tests, governance documentation, release manifests and checksums. Canonical research binaries are treated as immutable release artifacts and are **not stored as ordinary Git blobs**. This keeps the code repository clean, avoids rewriting large historical binaries, and gives us a path to a proper release/object-storage layer later.
+
+The exact canonical v0.6.1 artifact is:
+
+`Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx`
+
+SHA-256:
+
+`0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4`
 
 ## What is included
 
 - PostgreSQL 17 + PostGIS 3.5 development database in Docker;
-- Dockerized Python 3.12 tooling, so local Python is not required;
+- Dockerized Python 3.12 tooling;
 - checksum-enforced SQL migration ledger;
-- v0.6.1 importer and reconciliation tests;
+- v0.6.1 importer and reconciliation tests for artifact-gated release validation;
 - non-Atlantic rollback-only acceptance fixtures;
-- immutable canonical workbook input under `data/releases/v0.6.1/`;
+- release manifests/checksums under `data/releases/`;
 - local backup/restore scripts;
-- GitHub Actions CI workflow;
+- GitHub Actions clean-room foundation CI;
 - optional VS Code Dev Container configuration;
 - governance/methodology documentation under `docs/`.
-
 
 ## Repository layout
 
 ```text
 .
-├── data/releases/       # immutable canonical/historical input releases
-├── db/migrations/       # append-only PostgreSQL/PostGIS schema migrations
+├── data/releases/       # immutable release metadata/checksums; binaries external
+├── db/migrations/       # append-only PostgreSQL/PostGIS migrations
 ├── db/tests/            # schema, reconciliation and acceptance SQL tests
-├── db/migration/        # explicit release-to-database mapping specifications
+├── db/migration/        # release-to-database mapping specifications
 ├── tools/               # migration/import utilities
 ├── tests/               # Python unit tests
 ├── scripts/             # Windows + Bash developer operations
 ├── docker/              # tooling container definitions
-├── docs/                # methodology, ontology, architecture and project governance
+├── docs/                # methodology, ontology, architecture and governance
 ├── validation/          # checked-in validation reports, never runtime state
-├── deploy/              # deployment boundary; provider-specific IaC comes later
-├── backups/             # local-only database backups (ignored except .gitkeep)
-└── build/               # local generated output (ignored except .gitkeep)
+├── deploy/              # future staging/production boundary
+├── backups/             # local-only database backups
+└── build/               # generated local output
 ```
 
-The root is intentionally kept small. New code should go into an existing domain folder unless a genuinely new subsystem is introduced. Do not create framework-specific web/API directories until those implementation choices are actually made.
+The root is intentionally small. Do not create framework-specific web/API directories until those implementation choices are justified.
 
-## Repository workflow
+## Development workflow
 
-`main` is the integration branch. Substantive changes should be made on a short-lived branch and merged by pull request after CI passes. Database migrations are append-only once shared: never rewrite an already-applied migration. Canonical release files under `data/releases/` are immutable.
+`main` is the integration branch. Substantive changes use short-lived branches and pull requests after CI passes. Applied SQL migrations are append-only.
 
-## Windows first run
+### Core bootstrap
 
-Prerequisite: Docker Desktop running. Git is recommended once this is placed in a repository.
+With Docker Desktop running:
 
 ```powershell
 .\scripts\bootstrap-dev.ps1
 ```
 
-The bootstrap creates a local `.env` with a random development password, builds the tooling image, starts PostGIS, applies migrations, runs tests, imports v0.6.1 into the **local development database**, performs reconciliation/non-Atlantic acceptance tests and creates a local backup.
-
-Re-run verification later with:
-
-```powershell
-.\scripts\verify-dev.ps1
-```
+This always validates the database foundation. If the exact v0.6.1 workbook is present at the path configured in `.env`, bootstrap additionally performs checksum verification, dry-run import, transactional import and v0.6.1 reconciliation. If the release artifact is absent, those release-specific gates are skipped explicitly rather than replaced by fake data.
 
 ## Important status
 
-Passing local/CI tests does not make PostgreSQL canonical. The four global evidence sheets are raw-preserved but still require reviewed semantic migration. A blocking QC issue intentionally remains until that work is complete.
-
-## Environment model
-
-```text
-GitHub repository
-   |-- code / SQL migrations / tests / governance docs
-   |-- immutable canonical input release(s)
-   |-- GitHub Actions clean-room CI
-   |
-   +--> local development: Docker Compose (disposable)
-   |
-   +--> future staging: managed Postgres/PostGIS + private app services
-   |
-   +--> future production: reviewed release/publish layer only
-```
-
-The local Docker database is intentionally replaceable. It is a development target, not a historical release artifact or production database.
+Foundation CI validates the executable database/schema/tooling layer without pretending it has access to the canonical binary. The canonical switch remains blocked until the external v0.6.1 artifact has passed the release-validation path and the four global evidence sheets have been semantically migrated.

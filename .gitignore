@@ -16,6 +16,10 @@ backups/*
 .vscode/
 .idea/
 
-# Never commit local database volumes/exports outside controlled release paths
+# Database exports
 *.dump
 *.sql.gz
+
+# Canonical release binaries are immutable external artifacts, not Git blobs.
+# Git stores release manifests/checksums; local release validation supplies the exact artifact.
+data/releases/**/*.xlsx

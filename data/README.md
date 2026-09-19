@@ -1,14 +1,19 @@
-# Data layout
+# Data and release artifacts
 
-`data/releases/` contains immutable project data releases used to validate migrations.
+`data/releases/` stores immutable **release metadata**: version notes, expected filenames, checksums and later QC/release manifests.
 
-Current canonical input:
+Canonical research binaries are kept outside ordinary Git history. A release artifact is accepted only when its exact filename/version is known and its checksum matches the committed manifest.
 
-- `releases/v0.6.1/Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx`
+Current canonical artifact:
+
+- version: v0.6.1
+- filename: `Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx`
+- SHA-256: see `releases/v0.6.1/SHA256SUMS.txt`
 
 Rules:
 
 - never overwrite a historical release in place;
-- add a new version directory for a new release;
-- the database is not canonical merely because it imports a release successfully;
-- release checksums and QC results must be retained with each canonical switch.
+- changed bytes require a new release/version;
+- never silently substitute a related file for a missing canonical artifact;
+- the database is not canonical merely because migrations or CI pass;
+- every canonical switch needs changelog, QC summary and unresolved-issues list.
