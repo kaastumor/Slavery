@@ -1,7 +1,7 @@
 """Explicit semantic plan for the four v0.6.1 global evidence sheets.
 
-This module contains no database writes. It normalizes workbook rows and states
-which positive/disputed rows may become which existing claim subtypes.
+No database writes live here. The mapping is intentionally hand-authored so the
+canonical workbook cannot be semantically classified by heuristics.
 """
 from __future__ import annotations
 
@@ -51,6 +51,11 @@ def _first(row: dict[str, Any], *keys: str) -> Any:
 
 
 def extract_global_evidence(sheet_rows: dict[str, list[list[Any]]]) -> list[dict[str, Any]]:
+    """Normalize the four evidence tabs.
+
+    The lightweight XLSX reader skips physically blank worksheet rows, so
+    evidence_key uses the same logical row sequence already used by raw lineage.
+    """
     out: list[dict[str, Any]] = []
     for sheet_name in GLOBAL_EVIDENCE_SHEETS:
         rows = sheet_rows[sheet_name]
@@ -59,7 +64,7 @@ def extract_global_evidence(sheet_rows: dict[str, list[list[Any]]]) -> list[dict
             if row and _clean(row[0]) == "Region" and "Coverage" in [_clean(x) for x in row]
         )
         headers = [_clean(x) for x in rows[header_index]]
-        for zero_index, values in enumerate(rows[header_index + 1 :], start=header_index + 1):
+        for logical_index, values in enumerate(rows[header_index + 1 :], start=header_index + 1):
             if not values or _clean(values[0]) is None:
                 continue
             record = {
@@ -71,11 +76,10 @@ def extract_global_evidence(sheet_rows: dict[str, list[list[Any]]]) -> list[dict
             if period not in PERIODS:
                 raise ValueError(f"Unknown global evidence period {period!r} in {sheet_name}")
             from_year, to_year = PERIODS[period]
-            row_number = zero_index + 1
             out.append({
-                "evidence_key": f"{sheet_name}!{row_number}",
+                "evidence_key": f"{sheet_name}!{logical_index + 1}",
                 "sheet_name": sheet_name,
-                "row_number": row_number,
+                "row_number": logical_index + 1,
                 "region": _first(record, "Region"),
                 "period": period,
                 "from_year": from_year,
@@ -90,49 +94,71 @@ def extract_global_evidence(sheet_rows: dict[str, list[list[Any]]]) -> list[dict
     return out
 
 
+def _tp(practice_type: str, coverage_state: str, classification_status: str) -> dict[str, Any]:
+    return {
+        "kind": "territorial_practice",
+        "practice_type": practice_type,
+        "coverage_state": coverage_state,
+        "classification_status": classification_status,
+    }
+
+
+def _ext(participation_type: str, role_text: str) -> dict[str, Any]:
+    return {
+        "kind": "external_participation",
+        "participation_type": participation_type,
+        "role_text": role_text,
+    }
+
+
 POSITIVE_PLAN: dict[str, dict[str, Any]] = {
     "v0.4.7 Evidence!4": {
         "spatial_type": "polity",
-        "targets": [{"kind": "territorial_practice", "practice_type": "slavery_enslavement", "coverage_state": "classified", "classification_status": "strong workbook classification"}],
+        "targets": [_tp("slavery_enslavement", "classified", "strong workbook classification")],
     },
     "v0.4.7 Evidence!5": {
         "spatial_type": "region",
-        "targets": [{"kind": "territorial_practice", "practice_type": "slavery_enslavement", "coverage_state": "classified", "classification_status": "strong compound regional classification; geometry unresolved"}],
+        "targets": [_tp("slavery_enslavement", "classified", "strong compound regional classification; geometry unresolved")],
     },
     "v0.4.7 Evidence!6": {
         "spatial_type": "region",
-        "targets": [{"kind": "external_participation", "participation_type": "trade_route", "role_text": "slave-trade / captive-movement route"}],
+        "targets": [_ext("trade_route", "slave-trade / captive-movement route")],
     },
     "v0.4.7 Evidence!7": {
         "spatial_type": "region",
         "targets": [
-            {"kind": "territorial_practice", "practice_type": "slavery_enslavement", "coverage_state": "classified", "classification_status": "strong workbook classification"},
-            {"kind": "legal_event", "event_type": "suppression_restrictions", "legal_status_after": "mixed_conflicting_or_subnational", "scope": "piecemeal restrictions on markets and trade routes; not a single clean abolition date"},
+            _tp("slavery_enslavement", "classified", "strong workbook classification"),
+            {
+                "kind": "legal_event",
+                "event_type": "suppression_restrictions",
+                "legal_status_after": "mixed_conflicting_or_subnational",
+                "scope": "piecemeal restrictions on markets and trade routes; not a single clean abolition date",
+            },
         ],
     },
     "v0.4.7 Evidence!8": {
         "spatial_type": "region",
-        "targets": [{"kind": "territorial_practice", "practice_type": "state_forced_labour", "coverage_state": "classified", "classification_status": "strong workbook classification"}],
+        "targets": [_tp("state_forced_labour", "classified", "strong workbook classification")],
     },
-    "v0.4.7 Evidence!8": {
+    "v0.4.7 Evidence!9": {
         "spatial_type": "polity",
-        "targets": [{"kind": "territorial_practice", "practice_type": "penal_labour", "coverage_state": "classified", "classification_status": "strong workbook classification; not chattel slavery"}],
+        "targets": [_tp("penal_labour", "classified", "strong workbook classification; not chattel slavery")],
     },
     "v0.4.7 Evidence!10": {
         "spatial_type": "polity",
-        "targets": [{"kind": "territorial_practice", "practice_type": "state_forced_labour", "coverage_state": "classified", "classification_status": "forced labour secure; possible slavery/servitude language retained as qualification"}],
+        "targets": [_tp("state_forced_labour", "classified", "forced labour secure; possible slavery/servitude language retained as qualification")],
     },
     "v0.4.7 Evidence!11": {
         "spatial_type": "region",
-        "targets": [{"kind": "territorial_practice", "practice_type": "forced_labour", "coverage_state": "reviewed", "classification_status": "current rights evidence with contested/alleged elements"}],
+        "targets": [_tp("forced_labour", "reviewed", "current rights evidence with contested/alleged elements")],
     },
     "v0.4.7 Evidence!12": {
         "spatial_type": "polity",
-        "targets": [{"kind": "territorial_practice", "practice_type": "debt_bondage", "coverage_state": "classified", "classification_status": "strong workbook classification"}],
+        "targets": [_tp("debt_bondage", "classified", "strong workbook classification")],
     },
     "v0.4.7 Evidence!13": {
         "spatial_type": "region",
-        "targets": [{"kind": "territorial_practice", "practice_type": "debt_bondage", "coverage_state": "classified", "classification_status": "strong workbook classification"}],
+        "targets": [_tp("debt_bondage", "classified", "strong workbook classification")],
     },
     "v0.4.8 Evidence!4": {
         "spatial_type": "region",
@@ -140,11 +166,11 @@ POSITIVE_PLAN: dict[str, dict[str, Any]] = {
         "to_year": 1945,
         "date_text_original": "1933–1945",
         "temporal_precision": "year_range",
-        "targets": [{"kind": "territorial_practice", "practice_type": "state_forced_labour", "coverage_state": "classified", "classification_status": "strong workbook classification"}],
+        "targets": [_tp("state_forced_labour", "classified", "strong workbook classification")],
     },
     "v0.4.8 Evidence!5": {
         "spatial_type": "region",
-        "targets": [{"kind": "territorial_practice", "practice_type": "forced_labour", "coverage_state": "classified", "classification_status": "strong contemporary regional classification"}],
+        "targets": [_tp("forced_labour", "classified", "strong contemporary regional classification")],
     },
     "v0.4.8 Evidence!6": {
         "spatial_type": "region",
@@ -153,14 +179,14 @@ POSITIVE_PLAN: dict[str, dict[str, Any]] = {
         "date_text_original": "from 2014",
         "temporal_precision": "open_ended_from_year",
         "targets": [
-            {"kind": "territorial_practice", "practice_type": "slavery_enslavement", "coverage_state": "classified", "classification_status": "strong workbook classification"},
-            {"kind": "territorial_practice", "practice_type": "sexual_slavery", "coverage_state": "classified", "classification_status": "strong workbook classification"},
-            {"kind": "external_participation", "participation_type": "slave_trade_network", "role_text": "sale / transfer of enslaved Yazidi women and girls"},
+            _tp("slavery_enslavement", "classified", "strong workbook classification"),
+            _tp("sexual_slavery", "classified", "strong workbook classification"),
+            _ext("slave_trade_network", "sale / transfer of enslaved Yazidi women and girls"),
         ],
     },
     "v0.4.9 Evidence!4": {
         "spatial_type": "region",
-        "targets": [{"kind": "territorial_practice", "practice_type": "slavery_enslavement", "coverage_state": "classified", "classification_status": "slavery secure; status internally differentiated"}],
+        "targets": [_tp("slavery_enslavement", "classified", "slavery secure; status internally differentiated")],
     },
     "v0.4.9 Evidence!5": {
         "spatial_type": "polity",
@@ -168,22 +194,22 @@ POSITIVE_PLAN: dict[str, dict[str, Any]] = {
         "to_year": -2109,
         "date_text_original": "c. 2130–2110 BCE",
         "temporal_precision": "approximate_range",
-        "targets": [{"kind": "external_participation", "participation_type": "slave_trade_network", "role_text": "captive/slave influx, export, purchase, tribute and gifting network"}],
+        "targets": [_ext("slave_trade_network", "captive/slave influx, export, purchase, tribute and gifting network")],
     },
     "v0.4.9 Evidence!8": {
         "spatial_type": "region",
-        "targets": [{"kind": "territorial_practice", "practice_type": "other_servile_dependency", "coverage_state": "reviewed", "classification_status": "provisional; dāsa/dāsī terminology semantically unstable"}],
+        "targets": [_tp("other_servile_dependency", "reviewed", "provisional; dāsa/dāsī terminology semantically unstable")],
     },
     "v0.4.9 Evidence!10": {
         "spatial_type": "polity",
         "targets": [
-            {"kind": "territorial_practice", "practice_type": "captive_taking_incorporation", "coverage_state": "reviewed", "classification_status": "captivity/sacrifice secure; not itself proof of slave society"},
-            {"kind": "territorial_practice", "practice_type": "slavery_enslavement", "coverage_state": "disputed", "classification_status": "disputed interpretation of captives as slaves"},
+            _tp("captive_taking_incorporation", "reviewed", "captivity/sacrifice secure; not itself proof of slave society"),
+            _tp("slavery_enslavement", "disputed", "disputed interpretation of captives as slaves"),
         ],
     },
     "v0.5.0 Evidence!4": {
         "spatial_type": "region",
-        "targets": [{"kind": "territorial_practice", "practice_type": "other_servile_dependency", "coverage_state": "reviewed", "classification_status": "provisional linguistic reconstruction; no high-intensity inference"}],
+        "targets": [_tp("other_servile_dependency", "reviewed", "provisional linguistic reconstruction; no high-intensity inference")],
     },
 }
 
@@ -191,9 +217,9 @@ POSITIVE_PLAN: dict[str, dict[str, Any]] = {
 def validate_global_evidence(rows: list[dict[str, Any]]) -> dict[str, Any]:
     counts = Counter(str(r["coverage"]) for r in rows)
     unique_urls = {str(r["source_url"]) for r in rows}
-    positive_keys = {r["evidence_key"] for r in rows if r["coverage"] != "RI"}
+    positive_keys = {str(r["evidence_key"]) for r in rows if r["coverage"] != "RI"}
     plan_keys = set(POSITIVE_PLAN)
-    target_count = sum(len(v["targets"]) for v in POSITIVE_PLAN.values())
+    target_count = sum(len(item["targets"]) for item in POSITIVE_PLAN.values())
 
     errors: list[str] = []
     if len(rows) != EXPECTED_GLOBAL_COUNTS["rows"]:
