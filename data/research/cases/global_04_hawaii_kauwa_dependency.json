@@ -1,0 +1,111 @@
+{
+  "case_key": "global-balance-04/hawaii/kauwa-dependency-v1",
+  "spatial_entity": {
+    "canonical_name": "Hawaiian Islands (late precontact/contact-era social system)",
+    "display_name": "Hawaiian Islands",
+    "entity_type_code": "region",
+    "from_year": 1750,
+    "to_year": 1799,
+    "notes": "Analytical archipelago-level social-history target before full political unification. The claim must not be represented by the later Kingdom of Hawaiʻi as though all islands formed one polity throughout the interval."
+  },
+  "claim": {
+    "from_year": 1750,
+    "to_year": 1799,
+    "date_text_original": "late precontact and early contact era, before complete archipelago unification",
+    "temporal_precision": "approximate_range",
+    "temporal_certainty": "moderate",
+    "spatial_precision": "archipelago_social_system",
+    "summary": "Indigenous Hawaiian historical traditions and later specialist scholarship describe kauwā as a small, hereditary and strongly segregated status group within late precontact Hawaiian society. Accounts describe endogamy, stigma, separate landholding or residence, subordination to masters, and selection of kauwā for ritual sacrifice. Because Hawaiian uses of kauwā are context-sensitive and the surviving detailed descriptions were recorded in the nineteenth century, the atlas classifies this as institutional other servile dependency at P3 rather than assuming that every occurrence of kauwā is equivalent to chattel slavery.",
+    "confidence": "moderate",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "territorial_practice": {
+      "practice_type_code": "other_servile_dependency",
+      "practice_level": "P3",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P3 reflects a hereditary, socially structured status category, not demographic prevalence. Modern scholarship describes the class as very small. The classification deliberately retains the indigenous term and avoids treating all Hawaiian service relationships or all uses of kauwā as slavery."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Kepelino's Traditions of Hawaii",
+        "author_or_institution": "Kepelino Keauokalani; edited by Martha Warren Beckwith",
+        "source_type": "indigenous_historical_account",
+        "source_classification": "primary",
+        "language_code": "haw/en",
+        "geographic_scope": "Hawaiian Islands",
+        "temporal_scope": "Retrospective account of precontact and early nineteenth-century Hawaiian society",
+        "independence_notes": "Indigenous Hawaiian historical tradition written in the nineteenth century and published with Hawaiian text and English translation.",
+        "reliability_limitations": "Retrospective rather than a contemporaneous eighteenth-century observation. Beckwith's English rendering uses 'slave' for kauwā; terminology and social status must therefore be interpreted with other Hawaiian accounts and modern scholarship."
+      },
+      "version": {
+        "version_label": "Bernice P. Bishop Museum Bulletin 95, 1932",
+        "publication_year": 1932,
+        "url_or_identifier": "Bishop Museum Bulletin 95",
+        "accessed_at": "2026-09-20T21:40:00Z"
+      },
+      "evidence_role": "indigenous account of hereditary kauwā status, segregation, masters, and ritual killing",
+      "independence_group": "hawaii_kepelino_kauwa",
+      "directness": "retrospective indigenous historical testimony",
+      "direction": "supports",
+      "locator": "Division IV, Part 36, 'The Slave Class'"
+    },
+    {
+      "source": {
+        "title": "Hawaiian Antiquities (Moolelo Hawaii)",
+        "author_or_institution": "David Malo; translated/edited in Bishop Museum edition",
+        "source_type": "indigenous_historical_account",
+        "source_classification": "primary",
+        "language_code": "haw/en",
+        "geographic_scope": "Hawaiian Islands",
+        "temporal_scope": "Retrospective account of precontact Hawaiian institutions",
+        "independence_notes": "Nineteenth-century Native Hawaiian account of traditional institutions, independent in authorship from Kepelino.",
+        "reliability_limitations": "Retrospective and mediated by translation/editorial history. Malo explicitly notes multiple meanings/usages around kauwā, so the term should not be flattened into one universal English status."
+      },
+      "version": {
+        "version_label": "Bernice P. Bishop Museum Special Publication 2, 1951 edition",
+        "publication_year": 1951,
+        "url_or_identifier": "https://hbs.bpbmwebdata.org/pubs-online/pdf/sp2.pdf",
+        "accessed_at": "2026-09-20T21:40:00Z"
+      },
+      "evidence_role": "indigenous historical account of kauwā and Hawaiian social hierarchy",
+      "independence_group": "hawaii_malo_kauwa",
+      "directness": "retrospective indigenous historical testimony",
+      "direction": "supports",
+      "locator": "Chapter XX, 'Concerning Kauwa'"
+    },
+    {
+      "source": {
+        "title": "The Evolution of Private Property in Nineteenth-Century Hawaii",
+        "author_or_institution": "Sumner J. La Croix and James Roumasset",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "geographic_scope": "Hawaiian Islands",
+        "temporal_scope": "Premissionary and nineteenth-century Hawaiʻi",
+        "independence_notes": "Modern economic-historical synthesis drawing on Hawaiian historical scholarship.",
+        "reliability_limitations": "The article is principally about land/property institutions, not slavery; its description of kauwā is contextual and should not carry the classification alone."
+      },
+      "version": {
+        "version_label": "Journal of Economic History 50.4 (1990), pp. 829-852",
+        "publication_year": 1990,
+        "url_or_identifier": "https://doi.org/10.1017/S0022050700037840",
+        "accessed_at": "2026-09-20T21:40:00Z"
+      },
+      "evidence_role": "modern contextual synthesis identifying kauwā as a very small third status class",
+      "independence_group": "hawaii_lacroix_roumasset_1990",
+      "directness": "secondary contextual synthesis",
+      "direction": "qualifies",
+      "locator": "note 6: 'a third very small class' identified as kauwā"
+    }
+  ],
+  "geometry": {
+    "from_year": 1750,
+    "to_year": 1799,
+    "accuracy_status": "unresolved",
+    "resolution_method": "This is an archipelago-level social-history claim spanning multiple political units before complete unification. Do not use the later Kingdom of Hawaiʻi boundary or modern State of Hawaii polygon as a historical polity proxy. Resolve island/polity context separately if mapped.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}
