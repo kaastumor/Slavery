@@ -271,3 +271,13 @@ Hausdorff distance is retained as a diagnostic rather than a universal hard gate
 The policy is stored as data/configuration rather than hidden in workflow code. Build artifacts record the QGIS container digest, Natural Earth checksum, transformation parameters, source inputs, QC reports and artifact hashes.
 
 **Reason:** automated map QC should catch large distortions consistently without turning one fragile metric into a proxy for cartographic correctness. Explicit quarantine/fallback makes outliers such as Baekje visible and reviewable while allowing unrelated geometries to progress safely.
+
+## D-047 — Research-case ingestion is immutable and idempotent
+**Date:** 2026-09-20  
+**Decision:** Every new claim-centric research package must carry a stable `case_key`. The loader computes a SHA-256 hash from canonical JSON serialization and records `case_key -> content hash -> claim_id` in `audit.research_case_ingest`.
+
+Reapplying the same case key with the same content is a no-op. Reapplying the same key with different content is rejected. A materially revised historical interpretation must therefore use a new case key and the explicit review/supersession model instead of silently changing an already-ingested package.
+
+This ledger applies prospectively to research packages ingested through the claim-centric loader. Historical claims and stored research fixtures created before this mechanism are not retroactively assigned synthetic case identities merely for completeness.
+
+**Reason:** research ingestion will increasingly run through repeatable automation. Retry-safe writes are necessary to prevent workflow retries, operator reruns or transient failures from creating duplicate claims. Immutable case identities also improve provenance by making a substantive change visible as a new reviewed research package rather than an invisible mutation.
