@@ -7,11 +7,18 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 
-from add_research_case import SpecError, load_spec, plan, validate_case_spec  # noqa: E402
+from add_research_case import (  # noqa: E402
+    SpecError,
+    case_content_sha256,
+    load_spec,
+    plan,
+    validate_case_spec,
+)
 
 
 def valid_case():
     return {
+        "case_key": "test/example-ancient-site-v1",
         "spatial_entity": {
             "canonical_name": "Example ancient site",
             "entity_type_code": "site",
@@ -52,6 +59,24 @@ class ResearchCaseValidationTests(unittest.TestCase):
         validate_case_spec(spec)
         self.assertEqual(plan(spec)["publication_status"], "unpublished")
         self.assertEqual(plan(spec)["practice_level"], None)
+
+    def test_case_key_is_required_for_new_ingest_but_legacy_specs_remain_readable(self):
+        spec = valid_case()
+        first = case_content_sha256(spec)
+        second = case_content_sha256(json.loads(json.dumps(spec)))
+        self.assertEqual(first, second)
+        self.assertEqual(len(first), 64)
+
+        del spec["case_key"]
+        validate_case_spec(spec)
+        with self.assertRaises(SpecError):
+            validate_case_spec(spec, require_case_key=True)
+
+    def test_case_key_rejects_unstable_display_text(self):
+        spec = valid_case()
+        spec["case_key"] = "Bad Key With Spaces"
+        with self.assertRaises(SpecError):
+            validate_case_spec(spec, require_case_key=True)
 
     def test_rejects_direct_publication(self):
         spec = valid_case()
