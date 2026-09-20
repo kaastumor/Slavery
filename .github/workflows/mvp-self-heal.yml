@@ -1,0 +1,183 @@
+name: MVP Self Heal
+
+on:
+  workflow_run:
+    workflows: ["MVP Availability Monitor"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: mvp-self-heal
+  cancel-in-progress: false
+
+jobs:
+  restart-if-needed:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    env:
+      PROJECT_REF: dilnayfllygkplsdymel
+      API_URL: https://dilnayfllygkplsdymel.supabase.co/functions/v1/atlas-data
+      INCIDENT_TITLE: "[monitor] MVP availability degraded"
+      SUPABASE_MANAGEMENT_TOKEN: ${{ secrets.SUPABASE_MANAGEMENT_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify self-heal is configured
+        id: configured
+        shell: bash
+        run: |
+          if [ -z "$SUPABASE_MANAGEMENT_TOKEN" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "SUPABASE_MANAGEMENT_TOKEN is not configured; self-heal cannot restart the project."
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: First API probe
+        if: steps.configured.outputs.configured == 'true'
+        id: probe1
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          python tools/probe_atlas_api.py --url "$API_URL" --timeout-seconds 12 --slow-seconds 15 | tee /tmp/probe1.json
+          code=${PIPESTATUS[0]}
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Wait before confirming failure
+        if: steps.configured.outputs.configured == 'true' && steps.probe1.outputs.exit_code == '2'
+        run: sleep 120
+
+      - name: Second API probe
+        if: steps.configured.outputs.configured == 'true' && steps.probe1.outputs.exit_code == '2'
+        id: probe2
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          python tools/probe_atlas_api.py --url "$API_URL" --timeout-seconds 12 --slow-seconds 15 | tee /tmp/probe2.json
+          code=${PIPESTATUS[0]}
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Check project state
+        if: steps.configured.outputs.configured == 'true' && steps.probe1.outputs.exit_code == '2' && steps.probe2.outputs.exit_code == '2'
+        id: project
+        shell: bash
+        run: |
+          set -euo pipefail
+          body=$(curl -fsS --max-time 15 \
+            -H "Authorization: Bearer $SUPABASE_MANAGEMENT_TOKEN" \
+            "https://api.supabase.com/v1/projects/$PROJECT_REF")
+          status=$(python -c 'import json,sys; print(json.load(sys.stdin).get("status", ""))' <<< "$body")
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          echo "Supabase project status: $status"
+
+      - name: Enforce restart cooldown
+        if: steps.configured.outputs.configured == 'true' && steps.probe1.outputs.exit_code == '2' && steps.probe2.outputs.exit_code == '2' && steps.project.outputs.status == 'ACTIVE_HEALTHY'
+        id: cooldown
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = process.env.INCIDENT_TITLE;
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo, state: "open", per_page: 100
+            });
+            const incident = issues.find(i => i.title === title && !i.pull_request);
+            if (!incident) {
+              core.setOutput("allowed", "false");
+              core.setOutput("reason", "no_open_incident");
+              return;
+            }
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner, repo: context.repo.repo, issue_number: incident.number, per_page: 100
+            });
+            let last = null;
+            for (const comment of comments) {
+              const match = /AUTO_RESTART_AT=([^\s]+)/.exec(comment.body || "");
+              if (match) {
+                const ts = Date.parse(match[1]);
+                if (!Number.isNaN(ts) && (last === null || ts > last)) last = ts;
+              }
+            }
+            const cooldownMs = 2 * 60 * 60 * 1000;
+            const allowed = last === null || (Date.now() - last) >= cooldownMs;
+            core.setOutput("allowed", String(allowed));
+            core.setOutput("issue_number", String(incident.number));
+            core.setOutput("reason", allowed ? "ok" : "restart_within_last_2h");
+
+      - name: Record automatic restart
+        if: steps.cooldown.outputs.allowed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue_number = Number('${{ steps.cooldown.outputs.issue_number }}');
+            const now = new Date().toISOString();
+            await github.rest.issues.createComment({
+              owner: context.repo.owner, repo: context.repo.repo, issue_number,
+              body: [
+                "Automatic self-heal is restarting the Supabase project after two restart-eligible API failures 120 seconds apart.",
+                "",
+                "AUTO_RESTART_AT=" + now,
+                "Project control-plane state before restart: ${{ steps.project.outputs.status }}",
+                "Cooldown: one automatic project restart per 2 hours."
+              ].join("\n")
+            });
+
+      - name: Restart Supabase project
+        if: steps.cooldown.outputs.allowed == 'true'
+        id: restart
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsS --max-time 30 -X POST \
+            -H "Authorization: Bearer $SUPABASE_MANAGEMENT_TOKEN" \
+            -H "Content-Type: application/json" \
+            "https://api.supabase.com/v1/projects/$PROJECT_REF/restart"
+          echo "requested=true" >> "$GITHUB_OUTPUT"
+
+      - name: Wait for public API recovery
+        if: steps.restart.outputs.requested == 'true'
+        id: recovery
+        shell: bash
+        run: |
+          set +e
+          for attempt in $(seq 1 20); do
+            sleep 30
+            python tools/probe_atlas_api.py --url "$API_URL" --timeout-seconds 10 --slow-seconds 15 >/tmp/recovery.json
+            code=$?
+            cat /tmp/recovery.json
+            if [ "$code" -eq 0 ]; then
+              echo "recovered=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          echo "recovered=false" >> "$GITHUB_OUTPUT"
+          exit 1
+
+      - name: Record successful self-heal
+        if: steps.recovery.outputs.recovered == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue_number = Number('${{ steps.cooldown.outputs.issue_number }}');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner, repo: context.repo.repo, issue_number,
+              body: "Automatic project restart restored the public atlas API. The regular availability monitor will close this incident after its next successful run."
+            });
+
+      - name: Escalate failed self-heal
+        if: failure() && steps.restart.outputs.requested == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue_number = Number('${{ steps.cooldown.outputs.issue_number }}');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner, repo: context.repo.repo, issue_number,
+              body: "Automatic project restart was requested but the public API did not recover within 10 minutes. Manual investigation is required; the workflow will not restart again inside the 2-hour cooldown."
+            });
