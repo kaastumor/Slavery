@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "web/scripts/run_public_atlas_browser_review.mjs"
+      - "web/src/main.ts"
       - ".github/workflows/public-atlas-browser-review.yml"
   workflow_dispatch:
 
@@ -31,11 +32,22 @@ jobs:
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
 
-      - name: Review live public atlas after promotion
+      - name: Review live public atlas
         working-directory: web
         shell: bash
         run: |
-          node scripts/run_public_atlas_browser_review.mjs             https://kaastumor.github.io/Slavery/             /tmp/public-atlas-review
+          node scripts/run_public_atlas_browser_review.mjs \
+            https://kaastumor.github.io/Slavery/ \
+            /tmp/public-atlas-review/live
+
+      - name: Review deployed snapshot with live API blocked
+        working-directory: web
+        shell: bash
+        run: |
+          node scripts/run_public_atlas_browser_review.mjs \
+            https://kaastumor.github.io/Slavery/ \
+            /tmp/public-atlas-review/fallback \
+            --force-api-failure
 
       - name: Upload live browser evidence
         if: always()
