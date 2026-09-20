@@ -1,0 +1,56 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Punic Carthage",
+    "display_name": "Punic Carthage",
+    "entity_type_code": "polity",
+    "notes": "Carthaginian polity and its African agricultural hinterland before the Roman destruction of Carthage in 146 BCE. Historical geometry must be resolved separately."
+  },
+  "claim": {
+    "from_year": -399,
+    "to_year": -146,
+    "date_text_original": "c. fourth century–146 BCE",
+    "temporal_precision": "broad_range",
+    "temporal_certainty": "approximate",
+    "spatial_precision": "polity_and_agricultural_hinterland",
+    "summary": "Specialist synthesis of Punic and Graeco-Roman evidence identifies slavery as an important institution in Punic Carthage, including substantial use of enslaved labour in the agricultural hinterland and slaveholding among the Carthaginian elite. This supports an institutional territorial-practice classification while avoiding mechanical estimates of the enslaved share of the population.",
+    "review_status": "reviewed",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P3",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P3 follows a dedicated modern specialist synthesis that explicitly characterizes slavery as an important institution and identifies large-scale agricultural slave labour. P4 is not assigned because the reviewed evidence does not provide a defensible polity-wide prevalence measure or establish that enslaved labour dominated the entire Carthaginian economy."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Punic Carthage",
+        "author_or_institution": "David M. Lewis",
+        "source_type": "book_chapter",
+        "source_classification": "secondary",
+        "independence_notes": "Dedicated specialist chapter in a comparative monograph on Greek and neighboring slave systems, explicitly reassessing Punic and Graeco-Roman evidence for Carthaginian slavery.",
+        "reliability_limitations": "The surviving Punic evidence is uneven and much narrative evidence is transmitted by external Greek and Roman authors. The chapter supports institutional importance and agricultural exploitation but not a precise enslaved-population share."
+      },
+      "version": {
+        "version_label": "Greek Slave Systems in their Eastern Mediterranean Context, c.800–146 BC, Oxford University Press, 2018, chapter 13, pp. 259–266",
+        "url_or_identifier": "https://doi.org/10.1093/oso/9780198769941.003.0014",
+        "publication_year": 2018,
+        "accessed_at": "2026-09-20T00:00:00Z"
+      },
+      "evidence_role": "specialist classification of legal position, economic role and agricultural slave labour",
+      "independence_group": "carthage_lewis_2018",
+      "directness": "dedicated specialist secondary synthesis",
+      "direction": "supports",
+      "locator": "Chapter 13, pp. 259–266; abstract and chapter synthesis"
+    }
+  ],
+  "geometry": {
+    "from_year": -399,
+    "to_year": -146,
+    "accuracy_status": "unresolved",
+    "resolution_method": "Carthaginian territorial extent changed materially over the claim interval, while the evidence explicitly includes the African agricultural hinterland. Resolve time-bounded Cliopatria or better specialist geometry before publication rather than substituting a modern Tunisia polygon.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}
