@@ -160,7 +160,7 @@ def plan(spec: dict[str, Any]) -> dict[str, Any]:
     claim = spec["claim"]
     practice = claim["territorial_practice"]
     return {
-        "case_key": spec["case_key"],
+        "case_key": spec.get("case_key"),
         "content_sha256": case_content_sha256(spec),
         "spatial_entity": spec["spatial_entity"]["canonical_name"],
         "entity_type": spec["spatial_entity"]["entity_type_code"],
