@@ -122,9 +122,18 @@ def validate_package(
     if not build_git_sha or build_git_sha != str(artifact.get("git_sha") or ""):
         raise PromotionError("approval build_git_sha does not match artifact manifest")
 
-    policy_id = str(approval.get("policy_id") or "")
-    if not policy_id or policy_id != str(decision.get("policy_id") or ""):
-        raise PromotionError("approval policy_id does not match QC decision")
+    qc_policy_id = str(approval.get("qc_policy_id") or "")
+    if not qc_policy_id or qc_policy_id != str(decision.get("policy_id") or ""):
+        raise PromotionError("approval qc_policy_id does not match QC decision")
+
+    render_policy_id = str(approval.get("render_policy_id") or "")
+    manifest_render_policy_id = str(
+        (artifact.get("metadata") or {}).get("render_policy_id") or ""
+    )
+    if not render_policy_id or render_policy_id != manifest_render_policy_id:
+        raise PromotionError(
+            "approval render_policy_id does not match artifact manifest"
+        )
 
     fabric_id = str(approval.get("fabric_id") or "")
     if not fabric_id or fabric_id != str((artifact.get("metadata") or {}).get("land_fabric") or ""):
@@ -190,8 +199,13 @@ def validate_package(
             raise PromotionError(
                 f"approved geometry {gid} has QC status {row.get('status')!r}"
             )
-        if not (candidate_by_id[gid].get("geometry")):
+        geometry = candidate_by_id[gid].get("geometry")
+        if not geometry:
             raise PromotionError(f"approved geometry {gid} has no geometry")
+        if geometry.get("type") not in ("Polygon", "MultiPolygon"):
+            raise PromotionError(
+                f"approved geometry {gid} has unsupported type {geometry.get('type')!r}"
+            )
 
     for gid in quarantined:
         row = decisions.get(gid)
@@ -210,7 +224,8 @@ def validate_package(
         "artifact": artifact,
         "approved_ids": approved,
         "quarantined_ids": quarantined,
-        "policy_id": policy_id,
+        "qc_policy_id": qc_policy_id,
+        "render_policy_id": render_policy_id,
         "fabric_id": fabric_id,
         "snap_tolerance_m": tolerance,
         "candidate_sha256": actual_candidate_sha,
@@ -242,7 +257,7 @@ def inspect_database(cur, package: dict[str, Any], replace_existing: bool) -> li
         from cartography.geometry_render_policy
         where policy_id=%s
         """,
-        (package["policy_id"],),
+        (package["render_policy_id"],),
     )
     row = cur.fetchone()
     if row is None:
@@ -286,7 +301,7 @@ def inspect_database(cur, package: dict[str, Any], replace_existing: bool) -> li
           and geometry_id=any(%s::uuid[])
         order by geometry_id
         """,
-        (package["fabric_id"], package["policy_id"], ids),
+        (package["fabric_id"], package["render_policy_id"], ids),
     )
     existing = [row[0] for row in cur.fetchall()]
     if existing and not replace_existing:
@@ -322,7 +337,7 @@ def write_rows(cur, package: dict[str, Any], replace_existing: bool) -> None:
         params = (
             gid,
             package["fabric_id"],
-            package["policy_id"],
+            package["render_policy_id"],
             geometry_json,
             int(metrics["source_npoints"]),
             int(metrics["render_npoints"]),
@@ -369,7 +384,8 @@ def main() -> int:
         raise SystemExit(f"invalid geometry promotion package: {exc}") from exc
 
     summary = {
-        "policy_id": package["policy_id"],
+        "qc_policy_id": package["qc_policy_id"],
+        "render_policy_id": package["render_policy_id"],
         "fabric_id": package["fabric_id"],
         "snap_tolerance_m": package["snap_tolerance_m"],
         "build_git_sha": package["build_git_sha"],
