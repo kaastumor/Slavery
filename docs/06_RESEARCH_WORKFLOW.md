@@ -131,3 +131,19 @@ DATABASE_URL=... python tools/add_research_case.py path/to/case.json --apply
 A public preview/release is created separately with `tools/publish_release.py`. That gate checks that every selected claim is reviewed, has claim-level evidence, and that territorial-practice targets have reviewed geometry coverage or an explicit unresolved-geometry record. The publication tool cannot declare a canonical release.
 
 This workflow does not alter the requirement to preserve raw/source-native records for bulk imported datasets.
+
+## H. Stable research-case identity and retry safety
+
+Every new claim-centric research case must have a stable top-level `case_key`.
+
+The case key identifies one immutable ingested research package. The loader computes a SHA-256 hash from canonical JSON serialization and records it in `audit.research_case_ingest` together with the created claim ID, source path and optional Git revision.
+
+Retry behavior is deliberately strict:
+
+- same `case_key` + same content hash → no-op, returning the original claim;
+- same `case_key` + different content hash → reject;
+- materially revised historical interpretation → create a new case key and use the normal review/supersession model rather than mutating an already-ingested case in place.
+
+This protects automated and retried ingestion from silently creating duplicate claims while preserving a transparent history of substantive research revisions.
+
+A case passing structural CI is still only a valid research package. It does not become reviewed or published merely because its schema/hash checks pass.
