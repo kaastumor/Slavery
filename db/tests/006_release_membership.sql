@@ -63,7 +63,7 @@ INSERT INTO audit.release_manifest(
     '{"purpose":"public_mvp_preview","claim_ids":["00000000-0000-0000-0000-000000002601"]}'::jsonb
 );
 
-DO $
+DO $$
 DECLARE
     blocked boolean := false;
 BEGIN
@@ -83,13 +83,13 @@ BEGIN
     IF NOT blocked THEN
         RAISE EXCEPTION 'captured_at_release membership accepted a NULL digest';
     END IF;
-END $;
+END $$;
 
 UPDATE audit.release_manifest
 SET status='published'
 WHERE release_version='test-release-membership-0026';
 
-DO $
+DO $$
 DECLARE
     blocked boolean := false;
 BEGIN
