@@ -8,6 +8,7 @@ Repository: `kaastumor/Slavery`
 
 Read first:
 
+- `BACKLOG.md` — canonical execution priority / risk register
 - `docs/00_START_HERE.md`
 - `docs/01_PROJECT_STATUS.md`
 - `docs/02_METHOD_AND_ONTOLOGY.md`
@@ -101,7 +102,7 @@ Rules:
 - Production should eventually be behind explicit staging/production deployment boundaries.
 - Repeated logic should be scripts/reusable workflows, not many permanent one-off workflows.
 
-Current geometry workflows are still somewhat experimental and should be consolidated **after #27** into a parameterized `geometry-build.yml`.
+PR #45 has now consolidated the geometry experiments into one pinned, parameterized `geometry-build.yml`. PR #48 added exact-artifact scalable visual-review sheets. Both are merged; visual acceptance remains separate from automated QC.
 
 ## Research ingestion
 
@@ -139,10 +140,16 @@ Before any production DB/render operation, use a tiny health query first. Heavy 
 
 ## Pipeline hardening — issue #43
 
+Already completed under #43:
+
+- consolidated `geometry-build.yml`
+- pinned QGIS/Natural Earth inputs
+- provenance/checksum manifests for geometry candidates
+- explicit candidate quarantine
+- exact-artifact visual-review packs
+
 Still to do:
 
-- consolidate geometry experiment workflows
-- provenance/checksum manifests for approved geometry artifacts
 - protected staging/production promotion
 - exact tested-artifact promotion rather than recomputation
 - static/recoverable published release snapshot
@@ -170,12 +177,12 @@ Continue **issue #27**, not broad data gathering.
 
 Recommended sequence:
 
-1. inspect the representative QGIS QC artifacts already produced;
-2. define acceptance/fallback rules from the successful Achaemenid + representative cases;
-3. visually inspect a small representative set in a non-production candidate path;
-4. quarantine Baekje or any other outlier;
-5. promote only candidates that pass both automated QC and visual review;
-6. consolidate the final geometry recipe into the long-term geometry-build pipeline;
+1. inspect the final topology-correct 10 km visual-review artifact from the merged PR #48 run;
+2. render the exact tested artifact in a disposable MapLibre review path at several zoom levels;
+3. record visual acceptance/fallback per representative geometry;
+4. keep Baekje quarantined and investigate its source/geometry separately;
+5. select the source-family baseline recipe without regressing the accepted live Achaemenid result;
+6. promote only the exact reviewed/checksummed artifacts through a controlled promotion path;
 7. close #27 only when several regions/zoom levels are visually correct;
 8. then resume balanced research expansion and unresolved geometry work.
 
