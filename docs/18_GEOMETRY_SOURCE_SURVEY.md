@@ -11,10 +11,24 @@ It should not be treated as the best geometry for every place and period. The at
 ## Sources worth preferring or evaluating
 
 ### CShapes 2.0
-- Scope: independent states and dependent territories, 1886–2019 globally; European coverage extends to 1816.
-- Strength: peer-reviewed research dataset built specifically for historical international borders.
-- Atlas role: strong candidate to supersede Cliopatria for modern state/colonial boundaries in its covered period.
-- Limitation: no ancient/medieval coverage.
+
+**Evaluation status: completed for the published 2.0 dataset. Strong modern-era comparator, but not currently suitable for direct public redistribution by this atlas.**
+
+- **Exact release / authority:** CShapes 2.0, published by ETH Zurich's International Conflict Research group and described by Schvitz et al. (2022), *Journal of Conflict Resolution* 66(1), 144–161, DOI `10.1177/00220027211013563`.
+- **Temporal scope:** global independent states and dependent territories from 1886 through 2019. The companion CShapes-Europe dataset extends European coverage to 1816. This is therefore a modern historical-boundary source, not an ancient/medieval replacement.
+- **Political-unit model:** unlike the earlier independent-state-only dataset, CShapes 2.0 includes colonies and other dependencies and is designed to provide near-complete global coverage of political units in its period. Two coding variants are available, based on Gleditsch-Ward and Correlates of War state-system definitions.
+- **Boundary provenance:** the project documents border-change coding using the Territorial Change Dataset (Tir et al.), *Encyclopedia of International Boundaries* (Biger), and *Encyclopedia of African Boundaries* (Brownlie). This makes CShapes a substantially better-purpose specialist source than a deep-time generalized polity layer for bounded modern international-border questions.
+- **Temporal model / tooling:** boundary features carry validity intervals; official distribution is available as GeoJSON, Shapefile, CSV, SQL and an R package. The raw vector products are therefore technically compatible with the atlas's offline QGIS/PostGIS comparison pipeline without format conversion being a methodological obstacle.
+- **License:** ETH's official CShapes page licenses the dataset under **CC BY-NC-SA 4.0**. The Library of Congress catalogue independently records the same dataset and license. The CRAN *software package* is GPL, but that package license must not be confused with the dataset license.
+- **Atlas licensing consequence:** because the atlas is intended as an openly redistributable public data product and we should not silently impose a NonCommercial/ShareAlike restriction on downstream atlas geometry, CShapes 2.0 should **not currently be copied into the canonical/public geometry layer**. It may be used for internal scholarly comparison and source discovery under the license. Public ingestion requires an explicit project-level decision that the CC BY-NC-SA obligations are compatible with the atlas's distribution model, or separate permission/clarification from the rights holders.
+- **Atlas role now:** preferred **internal comparator** for modern international/state/dependency boundaries within 1886–2019 (and CShapes-Europe for 1816+ Europe), particularly when assessing whether a Cliopatria geometry is materially deficient. It does not automatically supersede Cliopatria merely because it is more specialized.
+- **Promotion rule:** if licensing is resolved, replacement still requires a bounded source-vs-source comparison for the exact place/date, temporal fit, political-unit semantics, provenance retention, and normal geometry QC. Do not mix a CShapes boundary silently into a Cliopatria geometry record.
+- **No semantic inference:** CShapes inclusion or dependent-territory coding says nothing by itself about slavery, territorial-practice prevalence, sovereignty in the atlas ontology, actor nationality, or evidentiary absence.
+
+Primary documentation reviewed:
+- ETH ICR CShapes dataset page: https://icr.ethz.ch/data/cshapes/
+- Schvitz et al. dataset article / project page: https://icr.ethz.ch/publications/cshapes-2/
+- Library of Congress CShapes 2.0 catalogue/data mirror: https://www.loc.gov/item/2023592015/
 
 ### China Historical Geographic Information System (CHGIS)
 
@@ -100,7 +114,7 @@ This is a resolved source-search outcome, not a claim that the surviving Cliopat
 
 ## Near-term evaluation backlog
 
-- Compare CShapes 2.0 against Cliopatria for 1886–2019.
+- CShapes 2.0 evaluation complete: strong modern specialist comparator for 1886–2019 (CShapes-Europe 1816+), but dataset licensing is CC BY-NC-SA 4.0; do not directly ingest into the public canonical geometry layer without an explicit license/distribution decision or permission.
 - CHGIS V6 evaluation complete: technically suitable for internal comparison, but direct public redistribution is blocked by the dataset-specific license pending explicit permission.
 - Sample OpenHistoricalMap administrative boundary completeness for several benchmark dates/regions.
 - Audit CONFOEDERATIO/Naissance licensing, provenance, source citations, temporal resolution and geometry quality before considering it as a second global baseline.
