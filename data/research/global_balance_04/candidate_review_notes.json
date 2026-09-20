@@ -1,0 +1,72 @@
+{
+  "batch": "global_balance_04",
+  "status": "research_notes_unpublished",
+  "purpose": "Preserve globally balanced weak-region investigations that must not be coerced into territorial-practice claims when the evidence supports only network participation, ambiguous status, or incomplete attribution.",
+  "candidates": [
+    {
+      "candidate": "Eighth-century central-Saharan / Zaghāwa-Kawār slave traffic",
+      "region_priority": "West/Central Africa weak-coverage tranche",
+      "decision": "preserve_as_external_network_candidate_not_territorial_practice",
+      "reason": "Specialist scholarship securely documents an eighth-century Ibāḍī trans-Saharan slave traffic drawing enslaved people from the Bilād al-Sūdān, and specifically notes Zaghāwa among peoples transported as slaves by Berber traders. Other early Arabic traditions also report slave tribute at Kawār. This supports a bounded external/network participation research lane but does not by itself establish a territorial slavery P-level for Kanem, Zaghāwa territory, Kawār, Ghana/Wagadu, or West/Central Africa generally.",
+      "sources": [
+        {
+          "title": "Berbers and Blacks: Ibāḍī Slave Traffic in Eighth-Century North Africa",
+          "author": "Elizabeth Savage",
+          "version": "Journal of African History 33.3 (1992), pp. 351-368",
+          "url_or_identifier": "https://doi.org/10.1017/S0021853700032527",
+          "role": "specialist synthesis of the early central-Saharan slave traffic",
+          "locator": "article argument and note 23 citing al-Yaʿqūbī on Zaghāwa transported as slaves",
+          "limitation": "The article establishes slave traffic and merchant networks; origin, capture, tribute and sale evidence must remain distinct from territorial-practice prevalence inside southern polities."
+        }
+      ],
+      "rejected_inferences": [
+        "Do not infer a Kanem/Bornu territorial slavery P-level from the transport of Zaghāwa persons.",
+        "Do not treat slave tribute reported at Kawār as proof of uniform slavery practice across the central Sudan.",
+        "Do not map all Bilād al-Sūdān as a slave-supplying territory.",
+        "Do not convert trans-Saharan trade volume or merchant wealth into territorial prevalence."
+      ],
+      "next_evidence_needed": "Source-native or specialist evidence tied to a bounded southern polity/place that establishes enslaved status, ownership, alienability, labour or recurrent local enslavement independently of long-distance export. A future external-participation loader should preserve the current traffic evidence without routing it through TERRITORIAL_PRACTICE_CLAIM."
+    },
+    {
+      "candidate": "Broad Swahili Coast slavery before 1500",
+      "decision": "do_not_generalize_from_songo_mnara",
+      "reason": "The accepted staged case is deliberately site-bounded at Songo Mnara. Wider medieval Swahili scholarship and travel accounts attest slavery/slave trade in parts of the coast, but the present batch does not establish one uniform P-level from Somalia to Mozambique.",
+      "rejected_inferences": [
+        "Do not turn one archaeological site's evidence into a coast-wide prevalence classification.",
+        "Do not infer local slave use mechanically from participation in Indian Ocean trade.",
+        "Do not merge fifteenth-century archaeology with later plantation/export systems."
+      ],
+      "next_evidence_needed": "Additional independently reviewed site- or polity-specific cases with explicit temporal bounds before any broader regional synthesis."
+    },
+    {
+      "candidate": "Late Classic Maya slavery",
+      "decision": "classify_captive_taking_not_blanket_slavery",
+      "reason": "The corpus securely supports recurrent captive-taking, but specialist scholarship stresses varied prisoner outcomes and archaeological ambiguity. The staged claim therefore uses captive_taking_incorporation rather than slavery_enslavement.",
+      "rejected_inferences": [
+        "Captive imagery is not a count of enslaved persons.",
+        "A depicted prisoner is not automatically an enslaved person.",
+        "Tribute, corvée, dependent communities and captive status must not be collapsed into slavery."
+      ]
+    },
+    {
+      "candidate": "Hawaiian kauwā terminology",
+      "decision": "retain_indigenous_category_under_other_servile_dependency",
+      "reason": "Indigenous accounts and modern scholarship support a hereditary, segregated dependent status, but kauwā is context-sensitive and should not be translated mechanically as chattel slavery in every source.",
+      "rejected_inferences": [
+        "Do not classify all service to aliʻi as kauwā status.",
+        "Do not use the later unified Kingdom of Hawaiʻi as the political geometry for the whole pre-1800 archipelago.",
+        "Do not infer demographic importance from institutional structure."
+      ]
+    },
+    {
+      "candidate": "Funan maximum territorial extent",
+      "decision": "keep_geometry_unresolved",
+      "reason": "The slavery claim derives from exogenous Chinese textual traditions whose political-geographic descriptions are historically important but not a sufficiently precise polygon authority for the full 228-500 interval.",
+      "rejected_inferences": [
+        "Do not map modern Cambodia or Vietnam as Funan.",
+        "Do not assume one maximum-extent Funan reconstruction remained valid across the claim interval.",
+        "Do not count repeated later Chinese textual transmission as independent evidence automatically."
+      ]
+    }
+  ]
+}
