@@ -114,7 +114,8 @@ The existing MVP availability monitor and guarded Supabase restart belong here a
 
 ### Geometry
 
-`source -> candidate -> qc_passed -> visually_accepted -> approved_render -> published`
+`source -> candidate -> qc_passed -> visually_accepted -> approved_render -> published`  
+Failure path: `candidate -> quarantined/fallback`
 
 ### Release
 
@@ -125,6 +126,8 @@ The existing MVP availability monitor and guarded Supabase restart belong here a
 `healthy -> degraded -> recovering -> healthy | escalated`
 
 These states should be explicit in data/artifact metadata where practical. A workflow run being green is not itself a research-review or publication state.
+
+Research ingestion should also become idempotent: each staged research case needs a stable case key/content identity so retrying the same approved input cannot silently create a duplicate claim. Until that identity is implemented in the database, automated research ingestion must remain an explicit controlled action rather than a retrying background writer.
 
 ## 4. Build once, promote unchanged
 
@@ -218,8 +221,9 @@ Everything around those decisions should be automated where practical so reviewe
 2. Consolidate the current geometry experiment workflows after issue #27 representative testing completes.
 3. Make geometry builds output immutable candidate artifacts plus provenance/QC manifests.
 4. Add a release workflow that promotes existing artifacts rather than recomputing them.
-5. Create/configure GitHub `staging` and `production` environments with scoped secrets and deployment protection.
-6. Materialize published releases as static/recoverable snapshots so public availability is not tied entirely to live database health.
+5. Add stable research-case identity/idempotency before making draft ingestion fully automatic.
+6. Create/configure GitHub `staging` and `production` environments with scoped secrets and deployment protection.
+7. Materialize published releases as static/recoverable snapshots so public availability is not tied entirely to live database health.
 
 ## References
 
