@@ -16,19 +16,42 @@ A place such as a port must not carry one timeless political owner. Historical c
 
 ## Historical boundary backbone
 
-Intended backbone: Cliopatria / Seshat Global History Databank historical political polygons, using valid date ranges and source identifiers where available.
+Global fallback baseline: Cliopatria / Seshat Global History Databank historical political polygons, using valid date ranges and source identifiers where available.
+
+Cliopatria is not automatically preferred over a stronger specialist geometry. Under D-055, a specialist geometry can take precedence for a bounded entity/year only after explicit source, semantic, temporal, licensing and geometry review.
 
 ## Geometry resolver hierarchy
 
 For a selected year:
 
-1. Exact Cliopatria polygon valid for that year
-2. Better specialist historical geometry where available and defensible
-3. Nearest defensible historical geometry, marked `approximate_historical`
+1. Explicitly accepted specialist historical geometry with exact/defensible temporal fit for the target
+2. Exact Cliopatria polygon valid for that year as the open global baseline
+3. Nearest other defensible historical geometry, marked `approximate_historical`
 4. Modern geographic proxy, marked `modern_proxy`
 5. No political polygon; retain neutral world land only and mark geometry unresolved
 
+This ordering is governed by D-055. A specialist dataset does not gain blanket precedence merely because it is newer, more detailed or region-specific. Precedence is accepted per bounded source-version/feature/entity/time case.
+
 Never silently substitute a modern boundary for a historical one.
+
+## Historical geometry source precedence and isolation
+
+A specialist replacement must be justified against the baseline for the exact target case. Review at minimum:
+
+- historical identity / semantic scope
+- target date or interval and temporal uncertainty
+- exact source version and source-native identifier
+- source citations / lineage and known limitations
+- redistribution and licensing compatibility
+- topology / geometry validity
+- bounded comparison against the current source geometry
+- historical/semantic acceptance plus cartographic QC
+
+More vertices, a smoother outline, a larger archive or a denser timeline are not evidence that one source is historically better.
+
+Each canonical historical geometry record has one source lineage through `geometry_source_version_id`. Do not silently merge coordinate segments from multiple historical source families into a record attributed to one source. A deliberately composite historical reconstruction must instead be registered as its own derived source/version with contributing sources and derivation method preserved.
+
+Render-only use of the canonical Natural Earth physical-land fabric is separate from historical-source identity. It may normalize the visible coastline under the documented cartographic policies without changing the historical geometry source.
 
 ## Required geometry metadata
 
