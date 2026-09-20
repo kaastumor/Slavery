@@ -7,7 +7,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 
-from add_research_case import SpecError, load_spec, plan, validate_case_spec  # noqa: E402
+from add_research_case import (  # noqa: E402\n    SpecError,\n    case_content_sha256,\n    load_spec,\n    plan,\n    validate_case_spec,\n)
 
 
 def valid_case():
@@ -53,7 +53,25 @@ class ResearchCaseValidationTests(unittest.TestCase):
         self.assertEqual(plan(spec)["publication_status"], "unpublished")
         self.assertEqual(plan(spec)["practice_level"], None)
 
-    def test_rejects_direct_publication(self):
+
+    def test_case_key_is_required_and_stable(self):
+        spec = valid_case()
+        validate_case_spec(spec)
+        first = case_content_sha256(spec)
+        second = case_content_sha256(json.loads(json.dumps(spec)))
+        self.assertEqual(first, second)
+        self.assertEqual(len(first), 64)
+
+        del spec["case_key"]
+        with self.assertRaises(SpecError):
+            validate_case_spec(spec)
+
+    def test_case_key_rejects_unstable_display_text(self):
+        spec = valid_case()
+        spec["case_key"] = "Bad Key With Spaces"
+        with self.assertRaises(SpecError):
+            validate_case_spec(spec)
+\n    def test_rejects_direct_publication(self):
         spec = valid_case()
         spec["claim"]["publication_status"] = "published"
         with self.assertRaises(SpecError):
