@@ -7,6 +7,7 @@ on:
       - "tools/qgis_render_batch.sh"
       - "tools/qgis_render_qc.py"
       - "tools/classify_render_qc.py"
+      - "tools/build_geometry_visual_review.py"
       - "tools/build_artifact_manifest.py"
       - "config/cartography/**"
       - "tests/fixtures/cartography/**"
@@ -98,6 +99,24 @@ jobs:
             config/cartography/render_qc_policy.json \
             /tmp/geometry-build/representative_decision.json
 
+      - name: Build scalable visual-review sheets
+        shell: bash
+        run: |
+          python3 tools/build_geometry_visual_review.py \\
+            tests/fixtures/cartography/achaemenid_cliopatria_source.geojson \\
+            /tmp/geometry-build/achaemenid.geojson \\
+            /tmp/ne_10m_land.geojson \\
+            /tmp/geometry-build/achaemenid_decision.json \\
+            /tmp/geometry-build/visual-review/achaemenid \\
+            --title "Achaemenid benchmark — ${{ matrix.tolerance_m }} m"
+          python3 tools/build_geometry_visual_review.py \\
+            tests/fixtures/cartography/representative_cliopatria_source.geojson \\
+            /tmp/geometry-build/representative.geojson \\
+            /tmp/ne_10m_land.geojson \\
+            /tmp/geometry-build/representative_decision.json \\
+            /tmp/geometry-build/visual-review/representative \\
+            --title "Representative geometries — ${{ matrix.tolerance_m }} m"
+
       - name: Create immutable provenance manifest
         shell: bash
         run: |
@@ -143,5 +162,6 @@ jobs:
             /tmp/geometry-build/achaemenid_decision.json
             /tmp/geometry-build/representative_decision.json
             /tmp/geometry-build/artifact_manifest.json
+            /tmp/geometry-build/visual-review/**
           if-no-files-found: error
           retention-days: 90
