@@ -1,0 +1,98 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Late Period Egypt (664–330 BCE)",
+    "display_name": "Late Period Egypt",
+    "entity_type_code": "region",
+    "notes": "Chronological-historical research slice for Egypt before Ptolemaic rule. Geometry remains unresolved here because the research claim should not silently inherit a modern Egypt polygon or a single maximum-extent dynastic boundary."
+  },
+  "claim": {
+    "from_year": -663,
+    "to_year": -329,
+    "date_text_original": "Late Period Egypt, 664–330 BCE",
+    "temporal_precision": "bounded_slice",
+    "temporal_certainty": "approximate",
+    "spatial_precision": "historical_region",
+    "summary": "Dedicated specialist research supports chattel slavery in Late Period Egypt before Ptolemaic rule. The documented practices include hereditary enslaved status, resale, leasing and the branding of enslaved persons as property. This corrects older assumptions that chattel slavery was absent before Alexander while still distinguishing Late Period slavery from the larger-scale, commercialized and taxed slavery documented under the Ptolemies.",
+    "review_status": "reviewed",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P3",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P3 reflects multiple institution-defining practices—hereditary status, alienability through resale and leasing, and bodily marking of ownership—identified by dedicated specialist scholarship. It deliberately stops below P4 because the reviewed scholarship emphasizes comparatively scant documentation and explicitly differentiates this system from the larger-scale commercialization of the Ptolemaic period."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Slavery and Servitude in Late Period Egypt (c. 900–330 BC)",
+        "author_or_institution": "Ella Karev",
+        "source_type": "specialist_monograph",
+        "source_classification": "secondary",
+        "independence_notes": "Dedicated specialist study based on Egyptian and Aramaic documentation and focused specifically on the nature and extent of slavery and servitude in Late Period Egypt.",
+        "reliability_limitations": "The surviving documentation is scant and uneven. The study distinguishes Late Period slavery from Ptolemaic large-scale commercialized slavery, so evidence of chattel status must not be inflated into a claim that Late Period Egypt was a slave society or that prevalence was uniform."
+      },
+      "version": {
+        "version_label": "Ägypten und Altes Testament 131, Zaphon, 2025; published monograph metadata and synopsis",
+        "url_or_identifier": "https://www.zaphon.de/slavery-and-servitude/en",
+        "publication_year": 2025,
+        "accessed_at": "2026-09-20T00:00:00Z"
+      },
+      "evidence_role": "specialist classification and synthesis",
+      "independence_group": "late_egypt_karev_monograph",
+      "directness": "dedicated specialist synthesis of Late Period Egyptian and Aramaic documentation",
+      "direction": "supports",
+      "locator": "Book synopsis and scope; revised publication of the author's dedicated Late Period slavery research"
+    },
+    {
+      "source": {
+        "title": "‘Mark them with my Mark’: Human Branding in Egypt",
+        "author_or_institution": "Ella Karev",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Focused philological study of Aramaic and Egyptian textual evidence for marking enslaved persons in Late Period Egypt. It is by the same specialist as the broader synthesis and is therefore not treated as an independent source-count multiplier.",
+        "reliability_limitations": "The article establishes a specific ownership practice rather than population prevalence. Its textual corpus cannot by itself quantify how common slavery was across all of Late Period Egypt."
+      },
+      "version": {
+        "version_label": "Journal of Egyptian Archaeology 108.1–2 (2022), pp. 191–203",
+        "url_or_identifier": "https://doi.org/10.1177/03075133221130094",
+        "publication_year": 2022,
+        "accessed_at": "2026-09-20T00:00:00Z"
+      },
+      "evidence_role": "bounded specialist analysis of ownership marking",
+      "independence_group": "late_egypt_karev_research_program",
+      "directness": "specialist analysis of Aramaic and Egyptian textual evidence",
+      "direction": "supports",
+      "locator": "pp. 191–203; conclusion that the relevant marks were brands marking enslaved persons as property"
+    },
+    {
+      "source": {
+        "title": "Aramaic and Egyptian textual references to branded enslaved persons in Late Period Egypt",
+        "author_or_institution": "Late Period Egyptian and Aramaic documentary corpus, analyzed by Ella Karev",
+        "source_type": "primary_documentary_corpus",
+        "source_classification": "primary",
+        "independence_notes": "Source-native documentary evidence underlying the specialist branding analysis; kept distinct from the modern interpretation while acknowledging that the present atlas record accesses it through Karev's philological study.",
+        "reliability_limitations": "The individual documents are not a representative census and the corpus is mediated here through a modern specialist edition/analysis. They establish ownership-marking practices, not empire-wide prevalence or scale."
+      },
+      "version": {
+        "version_label": "Primary Aramaic and Demotic evidence as analyzed in Karev 2022",
+        "url_or_identifier": "https://doi.org/10.1177/03075133221130094",
+        "publication_year": 2022,
+        "accessed_at": "2026-09-20T00:00:00Z"
+      },
+      "evidence_role": "bounded source-native evidence for enslaved status and proprietorial marking",
+      "independence_group": "late_egypt_branding_documents",
+      "directness": "primary documentary corpus mediated through specialist philological analysis",
+      "direction": "supports",
+      "locator": "Karev 2022, Aramaic and Egyptian textual evidence discussed throughout pp. 191–203"
+    }
+  ],
+  "geometry": {
+    "from_year": -663,
+    "to_year": -329,
+    "accuracy_status": "unresolved",
+    "resolution_method": "Resolve narrower time-bounded historical geometry before publication. Do not substitute modern Egyptian borders or a single maximum-extent polygon for a period spanning multiple dynastic and imperial configurations.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}
