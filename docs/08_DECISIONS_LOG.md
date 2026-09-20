@@ -213,3 +213,30 @@ This file records durable methodological choices. Add a dated entry whenever a f
 **Reason:** the 2026-09-20 outage recovered only after a full project restart, while Supabase's control plane had reported the project healthy despite the database refusing usable connections. Restart is a valid temporary recovery mechanism for overloaded/stuck projects, but unguarded restart loops could hide underlying defects or amplify an external platform outage.
 
 **Credential boundary:** automated restart uses a dedicated scoped Supabase Management API personal access token stored only as the GitHub Actions secret `SUPABASE_MANAGEMENT_TOKEN`. It should be limited to this project and the minimum Project Settings read-write permission required for restart. The token must never be committed to the repository.
+
+## D-044 — Stop bespoke coastal heuristics; use standard GIS preprocessing for Cliopatria render geometry
+**Date:** 2026-09-20  
+**Decision:** The atlas will not continue inventing source-specific coastline buffers or increasingly complex PostGIS recovery heuristics for Cliopatria. The published Cliopatria methodology itself documents that the polygons were vectorized from 2400×4800 raster map images, that coarse raster resolution can leave polygons misaligned with coast/land datasets, and that the source authors already applied smoothing to reduce raster border artifacts. This is therefore a known source-generalization problem, not an atlas-specific historical-geometry problem.
+
+The next render pipeline must be built from established GIS operations executed **offline/pre-publication**, with immutable source geometry preserved:
+1. cartographic smoothing/generalization using a standard GIS implementation (initial evaluation: QGIS `native:smoothgeometry` / Mapshaper `-smooth`);
+2. snap the generalized historical polygon to the canonical Natural Earth 1:10m physical-land boundary using a standard reference-layer snapping operation (initial evaluation: QGIS `native:snapgeometries`, behavior “prefer closest point, insert extra vertices where required”);
+3. clean/validate topology with standard GIS tools;
+4. clip the final display polygon to the same canonical Natural Earth land fabric;
+5. materialize the result as render geometry and serve it without geometry processing in the public request path.
+
+The custom adaptive coastal-completion policy from D-041 is retained in migration history for reproducibility but is **not** the active production policy while this standard pipeline is evaluated. The fully populated v3 render cache remains the public fallback until the standard GIS result passes multi-region visual and quantitative QC.
+
+**Reason:** continuing to tune custom buffer distances reproduces a solved GIS workflow badly and risks source-family distortions, operational instability and non-generalizable code. Standard snapping algorithms are explicitly designed to align one geometry layer to a reference layer within a tolerance and can insert/remove vertices so boundaries follow the reference geometry exactly. Standard smoothing/generalization tools also expose controls for preserving sharp corners rather than rounding every historical frontier indiscriminately.
+
+## D-045 — Use a mainstream, scale-aware cartographic stack
+**Date:** 2026-09-20  
+**Decision:** The atlas standardizes on a mainstream open GIS/cartography stack rather than bespoke map geometry logic.
+
+1. **Canonical physical fabric:** Natural Earth physical land/coastline remains the authoritative physical reference. The 1:10m dataset is the canonical master because the product supports country/region zooms and because it is the highest-detail Natural Earth global physical product. Lower-zoom display may use generalized derivatives or Natural Earth's 1:50m/1:110m products, but historical overlays and the visible physical shoreline at any given zoom must be produced from the same scale/topology so they cannot diverge.
+2. **Historical source:** Cliopatria remains a historical polity source, not the physical coastline authority. Raw/source polygons stay immutable.
+3. **Conflation/preprocessing:** alignment to the physical fabric is performed offline with established GIS algorithms (QGIS/GEOS/GDAL; Mapshaper where appropriate for cartographic smoothing/topology), including reference-layer snapping, geometry repair and clipping. Custom distance-buffer heuristics are not the preferred solution.
+4. **Rendering/delivery:** MapLibre remains the web renderer. As geometry volume grows, move from full GeoJSON payloads toward standard vector-tile delivery (Tippecanoe/Martin or equivalent) rather than adding client-side geometry complexity.
+5. **Scale discipline:** do not display more physical or historical precision than the underlying source supports. A more detailed coastline may improve visual fit, but it must not imply that uncertain historical inland frontiers are equally precise.
+
+**Reason:** this maximizes reuse of established GIS behavior, documentation, tooling and operational experience. Natural Earth is widely used as a global physical map source, including by Cartopy; QGIS provides standard geometry snapping that inserts/removes vertices to make geometries follow a reference layer within tolerance; Mapshaper provides topology-aware cleaning/generalization; and MapLibre's own guidance recommends vector tiling as datasets grow. This makes future problems more likely to have known solutions and community experience rather than requiring atlas-specific geometry inventions.

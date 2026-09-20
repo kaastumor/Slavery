@@ -1,0 +1,132 @@
+name: Geometry Render Pipeline CI
+
+on:
+  pull_request:
+    paths:
+      - "tools/qgis_render_pipeline.sh"
+      - ".github/workflows/geometry-render-ci.yml"
+      - "docs/05_GEOGRAPHY_AND_MAP.md"
+      - "docs/08_DECISIONS_LOG.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qgis-render-smoke:
+    runs-on: ubuntu-latest
+    container:
+      image: qgis/qgis:stable
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify standard QGIS algorithms
+        shell: bash
+        run: |
+          export QT_QPA_PLATFORM=offscreen
+          qgis_process help native:smoothgeometry >/dev/null
+          qgis_process help native:snapgeometries >/dev/null
+          qgis_process help native:fixgeometries >/dev/null
+          qgis_process help native:clip >/dev/null
+
+      - name: Create synthetic historical and land fixtures
+        shell: bash
+        run: |
+          cat > /tmp/historical.geojson <<'EOF'
+          {
+            "type": "FeatureCollection",
+            "features": [{
+              "type": "Feature",
+              "properties": {"id": "synthetic"},
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[0.05,0.05],[1.05,0.05],[1.05,1.05],[0.05,1.05],[0.05,0.05]]]
+              }
+            }]
+          }
+          EOF
+          cat > /tmp/land.geojson <<'EOF'
+          {
+            "type": "FeatureCollection",
+            "features": [{
+              "type": "Feature",
+              "properties": {"id": "land"},
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[0,0],[1,0],[1,1],[0,1],[0,0]]]
+              }
+            }]
+          }
+          EOF
+
+      - name: Run standard render preprocessing
+        shell: bash
+        run: |
+          bash tools/qgis_render_pipeline.sh             /tmp/historical.geojson             /tmp/land.geojson             /tmp/render.geojson             20000
+
+      - name: Validate output is bounded by reference land
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          payload = json.loads(Path("/tmp/render.geojson").read_text())
+          assert payload["features"], "pipeline returned no features"
+
+          def points(coords):
+              if isinstance(coords[0], (int, float)):
+                  yield coords
+              else:
+                  for item in coords:
+                      yield from points(item)
+
+          all_points = []
+          for feature in payload["features"]:
+              geom = feature.get("geometry")
+              if geom:
+                  all_points.extend(points(geom["coordinates"]))
+
+          assert all_points, "pipeline returned empty geometry"
+          xs = [p[0] for p in all_points]
+          ys = [p[1] for p in all_points]
+          eps = 1e-5
+          assert min(xs) >= -eps and max(xs) <= 1 + eps, (min(xs), max(xs))
+          assert min(ys) >= -eps and max(ys) <= 1 + eps, (min(ys), max(ys))
+          print("QGIS render pipeline smoke test passed.")
+          PY
+
+      - name: Download canonical Natural Earth 1:10m land fabric
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import urllib.request
+          url = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson"
+          urllib.request.urlretrieve(url, "/tmp/ne_10m_land.geojson")
+          PY
+
+      - name: Build real Achaemenid QGIS render candidates
+        shell: bash
+        run: |
+          mkdir -p /tmp/real-render
+          for tolerance in 10000 15000 20000 25000; do
+            bash tools/qgis_render_pipeline.sh               tests/fixtures/cartography/achaemenid_cliopatria_source.geojson               /tmp/ne_10m_land.geojson               "/tmp/real-render/achaemenid_qgis_${tolerance}m.geojson"               "$tolerance"
+          done
+
+      - name: Record real-candidate QC
+        continue-on-error: true
+        shell: bash
+        run: |
+          export QT_QPA_PLATFORM=offscreen
+          for tolerance in 10000 15000 20000 25000; do
+            qgis_process run native:checkvalidity --               INPUT_LAYER="/tmp/real-render/achaemenid_qgis_${tolerance}m.geojson"               METHOD=2               VALID_OUTPUT="/tmp/real-render/valid_${tolerance}.gpkg"               INVALID_OUTPUT="/tmp/real-render/invalid_${tolerance}.gpkg"               ERROR_OUTPUT="/tmp/real-render/errors_${tolerance}.gpkg" >/dev/null
+          done
+          ls -lh /tmp/real-render
+
+      - name: Upload real render candidates
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: achaemenid-qgis-render-candidates
+          path: /tmp/real-render/achaemenid_qgis_*m.geojson
+          if-no-files-found: error
