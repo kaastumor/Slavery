@@ -41,6 +41,9 @@ class MvpAvailabilityGuardrailTests(unittest.TestCase):
     def test_health_check_validates_release_shape_and_latency(self):
         self.assertIn("max-api-seconds", HEALTH)
         self.assertIn("release_version", HEALTH)
+        self.assertIn("release_channel", HEALTH)
+        self.assertIn("place_count", HEALTH)
+        self.assertIn("claim_count", HEALTH)
         self.assertIn("places", HEALTH)
         self.assertIn("cartography", HEALTH)
 
