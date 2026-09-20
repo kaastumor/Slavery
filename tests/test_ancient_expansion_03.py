@@ -13,7 +13,7 @@ class AncientExpansionBatch03Tests(unittest.TestCase):
         self.paths = sorted(self.case_dir.glob("[0-9][0-9]_*.json"))
 
     def test_current_cases_validate_and_remain_unpublished(self):
-        self.assertGreaterEqual(len(self.paths), 5)
+        self.assertGreaterEqual(len(self.paths), 6)
         for path in self.paths:
             with self.subTest(path=path.name):
                 spec = load_spec(path)
@@ -65,6 +65,21 @@ class AncientExpansionBatch03Tests(unittest.TestCase):
         groups = {item["independence_group"] for item in spec["evidence"]}
         self.assertIn("macuch_sasanian_slavery", groups)
         self.assertIn("tamari_fire_foundations_2023", groups)
+
+    def test_bactria_stays_regional_unpublished_and_below_p4(self):
+        spec = load_spec(self.case_dir / "06_late_antique_bactria_slavery.json")
+        practice = spec["claim"]["territorial_practice"]
+        self.assertEqual(spec["spatial_entity"]["entity_type_code"], "region")
+        self.assertEqual(practice["practice_level"], "P3")
+        self.assertEqual(practice["coverage_state_code"], "classified")
+        self.assertEqual(spec["claim"]["publication_status"], "unpublished")
+        self.assertEqual(spec["geometry"]["accuracy_status"], "unresolved")
+        self.assertIsNone(spec["geometry"]["geojson"])
+        self.assertIn("regional rather than attributed wholesale", spec["spatial_entity"]["notes"])
+        self.assertIn("successive ruling empire", spec["claim"]["summary"])
+        directions = {item["direction"] for item in spec["evidence"]}
+        self.assertIn("supports", directions)
+        self.assertIn("qualifies", directions)
 
     def test_opone_slave_export_stays_external_to_territorial_p_levels(self):
         spec = json.loads((self.case_dir / "external_01_opone_slave_export.json").read_text(encoding="utf-8"))
