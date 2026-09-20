@@ -1,0 +1,110 @@
+name: Geometry Browser Review
+
+on:
+  pull_request:
+    paths:
+      - "web/review.html"
+      - "web/src/review.ts"
+      - "web/src/review.css"
+      - "web/scripts/run_geometry_browser_review.mjs"
+      - ".github/workflows/geometry-browser-review.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  REVIEW_RUN_ID: "35523925420"
+  REVIEW_ARTIFACT: "geometry-candidate-10000m-7644ea348ec43093219d964069a7b88ec088a331"
+  LAND_URL: "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson"
+  LAND_SHA256: "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416"
+
+jobs:
+  browser-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download exact tested 10 km geometry artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.REVIEW_ARTIFACT }}
+          path: /tmp/geometry-artifact
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ env.REVIEW_RUN_ID }}
+
+      - name: Fetch and verify canonical Natural Earth fabric
+        shell: bash
+        run: |
+          curl -L --fail --retry 3 "$LAND_URL" -o /tmp/ne_10m_land.geojson
+          echo "$LAND_SHA256  /tmp/ne_10m_land.geojson" | sha256sum -c -
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install web and browser dependencies
+        working-directory: web
+        shell: bash
+        run: |
+          npm install --package-lock-only
+          npm ci
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Start local Vite review server
+        working-directory: web
+        shell: bash
+        run: |
+          npm run dev -- --host 127.0.0.1 --port 4173 > /tmp/atlas-review-vite.log 2>&1 &
+          echo $! > /tmp/atlas-review-vite.pid
+          for attempt in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:4173/review.html >/dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/atlas-review-vite.log
+          exit 1
+
+      - name: Capture representative exact-artifact browser review
+        working-directory: web
+        shell: bash
+        run: |
+          node scripts/run_geometry_browser_review.mjs \
+            --base-url http://127.0.0.1:4173 \
+            --manifest /tmp/geometry-artifact/artifact_manifest.json \
+            --source ../tests/fixtures/cartography/representative_cliopatria_source.geojson \
+            --candidate /tmp/geometry-artifact/representative.geojson \
+            --decision /tmp/geometry-artifact/representative_decision.json \
+            --land /tmp/ne_10m_land.geojson \
+            --output /tmp/browser-review/representative
+
+      - name: Capture Achaemenid benchmark browser review
+        working-directory: web
+        shell: bash
+        run: |
+          node scripts/run_geometry_browser_review.mjs \
+            --base-url http://127.0.0.1:4173 \
+            --manifest /tmp/geometry-artifact/artifact_manifest.json \
+            --source ../tests/fixtures/cartography/achaemenid_cliopatria_source.geojson \
+            --candidate /tmp/geometry-artifact/achaemenid.geojson \
+            --decision /tmp/geometry-artifact/achaemenid_decision.json \
+            --land /tmp/ne_10m_land.geojson \
+            --output /tmp/browser-review/achaemenid
+
+      - name: Upload multi-zoom browser-review evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: geometry-browser-review-10km-${{ github.sha }}
+          path: /tmp/browser-review/**
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Vite logs on failure
+        if: failure()
+        shell: bash
+        run: cat /tmp/atlas-review-vite.log || true

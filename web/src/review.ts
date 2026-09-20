@@ -102,6 +102,8 @@ const map = new Map({
 
 map.addControl(new NavigationControl({ showCompass: false }), "top-left");
 
+(window as Window & { __atlasGeometryReviewMap?: Map }).__atlasGeometryReviewMap = map;
+
 let manifest: ArtifactManifest | null = null;
 let sourceCollection: FeatureCollection | null = null;
 let candidateCollection: FeatureCollection | null = null;
