@@ -104,6 +104,10 @@ Source count never mechanically sets a P-level.
 
 No claim is different from P0: if no defensible territorial-practice claim exists, the atlas simply remains unknown for that place/time.
 
+## Before starting work
+
+Read the repository-root `BACKLOG.md` first for the current execution priority, blockers, and next task. Then inspect current `main`, open issues, and open PRs.
+
 ## Before changing data or schema
 
 Read:
