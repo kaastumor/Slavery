@@ -1,0 +1,65 @@
+{
+  "case_key": "global-balance-04/zaghawa/captive-export-v1",
+  "claim_kind": "external_participation",
+  "spatial_entity": {
+    "canonical_name": "Zaghāwa (early Arabic-source population/region)",
+    "display_name": "Zaghāwa",
+    "entity_type_code": "region",
+    "notes": "The historical and geographic referent of Zaghāwa in early Arabic texts is not assumed to equal a modern ethnic territory, state, or later Kanem-Bornu boundary. Geometry remains unresolved."
+  },
+  "claim": {
+    "from_year": 700,
+    "to_year": 799,
+    "date_text_original": "eighth century CE",
+    "temporal_precision": "century",
+    "temporal_certainty": "approximate",
+    "spatial_precision": "population_or_region_as_named_in_early_arabic_sources",
+    "summary": "Specialist scholarship on eighth-century Ibāḍī trans-Saharan slave traffic reports early Arabic testimony that Zaghāwa people were among those transported north as slaves by Berber traders. This establishes a bounded external captive-export/network-participation claim; it does not establish the prevalence of slavery within Zaghāwa territory, Kanem, Kawār, or the Bilād al-Sūdān generally.",
+    "confidence": "moderate",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "external_participation": {
+      "participation_type_code": "captive_export",
+      "role_text": "Documented origin population in an eighth-century trans-Saharan movement of enslaved persons; local mechanism of enslavement and territorial prevalence are not inferred.",
+      "notes": "No P-level applies to this claim. Network participation remains analytically separate from territorial practice."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Berbers and Blacks: Ibāḍī Slave Traffic in Eighth-Century North Africa",
+        "author_or_institution": "Elizabeth Savage",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "geographic_scope": "North Africa and central trans-Saharan networks",
+        "temporal_scope": "eighth century CE",
+        "independence_notes": "Specialist historical analysis of Ibāḍī slave traffic drawing on early Arabic textual traditions.",
+        "reliability_limitations": "Evidence for transport/export does not independently establish local ownership, labour regime, capture mechanism, or territorial prevalence in the southern origin region."
+      },
+      "version": {
+        "version_label": "Journal of African History 33.3 (1992), pp. 351-368",
+        "publication_year": 1992,
+        "url_or_identifier": "https://doi.org/10.1017/S0021853700032527",
+        "accessed_at": "2026-09-20T21:40:00Z"
+      },
+      "evidence_role": "specialist synthesis of early trans-Saharan slave traffic",
+      "independence_group": "savage_ibadi_slave_traffic_1992",
+      "directness": "specialist synthesis citing al-Yaqubi testimony",
+      "direction": "supports",
+      "locator": "article argument; note 23 on Zaghāwa transported as slaves"
+    }
+  ],
+  "geometry": {
+    "accuracy_status": "unresolved",
+    "resolution_method": "The source names a population/origin in a trade network but does not provide a defensible bounded territorial polygon for the claim interval. Do not substitute modern Chad/Sudan boundaries, later Kanem-Bornu extents, or a generalized Bilād al-Sūdān polygon.",
+    "geojson": null,
+    "review_status": "reviewed"
+  },
+  "guardrails": {
+    "territorial_practice_inferred": false,
+    "practice_level_assigned": false,
+    "nationality_inferred": false,
+    "modern_geometry_substituted": false,
+    "absence_inferred": false
+  }
+}
