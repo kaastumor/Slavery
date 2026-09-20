@@ -13,7 +13,7 @@ class AncientExpansionBatch03Tests(unittest.TestCase):
         self.paths = sorted(self.case_dir.glob("[0-9][0-9]_*.json"))
 
     def test_current_cases_validate_and_remain_unpublished(self):
-        self.assertGreaterEqual(len(self.paths), 6)
+        self.assertGreaterEqual(len(self.paths), 7)
         for path in self.paths:
             with self.subTest(path=path.name):
                 spec = load_spec(path)
@@ -80,6 +80,21 @@ class AncientExpansionBatch03Tests(unittest.TestCase):
         directions = {item["direction"] for item in spec["evidence"]}
         self.assertIn("supports", directions)
         self.assertIn("qualifies", directions)
+
+    def test_sogdiana_diaspora_trade_does_not_raise_homeland_classification(self):
+        spec = load_spec(self.case_dir / "07_sogdiana_slavery.json")
+        practice = spec["claim"]["territorial_practice"]
+        self.assertEqual(spec["spatial_entity"]["entity_type_code"], "region")
+        self.assertEqual(practice["practice_level"], "P2")
+        self.assertEqual(spec["claim"]["publication_status"], "unpublished")
+        self.assertEqual(spec["geometry"]["accuracy_status"], "unresolved")
+        self.assertIsNone(spec["geometry"]["geojson"])
+        directions = [item["direction"] for item in spec["evidence"]]
+        self.assertIn("supports", directions)
+        self.assertIn("qualifies", directions)
+        turfan = next(item for item in spec["evidence"] if item["independence_group"] == "turfan_sogdian_slave_sale_639")
+        self.assertEqual(turfan["direction"], "qualifies")
+        self.assertIn("outside Sogdiana", turfan["source"]["reliability_limitations"])
 
     def test_opone_slave_export_stays_external_to_territorial_p_levels(self):
         spec = json.loads((self.case_dir / "external_01_opone_slave_export.json").read_text(encoding="utf-8"))
