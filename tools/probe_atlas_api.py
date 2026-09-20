@@ -26,6 +26,10 @@ def main() -> int:
         "reason": None,
         "http_status": None,
         "elapsed_seconds": None,
+        "release_channel": None,
+        "release_version": None,
+        "place_count": None,
+        "claim_count": None,
     }
 
     try:
@@ -47,6 +51,15 @@ def main() -> int:
                     result["reason"] = "invalid_json_nonrestartable"
                 else:
                     places = payload.get("places")
+                    result["release_channel"] = payload.get("release_channel")
+                    result["release_version"] = payload.get("release_version")
+                    if isinstance(places, list):
+                        result["place_count"] = len(places)
+                        result["claim_count"] = sum(
+                            len(place.get("claims") or [])
+                            for place in places
+                            if isinstance(place, dict)
+                        )
                     if not payload.get("release_version") or not isinstance(places, list) or not places:
                         result["reason"] = "invalid_payload_nonrestartable"
                     elif elapsed > args.slow_seconds:
