@@ -100,9 +100,11 @@ class GeometryManagementPromotionTests(unittest.TestCase):
         database_rows = [
             {"kind": "fabric", "id": "land-v1", "detail1": "b" * 64, "detail2": "true"},
             {"kind": "policy", "id": "external-test", "detail1": "external", "detail2": "true"},
+        ]
+        database_rows.extend(
             {"kind": "source", "id": row["geometry_id"], "detail1": "reviewed", "detail2": "4"}
             for row in rows
-        ]
+        )
         database_rows.append(
             {"kind": "cache", "id": rows[2]["geometry_id"], "detail1": "external-test", "detail2": "4"}
         )
