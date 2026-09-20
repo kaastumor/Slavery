@@ -382,3 +382,19 @@ Physical land/coastline geometry is a first-class shared dependency rather than 
 
 This keeps basemap and overlay coastlines structurally identical. Historical inland boundaries remain independent source geometry and are never replaced by the modern physical land fabric.
 
+## Public MVP availability and production-change gates
+
+The public serving path is part of release correctness.
+
+Operational rules:
+
+- public API requests may read precomputed/cache geometry but must not perform heavy smoothing, buffering, bulk unions or equivalent expensive spatial reconstruction;
+- large spatial diagnostics belong in local Docker/CI or staging, not the live database;
+- render-cache population is a bounded precomputation job and is never coupled to a user request;
+- before a production schema/render change, verify the current public API and site are healthy;
+- after the change, verify HTTP availability, payload sanity and latency before treating the change as complete;
+- the frontend aborts an API load after 12 seconds and exposes a retry action rather than showing an infinite loading state;
+- GitHub Actions runs an external public health check every 15 minutes, validating API HTTP status, latency, release metadata, non-empty place data, cartography metadata and GitHub Pages availability;
+- monitor failures create/update a GitHub incident issue and successful recovery closes it automatically.
+
+A future publication hardening step should additionally materialize each immutable published release as a static API snapshot/fallback so a transient database outage cannot make an already-published historical release unavailable.
