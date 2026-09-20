@@ -63,16 +63,20 @@ def feature_id(feature: dict[str, Any]) -> str:
 
 
 def validate_package(
+    source_path: Path,
     candidate_path: Path,
     decision_path: Path,
     artifact_manifest_path: Path,
     approval_path: Path,
 ) -> dict[str, Any]:
+    source = load_json(source_path)
     candidate = load_json(candidate_path)
     decision = load_json(decision_path)
     artifact = load_json(artifact_manifest_path)
     approval = load_json(approval_path)
 
+    if source.get("type") != "FeatureCollection":
+        raise PromotionError("source must be a GeoJSON FeatureCollection")
     if candidate.get("type") != "FeatureCollection":
         raise PromotionError("candidate must be a GeoJSON FeatureCollection")
     if approval.get("schema_version") != APPROVAL_SCHEMA:
@@ -84,12 +88,26 @@ def validate_package(
     if not approval.get("reviewed_by") or not approval.get("reviewed_at"):
         raise PromotionError("reviewed_by and reviewed_at are required")
 
+    manifest_sha = sha256(artifact_manifest_path)
+    expected_manifest_sha = str(approval.get("artifact_manifest_sha256") or "")
+    if not expected_manifest_sha or manifest_sha != expected_manifest_sha:
+        raise PromotionError(
+            "artifact manifest checksum does not match visual approval"
+        )
+
+    source_record = record_for_basename(
+        artifact.get("inputs") or [], source_path.name
+    )
     candidate_record = record_for_basename(
         artifact.get("artifacts") or [], candidate_path.name
     )
     decision_record = record_for_basename(
         artifact.get("qc") or [], decision_path.name
     )
+
+    actual_source_sha = sha256(source_path)
+    if actual_source_sha != str(source_record.get("sha256") or ""):
+        raise PromotionError("source checksum does not match artifact manifest")
 
     actual_candidate_sha = sha256(candidate_path)
     actual_decision_sha = sha256(decision_path)
@@ -155,6 +173,14 @@ def validate_package(
     if preferred is not None and role == "preferred_baseline" and tolerance != int(preferred):
         raise PromotionError("preferred-baseline decision has inconsistent tolerance")
 
+    source_features = source.get("features") or []
+    source_by_id: dict[str, dict[str, Any]] = {}
+    for feature in source_features:
+        gid = feature_id(feature)
+        if gid in source_by_id:
+            raise PromotionError(f"duplicate geometry_id in source: {gid}")
+        source_by_id[gid] = feature
+
     features = candidate.get("features") or []
     candidate_by_id: dict[str, dict[str, Any]] = {}
     for feature in features:
@@ -162,6 +188,14 @@ def validate_package(
         if gid in candidate_by_id:
             raise PromotionError(f"duplicate geometry_id in candidate: {gid}")
         candidate_by_id[gid] = feature
+
+    if set(source_by_id) != set(candidate_by_id):
+        only_source = sorted(set(source_by_id) - set(candidate_by_id))
+        only_candidate = sorted(set(candidate_by_id) - set(source_by_id))
+        raise PromotionError(
+            "source/candidate geometry_id sets differ; "
+            f"source_only={only_source}, candidate_only={only_candidate}"
+        )
 
     decisions = {
         str(row.get("geometry_id")): row
@@ -217,6 +251,8 @@ def validate_package(
             )
 
     return {
+        "source": source,
+        "source_by_id": source_by_id,
         "candidate": candidate,
         "candidate_by_id": candidate_by_id,
         "decisions": decisions,
@@ -228,8 +264,10 @@ def validate_package(
         "render_policy_id": render_policy_id,
         "fabric_id": fabric_id,
         "snap_tolerance_m": tolerance,
+        "source_sha256": actual_source_sha,
         "candidate_sha256": actual_candidate_sha,
         "decision_sha256": actual_decision_sha,
+        "artifact_manifest_sha256": manifest_sha,
         "build_git_sha": build_git_sha,
     }
 
@@ -364,6 +402,7 @@ def write_rows(cur, package: dict[str, Any], replace_existing: bool) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
+    parser.add_argument("source", type=Path)
     parser.add_argument("candidate", type=Path)
     parser.add_argument("decision", type=Path)
     parser.add_argument("artifact_manifest", type=Path)
@@ -375,6 +414,7 @@ def main() -> int:
 
     try:
         package = validate_package(
+            args.source,
             args.candidate,
             args.decision,
             args.artifact_manifest,
@@ -389,7 +429,9 @@ def main() -> int:
         "fabric_id": package["fabric_id"],
         "snap_tolerance_m": package["snap_tolerance_m"],
         "build_git_sha": package["build_git_sha"],
+        "source_sha256": package["source_sha256"],
         "candidate_sha256": package["candidate_sha256"],
+        "artifact_manifest_sha256": package["artifact_manifest_sha256"],
         "approved_count": len(package["approved_ids"]),
         "quarantined_count": len(package["quarantined_ids"]),
         "mode": "package-only dry run" if not args.dsn else "database dry run",
