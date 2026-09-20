@@ -48,6 +48,7 @@ snapped="$workdir/historical_snapped.gpkg"
 fixed="$workdir/historical_fixed.gpkg"
 clipped="$workdir/historical_clipped.gpkg"
 final_fixed="$workdir/historical_final_fixed.gpkg"
+wgs84="$workdir/historical_wgs84.gpkg"
 
 export QT_QPA_PLATFORM=offscreen
 
@@ -95,6 +96,12 @@ qgis_process run native:fixgeometries -- \
 qgis_process run native:reprojectlayer -- \
   INPUT="$final_fixed" \
   TARGET_CRS="EPSG:4326" \
+  OUTPUT="$wgs84"
+
+# Reprojection/export precision can expose tiny ring defects. Run the standard
+# repair once more in the delivery CRS before emitting GeoJSON.
+qgis_process run native:fixgeometries -- \
+  INPUT="$wgs84" \
   OUTPUT="$OUTPUT"
 
 echo "Wrote standard-QGIS render geometry: $OUTPUT"
