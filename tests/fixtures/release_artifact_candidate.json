@@ -1,0 +1,12 @@
+{
+  "release_version": "d054-fixture-release",
+  "schema_version": "0025",
+  "purpose": "public_mvp_preview",
+  "canonical": false,
+  "claim_ids": [
+    "55555555-5555-4555-8555-555555555555"
+  ],
+  "changelog": "Disposable D-054 integration fixture",
+  "qc_summary": "One reviewed territorial-practice claim with source and reviewed geometry.",
+  "unresolved_issues": "None; test-only fixture."
+}
