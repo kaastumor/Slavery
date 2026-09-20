@@ -114,9 +114,9 @@ Remaining:
 - [ ] Define a real staging -> production promotion boundary.
 - [ ] Make promotion consume the exact tested geometry/release artifact instead of recomputing it.
 - [ ] Add protected GitHub deployment environments and appropriately scoped credentials.
-- [ ] Materialize a static/recoverable published-release snapshot so a transient database outage cannot remove an already-published atlas state.
+- [x] Materialize a static/recoverable published-release snapshot so a transient database outage cannot remove an already-published atlas state. D-052 is live: Pages deploy `873abc1c` captured `mvp-preview-ancient-v2` as a canonicalized 4.87 MB static payload (27 places / 31 claims / 57 geometry records), retained it as an Actions artifact, embedded it in the deployed site, and verified SHA-256 `53b64f65ae7fead65e2f9274cf4d9b87e4868a5a98f38eb0d97fea23e2d29d21` after deployment. The browser is API-first and labels use of the deployed snapshot as `static fallback`.
 - [ ] Add post-promotion verification and rollback/fallback semantics.
-- [ ] Ensure public services consume reviewed/published materializations only.
+- [x] Ensure public services consume reviewed/published materializations only. The browser consumes `atlas-data`; that Edge Function resolves the current public preview through `audit.release_manifest` plus `publish` views and approved render materializations, while D-051 blocks direct client access to internal research schemas.
 
 ### BLOCKED — Supabase development branch
 
@@ -227,7 +227,7 @@ Evaluate only when there is a concrete workflow need. Do not add infrastructure 
 | Production GIS experimentation can cause outages | Offline/CI/staging only; public path serves precomputed geometry |
 | GitHub geometry-promotion executor cannot write via Management API | Existing scoped token lacks `/database/query`; durable scoped promotion credentials remain #43 work |
 | No true staging environment yet | Local/CI testing; Supabase branch requires explicit cost approval |
-| Published release depends heavily on live DB | #43 static/recoverable snapshot work |
+| Live API/database outage could hide an already-published atlas state | D-052 deployed snapshot fallback is live; full build-once release promotion and rollback semantics remain #43 work |
 | Historical migration ledger irregularities | #26 non-destructive reconciliation |
 | Attractive geometry may be semantically overbroad | Separate scope review from visual/cartographic QC |
 | Archive density could bias research priorities | Resume globally balanced/non-Atlantic-first research after release hardening |
@@ -238,4 +238,5 @@ Evaluate only when there is a concrete workflow need. Do not add infrastructure 
 
 - **DONE / closed:** issue #27 map/cartographic P0 after exact-artifact promotion and multi-region live browser verification; Baekje remains fallback/quarantined.
 - **DONE / live:** five D-050-approved 10 km representative render geometries promoted from immutable artifact `7644ea348ec43093219d964069a7b88ec088a331`.
-- **DONE / closed-ready:** issue #62 Data API security P0: D-051 private boundary, migration 0023 defense-in-depth revokes/default privileges, migration 0024 immutable helper search path, production privilege recheck, public health green, and zero remaining Supabase security-advisor lints.
+- **DONE / closed:** issue #62 Data API security P0: D-051 private boundary, migration 0023 defense-in-depth revokes/default privileges, migration 0024 immutable helper search path, production privilege recheck, public health green, and zero remaining Supabase security-advisor lints.
+- **DONE / live:** D-052 deployment-bound static release fallback for `mvp-preview-ancient-v2`; exact deployed snapshot retained and checksummed, with API-first browser fallback semantics.
