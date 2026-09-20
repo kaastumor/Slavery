@@ -79,7 +79,8 @@ jobs:
           python3 tools/classify_render_qc.py \
             /tmp/geometry-build/achaemenid_qc.json \
             config/cartography/render_qc_policy.json \
-            /tmp/geometry-build/achaemenid_decision.json
+            /tmp/geometry-build/achaemenid_decision.json \
+            --snap-tolerance-m ${{ matrix.tolerance_m }}
 
       - name: Build representative candidate set
         shell: bash
@@ -97,7 +98,8 @@ jobs:
           python3 tools/classify_render_qc.py \
             /tmp/geometry-build/representative_qc.json \
             config/cartography/render_qc_policy.json \
-            /tmp/geometry-build/representative_decision.json
+            /tmp/geometry-build/representative_decision.json \
+            --snap-tolerance-m ${{ matrix.tolerance_m }}
 
       - name: Build scalable visual-review sheets
         shell: bash
