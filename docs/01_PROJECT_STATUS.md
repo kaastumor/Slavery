@@ -2,8 +2,8 @@
 
 **Status date:** 2026-09-19  
 **Canonical data version:** v0.6.1  
-**Working research database:** PostgreSQL + PostGIS, migrations through `0011`  
-**Current public preview:** `mvp-preview-ancient-v1` (non-canonical)
+**Working research database:** PostgreSQL + PostGIS, repository schema through `0014`  
+**Current public preview:** `mvp-preview-ancient-v2` (non-canonical)
 
 ## 1. Project position
 
@@ -17,14 +17,15 @@ The project now explicitly defines itself as an **evidence-synthesis and data-cu
 
 Current verified database state:
 
-- 34 territorial-practice claims
-- 11 published claims in the current non-canonical preview
-- 23 reviewed but unpublished claims
-- 30 spatial entities
-- 60 geometry records
-- 0 invalid PostGIS geometries
-- 71 exact source-version records
-- latest public preview release: `mvp-preview-ancient-v1`
+- 42 territorial-practice claims
+- 31 published claims in the current non-canonical ancient preview
+- 11 reviewed but unpublished claims
+- 38 spatial entities
+- 68 geometry records
+- 92 exact source-version records
+- latest public preview release: `mvp-preview-ancient-v2`
+- live `atlas-data` API verified HTTP 200 against v2, schema `0014`, 27 released places
+- canonical Natural Earth 1:10m cartographic fabric active for the MVP
 
 The public API is release-gated and does not expose arbitrary reviewed research rows.
 
@@ -89,13 +90,15 @@ The old throwaway `atlas-mvp` endpoint has been retired.
 
 ### Published preview slice
 
-`mvp-preview-ancient-v1` is an explicitly non-canonical end-to-end product-validation release containing 11 ancient claims across 8 spatial targets.
+`mvp-preview-ancient-v2` is the current explicitly non-canonical MVP release. It contains 31 reviewed ancient territorial-practice claims across 27 released spatial targets, combining the original v1 vertical slice with reviewed ancient expansion batches 01–03.
 
-It exists to prove the release pipeline and map behavior. It does not replace v0.6.1 as the canonical historical data release.
+The v2 release includes the revised Mauryan P2 synthesis and the accepted Africa/Arabia and adjacent-region research cases. Weak/deferred candidates and external-participation-only evidence are not promoted into territorial P-level layers. Several accepted claims intentionally remain geometry-unresolved and therefore appear in the evidence interface without a false territorial fill.
 
-### Reviewed unpublished expansion
+The release exists to expand the real product-validation dataset while preserving the canonical v0.6.1 historical data release unchanged.
 
-Two subsequent ancient research batches have been added as reviewed research without changing the public preview.
+### Ancient research expansion
+
+The reviewed ancient expansion is now largely represented in the public non-canonical preview. Research can continue independently of publication, and future batches remain unpublished until they pass the same release gate.
 
 #### Ancient expansion 01
 
@@ -119,7 +122,7 @@ Includes:
 - Baekje 369 war-captive enslavement
 - Silla Village Register slavery
 
-These remain unpublished pending later release decisions.
+These have now been included in `mvp-preview-ancient-v2` after review and publication-gate validation.
 
 ## 7. Current methodology reset
 
@@ -134,7 +137,7 @@ The core methodology now follows these rules:
 7. `disputed` is reserved for genuinely unresolved material disagreement in credible specialist scholarship.
 8. The atlas synthesizes existing scholarship; it does not attempt to become the scholarly authority that independently settles major historical controversies.
 
-The Mauryan record is an explicit re-review candidate under this revised rule: the current reviewed/unpublished disputed classification should not be published until its indigenous legal/epigraphic evidence and specialist historiography have been reassessed under the new synthesis standard.
+The Mauryan record has been re-reviewed under this revised rule. The former mechanically disputed treatment was replaced by a reviewed P2 classification that preserves Megasthenes as challenging evidence while following the broader specialist synthesis; this corrected claim is included in `mvp-preview-ancient-v2`.
 
 ## 8. Geography state
 
@@ -177,15 +180,15 @@ Detailed Seshat slavery variables previously used remain legacy/Equinox data and
 
 ## 10. Immediate next milestone
 
-The next work should prioritize **methodology-consistent historical synthesis**, not infrastructure expansion.
+The ancient MVP is now broad enough for the next phase to combine **geometry completion, balanced research growth and release-quality product validation**.
 
 Immediate actions:
 
-1. audit the recently reviewed ancient claims against the revised conflict-resolution rule
-2. correct the Mauryan claim before it can enter a public release
-3. ensure future research batches identify the relevant specialist historiography before broad classification
-4. continue globally balanced ancient research, with Africa and Arabia as strong next candidates
-5. keep new research reviewed/unpublished until QC and deliberate release selection
-6. cut a new public preview only when a coherent reviewed slice is ready
+1. resolve provenance-backed historical geometry for accepted v2 cases that are currently explicit `unresolved` records, without substituting modern borders or maximum-extent empire polygons;
+2. continue globally balanced research into underrepresented regions/periods while preserving the same evidence-synthesis standard;
+3. extend the public product to display external-participation evidence such as the Opone slave-export claim separately from territorial P-levels;
+4. keep weak/deferred candidates unresolved until stronger bounded evidence is found;
+5. cut later preview releases only from coherent reviewed slices with QC/changelog/unresolved-issue metadata;
+6. reconcile the live Supabase migration-history ledger with repository migrations `0012`–`0014` without reapplying already-present schema objects.
 
 Vector-tile optimization, additional hosting infrastructure and large Atlantic bulk ingestion remain secondary until data volume or product use actually requires them.
