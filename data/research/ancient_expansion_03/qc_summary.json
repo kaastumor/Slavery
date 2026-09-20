@@ -33,15 +33,19 @@
     "Kush/Meroe remains a candidate rather than a claim: current review found strong warnings in specialist scholarship against assuming an ancient Middle Nile external slave trade without tighter evidence.",
     "Late Period Egypt is P3 for institution-defining chattel practices, not P4: the specialist literature emphasizes scant documentation and a material difference from larger-scale Ptolemaic commercialization.",
     "Late Period Egypt needs narrower time-bounded historical geometry before publication; modern Egypt is not an acceptable proxy for the full 664–330 BCE slice.",
+    "Opone has strong first-century evidence for slave export to Egypt, but a trade-node attestation does not establish territorial prevalence, captives' origins, or local status institutions; no P-level is assigned from trade alone.",
     "No claim in this batch is part of a public release."
   ],
   "negative_or_deferred_candidates": [
     "Kush/Meroe — do not infer an ancient external slave trade from later Middle Nile patterns; require bounded status/captive evidence.",
-    "Garamantes — reviewed scholarship supports trans-Saharan connectivity, but slaves remain a possible rather than securely demonstrated import in the evidence inspected so far; do not create a territorial slavery claim from trade-route inference."
+    "Garamantes — reviewed scholarship supports trans-Saharan connectivity, but slaves remain a possible rather than securely demonstrated import in the evidence inspected so far; do not create a territorial slavery claim from trade-route inference.",
+    "Opone/northern Somali coast — Periplus sections 8 and 13 securely attest slave exports at Malao and especially Opone, but preserve this as trade evidence until the data model can represent trade/events separately or local slavery evidence is found.",
+    "Rhapta/Azania — do not generalize Opone's slave-export evidence southward; inspected scholarship identifies Rhapta as a major trade port but does not independently establish slave export or territorial slavery there."
   ],
   "next_research": [
     "Continue ancient African coverage beyond the Mediterranean littoral, prioritizing evidence quality over filling polygons.",
     "Investigate Kush/Meroe only through bounded status/captive evidence rather than inherited assumptions about a timeless Nile slave trade.",
+    "Evaluate a dedicated trade/event representation so strong evidence such as Opone's first-century slave exports can be mapped without misclassifying territorial practice.",
     "Resolve time-bounded historical geometry for Carthage, Aksum and Late Period Egypt before any are considered for publication.",
     "Continue underrepresented ancient regions after Africa/Arabia rather than defaulting to dense Atlantic or Mediterranean archives."
   ]
