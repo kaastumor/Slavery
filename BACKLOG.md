@@ -93,7 +93,7 @@ No indiscriminate RLS policies were added because these schemas are intentionall
 
 # P1 — Pipeline / release hardening
 
-## NOW — Finish issue #43
+## BLOCKED — Finish issue #43
 
 Issue: **#43 — pipeline hardening / protected release promotion**
 
@@ -111,9 +111,9 @@ Already complete:
 
 Remaining:
 
-- [ ] Define a real staging -> production promotion boundary.
+- [ ] Define a real staging -> production promotion boundary. **BLOCKED:** the concrete Supabase staging target is a development branch costing 0.01344/hour and requires explicit user approval before creation.
 - [x] Make promotion consume the exact tested geometry/release artifact instead of recomputing it. Geometry uses D-050 immutable acceptance artifacts. Releases now use D-054 typed membership + preservation-grade full-state bundles: `tools/release_bundle.py` freezes exact membership, API-relevant object/render digests, candidate/Git provenance and active land-fabric identity before promotion; verify/apply hard-block on drift, populate `captured_at_release` typed membership, register the exact bundle, and never move the D-053 serving channel implicitly. Disposable PostGIS CI passed build → verify → deliberate-drift rejection → exact apply → post-apply verify. Migration 0027 is live and makes published `audit.release_artifact` provenance immutable.
-- [ ] Add protected GitHub deployment environments and appropriately scoped credentials.
+- [ ] Add protected GitHub deployment environments and appropriately scoped credentials. **BLOCKED:** the connected GitHub integration cannot administer repository environments/secrets, and the existing scoped Supabase Management API token cannot execute database queries. Code-side artifact/promotion gates are ready; repository-admin environment protection plus a least-privilege DB-write credential must be configured externally.
 - [x] Materialize a static/recoverable published-release snapshot so a transient database outage cannot remove an already-published atlas state. D-052 is live: Pages deploy `873abc1c` captured `mvp-preview-ancient-v2` as a canonicalized 4.87 MB static payload (27 places / 31 claims / 57 geometry records), retained it as an Actions artifact, embedded it in the deployed site, and verified SHA-256 `53b64f65ae7fead65e2f9274cf4d9b87e4868a5a98f38eb0d97fea23e2d29d21` after deployment. Adversarial browser run `35531531089` then blocked the live Supabase API and verified all six representative cases from the deployed snapshot with no page/map errors; live-vs-fallback screenshots differ only in the `static fallback` badge. The browser remains API-first.
 - [x] Add post-promotion verification and rollback/fallback semantics. D-052 provides deployment-bound static fallback plus adversarial forced-outage verification. D-053 + migration 0025 add an explicit `public_mvp_preview` release-channel pointer with guarded published/purpose validation and compare-and-set moves. Production rollback drill on 2026-09-20 proved v2 → v1 → v2 without mutating release contents: health run `35533535121` served v2 at 27 places / 31 claims, rollback served v1 at 8 places / 11 claims, and restore served v2 again at 27 places / 31 claims, all HTTP/API/site healthy.
 - [x] Ensure public services consume reviewed/published materializations only. The browser consumes `atlas-data`; that Edge Function resolves the current public preview through `audit.release_manifest` plus `publish` views and approved render materializations, while D-051 blocks direct client access to internal research schemas.
@@ -132,7 +132,7 @@ A local/CI disposable environment remains acceptable for testing in the meantime
 
 # P1 — Specialist geometry hierarchy
 
-## NEXT — Issue #40
+## NOW — Issue #40
 
 Issue: **#40 — specialist regional geometry sources over Cliopatria where superior**
 
