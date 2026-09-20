@@ -95,3 +95,36 @@ jobs:
           assert min(ys) >= -eps and max(ys) <= 1 + eps, (min(ys), max(ys))
           print("QGIS render pipeline smoke test passed.")
           PY
+
+      - name: Download canonical Natural Earth 1:10m land fabric
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import urllib.request
+          url = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson"
+          urllib.request.urlretrieve(url, "/tmp/ne_10m_land.geojson")
+          PY
+
+      - name: Build real Achaemenid QGIS render candidates
+        shell: bash
+        run: |
+          mkdir -p /tmp/real-render
+          for tolerance in 10000 15000 20000 25000; do
+            bash tools/qgis_render_pipeline.sh               tests/fixtures/cartography/achaemenid_cliopatria_source.geojson               /tmp/ne_10m_land.geojson               "/tmp/real-render/achaemenid_qgis_${tolerance}m.geojson"               "$tolerance"
+          done
+
+      - name: Record real-candidate QC
+        shell: bash
+        run: |
+          export QT_QPA_PLATFORM=offscreen
+          for tolerance in 10000 15000 20000 25000; do
+            qgis_process run native:checkvalidity --               INPUT="/tmp/real-render/achaemenid_qgis_${tolerance}m.geojson"               METHOD=2               VALID_OUTPUT="/tmp/real-render/valid_${tolerance}.gpkg"               INVALID_OUTPUT="/tmp/real-render/invalid_${tolerance}.gpkg"               ERROR_OUTPUT="/tmp/real-render/errors_${tolerance}.gpkg" >/dev/null
+          done
+          ls -lh /tmp/real-render
+
+      - name: Upload real render candidates
+        uses: actions/upload-artifact@v4
+        with:
+          name: achaemenid-qgis-render-candidates
+          path: /tmp/real-render/achaemenid_qgis_*m.geojson
+          if-no-files-found: error
