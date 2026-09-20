@@ -51,11 +51,45 @@ INSERT INTO audit.release_claim(
     'captured_at_release'
 );
 
+INSERT INTO audit.release_manifest(
+    release_version, schema_version, status, changelog, qc_summary, unresolved_issues, manifest
+) VALUES (
+    'test-release-membership-0026-null',
+    'test',
+    'validated',
+    'test',
+    'test',
+    'test',
+    '{"purpose":"public_mvp_preview","claim_ids":["00000000-0000-0000-0000-000000002601"]}'::jsonb
+);
+
+DO $
+DECLARE
+    blocked boolean := false;
+BEGIN
+    BEGIN
+        INSERT INTO audit.release_claim(
+            release_version, claim_id, object_sha256, capture_status
+        ) VALUES (
+            'test-release-membership-0026-null',
+            '00000000-0000-0000-0000-000000002601'::uuid,
+            NULL,
+            'captured_at_release'
+        );
+    EXCEPTION WHEN others THEN
+        blocked := true;
+    END;
+
+    IF NOT blocked THEN
+        RAISE EXCEPTION 'captured_at_release membership accepted a NULL digest';
+    END IF;
+END $;
+
 UPDATE audit.release_manifest
 SET status='published'
 WHERE release_version='test-release-membership-0026';
 
-DO $$
+DO $
 DECLARE
     blocked boolean := false;
 BEGIN
@@ -69,28 +103,6 @@ BEGIN
 
     IF NOT blocked THEN
         RAISE EXCEPTION 'published release membership was mutable';
-    END IF;
-END $$;
-
-DO $$
-DECLARE
-    blocked boolean := false;
-BEGIN
-    BEGIN
-        INSERT INTO audit.release_claim(
-            release_version, claim_id, object_sha256, capture_status
-        ) VALUES (
-            'test-release-membership-0026',
-            '00000000-0000-0000-0000-000000002601'::uuid,
-            NULL,
-            'captured_at_release'
-        );
-    EXCEPTION WHEN others THEN
-        blocked := true;
-    END;
-
-    IF NOT blocked THEN
-        RAISE EXCEPTION 'captured_at_release membership accepted a NULL digest';
     END IF;
 END $$;
 
