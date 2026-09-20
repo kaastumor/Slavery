@@ -79,10 +79,11 @@ Established architecture:
 
 - [x] Inspect the final topology-correct **10 km** review artifact at full extent and representative boundary/coast views; Baekje remains quarantined.
 - [x] Build a local-only MapLibre review path that verifies and renders the **exact tested artifact**, not a recomputation. Merged in PR #51.
-- [ ] Use that review path to validate representative candidates at several browser zoom levels/continents against the same Natural Earth fabric.
-- [ ] Record explicit visual disposition per candidate: `visually_accepted` or `quarantined/fallback`.
-- [ ] Keep Baekje on fallback and investigate its source/geometry separately; do not weaken global QC.
-- [ ] Decide the source-family baseline recipe. Current quantitative evidence favors 10 km as the conservative generic candidate, but the already accepted live Achaemenid result must not be replaced merely for uniformity.
+- [x] Use that review path to validate representative candidates at several browser zoom levels/continents against the same Natural Earth fabric. Boundary-focused CI review run `35526192586` passed with exact-artifact SHA verification and no browser page errors.
+- [x] Record explicit cartographic visual disposition per candidate: Achaemenid (both slices), Hittite central Anatolia, New Kingdom Egypt, Western Han, Roman Empire and Mauryan Empire are `visually_accepted_candidate`; Baekje is `quarantined/fallback`. This is cartographic acceptance, not historical-semantic scope approval.
+- [x] Keep Baekje on fallback; do not weaken global QC.
+- [ ] Investigate Baekje's source/geometry separately under the specialist-geometry track (#40).
+- [x] Use 10 km as the conservative generic Cliopatria candidate baseline under D-049; do not auto-escalate tolerance, and do not replace the already accepted live Achaemenid render merely for uniformity.
 - [ ] Promote only the exact reviewed/checksummed artifact through a controlled promotion path.
 - [ ] Re-check the public browser after promotion.
 - [ ] Close #27 only when multiple representative regions and zoom levels are genuinely correct.
