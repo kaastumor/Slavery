@@ -98,7 +98,7 @@ END
 FROM kept
 RIGHT JOIN (SELECT 1 AS singleton) s ON true
 GROUP BY s.singleton;
-$$;
+$body$;
 
 CREATE OR REPLACE VIEW publish.map_geometry AS
 WITH active_fabric AS (
