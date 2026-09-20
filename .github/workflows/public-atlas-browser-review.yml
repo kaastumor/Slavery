@@ -38,6 +38,7 @@ jobs:
           node scripts/run_public_atlas_browser_review.mjs             https://kaastumor.github.io/Slavery/             /tmp/public-atlas-review
 
       - name: Upload live browser evidence
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: public-atlas-browser-review-${{ github.sha }}
