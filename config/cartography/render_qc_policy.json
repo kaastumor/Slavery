@@ -9,6 +9,12 @@
   "diagnostics": {
     "hausdorff_m": "record_only"
   },
+  "candidate_selection": {
+    "preferred_snap_tolerance_m": 10000,
+    "evaluated_snap_tolerances_m": [10000, 15000, 20000, 25000],
+    "alternate_tolerance_rule": "diagnostic_or_explicit_visual_override_only",
+    "preferred_failure_rule": "quarantine_and_keep_previous_approved_render_or_fallback"
+  },
   "visual_review_required_before_promotion": true,
-  "notes": "Initial render-only QC calibrated against the Achaemenid accepted pilot and representative Cliopatria cases. Outliers are quarantined/fallback rather than forcing the batch to fail or silently promoting them."
+  "notes": "Initial render-only QC calibrated against the Achaemenid accepted pilot and representative Cliopatria cases. 10 km is the conservative preferred baseline for new generic candidates after the representative tolerance matrix; existing explicitly approved renders are not invalidated. Outliers are quarantined/fallback rather than forcing the batch to fail or silently promoting them."
 }
