@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-BUNDLE=/tmp/d054-full-state-bundle.json
+BUNDLE=/workspace/build/d054-full-state-bundle.json
 CANDIDATE=/workspace/tests/fixtures/release_bundle_candidate.json
 
 cleanup() {
+  rm -f build/d054-full-state-bundle.json
   docker compose exec -T db sh -lc 'psql -v ON_ERROR_STOP=1 -U "$POSTGRES_USER" -d "$POSTGRES_DB"'     < db/tests/008_release_bundle_cleanup.sql >/dev/null || true
 }
 trap cleanup EXIT
