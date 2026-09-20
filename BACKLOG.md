@@ -66,57 +66,34 @@ Established architecture:
   - <= 5% source-normalized symmetric difference
   - Hausdorff retained as diagnostic, not a universal hard gate
 - PR #48 added scalable visual-review sheets tied to the exact immutable CI artifact.
-- Final 10 km CI artifact passes automated QC for:
-  - Hittite central Anatolia
-  - New Kingdom Egypt
-  - Western Han
-  - Roman Empire
-  - Mauryan Empire
-  - Achaemenid benchmark
+- Final 10 km CI artifact passes automated QC for Hittite central Anatolia, New Kingdom Egypt, Western Han, Roman Empire, Mauryan Empire and the Achaemenid benchmark.
 - Baekje remains correctly **quarantined** at approximately -8.43% area change / 10.39% symmetric difference.
 
-### Remaining acceptance steps
-
-- [x] Inspect the final topology-correct **10 km** review artifact at full extent and representative boundary/coast views; Baekje remains quarantined.
-- [x] Build a local-only MapLibre review path that verifies and renders the **exact tested artifact**, not a recomputation. Merged in PR #51.
-- [x] Use that review path to validate representative candidates at several browser zoom levels/continents against the same Natural Earth fabric. Boundary-focused CI review run `35526192586` passed with exact-artifact SHA verification and no browser page errors.
-- [x] Record explicit cartographic visual disposition per candidate: Achaemenid (both slices), Hittite central Anatolia, New Kingdom Egypt, Western Han, Roman Empire and Mauryan Empire are `visually_accepted_candidate`; Baekje is `quarantined/fallback`. This is cartographic acceptance, not historical-semantic scope approval.
-- [x] Keep Baekje on fallback; do not weaken global QC.
-- [x] Investigate Baekje's source/geometry separately under #40. No open, license-clear 347–391 CE specialist vector replacement was identified; keep the failed candidate quarantined/fallback and do not invent a replacement polygon. Documented in docs/18_GEOMETRY_SOURCE_SURVEY.md.
-- [x] Use 10 km as the conservative generic Cliopatria candidate baseline under D-049; do not auto-escalate tolerance, and do not replace the already accepted live Achaemenid render merely for uniformity.
-- [x] Implement a controlled exact-artifact promotion gate: D-050 + checked-in per-geometry acceptance/semantic registry + checksum-verifying promotion tool + real-artifact CI. Merged in PR #54.
-- [x] Promote the five approved 10 km representative geometries through D-050. The initial GitHub Management API executor failed safely before writes (HTTP 403); the same immutable artifact and D-050 checks were then applied transactionally through a one-time Supabase-native executor and independently verified. Live cache: 99 rows; all five promoted geometries valid SRID 4326 with exact artifact vertex counts; accepted Achaemenid rows preserved; Baekje absent/quarantined.
-- [x] Re-check the public browser after promotion. Live GitHub Pages review run `35529260898` passed for Hittite, New Kingdom Egypt, Mauryan, Western Han and Roman promoted geometries; each reports `cliopatria-qgis-natural-earth-v1`, with no browser page errors/map warning. Baekje 369 CE correctly remains on fallback `cliopatria-boundary-normalization-v3`. Fit and +2 zoom screenshots were visually inspected.
-- [x] Close #27 only when multiple representative regions and zoom levels are genuinely correct. Issue #27 closed as completed after exact-artifact boundary review, live five-geometry promotion, and live public MapLibre verification.
-
-### Specific risk: semantic overbreadth
-
-A cartographically attractive polygon can still be historically wrong for a claim if the geometry represents a whole polity while the evidence target is narrower.
-
-- [x] Audit overbroad whole-polity proxies during geometry promotion. D-050's per-geometry registry records semantic scope separately from cartographic acceptance: the five promoted cases are accepted only as polity context, while Baekje is explicitly blocked as a bounded-event case.
-- [x] Prefer unresolved/narrower defensible geometry over attractive false precision. Baekje demonstrates the rule: failed generic transform + no period-appropriate specialist replacement means quarantine/fallback rather than a hand-drawn or modern-proxy ancient polity polygon.
+All #27 acceptance steps are complete: exact-artifact browser review, explicit cartographic/semantic disposition, five controlled D-050 promotions, live public verification, and Baekje fallback/quarantine without weakened QC or invented geometry.
 
 ---
 
 # P0 — Data API security / RLS audit
 
-## NOW — Verify and secure exposed atlas/cartography tables
+## DONE — Issue #62 private Data API boundary hardened and production-verified
 
 Issue: **#62 — verify Data API exposure and secure atlas/cartography tables**
 
-Supabase's security advisory reports Row Level Security disabled on 32 tables across `atlas` and `cartography`, warning that anon/authenticated Data API roles may have direct table access. Do **not** blindly enable RLS: doing so without matching policies could break the public data path.
+- [x] Verify effective client boundary: `anon`/`authenticated` have no schema `USAGE` on `atlas`, `audit`, `cartography`, `publish` and no table read/write privileges.
+- [x] Define D-051: browser uses `atlas-data`; internal schemas are not a direct client Data API.
+- [x] Apply migration 0023: explicit `PUBLIC`/client-role revokes plus restrictive default privileges for internal schemas/tables/sequences/functions.
+- [x] Gate CI on the private-schema boundary; main foundation CI passed at commit `cc5c670` and production availability monitor passed.
+- [x] Re-verify production after migration: both client roles still have no internal-schema usage and 0 SELECT/INSERT/UPDATE/DELETE privileges.
+- [x] Resolve the remaining advisor warning with migration 0024 by pinning `atlas.make_year_range` to `search_path = pg_catalog`.
+- [x] Rerun authoritative Supabase security advisors after 0024: **zero security lints**.
 
-- [x] Verify the effective Data API/client-role boundary. Production checks show `anon` and `authenticated` have no schema `USAGE` on `atlas`, `audit`, `cartography` or `publish` and 0 SELECT/INSERT/UPDATE/DELETE privileges across 54 checked internal tables/views; only `public`/`graphql_public` have client-role schema usage. No client-role default ACL grants were found. The scoped operations token is correctly denied (`403`) from PostgREST-config/API-key management endpoints, so it was not broadened. See `docs/21_DATA_API_SECURITY.md`.
-- [x] Define the intended access model in D-051 and `docs/11_SYSTEM_ARCHITECTURE.md`: the browser consumes `atlas-data`; `atlas`/`audit`/`cartography`/`publish` remain internal schemas with no direct client grants. Any future direct PostgREST contract must use a deliberately exposed API surface with explicit grants and RLS/policies.
-- [ ] Add explicit RLS/grants/policies or remove sensitive schemas from Data API exposure as appropriate.
-- [ ] Test public atlas/API behavior plus unauthorized direct-table read/write attempts before production application.
-- [ ] Run Supabase security advisors again and record residual findings.
+No indiscriminate RLS policies were added because these schemas are intentionally non-client surfaces. Any future direct PostgREST contract must use an explicitly exposed API schema with reviewed grants and RLS/policies.
 
 ---
 
 # P1 — Pipeline / release hardening
 
-## NEXT — Finish issue #43
+## NOW — Finish issue #43
 
 Issue: **#43 — pipeline hardening / protected release promotion**
 
@@ -155,7 +132,7 @@ A local/CI disposable environment remains acceptable for testing in the meantime
 
 # P1 — Specialist geometry hierarchy
 
-## NEXT after #27 — Issue #40
+## NEXT — Issue #40
 
 Issue: **#40 — specialist regional geometry sources over Cliopatria where superior**
 
@@ -173,11 +150,7 @@ Issue: **#40 — specialist regional geometry sources over Cliopatria where supe
 
 # P1 — Resume globally balanced research
 
-## NEXT after map P0
-
-The user explicitly wants the UI/map working properly before broad data gathering resumes.
-
-When #27 is closed:
+## NEXT
 
 - [ ] Resume globally balanced territorial-practice research.
 - [ ] Prioritize weak/non-Atlantic cells before dense Atlantic bulk ingestion.
@@ -193,8 +166,6 @@ When #27 is closed:
 
 Issue: **#4 — make published database releases exactly reconstructible**
 
-This is part of the broader release-hardening architecture and should be solved on current `main`, not by reviving stale migration prototypes.
-
 - [ ] Decide typed release membership vs hybrid membership + immutable bundle.
 - [ ] Define row/object digest rules.
 - [ ] Define historical-release API semantics versus current-reviewed state.
@@ -209,28 +180,17 @@ This is part of the broader release-hardening architecture and should be solved 
 
 Issue: **#26 — reconcile live Supabase migration history**
 
-Current production objects and migration history are not perfectly aligned because of earlier manual/retried deployment history.
-
-- [ ] Inventory live migration ledger against repository migrations through 0022.
+- [ ] Inventory live migration ledger against repository migrations through the current head.
 - [ ] Document duplicate/retried entries without rewriting history casually.
 - [ ] Reconcile non-destructively.
 - [ ] Add a deployment check that flags future ledger/repository divergence early.
-
-This is important housekeeping but is not currently blocking the public preview.
 
 ---
 
 # P2 — Product/UI after cartographic correctness
 
-Once #27 is closed and promotion is safe:
-
 - [ ] Timeline interaction and selected-year state.
-- [ ] Clear visual distinction between:
-  - territorial practice
-  - legal status
-  - external/network participation
-  - research coverage/uncertainty
-  - historical geometry
+- [ ] Clear visual distinction between territorial practice, legal status, external/network participation, research coverage/uncertainty and historical geometry.
 - [ ] Evidence/source inspector.
 - [ ] Geometry accuracy / proxy / unresolved indicator.
 - [ ] Mobile and accessibility pass.
@@ -244,17 +204,6 @@ Once #27 is closed and promotion is safe:
 Issue: **#2 — evaluate end-to-end atlas tooling**
 
 Evaluate only when there is a concrete workflow need. Do not add infrastructure for novelty.
-
-Candidates already worth revisiting when relevant:
-
-- Zotero / OpenAlex / Crossref / Scite for research discovery and bibliography
-- IIIF / GROBID / Transkribus for source handling
-- OpenRefine / WHG for reconciliation
-- QGIS LTR for geometry QA
-- DVC/object storage for large immutable artifacts
-- Martin / PMTiles for publication
-- FastAPI only if the existing API boundary becomes limiting
-- Storybook / Playwright / axe when UI complexity justifies them
 
 ---
 
@@ -276,38 +225,17 @@ Candidates already worth revisiting when relevant:
 | --- | --- |
 | Baekje loses ~8–9% area in generic QGIS pipeline | Quarantine/fallback; investigate source/specialist geometry |
 | Production GIS experimentation can cause outages | Offline/CI/staging only; public path serves precomputed geometry |
-| GitHub geometry-promotion executor cannot write via Management API | Existing scoped `SUPABASE_MANAGEMENT_TOKEN` lacks `/database/query` privilege; run `35528369798` failed safely before transaction. The 2026-09-20 promotion used a one-time Supabase-native exact-artifact executor; durable scoped promotion credentials remain #43 work. |
-| No true staging environment yet | Local/CI testing; Supabase branch requires user cost approval |
+| GitHub geometry-promotion executor cannot write via Management API | Existing scoped token lacks `/database/query`; durable scoped promotion credentials remain #43 work |
+| No true staging environment yet | Local/CI testing; Supabase branch requires explicit cost approval |
 | Published release depends heavily on live DB | #43 static/recoverable snapshot work |
 | Historical migration ledger irregularities | #26 non-destructive reconciliation |
 | Attractive geometry may be semantically overbroad | Separate scope review from visual/cartographic QC |
-| Data API / RLS exposure may permit unintended direct table access | P0 issue #62: verify actual exposed schemas/grants first, then apply least-privilege RLS/grant/schema fix without breaking the public Edge Function path. |
-| Archive density could bias research priorities | Resume globally balanced/non-Atlantic-first research after #27 |
+| Archive density could bias research priorities | Resume globally balanced/non-Atlantic-first research after release hardening |
 
 ---
 
 # Recently completed
 
-- **DONE / merged:** PR #41 representative QGIS validation.
-- **DONE / merged:** PR #42 pipeline architecture / D-046.
-- **DONE / live:** migration 0022 research-case idempotency.
-- **DONE / merged:** PR #45 consolidated geometry build/QC/quarantine pipeline / D-048.
-- **DONE / merged:** PR #48 exact-artifact scalable visual-review sheets with MultiPolygon regression coverage.
-- **DONE / visually accepted + live:** Achaemenid ~500 BCE QGIS/Natural Earth pilot.
-- **DONE / live:** five D-050-approved 10 km representative render geometries promoted from immutable artifact `7644ea348ec43093219d964069a7b88ec088a331`; cache 94 → 99, Achaemenid preserved, Baekje quarantined.
-- **DONE / closed:** issue #27 map/cartographic P0 after live public browser verification across Hittite, Egypt, Mauryan, Western Han and Roman representatives; Baekje remains fallback/quarantined.
-- **DONE:** stale PR #37 closed because its migration/cartography path was superseded.
-- **DONE:** stale PR #5 closed because its migration sequence no longer matched current `main`; the underlying release-reconstruction requirement remains issue #4.
-
----
-
-# Session-start checklist
-
-Before starting substantial work:
-
-1. Read this `BACKLOG.md`.
-2. Inspect current `main`, open issues, and open PRs.
-3. Read the linked issue for the active backlog item.
-4. Read the canonical methodology/architecture docs relevant to the change.
-5. For schema/methodology/ontology changes, update the Decisions Log before treating the change as canonical.
-6. Keep the backlog updated when the task state or priority changes.
+- **DONE / closed:** issue #27 map/cartographic P0 after exact-artifact promotion and multi-region live browser verification; Baekje remains fallback/quarantined.
+- **DONE / live:** five D-050-approved 10 km representative render geometries promoted from immutable artifact `7644ea348ec43093219d964069a7b88ec088a331`.
+- **DONE / closed-ready:** issue #62 Data API security P0: D-051 private boundary, migration 0023 defense-in-depth revokes/default privileges, migration 0024 immutable helper search path, production privilege recheck, public health green, and zero remaining Supabase security-advisor lints.
