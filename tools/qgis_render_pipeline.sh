@@ -47,6 +47,7 @@ smoothed="$workdir/historical_smoothed.gpkg"
 snapped="$workdir/historical_snapped.gpkg"
 fixed="$workdir/historical_fixed.gpkg"
 clipped="$workdir/historical_clipped.gpkg"
+final_fixed="$workdir/historical_final_fixed.gpkg"
 
 export QT_QPA_PLATFORM=offscreen
 
@@ -85,8 +86,14 @@ qgis_process run native:clip -- \
   OVERLAY="$land_metric" \
   OUTPUT="$clipped"
 
-qgis_process run native:reprojectlayer -- \
+# Overlay operations can reintroduce ring self-intersections even when both
+# inputs were valid. Repair once more after clipping before export.
+qgis_process run native:fixgeometries -- \
   INPUT="$clipped" \
+  OUTPUT="$final_fixed"
+
+qgis_process run native:reprojectlayer -- \
+  INPUT="$final_fixed" \
   TARGET_CRS="EPSG:4326" \
   OUTPUT="$OUTPUT"
 
