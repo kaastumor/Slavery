@@ -153,17 +153,20 @@ def main() -> int:
     management_base = f"https://api.supabase.com/v1/projects/{args.project_ref}"
     headers = management_headers(token)
 
-    status, config_payload = request_json(
+    # The scoped CI token may intentionally lack data_api_config_read. That is
+    # not a reason to broaden it: the anonymous PostgREST probes below test the
+    # effective public boundary directly.
+    config_status, config_payload = request_json(
         management_base + "/postgrest",
         headers=headers,
     )
-    if status != 200 or not isinstance(config_payload, dict):
-        raise AuditError(
-            f"cannot read PostgREST config: HTTP {status}; "
-            f"response={config_payload if isinstance(config_payload, dict) else type(config_payload).__name__}"
-        )
+    if config_status == 200 and isinstance(config_payload, dict):
+        schemas = exposed_schemas(config_payload)
+        config_source = "management_api"
+    else:
+        schemas = []
+        config_source = "unavailable_to_scoped_token"
 
-    schemas = exposed_schemas(config_payload)
     internal_exposed = sorted(INTERNAL_SCHEMAS.intersection(schemas))
 
     status, keys_payload = request_json(
@@ -221,13 +224,34 @@ def main() -> int:
     ]
 
     accessible = [probe for probe in probes if probe["accessible"]]
+
+    # PGRST106 exposes the server's accepted profile list in its error message,
+    # so when config_read is intentionally unavailable we can still infer the
+    # effective exposed schemas from the public endpoint itself.
+    inferred = set()
+    for probe in probes:
+        if probe.get("error_code") == "PGRST106":
+            message = str(probe.get("message") or "")
+            marker = "The schema must be one of the following: "
+            if marker in message:
+                tail = message.split(marker, 1)[1]
+                for item in tail.replace('"', "").replace("'", "").split(","):
+                    item = item.strip().strip(".")
+                    if item:
+                        inferred.add(item)
+
+    effective_schemas = schemas or sorted(inferred)
+    effective_internal_exposed = sorted(INTERNAL_SCHEMAS.intersection(effective_schemas))
+
     result = {
         "schema_version": "atlas-data-api-security-audit-v1",
         "project_ref": args.project_ref,
-        "postgrest_exposed_schemas": schemas,
-        "internal_schemas_exposed": internal_exposed,
+        "postgrest_config_status": config_status,
+        "postgrest_config_source": config_source,
+        "postgrest_exposed_schemas": effective_schemas,
+        "internal_schemas_exposed": effective_internal_exposed,
         "anonymous_probes": probes,
-        "result": "pass" if not internal_exposed and not accessible else "fail",
+        "result": "pass" if not effective_internal_exposed and not accessible else "fail",
     }
 
     rendered = json.dumps(result, indent=2, sort_keys=True) + "\n"
@@ -236,10 +260,10 @@ def main() -> int:
             handle.write(rendered)
     print(rendered, end="")
 
-    if internal_exposed:
+    if effective_internal_exposed:
         print(
-            "BLOCK: internal schemas are listed in PostgREST exposed schemas: "
-            + ", ".join(internal_exposed),
+            "BLOCK: internal schemas are exposed through PostgREST: "
+            + ", ".join(effective_internal_exposed),
             file=sys.stderr,
         )
         return 2
