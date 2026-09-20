@@ -1,0 +1,9 @@
+{
+  "schema_version": "geometry-promotion-execution-v1",
+  "promotion_id": "cliopatria-qgis-natural-earth-10km-2026-09-20",
+  "promotion_plan": "config/cartography/promotion_cliopatria_10km_7644ea.json",
+  "project_ref": "dilnayfllygkplsdymel",
+  "apply": true,
+  "requested_at": "2026-09-20",
+  "scope": "Promote the five D-050-approved 10 km representative geometries; preserve accepted live Achaemenid rows and leave Baekje quarantined."
+}
