@@ -22,6 +22,12 @@ class RenderQcClassificationTests(unittest.TestCase):
                 "max_abs_area_delta_pct": 2.0,
                 "max_symmetric_difference_pct": 5.0,
             },
+            "candidate_selection": {
+                "preferred_snap_tolerance_m": 10000,
+                "evaluated_snap_tolerances_m": [10000, 15000, 20000, 25000],
+                "alternate_tolerance_rule": "diagnostic_or_explicit_visual_override_only",
+                "preferred_failure_rule": "quarantine_and_keep_previous_approved_render_or_fallback",
+            },
             "visual_review_required_before_promotion": True,
         }
 
@@ -64,6 +70,8 @@ class RenderQcClassificationTests(unittest.TestCase):
                     str(qc_path),
                     str(policy_path),
                     str(output_path),
+                    "--snap-tolerance-m",
+                    "10000",
                 ]
                 self.assertEqual(MODULE.main(), 0)
             finally:
@@ -72,10 +80,25 @@ class RenderQcClassificationTests(unittest.TestCase):
             result = json.loads(output_path.read_text(encoding="utf-8"))
             by_id = {row["geometry_id"]: row for row in result["features"]}
             self.assertEqual(by_id["good"]["status"], "qc_passed")
+            self.assertEqual(by_id["good"]["review_state"], "awaiting_visual_review")
             self.assertEqual(by_id["bad"]["status"], "quarantined")
+            self.assertEqual(by_id["bad"]["review_state"], "not_eligible")
             self.assertIn("area_delta", by_id["bad"]["reasons"])
             self.assertIn("symmetric_difference", by_id["bad"]["reasons"])
             self.assertEqual(result["summary"], {"qc_passed": 1, "quarantined": 1})
+            self.assertEqual(
+                result["candidate_selection"]["selection_role"],
+                "preferred_baseline",
+            )
+            self.assertEqual(
+                result["candidate_selection"]["preferred_snap_tolerance_m"],
+                10000,
+            )
+
+    def test_alternate_tolerance_is_not_preferred(self):
+        selection = MODULE.candidate_selection(self.policy, 20000)
+        self.assertEqual(selection["selection_role"], "alternate_candidate")
+        self.assertEqual(selection["preferred_snap_tolerance_m"], 10000)
 
 
 if __name__ == "__main__":
