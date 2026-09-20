@@ -147,3 +147,26 @@ Publication rendering therefore treats physical coastline and historical inland 
 - if coastal versus inland boundary cannot be distinguished safely, retain explicit unresolved/approximate geometry instead of manufacturing a smooth territorial edge.
 
 This is especially important for raster-derived/coarse historical geometry such as Cliopatria. The purpose is not to modernize historical inland borders; it is to ensure that the physical land/water edge comes from one canonical physical-land topology.
+
+## Raster/grid boundary generalization
+
+Some historical polygon sources encode boundaries as coarse raster- or grid-derived staircases. This affects inland frontiers as well as coastlines. The atlas must not mistake those visual artifacts for historical precision.
+
+For approved coarse source families, public display geometry may therefore use a bounded render-only generalization:
+
+- one documented source-family policy applies consistently across geometries from that source family;
+- source geometry remains immutable in `atlas.geometry` / `publish.geometry`;
+- the initial Cliopatria policy uses one Chaikin smoothing iteration;
+- smoothing must pass validity, displacement and area-change QC before it may be cached for display;
+- the initial QC ceilings are 35 km source-to-smoothed Hausdorff displacement and 1% absolute area change;
+- these values constrain cartographic generalization only and do not represent historical confidence;
+- after inland/general boundary smoothing, D-038 coastline normalization may reconstruct the physical shoreline from the canonical Natural Earth 1:10m fabric;
+- if QC fails, the public map falls back to the ordinary land-clipped source polygon rather than forcing a smoothed result.
+
+### Precomputed render cache
+
+Boundary normalization is intentionally **not** computed in the public API request path. The first live implementation demonstrated that repeated geography buffers/unions can make the MVP unresponsive.
+
+Normalized display geometry is therefore materialized in `cartography.render_geometry_cache`. `publish.map_geometry` reads a valid cache row when one exists for the active land fabric and render policy; otherwise it falls back to ordinary `land_clip`.
+
+This keeps the research/source layer immutable, makes render transformations auditable, and prevents cartographic cleanup from becoming a runtime availability risk.
