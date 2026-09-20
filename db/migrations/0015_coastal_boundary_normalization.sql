@@ -39,7 +39,7 @@ LANGUAGE sql
 IMMUTABLE
 PARALLEL SAFE
 SET search_path = public, extensions, pg_catalog, cartography
-AS $
+AS $body$
 WITH base AS (
     SELECT st_collectionextract(st_intersection(source_geom, land_geom), 3) AS geom
 ),
