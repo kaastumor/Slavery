@@ -1,0 +1,14 @@
+{
+  "schema_version": "geometry-render-qc-policy-v1",
+  "policy_id": "cliopatria-qgis-natural-earth-qc-v1",
+  "hard_gates": {
+    "geometry_valid": true,
+    "max_abs_area_delta_pct": 2.0,
+    "max_symmetric_difference_pct": 5.0
+  },
+  "diagnostics": {
+    "hausdorff_m": "record_only"
+  },
+  "visual_review_required_before_promotion": true,
+  "notes": "Initial render-only QC calibrated against the Achaemenid accepted pilot and representative Cliopatria cases. Outliers are quarantined/fallback rather than forcing the batch to fail or silently promoting them."
+}

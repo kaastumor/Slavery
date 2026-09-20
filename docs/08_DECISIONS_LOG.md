@@ -261,3 +261,13 @@ These are logical lanes, not a requirement to create one GitHub Actions file per
 **Provenance boundary:** every promoted derived artifact must retain enough metadata to identify source versions, code revision, tool/runtime versions, processing parameters, QC results and file/content hashes.
 
 **Reason:** this matches established scientific-data and CI/CD practice more closely than a proliferation of ad-hoc workflows. USGS guidance recommends scripted, modular, standardized and reproducible processing with provenance recorded throughout the data lifecycle; FAIR requires detailed provenance and domain-relevant standards; GitHub Actions supports reusable workflows and protected deployment environments; and mainstream continuous-delivery guidance recommends build-once/promote-many immutable artifacts rather than rebuilding in each environment. The separation also prevents experimental cartography or unfinished research from affecting the public atlas.
+
+## D-048 — Geometry candidates are quarantined by explicit render-QC policy before visual acceptance
+**Date:** 2026-09-20  
+**Decision:** The consolidated geometry build pipeline classifies each derived render geometry against a versioned QC policy before any promotion. The initial policy requires valid/non-empty geometry, no more than 2% absolute source-area change, and no more than 5% source-normalized symmetric-difference area. Candidates that exceed a hard gate are marked `quarantined`; the previous approved render/fallback remains in use.
+
+Hausdorff distance is retained as a diagnostic rather than a universal hard gate. In representative testing, Western Han and Mauryan candidates showed large maximum Hausdorff distances while changing less than ~1.2% of source area by symmetric difference, demonstrating that a single extreme boundary point can dominate the metric for very large polygons. Visual review remains mandatory before promotion because automated geometry metrics do not determine historical/cartographic acceptability.
+
+The policy is stored as data/configuration rather than hidden in workflow code. Build artifacts record the QGIS container digest, Natural Earth checksum, transformation parameters, source inputs, QC reports and artifact hashes.
+
+**Reason:** automated map QC should catch large distortions consistently without turning one fragile metric into a proxy for cartographic correctness. Explicit quarantine/fallback makes outliers such as Baekje visible and reviewable while allowing unrelated geometries to progress safely.
