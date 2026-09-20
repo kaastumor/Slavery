@@ -84,7 +84,8 @@ Established architecture:
 - [x] Keep Baekje on fallback; do not weaken global QC.
 - [x] Investigate Baekje's source/geometry separately under #40. No open, license-clear 347–391 CE specialist vector replacement was identified; keep the failed candidate quarantined/fallback and do not invent a replacement polygon. Documented in docs/18_GEOMETRY_SOURCE_SURVEY.md.
 - [x] Use 10 km as the conservative generic Cliopatria candidate baseline under D-049; do not auto-escalate tolerance, and do not replace the already accepted live Achaemenid render merely for uniformity.
-- [x] Implement a controlled exact-artifact promotion gate: D-050 + checked-in per-geometry acceptance/semantic registry + checksum-verifying promotion tool + real-artifact CI. Merged in PR #54.\n- [ ] **BLOCKED (execution credential):** promote the five approved 10 km representative geometries through D-050. Production workflow run `35528369798` passed artifact validation, API health, project-health and control-plane checks, then failed safely before any write because the existing scoped `SUPABASE_MANAGEMENT_TOKEN` lacks permission for the Management API `/database/query` endpoint (HTTP 403). Production geometry is unchanged; accepted Achaemenid rows remain live and Baekje remains quarantined. Fix the execution path/credential without weakening the gate, then retry.
+- [x] Implement a controlled exact-artifact promotion gate: D-050 + checked-in per-geometry acceptance/semantic registry + checksum-verifying promotion tool + real-artifact CI. Merged in PR #54.
+- [x] Promote the five approved 10 km representative geometries through D-050. The initial GitHub Management API executor failed safely before writes (HTTP 403); the same immutable artifact and D-050 checks were then applied transactionally through a one-time Supabase-native executor and independently verified. Live cache: 99 rows; all five promoted geometries valid SRID 4326 with exact artifact vertex counts; accepted Achaemenid rows preserved; Baekje absent/quarantined.
 - [ ] Re-check the public browser after promotion.
 - [ ] Close #27 only when multiple representative regions and zoom levels are genuinely correct.
 
@@ -92,7 +93,7 @@ Established architecture:
 
 A cartographically attractive polygon can still be historically wrong for a claim if the geometry represents a whole polity while the evidence target is narrower.
 
-- [ ] Audit overbroad whole-polity proxies during geometry promotion.
+- [x] Audit overbroad whole-polity proxies during geometry promotion. D-050's per-geometry registry records semantic scope separately from cartographic acceptance: the five promoted cases are accepted only as polity context, while Baekje is explicitly blocked as a bounded-event case.
 - [ ] Prefer unresolved/narrower defensible geometry over attractive false precision.
 
 ---
@@ -259,7 +260,7 @@ Candidates already worth revisiting when relevant:
 | --- | --- |
 | Baekje loses ~8–9% area in generic QGIS pipeline | Quarantine/fallback; investigate source/specialist geometry |
 | Production GIS experimentation can cause outages | Offline/CI/staging only; public path serves precomputed geometry |
-| Geometry promotion executor cannot currently write via Management API | Existing scoped `SUPABASE_MANAGEMENT_TOKEN` lacks `/database/query` privilege; run `35528369798` failed before transaction. Fix execution path/credential, do not broaden production access casually. |
+| GitHub geometry-promotion executor cannot write via Management API | Existing scoped `SUPABASE_MANAGEMENT_TOKEN` lacks `/database/query` privilege; run `35528369798` failed safely before transaction. The 2026-09-20 promotion used a one-time Supabase-native exact-artifact executor; durable scoped promotion credentials remain #43 work. |
 | No true staging environment yet | Local/CI testing; Supabase branch requires user cost approval |
 | Published release depends heavily on live DB | #43 static/recoverable snapshot work |
 | Historical migration ledger irregularities | #26 non-destructive reconciliation |
@@ -276,6 +277,7 @@ Candidates already worth revisiting when relevant:
 - **DONE / merged:** PR #45 consolidated geometry build/QC/quarantine pipeline / D-048.
 - **DONE / merged:** PR #48 exact-artifact scalable visual-review sheets with MultiPolygon regression coverage.
 - **DONE / visually accepted + live:** Achaemenid ~500 BCE QGIS/Natural Earth pilot.
+- **DONE / live:** five D-050-approved 10 km representative render geometries promoted from immutable artifact `7644ea348ec43093219d964069a7b88ec088a331`; cache 94 → 99, Achaemenid preserved, Baekje quarantined.
 - **DONE:** stale PR #37 closed because its migration/cartography path was superseded.
 - **DONE:** stale PR #5 closed because its migration sequence no longer matched current `main`; the underlying release-reconstruction requirement remains issue #4.
 
