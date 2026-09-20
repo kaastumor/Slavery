@@ -84,10 +84,30 @@ Primary material reviewed:
 
 **Current atlas decision:** AWMC may outrank Cliopatria for an exact bounded Greco-Roman snapshot when semantic/date fit, provenance, license handling and geometry QC all pass. It does not become the ancient-world default and it does not authorize temporal interpolation between snapshots.
 ### OpenHistoricalMap
-- Scope: global collaborative historical mapping with temporal administrative boundaries and other historical features.
-- Strength: standard OSM-style vector model, active community, potentially much more detailed local coverage.
-- Atlas role: useful supplementary geometry/source discovery and a possible specialist fallback after provenance review.
-- Limitation: coverage and scholarly review are uneven; it is not a single curated global historical-boundary authority.
+
+**Evaluation status: completed. Retain as supplementary/source-discovery material and a case-by-case geometry candidate; do not assign automatic authority or global precedence.**
+
+- **Project/model:** OpenHistoricalMap (OHM) is a global, community-edited historical map built on the OpenStreetMap data model. Administrative areas use boundary relations and can carry `start_date`, `end_date`, `admin_level`, `border_type`, source and other provenance tags.
+- **Temporal capability:** the production map/time-slider filters features using basic `start_date=*` and `end_date=*`. OHM also documents richer EDTF-style date tags, but current slider support does not uniformly honor `start_date:edtf` / `end_date:edtf`. The atlas must therefore preserve OHM's raw temporal strings/uncertainty rather than treating the visible OHM time filter as an authoritative normalization.
+- **Coverage reality:** OHM's own administrative-boundary project describes the first goal as mapping current top-level boundaries globally, with historical backfilling as an additional goal, and lists country coverage as uneven/partial. Coverage is contributor- and project-dependent rather than a completed scholarly global series.
+- **License:** OHM data is CC0/public-domain by default unless an element carries its own `license=*` restriction. A small subset has feature-specific open licenses; some inherited physical features have older OSM licensing lineage. Any atlas import must inspect and retain feature-level `license`, `attribution` and `source` tags rather than assuming every selected geometry is unconditionally CC0.
+- **Data access:** OHM supports normal OSM-style raw API/export, Overpass querying, bulk data paths and vector-tile delivery. This is technically compatible with targeted extraction and QGIS/PostGIS comparison, but API convenience does not establish historical authority.
+- **Boundary semantics:** OHM documents an “on the ground” approach to disputed boundaries, generally preferring internationally recognized/physical-control realities and allowing approximate lines where borders are unclear. That may differ from the atlas's historical-jurisdiction question in a given case, so semantic matching is mandatory.
+- **Versioning requirement:** if an OHM feature is used for research or promoted geometry, retain the element/relation ID, element version, retrieval timestamp, raw tags, member geometry lineage and source/license tags. A mutable live relation without a pinned version is not sufficient release provenance.
+- **Promotion gate:** an OHM boundary may outrank Cliopatria only for a bounded case when the exact feature has adequate cited provenance, defensible temporal fit, complete/valid relation geometry, compatible licensing, and a source-vs-source comparison demonstrating improvement. Community popularity or map detail alone is not evidence of correctness.
+- **No absence inference:** absence of a boundary, date, source tag or country coverage in OHM is a research-coverage state only. It must never be translated into territorial-practice absence, political nonexistence, or an unresolved geometry being “ocean.”
+- **No automatic source-family precedence:** unlike a versioned specialist scholarly GIS, OHM is heterogeneous at feature level. Precedence therefore belongs to an accepted **feature/version**, not to OHM globally.
+
+Primary documentation reviewed:
+- https://wiki.openstreetmap.org/wiki/OpenHistoricalMap/Boundaries
+- https://wiki.openstreetmap.org/wiki/OpenHistoricalMap/Projects/Administrative_Boundaries
+- https://wiki.openstreetmap.org/wiki/OpenHistoricalMap/License
+- https://wiki.openstreetmap.org/wiki/OpenHistoricalMap/Tags/Key/license
+- https://wiki.openstreetmap.org/wiki/OpenHistoricalMap/Tags/Key/start_date
+- https://wiki.openstreetmap.org/wiki/OpenHistoricalMap/QGIS
+- https://www.openhistoricalmap.org/export
+
+**Current atlas decision:** use OHM to discover sources, reconcile identities, inspect local historical boundaries and propose bounded geometry candidates. Never use OHM coverage density as an authority signal; every promoted OHM geometry must be independently reviewed and pinned at feature/version level.
 
 ### Pleiades
 - Scope: ancient places, locations, names and connections, strongest in the Greek and Roman world.
@@ -146,5 +166,5 @@ This is a resolved source-search outcome, not a claim that the surviving Cliopat
 - CShapes 2.0 evaluation complete: strong modern specialist comparator for 1886–2019 (CShapes-Europe 1816+), but dataset licensing is CC BY-NC-SA 4.0; do not directly ingest into the public canonical geometry layer without an explicit license/distribution decision or permission.
 - CHGIS V6 evaluation complete: technically suitable for internal comparison, but direct public redistribution is blocked by the dataset-specific license pending explicit permission.
 - AWMC / bounded Greco-Roman evaluation complete: use current AWMC ODbL GeoJSON snapshots as preferred candidates only for exact supported dates/entities; MAPS/DARMC and DARE remain supplementary comparators with their own temporal/license limits.
-- Sample OpenHistoricalMap administrative boundary completeness for several benchmark dates/regions.
+- OpenHistoricalMap evaluation complete: global/community temporal infrastructure is valuable, but coverage/provenance are feature-level and uneven. Use as supplementary/source discovery and accept individual pinned relations only after source/date/license/geometry review; no global OHM precedence.
 - Audit CONFOEDERATIO/Naissance licensing, provenance, source citations, temporal resolution and geometry quality before considering it as a second global baseline.
