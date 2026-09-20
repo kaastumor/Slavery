@@ -52,3 +52,22 @@ From `web/`:
 The web client does not maintain its own independent coastline file. `atlas-data` returns the active `cartography.land_fabric` metadata and immutable source URL. MapLibre loads that exact geometry for the neutral land layer, while PostgreSQL uses the same fabric to clip published historical polygon fills.
 
 This guarantees that the physical coastline of the basemap and historical overlays comes from one structure. Historical inland boundaries remain sourced from the historical geometry provider and are not replaced by Natural Earth.
+
+
+## Local geometry artifact review
+
+`review.html` is a local-only MapLibre QC surface for issue #27. It does not call the atlas API and does not write to production.
+
+Use it to inspect the **exact geometry-build artifact** that passed CI:
+
+1. download and extract the relevant `geometry-candidate-<tolerance>m-<sha>` artifact;
+2. run `npm ci` and `npm run dev` in `web/`;
+3. open `/review.html`;
+4. load `artifact_manifest.json`;
+5. load the matching checked-in source fixture (for example `tests/fixtures/cartography/representative_cliopatria_source.geojson`);
+6. load the artifact's candidate GeoJSON (for example `representative.geojson`);
+7. optionally load the corresponding decision JSON for QC metrics.
+
+The review page verifies source/candidate SHA-256 values against the artifact manifest and verifies the pinned Natural Earth 1:10m land fabric checksum before calling the input set exact-artifact reviewable.
+
+This page is deliberately not linked from the public MVP UI and is not a publication path.
