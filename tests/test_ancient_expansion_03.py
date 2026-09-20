@@ -1,4 +1,5 @@
 from pathlib import Path
+import json
 import sys
 import unittest
 
@@ -59,6 +60,23 @@ class AncientExpansionBatch03Tests(unittest.TestCase):
         groups = [item["independence_group"] for item in spec["evidence"]]
         self.assertIn("late_egypt_branding_documents", groups)
         self.assertIn("late_egypt_karev_research_program", groups)
+
+    def test_opone_slave_export_stays_external_to_territorial_p_levels(self):
+        path = self.case_dir / "external_01_opone_slave_export.json"
+        spec = json.loads(path.read_text(encoding="utf-8"))
+        claim = spec["claim"]
+        self.assertEqual(claim["claim_kind"], "external_participation")
+        self.assertEqual(claim["review_status"], "reviewed")
+        self.assertEqual(claim["publication_status"], "unpublished")
+        self.assertNotIn("territorial_practice", claim)
+        self.assertNotIn("practice_level", claim["external_participation"])
+        self.assertEqual(claim["external_participation"]["participation_type_code"], "captive_export")
+        self.assertEqual(spec["spatial_entity"]["entity_type_code"], "port")
+        self.assertEqual(spec["geometry"]["accuracy_status"], "unresolved")
+        self.assertIsNone(spec["geometry"]["geojson"])
+        periplus = next(item for item in spec["evidence"] if item["independence_group"] == "periplus_opone")
+        self.assertEqual(periplus["locator"], "section 13")
+        self.assertEqual(periplus["direction"], "supports")
 
 
 if __name__ == "__main__":
