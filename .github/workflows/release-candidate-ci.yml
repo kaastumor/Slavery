@@ -1,0 +1,51 @@
+name: Release Candidate CI
+
+on:
+  pull_request:
+    paths:
+      - "data/release_candidates/**"
+      - "tools/publish_release.py"
+      - ".github/workflows/release-candidate-ci.yml"
+  push:
+    branches: [main]
+    paths:
+      - "data/release_candidates/**"
+      - "tools/publish_release.py"
+      - ".github/workflows/release-candidate-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Validate release candidate manifests
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t manifests < <(find data/release_candidates -maxdepth 1 -type f -name '*.json' | sort)
+
+          echo "### Release candidate validation" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "${#manifests[@]}" -eq 0 ]; then
+            echo "No release candidate manifests in this revision." | tee -a "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          for manifest in "${manifests[@]}"; do
+            echo "- `$manifest`" >> "$GITHUB_STEP_SUMMARY"
+            python tools/publish_release.py "$manifest"
+          done
+
+      - name: Block accidental canonical promotion through preview tooling
+        shell: bash
+        run: |
+          if grep -R --include='*.json' -n '"canonical"[[:space:]]*:[[:space:]]*true' data/release_candidates; then
+            echo "Canonical releases require a separate explicit process and decision." >&2
+            exit 1
+          fi
