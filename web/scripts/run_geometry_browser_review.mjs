@@ -1,5 +1,5 @@
 import { chromium } from "playwright";
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 function parseArgs(argv) {
@@ -23,6 +23,84 @@ function slug(value) {
     .toLowerCase() || "geometry";
 }
 
+function geometryId(feature) {
+  const value = feature?.properties?.geometry_id;
+  return value === null || value === undefined || value === "" ? null : String(value);
+}
+
+function collectCoordinates(value, out = []) {
+  if (!Array.isArray(value)) return out;
+  if (
+    value.length >= 2 &&
+    typeof value[0] === "number" &&
+    typeof value[1] === "number"
+  ) {
+    out.push([Number(value[0]), Number(value[1])]);
+    return out;
+  }
+  for (const item of value) collectCoordinates(item, out);
+  return out;
+}
+
+function featureCoordinateMap(collection) {
+  const result = new Map();
+  for (const feature of collection.features ?? []) {
+    const id = geometryId(feature);
+    if (!id || !feature.geometry || !("coordinates" in feature.geometry)) continue;
+    result.set(id, collectCoordinates(feature.geometry.coordinates));
+  }
+  return result;
+}
+
+function sampleEvenly(points, maxCount) {
+  if (points.length <= maxCount) return points;
+  const sampled = [];
+  const step = points.length / maxCount;
+  for (let i = 0; i < maxCount; i += 1) {
+    sampled.push(points[Math.floor(i * step)]);
+  }
+  return sampled;
+}
+
+function projectedDistanceSquared(a, b) {
+  const meanLat = ((a[1] + b[1]) / 2) * Math.PI / 180;
+  const dx = (a[0] - b[0]) * Math.cos(meanLat);
+  const dy = a[1] - b[1];
+  return dx * dx + dy * dy;
+}
+
+function maxBoundaryDisplacementFocus(sourcePoints, candidatePoints) {
+  if (!sourcePoints?.length || !candidatePoints?.length) return null;
+
+  const sourceSample = sampleEvenly(sourcePoints, 1200);
+  const candidateSample = sampleEvenly(candidatePoints, 4000);
+
+  let bestPoint = candidateSample[0];
+  let bestDistance = -1;
+
+  for (const candidate of candidateSample) {
+    let nearest = Number.POSITIVE_INFINITY;
+    for (const source of sourceSample) {
+      const distance = projectedDistanceSquared(candidate, source);
+      if (distance < nearest) nearest = distance;
+      if (nearest <= bestDistance) break;
+    }
+    if (nearest > bestDistance) {
+      bestDistance = nearest;
+      bestPoint = candidate;
+    }
+  }
+
+  return {
+    center: bestPoint,
+    approximate_displacement_degrees: Math.sqrt(Math.max(bestDistance, 0)),
+  };
+}
+
+async function loadCollection(filePath) {
+  return JSON.parse(await readFile(filePath, "utf8"));
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const required = ["base-url", "manifest", "source", "candidate", "decision", "land", "output"];
@@ -32,6 +110,11 @@ async function main() {
 
   const outputDir = path.resolve(args.output);
   await mkdir(outputDir, { recursive: true });
+
+  const sourceCollection = await loadCollection(path.resolve(args.source));
+  const candidateCollection = await loadCollection(path.resolve(args.candidate));
+  const sourceCoordinates = featureCoordinateMap(sourceCollection);
+  const candidateCoordinates = featureCoordinateMap(candidateCollection);
 
   const browser = await chromium.launch({
     headless: true,
@@ -81,7 +164,6 @@ async function main() {
 
     const captures = [];
     const mapWrap = page.locator(".map-wrap");
-    const zoomIn = page.locator(".maplibregl-ctrl-zoom-in");
 
     for (const option of options) {
       await page.locator("#geometry-select").selectOption(option.value);
@@ -91,22 +173,50 @@ async function main() {
       const geometryDir = path.join(outputDir, slug(option.label));
       await mkdir(geometryDir, { recursive: true });
 
+      const fitZoom = await page.evaluate(() => {
+        const reviewWindow = window;
+        const map = reviewWindow.__atlasGeometryReviewMap;
+        if (!map) throw new Error("Review map test hook is unavailable");
+        return map.getZoom();
+      });
+
+      const focus = maxBoundaryDisplacementFocus(
+        sourceCoordinates.get(option.value),
+        candidateCoordinates.get(option.value),
+      );
+
       const states = [
-        { name: "fit", extraZoomClicks: 0 },
-        { name: "zoom-plus-2", extraZoomClicks: 2 },
-        { name: "zoom-plus-4", extraZoomClicks: 4 },
+        {
+          name: "fit",
+          camera: null,
+        },
+        {
+          name: "boundary-plus-2",
+          camera: focus
+            ? { center: focus.center, zoom: Math.min(9.25, fitZoom + 2) }
+            : null,
+        },
+        {
+          name: "boundary-plus-4",
+          camera: focus
+            ? { center: focus.center, zoom: Math.min(9.75, fitZoom + 4) }
+            : null,
+        },
       ];
 
       for (const state of states) {
-        await page.locator("#fit-selected").click();
-        await page.waitForTimeout(350);
-
-        for (let i = 0; i < state.extraZoomClicks; i += 1) {
-          await zoomIn.click();
-          await page.waitForTimeout(160);
+        if (state.camera) {
+          await page.evaluate((camera) => {
+            const reviewWindow = window;
+            const map = reviewWindow.__atlasGeometryReviewMap;
+            if (!map) throw new Error("Review map test hook is unavailable");
+            map.jumpTo({ center: camera.center, zoom: camera.zoom });
+          }, state.camera);
+        } else {
+          await page.locator("#fit-selected").click();
         }
 
-        await page.waitForTimeout(250);
+        await page.waitForTimeout(500);
         const zoomLabel = await page.locator("#zoom-label").innerText();
         const metrics = await page.locator("#metrics").innerText();
         const filename = state.name + ".png";
@@ -117,6 +227,8 @@ async function main() {
           label: option.label,
           state: state.name,
           zoom_label: zoomLabel,
+          focus_coordinate: state.camera?.center ?? null,
+          max_boundary_displacement_probe: focus,
           metrics,
           screenshot: path.posix.join(slug(option.label), filename),
         });
@@ -132,6 +244,8 @@ async function main() {
         decision: path.basename(args.decision),
         land: path.basename(args.land),
       },
+      review_strategy:
+        "fit + candidate boundary point with maximum approximate nearest-source displacement at two closer zooms",
       geometries: options,
       captures,
       page_errors: pageErrors,
