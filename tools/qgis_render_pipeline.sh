@@ -42,6 +42,7 @@ workdir=$(mktemp -d)
 trap 'rm -rf "$workdir"' EXIT
 
 hist_metric="$workdir/historical_metric.gpkg"
+land_subset="$workdir/land_subset.geojson"
 land_metric="$workdir/land_metric.gpkg"
 smoothed="$workdir/historical_smoothed.gpkg"
 snapped="$workdir/historical_snapped.gpkg"
@@ -52,13 +53,46 @@ wgs84="$workdir/historical_wgs84.gpkg"
 
 export QT_QPA_PLATFORM=offscreen
 
+# Limit the global physical reference to the historical layer's neighborhood
+# before QGIS snapping. This is a standard spatial-index optimization only:
+# it does not alter reference coordinates or the resulting topology.
+read -r minx miny maxx maxy < <(python3 - "$INPUT" <<'PY'
+import json
+import sys
+
+payload = json.load(open(sys.argv[1], encoding="utf-8"))
+xs, ys = [], []
+
+def visit(coords):
+    if coords and isinstance(coords[0], (int, float)):
+        xs.append(float(coords[0]))
+        ys.append(float(coords[1]))
+        return
+    for item in coords:
+        visit(item)
+
+for feature in payload.get("features", []):
+    geom = feature.get("geometry")
+    if geom:
+        visit(geom.get("coordinates", []))
+
+if not xs:
+    raise SystemExit("input contains no coordinates")
+
+pad = 2.0
+print(min(xs) - pad, min(ys) - pad, max(xs) + pad, max(ys) + pad)
+PY
+)
+
+ogr2ogr -f GeoJSON "$land_subset" "$LAND" -spat "$minx" "$miny" "$maxx" "$maxy"
+
 qgis_process run native:reprojectlayer -- \
   INPUT="$INPUT" \
   TARGET_CRS="EPSG:8857" \
   OUTPUT="$hist_metric"
 
 qgis_process run native:reprojectlayer -- \
-  INPUT="$LAND" \
+  INPUT="$land_subset" \
   TARGET_CRS="EPSG:8857" \
   OUTPUT="$land_metric"
 
