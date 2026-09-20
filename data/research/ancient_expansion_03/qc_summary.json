@@ -2,14 +2,15 @@
   "batch": "ancient_expansion_03",
   "status": "reviewed_unpublished_in_progress",
   "scope": "Ancient Africa and Arabia priority, now continuing outward to underrepresented adjacent ancient regions after the initial Africa/Arabia tranche",
-  "cases_completed": 5,
+  "cases_completed": 6,
   "external_participation_claims_completed": 1,
   "cases": [
     "Pre-Islamic South Arabia — recurrent slavery/captive enslavement in first-millennium epigraphic corpus",
     "Punic Carthage — institutional slavery and agricultural slave labour",
     "Aksum — recurrent slavery with bounded royal-inscription evidence for captive-taking and deportation",
     "Late Period Egypt — pre-Ptolemaic chattel slavery evidenced through hereditary status, alienability and ownership branding",
-    "Sasanian Iran — legally institutionalized slavery with inheritance/alienability, agricultural and fire-foundation labour, and multiple recognized pathways into enslavement"
+    "Sasanian Iran — legally institutionalized slavery with inheritance/alienability, agricultural and fire-foundation labour, and multiple recognized pathways into enslavement",
+    "Late Antique Bactria — court-produced legal documents attest born and purchased slaves, property status, manumission and alienability across a politically changing regional corpus"
   ],
   "external_participation_claims": [
     "Opone — mid-first-century slave-export node to Egypt, represented as captive_export external participation with no territorial P-level"
@@ -24,9 +25,10 @@
     "trade_not_conflated_with_territorial_practice": true,
     "captivity_not_automatically_equated_with_slavery": true,
     "same_author_sources_not_treated_as_independent_votes": true,
-    "external_participation_lane_used_for_trade_evidence": true
+    "external_participation_lane_used_for_trade_evidence": true,
+    "documentary_region_not_mechanically_attributed_to_successive_empires": true
   },
-  "p_levels": {"P2": 2, "P3": 3},
+  "p_levels": {"P2": 2, "P3": 4},
   "unresolved_issues": [
     "South Arabia is intentionally a multi-polity regional synthesis with unresolved geometry; it must not be rendered as one timeless polity polygon.",
     "The South Arabian term ʿbd is semantically context-dependent; the claim relies on explicit ownership, sale and captive evidence and does not classify every ʿbd as enslaved.",
@@ -38,6 +40,9 @@
     "Late Period Egypt needs narrower time-bounded historical geometry before publication; modern Egypt is not an acceptable proxy for the full 664–330 BCE slice.",
     "Sasanian Iran is P3 because legal and institutional evidence securely establishes slavery, alienability/inheritance and multiple labour settings; it remains below P4 because legal richness is not evidence of empire-wide demographic dominance.",
     "Sasanian Iran requires time-bounded historical geometry before publication; neither modern Iran nor one maximum-extent Sasanian polygon is acceptable for the entire 224–651 CE interval.",
+    "Late Antique Bactria is a regional documentary claim spanning successive political regimes. It must not be copied wholesale into Sasanian, Kidarite, Hephthalite, Turkic or early Islamic polity polygons; narrower chronological attribution requires document-level work.",
+    "Late Antique Bactria remains P3 rather than P4: legal-document richness establishes institutional slavery but does not measure demographic dominance or spatial uniformity.",
+    "Bactrian historical geometry and documentary findspots require provenance-backed resolution before publication; modern Afghanistan is not an acceptable territorial proxy.",
     "Opone has a reviewed external-participation captive_export claim from Periplus section 13, explicitly outside territorial P-level classification and unpublished.",
     "Opone/Ras Hafun point geometry still needs source-provenance resolution before any publication.",
     "No claim in this batch is part of a public release."
@@ -52,6 +57,7 @@
     "Investigate Kush/Meroe only through bounded status/captive evidence rather than inherited assumptions about a timeless Nile slave trade.",
     "Extend the external-participation lane to strong trade-node evidence while keeping territorial P-levels separate.",
     "Continue outward into underrepresented ancient West/Central/South Asia and Indian Ocean regions rather than defaulting to dense Atlantic or Mediterranean archives.",
+    "For Bactria, investigate whether document-level dates/findspots permit narrower political attribution without projecting the whole corpus onto successive empires.",
     "Resolve provenance-backed historical geometry for accepted cases before any are considered for publication."
   ]
 }
