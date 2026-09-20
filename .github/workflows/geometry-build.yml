@@ -1,0 +1,147 @@
+name: Geometry Build
+
+on:
+  pull_request:
+    paths:
+      - "tools/qgis_render_pipeline.sh"
+      - "tools/qgis_render_batch.sh"
+      - "tools/qgis_render_qc.py"
+      - "tools/classify_render_qc.py"
+      - "tools/build_artifact_manifest.py"
+      - "config/cartography/**"
+      - "tests/fixtures/cartography/**"
+      - ".github/workflows/geometry-build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: geometry-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  candidate:
+    strategy:
+      fail-fast: false
+      matrix:
+        tolerance_m: [10000, 15000, 20000, 25000]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    container:
+      image: qgis/qgis@sha256:6ffe6b31646247f2e179cb2cc32bb4df215eedc99f387ad59a6cc88ebfe23e21
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Verify pinned QGIS toolchain
+        shell: bash
+        run: |
+          export QT_QPA_PLATFORM=offscreen
+          qgis_process --version | tee /tmp/qgis-version.txt
+          qgis_process help native:smoothgeometry >/dev/null
+          qgis_process help native:snapgeometries >/dev/null
+          qgis_process help native:fixgeometries >/dev/null
+          qgis_process help native:clip >/dev/null
+
+      - name: Fetch and verify canonical Natural Earth 1:10m fabric
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import urllib.request
+
+          url = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson"
+          expected = "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416"
+          path = "/tmp/ne_10m_land.geojson"
+          urllib.request.urlretrieve(url, path)
+          digest = hashlib.sha256(open(path, "rb").read()).hexdigest()
+          if digest != expected:
+              raise SystemExit(f"Natural Earth checksum mismatch: {digest}")
+          print(f"Natural Earth checksum verified: {digest}")
+          PY
+
+      - name: Build Achaemenid benchmark candidate
+        shell: bash
+        run: |
+          export QT_QPA_PLATFORM=offscreen
+          mkdir -p /tmp/geometry-build
+          bash tools/qgis_render_batch.sh \
+            tests/fixtures/cartography/achaemenid_cliopatria_source.geojson \
+            /tmp/ne_10m_land.geojson \
+            /tmp/geometry-build/achaemenid.geojson \
+            ${{ matrix.tolerance_m }}
+          python3 tools/qgis_render_qc.py \
+            tests/fixtures/cartography/achaemenid_cliopatria_source.geojson \
+            /tmp/geometry-build/achaemenid.geojson \
+            /tmp/geometry-build/achaemenid_qc.json
+          python3 tools/classify_render_qc.py \
+            /tmp/geometry-build/achaemenid_qc.json \
+            config/cartography/render_qc_policy.json \
+            /tmp/geometry-build/achaemenid_decision.json
+
+      - name: Build representative candidate set
+        shell: bash
+        run: |
+          export QT_QPA_PLATFORM=offscreen
+          bash tools/qgis_render_batch.sh \
+            tests/fixtures/cartography/representative_cliopatria_source.geojson \
+            /tmp/ne_10m_land.geojson \
+            /tmp/geometry-build/representative.geojson \
+            ${{ matrix.tolerance_m }}
+          python3 tools/qgis_render_qc.py \
+            tests/fixtures/cartography/representative_cliopatria_source.geojson \
+            /tmp/geometry-build/representative.geojson \
+            /tmp/geometry-build/representative_qc.json
+          python3 tools/classify_render_qc.py \
+            /tmp/geometry-build/representative_qc.json \
+            config/cartography/render_qc_policy.json \
+            /tmp/geometry-build/representative_decision.json
+
+      - name: Create immutable provenance manifest
+        shell: bash
+        run: |
+          qgis_version=$(tr '\n' ' ' < /tmp/qgis-version.txt)
+          python3 tools/build_artifact_manifest.py \
+            --kind geometry-render-candidate \
+            --artifact /tmp/geometry-build/achaemenid.geojson \
+            --artifact /tmp/geometry-build/representative.geojson \
+            --input tests/fixtures/cartography/achaemenid_cliopatria_source.geojson \
+            --input tests/fixtures/cartography/representative_cliopatria_source.geojson \
+            --input config/cartography/render_qc_policy.json \
+            --qc /tmp/geometry-build/achaemenid_qc.json \
+            --qc /tmp/geometry-build/representative_qc.json \
+            --qc /tmp/geometry-build/achaemenid_decision.json \
+            --qc /tmp/geometry-build/representative_decision.json \
+            --tool "QGIS=$qgis_version" \
+            --tool "container=qgis/qgis@sha256:6ffe6b31646247f2e179cb2cc32bb4df215eedc99f387ad59a6cc88ebfe23e21" \
+            --param "snap_tolerance_m=${{ matrix.tolerance_m }}" \
+            --param "smooth_iterations=1" \
+            --param "smooth_offset=0.20" \
+            --param "smooth_max_angle=120" \
+            --metadata "land_fabric=natural-earth-ne_10m_land-v5.1.1-ca96624" \
+            --metadata "land_sha256=1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416" \
+            --metadata "promotion_state=candidate" \
+            --output /tmp/geometry-build/artifact_manifest.json
+
+      - name: Publish QC summary
+        shell: bash
+        run: |
+          echo "### Geometry candidate ${{ matrix.tolerance_m }} m" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          cat /tmp/geometry-build/representative_decision.json >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload immutable candidate artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: geometry-candidate-${{ matrix.tolerance_m }}m-${{ github.sha }}
+          path: |
+            /tmp/geometry-build/achaemenid.geojson
+            /tmp/geometry-build/representative.geojson
+            /tmp/geometry-build/achaemenid_qc.json
+            /tmp/geometry-build/representative_qc.json
+            /tmp/geometry-build/achaemenid_decision.json
+            /tmp/geometry-build/representative_decision.json
+            /tmp/geometry-build/artifact_manifest.json
+          if-no-files-found: error
+          retention-days: 90
