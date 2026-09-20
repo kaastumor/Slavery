@@ -42,7 +42,7 @@ GitHub issues hold detailed discussion and acceptance history. This backlog hold
 
 # P0 — Map/cartographic quality
 
-## NOW — Close issue #27 without regressing the accepted Achaemenid result
+## DONE — Issue #27 closed without regressing the accepted Achaemenid result
 
 Issue: **#27 — map alignment / render quality**
 
@@ -87,20 +87,22 @@ Established architecture:
 - [x] Implement a controlled exact-artifact promotion gate: D-050 + checked-in per-geometry acceptance/semantic registry + checksum-verifying promotion tool + real-artifact CI. Merged in PR #54.
 - [x] Promote the five approved 10 km representative geometries through D-050. The initial GitHub Management API executor failed safely before writes (HTTP 403); the same immutable artifact and D-050 checks were then applied transactionally through a one-time Supabase-native executor and independently verified. Live cache: 99 rows; all five promoted geometries valid SRID 4326 with exact artifact vertex counts; accepted Achaemenid rows preserved; Baekje absent/quarantined.
 - [x] Re-check the public browser after promotion. Live GitHub Pages review run `35529260898` passed for Hittite, New Kingdom Egypt, Mauryan, Western Han and Roman promoted geometries; each reports `cliopatria-qgis-natural-earth-v1`, with no browser page errors/map warning. Baekje 369 CE correctly remains on fallback `cliopatria-boundary-normalization-v3`. Fit and +2 zoom screenshots were visually inspected.
-- [ ] Close #27 only when multiple representative regions and zoom levels are genuinely correct.
+- [x] Close #27 only when multiple representative regions and zoom levels are genuinely correct. Issue #27 closed as completed after exact-artifact boundary review, live five-geometry promotion, and live public MapLibre verification.
 
 ### Specific risk: semantic overbreadth
 
 A cartographically attractive polygon can still be historically wrong for a claim if the geometry represents a whole polity while the evidence target is narrower.
 
 - [x] Audit overbroad whole-polity proxies during geometry promotion. D-050's per-geometry registry records semantic scope separately from cartographic acceptance: the five promoted cases are accepted only as polity context, while Baekje is explicitly blocked as a bounded-event case.
-- [ ] Prefer unresolved/narrower defensible geometry over attractive false precision.
+- [x] Prefer unresolved/narrower defensible geometry over attractive false precision. Baekje demonstrates the rule: failed generic transform + no period-appropriate specialist replacement means quarantine/fallback rather than a hand-drawn or modern-proxy ancient polity polygon.
 
 ---
 
 # P0 — Data API security / RLS audit
 
-## NEXT — Verify and secure exposed atlas/cartography tables
+## NOW — Verify and secure exposed atlas/cartography tables
+
+Issue: **#62 — verify Data API exposure and secure atlas/cartography tables**
 
 Supabase's security advisory reports Row Level Security disabled on 32 tables across `atlas` and `cartography`, warning that anon/authenticated Data API roles may have direct table access. Do **not** blindly enable RLS: doing so without matching policies could break the public data path.
 
@@ -279,6 +281,7 @@ Candidates already worth revisiting when relevant:
 | Published release depends heavily on live DB | #43 static/recoverable snapshot work |
 | Historical migration ledger irregularities | #26 non-destructive reconciliation |
 | Attractive geometry may be semantically overbroad | Separate scope review from visual/cartographic QC |
+| Data API / RLS exposure may permit unintended direct table access | P0 issue #62: verify actual exposed schemas/grants first, then apply least-privilege RLS/grant/schema fix without breaking the public Edge Function path. |
 | Archive density could bias research priorities | Resume globally balanced/non-Atlantic-first research after #27 |
 
 ---
@@ -292,6 +295,7 @@ Candidates already worth revisiting when relevant:
 - **DONE / merged:** PR #48 exact-artifact scalable visual-review sheets with MultiPolygon regression coverage.
 - **DONE / visually accepted + live:** Achaemenid ~500 BCE QGIS/Natural Earth pilot.
 - **DONE / live:** five D-050-approved 10 km representative render geometries promoted from immutable artifact `7644ea348ec43093219d964069a7b88ec088a331`; cache 94 → 99, Achaemenid preserved, Baekje quarantined.
+- **DONE / closed:** issue #27 map/cartographic P0 after live public browser verification across Hittite, Egypt, Mauryan, Western Han and Roman representatives; Baekje remains fallback/quarantined.
 - **DONE:** stale PR #37 closed because its migration/cartography path was superseded.
 - **DONE:** stale PR #5 closed because its migration sequence no longer matched current `main`; the underlying release-reconstruction requirement remains issue #4.
 
