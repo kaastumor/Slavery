@@ -124,12 +124,25 @@ jobs:
           done
           ls -lh /tmp/real-render
 
+      - name: Compute Achaemenid tolerance QC
+        shell: bash
+        run: |
+          export QT_QPA_PLATFORM=offscreen
+          for tolerance in 10000 15000 20000 25000; do
+            python3 tools/qgis_render_qc.py \
+              tests/fixtures/cartography/achaemenid_cliopatria_source.geojson \
+              "/tmp/real-render/achaemenid_qgis_${tolerance}m.geojson" \
+              "/tmp/real-render/achaemenid_qc_${tolerance}m.json"
+          done
+
       - name: Upload real render candidates
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: achaemenid-qgis-render-candidates
-          path: /tmp/real-render/achaemenid_qgis_*m.geojson
+          path: |
+            /tmp/real-render/achaemenid_qgis_*m.geojson
+            /tmp/real-render/achaemenid_qc_*m.json
           if-no-files-found: error
 
 
