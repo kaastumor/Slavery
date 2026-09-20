@@ -54,6 +54,35 @@ Primary documentation reviewed:
 Recent scholarly status check:
 - Tao Sun, Peter K. Bol, Xiaohong Zhang, “Advancing historical geography through the Chinese Historical Geographic Information System (CHGIS),” Journal of Historical Geography (2026), DOI 10.1016/j.jhg.2026.06.018.
 
+### Ancient World Mapping Center (AWMC) and bounded Greco-Roman boundary sources
+
+**Evaluation status: completed for the current AWMC geodata repository and adjacent Roman GIS comparators. AWMC is a strong bounded specialist source for named snapshots, not a continuous ancient political-boundary backbone.**
+
+- **Current AWMC source:** `AWMC/geodata`, default branch `master`. The current repository head reviewed for this evaluation is commit `7ecf8bccea2efe1e1e9df2daf6001942de73fb87` (2024-04-22). AWMC's 2026 GIS Data page still points users to this repository as its open GIS-data distribution.
+- **Formats/version discipline:** AWMC states that the GeoJSON files are its most up-to-date working data; the shapefile ZIP archives are periodic snapshots. Atlas comparisons should therefore pin the exact Git commit and individual file/blob SHA rather than referring generically to “AWMC data.”
+- **License:** the current GeoJSON repository is ODbL-1.0. It permits reuse, modification and redistribution, including commercial use, but attribution/share-alike and machine-readable derivative-database obligations apply. If AWMC geometry is promoted into a public atlas database, the release design must preserve those obligations rather than silently relicensing the derived database.
+- **Provenance:** AWMC states that the repository is derived from the Barrington Atlas of the Greek and Roman World and AWMC modifications to OpenStreetMap. Preserve that source lineage; AWMC is not an independently source-free geometry family.
+- **Current political layers:** the repository currently contains discrete political datasets for Alexander's empire, Persian extent, Hasmonean and Herodian realms, Roman extent at 60 BCE, Roman extent at 117 CE, Roman extent at 200 CE, Roman provinces at 200 CE, post-Diocletian Roman provinces, and a senatorial-province layer. These are separately named files, not one temporally continuous polygon series.
+- **Temporal semantics:** most inspected political GeoJSON files encode the date/context in the file/directory name rather than as a standardized per-feature begin/end-year field. The generic AWMC attribute vocabulary includes `timeperiod`/PeriodO support, but the inspected Roman extent/province files retain legacy GIS attributes and cannot be treated as a normalized temporal database without an explicit source-specific crosswalk.
+- **Geometry quality:** AWMC's Roman layers are substantially more detailed than the generic Cliopatria polity polygons and are already aligned to an ancient-world cartographic workflow, but historical inland borders remain interpreted reconstructions. Physical coastline still comes from the atlas's Natural Earth render fabric; never promote AWMC merely because its shoreline is more detailed.
+- **Atlas role:** AWMC is a **preferred candidate source for bounded Greco-Roman comparison at dates for which AWMC publishes an explicit layer**, especially Roman 60 BCE / 117 CE / 200 CE and 200 CE province cases. Replacement of a Cliopatria geometry still requires exact date/entity semantic matching, bounded source-vs-source comparison, normal D-048 quantitative QC, D-050 visual/semantic acceptance, and explicit ODbL release handling.
+- **No interpolation:** do not interpolate an arbitrary Roman boundary between AWMC snapshots or infer that a named snapshot remains valid until the next available file. Unsupported intermediate years continue to use another defensible source/fallback or remain unresolved.
+- **Third-party mirrors:** older AWMC-derived mirrors expose additional dates such as 14 CE and 69 CE, but the current AWMC repository does not presently contain those layers. Do not silently ingest a mirror as though it were current AWMC; recover/pin the original AWMC source and provenance first.
+
+Adjacent Roman datasets reviewed:
+
+- **Mapping Past Societies / DARMC (Harvard):** useful supplementary dated comparator. Its map-source documentation identifies Roman province layers around 117 CE, 303–324 CE and 500 CE, based on the Barrington Atlas. Downloadable MAPS data are released under CC BY-NC-SA 4.0. Use for bounded comparison/source discovery; public ingestion requires explicit handling of NonCommercial/ShareAlike obligations and exact layer/version provenance.
+- **Digital Atlas of the Roman Empire (DARE):** a public GeoJSON/API resource and useful place/province comparator. The inspected GitHub `provinces.geojson` is distributed in an Apache-2.0 repository but contains province names and database timestamps, not a historical validity date. Do not treat that file as a dated province boundary source until the intended historical slice and upstream data rights are independently documented.
+- **Pleiades:** remains the preferred scholarly gazetteer/identity source for ancient places and some local geometries, but is not a continuous Roman or Greco-Roman polity-boundary series.
+
+Primary material reviewed:
+- https://awmc.unc.edu/gis-data/
+- https://github.com/AWMC/geodata
+- https://darmc.harvard.edu/map-sources
+- https://darmc.harvard.edu/data-availability
+- https://www.imperium.ahlfeldt.se/
+
+**Current atlas decision:** AWMC may outrank Cliopatria for an exact bounded Greco-Roman snapshot when semantic/date fit, provenance, license handling and geometry QC all pass. It does not become the ancient-world default and it does not authorize temporal interpolation between snapshots.
 ### OpenHistoricalMap
 - Scope: global collaborative historical mapping with temporal administrative boundaries and other historical features.
 - Strength: standard OSM-style vector model, active community, potentially much more detailed local coverage.
@@ -116,5 +145,6 @@ This is a resolved source-search outcome, not a claim that the surviving Cliopat
 
 - CShapes 2.0 evaluation complete: strong modern specialist comparator for 1886–2019 (CShapes-Europe 1816+), but dataset licensing is CC BY-NC-SA 4.0; do not directly ingest into the public canonical geometry layer without an explicit license/distribution decision or permission.
 - CHGIS V6 evaluation complete: technically suitable for internal comparison, but direct public redistribution is blocked by the dataset-specific license pending explicit permission.
+- AWMC / bounded Greco-Roman evaluation complete: use current AWMC ODbL GeoJSON snapshots as preferred candidates only for exact supported dates/entities; MAPS/DARMC and DARE remain supplementary comparators with their own temporal/license limits.
 - Sample OpenHistoricalMap administrative boundary completeness for several benchmark dates/regions.
 - Audit CONFOEDERATIO/Naissance licensing, provenance, source citations, temporal resolution and geometry quality before considering it as a second global baseline.
