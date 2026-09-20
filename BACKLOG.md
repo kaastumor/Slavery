@@ -106,8 +106,8 @@ Issue: **#62 — verify Data API exposure and secure atlas/cartography tables**
 
 Supabase's security advisory reports Row Level Security disabled on 32 tables across `atlas` and `cartography`, warning that anon/authenticated Data API roles may have direct table access. Do **not** blindly enable RLS: doing so without matching policies could break the public data path.
 
-- [ ] Verify the project's currently exposed Data API schemas/role grants and reproduce whether anon/authenticated clients can directly read or mutate these tables.
-- [ ] Define the intended access model: public browser should consume the reviewed Edge Function/published boundary, not unrestricted draft tables.
+- [x] Verify the effective Data API/client-role boundary. Production checks show `anon` and `authenticated` have no schema `USAGE` on `atlas`, `audit`, `cartography` or `publish` and 0 SELECT/INSERT/UPDATE/DELETE privileges across 54 checked internal tables/views; only `public`/`graphql_public` have client-role schema usage. No client-role default ACL grants were found. The scoped operations token is correctly denied (`403`) from PostgREST-config/API-key management endpoints, so it was not broadened. See `docs/21_DATA_API_SECURITY.md`.
+- [x] Define the intended access model in D-051 and `docs/11_SYSTEM_ARCHITECTURE.md`: the browser consumes `atlas-data`; `atlas`/`audit`/`cartography`/`publish` remain internal schemas with no direct client grants. Any future direct PostgREST contract must use a deliberately exposed API surface with explicit grants and RLS/policies.
 - [ ] Add explicit RLS/grants/policies or remove sensitive schemas from Data API exposure as appropriate.
 - [ ] Test public atlas/API behavior plus unauthorized direct-table read/write attempts before production application.
 - [ ] Run Supabase security advisors again and record residual findings.
