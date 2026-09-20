@@ -1,0 +1,34 @@
+{
+  "batch": "ancient_expansion_03",
+  "status": "reviewed_unpublished_in_progress",
+  "scope": "Ancient Africa and Arabia priority following methodology reset",
+  "cases_completed": 2,
+  "cases": [
+    "Pre-Islamic South Arabia — recurrent slavery/captive enslavement in first-millennium epigraphic corpus",
+    "Punic Carthage — institutional slavery and agricultural slave labour"
+  ],
+  "review_controls": {
+    "specialist_historiography_identified_before_broad_classification": true,
+    "primary_or_source_native_evidence_used_where_available": true,
+    "publication_status": "unpublished",
+    "geometry_kept_independent_from_classification": true,
+    "unknown_not_converted_to_absence": true,
+    "source_count_not_used_mechanically_for_p_level": true
+  },
+  "p_levels": {
+    "P2": 1,
+    "P3": 1
+  },
+  "unresolved_issues": [
+    "South Arabia is intentionally a multi-polity regional synthesis with unresolved geometry; it must not be rendered as one timeless polity polygon.",
+    "The South Arabian term ʿbd is semantically context-dependent; the claim relies on explicit ownership, sale and captive evidence and does not classify every ʿbd as enslaved.",
+    "Punic Carthage needs time-bounded historical geometry before publication.",
+    "Aksum/Adulis remains a research candidate: available evidence clearly supports slave trading/export at Adulis, but the relationship between early Adulis evidence, Aksumite political control and a territorial-practice classification needs a tighter specialist evidence package before a reviewed claim is created.",
+    "No claim in this batch is part of a public release."
+  ],
+  "next_research": [
+    "Build the Aksum/Adulis evidence package without conflating external trade with territorial practice.",
+    "Continue ancient African coverage beyond the Mediterranean littoral, prioritizing evidence quality over filling polygons.",
+    "Complete Mauryan re-review under the revised conflict-synthesis rule before any new public release."
+  ]
+}
