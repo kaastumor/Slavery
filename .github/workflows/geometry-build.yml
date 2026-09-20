@@ -102,19 +102,19 @@ jobs:
       - name: Build scalable visual-review sheets
         shell: bash
         run: |
-          python3 tools/build_geometry_visual_review.py \\
-            tests/fixtures/cartography/achaemenid_cliopatria_source.geojson \\
-            /tmp/geometry-build/achaemenid.geojson \\
-            /tmp/ne_10m_land.geojson \\
-            /tmp/geometry-build/achaemenid_decision.json \\
-            /tmp/geometry-build/visual-review/achaemenid \\
+          python3 tools/build_geometry_visual_review.py \
+            tests/fixtures/cartography/achaemenid_cliopatria_source.geojson \
+            /tmp/geometry-build/achaemenid.geojson \
+            /tmp/ne_10m_land.geojson \
+            /tmp/geometry-build/achaemenid_decision.json \
+            /tmp/geometry-build/visual-review/achaemenid \
             --title "Achaemenid benchmark — ${{ matrix.tolerance_m }} m"
-          python3 tools/build_geometry_visual_review.py \\
-            tests/fixtures/cartography/representative_cliopatria_source.geojson \\
-            /tmp/geometry-build/representative.geojson \\
-            /tmp/ne_10m_land.geojson \\
-            /tmp/geometry-build/representative_decision.json \\
-            /tmp/geometry-build/visual-review/representative \\
+          python3 tools/build_geometry_visual_review.py \
+            tests/fixtures/cartography/representative_cliopatria_source.geojson \
+            /tmp/geometry-build/representative.geojson \
+            /tmp/ne_10m_land.geojson \
+            /tmp/geometry-build/representative_decision.json \
+            /tmp/geometry-build/visual-review/representative \
             --title "Representative geometries — ${{ matrix.tolerance_m }} m"
 
       - name: Create immutable provenance manifest
