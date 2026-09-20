@@ -261,10 +261,10 @@ def inspect_database(cur, package: dict[str, Any], replace_existing: bool) -> li
     )
     row = cur.fetchone()
     if row is None:
-        problems.append(f"unknown render policy: {package['policy_id']}")
+        problems.append(f"unknown render policy: {package['render_policy_id']}")
     else:
         if not row[0]:
-            problems.append(f"render policy is not active: {package['policy_id']}")
+            problems.append(f"render policy is not active: {package['render_policy_id']}")
         if row[1] != "external":
             problems.append(
                 f"render policy generator_kind={row[1]!r}, expected 'external'"
