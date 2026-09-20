@@ -170,3 +170,19 @@ Boundary normalization is intentionally **not** computed in the public API reque
 Normalized display geometry is therefore materialized in `cartography.render_geometry_cache`. `publish.map_geometry` reads a valid cache row when one exists for the active land fabric and render policy; otherwise it falls back to ordinary `land_clip`.
 
 This keeps the research/source layer immutable, makes render transformations auditable, and prevents cartographic cleanup from becoming a runtime availability risk.
+
+## Adaptive coastal completion
+
+The base coastline-recovery corridor is intentionally conservative. Some coarse historical polygons still stop inland of a shoreline by more than the base corridor, while a globally larger corridor can over-expand smaller coastal polities.
+
+For source families approved for adaptive completion:
+
+- retain a documented base recovery corridor;
+- test larger recovery tiers only during cache generation;
+- compare each larger candidate against the base rendered geometry, not against modern borders;
+- accept the largest tier whose additional recovered land stays within the source-family area-change ceiling;
+- record the actual recovery distance and additional-area percentage in render metadata;
+- fall back automatically to a smaller tier or the base corridor when the larger candidate exceeds QC;
+- never compute adaptive recovery in the public API request path.
+
+The initial Cliopatria policy uses a 25 km baseline, permits candidates up to 50 km, and caps extra recovered land at 2% of the baseline rendered area. This is a cartographic/topological QC rule, not a claim about historical territorial certainty.
