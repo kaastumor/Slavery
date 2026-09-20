@@ -14,7 +14,7 @@ class AncientExpansionBatch03Tests(unittest.TestCase):
         self.paths = sorted(self.case_dir.glob("[0-9][0-9]_*.json"))
 
     def test_current_cases_validate_and_remain_unpublished(self):
-        self.assertGreaterEqual(len(self.paths), 3)
+        self.assertGreaterEqual(len(self.paths), 4)
         for path in self.paths:
             with self.subTest(path=path.name):
                 spec = load_spec(path)
@@ -47,6 +47,18 @@ class AncientExpansionBatch03Tests(unittest.TestCase):
         self.assertIn("qualifies", directions)
         rie = next(item for item in spec["evidence"] if item["independence_group"] == "rie_190")
         self.assertIn("does not establish", rie["source"]["reliability_limitations"])
+
+    def test_late_period_egypt_chattel_evidence_stops_below_p4(self):
+        spec = load_spec(self.case_dir / "04_late_period_egypt_slavery.json")
+        practice = spec["claim"]["territorial_practice"]
+        self.assertEqual(practice["practice_level"], "P3")
+        self.assertEqual(practice["coverage_state_code"], "classified")
+        self.assertEqual(spec["geometry"]["accuracy_status"], "unresolved")
+        self.assertIsNone(spec["geometry"]["geojson"])
+        self.assertIn("stops below P4", practice["notes"])
+        groups = [item["independence_group"] for item in spec["evidence"]]
+        self.assertIn("late_egypt_branding_documents", groups)
+        self.assertIn("late_egypt_karev_research_program", groups)
 
 
 if __name__ == "__main__":
