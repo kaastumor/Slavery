@@ -121,10 +121,27 @@ Primary documentation reviewed:
 - Atlas role: visual/reference comparison only unless data accessibility and provenance materially improve.
 
 ### CONFOEDERATIO Atlas / Naissance HGIS
-- Scope claimed by the project: global de facto polity extents from 3300 BCE to 2014 CE, currently beta.
-- Potential: unusually close functional alternative to Cliopatria and worth direct evaluation.
-- Atlas role: candidate benchmark/source after license, provenance, version stability and scholarly validation are assessed.
-- Limitation: comparatively new beta dataset; do not replace Cliopatria merely because it is newer.
+
+**Evaluation status: completed for the currently public beta material. Retain as an experimental global comparator; do not give the source family automatic or specialist precedence yet.**
+
+- **Project/source:** Confoederatio's Atlas is a global historical-border dataset edited/viewed through Naissance HGIS. The public project describes de facto polity extents at sub-yearly resolution and separately uses CShapes 2.0 for de jure modern borders.
+- **Current maturity:** the public Atlas is explicitly labelled **Beta (Ongoing)** / work-in-progress. The Dataview currently identifies itself as `Version 0.5b` with domain 3300 BCE–2014 CE, while the current Naissance README describes Atlas as 3000 BCE–2026 CE and the repository bundles `saves/atlas_0.51b.naissance` (50 MB), updated in commit `78a55e2b24b3e04ce8c205e3a849a71801e2ba85` on 2026-06-10. These are meaningful version/domain inconsistencies for reproducible research.
+- **Temporal machinery:** Naissance stores history as geometry keyframes and can use static or interpolated transitions depending on the use case. Public Atlas material is described as sub-yearly; daily keyframes are available on request, while public files may be simplified/compressed. The atlas must therefore never assume that an interpolated visual boundary represents an independently evidenced historical boundary at every intermediate date.
+- **License:** Confoederatio currently states that accessible CRD work, including datasets, is MIT-licensed. That is permissive for the project's own de facto material. However, Atlas also states that de jure extents use CShapes 2.0; those upstream CShapes geometries retain their own CC BY-NC-SA 4.0 obligations and cannot be treated as relicensed by a general MIT statement.
+- **Source base:** Confoederatio publishes/maintains a large historical-map and atlas archive (`Preservés`) and lists many reference works used in its broader research environment. During this evaluation, however, no public machine-readable or clearly documented **per-polity/per-keyframe citation mapping** for Atlas 0.5b/0.51b was identified. A general archive catalogue is not equivalent to claim-specific geometry provenance.
+- **Reproducibility consequence:** any future Atlas comparison must pin the exact downloadable dataset/save version, file checksum, Naissance version and extraction method. Referring simply to “Confoederatio Atlas” is insufficient while public 0.5b/0.51b scope descriptions differ and the public dataset is under active refinement.
+- **Atlas role now:** useful **second-global-baseline benchmark** for stress-testing Cliopatria and locating suspicious extents/gaps across regions that lack specialist GIS. It may motivate further source research, but the geometry itself should not be promoted merely because it appears more detailed or temporally dense.
+- **Promotion threshold:** a Confoederatio geometry may only become a candidate source for a bounded case if its exact geometry/keyframe can be traced to adequate source citations, its temporal semantics are explicit, its source-native version/ID is preserved, applicable upstream licensing is resolved, and a bounded comparison demonstrates a defensible improvement.
+- **No interpolation / no archive-density inference:** Naissance's ability to interpolate keyframes is a visualization/tooling capability, not historical evidence. Likewise the size of the Preservés archive cannot mechanically establish boundary accuracy, political control, territorial-practice prevalence or evidentiary confidence.
+- **Tooling:** Naissance HGIS itself is an interesting experimental editor for spatiotemporal GIS/keyframe inspection. There is no current reason to replace the atlas's QGIS/GEOS/GDAL + MapLibre production architecture with it; evaluate the editor separately only if a concrete workflow benefit emerges.
+
+Primary material reviewed:
+- https://confoederatio.org/
+- https://confoederatio.org/pages/dataview
+- https://github.com/ConfoederatioVF/Naissance
+- `ConfoederatioVF/Naissance` bundled save `saves/atlas_0.51b.naissance`, Git blob `4c33f013d11fd4364cdeeacc274942ba6c5456d4`
+
+**Current atlas decision:** keep Confoederatio Atlas as an experimental comparator/source-discovery aid. Do not use it as a default replacement for Cliopatria or a specialist regional source until exact-version provenance and feature/keyframe source traceability are strong enough for the atlas's claim-specific evidence standard.
 
 ## Source strategy
 
@@ -167,4 +184,4 @@ This is a resolved source-search outcome, not a claim that the surviving Cliopat
 - CHGIS V6 evaluation complete: technically suitable for internal comparison, but direct public redistribution is blocked by the dataset-specific license pending explicit permission.
 - AWMC / bounded Greco-Roman evaluation complete: use current AWMC ODbL GeoJSON snapshots as preferred candidates only for exact supported dates/entities; MAPS/DARMC and DARE remain supplementary comparators with their own temporal/license limits.
 - OpenHistoricalMap evaluation complete: global/community temporal infrastructure is valuable, but coverage/provenance are feature-level and uneven. Use as supplementary/source discovery and accept individual pinned relations only after source/date/license/geometry review; no global OHM precedence.
-- Audit CONFOEDERATIO/Naissance licensing, provenance, source citations, temporal resolution and geometry quality before considering it as a second global baseline.
+- CONFOEDERATIO/Naissance evaluation complete: Atlas is a useful experimental second-global-baseline comparator, but its beta/WIP status, public version/domain inconsistencies, compressed/keyframed temporal model and currently unverified feature-level source traceability block source-family precedence or direct promotion.
