@@ -133,10 +133,10 @@ def svg_for_feature(source: dict, candidate: dict, land_features: list[dict], de
 
     local_land: list[list[list[float]]] = []
     for feature in land_features:
-        rings = geometry_rings(feature.get("geometry"))
-        rb = bounds_from_rings(rings)
-        if rb and intersects(rb, bbox):
-            local_land.extend(rings)
+        for ring in geometry_rings(feature.get("geometry")):
+            rb = bounds_from_rings([ring])
+            if rb and intersects(rb, bbox):
+                local_land.append(ring)
 
     left_x = MARGIN
     right_x = MARGIN + PANEL_W + GAP
