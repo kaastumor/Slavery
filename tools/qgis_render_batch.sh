@@ -57,7 +57,14 @@ dest = pathlib.Path(sys.argv[1])
 features = []
 for filename in sys.argv[2:]:
     payload = json.loads(pathlib.Path(filename).read_text(encoding="utf-8"))
-    features.extend(payload.get("features", []))
+    for feature in payload.get("features", []):
+        # Each single-feature QGIS output starts its own provider FID at 1.
+        # FID is transport metadata, not atlas identity; remove it before merge
+        # so the combined layer can be validated/imported without collisions.
+        props = feature.get("properties") or {}
+        props.pop("fid", None)
+        feature["properties"] = props
+        features.append(feature)
 
 if not features:
     raise SystemExit("batch render produced no features")
