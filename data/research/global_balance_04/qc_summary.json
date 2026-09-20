@@ -1,0 +1,58 @@
+{
+  "batch": "global_balance_04",
+  "status": "reviewed_unpublished_staged",
+  "scope": "First deliberately cross-regional weak-coverage batch after cartography/release foundations: Southeast Asia, Americas, Oceania/Pacific, East/Southern Africa, plus a West/Central African external-network candidate.",
+  "selection_basis": "Canonical v0.6.1 research-management coverage matrix identifies Oceania/Pacific, Americas, West/Central Africa, East/Southern Africa and Southeast Asia among the weakest broad regions. These scores guided research priority only; they were not used as historical prevalence evidence.",
+  "territorial_cases_staged": 4,
+  "external_network_candidates_preserved": 1,
+  "cases": [
+    "Funan — recurrent enslavement in exogenous Chinese textual tradition, P2, geometry unresolved",
+    "Southern Maya Lowlands — recurrent Late Classic captive-taking/incorporation, P2, not a blanket slavery claim",
+    "Hawaiian Islands — hereditary kauwā status represented as other servile dependency, P3, small scale explicitly preserved",
+    "Songo Mnara — positive fifteenth-century site-level slavery designation with practice_level intentionally NULL because intensity is not defensible from the archaeological evidence"
+  ],
+  "external_network_candidates": [
+    "Eighth-century central-Saharan / Zaghāwa-Kawār slave traffic — preserve for future external-participation ingestion; no territorial P-level assigned"
+  ],
+  "review_controls": {
+    "weak_non_atlantic_regions_prioritized": true,
+    "archive_density_not_used_as_prevalence": true,
+    "specialist_historiography_used_for_classification": true,
+    "primary_or_source_native_evidence_used_where_available": true,
+    "publication_status_unpublished": true,
+    "geometry_kept_independent_from_classification": true,
+    "unknown_or_unassigned_not_converted_to_absence": true,
+    "source_count_not_used_mechanically_for_p_level": true,
+    "trade_not_conflated_with_territorial_practice": true,
+    "captivity_not_automatically_equated_with_slavery": true,
+    "indigenous_status_term_not_mechanically_translated": true,
+    "external_participation_kept_separate": true,
+    "modern_or_maximum_extent_geometry_not_substituted": true
+  },
+  "p_levels": {
+    "P2": 2,
+    "P3": 1,
+    "NULL_intensity_unassigned": 1
+  },
+  "unresolved_issues": [
+    "Funan is an exogenous Chinese historical category with debated political geography. Resolve any geometry in narrower bounded slices; modern Cambodia/Vietnam and maximum-extent reconstructions are not acceptable substitutes.",
+    "The Funan textual witnesses are not automatically independent simply because multiple later Chinese histories preserve similar material.",
+    "The Late Classic Maya case records captive-taking/incorporation, not blanket slavery. Prisoners had varied outcomes and captive iconography is not a prevalence metric.",
+    "The Maya case spans multiple polities and therefore remains geometry-unresolved at regional level.",
+    "Kauwā is retained as a context-sensitive indigenous status category under other_servile_dependency. P3 reflects hereditary institutional structure, not demographic scale.",
+    "The Hawaiʻi case predates complete political unification; do not apply later kingdom or modern state geometry to the whole interval.",
+    "Songo Mnara has a positive specialist slavery interpretation, but proposed material proxies are ambiguous. Practice intensity remains NULL rather than forcing P1 from an archaeological argument that does not securely measure recurrence.",
+    "Do not generalize Songo Mnara to the entire medieval Swahili coast.",
+    "The Zaghāwa/Kawār evidence belongs to an external/network lane until bounded territorial-status evidence is established.",
+    "No case in this batch is published or part of a release."
+  ],
+  "next_research": [
+    "Continue the weak-region strategy rather than returning automatically to Mediterranean/Atlantic source-dense areas.",
+    "Seek bounded pre-1500 West/Central African territorial-status evidence independent of trans-Saharan export reports.",
+    "Expand Oceania/Pacific beyond Hawaiʻi with source-specific status research rather than pan-Polynesian analogy.",
+    "For the Americas, add non-Maya cases and keep captive-taking, tribute, labor obligations and slavery analytically separate.",
+    "For Southeast Asia, test other early documentary/epigraphic regions without projecting later Angkorian or colonial categories backward.",
+    "For East/Southern Africa, build additional site/polity-specific cases before any coast-wide synthesis.",
+    "Resolve geometry only after the historical target and temporal slice are defensible under D-055."
+  ]
+}
