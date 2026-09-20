@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
-"""Insert one reviewed research case into the canonical atlas schema.
+"""Insert one claim-centric research case into the atlas research schema.
 
-The input is intentionally claim-centric. It never publishes a claim: publication
-is a separate gate. Run without --apply to validate and print a plan.
+Research ingestion is intentionally separate from publication. Run without
+--apply to validate and print a plan. Applied cases are retry-safe through a
+stable case_key + canonical JSON content hash recorded in audit.research_case_ingest.
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 from pathlib import Path
+import re
 import sys
 from typing import Any
 
@@ -32,6 +35,7 @@ GEOMETRY_ACCURACY = {
     "unresolved",
 }
 EVIDENCE_DIRECTIONS = {"supports", "challenges", "qualifies", "context"}
+CASE_KEY_RE = re.compile(r"^[a-z0-9][a-z0-9._/-]{2,127}$")
 
 
 class SpecError(ValueError):
@@ -56,6 +60,13 @@ def _check_years(obj: dict[str, Any], where: str) -> None:
 
 
 def validate_case_spec(spec: dict[str, Any]) -> None:
+    case_key = _required(spec, "case_key", "case")
+    if not isinstance(case_key, str) or not CASE_KEY_RE.fullmatch(case_key):
+        raise SpecError(
+            "case.case_key must be 3-128 lowercase characters using "
+            "letters, digits, '.', '_', '/', or '-'"
+        )
+
     spatial = _required(spec, "spatial_entity", "case")
     if not isinstance(spatial, dict):
         raise SpecError("case.spatial_entity must be an object")
@@ -124,6 +135,19 @@ def validate_case_spec(spec: dict[str, Any]) -> None:
             _required(version, "url_or_identifier", "case.geometry.version")
 
 
+def canonical_case_json(spec: dict[str, Any]) -> str:
+    return json.dumps(
+        spec,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+
+
+def case_content_sha256(spec: dict[str, Any]) -> str:
+    return hashlib.sha256(canonical_case_json(spec).encode("utf-8")).hexdigest()
+
+
 def load_spec(path: Path) -> dict[str, Any]:
     spec = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(spec, dict):
@@ -136,6 +160,8 @@ def plan(spec: dict[str, Any]) -> dict[str, Any]:
     claim = spec["claim"]
     practice = claim["territorial_practice"]
     return {
+        "case_key": spec["case_key"],
+        "content_sha256": case_content_sha256(spec),
         "spatial_entity": spec["spatial_entity"]["canonical_name"],
         "entity_type": spec["spatial_entity"]["entity_type_code"],
         "claim_interval": [claim.get("from_year"), claim.get("to_year")],
@@ -155,6 +181,18 @@ def _one_or_none(cur, query: str, params: tuple[Any, ...]):
     if len(rows) > 1:
         raise RuntimeError("expected at most one matching row, found multiple")
     return rows[0] if rows else None
+
+
+def existing_case_ingest(cur, case_key: str):
+    return _one_or_none(
+        cur,
+        """
+        select content_sha256, claim_id::text
+        from audit.research_case_ingest
+        where case_key = %s
+        """,
+        (case_key,),
+    )
 
 
 def ensure_source_version(cur, source: dict[str, Any], version: dict[str, Any]) -> str:
@@ -257,8 +295,28 @@ def ensure_spatial_entity(cur, spatial: dict[str, Any]) -> str:
     return str(cur.fetchone()[0])
 
 
-def insert_case(conn, spec: dict[str, Any]) -> str:
+def insert_case(
+    conn,
+    spec: dict[str, Any],
+    *,
+    source_path: str | None = None,
+    git_revision: str | None = None,
+) -> tuple[str, bool]:
+    case_key = spec["case_key"]
+    content_hash = case_content_sha256(spec)
+
     with conn.cursor() as cur:
+        existing = existing_case_ingest(cur, case_key)
+        if existing:
+            existing_hash, claim_id = existing
+            if existing_hash == content_hash:
+                return claim_id, False
+            raise RuntimeError(
+                f"research case {case_key!r} was already applied with different content; "
+                "do not mutate an ingested case in place. Create a new case_key and "
+                "use an explicit supersession/review operation if the historical claim changes."
+            )
+
         spatial_id = ensure_spatial_entity(cur, spec["spatial_entity"])
 
         source_version_ids: list[tuple[str, dict[str, Any]]] = []
@@ -368,7 +426,16 @@ def insert_case(conn, spec: dict[str, Any]) -> str:
                 ),
             )
 
-    return claim_id
+        cur.execute(
+            """
+            insert into audit.research_case_ingest(
+                case_key, content_sha256, claim_id, source_path, git_revision
+            ) values (%s,%s,%s,%s,%s)
+            """,
+            (case_key, content_hash, claim_id, source_path, git_revision),
+        )
+
+    return claim_id, True
 
 
 def main() -> int:
@@ -376,6 +443,11 @@ def main() -> int:
     parser.add_argument("case_file", type=Path)
     parser.add_argument("--dsn", default=os.environ.get("DATABASE_URL"))
     parser.add_argument("--apply", action="store_true", help="commit the case to PostgreSQL")
+    parser.add_argument(
+        "--git-revision",
+        default=os.environ.get("GITHUB_SHA"),
+        help="optional repository revision recorded in the ingestion ledger",
+    )
     args = parser.parse_args()
 
     try:
@@ -398,11 +470,20 @@ def main() -> int:
     with psycopg.connect(args.dsn, autocommit=False) as conn:
         try:
             with conn.transaction():
-                claim_id = insert_case(conn, spec)
+                claim_id, inserted = insert_case(
+                    conn,
+                    spec,
+                    source_path=str(args.case_file),
+                    git_revision=args.git_revision,
+                )
         except Exception:
             conn.rollback()
             raise
-    print(f"inserted unpublished claim {claim_id}")
+
+    if inserted:
+        print(f"inserted unpublished claim {claim_id}")
+    else:
+        print(f"NO-OP: research case already applied unchanged as claim {claim_id}")
     return 0
 
 
