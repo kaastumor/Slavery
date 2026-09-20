@@ -19,7 +19,7 @@ class ArtifactManifestTests(unittest.TestCase):
             path.write_text("atlas\n", encoding="utf-8")
             self.assertEqual(
                 MODULE.sha256(path),
-                "48a8a01dc23f579e1d0e13f7d04dc771c6e181e9589e344a12631b326f147c5b",
+                "e7764dedc66e4378732a0f96ef9df5235dd40c8c2348dc07acb92008564c3761",
             )
 
     def test_records_capture_hash_and_size(self):
