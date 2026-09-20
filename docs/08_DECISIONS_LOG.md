@@ -359,3 +359,28 @@ The `atlas-data` Edge Function must resolve the public preview through this poin
 This release-channel pointer is a serving/promotion control, not full exact historical release membership. Issue #4 still governs reconstructible release-object membership and immutable release bundles.
 
 **Reason:** selecting `order by created_at desc limit 1` makes publication order an implicit deployment mechanism. A newly published manifest can silently become public, and rollback requires changing release state. An explicit pointer makes promotion intentional, auditable, reversible, and separable from immutable release contents while preserving D-046’s staged promotion model.
+
+
+## D-054 — Public preview releases are built as immutable membership/digest artifacts before database publication
+**Date:** 2026-09-20  
+**Decision:** A new `public_mvp_preview` release must be built and tested as an immutable release artifact before any production publication transaction. Production publication may verify and consume that artifact, but must not discover release membership at apply time.
+
+Release artifact v1 is intentionally scoped to the current territorial-practice public preview contract. It freezes:
+
+- release metadata and exact claim IDs from the reviewed release-candidate manifest;
+- exact spatial-entity, geometry, claim-source, source-version and source memberships derived during the build lane;
+- per-object SHA-256 digests of the database rows that affect the current public API payload;
+- per-geometry digest of the resolved `publish.map_geometry` render actually intended to be served;
+- active cartographic land-fabric identity/content SHA-256;
+- one aggregate database-state SHA-256 over membership, object digests and cartography metadata;
+- release-candidate SHA-256 and artifact schema/version metadata.
+
+Before publication, the promotion lane must re-read only the artifact's frozen IDs, verify all recorded digests and the complete claim-source linkage set, and abort on drift. It then writes the four compatibility membership arrays already consumed by `atlas-data` plus immutable-artifact provenance into `audit.release_manifest.manifest`. It must not derive spatial, geometry or source membership during apply.
+
+The legacy `tools/publish_release.py --apply` path is disabled once this contract lands. Candidate syntax validation may remain there, but database publication must use the exact-artifact promoter.
+
+Release publication does **not** automatically move `audit.release_channel`. D-053 remains the independent production-serving gate, allowing a release artifact to be published/verified before the public channel pointer is moved and allowing rollback by pointer reversal without mutating release content.
+
+This contract does not yet make historical releases permanently reconstructible after arbitrary later row mutation. That stronger invariant remains issue #4 and may require typed immutable membership/materialization. D-054 closes the #43 build-once/promote-unchanged gap without pretending that broader problem is solved.
+
+**Reason:** the previous publisher accepted claim IDs and then discovered spatial entities, geometries and source versions inside the production transaction. A reviewed candidate could therefore produce different release contents if database state changed between CI/review and apply. Freezing membership and API-relevant object digests moves derivation into the build lane and turns production publication into a verification-and-consumption step.
