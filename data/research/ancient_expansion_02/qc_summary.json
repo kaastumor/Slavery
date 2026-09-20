@@ -14,16 +14,17 @@
     "claims_without_geometry_resolution": 0,
     "p_levels": {
       "P1": 1,
-      "P2": 2,
-      "NULL": 1
+      "P2": 3
     },
     "coverage_states": {
-      "classified": 3,
-      "disputed": 1
+      "classified": 4
     }
   },
+  "methodology_re_review": {
+    "mauryan_claim": "Re-reviewed after the evidence-synthesis methodology reset. The apparent Megasthenes-versus-Indian-text contradiction is no longer treated mechanically as an unresolved dispute. The working designation is P2/classified, while Megasthenes remains linked as challenging evidence and the claim explicitly avoids Greek-category equivalence or economy-wide prevalence claims."
+  },
   "unresolved_issues": [
-    "The Mauryan slavery classification remains disputed and has no P-level.",
+    "Mauryan slavery is positively classified at P2 after synthesis, but terminology and comparability with Greek chattel slavery remain materially qualified; the classification does not imply that slavery dominated the Mauryan economy.",
     "Middle Ganga valley is an analytical region with explicit unresolved geometry.",
     "The Silla Village Register's date remains disputed; the 695–819 interval encodes competing proposed dates, not continuous evidence.",
     "The four Silla register villages remain spatially unresolved; no whole-Silla polygon is substituted.",

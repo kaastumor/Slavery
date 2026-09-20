@@ -1,0 +1,99 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Early eighth-century Sogdiana",
+    "display_name": "Sogdiana",
+    "entity_type_code": "region",
+    "notes": "Regional claim centered on the Samarkand/Panjikent documentary milieu. It is not projected onto the full Sogdian merchant diaspora or onto a single empire polygon."
+  },
+  "claim": {
+    "from_year": 709,
+    "to_year": 710,
+    "date_text_original": "tenth regnal year of Tarkhun, king of Samarkand (ca. 709-710 CE)",
+    "temporal_precision": "period",
+    "temporal_certainty": "high",
+    "spatial_precision": "region",
+    "summary": "A Sogdian marriage contract probably concluded at Samarkand in 709-710 CE treats becoming another person's slave as a recognized legal-status contingency, distinct from hostage, prisoner and dependent status. This supports a conservative P2 classification for early eighth-century Sogdiana. Wider evidence that Sogdian merchants traded slaves, including a 639 CE female-slave sale contract from Turfan, is retained only as contextual qualification because diaspora commerce outside Sogdiana cannot establish territorial prevalence in the homeland.",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P2",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P2 reflects source-native legal recognition of slave status in the Samarkand documentary milieu. It does not rise to P3 from Sogdian participation in slave commerce elsewhere: the inspected evidence does not yet establish the institutional breadth, labour settings or prevalence of slavery across Sogdiana itself."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Marriage i. The Marriage Contract in the Pre-Islamic Period ii. Sogdian Marriage Contract",
+        "author_or_institution": "Ilya Yakubovich; Encyclopaedia Iranica",
+        "source_type": "critical_translation",
+        "source_classification": "primary_translation",
+        "independence_notes": "Modern specialist edition/translation and discussion of Mount Mugh documents Nov. 3-4, based on the Sogdian legal text and earlier editions by Livshits and others.",
+        "reliability_limitations": "The contract recognizes slavery as a possible legal status but does not quantify slaveholding or demonstrate demographic prevalence across Sogdiana."
+      },
+      "version": {
+        "version_label": "Encyclopaedia Iranica, Sogdian marriage contract",
+        "url_or_identifier": "https://www.iranicaonline.org/articles/marriage-contract-in-the-pre-islamic-period/marriage-i-the-marriage-contract-in-the-pre-islamic-period-ii-sogdian-marriage-contract/",
+        "publication_year": 2005,
+        "accessed_at": "2026-09-20T09:32:00Z"
+      },
+      "evidence_role": "source-native legal recognition of slave status in the Samarkand documentary milieu",
+      "independence_group": "mugh_nov3_4_sogdian_marriage",
+      "directness": "critical translation of surviving Sogdian legal documents",
+      "direction": "supports",
+      "locator": "Nov. 3 lines 11-17; Nov. 4 lines 7-15; discussion dating the contract to ca. 709-710 CE and probably Samarkand"
+    },
+    {
+      "source": {
+        "title": "Sogdian Trade",
+        "author_or_institution": "Étienne de la Vaissière; Encyclopaedia Iranica",
+        "source_type": "reference_article",
+        "source_classification": "secondary",
+        "independence_notes": "Specialist synthesis of Sogdian commerce and documentary evidence.",
+        "reliability_limitations": "Evidence that Sogdians traded slaves across Eurasia establishes merchant participation, not the prevalence or territorial organization of slavery inside Sogdiana."
+      },
+      "version": {
+        "version_label": "Encyclopaedia Iranica, Sogdian Trade",
+        "url_or_identifier": "https://www.iranicaonline.org/articles/sogdian-trade/",
+        "publication_year": 2004,
+        "accessed_at": "2026-09-20T09:32:00Z"
+      },
+      "evidence_role": "qualifies the relationship between Sogdian slave commerce and homeland territorial practice",
+      "independence_group": "de_la_vaissiere_sogdian_trade",
+      "directness": "specialist synthesis",
+      "direction": "qualifies",
+      "locator": "trade overview: Sogdians traded silk, musk, slaves, precious metals and other goods; volume unknown"
+    },
+    {
+      "source": {
+        "title": "A Sogdian sale contract of a female slave from the period of the Gaochang kingdom under the rule of Qu clan",
+        "author_or_institution": "Yutaka Yoshida; Takao Moriyasu; Xinjiang Uighur Autonomous Museum",
+        "source_type": "journal_article",
+        "source_classification": "primary_edition",
+        "independence_notes": "Dedicated edition of the Sogdian-language female-slave sale contract excavated at Astana/Turfan.",
+        "reliability_limitations": "The transaction occurred at Turfan under Gaochang rule, outside Sogdiana; it cannot be used as territorial evidence for the Sogdian homeland merely because the contract is in Sogdian and involves Sogdians."
+      },
+      "version": {
+        "version_label": "Studies on the Inner Asian Languages 4 / Kobe City University of Foreign Studies, 1989, pp. 1-50",
+        "url_or_identifier": "https://hdl.handle.net/11094/18715",
+        "publication_year": 1989,
+        "accessed_at": "2026-09-20T09:32:00Z"
+      },
+      "evidence_role": "bounds Sogdian diaspora slave-sale evidence geographically and prevents its projection onto Sogdiana",
+      "independence_group": "turfan_sogdian_slave_sale_639",
+      "directness": "edition of surviving sale contract",
+      "direction": "qualifies",
+      "locator": "female-slave sale contract, Astana/Turfan, 639 CE; article pp. 1-50"
+    }
+  ],
+  "geometry": {
+    "from_year": 709,
+    "to_year": 710,
+    "accuracy_status": "unresolved",
+    "resolution_method": "Resolve the Samarkand/Panjikent documentary context and contemporaneous Sogdian political geography separately. Do not use modern Uzbekistan/Tajikistan, a Silk Road diaspora footprint, or a maximum-extent imperial polygon as a territorial proxy.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}

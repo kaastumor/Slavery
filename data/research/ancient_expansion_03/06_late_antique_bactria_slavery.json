@@ -1,0 +1,99 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Late Antique Bactria",
+    "display_name": "Late Antique Bactria",
+    "entity_type_code": "region",
+    "notes": "Historical region broadly corresponding to parts of modern northern Afghanistan and adjacent Central Asia. The documentary corpus spans changing political control; the claim is regional rather than attributed wholesale to any one Sasanian, Kidarite, Hephthalite, Turkic or early Islamic polity."
+  },
+  "claim": {
+    "from_year": 342,
+    "to_year": 781,
+    "date_text_original": "Bactrian documentary corpus, fourth to eighth centuries CE",
+    "temporal_precision": "period",
+    "temporal_certainty": "high",
+    "spatial_precision": "region",
+    "summary": "Bactrian legal documents from late antique northern Afghanistan directly attest legally recognized slavery. Specialist analysis identifies slaves born in an owner's possession and slaves purchased for money, treatment of enslaved people as personal property, manumission by payment of the slave's price, and sale of children into slavery during hardship. A surviving deed from 700 CE transfers a female slave together with an estate. This supports P3 institutional slavery for the documented Bactrian region while avoiding attribution of uniform practice to each successive ruling empire.",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P3",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P3 rests on court-produced legal documentation of slave status, purchase, property treatment, manumission and family sale, plus a surviving deed transferring an enslaved woman. It remains below P4 because documentary legal visibility does not quantify demographic prevalence across all of Bactria or across the full four-century interval."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Slavery Represented in Bactrian Documents",
+        "author_or_institution": "Said Reza Huseini",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Dedicated specialist study of slavery using the Bactrian documentary corpus and Nicholas Sims-Williams's editions/translations.",
+        "reliability_limitations": "The surviving documents are uneven in place and date and legal documentation cannot by itself measure population-wide prevalence."
+      },
+      "version": {
+        "version_label": "Slavery & Abolition 44.4 (2023), pp. 682-696",
+        "url_or_identifier": "https://doi.org/10.1080/0144039X.2023.2264116",
+        "publication_year": 2023,
+        "accessed_at": "2026-09-20T07:45:00Z"
+      },
+      "evidence_role": "specialist classification of slave status and legally recognized slavery in the Bactrian documents",
+      "independence_group": "huseini_bactrian_slavery_2023",
+      "directness": "dedicated modern slavery study grounded in legal documents",
+      "direction": "supports",
+      "locator": "abstract and article discussion of born-in-possession and purchased slaves, property status, manumission and sale of children"
+    },
+    {
+      "source": {
+        "title": "Deed of the Gift of an Estate and of a Female Slave",
+        "author_or_institution": "Khalili Collections; edition by Nicholas Sims-Williams",
+        "source_type": "legal_document",
+        "source_classification": "primary",
+        "independence_notes": "Surviving Bactrian legal deed dated June-July 700 CE; catalogue identifies the transferred female slave and points to Sims-Williams's scholarly edition.",
+        "reliability_limitations": "One transaction demonstrates alienability directly but is not a prevalence estimate for the entire region."
+      },
+      "version": {
+        "version_label": "Khalili Collection DOC 10; Sims-Williams, Bactrian Documents from Northern Afghanistan I rev. ed. (2012), Document T, pp. 98-105",
+        "url_or_identifier": "https://khalilicollections.org/collections/islamic-art/khalili-collection-islamic-art-deed-of-the-gift-of-an-estate-and-of-a-female-slave-doc10/",
+        "publication_year": 2012,
+        "accessed_at": "2026-09-20T07:45:00Z"
+      },
+      "evidence_role": "source-native transaction directly demonstrating transfer of an enslaved woman as part of a legal gift",
+      "independence_group": "bactrian_document_T_700",
+      "directness": "surviving legal deed",
+      "direction": "supports",
+      "locator": "Document T / DOC 10, northern Afghanistan, dated Second New-year 478 (June-July 700)"
+    },
+    {
+      "source": {
+        "title": "Ancient Afghanistan and its invaders: Linguistic evidence from the Bactrian documents and inscriptions",
+        "author_or_institution": "Nicholas Sims-Williams; British Academy",
+        "source_type": "book_chapter",
+        "source_classification": "secondary",
+        "independence_notes": "Corpus-level specialist account by the principal editor of the Bactrian documents, useful for bounding chronology and document types rather than independently voting on slavery classification.",
+        "reliability_limitations": "This source establishes corpus chronology and character; it is not treated as an independent slavery-prevalence estimate."
+      },
+      "version": {
+        "version_label": "Indo-Iranian Languages and Peoples (British Academy, 2003), pp. 225-242",
+        "url_or_identifier": "https://doi.org/10.5871/bacad/9780197262856.003.0011",
+        "publication_year": 2003,
+        "accessed_at": "2026-09-20T07:45:00Z"
+      },
+      "evidence_role": "qualifies chronology, provenance and political heterogeneity of the documentary corpus",
+      "independence_group": "sims_williams_bactrian_corpus",
+      "directness": "specialist corpus description",
+      "direction": "qualifies",
+      "locator": "chapter abstract: documents dated 342-781 CE; legal documents, accounts, letters and Buddhist texts"
+    }
+  ],
+  "geometry": {
+    "from_year": 342,
+    "to_year": 781,
+    "accuracy_status": "unresolved",
+    "resolution_method": "Resolve documentary findspots and time-bounded Bactrian regional/polity geometries separately. Do not use modern Afghanistan or one timeless Bactria polygon across successive Sasanian, Kidarite, Hephthalite, Turkic and early Islamic control.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}

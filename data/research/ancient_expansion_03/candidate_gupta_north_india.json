@@ -1,0 +1,52 @@
+{
+  "candidate": "Gupta-period northern India",
+  "status": "research_note_unpublished",
+  "decision": "defer_territorial_claim",
+  "reason": "The inspected evidence strongly supports the existence of slavery in ancient/early historic India and legal literature associated broadly with the Gupta-period milieu contains explicit categories of slaves, alienability, inheritance, pledging and manumission. However, the present pass does not yet justify mapping those normative texts directly onto the political territory of the Gupta Empire. Text composition/redaction dates, geographic reach, prescription versus observed practice, and the distinction between slavery and other labour obligations require tighter source-by-source control before a territorial P-level is assigned.",
+  "sources": [
+    {
+      "title": "A History of Ancient and Early Medieval India: From the Stone Age to the 12th Century",
+      "author": "Upinder Singh",
+      "source_type": "specialist_synthesis",
+      "url_or_identifier": "ISBN 9788131711200",
+      "evidence_role": "synthesis of Narada Smriti slavery provisions",
+      "locator": "discussion of labour/slavery in the Gupta-period social and economic context; Narada Smriti discussion of fifteen slave categories, inheritance, pledging/mortgaging, hiring out and manumission",
+      "direction": "supports_with_attribution_limit",
+      "limitation": "Normative legal evidence can establish recognized categories and legal concepts but cannot by itself establish empire-wide prevalence or exact territorial application."
+    },
+    {
+      "title": "The economic life of Northern India in the Gupta Period, cir. A.D. 300-550",
+      "author": "S. K. Maity",
+      "source_type": "specialist_monograph_thesis",
+      "version": "SOAS PhD thesis, 1956",
+      "url_or_identifier": "https://doi.org/10.25501/SOAS.00029599",
+      "evidence_role": "period-specific labour-history synthesis using inscriptions and legal texts",
+      "locator": "Chapter VII: labour conditions, including slavery, forced labour and hired labour",
+      "direction": "supports_context",
+      "limitation": "Older synthesis; its source claims require checking against current editions and newer historiography before classification."
+    },
+    {
+      "title": "Hindus Beyond the Hindu Kush: Indians in the Central Asian Slave Trade",
+      "author": "Scott C. Levi",
+      "source_type": "journal_article",
+      "version": "Journal of the Royal Asiatic Society 12.3 (2002), pp. 277-288",
+      "url_or_identifier": "https://doi.org/10.1017/S1356186302000329",
+      "evidence_role": "long-run specialist context for institutionalized slavery in pre-Islamic India",
+      "locator": "abstract and discussion of pre-Islamic Indian slavery",
+      "direction": "supports_broad_context",
+      "limitation": "The article's main focus is later Indian participation in Central Asian slave trade; its ancient discussion is contextual and cannot establish a Gupta territorial claim by itself."
+    }
+  ],
+  "rejected_inferences": [
+    "Do not equate a Dharmaśāstra prescription automatically with observed practice everywhere under Gupta political control.",
+    "Do not use the label 'Gupta period' as if it meant 'Gupta Empire territory'; chronological and political geography are separate dimensions.",
+    "Do not combine slavery, vishti/forced labour, caste dependency and generic servitude into one slavery category without status-specific evidence.",
+    "Do not raise a P-level because several modern works repeat the same normative legal passages."
+  ],
+  "next_evidence_needed": "Check current specialist dating and textual history of the Narada Smriti and related Dharmaśāstra material; identify Gupta-period inscriptions, documentary texts or securely contextualized literary evidence that directly attests enslaved status, ownership, transfer, sale, inheritance or manumission in bounded places; then decide whether the defensible spatial unit is a Gupta polity slice, one or more regions, or only a broader period-context claim.",
+  "geometry": {
+    "status": "not_applicable_until_claim_accepted",
+    "note": "Do not resolve a Gupta Empire polygon before evidentiary attribution is settled."
+  },
+  "reviewed_at": "2026-09-20T10:33:30Z"
+}

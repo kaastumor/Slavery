@@ -1,0 +1,77 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Pre-Islamic South Arabia (first-millennium epigraphic corpus)",
+    "display_name": "Pre-Islamic South Arabia",
+    "entity_type_code": "region",
+    "notes": "Analytical regional target spanning multiple South Arabian polities and epigraphic traditions. It is not a single polity and must not be rendered as one polity-wide polygon."
+  },
+  "claim": {
+    "from_year": -799,
+    "to_year": 599,
+    "date_text_original": "first millennium BCE through the sixth century CE; corpus-wide synthesis",
+    "temporal_precision": "broad_range",
+    "temporal_certainty": "approximate",
+    "spatial_precision": "multi_polity_region",
+    "summary": "A specialist synthesis of the Ancient South Arabian epigraphic corpus supports the existence of slavery and captive enslavement across first-millennium South Arabia. The evidence includes people contrasted with free persons, explicit proprietorial rights, purchase and sale of enslaved women, hereditary claims over women and descendants, and repeated war-captive deportations. The same scholarship cautions that the common term ʿbd is context-dependent and can also denote attendants or dependants, so this claim does not classify every ʿbd as enslaved or characterize South Arabia as a slave society.",
+    "review_status": "reviewed",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P2",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P2 reflects recurrent, geographically and chronologically distributed epigraphic evidence synthesized by specialist scholarship. It deliberately stops short of P3/P4 because the reviewed synthesis concludes that the evidence is insufficient to characterize first-millennium Arabia as a slave society or to establish slavery's structural weight across every South Arabian polity."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Slavery in First Millennium Arabia: Epigraphy and the Qurʾān",
+        "author_or_institution": "Valentina A. Grasso",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Dedicated modern specialist synthesis engaging directly with the Ancient South Arabian epigraphic corpus rather than inferring pre-Islamic slavery from later Islamic or external Graeco-Roman evidence.",
+        "reliability_limitations": "The article is explicitly a preliminary inquiry and stresses semantic ambiguity in terms such as ʿbd. Its regional synthesis does not justify treating every subordinate status term as slavery or assigning uniform prevalence to all South Arabian societies."
+      },
+      "version": {
+        "version_label": "Millennium 20.1 (2023), pp. 65–89, publisher HTML",
+        "url_or_identifier": "https://doi.org/10.1515/mill-2023-0005",
+        "publication_year": 2023,
+        "accessed_at": "2026-09-20T00:00:00Z"
+      },
+      "evidence_role": "specialist corpus-wide classification and synthesis",
+      "independence_group": "south_arabia_grasso_2023",
+      "directness": "dedicated specialist secondary synthesis of epigraphic evidence",
+      "direction": "supports",
+      "locator": "pp. 65–71, especially section 2 Pre-Islamic Epigraphy"
+    },
+    {
+      "source": {
+        "title": "RES 3945 — Karibʾil Watar victory inscription",
+        "author_or_institution": "Karibʾil Watar; Old Sabaic royal inscription from the Almaqah temple at Sirwah",
+        "source_type": "primary_inscription",
+        "source_classification": "primary",
+        "independence_notes": "Early seventh-century BCE Sabaic royal res gestae; one bounded inscriptional witness within the larger South Arabian corpus.",
+        "reliability_limitations": "Royal victory inscription uses ideological and triumphal rhetoric and reported captive totals should not be treated as census-quality quantification. Its importance here is the explicit status contrast and captive/ownership language, not the numerical scale of conquest."
+      },
+      "version": {
+        "version_label": "RES 3945 as cited and translated in Grasso 2023, section 2",
+        "url_or_identifier": "https://doi.org/10.1515/mill-2023-0005",
+        "publication_year": 2023,
+        "accessed_at": "2026-09-20T00:00:00Z"
+      },
+      "evidence_role": "bounded early Sabaic evidence for captive enslavement and free/unfree status contrast",
+      "independence_group": "res_3945",
+      "directness": "primary royal inscription mediated through specialist translation and synthesis",
+      "direction": "supports",
+      "locator": "Grasso 2023, section 2, discussion and quotation of RES 3945"
+    }
+  ],
+  "geometry": {
+    "from_year": -799,
+    "to_year": 599,
+    "accuracy_status": "unresolved",
+    "resolution_method": "The claim synthesizes evidence from multiple South Arabian kingdoms and sites over more than a millennium. No single historical-polity polygon is a defensible representation of that evidence package; later releases should either use narrower claim slices/geometries or retain this regional synthesis without a territorial fill.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}

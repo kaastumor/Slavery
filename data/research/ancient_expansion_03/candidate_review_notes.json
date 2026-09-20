@@ -1,0 +1,101 @@
+{
+  "batch": "ancient_expansion_03",
+  "status": "research_notes_unpublished",
+  "purpose": "Preserve investigated candidates that should not yet become territorial-practice claims, so later research does not repeatedly rediscover or overstate the same evidence.",
+  "candidates": [
+    {
+      "candidate": "Kush/Meroe",
+      "decision": "defer_after_specialist_recheck",
+      "reason": "A second specialist pass still does not justify a territorial slavery P-level. Edwards explicitly warns that confident assumptions about a perennial external Middle Nile slave trade outrun the evidence, while modern specialist overviews of Kush/Meroe emphasize state scale, trade, settlement, production and cultural contacts without supplying bounded evidence of enslaved legal/social status. This is not evidence of absence: it is a positive reason to keep the claim unresolved rather than importing Egyptian, medieval Nubian, or generic long-distance-trade patterns into Meroitic society.",
+      "sources": [
+        {
+          "title": "Slavery and Slaving in the Medieval and Post-Medieval Kingdoms of the Middle Nile",
+          "author": "David N. Edwards",
+          "version": "British Academy / Oxford Academic chapter, 2011, pp. 79–108",
+          "url_or_identifier": "https://doi.org/10.5871/bacad/9780197264782.003.0005",
+          "role": "historiographical caution",
+          "limitation": "The chapter's direct empirical focus is medieval and post-medieval; it is used here to block retrospective assumptions, not to establish an ancient absence."
+        },
+        {
+          "title": "Meroe and the Sudanic Kingdoms",
+          "author": "David N. Edwards",
+          "version": "Journal of African History 39.2 (1998)",
+          "url_or_identifier": "https://doi.org/10.1017/S0021853797007172",
+          "role": "specialist Kushite-state context",
+          "limitation": "Establishes the scale and historiographical problems of the Kushite state but does not provide a bounded slavery-status claim; therefore it cannot be used as indirect proof of slavery."
+        },
+        {
+          "title": "The Meroitic Empire: Trade and Cultural Influences in an Indian Ocean Context",
+          "author": "Randi Haaland",
+          "version": "African Archaeological Review 31 (2014), pp. 649–673",
+          "url_or_identifier": "https://doi.org/10.1007/s10437-014-9169-0",
+          "role": "specialist trade and cultural-contact context",
+          "limitation": "Demonstrates Meroe's extensive exchange connections; trade connectivity is not itself evidence that enslaved people were a traded commodity or that territorial slavery existed."
+        },
+        {
+          "title": "The Meroitic Heartland",
+          "author": "Pawel Wolf and Ulrike Nowotnick",
+          "version": "The Oxford Handbook of Ancient Nubia (2021), pp. 511–544",
+          "url_or_identifier": "https://doi.org/10.1093/oxfordhb/9780190496272.013.25",
+          "role": "current specialist archaeological overview",
+          "limitation": "Provides settlement, production, elite and historical context but does not independently establish enslaved status; silence in an overview is not evidence of absence."
+        }
+      ],
+      "rejected_inferences": [
+        "Do not infer Meroitic slavery from Egyptian enslavement of Nubians.",
+        "Do not project medieval or early-modern Middle Nile slaving backward into Kush.",
+        "Do not convert long-distance trade connectivity into a slave-trade claim without commodity-specific evidence.",
+        "Do not treat war-captive iconography as proof that captives entered an enslaved, alienable status without additional evidence."
+      ],
+      "next_evidence_needed": "Ancient Kushite/Meroitic evidence that directly establishes enslaved status, alienability, forced dependency, sale/transfer, or an explicitly identified enslavement process in a bounded place/time. Meroitic-language evidence should be preferred where interpretable; Egyptian/Greek/Roman testimony must be kept source-positioned rather than generalized automatically to the whole kingdom."
+    },
+    {
+      "candidate": "Garamantes",
+      "decision": "defer",
+      "reason": "Reviewed work supports trans-Saharan connectivity, but the evidence inspected does not securely establish territorial slavery. Possible movement of enslaved people through exchange networks is insufficient for a territorial-practice classification.",
+      "sources": [],
+      "next_evidence_needed": "Specialist synthesis plus bounded textual or archaeological evidence distinguishing enslaved status from generic trade, dependency, or captive-taking."
+    },
+    {
+      "candidate": "Opone and the northern Somali coast",
+      "decision": "defer_territorial_claim_preserve_trade_evidence",
+      "reason": "The mid-first-century Periplus directly reports slaves exported from Opone to Egypt in increasing numbers and rarer slave exports from Malao. This is strong evidence for participation of specific Horn of Africa ports in slave trading, but it does not identify the captives' origins, acquisition mechanisms, or local legal/social status. Under the atlas methodology, trade-node evidence must not be converted mechanically into a territorial slavery-practice P-level.",
+      "sources": [
+        {
+          "title": "Periplus of the Erythraean Sea",
+          "author": "Anonymous merchant; Wilfred H. Schoff translation",
+          "version": "1912 English translation",
+          "url_or_identifier": "https://en.wikisource.org/wiki/Periplus_of_the_Erythraean_Sea",
+          "role": "primary/source-native trade testimony",
+          "locator": "sections 8 and 13",
+          "limitation": "A merchant itinerary records commodities and ports, not the local institutions or origins by which exported people became enslaved."
+        },
+        {
+          "title": "Nomads Trading with Empires: Intercultural Trade in Ancient Somaliland in the First to Seventh Centuries CE",
+          "author": "Alfredo González-Ruibal et al.",
+          "version": "American Journal of Archaeology 126.1 (2022), published online 17 December 2021",
+          "url_or_identifier": "https://doi.org/10.1086/718184",
+          "role": "specialist archaeological context",
+          "limitation": "Establishes the northern Somali coast and its communities within the western Indian Ocean exchange system; it does not by itself establish local slavery institutions."
+        }
+      ],
+      "next_evidence_needed": "Independent bounded evidence for local enslavement/status practices at Opone/Malao. The existing external-participation lane should continue to preserve the strong export evidence without assigning a territorial P-level."
+    },
+    {
+      "candidate": "Rhapta/Azania",
+      "decision": "do_not_infer_from_neighboring_trade",
+      "reason": "The Periplus is the key first-century source for Rhapta and Azania, but the inspected scholarship notes slaves as an export from Opone rather than from Azania specifically. Do not spread Opone's evidence southward to Rhapta or the broader East African coast.",
+      "sources": [
+        {
+          "title": "Rhapta: the Location and Importance of East Africa's first Port",
+          "author": "B. A. Datoo",
+          "version": "Azania 5.1 (1970), pp. 65–75",
+          "url_or_identifier": "https://doi.org/10.1080/00672707009511528",
+          "role": "specialist historical-geographic context",
+          "limitation": "Rhapta's exact location remains disputed and the article is not a slavery study."
+        }
+      ],
+      "next_evidence_needed": "Independent source-native or specialist evidence specifically tying Rhapta/Azania to slave export, enslavement, or enslaved status rather than inference from the wider Indian Ocean network."
+    }
+  ]
+}
