@@ -15,11 +15,12 @@ Deno.serve(async (req) => {
 
   try {
     const releases = await sql`
-      select release_version, schema_version, manifest
-      from audit.release_manifest
-      where status='published'
-        and manifest->>'purpose'='public_mvp_preview'
-      order by created_at desc
+      select rm.release_version, rm.schema_version, rm.manifest
+      from audit.release_channel ch
+      join audit.release_manifest rm using (release_version)
+      where ch.channel_code='public_mvp_preview'
+        and rm.status='published'
+        and rm.manifest->>'purpose'=ch.channel_code
       limit 1
     `;
 
@@ -30,13 +31,15 @@ Deno.serve(async (req) => {
       });
     }
 
+    const release = releases[0];
+
     const places = await sql`
       with release as (
         select manifest
         from audit.release_manifest
-        where status='published'
+        where release_version=${release.release_version}
+          and status='published'
           and manifest->>'purpose'='public_mvp_preview'
-        order by created_at desc
         limit 1
       ),
       release_claim as (
@@ -148,11 +151,11 @@ Deno.serve(async (req) => {
       limit 1
     `;
 
-    const release = releases[0];
     const fabric = fabrics[0] ?? null;
 
     return new Response(JSON.stringify({
       status: "published_preview",
+      release_channel: "public_mvp_preview",
       release_version: release.release_version,
       schema_version: release.schema_version,
       canonical: release.manifest?.canonical ?? false,
