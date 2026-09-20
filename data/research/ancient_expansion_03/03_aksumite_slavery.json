@@ -1,0 +1,97 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Aksumite kingdom (late-antique core and dependencies)",
+    "display_name": "Aksum",
+    "entity_type_code": "polity",
+    "notes": "Late-antique Aksumite polity centered in the northern Ethiopian/Eritrean highlands. The claim does not treat every Red Sea slave-trade reference as evidence for every part of Aksumite territory, and historical geometry remains unresolved pending time-bounded polygon matching."
+  },
+  "claim": {
+    "from_year": 299,
+    "to_year": 699,
+    "date_text_original": "c. fourth–seventh centuries CE",
+    "temporal_precision": "broad_range",
+    "temporal_certainty": "approximate",
+    "spatial_precision": "polity",
+    "summary": "Specialist archaeological-historical scholarship treats slavery as historically attested and economically important in the Aksumite period, despite its weak archaeological visibility. Aksumite royal inscriptions independently attest warfare, captive-taking, deportation and resettlement, providing bounded evidence for mechanisms that could feed unfree populations. The classification therefore records slavery as a recurrent Aksumite institution while keeping slave trading at Adulis, war captivity, deportation and territorial prevalence analytically distinct.",
+    "review_status": "reviewed",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P2",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P2 reflects specialist identification of slavery as economically important in the Aksumite period plus source-native evidence for captive-taking and deportation. It deliberately stops below P3 because archaeological visibility is poor, captive status is not automatically equivalent to chattel slavery, and the reviewed evidence does not establish a defensible polity-wide enslaved share or uniform labour regime."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "The Invisible Archaeology of Slavery in the Horn of Africa?",
+        "author_or_institution": "Niall Finneran",
+        "source_type": "book_chapter",
+        "source_classification": "secondary",
+        "independence_notes": "Dedicated archaeological-historical reassessment of slavery in the Horn of Africa, explicitly addressing the Aksumite period and the mismatch between historical attestation and archaeological visibility.",
+        "reliability_limitations": "The chapter stresses paucity of archaeological evidence and the difficulty of identifying slavery materially. Its characterization of economic importance supports institutional presence but does not provide a polity-wide prevalence measure."
+      },
+      "version": {
+        "version_label": "Slavery in Africa: Archaeology and Memory, British Academy, 2011, chapter 11, pp. 225–250",
+        "url_or_identifier": "https://doi.org/10.5871/bacad/9780197264782.003.0011",
+        "publication_year": 2011,
+        "accessed_at": "2026-09-20T00:00:00Z"
+      },
+      "evidence_role": "specialist classification and archaeological limitation",
+      "independence_group": "aksum_finneran_2011",
+      "directness": "dedicated specialist secondary synthesis",
+      "direction": "supports",
+      "locator": "Chapter abstract and pp. 225–250"
+    },
+    {
+      "source": {
+        "title": "Ancient Settlement Patterns in the Area of Aksum (Tigray, Northern Ethiopia), ca. 900 BCE–800/850 CE",
+        "author_or_institution": "Luisa Sernicola",
+        "source_type": "archaeological_monograph",
+        "source_classification": "secondary",
+        "independence_notes": "Regional archaeological synthesis of Aksumite settlement and political economy that explicitly links known royal inscriptions to captive/slave incorporation while citing the source-native RIÉ corpus.",
+        "reliability_limitations": "The inference that captives supplied domestic, monumental and military labour goes beyond what captive-taking formulas alone prove. It is used as specialist interpretation, not as a quantitative measure."
+      },
+      "version": {
+        "version_label": "BAR International Series 2795, 2017",
+        "url_or_identifier": "https://www.barpublishing.com/ancient-settlement-patterns-in-the-area-of-aksum-tigray-northern-ethiopia-ca-900-bce-800-850-ce.html",
+        "publication_year": 2017,
+        "accessed_at": "2026-09-20T00:00:00Z"
+      },
+      "evidence_role": "specialist interpretation connecting Aksumite captive-taking evidence to slavery and labour",
+      "independence_group": "aksum_sernicola_2017",
+      "directness": "specialist archaeological synthesis citing royal inscriptions",
+      "direction": "supports",
+      "locator": "Introduction, discussion of Aksumite society and RIÉ I 190"
+    },
+    {
+      "source": {
+        "title": "RIÉ 190 — Aksumite royal Nubian-war inscription",
+        "author_or_institution": "Aksumite royal inscription associated with the reign of ʿEzana",
+        "source_type": "primary_inscription",
+        "source_classification": "primary",
+        "independence_notes": "Source-native fourth-century Aksumite royal inscription, preserved in Geʿez using South Arabian characters; independent of later slave-trade narratives.",
+        "reliability_limitations": "Royal victory rhetoric documents captive-taking but does not establish that every captive became an enslaved person or quantify slavery across the kingdom. It therefore supports a mechanism of coercive incorporation and qualifies, rather than by itself proving, the territorial slavery classification."
+      },
+      "version": {
+        "version_label": "RIÉ 190, as edited in Recueil des inscriptions de l'Éthiopie des périodes pré-axoumite et axoumite and discussed in modern epigraphic scholarship",
+        "url_or_identifier": "RIÉ 190",
+        "accessed_at": "2026-09-20T00:00:00Z"
+      },
+      "evidence_role": "bounded source-native evidence for wartime captive-taking",
+      "independence_group": "rie_190",
+      "directness": "primary royal inscription through scholarly edition",
+      "direction": "qualifies",
+      "locator": "RIÉ 190, especially lines describing killing and taking captives"
+    }
+  ],
+  "geometry": {
+    "from_year": 299,
+    "to_year": 699,
+    "accuracy_status": "unresolved",
+    "resolution_method": "Aksumite extent changed substantially across the fourth–seventh centuries and at times crossed the Red Sea. Resolve narrower time slices against Cliopatria or specialist historical geometry before publication; do not substitute modern Ethiopia/Eritrea boundaries or a maximum-extent empire polygon for the full interval.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}
