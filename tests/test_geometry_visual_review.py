@@ -28,7 +28,13 @@ class GeometryVisualReviewTests(unittest.TestCase):
             "features": [{
                 "type": "Feature",
                 "properties": {"geometry_id": "g-1", "name": "Synthetic"},
-                "geometry": {"type": "Polygon", "coordinates": [[[0,0],[0.9,0],[0.9,1],[0,1],[0,0]]]},
+                "geometry": {
+                    "type": "MultiPolygon",
+                    "coordinates": [
+                        [[[0,0],[0.9,0],[0.9,1],[0,1],[0,0]]],
+                        [[[0.2,0.2],[0.3,0.2],[0.3,0.3],[0.2,0.3],[0.2,0.2]]],
+                    ],
+                },
             }],
         }
         land = {
@@ -82,6 +88,7 @@ class GeometryVisualReviewTests(unittest.TestCase):
             self.assertIn("Synthetic", svg)
             self.assertIn("qc_passed", svg)
             self.assertIn("Candidate + source outline + canonical land", svg)
+            self.assertEqual(svg.count('class="candidate"'), 2)
             index = (out / "index.html").read_text(encoding="utf-8")
             self.assertIn("open SVG", index)
 
