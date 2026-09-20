@@ -1,14 +1,15 @@
 {
   "batch": "ancient_expansion_03",
   "status": "reviewed_unpublished_in_progress",
-  "scope": "Ancient Africa and Arabia priority following methodology reset",
-  "cases_completed": 4,
+  "scope": "Ancient Africa and Arabia priority, now continuing outward to underrepresented adjacent ancient regions after the initial Africa/Arabia tranche",
+  "cases_completed": 5,
   "external_participation_claims_completed": 1,
   "cases": [
     "Pre-Islamic South Arabia — recurrent slavery/captive enslavement in first-millennium epigraphic corpus",
     "Punic Carthage — institutional slavery and agricultural slave labour",
     "Aksum — recurrent slavery with bounded royal-inscription evidence for captive-taking and deportation",
-    "Late Period Egypt — pre-Ptolemaic chattel slavery evidenced through hereditary status, alienability and ownership branding"
+    "Late Period Egypt — pre-Ptolemaic chattel slavery evidenced through hereditary status, alienability and ownership branding",
+    "Sasanian Iran — legally institutionalized slavery with inheritance/alienability, agricultural and fire-foundation labour, and multiple recognized pathways into enslavement"
   ],
   "external_participation_claims": [
     "Opone — mid-first-century slave-export node to Egypt, represented as captive_export external participation with no territorial P-level"
@@ -25,10 +26,7 @@
     "same_author_sources_not_treated_as_independent_votes": true,
     "external_participation_lane_used_for_trade_evidence": true
   },
-  "p_levels": {
-    "P2": 2,
-    "P3": 2
-  },
+  "p_levels": {"P2": 2, "P3": 3},
   "unresolved_issues": [
     "South Arabia is intentionally a multi-polity regional synthesis with unresolved geometry; it must not be rendered as one timeless polity polygon.",
     "The South Arabian term ʿbd is semantically context-dependent; the claim relies on explicit ownership, sale and captive evidence and does not classify every ʿbd as enslaved.",
@@ -38,20 +36,22 @@
     "Kush/Meroe remains a candidate rather than a claim: current review found strong warnings in specialist scholarship against assuming an ancient Middle Nile external slave trade without tighter evidence.",
     "Late Period Egypt is P3 for institution-defining chattel practices, not P4: the specialist literature emphasizes scant documentation and a material difference from larger-scale Ptolemaic commercialization.",
     "Late Period Egypt needs narrower time-bounded historical geometry before publication; modern Egypt is not an acceptable proxy for the full 664–330 BCE slice.",
-    "Opone now has a reviewed external-participation captive_export claim from Periplus section 13, but this remains explicitly outside territorial P-level classification and unpublished.",
+    "Sasanian Iran is P3 because legal and institutional evidence securely establishes slavery, alienability/inheritance and multiple labour settings; it remains below P4 because legal richness is not evidence of empire-wide demographic dominance.",
+    "Sasanian Iran requires time-bounded historical geometry before publication; neither modern Iran nor one maximum-extent Sasanian polygon is acceptable for the entire 224–651 CE interval.",
+    "Opone has a reviewed external-participation captive_export claim from Periplus section 13, explicitly outside territorial P-level classification and unpublished.",
     "Opone/Ras Hafun point geometry still needs source-provenance resolution before any publication.",
     "No claim in this batch is part of a public release."
   ],
   "negative_or_deferred_candidates": [
     "Kush/Meroe — do not infer an ancient external slave trade from later Middle Nile patterns; require bounded status/captive evidence.",
-    "Garamantes — reviewed scholarship supports trans-Saharan connectivity, but slaves remain a possible rather than securely demonstrated import in the evidence inspected so far; do not create a territorial slavery claim from trade-route inference.",
-    "Rhapta/Azania — do not generalize Opone's slave-export evidence southward; inspected scholarship identifies Rhapta as a major trade port but does not independently establish slave export or territorial slavery there."
+    "Garamantes — trans-Saharan connectivity is secure, but slaves remain a possible rather than securely demonstrated import in evidence inspected so far.",
+    "Rhapta/Azania — do not generalize Opone's slave-export evidence southward without independent evidence."
   ],
   "next_research": [
     "Continue ancient African coverage beyond the Mediterranean littoral, prioritizing evidence quality over filling polygons.",
     "Investigate Kush/Meroe only through bounded status/captive evidence rather than inherited assumptions about a timeless Nile slave trade.",
-    "Extend the external-participation research lane to other strong trade-node evidence where sources justify it, while keeping territorial P-levels separate.",
-    "Resolve point provenance for Opone/Ras Hafun and time-bounded historical geometry for Carthage, Aksum and Late Period Egypt before any are considered for publication.",
-    "Continue underrepresented ancient regions after Africa/Arabia rather than defaulting to dense Atlantic or Mediterranean archives."
+    "Extend the external-participation lane to strong trade-node evidence while keeping territorial P-levels separate.",
+    "Continue outward into underrepresented ancient West/Central/South Asia and Indian Ocean regions rather than defaulting to dense Atlantic or Mediterranean archives.",
+    "Resolve provenance-backed historical geometry for accepted cases before any are considered for publication."
   ]
 }
