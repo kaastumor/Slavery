@@ -1,0 +1,47 @@
+name: Public Atlas Browser Review
+
+on:
+  pull_request:
+    paths:
+      - "web/scripts/run_public_atlas_browser_review.mjs"
+      - ".github/workflows/public-atlas-browser-review.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  live-browser-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install browser dependency
+        working-directory: web
+        shell: bash
+        run: |
+          npm install --package-lock-only
+          npm ci
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Review live public atlas after promotion
+        working-directory: web
+        shell: bash
+        run: |
+          node scripts/run_public_atlas_browser_review.mjs             https://kaastumor.github.io/Slavery/             /tmp/public-atlas-review
+
+      - name: Upload live browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-atlas-browser-review-${{ github.sha }}
+          path: /tmp/public-atlas-review/**
+          if-no-files-found: error
+          retention-days: 90
