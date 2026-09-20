@@ -23,11 +23,16 @@ class AncientExpansionBatch02Tests(unittest.TestCase):
                 self.assertIn(claim.get("publication_status"), (None, "unpublished"))
                 self.assertTrue(spec["evidence"])
 
-    def test_mauryan_dispute_has_no_p_level(self):
+    def test_mauryan_conflict_is_synthesized_without_losing_counterevidence(self):
         spec = load_spec(self.case_dir / "02_mauryan_slavery_disputed.json")
         practice = spec["claim"]["territorial_practice"]
-        self.assertEqual(practice["coverage_state_code"], "disputed")
-        self.assertIsNone(practice["practice_level"])
+        self.assertEqual(practice["coverage_state_code"], "classified")
+        self.assertEqual(practice["classification_status"], "reviewed")
+        self.assertEqual(practice["practice_level"], "P2")
+        directions = {evidence["direction"] for evidence in spec["evidence"]}
+        self.assertIn("supports", directions)
+        self.assertIn("challenges", directions)
+        self.assertIn("qualifies", directions)
 
     def test_silla_date_uncertainty_is_explicit(self):
         spec = load_spec(self.case_dir / "04_silla_village_register_slavery.json")
