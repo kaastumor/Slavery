@@ -146,6 +146,7 @@ jobs:
             --metadata "land_fabric=natural-earth-ne_10m_land-v5.1.1-ca96624" \
             --metadata "land_sha256=1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416" \
             --metadata "promotion_state=candidate" \
+            --metadata "render_policy_id=cliopatria-qgis-natural-earth-v1" \
             --metadata "workflow_sha=${{ github.sha }}" \
             --output /tmp/geometry-build/artifact_manifest.json
 
