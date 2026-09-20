@@ -1,0 +1,99 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Sasanian Iran",
+    "display_name": "Sasanian Iran",
+    "entity_type_code": "polity",
+    "notes": "Late antique Sasanian polity, 224–651 CE. Historical geometry remains unresolved and must not be replaced by modern Iranian borders or a maximum-extent empire polygon."
+  },
+  "claim": {
+    "from_year": 224,
+    "to_year": 651,
+    "date_text_original": "Sasanian period, 224–651 CE",
+    "temporal_precision": "period",
+    "temporal_certainty": "high",
+    "spatial_precision": "polity",
+    "summary": "Specialist legal-historical scholarship establishes slavery as a legally defined institution in Sasanian Iran. Enslaved people could be treated as property, inherited with estates, attached to agricultural land, and employed by Zoroastrian fire foundations. Sources of enslavement included captivity, descent, debt bondage and, under restricted conditions, sale of family members. This supports an institutional P3 classification without assuming that enslaved people formed a dominant share of the population or that practice was spatially uniform across the empire.",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P3",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P3 is justified by explicit legal status, alienability/inheritance, agricultural and institutional slave labour, and multiple legally recognized pathways into slavery. It stops below P4 because the reviewed evidence establishes institutional structure more securely than empire-wide prevalence or demographic dominance."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "BARDA and BARDA-DĀRI ii. In the Sasanian period",
+        "author_or_institution": "Maria Macuch; Encyclopaedia Iranica",
+        "source_type": "reference_article",
+        "source_classification": "secondary",
+        "independence_notes": "Dedicated specialist synthesis by a scholar of Sasanian law, drawing on the Mādayān ī Hazār Dādestān and Sasanian inscriptions.",
+        "reliability_limitations": "The legal corpus is disproportionately informative about juridical categories and disputes and cannot by itself quantify the demographic prevalence of slavery throughout the empire."
+      },
+      "version": {
+        "version_label": "Encyclopaedia Iranica, BARDA ii, updated 28 October 2016",
+        "url_or_identifier": "https://www.iranicaonline.org/articles/barda-ii/",
+        "publication_year": 1988,
+        "accessed_at": "2026-09-20T06:40:00Z"
+      },
+      "evidence_role": "specialist classification of Sasanian slave status, sources of enslavement and legal capacities",
+      "independence_group": "macuch_sasanian_slavery",
+      "directness": "dedicated specialist synthesis grounded in Sasanian legal and inscriptional sources",
+      "direction": "supports",
+      "locator": "discussion of wardag/anšahrīg, Mādayān rules on descent, debt bondage, sale and fire-temple slavery"
+    },
+    {
+      "source": {
+        "title": "JUDICIAL AND LEGAL SYSTEMS iii. SASANIAN LEGAL SYSTEM",
+        "author_or_institution": "Encyclopaedia Iranica",
+        "source_type": "reference_article",
+        "source_classification": "secondary",
+        "independence_notes": "Specialist legal synthesis describing free/slave status and major fields of slave labour from Sasanian legal materials.",
+        "reliability_limitations": "Legal norms demonstrate institutional recognition and forms of exploitation but do not provide a census or warrant uniform territorial prevalence."
+      },
+      "version": {
+        "version_label": "Encyclopaedia Iranica, Sasanian legal system",
+        "url_or_identifier": "https://www.iranicaonline.org/articles/judicial-and-legal-systems-iii-sasanian-legal-system/",
+        "publication_year": 2009,
+        "accessed_at": "2026-09-20T06:40:00Z"
+      },
+      "evidence_role": "independent specialist corroboration of legal status and household, agricultural and fire-foundation slave labour",
+      "independence_group": "iranica_sasanian_legal_system",
+      "directness": "specialist legal synthesis",
+      "direction": "supports",
+      "locator": "section distinguishing freeborn and slave status; three major areas of slave occupation"
+    },
+    {
+      "source": {
+        "title": "Zoroastrian Fire Foundations: A Portrait of Slaves and Slaveholders",
+        "author_or_institution": "Nazanin Tamari",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Recent dedicated study in Slavery & Abolition focused on slaves and slaveholders in Zoroastrian fire foundations.",
+        "reliability_limitations": "Institutional fire-foundation evidence is especially strong for one sector and should not be generalized mechanically to every locality or economic activity in the Sasanian realm."
+      },
+      "version": {
+        "version_label": "Slavery & Abolition 44.4 (2023), pp. 697–719",
+        "url_or_identifier": "https://doi.org/10.1080/0144039X.2023.2264111",
+        "publication_year": 2023,
+        "accessed_at": "2026-09-20T06:40:00Z"
+      },
+      "evidence_role": "recent specialist corroboration of institutional slave labour in fire foundations and other Sasanian settings",
+      "independence_group": "tamari_fire_foundations_2023",
+      "directness": "dedicated modern slavery study",
+      "direction": "supports",
+      "locator": "abstract and study scope, pp. 697–719"
+    }
+  ],
+  "geometry": {
+    "from_year": 224,
+    "to_year": 651,
+    "accuracy_status": "unresolved",
+    "resolution_method": "Resolve time-bounded Sasanian historical polygons separately from the practice classification. Do not use modern Iran or a single maximum-extent empire polygon for the entire 224–651 CE claim interval.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}
