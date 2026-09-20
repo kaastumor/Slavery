@@ -132,7 +132,7 @@ A local/CI disposable environment remains acceptable for testing in the meantime
 
 # P1 — Specialist geometry hierarchy
 
-## NOW — Issue #40
+## DONE — Issue #40 source hierarchy established
 
 Issue: **#40 — specialist regional geometry sources over Cliopatria where superior**
 
@@ -142,15 +142,15 @@ Issue: **#40 — specialist regional geometry sources over Cliopatria where supe
 - [x] Evaluate Ancient World Mapping Center / other specialist ancient datasets for bounded Greco-Roman cases. Current AWMC GeoJSON is ODbL-1.0 and provides discrete specialist political snapshots (including Roman 60 BCE, 117 CE, 200 CE and 200 CE provinces), making it a preferred bounded candidate when date/entity semantics match—but not a continuous timeline source and never a basis for interpolation. Harvard MAPS/DARMC is a useful dated CC BY-NC-SA comparator; the inspected DARE province file lacks explicit historical validity dates and remains supplementary pending provenance. See docs/18_GEOMETRY_SOURCE_SURVEY.md.
 - [x] Evaluate OpenHistoricalMap as supplementary material, not automatic authority. OHM has a useful temporal OSM-style boundary model and is CC0 by default, but administrative-boundary coverage and scholarly provenance are uneven and feature-level; some elements also carry source-specific licenses. Use OHM for source discovery/local comparison and accept only pinned relation versions after explicit source/date/license/geometry review. Missing OHM data never implies historical absence. See docs/18_GEOMETRY_SOURCE_SURVEY.md.
 - [x] Evaluate CONFOEDERATIO / Naissance as a comparator with provenance/license scrutiny. The public Atlas is an ambitious global/sub-yearly beta and accessible CRD datasets are stated MIT-licensed, but public 0.5b/0.51b scope/version descriptions differ, public files may be simplified/compressed, de-jure CShapes content retains upstream licensing, and no adequate public per-polity/keyframe citation mapping was identified. Keep it as an experimental second-global-baseline comparator/source-discovery aid; no automatic precedence or promotion. See docs/18_GEOMETRY_SOURCE_SURVEY.md.
-- [ ] Define explicit region/time/source precedence rules.
-- [ ] Never silently mix geometry source families within one geometry record.
-- [ ] Replace Cliopatria only where a bounded comparison shows a defensible improvement.
+- [x] Define explicit region/time/source precedence rules. D-055 makes accepted specialist geometry first for an exact bounded case, Cliopatria the global fallback baseline, then approximate historical geometry, modern proxy and unresolved. Current source-family guidance lives in docs/18_GEOMETRY_SOURCE_SURVEY.md rather than hard-coded routing.
+- [x] Never silently mix geometry source families within one geometry record. D-055 requires one historical source lineage per GEOMETRY record; any deliberate composite must become a separately registered derived source/version with contributing lineage and method preserved. Natural Earth remains render-only physical topology.
+- [x] Replace Cliopatria only where a bounded comparison shows a defensible improvement. D-055 requires semantic identity, temporal fit, version/native ID provenance, license compatibility, topology validity, source-vs-source comparison and explicit historical/cartographic acceptance; detail or newer publication alone never wins.
 
 ---
 
 # P1 — Resume globally balanced research
 
-## NEXT
+## NOW
 
 - [ ] Resume globally balanced territorial-practice research.
 - [ ] Prioritize weak/non-Atlantic cells before dense Atlantic bulk ingestion.
@@ -242,3 +242,4 @@ Evaluate only when there is a concrete workflow need. Do not add infrastructure 
 - **DONE / live:** D-052 deployment-bound static release fallback for `mvp-preview-ancient-v2`; exact deployed snapshot retained and checksummed, with API-first browser fallback semantics.
 - **DONE / live:** D-053 explicit `public_mvp_preview` release-channel pointer (migration 0025 + `atlas-data` v8), with compare-and-set rollback drill v2 → v1 → v2 externally verified healthy.
 - **DONE / live:** D-054 reconstructible typed release membership (migration 0026) plus preservation-grade full-state bundle build/verify/apply tooling and migration 0027 artifact immutability. CI proves exact bundle promotion and drift rejection; production 0027 guard is verified.
+- **DONE:** issue #40 specialist geometry-source hierarchy: Baekje search plus CHGIS, CShapes, AWMC/Greco-Roman, OpenHistoricalMap and Confoederatio evaluations, followed by D-055 case-specific precedence and source-isolation rules.
