@@ -234,3 +234,9 @@ Everything around those decisions should be automated where practical so reviewe
 - GitHub reusable workflows: https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows
 - GitHub deployment environments: https://docs.github.com/en/actions/concepts/workflows-and-actions/deployment-environments
 - QGIS batch processing: https://docs.qgis.org/testing/en/docs/user_manual/processing/batch.html
+
+## Release-channel promotion and rollback
+
+D-053 adds an explicit serving pointer after a release has been published. `public_mvp_preview` selects one immutable published release manifest. Promotion and rollback are compare-and-set pointer moves between existing published releases, followed by external health verification. Publication order is no longer a serving decision.
+
+This improves rollback and promotion intent but does not replace the remaining build-once release-artifact work: release membership/digests still need the #4 reconstructibility model, and true staging/protected deployment environments remain #43 work.

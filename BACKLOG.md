@@ -112,10 +112,10 @@ Already complete:
 Remaining:
 
 - [ ] Define a real staging -> production promotion boundary.
-- [ ] Make promotion consume the exact tested geometry/release artifact instead of recomputing it.
+- [ ] Make promotion consume the exact tested geometry/release artifact instead of recomputing it. **Partial:** geometry promotion already satisfies this under D-050; release publication still computes release membership at apply time and remains #4/#43 work.
 - [ ] Add protected GitHub deployment environments and appropriately scoped credentials.
 - [x] Materialize a static/recoverable published-release snapshot so a transient database outage cannot remove an already-published atlas state. D-052 is live: Pages deploy `873abc1c` captured `mvp-preview-ancient-v2` as a canonicalized 4.87 MB static payload (27 places / 31 claims / 57 geometry records), retained it as an Actions artifact, embedded it in the deployed site, and verified SHA-256 `53b64f65ae7fead65e2f9274cf4d9b87e4868a5a98f38eb0d97fea23e2d29d21` after deployment. Adversarial browser run `35531531089` then blocked the live Supabase API and verified all six representative cases from the deployed snapshot with no page/map errors; live-vs-fallback screenshots differ only in the `static fallback` badge. The browser remains API-first.
-- [ ] Add post-promotion verification and rollback/fallback semantics. **Partial:** D-052 now has automated post-deploy checksum verification plus adversarial runtime fallback proof; exact release-promotion rollback/repoint semantics remain to be implemented.
+- [x] Add post-promotion verification and rollback/fallback semantics. D-052 provides deployment-bound static fallback plus adversarial forced-outage verification. D-053 + migration 0025 add an explicit `public_mvp_preview` release-channel pointer with guarded published/purpose validation and compare-and-set moves. Production rollback drill on 2026-09-20 proved v2 → v1 → v2 without mutating release contents: health run `35533535121` served v2 at 27 places / 31 claims, rollback served v1 at 8 places / 11 claims, and restore served v2 again at 27 places / 31 claims, all HTTP/API/site healthy.
 - [x] Ensure public services consume reviewed/published materializations only. The browser consumes `atlas-data`; that Edge Function resolves the current public preview through `audit.release_manifest` plus `publish` views and approved render materializations, while D-051 blocks direct client access to internal research schemas.
 
 ### BLOCKED — Supabase development branch
@@ -227,7 +227,7 @@ Evaluate only when there is a concrete workflow need. Do not add infrastructure 
 | Production GIS experimentation can cause outages | Offline/CI/staging only; public path serves precomputed geometry |
 | GitHub geometry-promotion executor cannot write via Management API | Existing scoped token lacks `/database/query`; durable scoped promotion credentials remain #43 work |
 | No true staging environment yet | Local/CI testing; Supabase branch requires explicit cost approval |
-| Live API/database outage could hide an already-published atlas state | D-052 deployed snapshot fallback is live; full build-once release promotion and rollback semantics remain #43 work |
+| Live API/database outage could hide an already-published atlas state | D-052 deployed snapshot fallback is live and adversarially verified; D-053 provides explicit reversible release-channel repointing |
 | Historical migration ledger irregularities | #26 non-destructive reconciliation |
 | Attractive geometry may be semantically overbroad | Separate scope review from visual/cartographic QC |
 | Archive density could bias research priorities | Resume globally balanced/non-Atlantic-first research after release hardening |
@@ -240,3 +240,4 @@ Evaluate only when there is a concrete workflow need. Do not add infrastructure 
 - **DONE / live:** five D-050-approved 10 km representative render geometries promoted from immutable artifact `7644ea348ec43093219d964069a7b88ec088a331`.
 - **DONE / closed:** issue #62 Data API security P0: D-051 private boundary, migration 0023 defense-in-depth revokes/default privileges, migration 0024 immutable helper search path, production privilege recheck, public health green, and zero remaining Supabase security-advisor lints.
 - **DONE / live:** D-052 deployment-bound static release fallback for `mvp-preview-ancient-v2`; exact deployed snapshot retained and checksummed, with API-first browser fallback semantics.
+- **DONE / live:** D-053 explicit `public_mvp_preview` release-channel pointer (migration 0025 + `atlas-data` v8), with compare-and-set rollback drill v2 → v1 → v2 externally verified healthy.

@@ -450,3 +450,16 @@ D-051 makes the public serving boundary explicit:
 - internal tables may remain non-RLS when they are genuinely private, but explicit revokes/default privileges must prevent accidental future exposure.
 
 See `docs/21_DATA_API_SECURITY.md` for the production verification and hardening plan.
+
+## Explicit public release channel
+
+D-053 replaces implicit "latest published release" serving with an explicit `audit.release_channel` pointer.
+
+- `public_mvp_preview` points to exactly one already-published release manifest.
+- `atlas-data` resolves the public preview through that pointer and does not silently fall back to creation-time ordering.
+- pointer targets must be published and their manifest `purpose` must match the channel;
+- promotion/rollback moves the pointer only; it does not mutate historical release manifests, claim membership, geometry membership, or canonical v0.6.1;
+- compare-and-set semantics protect against stale/concurrent promotion attempts;
+- external health verification follows production pointer moves.
+
+The pointer is a serving/deployment control. Exact historical release-object membership and immutable release bundles remain governed by issue #4.
