@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   qgis-render-smoke:
@@ -130,3 +130,20 @@ jobs:
           name: achaemenid-qgis-render-candidates
           path: /tmp/real-render/achaemenid_qgis_*m.geojson
           if-no-files-found: error
+
+      - name: Commit selected 20 km pilot candidate to PR branch
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data/cartography/pilots
+          cp /tmp/real-render/achaemenid_qgis_20000m.geojson             data/cartography/pilots/achaemenid_qgis_20000m.geojson
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/cartography/pilots/achaemenid_qgis_20000m.geojson
+          if git diff --cached --quiet; then
+            echo "Pilot candidate unchanged."
+          else
+            git commit -m "Generate Achaemenid standard-GIS render pilot"
+            git push origin "HEAD:${GITHUB_HEAD_REF}"
+          fi
