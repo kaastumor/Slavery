@@ -1,0 +1,118 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Pre-Angkor Cambodian epigraphic region (7th century)",
+    "display_name": "Pre-Angkor Cambodia",
+    "entity_type_code": "region",
+    "notes": "Regional epigraphic claim for seventh-century Cambodia. It is not a single timeless polity and does not treat every person designated kñum as a slave."
+  },
+  "claim": {
+    "from_year": 611,
+    "to_year": 699,
+    "date_text_original": "7th century CE; earliest dated Khmer inscription in this evidence package 611 CE",
+    "temporal_precision": "broad_range",
+    "temporal_certainty": "high",
+    "spatial_precision": "regional_epigraphic_corpus",
+    "summary": "Seventh-century Cambodian inscriptions provide recurrent evidence for enslaved or clearly unfree status, including persons exchanged as part of the price of land and inscriptions using the Sanskrit terms dāsa/dāsī alongside other property. Specialist epigraphic scholarship also shows that the broader Khmer category kñum was heterogeneous and should not be translated mechanically as 'slave' in every occurrence. The atlas therefore records recurrent slavery at P2 while preserving the status ambiguity of the wider temple-personnel corpus.",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P2",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P2 rests on multiple bounded epigraphic attestations of alienability/non-freedom, not on counting every kñum as enslaved. It stops below P3 because the social status of temple personnel was heterogeneous and the inspected evidence does not yet establish one uniform slavery institution or prevalence across all pre-Angkor Cambodian communities."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Pre-Angkor Cambodia: evidence from the inscriptions in Khmer concerning the common people and their environment",
+        "author_or_institution": "Judith M. Jacob",
+        "source_type": "book_chapter",
+        "source_classification": "secondary",
+        "independence_notes": "Specialist linguistic and epigraphic study of pre-Angkor Khmer inscriptions, with direct translations of personnel, property and land-transfer passages.",
+        "reliability_limitations": "Jacob argues that people who were bought, sold and given were unfree and can reasonably be termed slaves, but the terminology remains debated and her conclusion should not be extended to every occurrence of kñum without contextual evidence."
+      },
+      "version": {
+        "version_label": "Cambodian Linguistics, Literature and History, ed. D. A. Smyth, 1993, pp. 299-318",
+        "url_or_identifier": "https://sealang.net/sala/archives/pdf8/jacob1993pre-angkor.pdf",
+        "publication_year": 1993,
+        "accessed_at": "2026-09-20T10:46:00Z"
+      },
+      "evidence_role": "specialist synthesis and translation of recurrent alienability/non-freedom in the pre-Angkor corpus",
+      "independence_group": "jacob_pre_angkor_common_people",
+      "directness": "specialist epigraphic synthesis with translated primary passages",
+      "direction": "supports",
+      "locator": "pp. 303-305, especially K.493 line 20: two women kñum as part of the price for a rice field; discussion of persons being given, priced and transferred"
+    },
+    {
+      "source": {
+        "title": "Society, Economics, and Politics in Pre-Angkor Cambodia: The 7th-8th Centuries",
+        "author_or_institution": "Michael Vickery",
+        "source_type": "specialist_monograph",
+        "source_classification": "secondary",
+        "independence_notes": "Major specialist reconstruction based primarily on the Khmer and Sanskrit epigraphic corpus.",
+        "reliability_limitations": "Vickery explicitly rejects treating all kñum or temple personnel as slaves and emphasizes multiple social categories. His analysis supports clear bounded cases while cautioning against a blanket slavery label."
+      },
+      "version": {
+        "version_label": "Centre for East Asian Cultural Studies for UNESCO / Toyo Bunko, 1998",
+        "url_or_identifier": "ISBN 4896561104",
+        "publication_year": 1998
+      },
+      "evidence_role": "specialist source criticism separating clear slavery cases from ambiguous temple personnel",
+      "independence_group": "vickery_pre_angkor_social_structure",
+      "directness": "specialist monograph based on original inscriptions",
+      "direction": "qualifies",
+      "locator": "pp. 225-231: K.493/657 exchange of persons for a rice field; K.1 non-freedom; Sanskrit dāsa/dāsī inscriptions; warning against translating all kñum as slaves"
+    },
+    {
+      "source": {
+        "title": "K. 493. Doorjamb from Tuol Kok Preah, 579 Śaka",
+        "author_or_institution": "DHARMA / ERC epigraphic edition",
+        "source_type": "digital_primary_edition",
+        "source_classification": "primary",
+        "independence_notes": "Current scholarly digital edition of the Old Khmer/Sanskrit inscription K.493, preserving the source-native text and identifier.",
+        "reliability_limitations": "The edition preserves the inscription but interpretation of kñum and related status terms requires specialist philological and social-historical analysis."
+      },
+      "version": {
+        "version_label": "DHARMA_INSCIK00493, version displayed 2026-08-17",
+        "url_or_identifier": "https://dharmalekha.info/texts/INSCIK00493",
+        "accessed_at": "2026-09-20T10:46:00Z"
+      },
+      "evidence_role": "source-native attestation underlying the translated land/person exchange discussed by Jacob and Vickery",
+      "independence_group": "k493_tuol_kok_preah",
+      "directness": "primary epigraphic edition",
+      "direction": "supports",
+      "locator": "lines 20-21; kñuṃ kantai 2 and caṃdak 1 appear in the transaction for a rice field"
+    },
+    {
+      "source": {
+        "title": "The earliest dated Cambodian inscription K. 557/600 from Angkor Borei, Cambodia: an English translation and commentary",
+        "author_or_institution": "Anton O. Zakharov",
+        "source_type": "journal_article_primary_translation",
+        "source_classification": "primary_translation",
+        "independence_notes": "Modern translation and commentary on the 611 CE K.557/600 inscription from Angkor Borei.",
+        "reliability_limitations": "The inscription attests dependent personnel donated to religious foundations, but whether every such person should be categorized as a slave is part of the wider terminological dispute."
+      },
+      "version": {
+        "version_label": "Vostok (Oriens) 2019 no. 1, pp. 66-80",
+        "url_or_identifier": "https://doi.org/10.31857/S086919080003960-3",
+        "publication_year": 2019,
+        "accessed_at": "2026-09-20T10:46:00Z"
+      },
+      "evidence_role": "early dated source context for dependent personnel and the semantic problem around servant/slave terminology",
+      "independence_group": "k557_600_angkor_borei",
+      "directness": "critical translation of a primary inscription",
+      "direction": "qualifies",
+      "locator": "K.557/600 (611 CE), discussion of dependent persons/servants or 'slaves' granted to deities"
+    }
+  ],
+  "geometry": {
+    "from_year": 611,
+    "to_year": 699,
+    "accuracy_status": "unresolved",
+    "resolution_method": "The evidence derives from multiple inscriptions across pre-Angkor Cambodia and cannot be represented responsibly by modern Cambodian borders or one maximum-extent polity polygon. Resolve source findspots and time-bounded political geography separately before publication.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}
