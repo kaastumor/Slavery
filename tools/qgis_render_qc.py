@@ -65,6 +65,11 @@ def main():
             source_area = sg_area.area()
             render_area = cg_area.area()
             area_delta_pct = 0.0 if source_area == 0 else 100.0 * (render_area - source_area) / source_area
+            symmetric_difference_pct = (
+                0.0
+                if source_area == 0
+                else 100.0 * sg_area.symDifference(cg_area).area() / source_area
+            )
 
             sg_3857 = transformed(sg, src_layer.crs(), 3857)
             cg_3857 = transformed(cg, cand_layer.crs(), 3857)
@@ -79,6 +84,7 @@ def main():
                 "source_npoints": vertex_count(sg),
                 "render_npoints": vertex_count(cg),
                 "area_delta_pct": area_delta_pct,
+                "symmetric_difference_pct": symmetric_difference_pct,
                 "hausdorff_m": hausdorff_m,
             })
 
@@ -88,6 +94,7 @@ def main():
             "feature_count": len(rows),
             "valid_count": sum(1 for r in rows if r.get("ok")),
             "max_abs_area_delta_pct": max((abs(r.get("area_delta_pct", 0.0)) for r in rows), default=0.0),
+            "max_symmetric_difference_pct": max((r.get("symmetric_difference_pct", 0.0) for r in rows), default=0.0),
             "max_hausdorff_m": max((r.get("hausdorff_m", 0.0) for r in rows), default=0.0),
             "features": rows,
         }
