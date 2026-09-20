@@ -5,6 +5,7 @@ on:
     paths:
       - "data/release_candidates/**"
       - "tools/publish_release.py"
+      - "tools/release_artifact.py"
       - ".github/workflows/release-candidate-ci.yml"
   push:
     branches: [main]
@@ -40,6 +41,12 @@ jobs:
           for manifest in "${manifests[@]}"; do
             echo "- `$manifest`" >> "$GITHUB_STEP_SUMMARY"
             python tools/publish_release.py "$manifest"
+          done
+
+          mapfile -t artifacts < <(find data/release_candidates -maxdepth 1 -type f -name '*.artifact.json' | sort)
+          for artifact in "${artifacts[@]}"; do
+            echo "- exact artifact: `$artifact`" >> "$GITHUB_STEP_SUMMARY"
+            python tools/release_artifact.py lint "$artifact"
           done
 
       - name: Block accidental canonical promotion through preview tooling
