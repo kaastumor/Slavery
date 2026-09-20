@@ -1,0 +1,10 @@
+{
+  "release_version": "d054-bundle-fixture-release",
+  "schema_version": "0027",
+  "purpose": "public_mvp_preview",
+  "canonical": false,
+  "claim_ids": ["55555555-5555-4555-8555-555555555555"],
+  "changelog": "Disposable D-054 full-state bundle integration fixture.",
+  "qc_summary": "One reviewed territorial-practice claim with evidence and reviewed geometry.",
+  "unresolved_issues": "None; test-only fixture."
+}
