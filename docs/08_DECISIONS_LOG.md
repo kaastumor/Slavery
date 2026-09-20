@@ -339,3 +339,23 @@ The snapshot build must:
 This is an availability/recovery materialization, not yet the final release-promotion architecture. Future #43/#4 work must move snapshot creation earlier so the immutable release artifact is built once from approved release inputs and promoted unchanged through staging and production, rather than deriving the fallback from an already-live API.
 
 **Reason:** the public preview currently depends on a live database-backed Edge Function. A transient database/API outage should not make an already-published atlas state disappear. Embedding a validated static copy in the web deployment provides an immediate recoverable state while preserving the stronger build-once/promote-many target as a separate remaining requirement.
+
+
+## D-053 — Public serving uses an explicit release-channel pointer, not “latest published”
+**Date:** 2026-09-20  
+**Decision:** Public serving must select the active non-canonical preview through an explicit release-channel pointer rather than implicitly choosing the most recently created published manifest.
+
+The initial channel is `public_mvp_preview`. A channel row points to one existing published `audit.release_manifest.release_version`. Promotion and rollback are atomic pointer moves between already-published releases; they do not mutate historical release manifests, claim membership, geometry membership, or canonical data.
+
+Channel updates must:
+- verify the target release exists and is `published`;
+- verify the target release manifest `purpose` matches the channel;
+- support compare-and-set against an expected current release so concurrent/stale promotion attempts fail safely;
+- preserve the previous release as an immutable rollback target;
+- run public health verification after a production pointer move.
+
+The `atlas-data` Edge Function must resolve the public preview through this pointer. Absence or invalidity of the pointer is a serving error, not permission to silently fall back to “latest published”.
+
+This release-channel pointer is a serving/promotion control, not full exact historical release membership. Issue #4 still governs reconstructible release-object membership and immutable release bundles.
+
+**Reason:** selecting `order by created_at desc limit 1` makes publication order an implicit deployment mechanism. A newly published manifest can silently become public, and rollback requires changing release state. An explicit pointer makes promotion intentional, auditable, reversible, and separable from immutable release contents while preserving D-046’s staged promotion model.
