@@ -84,7 +84,7 @@ Established architecture:
 - [x] Keep Baekje on fallback; do not weaken global QC.
 - [ ] Investigate Baekje's source/geometry separately under the specialist-geometry track (#40).
 - [x] Use 10 km as the conservative generic Cliopatria candidate baseline under D-049; do not auto-escalate tolerance, and do not replace the already accepted live Achaemenid render merely for uniformity.
-- [ ] Promote only the exact reviewed/checksummed artifact through a controlled promotion path.
+- [x] Implement a controlled exact-artifact promotion gate: D-050 + checked-in per-geometry acceptance/semantic registry + checksum-verifying promotion tool + real-artifact CI. Merged in PR #54.\n- [ ] Promote the five approved 10 km representative geometries through that gate; preserve the accepted live Achaemenid rows and keep Baekje quarantined.
 - [ ] Re-check the public browser after promotion.
 - [ ] Close #27 only when multiple representative regions and zoom levels are genuinely correct.
 
