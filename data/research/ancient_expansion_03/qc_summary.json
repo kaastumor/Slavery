@@ -3,11 +3,15 @@
   "status": "reviewed_unpublished_in_progress",
   "scope": "Ancient Africa and Arabia priority following methodology reset",
   "cases_completed": 4,
+  "external_participation_claims_completed": 1,
   "cases": [
     "Pre-Islamic South Arabia — recurrent slavery/captive enslavement in first-millennium epigraphic corpus",
     "Punic Carthage — institutional slavery and agricultural slave labour",
     "Aksum — recurrent slavery with bounded royal-inscription evidence for captive-taking and deportation",
     "Late Period Egypt — pre-Ptolemaic chattel slavery evidenced through hereditary status, alienability and ownership branding"
+  ],
+  "external_participation_claims": [
+    "Opone — mid-first-century slave-export node to Egypt, represented as captive_export external participation with no territorial P-level"
   ],
   "review_controls": {
     "specialist_historiography_identified_before_broad_classification": true,
@@ -18,7 +22,8 @@
     "source_count_not_used_mechanically_for_p_level": true,
     "trade_not_conflated_with_territorial_practice": true,
     "captivity_not_automatically_equated_with_slavery": true,
-    "same_author_sources_not_treated_as_independent_votes": true
+    "same_author_sources_not_treated_as_independent_votes": true,
+    "external_participation_lane_used_for_trade_evidence": true
   },
   "p_levels": {
     "P2": 2,
@@ -33,20 +38,20 @@
     "Kush/Meroe remains a candidate rather than a claim: current review found strong warnings in specialist scholarship against assuming an ancient Middle Nile external slave trade without tighter evidence.",
     "Late Period Egypt is P3 for institution-defining chattel practices, not P4: the specialist literature emphasizes scant documentation and a material difference from larger-scale Ptolemaic commercialization.",
     "Late Period Egypt needs narrower time-bounded historical geometry before publication; modern Egypt is not an acceptable proxy for the full 664–330 BCE slice.",
-    "Opone has strong first-century evidence for slave export to Egypt, but a trade-node attestation does not establish territorial prevalence, captives' origins, or local status institutions; no P-level is assigned from trade alone.",
+    "Opone now has a reviewed external-participation captive_export claim from Periplus section 13, but this remains explicitly outside territorial P-level classification and unpublished.",
+    "Opone/Ras Hafun point geometry still needs source-provenance resolution before any publication.",
     "No claim in this batch is part of a public release."
   ],
   "negative_or_deferred_candidates": [
     "Kush/Meroe — do not infer an ancient external slave trade from later Middle Nile patterns; require bounded status/captive evidence.",
     "Garamantes — reviewed scholarship supports trans-Saharan connectivity, but slaves remain a possible rather than securely demonstrated import in the evidence inspected so far; do not create a territorial slavery claim from trade-route inference.",
-    "Opone/northern Somali coast — Periplus sections 8 and 13 securely attest slave exports at Malao and especially Opone, but preserve this as trade evidence until the data model can represent trade/events separately or local slavery evidence is found.",
     "Rhapta/Azania — do not generalize Opone's slave-export evidence southward; inspected scholarship identifies Rhapta as a major trade port but does not independently establish slave export or territorial slavery there."
   ],
   "next_research": [
     "Continue ancient African coverage beyond the Mediterranean littoral, prioritizing evidence quality over filling polygons.",
     "Investigate Kush/Meroe only through bounded status/captive evidence rather than inherited assumptions about a timeless Nile slave trade.",
-    "Evaluate a dedicated trade/event representation so strong evidence such as Opone's first-century slave exports can be mapped without misclassifying territorial practice.",
-    "Resolve time-bounded historical geometry for Carthage, Aksum and Late Period Egypt before any are considered for publication.",
+    "Extend the external-participation research lane to other strong trade-node evidence where sources justify it, while keeping territorial P-levels separate.",
+    "Resolve point provenance for Opone/Ras Hafun and time-bounded historical geometry for Carthage, Aksum and Late Period Egypt before any are considered for publication.",
     "Continue underrepresented ancient regions after Africa/Arabia rather than defaulting to dense Atlantic or Mediterranean archives."
   ]
 }
