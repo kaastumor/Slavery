@@ -1,0 +1,14 @@
+update audit.release_manifest
+set status='validated'
+where release_version='d054-bundle-fixture-release'
+  and status in ('published','archived');
+
+delete from audit.release_manifest where release_version='d054-bundle-fixture-release';
+delete from atlas.claim_source where claim_source_id='66666666-6666-4666-8666-666666666666'::uuid;
+delete from atlas.territorial_practice_claim where claim_id='55555555-5555-4555-8555-555555555555'::uuid;
+delete from atlas.claim where claim_id='55555555-5555-4555-8555-555555555555'::uuid;
+delete from atlas.geometry where geometry_id='44444444-4444-4444-8444-444444444444'::uuid;
+delete from atlas.spatial_entity where spatial_entity_id='33333333-3333-4333-8333-333333333333'::uuid;
+delete from atlas.source_version where source_version_id='22222222-2222-4222-8222-222222222222'::uuid;
+delete from atlas.source where source_id='11111111-1111-4111-8111-111111111111'::uuid;
+delete from cartography.land_fabric where fabric_id='d054-bundle-fixture-land';
