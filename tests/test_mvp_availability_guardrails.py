@@ -4,6 +4,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 MAIN = (ROOT / "web" / "src" / "main.ts").read_text(encoding="utf-8")
 WORKFLOW = (ROOT / ".github" / "workflows" / "mvp-health.yml").read_text(encoding="utf-8")
+DEPLOY = (ROOT / ".github" / "workflows" / "deploy-pages.yml").read_text(encoding="utf-8")
 HEALTH = (ROOT / "tools" / "check_mvp_health.py").read_text(encoding="utf-8")
 
 
@@ -13,6 +14,16 @@ class MvpAvailabilityGuardrailTests(unittest.TestCase):
         self.assertIn("timeoutMs = 12000", MAIN)
         self.assertIn("controller.abort()", MAIN)
         self.assertIn('id="retry-atlas-load"', MAIN)
+
+    def test_frontend_has_static_snapshot_fallback(self):
+        self.assertIn("fetchApiWithFallback", MAIN)
+        self.assertIn("./fallback/atlas-data.json", MAIN)
+        self.assertIn("static fallback", MAIN)
+
+    def test_pages_deploy_builds_and_retains_snapshot(self):
+        self.assertIn("build_public_snapshot.py", DEPLOY)
+        self.assertIn("published-release-snapshot-", DEPLOY)
+        self.assertIn("Verify deployed static snapshot", DEPLOY)
 
     def test_monitor_runs_every_fifteen_minutes(self):
         self.assertIn('cron: "*/15 * * * *"', WORKFLOW)
