@@ -1,0 +1,70 @@
+name: Representative Geometry Render CI
+
+on:
+  pull_request:
+    paths:
+      - "tests/fixtures/cartography/representative_cliopatria_source.geojson"
+      - "tools/qgis_render_pipeline.sh"
+      - "tools/qgis_render_batch.sh"
+      - "tools/qgis_render_qc.py"
+      - ".github/workflows/geometry-representative-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  representative:
+    runs-on: ubuntu-latest
+    container:
+      image: qgis/qgis:stable
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download canonical Natural Earth 1:10m land fabric
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import urllib.request
+          url = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson"
+          urllib.request.urlretrieve(url, "/tmp/ne_10m_land.geojson")
+          PY
+
+      - name: Build representative 20 km candidate
+        shell: bash
+        run: |
+          export QT_QPA_PLATFORM=offscreen
+          bash tools/qgis_render_batch.sh \
+            tests/fixtures/cartography/representative_cliopatria_source.geojson \
+            /tmp/ne_10m_land.geojson \
+            /tmp/representative_qgis_20000m.geojson \
+            20000
+
+      - name: Validate candidate
+        shell: bash
+        run: |
+          export QT_QPA_PLATFORM=offscreen
+          qgis_process run native:checkvalidity -- \
+            INPUT_LAYER=/tmp/representative_qgis_20000m.geojson \
+            METHOD=2 \
+            VALID_OUTPUT=/tmp/valid.gpkg \
+            INVALID_OUTPUT=/tmp/invalid.gpkg \
+            ERROR_OUTPUT=/tmp/errors.gpkg >/dev/null
+
+      - name: Compute representative QC metrics
+        shell: bash
+        run: |
+          export QT_QPA_PLATFORM=offscreen
+          python3 tools/qgis_render_qc.py \
+            tests/fixtures/cartography/representative_cliopatria_source.geojson \
+            /tmp/representative_qgis_20000m.geojson \
+            /tmp/representative_qc.json
+
+      - name: Upload representative candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: representative-qgis-20km
+          path: |
+            /tmp/representative_qgis_20000m.geojson
+            /tmp/representative_qc.json
+          if-no-files-found: error

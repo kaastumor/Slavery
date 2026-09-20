@@ -1,0 +1,75 @@
+name: Geometry Tolerance Matrix
+
+on:
+  pull_request:
+    paths:
+      - "tools/qgis_render_pipeline.sh"
+      - "tools/qgis_render_batch.sh"
+      - "tools/qgis_render_qc.py"
+      - "tests/fixtures/cartography/achaemenid_cliopatria_source.geojson"
+      - "tests/fixtures/cartography/representative_cliopatria_source.geojson"
+      - ".github/workflows/geometry-tolerance-matrix.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tolerance:
+    strategy:
+      fail-fast: false
+      matrix:
+        tolerance_m: [10000, 15000, 20000, 25000]
+    runs-on: ubuntu-latest
+    container:
+      image: qgis/qgis:stable
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download canonical Natural Earth 1:10m land fabric
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import urllib.request
+          url = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson"
+          urllib.request.urlretrieve(url, "/tmp/ne_10m_land.geojson")
+          PY
+
+      - name: Render representative geometries
+        shell: bash
+        run: |
+          export QT_QPA_PLATFORM=offscreen
+          bash tools/qgis_render_batch.sh \
+            tests/fixtures/cartography/representative_cliopatria_source.geojson \
+            /tmp/ne_10m_land.geojson \
+            /tmp/representative.geojson \
+            ${{ matrix.tolerance_m }}
+          python3 tools/qgis_render_qc.py \
+            tests/fixtures/cartography/representative_cliopatria_source.geojson \
+            /tmp/representative.geojson \
+            /tmp/representative_qc.json
+
+      - name: Render Achaemenid benchmark
+        shell: bash
+        run: |
+          export QT_QPA_PLATFORM=offscreen
+          bash tools/qgis_render_batch.sh \
+            tests/fixtures/cartography/achaemenid_cliopatria_source.geojson \
+            /tmp/ne_10m_land.geojson \
+            /tmp/achaemenid.geojson \
+            ${{ matrix.tolerance_m }}
+          python3 tools/qgis_render_qc.py \
+            tests/fixtures/cartography/achaemenid_cliopatria_source.geojson \
+            /tmp/achaemenid.geojson \
+            /tmp/achaemenid_qc.json
+
+      - name: Upload tolerance result
+        uses: actions/upload-artifact@v4
+        with:
+          name: qgis-tolerance-${{ matrix.tolerance_m }}m
+          path: |
+            /tmp/representative.geojson
+            /tmp/representative_qc.json
+            /tmp/achaemenid.geojson
+            /tmp/achaemenid_qc.json
+          if-no-files-found: error
