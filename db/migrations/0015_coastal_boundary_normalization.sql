@@ -13,6 +13,8 @@ CREATE TABLE cartography.geometry_render_policy (
     created_at timestamptz NOT NULL DEFAULT now()
 );
 
+SET LOCAL search_path = public, extensions, pg_catalog, cartography, atlas, publish;
+
 INSERT INTO cartography.geometry_render_policy(
     policy_id,
     source_url_prefix,
@@ -36,7 +38,8 @@ RETURNS geometry
 LANGUAGE sql
 IMMUTABLE
 PARALLEL SAFE
-AS $$
+SET search_path = public, extensions, pg_catalog, cartography
+AS $
 WITH base AS (
     SELECT st_collectionextract(st_intersection(source_geom, land_geom), 3) AS geom
 ),
