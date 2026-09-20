@@ -2,7 +2,7 @@
   "batch": "ancient_expansion_03",
   "status": "reviewed_unpublished_in_progress",
   "scope": "Ancient Africa and Arabia priority, now continuing outward to underrepresented adjacent ancient regions after the initial Africa/Arabia tranche",
-  "cases_completed": 7,
+  "cases_completed": 8,
   "external_participation_claims_completed": 1,
   "cases": [
     "Pre-Islamic South Arabia — recurrent slavery/captive enslavement in first-millennium epigraphic corpus",
@@ -11,7 +11,8 @@
     "Late Period Egypt — pre-Ptolemaic chattel slavery evidenced through hereditary status, alienability and ownership branding",
     "Sasanian Iran — legally institutionalized slavery with inheritance/alienability, agricultural and fire-foundation labour, and multiple recognized pathways into enslavement",
     "Late Antique Bactria — court-produced legal documents attest born and purchased slaves, property status, manumission and alienability across a politically changing regional corpus",
-    "Early eighth-century Sogdiana — Samarkand legal documentation recognizes slave status; diaspora slave commerce is retained only as qualification rather than territorial prevalence evidence"
+    "Early eighth-century Sogdiana — Samarkand legal documentation recognizes slave status; diaspora slave commerce is retained only as qualification rather than territorial prevalence evidence",
+    "Pre-Angkor Cambodia — recurrent seventh-century epigraphic slavery attestations, with kñum terminology kept explicitly non-uniform"
   ],
   "external_participation_claims": [
     "Opone — mid-first-century slave-export node to Egypt, represented as captive_export external participation with no territorial P-level"
@@ -28,9 +29,13 @@
     "same_author_sources_not_treated_as_independent_votes": true,
     "external_participation_lane_used_for_trade_evidence": true,
     "documentary_region_not_mechanically_attributed_to_successive_empires": true,
-    "diaspora_activity_not_projected_onto_homeland_territory": true
+    "diaspora_activity_not_projected_onto_homeland_territory": true,
+    "status_term_not_mechanically_translated_across_corpus": true
   },
-  "p_levels": {"P2": 3, "P3": 4},
+  "p_levels": {
+    "P2": 4,
+    "P3": 4
+  },
   "unresolved_issues": [
     "South Arabia is intentionally a multi-polity regional synthesis with unresolved geometry; it must not be rendered as one timeless polity polygon.",
     "The South Arabian term ʿbd is semantically context-dependent; the claim relies on explicit ownership, sale and captive evidence and does not classify every ʿbd as enslaved.",
@@ -49,6 +54,8 @@
     "Sogdian geometry requires a narrow 709-710 Samarkand/Panjikent solution; modern borders, diaspora footprints and maximum-extent imperial polygons are not acceptable substitutes.",
     "Opone has a reviewed external-participation captive_export claim from Periplus section 13, explicitly outside territorial P-level classification and unpublished.",
     "Opone/Ras Hafun point geometry still needs source-provenance resolution before any publication.",
+    "Pre-Angkor Cambodia is conservatively P2: K.493 and other inscriptions support recurrent slavery/non-freedom, but kñum is a heterogeneous personnel category and must not be translated mechanically as 'slave' in every inscription.",
+    "Pre-Angkor Cambodia requires source-findspot and time-bounded political-geometry resolution before publication; modern Cambodia and a single 'Chenla' or maximum-extent polity polygon are not acceptable substitutes.",
     "No claim in this batch is part of a public release."
   ],
   "negative_or_deferred_candidates": [
@@ -63,6 +70,8 @@
     "Continue outward into underrepresented ancient West/Central/South Asia and Indian Ocean regions rather than defaulting to dense Atlantic or Mediterranean archives.",
     "For Bactria, investigate whether document-level dates/findspots permit narrower political attribution without projecting the whole corpus onto successive empires.",
     "For Sogdiana, seek additional homeland documents on slave ownership, transfer or labour before considering any move above P2.",
+    "Continue into underrepresented early Southeast Asia using epigraphic corpora, while separating clearly alienable enslaved status from broader temple-service and dependent-labour categories.",
+    "Keep Gupta-period northern India deferred until normative Dharmaśāstra evidence can be tied more securely to bounded geography and observed practice.",
     "Resolve provenance-backed historical geometry for accepted cases before any are considered for publication."
   ]
 }
