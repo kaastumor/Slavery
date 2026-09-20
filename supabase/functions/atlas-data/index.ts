@@ -34,22 +34,12 @@ Deno.serve(async (req) => {
     const release = releases[0];
 
     const places = await sql`
-      with release as (
-        select manifest
-        from audit.release_manifest
-        where release_version=${release.release_version}
-          and status='published'
-          and manifest->>'purpose'='public_mvp_preview'
-        limit 1
-      ),
-      release_claim as (
-        select jsonb_array_elements_text(manifest->'claim_ids')::uuid as claim_id
-        from release
-      ),
-      released_practice as (
+      with released_practice as (
         select t.*
         from publish.territorial_practice_claim t
-        join release_claim rc using (claim_id)
+        join audit.release_claim rc
+          on rc.claim_id=t.claim_id
+         and rc.release_version=${release.release_version}
       )
       select
         se.spatial_entity_id,
@@ -121,9 +111,11 @@ Deno.serve(async (req) => {
           left join atlas.source_version gsv on gsv.source_version_id = g.geometry_source_version_id
           left join atlas.source gs on gs.source_id = gsv.source_id
           where g.spatial_entity_id = se.spatial_entity_id
-            and g.geometry_id::text in (
-              select jsonb_array_elements_text(manifest->'geometry_ids')
-              from release
+            and exists (
+              select 1
+              from audit.release_geometry rg
+              where rg.release_version=${release.release_version}
+                and rg.geometry_id=g.geometry_id
             )
         ), '[]'::jsonb) as geometries
       from publish.spatial_entity se
