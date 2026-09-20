@@ -151,7 +151,7 @@ Deno.serve(async (req) => {
       release_version: release.release_version,
       schema_version: release.schema_version,
       canonical: release.manifest?.canonical ?? false,
-      data_boundary: "release_manifest_plus_publish_views",
+      data_boundary: "release_channel_typed_membership_plus_publish_views",
       date_model: "astronomical_year_numbering",
       cartography: fabric ? {
         fabric_id: fabric.fabric_id,
