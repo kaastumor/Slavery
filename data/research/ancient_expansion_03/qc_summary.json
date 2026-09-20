@@ -2,10 +2,11 @@
   "batch": "ancient_expansion_03",
   "status": "reviewed_unpublished_in_progress",
   "scope": "Ancient Africa and Arabia priority following methodology reset",
-  "cases_completed": 2,
+  "cases_completed": 3,
   "cases": [
     "Pre-Islamic South Arabia — recurrent slavery/captive enslavement in first-millennium epigraphic corpus",
-    "Punic Carthage — institutional slavery and agricultural slave labour"
+    "Punic Carthage — institutional slavery and agricultural slave labour",
+    "Aksum — recurrent slavery with bounded royal-inscription evidence for captive-taking and deportation"
   ],
   "review_controls": {
     "specialist_historiography_identified_before_broad_classification": true,
@@ -13,22 +14,27 @@
     "publication_status": "unpublished",
     "geometry_kept_independent_from_classification": true,
     "unknown_not_converted_to_absence": true,
-    "source_count_not_used_mechanically_for_p_level": true
+    "source_count_not_used_mechanically_for_p_level": true,
+    "trade_not_conflated_with_territorial_practice": true,
+    "captivity_not_automatically_equated_with_slavery": true
   },
   "p_levels": {
-    "P2": 1,
+    "P2": 2,
     "P3": 1
   },
   "unresolved_issues": [
     "South Arabia is intentionally a multi-polity regional synthesis with unresolved geometry; it must not be rendered as one timeless polity polygon.",
     "The South Arabian term ʿbd is semantically context-dependent; the claim relies on explicit ownership, sale and captive evidence and does not classify every ʿbd as enslaved.",
     "Punic Carthage needs time-bounded historical geometry before publication.",
-    "Aksum/Adulis remains a research candidate: available evidence clearly supports slave trading/export at Adulis, but the relationship between early Adulis evidence, Aksumite political control and a territorial-practice classification needs a tighter specialist evidence package before a reviewed claim is created.",
+    "Aksum is classified P2 from specialist synthesis plus bounded captive-taking evidence, but Adulis trade references are not used mechanically as territorial-practice evidence and captive status is not automatically treated as chattel slavery.",
+    "Aksum needs time-bounded historical geometry before publication; modern Ethiopia/Eritrea boundaries and maximum-extent empire maps are not acceptable substitutes.",
+    "Kush/Meroe remains a candidate rather than a claim: current review found strong warnings in specialist scholarship against assuming an ancient Middle Nile external slave trade without tighter evidence.",
     "No claim in this batch is part of a public release."
   ],
   "next_research": [
-    "Build the Aksum/Adulis evidence package without conflating external trade with territorial practice.",
     "Continue ancient African coverage beyond the Mediterranean littoral, prioritizing evidence quality over filling polygons.",
-    "Complete Mauryan re-review under the revised conflict-synthesis rule before any new public release."
+    "Investigate Kush/Meroe only through bounded status/captive evidence rather than inherited assumptions about a timeless Nile slave trade.",
+    "Resolve time-bounded historical geometry for Carthage and Aksum before either is considered for publication.",
+    "Continue underrepresented ancient regions after Africa/Arabia rather than defaulting to dense Atlantic or Mediterranean archives."
   ]
 }
