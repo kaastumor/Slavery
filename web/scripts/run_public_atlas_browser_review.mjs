@@ -22,6 +22,7 @@ function slug(value) {
 async function main() {
   const baseUrl = process.argv[2] || "https://kaastumor.github.io/Slavery/";
   const outputDir = path.resolve(process.argv[3] || "/tmp/public-atlas-review");
+  const forceApiFailure = process.argv.includes("--force-api-failure");
   await mkdir(outputDir, { recursive: true });
 
   const browser = await chromium.launch({
@@ -39,6 +40,13 @@ async function main() {
   const caseFailures = [];
   page.on("pageerror", (error) => pageErrors.push(String(error)));
 
+  if (forceApiFailure) {
+    await page.route(
+      "https://dilnayfllygkplsdymel.supabase.co/functions/v1/atlas-data",
+      (route) => route.abort("failed"),
+    );
+  }
+
   try {
     await page.goto(baseUrl, { waitUntil: "networkidle", timeout: 30_000 });
     await page.locator("#year").waitFor({ state: "visible", timeout: 15_000 });
@@ -46,6 +54,13 @@ async function main() {
 
     const releaseBadge = (await page.locator("#release-badge").innerText()).trim();
     const mapWarningVisible = await page.locator("#map-warning").isVisible();
+
+    if (forceApiFailure && !releaseBadge.includes("static fallback")) {
+      caseFailures.push("Forced API failure did not activate the deployed static fallback");
+    }
+    if (!forceApiFailure && releaseBadge.includes("static fallback")) {
+      caseFailures.push("Normal live review unexpectedly used the static fallback");
+    }
 
     if (mapWarningVisible) {
       throw new Error("Public map warning is visible before representative review");
@@ -128,6 +143,8 @@ async function main() {
 
     const summary = {
       base_url: baseUrl,
+      mode: forceApiFailure ? "forced_static_fallback" : "live_api",
+      forced_api_failure: forceApiFailure,
       release_badge: releaseBadge,
       checked_at: new Date().toISOString(),
       page_errors: pageErrors,
