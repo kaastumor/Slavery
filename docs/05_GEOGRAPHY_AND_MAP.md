@@ -132,3 +132,18 @@ Rules:
 
 Natural Earth 1:10m is used because this atlas supports country/region zoom levels. The old 1:110m land outline is retained only as a legacy migration fallback until an active canonical fabric has been loaded; it is not the normal web basemap.
 
+## Coastal boundary normalization for coarse historical polygons
+
+The canonical 1:10m land fabric solves only part of the coastline problem. A simple polygon intersection is **one-sided**: it removes historical-source geometry that extends into the ocean, but it cannot restore coastal land omitted when a coarse/raster-derived source polygon falls inland of the real shoreline. When the source alternates between those two errors, the result is a visibly jagged zipper coastline.
+
+Publication rendering therefore treats physical coastline and historical inland frontier as different geometric responsibilities:
+
+- historical/source geometry remains unchanged and auditable;
+- inland political/frontier segments remain source-derived;
+- where a source polygon is demonstrably coastal, the display shoreline is reconstructed from the active canonical land fabric within a bounded coastal-normalization corridor;
+- normalization parameters belong to a documented source-family/render policy, not to arbitrary per-polity manual edits;
+- any render-only transformation is exposed in API metadata;
+- the normalized result is clipped to the active canonical land fabric after reconstruction;
+- if coastal versus inland boundary cannot be distinguished safely, retain explicit unresolved/approximate geometry instead of manufacturing a smooth territorial edge.
+
+This is especially important for raster-derived/coarse historical geometry such as Cliopatria. The purpose is not to modernize historical inland borders; it is to ensure that the physical land/water edge comes from one canonical physical-land topology.
