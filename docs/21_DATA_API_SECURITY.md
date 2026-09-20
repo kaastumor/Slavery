@@ -43,11 +43,7 @@ This means an RLS-disabled internal table is not currently equivalent to an anon
 
 ## Supabase advisor result
 
-The authoritative Supabase security advisor was rerun after the privilege audit. It did **not** report RLS-disabled-table exposure as a current security lint. Its current finding was:
-
-- `function_search_path_mutable` on `atlas.make_year_range`.
-
-That function warning should be fixed separately as ordinary security hardening.
+Migration `0024_fix_make_year_range_search_path.sql` pins `atlas.make_year_range(integer, integer)` to `search_path = pg_catalog`. The authoritative Supabase security advisor was rerun after the live change and returned **zero security lints**.
 
 A generic table-inspection warning had earlier flagged the absence of RLS on internal tables without accounting for the project's schema/grant boundary. That warning triggered this audit, but it should not be interpreted as proof of active Data API exposure.
 
@@ -62,14 +58,16 @@ During this audit it returned HTTP 403 for:
 
 Do not broaden the operations/self-heal token merely to make a security audit convenient. Exact platform configuration can be inspected through an appropriately authorized administrative session when needed; effective client access is separately constrained by the PostgreSQL grants above.
 
-## Hardening still required
+## Hardening completed
 
-Current production state is safe by grants, but it should be made resistant to future accidental exposure:
+Migration `0023_private_data_api_boundary.sql` is live and makes D-051 enforceable:
 
-1. explicitly revoke `PUBLIC`, `anon` and `authenticated` access to the internal schemas/objects where those roles exist;
-2. set default privileges so future tables/functions/sequences in those schemas do not become client-accessible;
-3. add regression tests for the private-schema invariant;
-4. verify the public Edge Function/browser still works after the hardening migration;
-5. rerun security advisors and resolve the mutable function `search_path` warning.
+1. `PUBLIC`, `anon` and `authenticated` are explicitly revoked from the internal schemas and their tables/sequences/functions;
+2. matching restrictive default privileges prevent future objects from silently becoming client-accessible;
+3. foundation CI now runs `004_private_data_api_boundary.sql` as a regression gate;
+4. post-migration production checks show both client roles have zero schema usage, zero relation read/write privileges, zero sequence usage and zero function execution privileges across the internal boundary;
+5. explicit `SET ROLE anon` / `SET ROLE authenticated` read and side-effect-free write probes against `atlas.geometry` fail with PostgreSQL `42501 permission denied for schema atlas`;
+6. MVP Availability Monitor run `35530806716` passed after migrations 0023/0024, validating the public Edge Function and GitHub Pages serving path;
+7. migration `0024_fix_make_year_range_search_path.sql` resolved the remaining advisor finding, and the authoritative Supabase security advisor now reports zero lints.
 
-Do not enable RLS indiscriminately on every internal table without first defining policies. The intended control for these private schemas is non-exposure plus explicit grants; RLS becomes mandatory for any table deliberately exposed to client roles.
+Do not enable RLS indiscriminately on every internal table without first defining policies. The intended control for these private schemas is non-exposure plus explicit grants; RLS is required for any table deliberately exposed to client roles.
