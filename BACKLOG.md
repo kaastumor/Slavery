@@ -82,7 +82,7 @@ Established architecture:
 - [x] Use that review path to validate representative candidates at several browser zoom levels/continents against the same Natural Earth fabric. Boundary-focused CI review run `35526192586` passed with exact-artifact SHA verification and no browser page errors.
 - [x] Record explicit cartographic visual disposition per candidate: Achaemenid (both slices), Hittite central Anatolia, New Kingdom Egypt, Western Han, Roman Empire and Mauryan Empire are `visually_accepted_candidate`; Baekje is `quarantined/fallback`. This is cartographic acceptance, not historical-semantic scope approval.
 - [x] Keep Baekje on fallback; do not weaken global QC.
-- [ ] Investigate Baekje's source/geometry separately under the specialist-geometry track (#40).
+- [x] Investigate Baekje's source/geometry separately under #40. No open, license-clear 347–391 CE specialist vector replacement was identified; keep the failed candidate quarantined/fallback and do not invent a replacement polygon. Documented in docs/18_GEOMETRY_SOURCE_SURVEY.md.
 - [x] Use 10 km as the conservative generic Cliopatria candidate baseline under D-049; do not auto-escalate tolerance, and do not replace the already accepted live Achaemenid render merely for uniformity.
 - [x] Implement a controlled exact-artifact promotion gate: D-050 + checked-in per-geometry acceptance/semantic registry + checksum-verifying promotion tool + real-artifact CI. Merged in PR #54.\n- [ ] Promote the five approved 10 km representative geometries through that gate; preserve the accepted live Achaemenid rows and keep Baekje quarantined.
 - [ ] Re-check the public browser after promotion.
@@ -142,7 +142,7 @@ A local/CI disposable environment remains acceptable for testing in the meantime
 
 Issue: **#40 — specialist regional geometry sources over Cliopatria where superior**
 
-- [ ] Investigate Baekje/Korean historical geometry first because it is an observed generic-pipeline failure.
+- [x] Investigate Baekje/Korean historical geometry first. NIKH HGIS provides authoritative Korean historical GIS but its documented polygon coverage is modern (1910+); no period-appropriate open vector replacement for 347–391 CE was identified. Baekje remains quarantine/fallback pending a stronger specialist source.
 - [ ] Evaluate CHGIS exact version/license/export suitability for historical China.
 - [ ] Evaluate CShapes 2.0 for its modern historical coverage.
 - [ ] Evaluate Ancient World Mapping Center / other specialist ancient datasets for bounded Greco-Roman cases.

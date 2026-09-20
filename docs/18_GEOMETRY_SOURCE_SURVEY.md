@@ -56,6 +56,30 @@ It should not be treated as the best geometry for every place and period. The at
 
 The physical coastline is a separate concern: Natural Earth remains the canonical cartographic land/coastline fabric. A historical political source does not become the physical coastline authority.
 
+## Case investigation — Baekje (347–391 CE)
+
+**Status:** investigated; no promotion-ready specialist vector replacement identified.
+
+The quarantined Baekje candidate is not a reason to relax the generic Cliopatria render-QC gates. A targeted source search found:
+
+- The National Institute of Korean History (NIKH) Historical Geographic Information Database is an authoritative Korean historical-GIS project and publishes downloadable polygon GIS data, but its currently documented nationwide polygon coverage is modern: principally 1910–1945 and 1955–1975. It therefore cannot be reused as a 4th-century Baekje boundary source.
+  - https://hgis.history.go.kr/
+  - https://hgis.history.go.kr/pro_g1/intro/intro01.do
+  - https://hgis.history.go.kr/pro_g1/dataset.do
+- Specialist Korean historical-geography scholarship does reconstruct ancient interstate borders. A useful example is *한국 고대 사국의 국경선* (Kim Tae-sik et al.), which explicitly synthesizes scholarly border reconstructions and map drafts, but its principal scope is the **late 5th century**, later than the atlas's current Baekje geometry slice (347–391 CE), and it was not identified as an open machine-readable vector dataset with redistribution terms suitable for direct ingestion.
+- Other located Baekje historical-geography scholarship is valuable for interpretation and source discovery but likewise does not currently provide a versioned, license-clear 347–391 CE polygon dataset suitable for replacing the Cliopatria source geometry.
+
+**Decision for the current atlas state:**
+
+1. Keep the Baekje QGIS candidate e5a720f8-9e22-45fe-a5b0-c6464686525d quarantined/fallback.
+2. Do not create a hand-drawn or inferred replacement polygon from a printed map.
+3. Do not substitute modern Korean administrative GIS for an ancient political extent.
+4. Preserve the current source geometry/provenance while withholding the failed transformed render from promotion.
+5. Reopen the source search only when a period-appropriate specialist dataset or citable reconstruction can be ingested with explicit provenance, temporal fit and redistribution rights.
+6. Treat the current evidence claim's bounded-event semantics separately from polity geometry: even a better Baekje polity polygon would not by itself establish territory-wide prevalence.
+
+This is a resolved source-search outcome, not a claim that the surviving Cliopatria Baekje polygon is historically superior. Unknown/unsupported geometry remains preferable to false precision.
+
 ## Near-term evaluation backlog
 
 - Compare CShapes 2.0 against Cliopatria for 1886–2019.
