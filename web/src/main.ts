@@ -128,6 +128,7 @@ map.on("error", (event) => {
 let places: Place[] = [];
 let selectedPlaceId: string | null = null;
 let release: ApiResponse | null = null;
+let servingMode: "live" | "static_fallback" = "live";
 
 const hoverPopup = new Popup({
   closeButton: false,
@@ -406,7 +407,7 @@ function renderOverview(year: number): void {
 
       <div class="release-inline">
         ${release
-          ? `${escapeHtml(release.release_version)} · schema ${escapeHtml(release.schema_version)} · ${release.canonical ? "canonical" : "non-canonical preview"}`
+          ? `${escapeHtml(release.release_version)} · schema ${escapeHtml(release.schema_version)} · ${release.canonical ? "canonical" : "non-canonical preview"}${servingMode === "static_fallback" ? " · static fallback" : ""}`
           : "Loading release metadata…"}
       </div>
     </div>
@@ -571,17 +572,35 @@ function attachLayerInteraction(layerId: string): void {
   });
 }
 
-async function fetchApiWithTimeout(timeoutMs = 12000): Promise<ApiResponse> {
+function validateApiResponse(payload: unknown, label: string): ApiResponse {
+  if (!payload || typeof payload !== "object") {
+    throw new Error(`${label} returned a non-object payload`);
+  }
+
+  const candidate = payload as Partial<ApiResponse>;
+  if (
+    !candidate.release_version ||
+    !candidate.schema_version ||
+    !Array.isArray(candidate.places) ||
+    candidate.places.length === 0 ||
+    !candidate.cartography?.source_url
+  ) {
+    throw new Error(`${label} returned an incomplete published release payload`);
+  }
+  return candidate as ApiResponse;
+}
+
+async function fetchJsonWithTimeout(url: string, label: string, timeoutMs: number): Promise<ApiResponse> {
   const controller = new AbortController();
   const timer = window.setTimeout(() => controller.abort(), timeoutMs);
 
   try {
-    const response = await fetch(API_URL, { signal: controller.signal });
-    if (!response.ok) throw new Error(`Atlas API returned ${response.status}`);
-    return (await response.json()) as ApiResponse;
+    const response = await fetch(url, { signal: controller.signal });
+    if (!response.ok) throw new Error(`${label} returned ${response.status}`);
+    return validateApiResponse(await response.json(), label);
   } catch (error) {
     if (error instanceof DOMException && error.name === "AbortError") {
-      throw new Error(`Atlas API timed out after ${Math.round(timeoutMs / 1000)} seconds`);
+      throw new Error(`${label} timed out after ${Math.round(timeoutMs / 1000)} seconds`);
     }
     throw error;
   } finally {
@@ -589,10 +608,35 @@ async function fetchApiWithTimeout(timeoutMs = 12000): Promise<ApiResponse> {
   }
 }
 
+async function fetchApiWithTimeout(timeoutMs = 12000): Promise<ApiResponse> {
+  return fetchJsonWithTimeout(API_URL, "Atlas API", timeoutMs);
+}
+
+async function fetchApiWithFallback(timeoutMs = 12000): Promise<ApiResponse> {
+  try {
+    const live = await fetchApiWithTimeout(timeoutMs);
+    servingMode = "live";
+    return live;
+  } catch (liveError) {
+    console.warn("Live atlas API unavailable; trying deployed static fallback", liveError);
+    const fallbackUrl = new URL("./fallback/atlas-data.json", window.location.href).toString();
+    try {
+      const fallback = await fetchJsonWithTimeout(fallbackUrl, "Static atlas fallback", 6000);
+      servingMode = "static_fallback";
+      return fallback;
+    } catch (fallbackError) {
+      throw new Error(
+        `Live atlas API failed (${liveError instanceof Error ? liveError.message : liveError}); ` +
+        `static fallback also failed (${fallbackError instanceof Error ? fallbackError.message : fallbackError})`,
+      );
+    }
+  }
+}
+
 async function boot(): Promise<void> {
   try {
     const [apiResponse] = await Promise.all([
-      fetchApiWithTimeout(),
+      fetchApiWithFallback(),
       new Promise<void>((resolve) => map.once("load", () => resolve())),
     ]);
 
@@ -600,9 +644,11 @@ async function boot(): Promise<void> {
     places = apiResponse.places;
 
     releaseBadge.textContent =
-      `${apiResponse.release_version}${apiResponse.canonical ? "" : " · preview"}`;
+      `${apiResponse.release_version}${apiResponse.canonical ? "" : " · preview"}${servingMode === "static_fallback" ? " · static fallback" : ""}`;
     releaseBadge.classList.toggle("preview", !apiResponse.canonical);
-    releaseBadge.title = `Schema ${apiResponse.schema_version} · ${apiResponse.data_boundary}`;
+    releaseBadge.title =
+      `Schema ${apiResponse.schema_version} · ${apiResponse.data_boundary}` +
+      (servingMode === "static_fallback" ? " · live API unavailable; showing deployed snapshot" : "");
 
     const years = places.flatMap((place) =>
       place.claims.flatMap((claim) =>

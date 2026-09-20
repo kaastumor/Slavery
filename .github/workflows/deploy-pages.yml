@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "web/**"
+      - "tools/build_public_snapshot.py"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
@@ -31,6 +32,29 @@ jobs:
       - run: npm install --package-lock-only
       - run: npm ci
       - run: npm run build
+
+      - name: Capture published release snapshot
+        working-directory: .
+        shell: bash
+        env:
+          ATLAS_API_URL: https://dilnayfllygkplsdymel.supabase.co/functions/v1/atlas-data
+        run: |
+          set -euo pipefail
+          curl --fail --show-error --silent --max-time 20 "$ATLAS_API_URL" -o /tmp/atlas-api.json
+          python3 tools/build_public_snapshot.py             /tmp/atlas-api.json             web/dist/fallback             --source-url "$ATLAS_API_URL"             --source-git-sha "$GITHUB_SHA"
+          echo "### Published release snapshot" >> "$GITHUB_STEP_SUMMARY"
+          echo '~~~json' >> "$GITHUB_STEP_SUMMARY"
+          cat web/dist/fallback/snapshot-manifest.json >> "$GITHUB_STEP_SUMMARY"
+          echo '~~~' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Retain published release snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: published-release-snapshot-${{ github.sha }}
+          path: web/dist/fallback/**
+          if-no-files-found: error
+          retention-days: 90
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
@@ -46,3 +70,40 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Verify deployed static snapshot
+        shell: bash
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          set -euo pipefail
+          base="${PAGE_URL%/}"
+          ok=0
+          for attempt in {1..10}; do
+            if curl --fail --show-error --silent --max-time 15 "$base/fallback/atlas-data.json" -o /tmp/fallback-atlas.json               && curl --fail --show-error --silent --max-time 15 "$base/fallback/snapshot-manifest.json" -o /tmp/fallback-manifest.json; then
+              ok=1
+              break
+            fi
+            sleep 5
+          done
+          test "$ok" -eq 1
+          python3 - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          payload_bytes = Path("/tmp/fallback-atlas.json").read_bytes()
+          payload = json.loads(payload_bytes)
+          manifest = json.loads(Path("/tmp/fallback-manifest.json").read_text(encoding="utf-8"))
+
+          actual = hashlib.sha256(payload_bytes).hexdigest()
+          assert manifest["payload_sha256"] == actual, (manifest["payload_sha256"], actual)
+          assert manifest["release_version"] == payload["release_version"]
+          assert manifest["release_schema_version"] == payload["schema_version"]
+          assert manifest["place_count"] == len(payload["places"])
+          print(json.dumps({
+              "release_version": payload["release_version"],
+              "payload_sha256": actual,
+              "place_count": len(payload["places"]),
+          }, indent=2))
+          PY
