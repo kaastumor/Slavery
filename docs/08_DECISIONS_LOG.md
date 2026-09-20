@@ -292,3 +292,24 @@ Existing explicitly approved/published render artifacts, including the visually 
 
 **Reason:** Representative testing found 10 km to be the least-distorting tested tolerance overall, while larger tolerances did not produce monotonic improvement. Baekje also demonstrates that changing tolerance does not rescue every source geometry: it remains a material outlier across the tested matrix. A conservative fixed baseline plus quarantine/fallback is more reproducible than selecting whichever tolerance happens to make an individual geometry look acceptable.
 
+## D-050 — Promote external render geometry only from an immutable acceptance registry
+**Date:** 2026-09-20  
+**Decision:** Promotion of externally generated render geometry is a separate, explicit step from candidate generation. A promotion must consume the **exact immutable artifact that passed automated QC and visual review**; production must not recompute the geometry.
+
+Each promotion batch is represented by a checked-in acceptance registry that records:
+
+- geometry-build run/artifact identity and Git SHA;
+- artifact-manifest and candidate/QC file SHA-256 values;
+- canonical land-fabric identity/checksum and render parameters;
+- the browser-review run used for cartographic acceptance;
+- per-geometry automated-QC state;
+- per-geometry cartographic visual disposition;
+- per-geometry semantic-scope disposition;
+- the requested action: `promote`, `quarantine`, or `preserve_existing_live`.
+
+The promotion tool must verify all recorded checksums before it can produce a database-ready plan. `promote` is allowed only when automated QC passed, cartographic review is accepted, semantic scope is explicitly accepted, the source geometry exists in reviewed state, the active land fabric matches, and the target render-cache slot is not already occupied unexpectedly. Quarantined candidates are never inserted. Existing explicitly accepted live renders are preserved unless a later registry deliberately supersedes them.
+
+The registry, together with the immutable build artifact and Git history, is the provenance record for the promoted derived geometry. The database render cache is a serving materialization, not the sole provenance store. This avoids adding premature per-row provenance columns while the broader release/provenance model under #43/#4 is still being designed.
+
+**Reason:** issue #27 needs a safe route from reviewed CI geometry to production without violating D-046's build-once/promote-unchanged rule. A versioned acceptance registry makes the human cartographic and semantic decisions explicit, prevents a green CI run from becoming an implicit publication decision, and allows the serving cache to remain replaceable/reconstructible from immutable inputs.
+
