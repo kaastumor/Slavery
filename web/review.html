@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historical Slavery Atlas — Geometry Review</title>
+  </head>
+  <body>
+    <main class="review-shell">
+      <aside class="review-panel">
+        <div class="eyebrow">Local-only cartography QC</div>
+        <h1>Geometry artifact review</h1>
+        <p class="intro">
+          Load an immutable geometry-build artifact and its exact source fixture.
+          This page never calls the atlas API and never writes to production.
+        </p>
+
+        <section class="load-grid">
+          <label>
+            <span>Artifact manifest</span>
+            <input id="manifest-file" type="file" accept=".json,application/json" />
+            <small id="manifest-state">Not loaded</small>
+          </label>
+          <label>
+            <span>Source GeoJSON</span>
+            <input id="source-file" type="file" accept=".geojson,.json,application/geo+json,application/json" />
+            <small id="source-state">Not loaded</small>
+          </label>
+          <label>
+            <span>Candidate GeoJSON</span>
+            <input id="candidate-file" type="file" accept=".geojson,.json,application/geo+json,application/json" />
+            <small id="candidate-state">Not loaded</small>
+          </label>
+          <label>
+            <span>QC decision JSON</span>
+            <input id="decision-file" type="file" accept=".json,application/json" />
+            <small id="decision-state">Optional</small>
+          </label>
+        </section>
+
+        <section class="land-card">
+          <div>
+            <strong>Canonical land fabric</strong>
+            <small id="land-state">Loading pinned Natural Earth 1:10m…</small>
+          </div>
+          <label class="compact-file">
+            <span>Use local pinned copy</span>
+            <input id="land-file" type="file" accept=".geojson,.json,application/geo+json,application/json" />
+          </label>
+        </section>
+
+        <section class="selection-card">
+          <label>
+            <span>Geometry</span>
+            <select id="geometry-select" disabled>
+              <option>Load source and candidate files</option>
+            </select>
+          </label>
+          <div class="button-row">
+            <button id="fit-selected" type="button" disabled>Fit selected</button>
+            <button id="fit-world" type="button">World view</button>
+          </div>
+          <div class="toggle-row">
+            <label><input id="show-source" type="checkbox" checked /> Source</label>
+            <label><input id="show-candidate" type="checkbox" checked /> Candidate</label>
+          </div>
+        </section>
+
+        <section id="review-status" class="review-status">
+          Load the manifest, source and candidate to begin exact-artifact review.
+        </section>
+        <section id="metrics" class="metrics">
+          <div class="metric-empty">No geometry selected.</div>
+        </section>
+        <details>
+          <summary>Review rule</summary>
+          <p>
+            Automated QC is necessary, not sufficient. Accept only when the candidate
+            removes cartographic artifacts without materially rewriting historical inland
+            frontiers or semantic scope. Outliers quarantine/fallback.
+          </p>
+        </details>
+      </aside>
+
+      <section class="map-wrap">
+        <div class="map-toolbar">
+          <span id="map-title">No geometry selected</span>
+          <span id="zoom-label">zoom —</span>
+        </div>
+        <div id="review-map"></div>
+      </section>
+    </main>
+    <script type="module" src="/src/review.ts"></script>
+  </body>
+</html>

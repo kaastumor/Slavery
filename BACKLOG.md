@@ -77,7 +77,7 @@ Established architecture:
 
 ### Remaining acceptance steps
 
-- [ ] Inspect the final topology-correct **10 km** review artifact at full extent and close boundary/coast views for the representative set.
+- [x] Inspect the final topology-correct **10 km** review artifact at full extent and representative boundary/coast views; Baekje remains quarantined.
 - [ ] Build/use a disposable MapLibre review path that renders the **exact tested artifact**, not a recomputation.
 - [ ] Validate representative candidates at several browser zoom levels/continents against the same Natural Earth fabric.
 - [ ] Record explicit visual disposition per candidate: `visually_accepted` or `quarantined/fallback`.
