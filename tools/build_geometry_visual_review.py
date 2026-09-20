@@ -4,6 +4,11 @@
 Uses only the Python standard library so it can run inside the pinned QGIS CI
 container without adding another plotting dependency. The output is review-only;
 it never mutates source/candidate geometry.
+
+Polygon components are rendered as separate SVG paths. This is important for
+MultiPolygon topology: flattening every ring into one even-odd path can make a
+valid island/component disappear visually when it sits inside another
+component's hole.
 """
 from __future__ import annotations
 
@@ -39,26 +44,30 @@ def feature_id(feature: dict) -> str:
     return str(value)
 
 
-def geometry_rings(geometry: dict | None) -> list[list[list[float]]]:
+def geometry_polygons(geometry: dict | None) -> list[list[list[list[float]]]]:
+    """Return Polygon/MultiPolygon coordinates grouped by polygon component."""
     if not geometry:
         return []
     gtype = geometry.get("type")
     coords = geometry.get("coordinates") or []
     if gtype == "Polygon":
-        return coords
+        return [coords]
     if gtype == "MultiPolygon":
-        return [ring for poly in coords for ring in poly]
+        return coords
     return []
 
 
-def bounds_from_rings(rings: Iterable[list[list[float]]]) -> tuple[float, float, float, float] | None:
+def bounds_from_polygons(
+    polygons: Iterable[list[list[list[float]]]],
+) -> tuple[float, float, float, float] | None:
     xs: list[float] = []
     ys: list[float] = []
-    for ring in rings:
-        for point in ring:
-            if len(point) >= 2:
-                xs.append(float(point[0]))
-                ys.append(float(point[1]))
+    for polygon in polygons:
+        for ring in polygon:
+            for point in ring:
+                if len(point) >= 2:
+                    xs.append(float(point[0]))
+                    ys.append(float(point[1]))
     if not xs:
         return None
     return min(xs), min(ys), max(xs), max(ys)
@@ -82,7 +91,14 @@ def intersects(a: tuple[float, float, float, float], b: tuple[float, float, floa
     return not (a[2] < b[0] or a[0] > b[2] or a[3] < b[1] or a[1] > b[3])
 
 
-def project(point: list[float], bbox: tuple[float, float, float, float], x0: float, y0: float, w: float, h: float) -> tuple[float, float]:
+def project(
+    point: list[float],
+    bbox: tuple[float, float, float, float],
+    x0: float,
+    y0: float,
+    w: float,
+    h: float,
+) -> tuple[float, float]:
     minx, miny, maxx, maxy = bbox
     spanx = max(maxx - minx, 1e-9)
     spany = max(maxy - miny, 1e-9)
@@ -96,14 +112,24 @@ def project(point: list[float], bbox: tuple[float, float, float, float], x0: flo
     return x, y
 
 
-def path_data(rings: Iterable[list[list[float]]], bbox, x0, y0, w, h) -> str:
+def polygon_path_data(polygon, bbox, x0, y0, w, h) -> str:
+    """One SVG path per polygon; rings inside it use even-odd for holes."""
     parts: list[str] = []
-    for ring in rings:
+    for ring in polygon:
         if len(ring) < 2:
             continue
         points = [project(p, bbox, x0, y0, w, h) for p in ring]
         parts.append("M " + " L ".join(f"{x:.2f},{y:.2f}" for x, y in points) + " Z")
     return " ".join(parts)
+
+
+def path_elements(polygons, class_name, bbox, x0, y0, w, h) -> str:
+    elements = []
+    for polygon in polygons:
+        data = polygon_path_data(polygon, bbox, x0, y0, w, h)
+        if data:
+            elements.append(f'<path class="{class_name}" d="{data}"/>')
+    return "\n    ".join(elements)
 
 
 def safe_name(value: str) -> str:
@@ -127,32 +153,37 @@ def svg_for_feature(source: dict, candidate: dict, land_features: list[dict], de
     props = source.get("properties") or {}
     name = str(props.get("name") or feature_id(source))
     gid = feature_id(source)
-    src_rings = geometry_rings(source.get("geometry"))
-    cand_rings = geometry_rings(candidate.get("geometry"))
-    bbox = merge_bounds(bounds_from_rings(src_rings), bounds_from_rings(cand_rings))
+    src_polygons = geometry_polygons(source.get("geometry"))
+    cand_polygons = geometry_polygons(candidate.get("geometry"))
+    bbox = merge_bounds(
+        bounds_from_polygons(src_polygons),
+        bounds_from_polygons(cand_polygons),
+    )
 
-    local_land: list[list[list[float]]] = []
+    local_land = []
     for feature in land_features:
-        for ring in geometry_rings(feature.get("geometry")):
-            rb = bounds_from_rings([ring])
+        for polygon in geometry_polygons(feature.get("geometry")):
+            rb = bounds_from_polygons([polygon])
             if rb and intersects(rb, bbox):
-                local_land.append(ring)
+                local_land.append(polygon)
 
     left_x = MARGIN
     right_x = MARGIN + PANEL_W + GAP
     panel_y = HEADER_H
-    src_path_left = path_data(src_rings, bbox, left_x, panel_y, PANEL_W, PANEL_H)
-    src_path_right = path_data(src_rings, bbox, right_x, panel_y, PANEL_W, PANEL_H)
-    cand_path_right = path_data(cand_rings, bbox, right_x, panel_y, PANEL_W, PANEL_H)
-    land_left = path_data(local_land, bbox, left_x, panel_y, PANEL_W, PANEL_H)
-    land_right = path_data(local_land, bbox, right_x, panel_y, PANEL_W, PANEL_H)
+    src_left = path_elements(src_polygons, "source", bbox, left_x, panel_y, PANEL_W, PANEL_H)
+    src_right = path_elements(src_polygons, "source-overlay", bbox, right_x, panel_y, PANEL_W, PANEL_H)
+    cand_right = path_elements(cand_polygons, "candidate", bbox, right_x, panel_y, PANEL_W, PANEL_H)
+    land_left = path_elements(local_land, "land", bbox, left_x, panel_y, PANEL_W, PANEL_H)
+    land_right = path_elements(local_land, "land", bbox, right_x, panel_y, PANEL_W, PANEL_H)
 
     status = (decision or {}).get("status", "unclassified")
     metrics = (decision or {}).get("metrics") or {}
+    hausdorff = metrics.get("hausdorff_m")
+    hausdorff_km = None if hausdorff is None else float(hausdorff) / 1000.0
     metric_text = (
         f"status={status} · area Δ {fmt_metric(metrics.get('area_delta_pct'), '%')} · "
         f"sym diff {fmt_metric(metrics.get('symmetric_difference_pct'), '%')} · "
-        f"Hausdorff {fmt_metric((metrics.get('hausdorff_m') or 0) / 1000.0, ' km')}"
+        f"Hausdorff {fmt_metric(hausdorff_km, ' km')}"
     )
     reasons = (decision or {}).get("reasons") or []
     reason_text = " · quarantine: " + ", ".join(map(str, reasons)) if reasons else ""
@@ -182,15 +213,15 @@ def svg_for_feature(source: dict, candidate: dict, land_features: list[dict], de
   </defs>
   <text class="panel" x="{left_x}" y="{panel_y - 10}">Source + canonical land</text>
   <g clip-path="url(#leftclip)">
-    <path class="land" d="{land_left}"/>
-    <path class="source" d="{src_path_left}"/>
+    {land_left}
+    {src_left}
   </g>
   <rect class="frame" x="{left_x}" y="{panel_y}" width="{PANEL_W}" height="{PANEL_H}"/>
   <text class="panel" x="{right_x}" y="{panel_y - 10}">Candidate + source outline + canonical land</text>
   <g clip-path="url(#rightclip)">
-    <path class="land" d="{land_right}"/>
-    <path class="candidate" d="{cand_path_right}"/>
-    <path class="source-overlay" d="{src_path_right}"/>
+    {land_right}
+    {cand_right}
+    {src_right}
   </g>
   <rect class="frame" x="{right_x}" y="{panel_y}" width="{PANEL_W}" height="{PANEL_H}"/>
 </svg>'''
