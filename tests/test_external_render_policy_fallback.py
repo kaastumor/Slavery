@@ -21,6 +21,11 @@ class ExternalRenderPolicyFallbackTests(unittest.TestCase):
         self.assertIn("ORDER BY p.priority, p.policy_id", view)
         self.assertIn("LIMIT 1", view)
 
+    def test_selected_real_pilot_fixture_is_present(self):
+        pilot = ROOT / "data" / "cartography" / "pilots" / "achaemenid_qgis_20000m.geojson"
+        self.assertTrue(pilot.exists())
+        self.assertGreater(pilot.stat().st_size, 1000)
+
     def test_v3_remains_active_fallback(self):
         self.assertIn("cliopatria-boundary-normalization-v3", MIGRATION)
         self.assertIn("SET active=true", MIGRATION)
