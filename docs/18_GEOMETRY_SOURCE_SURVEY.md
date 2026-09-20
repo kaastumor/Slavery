@@ -145,12 +145,43 @@ Primary material reviewed:
 
 ## Source strategy
 
-1. Specialist historical GIS with stronger regional scholarship and compatible licensing.
-2. Cliopatria as the open global temporal backbone.
-3. Other reviewed historical geometry sources where they improve a bounded case.
-4. Approximate historical geometry, explicitly marked.
-5. Modern proxy only when defensible and explicitly marked.
-6. Unresolved when no defensible geometry exists.
+D-055 separates candidate discovery from accepted precedence.
+
+Resolver order:
+
+1. accepted specialist geometry for the exact bounded entity/time case;
+2. Cliopatria as the open global temporal baseline;
+3. other defensible historical geometry marked approximate;
+4. modern proxy, explicitly marked;
+5. unresolved, with neutral world land retained.
+
+### Current candidate guidance
+
+| Region / period / source | Current role | Public-source precedence today |
+| --- | --- | --- |
+| **Cliopatria, global 3400 BCE–2024 CE** | Open global baseline/fallback | Yes, unless an explicitly accepted specialist case supersedes it |
+| **AWMC, explicit Greco-Roman snapshot dates** | Strong bounded specialist candidate | Possible after exact date/entity match, ODbL handling and bounded acceptance |
+| **CHGIS V6, China 221 BCE–1911 CE** | Strong internal specialist comparator | No direct public polygon redistribution under current V6 terms without permission |
+| **CShapes 2.0, global 1886–2019; CShapes-Europe 1816+** | Strong modern internal comparator | Not yet; requires an explicit atlas distribution-license decision/permission for CC BY-NC-SA geometry |
+| **OpenHistoricalMap** | Source discovery / local feature-level candidate | Never by family; only an individually pinned relation/version after provenance review |
+| **Confoederatio Atlas / Naissance** | Experimental second-global-baseline comparator | No; beta/version/provenance limitations currently block source-family precedence |
+| **Baekje 347–391 CE specialist search** | No period-appropriate promotion-ready specialist vector found | Keep current source/fallback; failed render remains quarantined |
+
+This table is research guidance, not executable routing logic. Source status can change as versions, licenses, scholarship and provenance improve.
+
+### Replacement gate
+
+A source replacement requires all of:
+
+- same historical target / defensible semantic equivalence;
+- temporal fit without unsupported interpolation;
+- exact version/native ID and claim-specific lineage;
+- compatible publication rights;
+- valid geometry/topology;
+- a bounded comparison demonstrating a defensible improvement;
+- explicit historical/semantic acceptance and normal render QC.
+
+One geometry record carries one historical source lineage. A composite historical reconstruction, if ever needed, must be registered as a new derived source/version with all contributors and methodology preserved. Natural Earth remains a render-only physical coastline/land fabric and does not count as changing the historical source family.
 
 The physical coastline is a separate concern: Natural Earth remains the canonical cartographic land/coastline fabric. A historical political source does not become the physical coastline authority.
 
