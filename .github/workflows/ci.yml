@@ -39,6 +39,9 @@ jobs:
       - name: Non-Atlantic rollback fixtures
         run: ./scripts/db-test-non-atlantic.sh
 
+      - name: Research ingestion idempotency
+        run: bash ./scripts/db-test-research-idempotency.sh
+
       - name: Prototype map sanity
         run: |
           python -m json.tool prototype/map/data/world-land.geojson >/dev/null
