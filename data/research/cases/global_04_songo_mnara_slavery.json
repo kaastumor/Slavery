@@ -1,0 +1,65 @@
+{
+  "case_key": "global-balance-04/songo-mnara/slavery-v1",
+  "spatial_entity": {
+    "canonical_name": "Songo Mnara (15th-century Swahili stone town)",
+    "display_name": "Songo Mnara",
+    "entity_type_code": "site",
+    "from_year": 1400,
+    "to_year": 1499,
+    "notes": "Archaeological site in the Kilwa archipelago, Tanzania. This site-level case must not be expanded automatically to the whole Swahili coast or to every settlement under Kilwa influence."
+  },
+  "claim": {
+    "from_year": 1400,
+    "to_year": 1499,
+    "date_text_original": "fifteenth century CE",
+    "temporal_precision": "archaeological_century",
+    "temporal_certainty": "high",
+    "spatial_precision": "archaeological_site",
+    "summary": "Specialist archaeological research at fifteenth-century Songo Mnara explicitly investigates the likely presence and material lives of enslaved labourers within the Swahili stone town. The argument combines the broader historical context of slavery on the East African coast with site-specific material proxies, while emphasizing that enslaved people are difficult to identify archaeologically and that proposed markers are not uniquely diagnostic. The atlas therefore records a positive site-level slavery designation but leaves practice intensity unassigned rather than manufacturing a P1-P4 level from ambiguous material evidence.",
+    "confidence": "moderate",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "positive_intensity_unassigned",
+      "notes": "Positive designation follows dedicated specialist interpretation of the site. P-level remains NULL because the archaeological proxies do not establish frequency, demographic scale, or institutional prevalence at Songo Mnara. Do not generalize this site claim to the Swahili coast."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "No such thing as invisible people: toward an archaeology of slavery at the fifteenth-century Swahili site of Songo Mnara",
+        "author_or_institution": "Henriette Rødland, Stephanie Wynne-Jones, Marilee Wood, Jeffrey Fleisher",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "geographic_scope": "Songo Mnara, Kilwa archipelago, Tanzania",
+        "temporal_scope": "Fifteenth century CE",
+        "independence_notes": "Dedicated peer-reviewed archaeological case study of slavery at Songo Mnara based on site excavation/material analysis and the regional historical context.",
+        "reliability_limitations": "The authors explicitly grapple with ambiguity in archaeological proxies for slavery. Material signatures such as bead distributions cannot uniquely identify enslaved people or measure their number."
+      },
+      "version": {
+        "version_label": "Azania: Archaeological Research in Africa 55.4 (2020), pp. 439-457",
+        "publication_year": 2020,
+        "url_or_identifier": "https://doi.org/10.1080/0067270X.2020.1841978",
+        "license_status": "open_access",
+        "redistribution_status": "article text not mirrored by atlas",
+        "accessed_at": "2026-09-20T21:40:00Z"
+      },
+      "evidence_role": "dedicated specialist interpretation of enslaved presence at a bounded archaeological site",
+      "independence_group": "songo_mnara_rodland_et_al_2020",
+      "directness": "specialist archaeological case study",
+      "direction": "supports",
+      "locator": "article abstract and site-level analysis, pp. 439-457"
+    }
+  ],
+  "geometry": {
+    "from_year": 1400,
+    "to_year": 1499,
+    "accuracy_status": "unresolved",
+    "resolution_method": "The claim is site-level. Resolve a source-provenanced Songo Mnara point/site polygon separately before publication; do not substitute the Kilwa polity's maximum extent, modern Tanzania, or a generic Swahili-coast polygon.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}
