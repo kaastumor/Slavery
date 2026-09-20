@@ -51,10 +51,12 @@ type GeometryRecord = {
   source_title: string | null;
   source_version: string | null;
   source_url: string | null;
-  render_transform?: "coastal_normalize" | "land_clip" | "source_geometry" | "none" | string;
+  render_transform?: "boundary_normalized_cache" | "coastal_normalize" | "land_clip" | "source_geometry" | "none" | string;
   render_land_mask_id?: string | null;
   render_policy_id?: string | null;
   render_coastal_recovery_m?: number | null;
+  render_smoothing_iterations?: number | null;
+  render_qc?: Record<string, unknown> | null;
 };
 
 type Place = {
@@ -327,11 +329,13 @@ function renderPlace(place: Place, year: number): void {
             unresolved?.resolution_method ??
             "No defensible geometry has been attached for this place/year. This is not evidence of absence.",
           )}
-          ${geometry?.render_transform === "coastal_normalize"
-  ? `<div class="source-meta">Physical coastline normalized to the canonical 1:10m land fabric under ${escapeHtml(geometry.render_policy_id ?? "documented render policy")}; historical source geometry is preserved unchanged.</div>`
-  : geometry?.render_transform === "land_clip"
-    ? `<div class="source-meta">Display geometry is clipped to the same canonical 1:10m land fabric used by the basemap; the source historical geometry is preserved unchanged.</div>`
-    : ""}
+          ${geometry?.render_transform === "boundary_normalized_cache"
+  ? `<div class="source-meta">Display boundary is a cached, bounded cartographic generalization under ${escapeHtml(geometry.render_policy_id ?? "documented render policy")}; source historical geometry is preserved unchanged.</div>`
+  : geometry?.render_transform === "coastal_normalize"
+    ? `<div class="source-meta">Physical coastline normalized to the canonical 1:10m land fabric under ${escapeHtml(geometry.render_policy_id ?? "documented render policy")}; historical source geometry is preserved unchanged.</div>`
+    : geometry?.render_transform === "land_clip"
+      ? `<div class="source-meta">Display geometry is clipped to the same canonical 1:10m land fabric used by the basemap; the source historical geometry is preserved unchanged.</div>`
+      : ""}
 ${geometrySource ? `<div class="source-meta">Source: ${geometrySource}</div>` : ""}
         </div>
       </details>
