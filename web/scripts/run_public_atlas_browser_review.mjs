@@ -36,6 +36,7 @@ async function main() {
 
   const page = await browser.newPage({ viewport: { width: 1600, height: 1000 } });
   const pageErrors = [];
+  const caseFailures = [];
   page.on("pageerror", (error) => pageErrors.push(String(error)));
 
   try {
@@ -75,14 +76,14 @@ async function main() {
         geometryText.includes("cached, bounded cartographic generalization");
 
       if (item.expectExternal && !usesExternalPolicy) {
-        throw new Error(
-          item.name + ": public UI did not report cliopatria-qgis-natural-earth-v1",
+        caseFailures.push(
+          item.name + ": public UI did not report cliopatria-qgis-natural-earth-v1; details=" + geometryText,
         );
       }
 
       if (!item.expectExternal && usesExternalPolicy) {
-        throw new Error(
-          item.name + ": quarantined/fallback geometry unexpectedly reports promoted policy",
+        caseFailures.push(
+          item.name + ": quarantined/fallback geometry unexpectedly reports promoted policy; details=" + geometryText,
         );
       }
 
@@ -122,7 +123,7 @@ async function main() {
       throw new Error("Public map warning became visible during representative review");
     }
     if (pageErrors.length > 0) {
-      throw new Error("Public page errors occurred: " + pageErrors.join(" | "));
+      caseFailures.push("Public page errors occurred: " + pageErrors.join(" | "));
     }
 
     const summary = {
@@ -130,6 +131,7 @@ async function main() {
       release_badge: releaseBadge,
       checked_at: new Date().toISOString(),
       page_errors: pageErrors,
+      case_failures: caseFailures,
       map_warning_visible: finalWarningVisible,
       captures,
     };
@@ -140,6 +142,9 @@ async function main() {
       "utf8",
     );
     console.log(JSON.stringify(summary, null, 2));
+    if (caseFailures.length > 0) {
+      throw new Error("Public atlas review failures: " + caseFailures.join(" || "));
+    }
   } finally {
     await browser.close();
   }
