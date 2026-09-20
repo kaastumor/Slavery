@@ -1,0 +1,93 @@
+{
+  "spatial_entity": {
+    "canonical_name": "Opone (Ras Hafun identification)",
+    "display_name": "Opone",
+    "entity_type_code": "port",
+    "notes": "Ancient emporium identified by modern scholarship with Ras Hafun on the northern Somali coast. The identification is suitable for a port-level participation claim but does not define a surrounding territorial-practice polygon."
+  },
+  "claim": {
+    "claim_kind": "external_participation",
+    "from_year": 40,
+    "to_year": 70,
+    "date_text_original": "mid-first century CE; Casson dates the Periplus c. 40–70 CE",
+    "temporal_precision": "source_date_range",
+    "temporal_certainty": "approximate",
+    "spatial_precision": "port",
+    "summary": "The Periplus of the Erythraean Sea identifies Opone as an emporium exporting enslaved people to Egypt in increasing numbers. This is strong port-level evidence of slave-trade network participation, but it does not establish the origins of the enslaved people, their acquisition mechanisms, or the prevalence of slavery in the surrounding territory.",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "external_participation": {
+      "participation_type_code": "captive_export",
+      "role_text": "Documented export node for enslaved people carried to Egypt",
+      "notes": "Do not derive a territorial-practice P-level from this claim. The database already models external participation separately from territorial practice through migration 0011."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Periplus of the Erythraean Sea",
+        "author_or_institution": "Anonymous merchant; Wilfred H. Schoff translation",
+        "source_type": "primary_text_translation",
+        "source_classification": "primary",
+        "independence_notes": "Contemporary/near-contemporary merchant itinerary describing the western Indian Ocean trading system.",
+        "reliability_limitations": "The surviving text is transmitted through later manuscripts and the itinerary records commodities and ports rather than the local institutions, origins, or legal statuses by which exported people became enslaved."
+      },
+      "version": {
+        "version_label": "Schoff 1912 English translation",
+        "url_or_identifier": "https://en.wikisource.org/wiki/Periplus_of_the_Erythraean_Sea",
+        "accessed_at": "2026-09-20T00:00:00Z"
+      },
+      "evidence_role": "direct source-native attestation of slave export",
+      "independence_group": "periplus_opone",
+      "directness": "primary merchant itinerary",
+      "direction": "supports",
+      "locator": "section 13"
+    },
+    {
+      "source": {
+        "title": "Nomads Trading with Empires: Intercultural Trade in Ancient Somaliland in the First to Seventh Centuries CE",
+        "author_or_institution": "Alfredo González-Ruibal et al.",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "independence_notes": "Independent archaeological fieldwork and synthesis for ancient Somaliland and western Indian Ocean exchange.",
+        "reliability_limitations": "The article establishes the northern Somali coast as an active exchange zone and contextualizes the Periplus ports; it does not independently establish local slavery institutions or the origins of people exported from Opone."
+      },
+      "version": {
+        "version_label": "American Journal of Archaeology 126.1 (2022), published online 17 December 2021",
+        "url_or_identifier": "https://doi.org/10.1086/718184",
+        "publication_year": 2022,
+        "accessed_at": "2026-09-20T00:00:00Z"
+      },
+      "evidence_role": "specialist archaeological context for the port network",
+      "independence_group": "somaliland_archaeology_gonzalez_ruibal",
+      "directness": "specialist archaeological synthesis",
+      "direction": "qualifies",
+      "locator": "abstract and discussion of Periplus far-side ports"
+    },
+    {
+      "source": {
+        "title": "Periplus — Introduction",
+        "author_or_institution": "Dimitris Plantzos; National and Kapodistrian University of Athens",
+        "source_type": "digital_scholarly_resource",
+        "source_classification": "secondary",
+        "independence_notes": "University scholarly contextualization of the Periplus, its dating, manuscript transmission, geography and commodity lists.",
+        "reliability_limitations": "A contextual digital resource rather than a dedicated study of slavery; used for dating and source criticism, not to establish prevalence."
+      },
+      "version": {
+        "version_label": "ArchaeoCosmos Periplus project, accessed 2026-09-20",
+        "url_or_identifier": "https://periplus.arch.uoa.gr/texts/peripl_erythr/intro_en.html",
+        "accessed_at": "2026-09-20T00:00:00Z"
+      },
+      "evidence_role": "source dating and transmission context",
+      "independence_group": "periplus_archaeocosmos_context",
+      "directness": "scholarly source-context resource",
+      "direction": "qualifies",
+      "locator": "Introduction, dating/manuscript and Opone discussion"
+    }
+  ],
+  "geometry": {
+    "accuracy_status": "unresolved",
+    "geojson": null,
+    "notes": "Ras Hafun is the accepted working identification in the reviewed scholarship, but a point geometry should be resolved and provenance-recorded separately before publication. No territorial polygon is appropriate for this port-level participation claim."
+  }
+}
