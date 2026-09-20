@@ -84,7 +84,7 @@ Established architecture:
 - [x] Keep Baekje on fallback; do not weaken global QC.
 - [x] Investigate Baekje's source/geometry separately under #40. No open, license-clear 347–391 CE specialist vector replacement was identified; keep the failed candidate quarantined/fallback and do not invent a replacement polygon. Documented in docs/18_GEOMETRY_SOURCE_SURVEY.md.
 - [x] Use 10 km as the conservative generic Cliopatria candidate baseline under D-049; do not auto-escalate tolerance, and do not replace the already accepted live Achaemenid render merely for uniformity.
-- [x] Implement a controlled exact-artifact promotion gate: D-050 + checked-in per-geometry acceptance/semantic registry + checksum-verifying promotion tool + real-artifact CI. Merged in PR #54.\n- [ ] Promote the five approved 10 km representative geometries through that gate; preserve the accepted live Achaemenid rows and keep Baekje quarantined.
+- [x] Implement a controlled exact-artifact promotion gate: D-050 + checked-in per-geometry acceptance/semantic registry + checksum-verifying promotion tool + real-artifact CI. Merged in PR #54.\n- [ ] **BLOCKED (execution credential):** promote the five approved 10 km representative geometries through D-050. Production workflow run `35528369798` passed artifact validation, API health, project-health and control-plane checks, then failed safely before any write because the existing scoped `SUPABASE_MANAGEMENT_TOKEN` lacks permission for the Management API `/database/query` endpoint (HTTP 403). Production geometry is unchanged; accepted Achaemenid rows remain live and Baekje remains quarantined. Fix the execution path/credential without weakening the gate, then retry.
 - [ ] Re-check the public browser after promotion.
 - [ ] Close #27 only when multiple representative regions and zoom levels are genuinely correct.
 
@@ -259,6 +259,7 @@ Candidates already worth revisiting when relevant:
 | --- | --- |
 | Baekje loses ~8–9% area in generic QGIS pipeline | Quarantine/fallback; investigate source/specialist geometry |
 | Production GIS experimentation can cause outages | Offline/CI/staging only; public path serves precomputed geometry |
+| Geometry promotion executor cannot currently write via Management API | Existing scoped `SUPABASE_MANAGEMENT_TOKEN` lacks `/database/query` privilege; run `35528369798` failed before transaction. Fix execution path/credential, do not broaden production access casually. |
 | No true staging environment yet | Local/CI testing; Supabase branch requires user cost approval |
 | Published release depends heavily on live DB | #43 static/recoverable snapshot work |
 | Historical migration ledger irregularities | #26 non-destructive reconciliation |
