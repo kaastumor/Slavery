@@ -186,3 +186,18 @@ For source families approved for adaptive completion:
 - never compute adaptive recovery in the public API request path.
 
 The initial Cliopatria policy uses a 25 km baseline, permits candidates up to 50 km, and caps extra recovered land at 2% of the baseline rendered area. This is a cartographic/topological QC rule, not a claim about historical territorial certainty.
+
+## Standard GIS preprocessing for coarse historical source families
+
+Cliopatria's own published methodology documents that its initial polygons were generated from raster map images and that coarse raster resolution can cause land/coast misalignment and border artifacts. The public atlas therefore treats this as a standard cartographic preprocessing problem rather than a reason to create bespoke per-polity geometry logic.
+
+For Cliopatria-derived display geometry, the preferred pipeline is evaluated and executed outside production request handling:
+
+- standard smoothing/generalization with explicit controls for preserving genuine sharp corners;
+- standard reference-layer snapping against the canonical Natural Earth 1:10m land/coast geometry;
+- topology cleaning and validity checks;
+- final clip to the same canonical land fabric;
+- materialize the resulting render geometry with transform/provenance metadata;
+- retain the untouched Cliopatria polygon as the historical source record.
+
+The current v3 precomputed cache remains the live fallback until this pipeline has passed representative visual QC. D-041 adaptive buffer recovery is no longer the preferred direction and must not be extended with further custom distance heuristics.
