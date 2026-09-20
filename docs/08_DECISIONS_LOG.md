@@ -376,3 +376,40 @@ This release-channel pointer is a serving/promotion control, not full exact hist
 Existing `mvp-preview-ancient-v1` and `mvp-preview-ancient-v2` are backfilled from their stored manifest ID arrays with `legacy_membership_backfill` status. They remain useful historical membership records, but the project does not claim exact pre-existing row-state reconstruction for them unless a contemporaneous preserved bundle is independently available.
 
 **Reason:** Typed membership alone answers “which IDs belonged to release X” but cannot reconstruct a historical row after that row is edited. An export bundle alone preserves bytes but lacks relational integrity/queryability. The hybrid model provides both while keeping legacy evidence limits explicit and supports D-046 build-once/promote-unchanged semantics.
+
+
+## D-055 — Historical geometry precedence is case-specific; accepted specialist geometry may supersede the global baseline
+**Date:** 2026-09-20  
+**Decision:** The atlas separates a **global fallback baseline** from **case-specific source precedence**.
+
+For a target spatial entity and year/interval, the resolver order is:
+
+1. an exact or period-matched specialist historical geometry that has been explicitly accepted for that bounded case;
+2. the exact Cliopatria polygon valid for the target year as the open global baseline;
+3. another defensible historical geometry, clearly marked `approximate_historical`;
+4. a defensible modern geographic proxy, clearly marked `modern_proxy`;
+5. unresolved geometry, with neutral world land still visible.
+
+This supersedes D-010 only in the ordering of the first two choices. The rest of the five-step fallback principle remains unchanged.
+
+“Specialist” is not a permanent label applied to an entire dataset. Precedence belongs to a specific source version, feature/geometry, target identity and temporal interval. Before a specialist candidate can replace the baseline it must pass a bounded review covering:
+
+- identity and semantic scope: the geometry represents the same historical target the atlas intends to map;
+- temporal fit and uncertainty: the source is valid for the target year/interval without unsupported interpolation;
+- source provenance: exact source version, native identifier, relevant citations/lineage and raw values are retained;
+- redistribution/license compatibility for the intended published use;
+- geometric validity and topology;
+- explicit source-vs-source comparison showing a defensible improvement for the bounded case;
+- historical/semantic review plus the normal cartographic QC/visual acceptance required for any promoted render artifact.
+
+Greater vertex count, apparent smoothness, archive density, popularity, newer publication date or broader temporal resolution do not establish precedence by themselves.
+
+Each canonical `GEOMETRY` record has one historical geometry source lineage. Do not silently splice coordinates from multiple historical source families into a record attributed to only one source. If a genuinely composite historical geometry is ever necessary, it must be registered as a new derived source/version with all contributing sources, transformation methodology, uncertainty and license compatibility preserved explicitly.
+
+Natural Earth coastline/land-fabric operations are not historical-source mixing: they remain a render-only physical-topology transformation under D-037/D-038/D-044 and do not alter or replace the historical source record.
+
+Accepted/live geometry is not retroactively replaced merely because a new candidate source exists. Replacement requires a new bounded acceptance decision; quarantine/fallback is a valid result.
+
+**Current source-family guidance:** Cliopatria remains the global deep-time baseline. AWMC may generate preferred candidates for its explicit Greco-Roman snapshots. CHGIS V6 and CShapes 2.0 are strong internal comparators but currently have public-redistribution constraints under the atlas distribution model. OpenHistoricalMap is feature/version-specific supplementary evidence rather than a globally preferred family. Confoederatio Atlas/Naissance remains an experimental comparator until feature/keyframe provenance is strong enough for claim-specific review. These examples are guidance from the current source survey, not hard-coded permanent routing rules.
+
+**Reason:** The previous D-010 wording placed an exact Cliopatria polygon before a better specialist geometry, which made specialist replacement logically unreachable whenever Cliopatria had coverage. The completed source survey also shows why a simple region-to-dataset lookup is unsafe: specialist datasets differ in date coverage, entity semantics, licensing, feature-level provenance and temporal uncertainty. Case-specific precedence preserves a stable global fallback while allowing demonstrably better historical geometry without silently trading reproducibility for visual detail.
