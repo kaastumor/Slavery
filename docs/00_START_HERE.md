@@ -120,5 +120,6 @@ Read:
 10. `15_DEVELOPMENT_ENVIRONMENT.md`
 11. `17_SOURCE_EVIDENCE_LIFECYCLE.md`
 12. `19_PIPELINE_ARCHITECTURE.md`
+13. `20_CURRENT_HANDOFF.md` — session-level current implementation status; verify against GitHub main/issues before acting
 
 Then record any schema or methodology change in the decision log before treating it as canonical methodology.
