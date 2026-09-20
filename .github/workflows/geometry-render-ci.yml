@@ -149,9 +149,22 @@ jobs:
             qgis_process run native:checkvalidity --               INPUT_LAYER="/tmp/representative-render/representative_qgis_${tolerance}m.geojson"               METHOD=2               VALID_OUTPUT="/tmp/representative-render/valid_${tolerance}.gpkg"               INVALID_OUTPUT="/tmp/representative-render/invalid_${tolerance}.gpkg"               ERROR_OUTPUT="/tmp/representative-render/errors_${tolerance}.gpkg" >/dev/null
           done
 
+      - name: Compute representative tolerance QC
+        shell: bash
+        run: |
+          export QT_QPA_PLATFORM=offscreen
+          for tolerance in 10000 15000 20000 25000; do
+            python3 tools/qgis_render_qc.py \
+              tests/fixtures/cartography/representative_cliopatria_source.geojson \
+              "/tmp/representative-render/representative_qgis_${tolerance}m.geojson" \
+              "/tmp/representative-render/representative_qc_${tolerance}m.json"
+          done
+
       - name: Upload representative candidates
         uses: actions/upload-artifact@v4
         with:
           name: representative-qgis-render-candidates
-          path: /tmp/representative-render/representative_qgis_*m.geojson
+          path: |
+            /tmp/representative-render/representative_qgis_*m.geojson
+            /tmp/representative-render/representative_qc_*m.json
           if-no-files-found: error
