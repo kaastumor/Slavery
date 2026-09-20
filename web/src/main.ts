@@ -605,6 +605,10 @@ async function boot(): Promise<void> {
     map.addSource("land", {
       type: "geojson",
       data: apiResponse.cartography.source_url,
+      // The evidence polygons are clipped against this exact land fabric in PostGIS.
+      // Disable per-source Douglas–Peucker simplification so MapLibre does not
+      // independently move/drop shared coastline vertices in the two GeoJSON sources.
+      tolerance: 0,
     });
     map.addLayer({
       id: "land-fill",
@@ -624,6 +628,8 @@ async function boot(): Promise<void> {
     map.addSource("evidence-polygons", {
       type: "geojson",
       data: initialCollections.polygons,
+      // Keep clipped coastline vertices identical to the neutral-land source.
+      tolerance: 0,
     });
     map.addLayer({
       id: "evidence-polygons",
