@@ -11,8 +11,8 @@ class MigrationRunnerTests(unittest.TestCase):
     def test_migrations_are_ordered_and_complete(self):
         names = [p.name for p in discover()]
         self.assertEqual(names[0], "0001_bootstrap.sql")
-        self.assertEqual(names[-1], "0015_coastal_boundary_normalization.sql")
-        self.assertEqual(len(names), 15)
+        self.assertEqual(names[-1], "0016_restore_fast_map_geometry.sql")
+        self.assertEqual(len(names), 16)
 
     def test_legacy_transaction_wrappers_are_removed(self):
         for path in discover():
