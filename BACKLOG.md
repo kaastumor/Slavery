@@ -152,12 +152,12 @@ Issue: **#40 — specialist regional geometry sources over Cliopatria where supe
 
 ## NOW
 
-- [ ] Resume globally balanced territorial-practice research.
-- [ ] Prioritize weak/non-Atlantic cells before dense Atlantic bulk ingestion.
-- [ ] Continue unresolved-geometry work alongside evidence research.
+- [x] Resume globally balanced territorial-practice research. Global Balance Batch 04 stages four new unpublished weak-region territorial cases across Southeast Asia, the Americas, Oceania/Pacific and East/Southern Africa, with claim-specific evidence and deliberately unresolved geometry where appropriate.
+- [x] Prioritize weak/non-Atlantic cells before dense Atlantic bulk ingestion. Batch 04 was selected from the weakest v0.6.1 research-management regions (Oceania/Pacific, Americas, West/Central Africa, East/Southern Africa, Southeast Asia); those coverage scores guided research priority only and were not used as prevalence evidence.
+- [x] Continue unresolved-geometry work alongside evidence research. Every Batch 04 territorial case carries an explicit unresolved-geometry rationale rather than receiving a modern or maximum-extent proxy; later resolution remains a separate D-055 task.
 - [ ] Expand external/network participation separately from territorial practice.
-- [ ] Preserve unknown / researched-inconclusive states rather than manufacturing negatives.
-- [ ] Keep P0-P4 interpretive; never derive it mechanically from document/voyage counts.
+- [x] Preserve unknown / researched-inconclusive states rather than manufacturing negatives. Batch 04 preserves the early central-Saharan/Zaghāwa-Kawār result as network-only research notes instead of manufacturing a territorial claim, and Songo Mnara keeps a positive designation with intensity unassigned rather than forcing a P-level.
+- [x] Keep P0-P4 interpretive; never derive it mechanically from document/voyage counts. Batch 04 explicitly assigns P2/P3 only from interpreted specialist evidence packages and leaves Songo Mnara NULL where presence is defensible but intensity is not.
 - [ ] Keep owner/actor nationality unknown unless independently evidenced.
 
 ---

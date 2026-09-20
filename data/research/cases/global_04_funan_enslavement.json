@@ -1,0 +1,87 @@
+{
+  "case_key": "global-balance-04/funan/enslavement-v1",
+  "spatial_entity": {
+    "canonical_name": "Funan (Chinese-source lower Mekong polity)",
+    "display_name": "Funan",
+    "entity_type_code": "polity",
+    "from_year": 200,
+    "to_year": 550,
+    "notes": "Funan is an exogenous Chinese historical category conventionally associated with the lower Mekong and adjacent mainland Southeast Asia. The spatial extent and political unity described by Chinese sources remain historically debated; the claim must not be mapped with modern Cambodia/Vietnam boundaries or one maximum-extent polygon."
+  },
+  "claim": {
+    "from_year": 228,
+    "to_year": 500,
+    "date_text_original": "Chinese accounts from the third through fifth centuries CE",
+    "temporal_precision": "multi_attestation_broad_range",
+    "temporal_certainty": "approximate",
+    "spatial_precision": "polity_as_described_in_external_texts",
+    "summary": "Chinese accounts of Funan repeatedly describe coercive capture and enslavement of people from neighboring communities. K'ang T'ai's third-century report, preserved through later Chinese textual traditions, states that inhabitants of towns refusing homage could be abducted and made slaves; later dynastic material repeats coercive enslavement in descriptions of Funan. Specialist archaeological source criticism treats these texts as important but exogenous evidence whose political-geographic claims cannot simply be read as a precise territorial map. The atlas therefore records recurrent enslavement at P2 while preserving the dependence and geographic uncertainty of the textual tradition.",
+    "confidence": "moderate",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": "P2",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P2 reflects repeated textual attestation across the Chinese Funan tradition, not a claim about population share or uniform prevalence. The exogenous sources may partly depend on one another and must not be counted mechanically as independent votes."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Textualized Places, Pre-Angkorian Khmers, and Historicized Archaeology",
+        "author_or_institution": "Miriam T. Stark",
+        "source_type": "book_chapter",
+        "source_classification": "secondary",
+        "geographic_scope": "Lower Mekong / pre-Angkorian Cambodia and Funan",
+        "temporal_scope": "First millennium CE",
+        "independence_notes": "Specialist archaeological source-criticism chapter evaluating Chinese documentary descriptions against archaeological evidence.",
+        "reliability_limitations": "Stark emphasizes that early Cambodian political history relies heavily on exogenous Chinese texts and warns against treating documentary state descriptions as straightforward archaeological fact."
+      },
+      "version": {
+        "version_label": "Excavating Asian History, University of Arizona Press, 2006, pp. 307-326",
+        "publication_year": 2006,
+        "url_or_identifier": "https://doi.org/10.2307/j.ctv2jhjvtv.11",
+        "accessed_at": "2026-09-20T21:40:00Z"
+      },
+      "evidence_role": "specialist source criticism and quoted Funan testimony",
+      "independence_group": "funan_chinese_textual_tradition_stark",
+      "directness": "specialist synthesis quoting early Chinese accounts",
+      "direction": "supports",
+      "locator": "discussion of K'ang T'ai/Zhuying's third-century Funan account and the treatment of neighboring communities"
+    },
+    {
+      "source": {
+        "title": "Le Fou-nan",
+        "author_or_institution": "Paul Pelliot",
+        "source_type": "scholarly_primary_text_compilation",
+        "source_classification": "primary_translation",
+        "language_code": "fr",
+        "geographic_scope": "Funan and mainland Southeast Asia",
+        "temporal_scope": "Chinese accounts of the third-seventh centuries CE",
+        "independence_notes": "Foundational scholarly compilation and translation of Chinese historical passages concerning Funan.",
+        "reliability_limitations": "Published in 1903 and superseded in some identifications by later archaeology and historiography. Used for source-native textual transmission, not as sole authority on Funan's geography or political organization."
+      },
+      "version": {
+        "version_label": "Bulletin de l'École française d'Extrême-Orient 3 (1903), pp. 248-303",
+        "publication_year": 1903,
+        "url_or_identifier": "https://doi.org/10.3406/befeo.1903.1216",
+        "accessed_at": "2026-09-20T21:40:00Z"
+      },
+      "evidence_role": "scholarly edition/translation of Chinese Funan testimony",
+      "independence_group": "funan_chinese_textual_tradition_pelliot",
+      "directness": "translated historical source corpus",
+      "direction": "qualifies",
+      "locator": "passages concerning early Chinese descriptions of Funan society and relations with neighboring populations"
+    }
+  ],
+  "geometry": {
+    "from_year": 228,
+    "to_year": 500,
+    "accuracy_status": "unresolved",
+    "resolution_method": "Funan's extent, political unity, and center are debated and the claim derives from exogenous texts across several centuries. Do not substitute modern Cambodia/Vietnam borders or a maximum-extent Funan reconstruction. Resolve narrower time slices only after a bounded specialist-geometry comparison under D-055.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}
