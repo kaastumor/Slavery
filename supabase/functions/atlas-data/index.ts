@@ -106,7 +106,9 @@ Deno.serve(async (req) => {
               'source_version', gsv.version_label,
               'source_url', gsv.url_or_identifier,
               'render_transform', g.render_transform,
-              'render_land_mask_id', g.render_land_mask_id
+              'render_land_mask_id', g.render_land_mask_id,
+              'render_policy_id', g.render_policy_id,
+              'render_coastal_recovery_m', g.render_coastal_recovery_m
             )
             order by g.from_year nulls first, g.geometry_id
           )
