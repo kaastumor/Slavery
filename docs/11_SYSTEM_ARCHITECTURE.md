@@ -436,3 +436,17 @@ Implementation rules:
 The target GitHub workflow surface is intentionally small: foundation CI, research-case CI, geometry build/QC, release/promotion, availability monitoring and self-heal. Experimental cartography workflows may coexist temporarily while #27 is being resolved, but they are not the long-term workflow topology.
 
 GitHub `staging` and `production` deployment environments should become the credential/protection boundaries for promotion jobs. A workflow run passing CI is not itself sufficient to mark historical research as reviewed or geometry as visually accepted.
+
+
+## Client Data API security boundary
+
+D-051 makes the public serving boundary explicit:
+
+- `atlas`, `audit`, `cartography` and `publish` are internal schemas, not direct browser PostgREST APIs;
+- the public browser currently consumes the `atlas-data` Edge Function;
+- the Edge Function reads the release manifest, reviewed publish views and approved cartography server-side;
+- `anon` and `authenticated` must not receive direct schema/table privileges on internal research schemas;
+- a future direct PostgREST contract must use a deliberately exposed API surface with explicit grants and RLS/policies;
+- internal tables may remain non-RLS when they are genuinely private, but explicit revokes/default privileges must prevent accidental future exposure.
+
+See `docs/21_DATA_API_SECURITY.md` for the production verification and hardening plan.
