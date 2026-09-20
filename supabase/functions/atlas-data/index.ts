@@ -108,7 +108,9 @@ Deno.serve(async (req) => {
               'render_transform', g.render_transform,
               'render_land_mask_id', g.render_land_mask_id,
               'render_policy_id', g.render_policy_id,
-              'render_coastal_recovery_m', g.render_coastal_recovery_m
+              'render_coastal_recovery_m', g.render_coastal_recovery_m,
+              'render_smoothing_iterations', g.render_smoothing_iterations,
+              'render_qc', g.render_qc
             )
             order by g.from_year nulls first, g.geometry_id
           )
