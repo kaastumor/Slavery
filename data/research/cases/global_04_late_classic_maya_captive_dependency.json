@@ -1,0 +1,86 @@
+{
+  "case_key": "global-balance-04/late-classic-maya/captive-taking-v1",
+  "spatial_entity": {
+    "canonical_name": "Southern Maya Lowlands (Late Classic captive-taking corpus)",
+    "display_name": "Late Classic Maya Lowlands",
+    "entity_type_code": "region",
+    "from_year": 600,
+    "to_year": 899,
+    "notes": "Analytical region for a multi-polity Late Classic Maya evidence corpus. It is not one polity and must not be rendered as a single empire."
+  },
+  "claim": {
+    "from_year": 600,
+    "to_year": 899,
+    "date_text_original": "Late Classic period, approximately 600-899 CE",
+    "temporal_precision": "archaeological_period",
+    "temporal_certainty": "high",
+    "spatial_precision": "multi_polity_regional_corpus",
+    "summary": "Late Classic Maya monuments, texts, and specialist synthesis document recurrent wartime captive-taking and asymmetrical dependency. Captives appear widely in elite representations, but specialist scholarship stresses that prisoners had varied fates and that captive imagery cannot be translated mechanically into enslavement or sacrifice. The atlas therefore records recurrent captive-taking/incorporation at P2 rather than a blanket regional slavery classification.",
+    "confidence": "moderate_high",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "territorial_practice": {
+      "practice_type_code": "captive_taking_incorporation",
+      "practice_level": "P2",
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed",
+      "notes": "P2 records repeated captive-taking across the Late Classic corpus. It explicitly does not assert that every captive became enslaved, that captive imagery measures prevalence, or that tributary/corvée relationships are slavery."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Warfare, Sacrifice, and the Captive Body in Late Classic Maya Sculpture",
+        "author_or_institution": "Caitlin C. Earley",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "geographic_scope": "Maya Lowlands",
+        "temporal_scope": "Late Classic Maya period",
+        "independence_notes": "Specialist art-historical and epigraphic analysis of captive imagery, warfare, and prisoner outcomes.",
+        "reliability_limitations": "Earley explicitly warns that iconographic captive scenes are poor predictors of what happened to individual prisoners and that practices differed among polities."
+      },
+      "version": {
+        "version_label": "Ancient Mesoamerica 34.1 (2023), pp. 249-265",
+        "publication_year": 2023,
+        "url_or_identifier": "https://doi.org/10.1017/S0956536121000110",
+        "accessed_at": "2026-09-20T21:40:00Z"
+      },
+      "evidence_role": "specialist synthesis of recurrent captive-taking and limitations of iconographic inference",
+      "independence_group": "maya_captive_earley_2023",
+      "directness": "specialist analysis of monuments, hieroglyphs, and historical records",
+      "direction": "supports",
+      "locator": "abstract and article discussion of Late Classic captive imagery and varied prisoner outcomes"
+    },
+    {
+      "source": {
+        "title": "Hidden Histories of Captive and Enslaved Maya Women in the Indigenous Americas",
+        "author_or_institution": "Christina T. Halperin",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "geographic_scope": "Maya region",
+        "temporal_scope": "Classic and Postclassic periods",
+        "independence_notes": "Independent archaeological synthesis focused specifically on captive and enslaved Maya women and the methodological difficulty of identifying status archaeologically.",
+        "reliability_limitations": "The article emphasizes ambiguity and does not support identifying enslavement from any single artifact class or extending captive status uniformly across Maya societies."
+      },
+      "version": {
+        "version_label": "Archaeologies 20.2 (2024), pp. 383-416",
+        "publication_year": 2024,
+        "url_or_identifier": "https://doi.org/10.1007/s11759-024-09506-8",
+        "accessed_at": "2026-09-20T21:40:00Z"
+      },
+      "evidence_role": "specialist synthesis distinguishing captivity from securely identifiable enslavement",
+      "independence_group": "maya_captive_halperin_2024",
+      "directness": "specialist archaeological synthesis",
+      "direction": "qualifies",
+      "locator": "article abstract and Classic/Postclassic discussion"
+    }
+  ],
+  "geometry": {
+    "from_year": 600,
+    "to_year": 899,
+    "accuracy_status": "unresolved",
+    "resolution_method": "The evidence spans multiple Maya polities and sites. Do not draw one Maya empire polygon or apply a single maximum extent. Future presentation should resolve bounded site/polity geometries or a clearly analytical research-region layer separately from the historical claim.",
+    "geojson": null,
+    "review_status": "reviewed"
+  }
+}
