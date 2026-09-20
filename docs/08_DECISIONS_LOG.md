@@ -313,3 +313,12 @@ The registry, together with the immutable build artifact and Git history, is the
 
 **Reason:** issue #27 needs a safe route from reviewed CI geometry to production without violating D-046's build-once/promote-unchanged rule. A versioned acceptance registry makes the human cartographic and semantic decisions explicit, prevents a green CI run from becoming an implicit publication decision, and allows the serving cache to remain replaceable/reconstructible from immutable inputs.
 
+
+
+## D-051 — Internal research schemas are not a client Data API
+**Date:** 2026-09-20  
+**Decision:** The `atlas`, `audit`, `cartography` and `publish` PostgreSQL schemas are internal database boundaries, not direct browser/client Data API surfaces. Anonymous and authenticated client roles must not receive schema `USAGE` or table mutation/read privileges on those schemas merely to serve the public atlas. The current public browser consumes reviewed/released data through the `atlas-data` Edge Function, which queries the publication boundary server-side. If direct PostgREST access is introduced later, it must use a deliberately exposed API schema or other explicitly reviewed surface with least-privilege grants and RLS/policies appropriate to that public contract.
+
+RLS-disabled tables in an internal schema are therefore not, by themselves, evidence that those tables are publicly reachable. Security review must evaluate both PostgREST exposure and PostgreSQL grants. Defense in depth still requires explicit revokes/default-privilege controls so future migrations cannot accidentally make internal schemas client-accessible.
+
+**Reason:** Supabase's Data API security model has two gates: schema/object grants determine whether client roles can reach an object, and RLS controls which rows they may access once reachable. Production verification on 2026-09-20 found `anon` and `authenticated` have no `USAGE` on `atlas`, `audit`, `cartography` or `publish`, and no SELECT/INSERT/UPDATE/DELETE privileges across the 54 checked internal tables/views. The authoritative Supabase security advisor did not report an RLS-disabled-table exposure finding; its only current security lint was a mutable `search_path` on `atlas.make_year_range`. Keeping the public contract behind the Edge Function preserves the project's reviewed/published boundary and reduces accidental draft-data exposure.
