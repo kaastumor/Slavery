@@ -1,0 +1,93 @@
+name: MVP Availability Monitor
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: mvp-availability-monitor
+  cancel-in-progress: true
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check public API and site
+        id: health
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python tools/check_mvp_health.py \
+            --api-url "https://dilnayfllygkplsdymel.supabase.co/functions/v1/atlas-data" \
+            --site-url "https://kaastumor.github.io/Slavery/" \
+            --timeout-seconds 15 \
+            --max-api-seconds 10 \
+            | tee /tmp/atlas-health.json
+          echo '### Historical Slavery Atlas health' >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          cat /tmp/atlas-health.json >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open or update outage issue
+        if: steps.health.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = "[monitor] MVP availability degraded";
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo, state: "open", per_page: 100
+            });
+            const existing = issues.find(i => i.title === title && !i.pull_request);
+            const body = [
+              "The automated MVP availability monitor failed.",
+              "",
+              "Workflow: " + context.serverUrl + "/" + context.repo.owner + "/" + context.repo.repo + "/actions/runs/" + context.runId,
+              "",
+              "Checks cover:",
+              "- public atlas-data API HTTP availability",
+              "- API latency threshold (10 seconds)",
+              "- release payload sanity (release_version, places, cartography source)",
+              "- GitHub Pages HTTP availability and expected atlas title",
+              "",
+              "Treat this as a production availability incident until a later monitor run closes the issue."
+            ].join("\n");
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo, issue_number: existing.number, body
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo, title, body
+              });
+            }
+
+      - name: Close outage issue after recovery
+        if: steps.health.outcome == 'success'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = "[monitor] MVP availability degraded";
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo, state: "open", per_page: 100
+            });
+            const existing = issues.find(i => i.title === title && !i.pull_request);
+            if (existing) {
+              const body = "Recovered automatically in workflow run " + context.serverUrl + "/" + context.repo.owner + "/" + context.repo.repo + "/actions/runs/" + context.runId + ".";
+              await github.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo, issue_number: existing.number, body
+              });
+              await github.rest.issues.update({
+                owner: context.repo.owner, repo: context.repo.repo, issue_number: existing.number, state: "closed", state_reason: "completed"
+              });
+            }
+
+      - name: Fail workflow when health is degraded
+        if: steps.health.outcome == 'failure'
+        run: exit 1
