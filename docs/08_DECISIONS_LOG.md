@@ -322,3 +322,20 @@ The registry, together with the immutable build artifact and Git history, is the
 RLS-disabled tables in an internal schema are therefore not, by themselves, evidence that those tables are publicly reachable. Security review must evaluate both PostgREST exposure and PostgreSQL grants. Defense in depth still requires explicit revokes/default-privilege controls so future migrations cannot accidentally make internal schemas client-accessible.
 
 **Reason:** Supabase's Data API security model has two gates: schema/object grants determine whether client roles can reach an object, and RLS controls which rows they may access once reachable. Production verification on 2026-09-20 found `anon` and `authenticated` have no `USAGE` on `atlas`, `audit`, `cartography` or `publish`, and no SELECT/INSERT/UPDATE/DELETE privileges across the 54 checked internal tables/views. The authoritative Supabase security advisor did not report an RLS-disabled-table exposure finding; its only current security lint was a mutable `search_path` on `atlas.make_year_range`. Keeping the public contract behind the Edge Function preserves the project's reviewed/published boundary and reduces accidental draft-data exposure.
+
+
+## D-052 — Every public deployment carries a checksummed static release snapshot fallback
+**Date:** 2026-09-20  
+**Decision:** Until the full staging/build-once release pipeline in #43/#4 is complete, every successful public web deployment must materialize the exact currently published `atlas-data` API payload as a checksummed static snapshot inside the same GitHub Pages deployment artifact. The browser remains API-first, but if the live API is unavailable, times out, or returns an unusable response, it may load that deployment-bound snapshot and must label the session as a static fallback.
+
+The snapshot build must:
+- fail closed if the current published API payload is unavailable or structurally invalid;
+- canonicalize the JSON payload before hashing/writing;
+- record release version, schema version, source Git revision, counts and SHA-256 in a snapshot manifest;
+- upload the snapshot as a retained CI artifact as well as embedding it in the Pages deployment;
+- never change the canonical historical data release or publish draft/unreviewed data;
+- never allow a failed snapshot build to replace the last known-good Pages deployment.
+
+This is an availability/recovery materialization, not yet the final release-promotion architecture. Future #43/#4 work must move snapshot creation earlier so the immutable release artifact is built once from approved release inputs and promoted unchanged through staging and production, rather than deriving the fallback from an already-live API.
+
+**Reason:** the public preview currently depends on a live database-backed Edge Function. A transient database/API outage should not make an already-published atlas state disappear. Embedding a validated static copy in the web deployment provides an immediate recoverable state while preserving the stronger build-once/promote-many target as a separate remaining requirement.
