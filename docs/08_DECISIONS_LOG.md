@@ -206,3 +206,10 @@ This file records durable methodological choices. Add a dated entry whenever a f
 **Reason:** Two separate live iterations of boundary-normalization work caused the MVP to remain stuck in a loading state because expensive production spatial work saturated or blocked the serving path. Availability must therefore be tested as part of release correctness rather than treated as an operational afterthought.
 
 **Initial operational thresholds:** browser API timeout 12 seconds; automated API availability threshold 10 seconds; monitor cadence 15 minutes. These are operational guardrails and may be tightened as the serving path matures.
+
+## D-043 — Automatic project restart is a guarded self-healing action
+**Date:** 2026-09-20  
+**Decision:** The public MVP monitor may trigger an automatic Supabase **project restart** only after two restart-eligible public API failures separated by 120 seconds, while Supabase still reports the project `ACTIVE_HEALTHY`. Automatic restart is limited to once per two hours per open availability incident. Client/payload errors that indicate application defects rather than service unavailability do not qualify. After restart, the workflow waits up to ten minutes for the public API to recover and records the outcome in the incident issue.  
+**Reason:** the 2026-09-20 outage recovered only after a full project restart, while Supabase's control plane had reported the project healthy despite the database refusing usable connections. Restart is a valid temporary recovery mechanism for overloaded/stuck projects, but unguarded restart loops could hide underlying defects or amplify an external platform outage.
+
+**Credential boundary:** automated restart uses a dedicated scoped Supabase Management API personal access token stored only as the GitHub Actions secret `SUPABASE_MANAGEMENT_TOKEN`. It should be limited to this project and the minimum Project Settings read-write permission required for restart. The token must never be committed to the repository.
