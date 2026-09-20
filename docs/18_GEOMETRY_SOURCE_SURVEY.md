@@ -11,10 +11,26 @@ It should not be treated as the best geometry for every place and period. The at
 ## Sources worth preferring or evaluating
 
 ### CShapes 2.0
-- Scope: independent states and dependent territories, 1886–2019 globally; European coverage extends to 1816.
-- Strength: peer-reviewed research dataset built specifically for historical international borders.
-- Atlas role: strong candidate to supersede Cliopatria for modern state/colonial boundaries in its covered period.
-- Limitation: no ancient/medieval coverage.
+
+**Evaluation status: completed. Strong preferred-source candidate for global state/dependency boundaries from 1886–2019, subject to bounded geometry comparison and CC BY-NC-SA compliance.**
+
+- **Exact release:** CShapes 2.0, published with the 2022 Journal of Conflict Resolution dataset paper. The ETH Zürich International Conflict Research site identifies 2.0 as the current raw CShapes release.
+- **Temporal scope:** global independent states and dependent territories from 1886 through 2019. The peer-reviewed dataset records territorial changes at their effective dates rather than only annual snapshots, making its temporal resolution materially stronger than coarse historical-atlas slices.
+- **Coverage:** near-complete recent international-system coverage because dependencies/colonies are represented as well as independent states. It does not provide subnational administrative boundaries.
+- **Export/tooling:** ETH distributes CSV, tab-delimited, GeoJSON, Shapefile, SQL and R formats. This is directly compatible with the atlas offline GIS/build pipeline and allows preservation of source-native identifiers/attributes alongside normalized geometry.
+- **License:** the official ETH dataset page licenses CShapes under CC BY-NC-SA 4.0. Redistribution and adaptation are therefore possible for non-commercial use with attribution and ShareAlike obligations. This is materially more usable for a public atlas than CHGIS V6, but the NonCommercial/ShareAlike conditions must be carried into any release/licensing review before public ingestion.
+- **Atlas fit:** CShapes is a strong candidate to supersede Cliopatria for state/dependency geometry within 1886–2019, especially colonial/dependent-territory boundaries. It should not replace Cliopatria outside its period or for non-state/subnational historical entities.
+- **Do not auto-promote:** source reputation and licensing are not sufficient to replace existing geometry automatically. Run bounded comparisons against Cliopatria/current approved geometry for representative colonial, post-colonial, island/fragmented and border-change cases, including topology/coastline interaction with the Natural Earth render fabric.
+- **Temporal identity rule:** preserve CShapes start/end dates and source-native identifiers exactly. Do not coerce its state/dependency model into atlas polity semantics where the concepts differ; document any crosswalk.
+- **2019 cutoff:** CShapes 2.0 does not provide the atlas's post-2019 modern boundary layer. Later dates still require another reviewed modern source/fallback.
+- **Separate Europe extension:** CShape-Europe is a distinct newer dataset and may extend useful European historical coverage; it is not evidence that the global CShapes 2.0 product itself covers the pre-1886 world.
+
+Primary sources reviewed:
+- https://icr.ethz.ch/data/cshapes/
+- https://doi.org/10.1177/00220027211013563
+- https://www.loc.gov/item/2023592015/
+
+**Current atlas decision:** mark CShapes 2.0 as a preferred-source candidate for 1886–2019 state/dependency geometry. Before any public ingestion, complete a bounded geometry benchmark and confirm that the atlas distribution model satisfies CC BY-NC-SA 4.0 attribution, NonCommercial and ShareAlike conditions.
 
 ### China Historical Geographic Information System (CHGIS)
 
@@ -100,7 +116,7 @@ This is a resolved source-search outcome, not a claim that the surviving Cliopat
 
 ## Near-term evaluation backlog
 
-- Compare CShapes 2.0 against Cliopatria for 1886–2019.
+- CShapes 2.0 source evaluation complete; next use is a bounded CShapes-vs-Cliopatria geometry benchmark before any replacement/promotion.
 - CHGIS V6 evaluation complete: technically suitable for internal comparison, but direct public redistribution is blocked by the dataset-specific license pending explicit permission.
 - Sample OpenHistoricalMap administrative boundary completeness for several benchmark dates/regions.
 - Audit CONFOEDERATIO/Naissance licensing, provenance, source citations, temporal resolution and geometry quality before considering it as a second global baseline.
