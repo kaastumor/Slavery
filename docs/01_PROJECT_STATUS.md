@@ -1,5 +1,7 @@
 # Current Project Status
 
+For current execution order, use the repository-root `BACKLOG.md`.
+
 **Status date:** 2026-09-20  
 **Canonical data version:** v0.6.1  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical)  
@@ -96,6 +98,8 @@ CI evaluates 10/15/20/25 km snap tolerances with geometry validity, area change,
 
 Important finding: Baekje behaves materially worse than the larger benchmark geometries and loses roughly 8–9% of area across the tested tolerance range. It must not be blindly promoted under a universal tolerance. The correct pipeline behavior is quarantine/fallback while the source/geometry case is reviewed separately.
 
+PR #45 subsequently consolidated these experiments into the pinned `geometry-build.yml` candidate/QC pipeline with D-048 hard gates and immutable provenance manifests. PR #48 added scalable visual-review sheets generated from the exact CI artifact, including a regression for MultiPolygon review rendering. Both are merged.
+
 Do not promote all representative candidates to production merely because CI is green.
 
 ## 5. Geometry-source strategy
@@ -134,16 +138,16 @@ Key rules:
 - staging and production should become explicit deployment boundaries
 - operations monitoring/self-heal remains independent from research/build pipelines
 
-Current new CI gates:
+Current CI/operations gates:
 
 - `research-case-ci.yml`
 - `release-candidate-ci.yml`
 - foundation `ci.yml`
-- current QGIS geometry experiment workflows
+- consolidated `geometry-build.yml`
 - `mvp-health.yml`
 - `mvp-self-heal.yml`
 
-The QGIS experiment workflows are temporary. After #27 is resolved they should be consolidated into one parameterized `geometry-build.yml` rather than retained as permanent workflow sprawl.
+The former geometry experiment workflows have been consolidated. Geometry CI remains read-only toward production and produces candidate artifacts; visual review and controlled promotion remain separate gates.
 
 ## 7. Research-ingestion hardening
 
@@ -176,19 +180,19 @@ The canonical v0.6.1 release remains unchanged.
 
 ### P0 — finish map/render quality
 
-1. Finish multi-region acceptance criteria for #27.
-2. Quarantine or separately diagnose Baekje rather than weakening global QC.
-3. Determine whether the standard QGIS recipe can be promoted source-family-wide or requires bounded classes/recipes.
-4. Preserve previous approved render/fallback for any failing geometry.
-5. Once representative visual/QC acceptance is complete, materialize the approved render artifacts and close #27.
+1. Inspect the final topology-correct 10 km exact-artifact visual-review pack.
+2. Validate the exact tested candidate in a disposable MapLibre browser path at several zoom levels/continents.
+3. Quarantine or separately diagnose Baekje rather than weakening global QC.
+4. Determine the source-family baseline recipe without regressing the accepted live Achaemenid result.
+5. Preserve previous approved render/fallback for any failing geometry.
+6. Once representative visual/QC acceptance is complete, promote the exact reviewed artifacts and close #27.
 
 ### P1 — pipeline hardening (#43)
 
-1. Consolidate geometry experiment workflows into a parameterized geometry-build workflow.
-2. Attach immutable provenance/checksum manifests to geometry candidates.
-3. Configure real staging and production deployment boundaries.
-4. Build release promotion from tested artifacts rather than recomputing.
-5. Materialize static/recoverable published-release snapshots so a transient DB outage cannot take an already-published release offline.
+1. Configure real staging and production deployment boundaries.
+2. Build release promotion from the exact tested artifact rather than recomputing.
+3. Materialize static/recoverable published-release snapshots so a transient DB outage cannot take an already-published release offline.
+4. Add explicit post-promotion verification/fallback semantics.
 
 ### P1 — research/data growth
 
