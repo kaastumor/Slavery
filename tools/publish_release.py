@@ -183,9 +183,10 @@ def main() -> int:
     except (OSError, json.JSONDecodeError, PublishError) as exc:
         raise SystemExit(f"invalid publication manifest: {exc}") from exc
 
+    if args.apply:
+        raise SystemExit("D-054 disables legacy --apply; build and promote an immutable artifact with tools/release_artifact.py")
+
     if not args.dsn:
-        if args.apply:
-            parser.error("--dsn or DATABASE_URL is required with --apply")
         print(json.dumps({
             "release_version": manifest["release_version"],
             "claim_count": len(manifest["claim_ids"]),
