@@ -17,10 +17,28 @@ It should not be treated as the best geometry for every place and period. The at
 - Limitation: no ancient/medieval coverage.
 
 ### China Historical Geographic Information System (CHGIS)
-- Scope: Chinese administrative geography from 221 BCE to 1911 CE, with detailed time-aware administrative units and source notes.
-- Strength: specialist Harvard/Fudan historical GIS with much deeper regional granularity and scholarship than a world atlas can provide.
-- Atlas role: evaluate as a preferred China source where its geometry, temporal model, and license permit public redistribution.
-- Limitation: regional; licensing differs between releases and must be checked before publication.
+
+**Evaluation status: completed for Version 6. Do not directly redistribute V6 geometry in the public atlas without permission.**
+
+- **Exact release:** CHGIS Version 6, published December 2016 by the Fairbank Center for Chinese Studies (Harvard University) and the Center for Historical Geographical Studies (Fudan University). The CHGIS site still identifies V6 as the latest released dataset.
+- **Temporal scope/model:** 221 BCE–1911 CE. Time-series records have begin/end years with one-year temporal granularity and are designed to be filtered into year-specific time slices.
+- **Spatial scope:** strong coverage of the core provinces of dynastic China, but CHGIS explicitly excludes Inner Mongolia, Qinghai, Xinjiang and Tibet from the main Time Series coverage. Those areas appear only in some time-slice material.
+- **Polygon coverage:** the database model distinguishes point locations from jurisdictional polygons. Prefecture, province, dynasty/regime and other higher administrative units can have changing polygon objects. County-level time-series records are predominantly point locations because CHGIS states that accurate historical jurisdiction boundaries are often unavailable; county polygons exist for selected time slices such as 1911 rather than as a complete deep-time polygon series.
+- **Export/tooling:** the official documentation expects desktop GIS use and explicitly supports QGIS/ArcGIS workflows. V6 distributes downloadable Time Series and Time Slice packages; published scholarship describes V6 as providing point and polygon files. This is technically compatible with offline comparison and bounded GIS evaluation in the atlas pipeline.
+- **Provenance strength:** historical-instance records link to change types, temporal extents, administrative hierarchy and source-note identifiers. This makes CHGIS substantially stronger than a generic world polity layer for many China-specific identity/administrative questions.
+- **License:** the V6 publication page states that it is free for academic research but prohibits commercial use, resale and redistribution. The general CHGIS introduction is more permissive in tone about scholarly use/publications, but the dataset-specific V6 license is the controlling conservative interpretation for atlas ingestion.
+- **Atlas decision:** use CHGIS V6 as an **internal specialist comparator, source-discovery aid and potential geometry-validation source**, including for bounded tests such as Western Han. Do **not** ingest/publish its polygon coordinates as a public geometry source under the current license. A public CHGIS-derived geometry path requires explicit redistribution permission or a clarified license from the rights holders.
+- **No inference from availability:** CHGIS polygon granularity varies by administrative level and period; absence of a polygon is not evidence that a historical jurisdiction had no territorial extent.
+- **Version/lineage rule:** any internal comparison must preserve CHGIS Version 6 (2016) as the source version and retain CHGIS-native identifiers/temporal values rather than silently converting them into atlas-native claims.
+
+Primary documentation reviewed:
+- https://chgis.fas.harvard.edu/data/chgis/v6/
+- https://chgis.fas.harvard.edu/pages/intro/
+- https://chgis.fas.harvard.edu/pages/howto/
+- https://chgis.fas.harvard.edu/pages/database/
+
+Recent scholarly status check:
+- Tao Sun, Peter K. Bol, Xiaohong Zhang, “Advancing historical geography through the Chinese Historical Geographic Information System (CHGIS),” Journal of Historical Geography (2026), DOI 10.1016/j.jhg.2026.06.018.
 
 ### OpenHistoricalMap
 - Scope: global collaborative historical mapping with temporal administrative boundaries and other historical features.
@@ -83,6 +101,6 @@ This is a resolved source-search outcome, not a claim that the surviving Cliopat
 ## Near-term evaluation backlog
 
 - Compare CShapes 2.0 against Cliopatria for 1886–2019.
-- Check CHGIS v6 license and polygon export suitability before ingesting China.
+- CHGIS V6 evaluation complete: technically suitable for internal comparison, but direct public redistribution is blocked by the dataset-specific license pending explicit permission.
 - Sample OpenHistoricalMap administrative boundary completeness for several benchmark dates/regions.
 - Audit CONFOEDERATIO/Naissance licensing, provenance, source citations, temporal resolution and geometry quality before considering it as a second global baseline.

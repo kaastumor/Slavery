@@ -137,7 +137,7 @@ A local/CI disposable environment remains acceptable for testing in the meantime
 Issue: **#40 — specialist regional geometry sources over Cliopatria where superior**
 
 - [x] Investigate Baekje/Korean historical geometry first. NIKH HGIS provides authoritative Korean historical GIS but its documented polygon coverage is modern (1910+); no period-appropriate open vector replacement for 347–391 CE was identified. Baekje remains quarantine/fallback pending a stronger specialist source.
-- [ ] Evaluate CHGIS exact version/license/export suitability for historical China.
+- [x] Evaluate CHGIS exact version/license/export suitability for historical China. Version 6 (Dec 2016) is technically strong for internal specialist comparison (221 BCE–1911; year-granular time series; prefecture/higher historical polygons; QGIS-compatible downloads), but its dataset-specific license prohibits redistribution. Do not publish CHGIS geometry without explicit permission; use it as an internal comparator/source-discovery aid meanwhile. See docs/18_GEOMETRY_SOURCE_SURVEY.md.
 - [ ] Evaluate CShapes 2.0 for its modern historical coverage.
 - [ ] Evaluate Ancient World Mapping Center / other specialist ancient datasets for bounded Greco-Roman cases.
 - [ ] Evaluate OpenHistoricalMap as supplementary material, not automatic authority.
