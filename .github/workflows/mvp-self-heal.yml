@@ -38,14 +38,8 @@ jobs:
           body=$(curl -fsS --max-time 15 \
             -H "Authorization: Bearer $SUPABASE_MANAGEMENT_TOKEN" \
             "https://api.supabase.com/v1/projects/$PROJECT_REF")
-          python - <<'PY' <<< "$body"
-          import json, sys
-          payload = json.load(sys.stdin)
-          expected = "dilnayfllygkplsdymel"
-          if payload.get("id") != expected and payload.get("ref") != expected:
-              raise SystemExit("token cannot read expected project")
-          print("Management API credential validated for expected project.")
-          PY
+          echo "$body" | python -c 'import json,sys; payload=json.load(sys.stdin); expected="dilnayfllygkplsdymel"; ok=(payload.get("id")==expected or payload.get("ref")==expected); sys.exit(0 if ok else "token cannot read expected project")'
+          echo "Management API credential validated for expected project."
 
   restart-if-needed:
     if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'failure'
