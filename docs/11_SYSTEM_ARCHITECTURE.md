@@ -398,3 +398,22 @@ Operational rules:
 - monitor failures create/update a GitHub incident issue and successful recovery closes it automatically.
 
 A future publication hardening step should additionally materialize each immutable published release as a static API snapshot/fallback so a transient database outage cannot make an already-published historical release unavailable.
+
+## Automatic recovery
+
+The 15-minute external monitor is paired with a guarded self-heal workflow.
+
+When the monitor fails, the self-heal workflow:
+
+1. probes the public API independently;
+2. waits 120 seconds and confirms the failure;
+3. only classifies timeouts, HTTP 5xx responses, or severe latency as restart candidates;
+4. verifies the Supabase project control-plane state is `ACTIVE_HEALTHY`;
+5. enforces a two-hour restart cooldown using the open incident issue;
+6. calls the Supabase Management API project-restart endpoint;
+7. polls the public API for up to ten minutes;
+8. records success or escalation in the incident.
+
+It does not restart for HTTP 4xx responses, malformed release payloads, or other application/data defects where a project restart is unlikely to be corrective.
+
+The restart credential is a dedicated scoped Supabase Management API token stored as the GitHub Actions secret `SUPABASE_MANAGEMENT_TOKEN`. Do not place it in source, workflow literals, repository variables, or public logs.
