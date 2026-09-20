@@ -78,8 +78,8 @@ Established architecture:
 ### Remaining acceptance steps
 
 - [x] Inspect the final topology-correct **10 km** review artifact at full extent and representative boundary/coast views; Baekje remains quarantined.
-- [ ] Build/use a disposable MapLibre review path that renders the **exact tested artifact**, not a recomputation.
-- [ ] Validate representative candidates at several browser zoom levels/continents against the same Natural Earth fabric.
+- [x] Build a local-only MapLibre review path that verifies and renders the **exact tested artifact**, not a recomputation. Merged in PR #51.
+- [ ] Use that review path to validate representative candidates at several browser zoom levels/continents against the same Natural Earth fabric.
 - [ ] Record explicit visual disposition per candidate: `visually_accepted` or `quarantined/fallback`.
 - [ ] Keep Baekje on fallback and investigate its source/geometry separately; do not weaken global QC.
 - [ ] Decide the source-family baseline recipe. Current quantitative evidence favors 10 km as the conservative generic candidate, but the already accepted live Achaemenid result must not be replaced merely for uniformity.
