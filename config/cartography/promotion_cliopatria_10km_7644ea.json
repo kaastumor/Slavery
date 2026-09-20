@@ -1,0 +1,138 @@
+{
+  "schema_version": "geometry-promotion-plan-v1",
+  "promotion_id": "cliopatria-qgis-natural-earth-10km-2026-09-20",
+  "policy_id": "cliopatria-qgis-natural-earth-v1",
+  "created_at": "2026-09-20",
+  "artifact": {
+    "workflow_run_id": 35523925420,
+    "artifact_name": "geometry-candidate-10000m-7644ea348ec43093219d964069a7b88ec088a331",
+    "git_sha": "7644ea348ec43093219d964069a7b88ec088a331",
+    "manifest_file": "artifact_manifest.json",
+    "manifest_sha256": "5e6a78ad042e120a086fabb0c2a86b63da3c669e9ef21df518c3736d3740d0bb",
+    "created_at": "2026-09-20T16:54:05.362554+00:00",
+    "land_fabric_id": "natural-earth-ne_10m_land-v5.1.1-ca96624",
+    "land_sha256": "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416",
+    "parameters": {
+      "snap_tolerance_m": "10000",
+      "smooth_iterations": "1",
+      "smooth_offset": "0.20",
+      "smooth_max_angle": "120"
+    },
+    "files": {
+      "representative.geojson": "0606f301bb3ca9b39dcef8cd72b15d76d50d26d8677b77ca10fe2c2f8f5d762b",
+      "representative_decision.json": "40b102f497248799db79abefff7792f5d264a8db6493d64bcda3e9f9083bde26",
+      "achaemenid.geojson": "38ecf2df66692323aa200431396c1b72e6c29ca44a1280a98278957696b21d5a",
+      "achaemenid_decision.json": "21d8722aad4ef9c3f9038be9d26f25bac8b1ea97951deeb5fdd15af2ffc9e74d"
+    }
+  },
+  "visual_review": {
+    "workflow_run_id": 35526192586,
+    "method": "exact-artifact MapLibre tolerance=0; fit plus two boundary-focused zooms centered on the candidate point with maximum approximate nearest-source displacement",
+    "result": "passed",
+    "page_errors": 0
+  },
+  "existing_live_exception": {
+    "geometry_ids": [
+      "34ff5048-242f-48a3-8fb2-5eca4dcd9a54",
+      "f8a44a0b-f574-4c55-b5b1-b1e803f78543"
+    ],
+    "reason": "The live Achaemenid pilot was explicitly visually accepted before the 10 km default was adopted. D-049 forbids replacing it merely for uniformity.",
+    "verified_equivalent_20km_artifact": {
+      "workflow_run_id": 35523457156,
+      "git_sha": "38bd6047320c5cca0aac8e12db46ee8b46636231",
+      "manifest_sha256": "cf6973628c02c0b0b48f766032a8ee4c71920e283aeac90af0fa96f7167ad58b",
+      "achaemenid_geojson_sha256": "ea47e85940bebe1f3ffe05b6bd06a4f3e4f1f2135af752c9a0657582bcd1e433",
+      "achaemenid_decision_sha256": "f0a74f329a3cea9f84f160d030798303b918578ccc1fce0ff76df75bee33029b"
+    }
+  },
+  "features": [
+    {
+      "geometry_id": "81cb78c1-3b59-4c0a-b51f-f1c0d45bf866",
+      "name": "Western Han China",
+      "artifact_file": "representative.geojson",
+      "decision_file": "representative_decision.json",
+      "qc_status": "qc_passed",
+      "visual_status": "visually_accepted_candidate",
+      "semantic_scope_status": "accepted_polity_context",
+      "semantic_scope_note": "The reviewed claim concerns private and government slavery across the Western Han polity while explicitly limiting prevalence claims; the polity geometry is used as historical context, not as a claim of uniform practice intensity.",
+      "action": "promote"
+    },
+    {
+      "geometry_id": "82b2f32f-de79-4a5a-98e0-56db15321588",
+      "name": "Mauryan Empire",
+      "artifact_file": "representative.geojson",
+      "decision_file": "representative_decision.json",
+      "qc_status": "qc_passed",
+      "visual_status": "visually_accepted_candidate",
+      "semantic_scope_status": "accepted_polity_context",
+      "semantic_scope_note": "The reviewed claim is a polity-period synthesis for Mauryan-period India and explicitly avoids treating slavery as the economic basis of the empire; the geometry is contextual rather than a uniform-prevalence footprint.",
+      "action": "promote"
+    },
+    {
+      "geometry_id": "d230ca36-be77-4699-b12e-77a491e58f35",
+      "name": "New Kingdom Egypt",
+      "artifact_file": "representative.geojson",
+      "decision_file": "representative_decision.json",
+      "qc_status": "qc_passed",
+      "visual_status": "visually_accepted_candidate",
+      "semantic_scope_status": "accepted_polity_context",
+      "semantic_scope_note": "The reviewed claim is a broad New Kingdom synthesis covering institutional and military enslavement/servitude; the selected polity geometry is a defensible historical context layer.",
+      "action": "promote"
+    },
+    {
+      "geometry_id": "e813d49c-b1a1-4bf4-9df2-0c14faca31f5",
+      "name": "Hittite central Anatolia",
+      "artifact_file": "representative.geojson",
+      "decision_file": "representative_decision.json",
+      "qc_status": "qc_passed",
+      "visual_status": "visually_accepted_candidate",
+      "semantic_scope_status": "accepted_polity_context",
+      "semantic_scope_note": "The reviewed claims synthesize Hittite legal and institutional non-free categories; the central-Anatolia polity geometry is a bounded contextual extent and does not collapse all dependency categories into slavery.",
+      "action": "promote"
+    },
+    {
+      "geometry_id": "edb239a8-4d54-44e4-970a-affb7c9af22e",
+      "name": "Roman Empire — early Principate",
+      "artifact_file": "representative.geojson",
+      "decision_file": "representative_decision.json",
+      "qc_status": "qc_passed",
+      "visual_status": "visually_accepted_candidate",
+      "semantic_scope_status": "accepted_polity_context",
+      "semantic_scope_note": "The reviewed claim is explicitly empire-wide specialist synthesis describing Rome as a slave society; the polity extent is appropriate historical context, without implying identical local prevalence.",
+      "action": "promote"
+    },
+    {
+      "geometry_id": "e5a720f8-9e22-45fe-a5b0-c6464686525d",
+      "name": "Baekje",
+      "artifact_file": "representative.geojson",
+      "decision_file": "representative_decision.json",
+      "qc_status": "quarantined",
+      "visual_status": "quarantined/fallback",
+      "semantic_scope_status": "blocked_bounded_event",
+      "semantic_scope_note": "The reviewed evidence is a bounded 369 captive-enslavement event and explicitly does not establish prevalence across Baekje society. The whole-polity proxy is therefore semantically sensitive even apart from the failed cartographic QC.",
+      "action": "quarantine"
+    },
+    {
+      "geometry_id": "34ff5048-242f-48a3-8fb2-5eca4dcd9a54",
+      "name": "Achaemenid Persis/Elam royal economy (-499 to -480)",
+      "artifact_file": "achaemenid.geojson",
+      "decision_file": "achaemenid_decision.json",
+      "qc_status": "qc_passed",
+      "visual_status": "visually_accepted_candidate",
+      "semantic_scope_status": "accepted_existing_live",
+      "semantic_scope_note": "The live QGIS/Natural Earth pilot is already explicitly accepted and uses a verified-equivalent 20 km artifact.",
+      "action": "preserve_existing_live"
+    },
+    {
+      "geometry_id": "f8a44a0b-f574-4c55-b5b1-b1e803f78543",
+      "name": "Achaemenid Persis/Elam royal economy (-529 to -500)",
+      "artifact_file": "achaemenid.geojson",
+      "decision_file": "achaemenid_decision.json",
+      "qc_status": "qc_passed",
+      "visual_status": "visually_accepted_candidate",
+      "semantic_scope_status": "accepted_existing_live",
+      "semantic_scope_note": "The live QGIS/Natural Earth pilot is already explicitly accepted and uses a verified-equivalent 20 km artifact.",
+      "action": "preserve_existing_live"
+    }
+  ]
+}
