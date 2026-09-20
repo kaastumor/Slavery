@@ -359,3 +359,20 @@ The `atlas-data` Edge Function must resolve the public preview through this poin
 This release-channel pointer is a serving/promotion control, not full exact historical release membership. Issue #4 still governs reconstructible release-object membership and immutable release bundles.
 
 **Reason:** selecting `order by created_at desc limit 1` makes publication order an implicit deployment mechanism. A newly published manifest can silently become public, and rollback requires changing release state. An explicit pointer makes promotion intentional, auditable, reversible, and separable from immutable release contents while preserving D-046’s staged promotion model.
+
+## D-054 — Published releases use typed membership plus an immutable full-state bundle
+**Date:** 2026-09-20  
+**Decision:** Exact release reconstruction uses a hybrid model.
+
+1. Typed `audit.release_*` membership tables record which claims, actors, spatial entities, geometries, voyages, coverage assessments and source versions belong to a release.
+2. New captured-at-release membership rows carry an object SHA-256 for the exact serialized object state used to build the release.
+3. A release also carries one or more checksummed immutable artifacts; the preservation-grade full-state bundle is the authority for reconstructing historical row values after canonical rows change.
+4. Membership and artifact digests use canonical UTF-8 JSON: keys sorted, compact separators, JSON null preserved, identifiers normalized as strings, and arrays explicitly sorted where their semantics are set-like. Geometry state is represented in the bundle by SRID plus hexadecimal EWKB rather than by a presentation-oriented GeoJSON serialization.
+5. `captured_at_release` means the object digest was produced from the immutable bundle before publication. `legacy_membership_backfill` means only historical membership could be reconstructed from an older manifest; it must not be presented as proof of exact historical row bytes.
+6. Once a release is `published`, its typed membership is immutable. A revised release gets a new release version; it does not mutate the old membership.
+7. Current serving may use the explicit D-053 release channel plus typed membership. A future exact historical-release API must serve the immutable bundle (or data verified byte-equivalent to it), not mutable current publish views.
+8. Future release promotion must build and test the bundle/membership first, then apply that exact artifact to production without recomputing membership.
+
+Existing `mvp-preview-ancient-v1` and `mvp-preview-ancient-v2` are backfilled from their stored manifest ID arrays with `legacy_membership_backfill` status. They remain useful historical membership records, but the project does not claim exact pre-existing row-state reconstruction for them unless a contemporaneous preserved bundle is independently available.
+
+**Reason:** Typed membership alone answers “which IDs belonged to release X” but cannot reconstruct a historical row after that row is edited. An export bundle alone preserves bytes but lacks relational integrity/queryability. The hybrid model provides both while keeping legacy evidence limits explicit and supports D-046 build-once/promote-unchanged semantics.

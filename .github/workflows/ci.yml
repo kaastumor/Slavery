@@ -48,6 +48,9 @@ jobs:
       - name: Release channel pointer
         run: bash ./scripts/db-test-release-channel.sh
 
+      - name: Reconstructible release membership
+        run: bash ./scripts/db-test-release-membership.sh
+
       - name: Prototype map sanity
         run: |
           python -m json.tool prototype/map/data/world-land.geojson >/dev/null

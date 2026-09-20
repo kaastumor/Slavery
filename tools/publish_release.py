@@ -183,9 +183,13 @@ def main() -> int:
     except (OSError, json.JSONDecodeError, PublishError) as exc:
         raise SystemExit(f"invalid publication manifest: {exc}") from exc
 
+    if args.apply:
+        raise SystemExit(
+            "direct --apply is disabled by D-054; build and promote an immutable "
+            "release artifact so membership is not recomputed during production apply"
+        )
+
     if not args.dsn:
-        if args.apply:
-            parser.error("--dsn or DATABASE_URL is required with --apply")
         print(json.dumps({
             "release_version": manifest["release_version"],
             "claim_count": len(manifest["claim_ids"]),
