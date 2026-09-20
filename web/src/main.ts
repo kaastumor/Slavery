@@ -571,13 +571,28 @@ function attachLayerInteraction(layerId: string): void {
   });
 }
 
+async function fetchApiWithTimeout(timeoutMs = 12000): Promise<ApiResponse> {
+  const controller = new AbortController();
+  const timer = window.setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    const response = await fetch(API_URL, { signal: controller.signal });
+    if (!response.ok) throw new Error(`Atlas API returned ${response.status}`);
+    return (await response.json()) as ApiResponse;
+  } catch (error) {
+    if (error instanceof DOMException && error.name === "AbortError") {
+      throw new Error(`Atlas API timed out after ${Math.round(timeoutMs / 1000)} seconds`);
+    }
+    throw error;
+  } finally {
+    window.clearTimeout(timer);
+  }
+}
+
 async function boot(): Promise<void> {
   try {
     const [apiResponse] = await Promise.all([
-      fetch(API_URL).then(async (response) => {
-        if (!response.ok) throw new Error(`Atlas API returned ${response.status}`);
-        return (await response.json()) as ApiResponse;
-      }),
+      fetchApiWithTimeout(),
       new Promise<void>((resolve) => map.once("load", () => resolve())),
     ]);
 
@@ -701,7 +716,9 @@ async function boot(): Promise<void> {
     releaseBadge.textContent = "Load error";
     status.textContent = "Failed to load atlas data";
     panel.innerHTML =
-      `<div class="panel-body"><div class="empty-state">Could not load the atlas.<br>${escapeHtml(error instanceof Error ? error.message : error)}</div></div>`;
+      `<div class="panel-body"><div class="empty-state">Could not load the atlas.<br>${escapeHtml(error instanceof Error ? error.message : error)}<br><button type="button" id="retry-atlas-load">Retry</button></div></div>`;
+    document.querySelector<HTMLButtonElement>("#retry-atlas-load")
+      ?.addEventListener("click", () => window.location.reload());
   }
 }
 
