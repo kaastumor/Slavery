@@ -13,7 +13,7 @@ class AncientExpansionBatch03Tests(unittest.TestCase):
         self.paths = sorted(self.case_dir.glob("[0-9][0-9]_*.json"))
 
     def test_current_cases_validate_and_remain_unpublished(self):
-        self.assertGreaterEqual(len(self.paths), 7)
+        self.assertGreaterEqual(len(self.paths), 8)
         for path in self.paths:
             with self.subTest(path=path.name):
                 spec = load_spec(path)
@@ -95,6 +95,22 @@ class AncientExpansionBatch03Tests(unittest.TestCase):
         turfan = next(item for item in spec["evidence"] if item["independence_group"] == "turfan_sogdian_slave_sale_639")
         self.assertEqual(turfan["direction"], "qualifies")
         self.assertIn("outside Sogdiana", turfan["source"]["reliability_limitations"])
+
+    def test_pre_angkor_cambodia_keeps_clear_slavery_separate_from_ambiguous_khnum(self):
+        spec = load_spec(self.case_dir / "08_pre_angkor_cambodia_slavery.json")
+        practice = spec["claim"]["territorial_practice"]
+        self.assertEqual(spec["spatial_entity"]["entity_type_code"], "region")
+        self.assertEqual(practice["practice_level"], "P2")
+        self.assertEqual(practice["coverage_state_code"], "classified")
+        self.assertEqual(spec["claim"]["publication_status"], "unpublished")
+        self.assertEqual(spec["geometry"]["accuracy_status"], "unresolved")
+        self.assertIsNone(spec["geometry"]["geojson"])
+        directions = {item["direction"] for item in spec["evidence"]}
+        self.assertIn("supports", directions)
+        self.assertIn("qualifies", directions)
+        vickery = next(item for item in spec["evidence"] if item["independence_group"] == "vickery_pre_angkor_social_structure")
+        self.assertIn("rejects treating all kñum", vickery["source"]["reliability_limitations"])
+        self.assertIn("stops below P3", practice["notes"])
 
     def test_opone_slave_export_stays_external_to_territorial_p_levels(self):
         spec = json.loads((self.case_dir / "external_01_opone_slave_export.json").read_text(encoding="utf-8"))
