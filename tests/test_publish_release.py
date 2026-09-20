@@ -42,6 +42,10 @@ class PublishManifestTests(unittest.TestCase):
             with self.assertRaises(PublishError):
                 load_manifest(path)
 
+    def test_direct_apply_path_is_disabled_in_source(self):
+        source = (ROOT / "tools" / "publish_release.py").read_text(encoding="utf-8")
+        self.assertIn("direct --apply is disabled by D-054", source)
+
     def test_rejects_duplicate_claim_ids(self):
         manifest = {
             "release_version": "bad",
