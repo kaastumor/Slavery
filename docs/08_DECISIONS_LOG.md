@@ -281,3 +281,14 @@ Reapplying the same case key with the same content is a no-op. Reapplying the sa
 This ledger applies prospectively to research packages ingested through the claim-centric loader. Historical claims and stored research fixtures created before this mechanism are not retroactively assigned synthetic case identities merely for completeness.
 
 **Reason:** research ingestion will increasingly run through repeatable automation. Retry-safe writes are necessary to prevent workflow retries, operator reruns or transient failures from creating duplicate claims. Immutable case identities also improve provenance by making a substantive change visible as a new reviewed research package rather than an invisible mutation.
+
+## D-049 — Prefer the least-distorting tested QGIS snap tolerance; do not auto-upgrade tolerance
+**Date:** 2026-09-20  
+**Decision:** For new generic Cliopatria render candidates under the standard QGIS + Natural Earth policy, 10 km is the preferred baseline snap tolerance among the currently evaluated 10/15/20/25 km matrix. Larger tested tolerances remain alternate candidates for diagnosis or explicit visual override; they are not automatically preferred merely because they pass the same hard QC gates.
+
+If the preferred 10 km candidate fails a hard gate, the geometry is quarantined and the previous approved render/fallback remains in use. The pipeline must not silently escalate to a larger tolerance to force a candidate through. Every QC-passing candidate still requires visual review before promotion.
+
+Existing explicitly approved/published render artifacts, including the visually accepted Achaemenid pilot, are not invalidated or regenerated solely because 10 km becomes the default candidate baseline.
+
+**Reason:** Representative testing found 10 km to be the least-distorting tested tolerance overall, while larger tolerances did not produce monotonic improvement. Baekje also demonstrates that changing tolerance does not rescue every source geometry: it remains a material outlier across the tested matrix. A conservative fixed baseline plus quarantine/fallback is more reproducible than selecting whichever tolerance happens to make an individual geometry look acceptable.
+
