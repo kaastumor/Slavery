@@ -655,7 +655,14 @@ async function boot(): Promise<void> {
           ["==", ["get", "state"], "disputed"], 0.56,
           ["match", ["get", "p_level"], 4, 0.78, 3, 0.65, 2, 0.52, 1, 0.38, 0.46],
         ],
-        "fill-outline-color": "#59342f",
+        "fill-outline-color": [
+          "match", ["get", "geometry_accuracy"],
+          "exact", "#59342f",
+          "specialist", "#59342f",
+          "approximate_historical", "rgba(89, 52, 47, 0.55)",
+          "modern_proxy", "rgba(89, 52, 47, 0.38)",
+          "rgba(89, 52, 47, 0.45)",
+        ],
       },
     });
 
