@@ -213,3 +213,18 @@ This file records durable methodological choices. Add a dated entry whenever a f
 **Reason:** the 2026-09-20 outage recovered only after a full project restart, while Supabase's control plane had reported the project healthy despite the database refusing usable connections. Restart is a valid temporary recovery mechanism for overloaded/stuck projects, but unguarded restart loops could hide underlying defects or amplify an external platform outage.
 
 **Credential boundary:** automated restart uses a dedicated scoped Supabase Management API personal access token stored only as the GitHub Actions secret `SUPABASE_MANAGEMENT_TOKEN`. It should be limited to this project and the minimum Project Settings read-write permission required for restart. The token must never be committed to the repository.
+
+## D-044 — Stop bespoke coastal heuristics; use standard GIS preprocessing for Cliopatria render geometry
+**Date:** 2026-09-20  
+**Decision:** The atlas will not continue inventing source-specific coastline buffers or increasingly complex PostGIS recovery heuristics for Cliopatria. The published Cliopatria methodology itself documents that the polygons were vectorized from 2400×4800 raster map images, that coarse raster resolution can leave polygons misaligned with coast/land datasets, and that the source authors already applied smoothing to reduce raster border artifacts. This is therefore a known source-generalization problem, not an atlas-specific historical-geometry problem.
+
+The next render pipeline must be built from established GIS operations executed **offline/pre-publication**, with immutable source geometry preserved:
+1. cartographic smoothing/generalization using a standard GIS implementation (initial evaluation: QGIS `native:smoothgeometry` / Mapshaper `-smooth`);
+2. snap the generalized historical polygon to the canonical Natural Earth 1:10m physical-land boundary using a standard reference-layer snapping operation (initial evaluation: QGIS `native:snapgeometries`, behavior “prefer closest point, insert extra vertices where required”);
+3. clean/validate topology with standard GIS tools;
+4. clip the final display polygon to the same canonical Natural Earth land fabric;
+5. materialize the result as render geometry and serve it without geometry processing in the public request path.
+
+The custom adaptive coastal-completion policy from D-041 is retained in migration history for reproducibility but is **not** the active production policy while this standard pipeline is evaluated. The fully populated v3 render cache remains the public fallback until the standard GIS result passes multi-region visual and quantitative QC.
+
+**Reason:** continuing to tune custom buffer distances reproduces a solved GIS workflow badly and risks source-family distortions, operational instability and non-generalizable code. Standard snapping algorithms are explicitly designed to align one geometry layer to a reference layer within a tolerance and can insert/remove vertices so boundaries follow the reference geometry exactly. Standard smoothing/generalization tools also expose controls for preserving sharp corners rather than rounding every historical frontier indiscriminately.
