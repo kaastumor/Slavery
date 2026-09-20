@@ -40,11 +40,25 @@ def main() -> int:
                 errors.append(f"API returned invalid JSON: {exc}")
                 payload = {}
 
-            if not payload.get("release_version"):
+            release_version = payload.get("release_version")
+            release_channel = payload.get("release_channel")
+            if not release_version:
                 errors.append("API payload is missing release_version")
+            else:
+                metrics["release_version"] = release_version
+            if release_channel:
+                metrics["release_channel"] = release_channel
+
             places = payload.get("places")
             if not isinstance(places, list) or len(places) < 1:
                 errors.append("API payload contains no places")
+            else:
+                metrics["place_count"] = len(places)
+                metrics["claim_count"] = sum(
+                    len(place.get("claims") or [])
+                    for place in places
+                    if isinstance(place, dict)
+                )
             cartography = payload.get("cartography") or {}
             if not cartography.get("source_url"):
                 errors.append("API payload is missing cartography.source_url")
