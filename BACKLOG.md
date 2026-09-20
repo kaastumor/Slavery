@@ -86,7 +86,7 @@ Established architecture:
 - [x] Use 10 km as the conservative generic Cliopatria candidate baseline under D-049; do not auto-escalate tolerance, and do not replace the already accepted live Achaemenid render merely for uniformity.
 - [x] Implement a controlled exact-artifact promotion gate: D-050 + checked-in per-geometry acceptance/semantic registry + checksum-verifying promotion tool + real-artifact CI. Merged in PR #54.
 - [x] Promote the five approved 10 km representative geometries through D-050. The initial GitHub Management API executor failed safely before writes (HTTP 403); the same immutable artifact and D-050 checks were then applied transactionally through a one-time Supabase-native executor and independently verified. Live cache: 99 rows; all five promoted geometries valid SRID 4326 with exact artifact vertex counts; accepted Achaemenid rows preserved; Baekje absent/quarantined.
-- [ ] Re-check the public browser after promotion.
+- [x] Re-check the public browser after promotion. Live GitHub Pages review run `35529260898` passed for Hittite, New Kingdom Egypt, Mauryan, Western Han and Roman promoted geometries; each reports `cliopatria-qgis-natural-earth-v1`, with no browser page errors/map warning. Baekje 369 CE correctly remains on fallback `cliopatria-boundary-normalization-v3`. Fit and +2 zoom screenshots were visually inspected.
 - [ ] Close #27 only when multiple representative regions and zoom levels are genuinely correct.
 
 ### Specific risk: semantic overbreadth
@@ -95,6 +95,20 @@ A cartographically attractive polygon can still be historically wrong for a clai
 
 - [x] Audit overbroad whole-polity proxies during geometry promotion. D-050's per-geometry registry records semantic scope separately from cartographic acceptance: the five promoted cases are accepted only as polity context, while Baekje is explicitly blocked as a bounded-event case.
 - [ ] Prefer unresolved/narrower defensible geometry over attractive false precision.
+
+---
+
+# P0 — Data API security / RLS audit
+
+## NEXT — Verify and secure exposed atlas/cartography tables
+
+Supabase's security advisory reports Row Level Security disabled on 32 tables across `atlas` and `cartography`, warning that anon/authenticated Data API roles may have direct table access. Do **not** blindly enable RLS: doing so without matching policies could break the public data path.
+
+- [ ] Verify the project's currently exposed Data API schemas/role grants and reproduce whether anon/authenticated clients can directly read or mutate these tables.
+- [ ] Define the intended access model: public browser should consume the reviewed Edge Function/published boundary, not unrestricted draft tables.
+- [ ] Add explicit RLS/grants/policies or remove sensitive schemas from Data API exposure as appropriate.
+- [ ] Test public atlas/API behavior plus unauthorized direct-table read/write attempts before production application.
+- [ ] Run Supabase security advisors again and record residual findings.
 
 ---
 
