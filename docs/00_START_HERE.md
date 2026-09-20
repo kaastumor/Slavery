@@ -119,5 +119,6 @@ Read:
 9. `14_LOCAL_DATABASE_DEVELOPMENT.md`
 10. `15_DEVELOPMENT_ENVIRONMENT.md`
 11. `17_SOURCE_EVIDENCE_LIFECYCLE.md`
+12. `19_PIPELINE_ARCHITECTURE.md`
 
 Then record any schema or methodology change in the decision log before treating it as canonical methodology.

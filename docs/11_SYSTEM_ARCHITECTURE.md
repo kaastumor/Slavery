@@ -417,3 +417,22 @@ When the monitor fails, the self-heal workflow:
 It does not restart for HTTP 4xx responses, malformed release payloads, or other application/data defects where a project restart is unlikely to be corrective.
 
 The restart credential is a dedicated scoped Supabase Management API token stored as the GitHub Actions secret `SUPABASE_MANAGEMENT_TOKEN`. Do not place it in source, workflow literals, repository variables, or public logs.
+
+## Pipeline separation and artifact promotion
+
+D-046 defines four logical operational lanes: research curation, cartography build, release/promotion and runtime operations.
+
+Implementation rules:
+
+- PR/CI jobs validate and build artifacts but do not write to production;
+- research cases remain unpublished until review and release gating;
+- render geometry is generated offline and promoted as an immutable derived artifact with provenance/QC;
+- releases compose reviewed claims and approved geometry rather than regenerating them;
+- staging verifies the same immutable release/render artifacts intended for production;
+- production receives only bounded migrations and approved artifacts/materializations;
+- availability monitoring and self-healing stay independent from build/research workflows;
+- repeated deterministic pipeline logic should live in scripts or reusable workflows rather than duplicated top-level workflow files.
+
+The target GitHub workflow surface is intentionally small: foundation CI, research-case CI, geometry build/QC, release/promotion, availability monitoring and self-heal. Experimental cartography workflows may coexist temporarily while #27 is being resolved, but they are not the long-term workflow topology.
+
+GitHub `staging` and `production` deployment environments should become the credential/protection boundaries for promotion jobs. A workflow run passing CI is not itself sufficient to mark historical research as reviewed or geometry as visually accepted.

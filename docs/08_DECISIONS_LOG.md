@@ -240,3 +240,24 @@ The custom adaptive coastal-completion policy from D-041 is retained in migratio
 5. **Scale discipline:** do not display more physical or historical precision than the underlying source supports. A more detailed coastline may improve visual fit, but it must not imply that uncertain historical inland frontiers are equally precise.
 
 **Reason:** this maximizes reuse of established GIS behavior, documentation, tooling and operational experience. Natural Earth is widely used as a global physical map source, including by Cartopy; QGIS provides standard geometry snapping that inserts/removes vertices to make geometries follow a reference layer within tolerance; Mapshaper provides topology-aware cleaning/generalization; and MapLibre's own guidance recommends vector tiling as datasets grow. This makes future problems more likely to have known solutions and community experience rather than requiring atlas-specific geometry inventions.
+
+## D-046 — Separate curation, cartography build, release promotion and operations; promote immutable artifacts
+**Date:** 2026-09-20  
+**Decision:** The atlas adopts four **logical** pipeline lanes with explicit state boundaries:
+
+1. **Research curation:** source acquisition/registration → claim construction → automated validation → draft ingestion → editorial/research review → release eligibility.
+2. **Cartography build:** immutable historical source geometry → offline render candidate → topology/quantitative QC → representative visual QC → approved render artifact.
+3. **Release/promotion:** assemble only reviewed claims and approved geometry → release manifest/QC → immutable release artifact → staging verification → production promotion → post-deploy health.
+4. **Operations:** independent availability monitoring, incident handling, guarded recovery and escalation.
+
+These are logical lanes, not a requirement to create one GitHub Actions file per individual step. Repeated deterministic logic should be implemented as scripts/reusable workflows; top-level workflows should remain few and purpose-specific.
+
+**Build/promotion rule:** expensive or interpretive outputs are built once from pinned inputs, assigned provenance/checksums, and promoted unchanged. Production must not regenerate a geometry candidate, research interpretation or release payload that was tested elsewhere.
+
+**Write boundary:** pull-request CI is read-only with respect to production. Research CI may validate case files but must not publish them. Geometry CI may create candidate artifacts but must not alter canonical source geometry or production render caches. Only an explicit release/promotion job may change published state or production-serving materializations.
+
+**Review boundary:** automated QC can establish structural validity, schema conformance and quantitative thresholds, but it cannot substitute for historical/editorial review or the representative visual review required for cartographic transformations that can change apparent extent.
+
+**Provenance boundary:** every promoted derived artifact must retain enough metadata to identify source versions, code revision, tool/runtime versions, processing parameters, QC results and file/content hashes.
+
+**Reason:** this matches established scientific-data and CI/CD practice more closely than a proliferation of ad-hoc workflows. USGS guidance recommends scripted, modular, standardized and reproducible processing with provenance recorded throughout the data lifecycle; FAIR requires detailed provenance and domain-relevant standards; GitHub Actions supports reusable workflows and protected deployment environments; and mainstream continuous-delivery guidance recommends build-once/promote-many immutable artifacts rather than rebuilding in each environment. The separation also prevents experimental cartography or unfinished research from affecting the public atlas.
