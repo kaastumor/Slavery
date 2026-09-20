@@ -67,7 +67,7 @@ async function main() {
       await page.waitForTimeout(700);
 
       const panelText = (await page.locator("#panel").innerText()).trim();
-      const geometryText = (await page.locator(".geometry-details").innerText()).trim();
+      const geometryText = ((await page.locator(".geometry-details").textContent()) || "").trim();
       const statusText = (await page.locator("#status").innerText()).trim();
       const yearLabel = (await page.locator("#year-label").innerText()).trim();
 
