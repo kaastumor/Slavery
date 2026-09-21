@@ -5,14 +5,20 @@ on:
     paths:
       - "data/research_case_template.json"
       - "data/research/cases/**"
+      - "data/research/external_cases/**"
       - "tools/add_research_case.py"
+      - "tools/validate_external_case.py"
+      - "tests/test_validate_external_case.py"
       - ".github/workflows/research-case-ci.yml"
   push:
     branches: [main]
     paths:
       - "data/research_case_template.json"
       - "data/research/cases/**"
+      - "data/research/external_cases/**"
       - "tools/add_research_case.py"
+      - "tools/validate_external_case.py"
+      - "tests/test_validate_external_case.py"
       - ".github/workflows/research-case-ci.yml"
   workflow_dispatch:
 
@@ -28,30 +34,51 @@ jobs:
       - name: Validate canonical research case template
         run: python tools/add_research_case.py data/research_case_template.json --require-case-key
 
-      - name: Validate staged research cases
+      - name: Validate staged territorial research cases
         shell: bash
         run: |
           set -euo pipefail
           mapfile -t cases < <(find data/research/cases -maxdepth 1 -type f -name '*.json' | sort)
 
-          echo "### Research case validation" >> "$GITHUB_STEP_SUMMARY"
+          echo "### Territorial research case validation" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
 
           if [ "${#cases[@]}" -eq 0 ]; then
-            echo "No staged JSON research cases in this revision." | tee -a "$GITHUB_STEP_SUMMARY"
-            exit 0
+            echo "No staged territorial JSON research cases in this revision." | tee -a "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Validating ${#cases[@]} staged territorial case(s)." | tee -a "$GITHUB_STEP_SUMMARY"
+            for case_file in "${cases[@]}"; do
+              echo "- `$case_file`" >> "$GITHUB_STEP_SUMMARY"
+              python tools/add_research_case.py "$case_file" --require-case-key
+            done
           fi
 
-          echo "Validating ${#cases[@]} staged case(s)." | tee -a "$GITHUB_STEP_SUMMARY"
-          for case_file in "${cases[@]}"; do
-            echo "- `$case_file`" >> "$GITHUB_STEP_SUMMARY"
-            python tools/add_research_case.py "$case_file" --require-case-key
-          done
+      - name: Validate staged external participation cases
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t cases < <(find data/research/external_cases -maxdepth 1 -type f -name '*.json' | sort)
+
+          echo "### External participation validation" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "${#cases[@]}" -eq 0 ]; then
+            echo "No staged external participation cases in this revision." | tee -a "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Validating ${#cases[@]} staged external case(s)." | tee -a "$GITHUB_STEP_SUMMARY"
+            for case_file in "${cases[@]}"; do
+              echo "- `$case_file`" >> "$GITHUB_STEP_SUMMARY"
+              python tools/validate_external_case.py "$case_file"
+            done
+          fi
+
+      - name: Run external participation guardrail tests
+        run: python -m unittest tests.test_validate_external_case -v
 
       - name: Assert CI is validation-only
         shell: bash
         run: |
-          if grep -R --include='*.json' -n '"publication_status"[[:space:]]*:[[:space:]]*"published"' data/research/cases; then
+          if grep -R --include='*.json' -n '"publication_status"[[:space:]]*:[[:space:]]*"published"' data/research/cases data/research/external_cases; then
             echo "Research staging must not contain publication_status=published." >&2
             exit 1
           fi
