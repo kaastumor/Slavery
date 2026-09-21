@@ -194,8 +194,8 @@ Issue: **#26 — reconcile live Supabase migration history**
 - [x] Evidence/source inspector. The existing claim panel is the inspector: for each active published claim it exposes the claim summary and date, evidence direction (`supports`/`challenges`/`qualifies`/`context`), source title/link, author or institution, and locator. Verified against the current `atlas-data` response model; evidence remains claim-specific rather than aggregated into a misleading source-count score.
 - [x] Geometry accuracy / proxy / unresolved indicator. The existing place panel exposes the active geometry's explicit `accuracy_status` (`exact`, `specialist`, `approximate_historical`, `modern_proxy`, or `unresolved`) as a visible Geometry tag; unresolved records remain visible even without drawable geometry, and the Historical geometry disclosure exposes resolution method, source, and any bounded render transform while stating that source historical geometry is preserved unchanged. The year overview separately labels unmapped active cases. No accuracy is inferred from render appearance.
 - [x] Mobile and accessibility pass. PR #96 adds keyboard-operable map-feature selection, focus-visible navigation, screen-reader live status for year/data changes, larger touch targets, responsive narrow-screen controls, and reduced-motion handling. Main foundation/build/deploy and post-merge availability checks passed at `4c9d3ec`.
-- [ ] Performance strategy as data volume grows.
-- [ ] Move large stable layers toward vector tiles/PMTiles where justified; do not prematurely rewrite small layers.
+- [x] Performance strategy as data volume grows. `docs/21_PERFORMANCE_STRATEGY.md` defines release-bound measurement, a staged API/GeoJSON → split-payload → immutable vector-tile/PMTiles escalation path, conservative investigation triggers, tile provenance/QC requirements, and an explicit ban on live-production load testing or premature rewrites.
+- [ ] Move large stable layers toward vector tiles/PMTiles where justified; current preview remains below the policy's adoption gate, so this stays conditional rather than triggering a rewrite.
 
 ---
 
