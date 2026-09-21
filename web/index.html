@@ -4,118 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#1d211f" />
-    <meta
-      name="description"
-      content="Historical Slavery Atlas: a time-aware evidence synthesis of slavery, coerced labour and servile dependency."
-    />
+    <meta name="description" content="Historical Slavery Atlas: a time-aware evidence synthesis of slavery, coerced labour and servile dependency." />
+    <link rel="stylesheet" href="/src/evidence-dimensions.css" />
     <title>Historical Slavery Atlas</title>
   </head>
   <body>
     <div id="app">
       <header class="appbar">
-        <div class="brand">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <div>
-            <div class="eyebrow">Historical evidence atlas</div>
-            <h1>Historical Slavery Atlas</h1>
-          </div>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-topline">
-            <span class="timeline-label">Year</span>
-            <output id="year-label" for="year">Loading…</output>
-          </div>
-          <input id="year" type="range" step="1" aria-label="Historical year" />
-          <div id="timeline-range" class="timeline-range"></div>
-        </div>
-
-        <div class="app-status">
-          <div id="release-badge" class="release-badge">Loading release…</div>
-          <div id="status" class="status">Loading evidence…</div>
-        </div>
+        <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><div class="eyebrow">Historical evidence atlas</div><h1>Historical Slavery Atlas</h1></div></div>
+        <div class="timeline"><div class="timeline-topline"><span class="timeline-label">Year</span><output id="year-label" for="year">Loading…</output></div><input id="year" type="range" step="1" aria-label="Historical year" /><div id="timeline-range" class="timeline-range"></div></div>
+        <div class="app-status"><div id="release-badge" class="release-badge">Loading release…</div><div id="status" class="status">Loading evidence…</div></div>
       </header>
-
       <main class="workspace">
         <section class="map-shell" aria-label="Historical map">
           <div id="map"></div>
-
-          <div id="map-warning" class="map-warning" hidden>
-            MapLibre reported a rendering error. Check the browser console for details.
-          </div>
-
-          <div class="map-toolbar" aria-label="Map view controls">
-            <button id="fit-active" type="button" title="Fit all active evidence">Active evidence</button>
-            <button id="fit-world" type="button" title="Reset to world view">World</button>
-          </div>
-
+          <div id="map-warning" class="map-warning" hidden>MapLibre reported a rendering error. Check the browser console for details.</div>
+          <div class="map-toolbar" aria-label="Map view controls"><button id="fit-active" type="button" title="Fit all active evidence">Active evidence</button><button id="fit-world" type="button" title="Reset to world view">World</button></div>
           <details class="legend">
-            <summary>Legend</summary>
+            <summary>Legend &amp; evidence layers</summary>
             <div class="legend-body">
-              <div class="legend-row legend-levels">
-                <span class="legend-chip p1">P1</span>
-                <span class="legend-chip p2">P2</span>
-                <span class="legend-chip p3">P3</span>
-                <span class="legend-chip p4">P4</span>
-              </div>
-              <div class="legend-row"><span class="legend-dot disputed"></span><span>Genuinely disputed</span></div>
-              <div class="legend-note">P-level reflects the interpreted evidence package, never source count.</div>
+              <div class="legend-section-title">Territorial practice · map fill</div>
+              <div class="legend-row legend-levels"><span class="legend-chip p1">P1</span><span class="legend-chip p2">P2</span><span class="legend-chip p3">P3</span><span class="legend-chip p4">P4</span></div>
+              <div class="legend-row"><span class="legend-dot disputed"></span><span>Genuinely disputed classification</span></div>
+              <div class="legend-section-title">Independent evidence dimensions</div>
+              <div class="legend-dimensions"><span class="dimension-key territorial">Territorial practice</span><span class="dimension-key legal">Legal / state regime</span><span class="dimension-key external">External / network participation</span><span class="dimension-key coverage">Research coverage</span><span class="dimension-key geometry">Historical geometry</span></div>
+              <div class="legend-note">Only territorial-practice claims drive P-level map shading. Legal status, external participation, research coverage and geometry confidence are separate dimensions and must not be inferred from that shading. Missing evidence remains unknown.</div>
             </div>
           </details>
         </section>
-
-        <aside id="panel" class="panel" aria-live="polite">
-          <div class="panel-loading">Loading published evidence…</div>
-        </aside>
+        <aside id="panel" class="panel" aria-live="polite"><div class="panel-loading">Loading published evidence…</div></aside>
       </main>
     </div>
-
     <script>
-      // The selected historical year is shareable/navigation state, not data state.
-      // Keep it in the URL without changing release semantics or triggering reloads.
       (() => {
-        const slider = document.querySelector("#year");
-        const yearLabel = document.querySelector("#year-label");
+        const slider = document.querySelector("#year"); const yearLabel = document.querySelector("#year-label");
         if (!(slider instanceof HTMLInputElement) || !(yearLabel instanceof HTMLOutputElement)) return;
-
         let initialized = false;
-
-        const requestedYear = () => {
-          const raw = new URL(window.location.href).searchParams.get("year");
-          if (raw === null || !/^-?\d+$/.test(raw)) return null;
-          return Number(raw);
-        };
-
-        const applyUrlYear = () => {
-          const year = requestedYear();
-          if (year === null) return;
-          const min = Number(slider.min);
-          const max = Number(slider.max);
-          if (!Number.isFinite(min) || !Number.isFinite(max) || min >= max) return;
-          const bounded = Math.min(max, Math.max(min, year));
-          if (Number(slider.value) !== bounded) {
-            slider.value = String(bounded);
-            slider.dispatchEvent(new Event("input", { bubbles: true }));
-          }
-        };
-
-        const initializeFromUrl = () => {
-          if (initialized || yearLabel.textContent === "Loading…") return;
-          initialized = true;
-          applyUrlYear();
-        };
-
+        const requestedYear = () => { const raw = new URL(window.location.href).searchParams.get("year"); if (raw === null || !/^-?\d+$/.test(raw)) return null; return Number(raw); };
+        const applyUrlYear = () => { const year = requestedYear(); if (year === null) return; const min = Number(slider.min); const max = Number(slider.max); if (!Number.isFinite(min) || !Number.isFinite(max) || min >= max) return; const bounded = Math.min(max, Math.max(min, year)); if (Number(slider.value) !== bounded) { slider.value = String(bounded); slider.dispatchEvent(new Event("input", { bubbles: true })); } };
+        const initializeFromUrl = () => { if (initialized || yearLabel.textContent === "Loading…") return; initialized = true; applyUrlYear(); };
         new MutationObserver(initializeFromUrl).observe(yearLabel, { childList: true, characterData: true, subtree: true });
-
-        slider.addEventListener("input", () => {
-          if (!initialized) return;
-          const url = new URL(window.location.href);
-          url.searchParams.set("year", slider.value);
-          window.history.replaceState({ ...window.history.state, atlasYear: Number(slider.value) }, "", url);
-        });
-
-        window.addEventListener("popstate", applyUrlYear);
-        initializeFromUrl();
+        slider.addEventListener("input", () => { if (!initialized) return; const url = new URL(window.location.href); url.searchParams.set("year", slider.value); window.history.replaceState({ ...window.history.state, atlasYear: Number(slider.value) }, "", url); });
+        window.addEventListener("popstate", applyUrlYear); initializeFromUrl();
       })();
     </script>
     <script type="module" src="/src/main.ts"></script>
