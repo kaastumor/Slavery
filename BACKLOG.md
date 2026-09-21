@@ -201,9 +201,13 @@ Issue: **#26 — reconcile live Supabase migration history**
 
 # P3 — Tooling / integration evaluation
 
+## PARKED — Issue #2 trigger-driven evaluation register
+
 Issue: **#2 — evaluate end-to-end atlas tooling**
 
-Evaluate only when there is a concrete workflow need. Do not add infrastructure for novelty.
+PR #99 replaced technology-shopping with a trigger/acceptance matrix. No candidate currently has a demonstrated workflow trigger that justifies a new infrastructure commitment: existing QGIS/GEOS/GDAL, PostgreSQL/PostGIS + `atlas-data`, current release artifacts, and the present frontend/toolchain cover the demonstrated needs.
+
+Re-open this lane only when a concrete trigger fires. At that point create a bounded child issue with a real sample, baseline, measurable acceptance criteria, licensing/cost constraints, and an exit path. Do not adopt infrastructure merely to clear the queue.
 
 ---
 
