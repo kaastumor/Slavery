@@ -60,14 +60,10 @@ Established architecture:
 
 - Achaemenid ~500 BCE live pilot is **visually accepted**.
 - PR #45 consolidated geometry generation/QC into `geometry-build.yml`.
-- D-048 hard-gates render candidates at:
-  - valid/non-empty geometry
-  - <= 2% absolute area change
-  - <= 5% source-normalized symmetric difference
-  - Hausdorff retained as diagnostic, not a universal hard gate
+- D-048 hard-gates render candidates at valid/non-empty geometry, <= 2% absolute area change, <= 5% source-normalized symmetric difference; Hausdorff remains diagnostic.
 - PR #48 added scalable visual-review sheets tied to the exact immutable CI artifact.
 - Final 10 km CI artifact passes automated QC for Hittite central Anatolia, New Kingdom Egypt, Western Han, Roman Empire, Mauryan Empire and the Achaemenid benchmark.
-- Baekje remains correctly **quarantined** at approximately -8.43% area change / 10.39% symmetric difference.
+- Baekje remains correctly quarantined at approximately -8.43% area change / 10.39% symmetric difference.
 
 All #27 acceptance steps are complete: exact-artifact browser review, explicit cartographic/semantic disposition, five controlled D-050 promotions, live public verification, and Baekje fallback/quarantine without weakened QC or invented geometry.
 
@@ -85,7 +81,7 @@ Issue: **#62 — verify Data API exposure and secure atlas/cartography tables**
 - [x] Gate CI on the private-schema boundary; main foundation CI passed at commit `cc5c670` and production availability monitor passed.
 - [x] Re-verify production after migration: both client roles still have no internal-schema usage and 0 SELECT/INSERT/UPDATE/DELETE privileges.
 - [x] Resolve the remaining advisor warning with migration 0024 by pinning `atlas.make_year_range` to `search_path = pg_catalog`.
-- [x] Rerun authoritative Supabase security advisors after 0024: **zero security lints**.
+- [x] Rerun authoritative Supabase security advisors after 0024: zero security lints.
 
 No indiscriminate RLS policies were added because these schemas are intentionally non-client surfaces. Any future direct PostgREST contract must use an explicitly exposed API schema with reviewed grants and RLS/policies.
 
@@ -137,42 +133,46 @@ A local/CI disposable environment remains acceptable for testing in the meantime
 Issue: **#40 — specialist regional geometry sources over Cliopatria where superior**
 
 - [x] Investigate Baekje/Korean historical geometry first. NIKH HGIS provides authoritative Korean historical GIS but its documented polygon coverage is modern (1910+); no period-appropriate open vector replacement for 347–391 CE was identified. Baekje remains quarantine/fallback pending a stronger specialist source.
-- [x] Evaluate CHGIS exact version/license/export suitability for historical China. Version 6 (Dec 2016) is technically strong for internal specialist comparison (221 BCE–1911; year-granular time series; prefecture/higher historical polygons; QGIS-compatible downloads), but its dataset-specific license prohibits redistribution. Do not publish CHGIS geometry without explicit permission; use it as an internal comparator/source-discovery aid meanwhile. See docs/18_GEOMETRY_SOURCE_SURVEY.md.
-- [x] Evaluate CShapes 2.0 for its modern historical coverage. CShapes is a strong specialist comparator for independent states and dependencies globally from 1886–2019 (CShapes-Europe extends Europe to 1816), with standard GIS exports and scholarly border-change provenance. The dataset is CC BY-NC-SA 4.0, so do not directly ingest its geometry into the public canonical layer without an explicit distribution-license decision or permission. Use it internally for bounded modern comparisons meanwhile. See docs/18_GEOMETRY_SOURCE_SURVEY.md.
-- [x] Evaluate Ancient World Mapping Center / other specialist ancient datasets for bounded Greco-Roman cases. Current AWMC GeoJSON is ODbL-1.0 and provides discrete specialist political snapshots (including Roman 60 BCE, 117 CE, 200 CE and 200 CE provinces), making it a preferred bounded candidate when date/entity semantics match—but not a continuous timeline source and never a basis for interpolation. Harvard MAPS/DARMC is a useful dated CC BY-NC-SA comparator; the inspected DARE province file lacks explicit historical validity dates and remains supplementary pending provenance. See docs/18_GEOMETRY_SOURCE_SURVEY.md.
-- [x] Evaluate OpenHistoricalMap as supplementary material, not automatic authority. OHM has a useful temporal OSM-style boundary model and is CC0 by default, but administrative-boundary coverage and scholarly provenance are uneven and feature-level; some elements also carry source-specific licenses. Use OHM for source discovery/local comparison and accept only pinned relation versions after explicit source/date/license/geometry review. Missing OHM data never implies historical absence. See docs/18_GEOMETRY_SOURCE_SURVEY.md.
-- [x] Evaluate CONFOEDERATIO / Naissance as a comparator with provenance/license scrutiny. The public Atlas is an ambitious global/sub-yearly beta and accessible CRD datasets are stated MIT-licensed, but public 0.5b/0.51b scope/version descriptions differ, public files may be simplified/compressed, de-jure CShapes content retains upstream licensing, and no adequate public per-polity/keyframe citation mapping was identified. Keep it as an experimental second-global-baseline comparator/source-discovery aid; no automatic precedence or promotion. See docs/18_GEOMETRY_SOURCE_SURVEY.md.
-- [x] Define explicit region/time/source precedence rules. D-055 makes accepted specialist geometry first for an exact bounded case, Cliopatria the global fallback baseline, then approximate historical geometry, modern proxy and unresolved. Current source-family guidance lives in docs/18_GEOMETRY_SOURCE_SURVEY.md rather than hard-coded routing.
-- [x] Never silently mix geometry source families within one geometry record. D-055 requires one historical source lineage per GEOMETRY record; any deliberate composite must become a separately registered derived source/version with contributing lineage and method preserved. Natural Earth remains render-only physical topology.
-- [x] Replace Cliopatria only where a bounded comparison shows a defensible improvement. D-055 requires semantic identity, temporal fit, version/native ID provenance, license compatibility, topology validity, source-vs-source comparison and explicit historical/cartographic acceptance; detail or newer publication alone never wins.
+- [x] Evaluate CHGIS exact version/license/export suitability for historical China. Version 6 is technically strong for internal specialist comparison but its dataset-specific license prohibits redistribution. Do not publish CHGIS geometry without explicit permission.
+- [x] Evaluate CShapes 2.0 for modern historical coverage; use internally pending an explicit distribution-license decision.
+- [x] Evaluate Ancient World Mapping Center / other specialist ancient datasets for bounded Greco-Roman cases; AWMC may be preferred when date/entity semantics match.
+- [x] Evaluate OpenHistoricalMap as supplementary material, not automatic authority.
+- [x] Evaluate CONFOEDERATIO / Naissance as an experimental comparator with provenance/license scrutiny.
+- [x] Define explicit region/time/source precedence rules in D-055.
+- [x] Never silently mix geometry source families within one geometry record.
+- [x] Replace Cliopatria only where a bounded comparison shows a defensible improvement.
 
 ---
 
 # P1 — Resume globally balanced research
 
-## NOW
+## DONE — Global Balance Batch 04 and external-participation lane
 
 - [x] Resume globally balanced territorial-practice research. Global Balance Batch 04 stages four new unpublished weak-region territorial cases across Southeast Asia, the Americas, Oceania/Pacific and East/Southern Africa, with claim-specific evidence and deliberately unresolved geometry where appropriate.
-- [x] Prioritize weak/non-Atlantic cells before dense Atlantic bulk ingestion. Batch 04 was selected from the weakest v0.6.1 research-management regions (Oceania/Pacific, Americas, West/Central Africa, East/Southern Africa, Southeast Asia); those coverage scores guided research priority only and were not used as prevalence evidence.
-- [x] Continue unresolved-geometry work alongside evidence research. Every Batch 04 territorial case carries an explicit unresolved-geometry rationale rather than receiving a modern or maximum-extent proxy; later resolution remains a separate D-055 task.
+- [x] Prioritize weak/non-Atlantic cells before dense Atlantic bulk ingestion.
+- [x] Continue unresolved-geometry work alongside evidence research.
 - [x] Expand external/network participation separately from territorial practice. PR #87 makes this a separately validated research lane: staged external cases are CI-gated against the ontology, territorial-practice/P-level leakage is rejected, and explicit guardrails reject nationality/absence inference. The first Zaghāwa captive-export case remains unpublished and separate from territorial prevalence.
-- [x] Preserve unknown / researched-inconclusive states rather than manufacturing negatives. Batch 04 preserves the early central-Saharan/Zaghāwa-Kawār result as network-only research notes instead of manufacturing a territorial claim, and Songo Mnara keeps a positive designation with intensity unassigned rather than forcing a P-level.
-- [x] Keep P0-P4 interpretive; never derive it mechanically from document/voyage counts. Batch 04 explicitly assigns P2/P3 only from interpreted specialist evidence packages and leaves Songo Mnara NULL where presence is defensible but intensity is not.
-- [x] Keep owner/actor nationality unknown unless independently evidenced. The external-participation validator now requires `nationality_inferred=false` and adversarial CI rejects inferred nationality in staged external cases; the standing ontology rule remains claim-specific evidence only.
+- [x] Preserve unknown / researched-inconclusive states rather than manufacturing negatives.
+- [x] Keep P0-P4 interpretive; never derive it mechanically from document/voyage counts.
+- [x] Keep owner/actor nationality unknown unless independently evidenced. The external-participation validator requires `nationality_inferred=false`; the standing ontology rule remains claim-specific evidence only.
 
 ---
 
 # P1/P2 — Exactly reconstructible published releases
 
+## DONE — Issue #4 exact release reconstruction implemented
+
 Issue: **#4 — make published database releases exactly reconstructible**
 
-- [ ] Decide typed release membership vs hybrid membership + immutable bundle.
-- [ ] Define row/object digest rules.
-- [ ] Define historical-release API semantics versus current-reviewed state.
-- [ ] Prevent reviewed-but-not-release-member leakage into historical release reconstruction.
-- [ ] Add SQL acceptance tests first.
-- [ ] Record the durable decision in `docs/08_DECISIONS_LOG.md` before schema implementation.
-- [ ] Implement as fresh migrations after the current migration head.
+- [x] Decide typed release membership vs hybrid membership + immutable bundle: D-054 adopts the hybrid model.
+- [x] Define row/object digest rules: canonical UTF-8 JSON with deterministic ordering; geometry uses SRID + hexadecimal EWKB in the preservation bundle.
+- [x] Define historical-release API semantics versus current-reviewed state: exact historical state comes from the immutable bundle or byte-equivalent verified data, not mutable current publish views.
+- [x] Prevent reviewed-but-not-release-member leakage into historical release reconstruction through explicit typed membership and bundle verification.
+- [x] Add SQL acceptance tests first: release-membership and bundle fixture/drift/apply tests cover the contract.
+- [x] Record the durable decision in `docs/08_DECISIONS_LOG.md` before schema implementation as D-054.
+- [x] Implement as migrations 0026 and 0027 plus `tools/release_bundle.py`; legacy v1/v2 memberships are explicitly marked `legacy_membership_backfill` rather than overstating exact historical row-state preservation.
+
+Issue #4 was closed 2026-09-21 after verifying the implementation and acceptance history. Canonical release v0.6.1 remains unchanged.
 
 ---
 
@@ -230,16 +230,18 @@ Evaluate only when there is a concrete workflow need. Do not add infrastructure 
 | Live API/database outage could hide an already-published atlas state | D-052 deployed snapshot fallback is live and adversarially verified; D-053 provides explicit reversible release-channel repointing |
 | Historical migration ledger irregularities | #26 non-destructive reconciliation |
 | Attractive geometry may be semantically overbroad | Separate scope review from visual/cartographic QC |
-| Archive density could bias research priorities | Resume globally balanced/non-Atlantic-first research after release hardening |
+| Archive density could bias research priorities | Continue globally balanced/non-Atlantic-first research |
 
 ---
 
 # Recently completed
 
+- **DONE / closed:** issue #4 exact release reconstruction: D-054 hybrid typed membership + immutable bundle, migrations 0026/0027, acceptance tests and drift-rejecting bundle tooling.
+- **DONE:** external/network participation is now a separately CI-gated research lane; nationality and absence inference are explicitly rejected.
 - **DONE / closed:** issue #27 map/cartographic P0 after exact-artifact promotion and multi-region live browser verification; Baekje remains fallback/quarantined.
 - **DONE / live:** five D-050-approved 10 km representative render geometries promoted from immutable artifact `7644ea348ec43093219d964069a7b88ec088a331`.
-- **DONE / closed:** issue #62 Data API security P0: D-051 private boundary, migration 0023 defense-in-depth revokes/default privileges, migration 0024 immutable helper search path, production privilege recheck, public health green, and zero remaining Supabase security-advisor lints.
-- **DONE / live:** D-052 deployment-bound static release fallback for `mvp-preview-ancient-v2`; exact deployed snapshot retained and checksummed, with API-first browser fallback semantics.
-- **DONE / live:** D-053 explicit `public_mvp_preview` release-channel pointer (migration 0025 + `atlas-data` v8), with compare-and-set rollback drill v2 → v1 → v2 externally verified healthy.
-- **DONE / live:** D-054 reconstructible typed release membership (migration 0026) plus preservation-grade full-state bundle build/verify/apply tooling and migration 0027 artifact immutability. CI proves exact bundle promotion and drift rejection; production 0027 guard is verified.
-- **DONE:** issue #40 specialist geometry-source hierarchy: Baekje search plus CHGIS, CShapes, AWMC/Greco-Roman, OpenHistoricalMap and Confoederatio evaluations, followed by D-055 case-specific precedence and source-isolation rules.
+- **DONE / closed:** issue #62 Data API security P0: D-051 private boundary, migrations 0023/0024, production privilege recheck, public health green, and zero remaining Supabase security-advisor lints.
+- **DONE / live:** D-052 deployment-bound static release fallback for `mvp-preview-ancient-v2`.
+- **DONE / live:** D-053 explicit `public_mvp_preview` release-channel pointer, with compare-and-set rollback drill v2 → v1 → v2 externally verified healthy.
+- **DONE / live:** D-054 reconstructible typed release membership plus preservation-grade full-state bundle tooling and artifact immutability.
+- **DONE:** issue #40 specialist geometry-source hierarchy and D-055 case-specific precedence/source-isolation rules.
