@@ -191,7 +191,7 @@ Issue: **#26 — reconcile live Supabase migration history**
 
 - [x] Timeline interaction and selected-year state. PR #92 persists selected year as shareable `?year=` URL state, restores/clamps it against the published release range, and supports browser history navigation without changing release/data semantics.
 - [x] Clear visual distinction between territorial practice, legal status, external/network participation, research coverage/uncertainty and historical geometry. PR #93 makes P-level shading explicitly territorial-practice-only and presents the other evidence dimensions as independent, preserving unknown as the default rather than implying unavailable data.
-- [ ] Evidence/source inspector.
+- [x] Evidence/source inspector. The existing claim panel is the inspector: for each active published claim it exposes the claim summary and date, evidence direction (`supports`/`challenges`/`qualifies`/`context`), source title/link, author or institution, and locator. Verified against the current `atlas-data` response model; evidence remains claim-specific rather than aggregated into a misleading source-count score.
 - [ ] Geometry accuracy / proxy / unresolved indicator.
 - [ ] Mobile and accessibility pass.
 - [ ] Performance strategy as data volume grows.
