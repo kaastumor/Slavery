@@ -1,6 +1,6 @@
 # Historical Slavery Atlas — Backlog
 
-**Updated:** 2026-09-20  
+**Updated:** 2026-09-21  
 **Role:** canonical execution queue / risk register  
 **Canonical historical data release:** `v0.6.1` (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical)
@@ -155,10 +155,10 @@ Issue: **#40 — specialist regional geometry sources over Cliopatria where supe
 - [x] Resume globally balanced territorial-practice research. Global Balance Batch 04 stages four new unpublished weak-region territorial cases across Southeast Asia, the Americas, Oceania/Pacific and East/Southern Africa, with claim-specific evidence and deliberately unresolved geometry where appropriate.
 - [x] Prioritize weak/non-Atlantic cells before dense Atlantic bulk ingestion. Batch 04 was selected from the weakest v0.6.1 research-management regions (Oceania/Pacific, Americas, West/Central Africa, East/Southern Africa, Southeast Asia); those coverage scores guided research priority only and were not used as prevalence evidence.
 - [x] Continue unresolved-geometry work alongside evidence research. Every Batch 04 territorial case carries an explicit unresolved-geometry rationale rather than receiving a modern or maximum-extent proxy; later resolution remains a separate D-055 task.
-- [ ] Expand external/network participation separately from territorial practice.
+- [x] Expand external/network participation separately from territorial practice. PR #87 makes this a separately validated research lane: staged external cases are CI-gated against the ontology, territorial-practice/P-level leakage is rejected, and explicit guardrails reject nationality/absence inference. The first Zaghāwa captive-export case remains unpublished and separate from territorial prevalence.
 - [x] Preserve unknown / researched-inconclusive states rather than manufacturing negatives. Batch 04 preserves the early central-Saharan/Zaghāwa-Kawār result as network-only research notes instead of manufacturing a territorial claim, and Songo Mnara keeps a positive designation with intensity unassigned rather than forcing a P-level.
 - [x] Keep P0-P4 interpretive; never derive it mechanically from document/voyage counts. Batch 04 explicitly assigns P2/P3 only from interpreted specialist evidence packages and leaves Songo Mnara NULL where presence is defensible but intensity is not.
-- [ ] Keep owner/actor nationality unknown unless independently evidenced.
+- [x] Keep owner/actor nationality unknown unless independently evidenced. The external-participation validator now requires `nationality_inferred=false` and adversarial CI rejects inferred nationality in staged external cases; the standing ontology rule remains claim-specific evidence only.
 
 ---
 
