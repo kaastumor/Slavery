@@ -1,0 +1,68 @@
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: 8px;
+  left: 8px;
+  padding: 10px 12px;
+  color: #fff;
+  background: #1d211f;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  transform: translateY(-150%);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@media (pointer: coarse) {
+  .map-toolbar button,
+  .place-card,
+  .back-button,
+  .legend summary,
+  .geometry-details summary {
+    min-height: 44px;
+  }
+
+  #year {
+    min-height: 44px;
+  }
+
+  .map-toolbar button {
+    padding-inline: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-toolbar {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: calc(100% - 20px);
+  }
+
+  .legend {
+    max-width: calc(100% - 20px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
