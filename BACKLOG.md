@@ -190,7 +190,7 @@ Issue: **#26 — reconcile live Supabase migration history**
 # P2 — Product/UI after cartographic correctness
 
 - [x] Timeline interaction and selected-year state. PR #92 persists selected year as shareable `?year=` URL state, restores/clamps it against the published release range, and supports browser history navigation without changing release/data semantics.
-- [ ] Clear visual distinction between territorial practice, legal status, external/network participation, research coverage/uncertainty and historical geometry.
+- [x] Clear visual distinction between territorial practice, legal status, external/network participation, research coverage/uncertainty and historical geometry. PR #93 makes P-level shading explicitly territorial-practice-only and presents the other evidence dimensions as independent, preserving unknown as the default rather than implying unavailable data.
 - [ ] Evidence/source inspector.
 - [ ] Geometry accuracy / proxy / unresolved indicator.
 - [ ] Mobile and accessibility pass.
