@@ -180,10 +180,10 @@ Issue #4 was closed 2026-09-21 after verifying the implementation and acceptance
 
 Issue: **#26 — reconcile live Supabase migration history**
 
-- [ ] Inventory live migration ledger against repository migrations through the current head.
-- [ ] Document duplicate/retried entries without rewriting history casually.
-- [ ] Reconcile non-destructively.
-- [ ] Add a deployment check that flags future ledger/repository divergence early.
+- [x] Inventory live migration ledger against repository migrations through the current head. The 2026-09-21 read-only inventory through 0027 is recorded in `docs/20_MIGRATION_LEDGER_RECONCILIATION.md`.
+- [x] Document duplicate/retried entries without rewriting history casually. The three live 0016 retry entries are preserved and documented.
+- [ ] Reconcile non-destructively. **BLOCKED for mutation:** repository 0012–0014 effects are already live, but the platform ledger lacks those names; replaying them would be unsafe and no reviewed metadata-only repair gate currently exists. Keep the discrepancy explicit rather than rewriting or replaying production history.
+- [x] Add a deployment check that flags future ledger/repository divergence early. `tools/check_migration_ledger.py` reports missing, duplicate and unknown remote names and fails non-zero; unit coverage is merged.
 
 ---
 
@@ -228,7 +228,7 @@ Evaluate only when there is a concrete workflow need. Do not add infrastructure 
 | GitHub production promotion jobs still lack a durable least-privilege database-write credential | Existing scoped Management API token cannot use `/database/query`; exact geometry/release artifact gates exist, but unattended production apply remains blocked until an appropriately scoped credential/environment is configured |
 | No true staging environment yet | Local/CI testing; Supabase branch requires explicit cost approval |
 | Live API/database outage could hide an already-published atlas state | D-052 deployed snapshot fallback is live and adversarially verified; D-053 provides explicit reversible release-channel repointing |
-| Historical migration ledger irregularities | #26 non-destructive reconciliation |
+| Historical migration ledger irregularities | #26 inventory/checker merged; metadata-only repair remains blocked rather than replaying live schema migrations |
 | Attractive geometry may be semantically overbroad | Separate scope review from visual/cartographic QC |
 | Archive density could bias research priorities | Continue globally balanced/non-Atlantic-first research |
 
@@ -236,6 +236,7 @@ Evaluate only when there is a concrete workflow need. Do not add infrastructure 
 
 # Recently completed
 
+- **DONE / partial #26:** live migration-ledger inventory and retry history documented; read-only divergence checker + tests merged. Metadata-only repair of missing 0012–0014 ledger entries remains blocked; no production replay was attempted.
 - **DONE / closed:** issue #4 exact release reconstruction: D-054 hybrid typed membership + immutable bundle, migrations 0026/0027, acceptance tests and drift-rejecting bundle tooling.
 - **DONE:** external/network participation is now a separately CI-gated research lane; nationality and absence inference are explicitly rejected.
 - **DONE / closed:** issue #27 map/cartographic P0 after exact-artifact promotion and multi-region live browser verification; Baekje remains fallback/quarantined.
