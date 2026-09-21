@@ -70,6 +70,54 @@
       </main>
     </div>
 
+    <script>
+      // The selected historical year is shareable/navigation state, not data state.
+      // Keep it in the URL without changing release semantics or triggering reloads.
+      (() => {
+        const slider = document.querySelector("#year");
+        const yearLabel = document.querySelector("#year-label");
+        if (!(slider instanceof HTMLInputElement) || !(yearLabel instanceof HTMLOutputElement)) return;
+
+        let initialized = false;
+
+        const requestedYear = () => {
+          const raw = new URL(window.location.href).searchParams.get("year");
+          if (raw === null || !/^-?\d+$/.test(raw)) return null;
+          return Number(raw);
+        };
+
+        const applyUrlYear = () => {
+          const year = requestedYear();
+          if (year === null) return;
+          const min = Number(slider.min);
+          const max = Number(slider.max);
+          if (!Number.isFinite(min) || !Number.isFinite(max) || min >= max) return;
+          const bounded = Math.min(max, Math.max(min, year));
+          if (Number(slider.value) !== bounded) {
+            slider.value = String(bounded);
+            slider.dispatchEvent(new Event("input", { bubbles: true }));
+          }
+        };
+
+        const initializeFromUrl = () => {
+          if (initialized || yearLabel.textContent === "Loading…") return;
+          initialized = true;
+          applyUrlYear();
+        };
+
+        new MutationObserver(initializeFromUrl).observe(yearLabel, { childList: true, characterData: true, subtree: true });
+
+        slider.addEventListener("input", () => {
+          if (!initialized) return;
+          const url = new URL(window.location.href);
+          url.searchParams.set("year", slider.value);
+          window.history.replaceState({ ...window.history.state, atlasYear: Number(slider.value) }, "", url);
+        });
+
+        window.addEventListener("popstate", applyUrlYear);
+        initializeFromUrl();
+      })();
+    </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
