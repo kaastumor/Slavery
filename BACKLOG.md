@@ -189,7 +189,7 @@ Issue: **#26 — reconcile live Supabase migration history**
 
 # P2 — Product/UI after cartographic correctness
 
-- [ ] Timeline interaction and selected-year state.
+- [x] Timeline interaction and selected-year state. PR #92 persists selected year as shareable `?year=` URL state, restores/clamps it against the published release range, and supports browser history navigation without changing release/data semantics.
 - [ ] Clear visual distinction between territorial practice, legal status, external/network participation, research coverage/uncertainty and historical geometry.
 - [ ] Evidence/source inspector.
 - [ ] Geometry accuracy / proxy / unresolved indicator.
@@ -216,33 +216,3 @@ Evaluate only when there is a concrete workflow need. Do not add infrastructure 
 - New custom coastline buffer heuristics unless standard GIS methods are proven insufficient.
 - Replacing Cliopatria globally merely because another dataset is newer.
 - Permanent cloud/framework commitments before the relevant requirements are demonstrated.
-
----
-
-# Current blockers / risks
-
-| Risk | Current handling |
-| --- | --- |
-| Baekje loses ~8–9% area in generic QGIS pipeline | Quarantine/fallback; investigate source/specialist geometry |
-| Production GIS experimentation can cause outages | Offline/CI/staging only; public path serves precomputed geometry |
-| GitHub production promotion jobs still lack a durable least-privilege database-write credential | Existing scoped Management API token cannot use `/database/query`; exact geometry/release artifact gates exist, but unattended production apply remains blocked until an appropriately scoped credential/environment is configured |
-| No true staging environment yet | Local/CI testing; Supabase branch requires explicit cost approval |
-| Live API/database outage could hide an already-published atlas state | D-052 deployed snapshot fallback is live and adversarially verified; D-053 provides explicit reversible release-channel repointing |
-| Historical migration ledger irregularities | #26 inventory/checker merged; metadata-only repair remains blocked rather than replaying live schema migrations |
-| Attractive geometry may be semantically overbroad | Separate scope review from visual/cartographic QC |
-| Archive density could bias research priorities | Continue globally balanced/non-Atlantic-first research |
-
----
-
-# Recently completed
-
-- **DONE / partial #26:** live migration-ledger inventory and retry history documented; read-only divergence checker + tests merged. Metadata-only repair of missing 0012–0014 ledger entries remains blocked; no production replay was attempted.
-- **DONE / closed:** issue #4 exact release reconstruction: D-054 hybrid typed membership + immutable bundle, migrations 0026/0027, acceptance tests and drift-rejecting bundle tooling.
-- **DONE:** external/network participation is now a separately CI-gated research lane; nationality and absence inference are explicitly rejected.
-- **DONE / closed:** issue #27 map/cartographic P0 after exact-artifact promotion and multi-region live browser verification; Baekje remains fallback/quarantined.
-- **DONE / live:** five D-050-approved 10 km representative render geometries promoted from immutable artifact `7644ea348ec43093219d964069a7b88ec088a331`.
-- **DONE / closed:** issue #62 Data API security P0: D-051 private boundary, migrations 0023/0024, production privilege recheck, public health green, and zero remaining Supabase security-advisor lints.
-- **DONE / live:** D-052 deployment-bound static release fallback for `mvp-preview-ancient-v2`.
-- **DONE / live:** D-053 explicit `public_mvp_preview` release-channel pointer, with compare-and-set rollback drill v2 → v1 → v2 externally verified healthy.
-- **DONE / live:** D-054 reconstructible typed release membership plus preservation-grade full-state bundle tooling and artifact immutability.
-- **DONE:** issue #40 specialist geometry-source hierarchy and D-055 case-specific precedence/source-isolation rules.
