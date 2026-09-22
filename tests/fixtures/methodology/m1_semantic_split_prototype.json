@@ -47,11 +47,11 @@
       "id": "hittite_central_anatolia",
       "source_case": "data/research/ancient_expansion_01/03_hittite_slavery.json",
       "evidence_basis": "specialist_synthesis",
-      "historical_characterization": "institutional",
+      "historical_characterization": "recurrent",
       "research_stage": "review_complete",
       "classification_outcome": "classified",
       "assertion_form": "practice_or_status",
-      "legacy_practice_level": "P3",
+      "legacy_practice_level": "P2",
       "facets": [
         {"dimension": "status", "concept": "enslaved_status"},
         {"dimension": "property_legal", "concept": "pricing_property_rules"},
