@@ -21,6 +21,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
+      - name: Repository sanitation
+        run: python tools/sanitize_repo.py
+
       - name: Build tooling and start PostGIS
         run: |
           docker compose --profile tools build tooling
