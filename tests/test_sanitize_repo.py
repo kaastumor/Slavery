@@ -1,3 +1,5 @@
+import tempfile
+import unittest
 from pathlib import Path
 
 from tools.sanitize_repo import scan
@@ -9,7 +11,7 @@ def _write(root: Path, rel: str, text: str = "ok\n") -> None:
     path.write_text(text, encoding="utf-8")
 
 
-def _baseline(tmp_path: Path) -> list[str]:
+def _baseline(root: Path) -> list[str]:
     paths = [
         "BACKLOG.md",
         "docs/23_PROJECT_CHARTER.md",
@@ -20,24 +22,33 @@ def _baseline(tmp_path: Path) -> list[str]:
         "SECURITY.md",
     ]
     for rel in paths:
-        _write(tmp_path, rel)
+        _write(root, rel)
     return paths
 
 
-def test_clean_repository_shape_passes(tmp_path: Path) -> None:
-    paths = _baseline(tmp_path)
-    assert scan(tmp_path, paths) == []
+class SanitationTests(unittest.TestCase):
+    def test_clean_repository_shape_passes(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paths = _baseline(root)
+            self.assertEqual(scan(root, paths), [])
+
+    def test_private_release_binary_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paths = _baseline(root) + ["data/releases/v0.6.1/canonical.xlsx"]
+            _write(root, paths[-1])
+            self.assertTrue(any("forbidden tracked path" in x for x in scan(root, paths)))
+
+    def test_merge_marker_and_secret_are_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paths = _baseline(root) + ["notes.md"]
+            _write(root, "notes.md", "<<<<<<< ours\nghp_ABCDEFGHIJKLMNOPQRSTUVWXYZ123456\n")
+            failures = scan(root, paths)
+            self.assertTrue(any("merge marker" in x for x in failures))
+            self.assertTrue(any("GitHub token" in x for x in failures))
 
 
-def test_private_release_binary_is_rejected(tmp_path: Path) -> None:
-    paths = _baseline(tmp_path) + ["data/releases/v0.6.1/canonical.xlsx"]
-    _write(tmp_path, paths[-1])
-    assert any("forbidden tracked path" in x for x in scan(tmp_path, paths))
-
-
-def test_merge_marker_and_secret_are_rejected(tmp_path: Path) -> None:
-    paths = _baseline(tmp_path) + ["notes.md"]
-    _write(tmp_path, "notes.md", "<<<<<<< ours\nghp_ABCDEFGHIJKLMNOPQRSTUVWXYZ123456\n")
-    failures = scan(tmp_path, paths)
-    assert any("merge marker" in x for x in failures)
-    assert any("GitHub token" in x for x in failures)
+if __name__ == "__main__":
+    unittest.main()
