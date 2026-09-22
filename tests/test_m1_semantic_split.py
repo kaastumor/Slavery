@@ -28,7 +28,6 @@ class M1SemanticSplitPrototypeTests(unittest.TestCase):
         self.assertEqual(disputed["classification_outcome"], "disputed")
         self.assertEqual(inconclusive["research_stage"], "review_complete")
         self.assertEqual(inconclusive["classification_outcome"], "inconclusive")
-        # Even a preserved legacy P0 cannot be treated as a derivation from outcome.
         self.assertEqual(inconclusive["legacy_practice_level"], "P0")
 
     def test_baekje_event_is_not_forced_to_mean_enduring_practice(self):
@@ -41,14 +40,17 @@ class M1SemanticSplitPrototypeTests(unittest.TestCase):
         self.assertEqual(case["legacy_practice_level"], "P1")
         self.assertTrue(all(f["dimension"] == "process" for f in case["facets"]))
 
-    def test_hittite_case_supports_simultaneous_facets(self):
+    def test_hittite_case_supports_simultaneous_facets_without_upgrading_level(self):
         case = self.cases["hittite_central_anatolia"]
         source = json.loads((ROOT / case["source_case"]).read_text(encoding="utf-8"))
-        self.assertEqual(source["territorial_practice"]["practice_type_code"], "slavery_enslavement")
+        legacy = source["claim"]["territorial_practice"]
+        self.assertEqual(legacy["practice_type_code"], "slavery_enslavement")
+        self.assertEqual(legacy["practice_level"], "P2")
         dimensions = {facet["dimension"] for facet in case["facets"]}
         self.assertEqual(dimensions, {"status", "function", "property_legal", "transmission"})
         self.assertEqual(case["assertion_form"], "practice_or_status")
-        self.assertEqual(case["legacy_practice_level"], "P3")
+        self.assertEqual(case["legacy_practice_level"], "P2")
+        self.assertEqual(case["historical_characterization"], "recurrent")
 
     def test_evidence_basis_and_historical_characterization_are_distinct(self):
         dimensions = self.fixture["dimensions"]
