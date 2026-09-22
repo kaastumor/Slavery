@@ -1,0 +1,63 @@
+{
+  "prototype_version": "m1-semantic-split-v1",
+  "status": "experimental_not_canonical",
+  "legacy_release": "v0.6.1",
+  "dimensions": {
+    "evidence_basis": ["isolated_attestation", "recurrent_attestation", "specialist_synthesis", "mixed"],
+    "historical_characterization": ["unassessed", "bounded_occurrence", "recurrent", "institutional", "widespread_structurally_major"],
+    "research_stage": ["not_researched", "source_identified", "under_review", "review_complete"],
+    "classification_outcome": ["unassessed", "classified", "disputed", "inconclusive"],
+    "assertion_form": ["practice_or_status", "event_or_process"],
+    "facet_dimensions": ["status", "function", "property_legal", "transmission", "process"]
+  },
+  "compatibility": {
+    "legacy_practice_level_preserved": true,
+    "derive_new_dimensions_from_legacy_level": false,
+    "derive_p0_from_inconclusive": false,
+    "sql_migration_required_now": false
+  },
+  "cases": [
+    {
+      "id": "synthetic_reviewed_disputed",
+      "research_stage": "review_complete",
+      "classification_outcome": "disputed",
+      "legacy_practice_level": null
+    },
+    {
+      "id": "synthetic_reviewed_inconclusive",
+      "research_stage": "review_complete",
+      "classification_outcome": "inconclusive",
+      "legacy_practice_level": "P0"
+    },
+    {
+      "id": "baekje_369",
+      "source_case": "data/research/ancient_expansion_02/03_baekje_369_war_captive_enslavement.json",
+      "evidence_basis": "isolated_attestation",
+      "historical_characterization": "bounded_occurrence",
+      "research_stage": "review_complete",
+      "classification_outcome": "classified",
+      "assertion_form": "event_or_process",
+      "legacy_practice_level": "P1",
+      "facets": [
+        {"dimension": "process", "concept": "captive_taking"},
+        {"dimension": "process", "concept": "enslavement_distribution"}
+      ]
+    },
+    {
+      "id": "hittite_central_anatolia",
+      "source_case": "data/research/ancient_expansion_01/03_hittite_slavery.json",
+      "evidence_basis": "specialist_synthesis",
+      "historical_characterization": "recurrent",
+      "research_stage": "review_complete",
+      "classification_outcome": "classified",
+      "assertion_form": "practice_or_status",
+      "legacy_practice_level": "P2",
+      "facets": [
+        {"dimension": "status", "concept": "enslaved_status"},
+        {"dimension": "property_legal", "concept": "pricing_property_rules"},
+        {"dimension": "function", "concept": "herding_labour"},
+        {"dimension": "transmission", "concept": "status_flexibility"}
+      ]
+    }
+  ]
+}
