@@ -54,10 +54,10 @@ A missing claim must never be rendered as a historical negative.
 - Global research baseline: v0.5.0
 - All 99 broad region-period cells received at least one targeted first-pass research review.
 - Atlantic bulk ingestion was deliberately held back until this global first-pass baseline existed.
-- PostgreSQL + PostGIS is now the working normalized research system, using repository migrations through `0011`.
+- PostgreSQL + PostGIS is now the working normalized research system, using repository migrations through `0027`.
 - The canonical v0.6.1 workbook remains preserved and has not been overwritten.
 - The repository contains a real MapLibre web MVP and a release-gated API.
-- `mvp-preview-ancient-v1` is an explicitly **non-canonical** public preview used to validate the end-to-end product path.
+- `mvp-preview-ancient-v2` is an explicitly **non-canonical** public preview used to validate the end-to-end product path.
 - New manual research enters the normalized relational model directly and remains unpublished until it passes review and publication gates.
 - Research batches may expand reviewed database content without automatically changing the public preview or canonical data release.
 
@@ -106,7 +106,13 @@ No claim is different from P0: if no defensible territorial-practice claim exist
 
 ## Before starting work
 
-Read the repository-root `BACKLOG.md` first for the current execution priority, blockers, and next task. Then inspect current `main`, open issues, and open PRs.
+Read:
+1. `23_PROJECT_CHARTER.md`
+2. repository-root `BACKLOG.md`
+3. `24_WAY_OF_WORKING.md`
+4. `25_PROJECT_HEALTH.md`
+
+Then inspect current `main`, open issues/PRs and current CI. For scheduled autonomous work, `automation/hourly-worker.md` is binding.
 
 ## Before changing data or schema
 
