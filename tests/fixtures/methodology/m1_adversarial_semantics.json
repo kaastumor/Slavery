@@ -1,0 +1,114 @@
+{
+  "fixture_version": "m1-methodology-adversary-v1",
+  "created_date": "2026-09-22",
+  "baseline": {
+    "methodology": "docs/02_METHOD_AND_ONTOLOGY.md",
+    "data_model": "docs/04_DATA_MODEL.md",
+    "schema_draft": "docs/schema_draft.yaml",
+    "schema_version": "draft-0.10",
+    "note": "This fixture records pressure against the pre-M1 model. It is evidence for later design work, not a replacement methodology."
+  },
+  "dispositions": [
+    "survives",
+    "revise",
+    "reject",
+    "park",
+    "experiment"
+  ],
+  "attacks": [
+    {
+      "id": "M1-A01",
+      "dimension": "practice_scale",
+      "source_kind": "synthetic",
+      "scenario": "Case A has repeated independent attestations but no evidence of institutionalization. Case B has one unusually rich legal/administrative corpus establishing an institutional category but uncertain prevalence.",
+      "current_representation": "P1-P4 is one ordered practice_level field; P1/P2 chiefly encode evidentiary configuration while P3/P4 encode institutional/structural historical characterization.",
+      "strongest_simpler_defense": "Keep P0-P4 and clarify the legend; users can read the definitions.",
+      "discriminating_reason": "The two cases cannot be ordered on one historical quantity without choosing which construct the ordering means. This affects storage, sorting, aggregation and map color, not wording alone.",
+      "disposition": "revise",
+      "next_issue": 102
+    },
+    {
+      "id": "M1-A02",
+      "dimension": "research_state",
+      "source_kind": "synthetic",
+      "scenario": "A claim has completed specialist review and remains genuinely disputed. Another completed review is researched-inconclusive.",
+      "current_representation": "coverage_state is one field containing workflow-like values (not_researched, source_identified, reviewed, classified) and outcome-like values (disputed, researched_inconclusive).",
+      "strongest_simpler_defense": "Treat disputed and researched_inconclusive as terminal workflow stages.",
+      "discriminating_reason": "Review completion and epistemic outcome can both be true simultaneously; one field cannot answer both questions without losing state.",
+      "disposition": "revise",
+      "next_issue": 102
+    },
+    {
+      "id": "M1-A03",
+      "dimension": "temporal_inference",
+      "source_kind": "real_case",
+      "case_path": "data/research/ancient_expansion_02/04_silla_village_register_slavery.json",
+      "scenario": "The surviving Silla register has proposed dates across 695-819 CE; the record itself says this interval must not be read as a 125-year continuous observation.",
+      "current_representation": "claim.from_year/to_year and valid_years supply the query interval, with temporal_precision/certainty as metadata.",
+      "strongest_simpler_defense": "The UI can show the disputed date label while the database keeps one interval.",
+      "discriminating_reason": "A selected-year query inside that interval can return a claim even though the interval expresses possible dating rather than continuous validity. This changes query truth conditions, not merely display.",
+      "disposition": "revise",
+      "next_issue": 103
+    },
+    {
+      "id": "M1-A04",
+      "dimension": "spatial_inference",
+      "source_kind": "real_case",
+      "case_path": "data/research/ancient_expansion_02/04_silla_village_register_slavery.json",
+      "scenario": "Evidence concerns four village-register communities associated with the Seowon-gyeong/Cheongju area; it must not become a claim about all Unified Silla territory.",
+      "current_representation": "spatial_precision is free text and the territorial-practice claim points to one spatial_entity; geometry may be unresolved as a safeguard.",
+      "strongest_simpler_defense": "Keep narrow spatial entities and rely on editorial discipline; no new semantics are needed.",
+      "discriminating_reason": "The current case demonstrates good editorial restraint, but the model cannot separately query evidence locus versus justified inference extent or enforce the rationale for a larger fill.",
+      "disposition": "revise",
+      "next_issue": 103
+    },
+    {
+      "id": "M1-A05",
+      "dimension": "event_vs_status",
+      "source_kind": "real_case",
+      "case_path": "data/research/ancient_expansion_02/03_baekje_369_war_captive_enslavement.json",
+      "scenario": "Baekje's 369 record supports a bounded capture/distribution/enslavement event without independently establishing prevalence across Baekje society.",
+      "current_representation": "The event is stored as a TERRITORIAL_PRACTICE_CLAIM with practice_type_code slavery_enslavement and P1.",
+      "strongest_simpler_defense": "P1 plus a one-year interval already communicates that the event is bounded.",
+      "discriminating_reason": "Event/process and social-status/practice are different predicates. Queries for territorial slavery currently retrieve the event through the same subtype, so this is not only a label problem.",
+      "disposition": "revise",
+      "next_issue": 102
+    },
+    {
+      "id": "M1-A06",
+      "dimension": "multi_facet_practice",
+      "source_kind": "real_case",
+      "case_path": "data/research/ancient_expansion_01/03_hittite_slavery.json",
+      "scenario": "The Hittite case simultaneously concerns an enslaved status/category, property/pricing rules, herding function and status flexibility.",
+      "current_representation": "TERRITORIAL_PRACTICE_CLAIM carries one practice_type code.",
+      "strongest_simpler_defense": "Put secondary characteristics in notes and keep one headline category.",
+      "discriminating_reason": "Characteristics needed for cross-society comparison become unqueryable prose and mutually exclusive codes force a false choice. Multiple facets are part of the analytical claim.",
+      "disposition": "revise",
+      "next_issue": 102
+    },
+    {
+      "id": "M1-A07",
+      "dimension": "counterevidence_synthesis",
+      "source_kind": "real_case",
+      "case_path": "data/research/ancient_expansion_02/02_mauryan_slavery_disputed.json",
+      "scenario": "Mauryan evidence contains supporting, challenging and qualifying sources while the reviewed synthesis reaches a positive bounded working designation.",
+      "current_representation": "CLAIM_SOURCE directions coexist on one claim and coverage/classification need not become disputed merely because evidence conflicts.",
+      "strongest_attack": "Conflicting evidence should force separate competing claims or an unresolved classification.",
+      "discriminating_reason": "The case preserves counterevidence and still records a transparent working synthesis, matching the project's evidence-synthesis purpose without losing provenance.",
+      "disposition": "survives",
+      "next_issue": null
+    },
+    {
+      "id": "M1-A08",
+      "dimension": "geometry_restraint",
+      "source_kind": "real_case",
+      "case_path": "data/research/cases/global_04_late_classic_maya_captive_dependency.json",
+      "scenario": "The evidence spans multiple Maya polities and sites and must not be rendered as one Maya empire or maximum extent.",
+      "current_representation": "The research region remains distinct from a polity and geometry is explicitly unresolved.",
+      "strongest_attack": "A map-first product will pressure the project to invent one convenient polygon.",
+      "discriminating_reason": "The existing model already allows a useful historical claim with unresolved geometry and retains neutral land, so missing geometry does not require invented spatial certainty.",
+      "disposition": "survives",
+      "next_issue": null
+    }
+  ]
+}
