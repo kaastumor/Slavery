@@ -44,7 +44,7 @@ class SanitationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             paths = _baseline(root) + ["notes.md"]
-            _write(root, "notes.md", "<<<<<<< ours\\n" + "ghp_" + ("A" * 26) + "\\n")
+            _write(root, "notes.md", "<<<<<<< ours\\n " + "ghp_" + ("A" * 26) + "\\n")
             failures = scan(root, paths)
             self.assertTrue(any("merge marker" in x for x in failures))
             self.assertTrue(any("GitHub token" in x for x in failures))
