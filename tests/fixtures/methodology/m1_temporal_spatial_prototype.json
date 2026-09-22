@@ -1,0 +1,84 @@
+{
+  "prototype_version": "m1-temporal-spatial-v1",
+  "status": "experimental_not_canonical",
+  "legacy_release": "v0.6.1",
+  "time_modes": [
+    "continuous_interval",
+    "bounded_occurrence",
+    "alternative_dates",
+    "terminus_after",
+    "terminus_before",
+    "approximate_period",
+    "unknown"
+  ],
+  "generalization_bases": [
+    "same_as_locus",
+    "specialist_polity_synthesis",
+    "explicit_source_jurisdiction",
+    "multi_locus_synthesis",
+    "other_reviewed",
+    "none"
+  ],
+  "cases": [
+    {
+      "id": "silla-alternative-dates",
+      "kind": "real",
+      "source_case": "data/research/ancient_expansion_02/04_silla_village_register_slavery.json",
+      "query_window": [695, 819],
+      "time_mode": "alternative_dates",
+      "asserted_intervals": [[695, 695], [815, 815], [819, 819]],
+      "positive_years": [695, 815, 819],
+      "negative_probe_years": [700, 750, 800],
+      "evidence_locus": "four uncertain village communities",
+      "inference_extent": null,
+      "generalization_basis": "none",
+      "whole_polity_fill_allowed": false
+    },
+    {
+      "id": "hittite-period-synthesis",
+      "kind": "real",
+      "source_case": "data/research/ancient_expansion_01/03_hittite_slavery.json",
+      "time_mode": "approximate_period",
+      "bce_signed_years_required": true,
+      "rule": "period-level applicability requires reviewed synthesis; a broad uncertainty envelope alone is insufficient"
+    },
+    {
+      "id": "synthetic-continuous",
+      "kind": "synthetic",
+      "query_window": [-500, -450],
+      "time_mode": "continuous_interval",
+      "asserted_intervals": [[-500, -450]],
+      "positive_probe_years": [-500, -475, -450],
+      "negative_probe_years": [-501, -449]
+    },
+    {
+      "id": "synthetic-local-to-polity-rejected",
+      "kind": "synthetic",
+      "evidence_locus": "port-A",
+      "inference_extent": "port-A",
+      "containing_polity": "polity-X",
+      "generalization_basis": "same_as_locus",
+      "generalization_rationale": null,
+      "whole_polity_fill_allowed": false
+    },
+    {
+      "id": "synthetic-reviewed-generalization",
+      "kind": "synthetic",
+      "evidence_locus": "site-B",
+      "inference_extent": "polity-Y",
+      "generalization_basis": "specialist_polity_synthesis",
+      "generalization_rationale": "Specialist synthesis explicitly generalizes the evidenced institution to the polity for the asserted period.",
+      "whole_polity_fill_allowed": true
+    }
+  ],
+  "invariants": [
+    "query_window_is_not_positive_validity",
+    "alternative_dates_do_not_fill_intermediate_years",
+    "continuous_interval_uses_asserted_interval",
+    "open_terminus_does_not_imply_indefinite_continuity",
+    "geometry_does_not_authorize_spatial_generalization",
+    "broader_inference_requires_basis_and_rationale",
+    "unresolved_extent_is_valid",
+    "signed_historical_year_convention_survives"
+  ]
+}
