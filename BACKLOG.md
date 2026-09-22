@@ -1,7 +1,7 @@
 # Historical Slavery Atlas — Backlog
 
-**Updated:** 2026-09-21  
-**Role:** canonical execution queue / risk register  
+**Updated:** 2026-09-22  
+**Role:** canonical execution queue; standing assumptions/risks live in `docs/25_PROJECT_HEALTH.md`  
 **Canonical historical data release:** `v0.6.1` (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical)
 
@@ -37,6 +37,34 @@ GitHub issues hold detailed discussion and acceptance history. This backlog hold
 - **BLOCKED** — cannot proceed without an explicit dependency/decision
 - **PARKED** — intentionally deferred
 - **DONE** — completed/merged; retained briefly for context
+
+---
+
+# NOW — Gate M1 methodology hardening
+
+Parent: **#100 — Methodology hardening before next scale expansion**
+
+The working product stack remains in service. M1 exists because the integrated adversarial review found credible risks of false equivalence and false temporal/spatial precision if the current semantics are scaled without another methodological pass.
+
+**Execution order for the autonomous worker:**
+
+1. **NOW — #101 AUTO READY — Build adversarial methodology fixtures**
+2. **NEXT — #102 AUTO READY — Prototype practice and coverage semantic split** (after #101)
+3. **NEXT — #103 AUTO READY — Prototype temporal and spatial inference semantics** (after #101)
+4. **NEXT — #104 AUTO READY — Pin and profile the complete Cliopatria baseline**
+5. **GATE — #105 AUTO READY — M1 integrated adversarial gate** (only after #101–#104 complete)
+6. **GATE — #106 AUTO READY — M1 Project Health Check and reconciliation** (only after #105)
+
+Rules for M1:
+
+- canonical release v0.6.1 remains unchanged;
+- current public preview may remain operational;
+- no draft semantic prototype becomes canonical merely because tests pass;
+- use synthetic fixtures **and** real atlas cases;
+- current P0–P4 remains backward-compatible until a replacement/compatibility plan survives the gate;
+- #106 must explicitly choose **continue / redirect / stop** before any next gate is created.
+
+Blocked production/admin work in #43 and #26 remains important but is not eligible autonomous work until its blocker changes.
 
 ---
 
@@ -201,13 +229,13 @@ Issue: **#26 — reconcile live Supabase migration history**
 
 # P3 — Tooling / integration evaluation
 
-## PARKED — Issue #2 trigger-driven evaluation register
+## CLOSED — Issue #2 trigger-driven evaluation register
 
 Issue: **#2 — evaluate end-to-end atlas tooling**
 
 PR #99 replaced technology-shopping with a trigger/acceptance matrix. No candidate currently has a demonstrated workflow trigger that justifies a new infrastructure commitment: existing QGIS/GEOS/GDAL, PostgreSQL/PostGIS + `atlas-data`, current release artifacts, and the present frontend/toolchain cover the demonstrated needs.
 
-Re-open this lane only when a concrete trigger fires. At that point create a bounded child issue with a real sample, baseline, measurable acceptance criteria, licensing/cost constraints, and an exit path. Do not adopt infrastructure merely to clear the queue.
+Issue #2 is closed as not planned. If a concrete trigger fires, create a new bounded child issue with a real sample, baseline, measurable acceptance criteria, licensing/cost constraints, and an exit path. Do not adopt infrastructure merely to clear the queue.
 
 ---
 

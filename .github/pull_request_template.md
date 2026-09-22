@@ -1,6 +1,10 @@
-## Summary
+## Question / summary
 
-Describe the change and why it is needed.
+What project question does this change answer, and what is the smallest useful proposal?
+
+## Adversarial check
+
+State the strongest credible attack and the resulting disposition: **survives / revise / reject / park / experiment**.
 
 ## Change type
 
@@ -20,6 +24,8 @@ Describe the change and why it is needed.
 - [ ] New methodology/ontology/schema decisions are recorded in `docs/08_DECISIONS_LOG.md` where required.
 - [ ] Existing applied SQL migrations were not edited; a new numbered migration was added instead.
 - [ ] `scripts/verify-dev.ps1` or `scripts/verify-dev.sh` passes, or the failure is documented below.
+- [ ] `python tools/sanitize_repo.py` passes.
+- [ ] No new dependency/infrastructure was added without a demonstrated simpler-baseline failure.
 
 ## Validation / evidence
 

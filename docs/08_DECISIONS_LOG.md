@@ -413,3 +413,28 @@ Accepted/live geometry is not retroactively replaced merely because a new candid
 **Current source-family guidance:** Cliopatria remains the global deep-time baseline. AWMC may generate preferred candidates for its explicit Greco-Roman snapshots. CHGIS V6 and CShapes 2.0 are strong internal comparators but currently have public-redistribution constraints under the atlas distribution model. OpenHistoricalMap is feature/version-specific supplementary evidence rather than a globally preferred family. Confoederatio Atlas/Naissance remains an experimental comparator until feature/keyframe provenance is strong enough for claim-specific review. These examples are guidance from the current source survey, not hard-coded permanent routing rules.
 
 **Reason:** The previous D-010 wording placed an exact Cliopatria polygon before a better specialist geometry, which made specialist replacement logically unreachable whenever Cliopatria had coverage. The completed source survey also shows why a simple region-to-dataset lookup is unsafe: specialist datasets differ in date coverage, entity semantics, licensing, feature-level provenance and temporal uncertainty. Case-specific precedence preserves a stable global fallback while allowing demonstrably better historical geometry without silently trading reproducibility for visual detail.
+
+
+## D-056 — Repository operating model is canonical; autonomous work is issue-driven and gate-bound
+**Date:** 2026-09-22  
+**Decision:** GitHub repository `kaastumor/Slavery` is the canonical source for current project implementation and operating state. The repository-root `BACKLOG.md` remains the single execution queue; GitHub issues hold durable task evidence; this Decisions Log remains the durable decision record. A small operating layer defines the charter, way of working, assumptions/risks/value/health state, and the scheduled-worker runbook.
+
+Scheduled autonomous work is serial. It resumes an unfinished `auto/*` PR before selecting new work, otherwise chooses exactly one highest-priority eligible `AUTO READY —` issue. It may not skip gates or create a next gate merely because the current queue is empty. Gate-boundary adversarial and Project Health Check issues are dependency-gated.
+
+**Alternatives considered:** a separate project board/roadmap/risk system; a free-running worker that interprets the backlog broadly; keeping operational behavior only inside the scheduled-task prompt.
+
+**Reason:** the repository already has adequate backlog, decision, QC and issue structures. Duplicating them would create drift. Versioning the worker contract beside the project makes automation behavior auditable and lets newer repository decisions override stale scheduled prompts.
+
+**Consequences:** governance should remain deliberately small and may be deleted/simplified when it stops preventing real failure. Green CI is necessary but not evidence that an idea or analysis is correct.
+
+## D-057 — M1 methodology hardening precedes the next large-scale evidence expansion
+**Date:** 2026-09-22  
+**Decision:** After the working cartography/release/UI foundation and the 2026-09-22 adversarial review, the next substantive gate is M1 (#100): pressure-test the semantics that can create false equivalence or false temporal/spatial precision before another large-scale evidence expansion.
+
+M1 does not invalidate the canonical v0.6.1 release or the working public preview. Current P0–P4 remains backward-compatible until a replacement/compatibility model survives the gate. The gate must use both synthetic adversarial fixtures and real atlas cases. The complete Cliopatria baseline may be profiled as raw geography infrastructure, but raw ingestion does not promote geometry or historical claims.
+
+The gate ends with an integrated adversarial review followed by a Project Health Check that explicitly chooses continue, redirect or stop.
+
+**Alternatives considered:** immediately resume broad research ingestion; immediately replace P0–P4; freeze the working project for a wholesale ontology rewrite.
+
+**Reason:** the current stack already demonstrates real operational value. The strongest unresolved risk is analytical overclaiming at scale, so the smallest useful next step is discriminating semantic tests rather than more infrastructure or more records.
