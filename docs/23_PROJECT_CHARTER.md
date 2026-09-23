@@ -86,11 +86,11 @@ The existing canonical methodology remains binding unless explicitly superseded.
 
 Horizons are hypotheses, not promises.
 
-### H0 — M1 methodology hardening (current)
-Pressure-test the semantics exposed by the 2026-09-22 adversarial review before another large-scale research expansion. Issue #100 is the gate.
+### H0 — M1 methodology hardening (completed)
+M1 (#100) attacked the original semantics, returned REVISE, corrected the displaced overloads, and survived the integrated re-attack. P0–P4 is no longer the target universal comparative ordinal; the accepted prototype keeps evidence, historical structure, workflow/outcome, temporal applicability/precision and spatial locus/extent separable.
 
-### H1 — Semantic/geography integration
-If M1 survives, encode only the justified semantic changes, profile the complete pinned global geography backbone, and prove selected-year behavior on real atlas cases.
+### H1 — Semantic/geography integration (current)
+M2 (#116) must integrate only the semantics that survived M1, resolve Cliopatria calendar/RELATION behavior, ingest the complete pinned corpus as raw geography infrastructure, and prove selected-year behavior in the real relational architecture without altering v0.6.1 or silently changing the current preview.
 
 ### H2 — Globally balanced evidence expansion
 Resume broad research growth under the hardened model, deliberately prioritizing weak and underrepresented regions/periods before dense archive ingestion dominates.
