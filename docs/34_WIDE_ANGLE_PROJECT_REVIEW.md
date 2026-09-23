@@ -492,3 +492,131 @@ The missing npm lockfile is the clearest reproducibility defect and is worth fix
 - prune merged remote branches when an administrative path exists.
 
 **Checkpoint:** GitHub/CI design is basically sound, but operations are over-provisioned relative to demonstrated public value. Simplification is justified without weakening research correctness.
+
+
+---
+
+## Chunk 5 — Adversarial and evaluation quality
+
+### Adversarial quality
+
+This is a project strength.
+
+The adversarial fixtures/gates attack real semantic assumptions rather than cosmetic edge cases:
+
+- Silla possible-date window vs continuous truth;
+- Silla local evidence vs whole-polity inference;
+- Baekje bounded enslavement event vs enduring territorial practice;
+- Hittite simultaneous status/function/property/transmission dimensions;
+- Mauryan supporting/challenging/qualifying evidence;
+- Maya unresolved geometry vs map-first pressure;
+- reverse mutation of relational state;
+- baseline vs chosen specialist geometry provenance;
+- open terminus vs indefinite continuity.
+
+M1 and M2 both produced **REVISE** outcomes after apparently successful component work. That is strong evidence that adversarial review is not ceremonial.
+
+### Negative/fail-closed behavior
+
+Negative controls are substantial:
+
+- wrong-kind claim subtype inserts are rejected;
+- claim kind cannot be casually mutated;
+- direct canonical preview promotion is rejected;
+- research staging cannot self-publish;
+- unresolved geometry cannot smuggle in a shape;
+- external/network cases reject territorial P-level leakage;
+- nationality inference guardrails fail closed;
+- exact-retry vs changed-content behavior is tested;
+- release drift and provenance mismatches fail closed;
+- resolver ambiguity remains unresolved rather than guessed.
+
+### Real/orthogonal cases
+
+The conceptual abstractions were not frozen from one region alone.
+
+Real cases span at least:
+
+- Anatolia / Hittite;
+- Korea / Silla and Baekje;
+- Mauryan South Asia;
+- Maya;
+- additional non-Atlantic research fixtures.
+
+This is sufficient to justify the **structural separations** discovered in M1, though not a final global vocabulary.
+
+### Abstention / ambiguity
+
+The project can represent:
+
+- unknown/no claim;
+- unresolved geometry;
+- disputed classification;
+- inconclusive completed review;
+- unassessed semantic dimensions;
+- ambiguous hierarchy;
+- quarantined geometry;
+- source-native uncertainty.
+
+Ambiguity is generally preserved instead of converted into a forced answer.
+
+### Implementation success vs analytical validation
+
+The repository repeatedly states that green CI is not historical/editorial approval, and M1/M2 behavior supports that claim.
+
+However, **project-value evaluation remains much weaker than correctness evaluation**.
+
+The tests can answer “does the architecture preserve this distinction?” but not yet “does this project materially improve a historian/researcher/user task over the strongest simple workflow?”
+
+That is the missing adversary.
+
+### Method-maturity reconciliation
+
+| Capability / method | Maturity after this review | Reason |
+| --- | --- | --- |
+| P0–P4 as universal target comparison | **RETIRED** | M1 falsified the construct; retain only historical-release compatibility. |
+| Current P0–P4 preview | **VALIDATED_FOR_VIEW only as a frozen legacy/non-canonical demonstration** | Operationally tested, but its ordinal rhetoric is not the target methodology. |
+| Post-M1 semantic model | **EXPERIMENTAL** | Strong real/synthetic adversarial evidence and disposable relational implementation; not yet broad production research/public view. |
+| Post-M1 temporal applicability / locus-extent semantics | **EXPERIMENTAL** | Correctness is well tested; user/research scaling is not. |
+| Complete Cliopatria raw ingestion | **VALIDATED_FOR_AUTOMATION as raw ingestion** | Exact corpus/checksum, idempotency and no-publication boundaries tested. |
+| Cliopatria selected-year atlas resolver | **EXPERIMENTAL** | Full corpus behavior is frozen, but broad source→atlas identity resolution/publication remains unresolved. |
+| Geometry candidate generation/QC | **VALIDATED_FOR_AUTOMATION for candidate production** | Reproducible toolchain, quantitative QC, quarantine and artifact manifests. |
+| Geometry publication choice | **VALIDATED_FOR_VIEW with reviewed promotion boundary** | Human/explicit accepted override remains required. |
+| Research-case structural ingestion | **VALIDATED_FOR_AUTOMATION for package integrity only** | Idempotency/schema checks do not validate historical interpretation. |
+| Historical evidence synthesis | **human-reviewed method, not automation** | Specialist interpretation remains the authority boundary. |
+| Release reconstruction / public serving boundary | **VALIDATED_FOR_AUTOMATION within current release contract** | Exact membership/bundle, rollback/fallback and CI are exercised. |
+| Automatic MVP self-heal | **RETIRED candidate** | Works operationally, but current value/risk no longer justifies automatic external restart. |
+
+### Acceptance-boundary quality
+
+Where execution required unavailable admin/cost/private capability, the project generally preserved the real criterion instead of weakening it:
+
+- protected environment/staging boundary remains blocked in #43;
+- live migration-history mutation remains blocked in #26;
+- canonical workbook is externally supplied by exact checksum rather than replaced with a synthetic proxy;
+- visual geometry review is captured as explicit review evidence.
+
+This is healthy.
+
+### Evaluation gap that should determine the next direction
+
+A new integrated test should **not** be another schema or resolver test.
+
+The missing discriminating experiment is a real research/user task performed with:
+
+A. the strongest boring baseline, and  
+B. the smallest atlas-derived evidence package/interface necessary to express the same question.
+
+Measure:
+
+- time/effort to reach an inspectable answer;
+- provenance recoverability;
+- uncertainty/abstention preservation;
+- cross-place/time comparison quality;
+- error/overclaim rate;
+- what the atlas exposes that the baseline misses;
+- what the baseline does just as well.
+
+Do this before productionizing M2 or resuming broad H2 expansion.
+
+**Checkpoint:** adversarial correctness survives strongly. Method maturity is now explicitly bounded. Project-value validation remains the critical missing test.
