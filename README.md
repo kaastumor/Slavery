@@ -1,6 +1,6 @@
 # Historical Slavery Atlas
 
-Public development repository for the Historical Slavery Atlas: a global, time-aware evidence-synthesis system for slavery and related coerced-labour/dependency systems.
+Public development repository for the Historical Slavery Atlas: a global, time-aware evidence corpus and comparison method for slavery and related coerced-labour/dependency systems, with a thin atlas/query surface where that adds demonstrated value.
 
 The repository is the canonical source of truth for project implementation, methodology and operating state. The immutable historical data baseline remains the external v0.6.1 workbook until a deliberately validated successor release is created.
 
@@ -20,12 +20,15 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 ## Current state
 
 - canonical historical data release: `v0.6.1` (external immutable workbook);
-- public non-canonical preview: `mvp-preview-ancient-v2`;
-- working normalized store: PostgreSQL/PostGIS;
-- public client: MapLibre web application backed by the release-gated `atlas-data` API and deployment-bound static fallback;
-- M2 integrated adversarial gate: completed after correction/re-attack cycles;
-- **current substantive boundary: #123 — M2 Project Health Check and reconciliation**;
-- no H2/bulk-research, production-M2 migration, public geography promotion or successor canonical release is authorized until that health check chooses continue / simplify / redirect / stop.
+- public non-canonical preview: `mvp-preview-ancient-v2` (frozen legacy demonstration);
+- working normalized research store: PostgreSQL/PostGIS;
+- M1 and M2 implementation/adversarial gates: completed;
+- HC-003 wide-angle review: **CONTINUE + SIMPLIFY**;
+- working identity: **auditable evidence corpus + comparison method + thin atlas/query surface**;
+- execution state: **IDLE** — no new horizon is authorized;
+- M2 production migration, broad evidence expansion and richer application/platform work remain parked pending a future value-discrimination decision.
+
+See `docs/34_WIDE_ANGLE_PROJECT_REVIEW.md` and D-062.
 
 ## Repository boundary
 
