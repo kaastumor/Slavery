@@ -52,8 +52,9 @@ The working product stack remains in service. M1 exists because the integrated a
 2. **NEXT — #102 AUTO READY — Prototype practice and coverage semantic split** (after #101)
 3. **NEXT — #103 AUTO READY — Prototype temporal and spatial inference semantics** (after #101)
 4. **NEXT — #104 AUTO READY — Pin and profile the complete Cliopatria baseline**
-5. **GATE — #105 AUTO READY — M1 integrated adversarial gate** (only after #101–#104 complete)
-6. **GATE — #106 AUTO READY — M1 Project Health Check and reconciliation** (only after #105)
+5. **GATE — #105 AUTO READY — M1 integrated adversarial gate** — integrated attack completed with **REVISE**; #112 is the required correction before this gate can close.
+6. **NOW — #112 AUTO READY — M1 correct semantic axes and legacy map boundary**
+7. **GATE — #106 AUTO READY — M1 Project Health Check and reconciliation** (only after #105 and #112 are both complete)
 
 Rules for M1:
 
