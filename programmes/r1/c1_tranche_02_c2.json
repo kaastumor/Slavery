@@ -1,0 +1,66 @@
+{
+  "programme": "R1",
+  "stage": "R1.5",
+  "issue": 166,
+  "status": "internal_c2_resolution_pending_full_tranche_adversarial_replay",
+  "review_date": "2026-09-24",
+  "packets": [
+    {
+      "target_id": "R1:P:1300:C:r1",
+      "target_label": "Mali Empire",
+      "anchor": "1300 CE",
+      "trigger": [
+        "category/translation ambiguity",
+        "temporal back-projection risk",
+        "historiographical/source-tradition uncertainty"
+      ],
+      "c2_disposition": "resolved_to_inconclusive_status_and_selected_year",
+      "classification_outcome": "inconclusive",
+      "territorial_practice_release_state": "not_established_at_1300_from_reviewed_packet",
+      "bounded_proposition": "Near the 1300 CE anchor, the later Ibn Khaldun tradition identifies Sākūra as a mawlā/client of the ruling house, and later Mande traditions preserve servile language around Sekure/Sākūra. Some scholarship has rendered this background as slave or freed slave, but specialist source criticism shows that neither the Arabic status term, the later oral terminology, nor the reconstructed early-Mali kinglist can safely carry an exact slave-status classification without qualification. The packet therefore preserves a possible servile/client origin as an unresolved historical status question, not as a secure 1300 territorial-practice claim.",
+      "required_abstention": "Do not translate mawlā mechanically as slave, treat later Mande servile terminology as an exact thirteenth-century legal category, infer a Mali-wide slavery institution from one ruler's possible social origin, or back-project better-attested mid-fourteenth-century slavery into 1300.",
+      "deeper_reasoning": [
+        "Gomez reproduces Ibn Khaldun's description of Sākūra as a mawlā/client who usurped kingship; the source-native Arabic category is broader than an automatic slave-status translation.",
+        "Conrad explicitly treats Sākūra's mawlā description as a social-status problem and discusses alternatives in which the term could encode vassal/first-comer hierarchy rather than literal enslavement.",
+        "Austen and Jansen show that the early-Mali kinglist, although detailed and plausible, requires source criticism because Ibn Khaldun's narrative may partly serve a theoretical/exemplary structure.",
+        "Austen and Jansen also preserve later Mande traditions with servile-ruler terminology, but those traditions are geographically limited and were recorded much later; they are not independent contemporaneous proof of Sākūra's legal status.",
+        "Much of the modern literature ultimately depends on the same small Arabic/oral evidentiary bases, so citation multiplicity must not be mistaken for independent attestations.",
+        "Even a secure formerly enslaved individual at the apex of the polity would establish an individual status history, not by itself the prevalence, structure, legality, or selected-year territorial extent of slavery across Mali.",
+        "Later fourteenth-century sources such as Ibn Battuta can establish later Mali slavery contexts but do not fill the temporal interval back to the 1300 anchor."
+      ],
+      "source_dependencies": [
+        {
+          "source_version_ref": "doi:10.1515/9781400888160-008",
+          "role": "modern_specialist_synthesis_of_ibn_khaldun_and_oral_material",
+          "claim_fitness": "production_grade",
+          "direction": "supports_and_qualifies",
+          "independence_group": "ibn-khaldun-sakura-tradition"
+        },
+        {
+          "source_version_ref": "doi:10.2307/3171998",
+          "role": "specialist_oral_history_and_status_analysis",
+          "claim_fitness": "production_grade",
+          "direction": "qualifies",
+          "independence_group": "mande-sunjata-oral-status-traditions"
+        },
+        {
+          "source_version_ref": "doi:10.2307/3171932",
+          "role": "specialist_source_criticism_of_kinglist_and_oral_traditions",
+          "claim_fitness": "production_grade",
+          "direction": "qualifies",
+          "independence_group": "ibn-khaldun-plus-mande-source-criticism"
+        },
+        {
+          "source_version_ref": "doi:10.1017/S002185370000428X",
+          "role": "classic_early_mali_chronological_synthesis",
+          "claim_fitness": "production_grade",
+          "direction": "context",
+          "independence_group": "ibn-khaldun-sakura-tradition"
+        }
+      ],
+      "independence_note": "The source list is not four independent attestations. Gomez and Levtzion depend materially on Ibn Khaldun for Sākūra; Austen/Jansen and Conrad add source criticism and later Mande oral traditions. The packet therefore treats source families/dependencies explicitly rather than counting publications.",
+      "inference_rule": "Release Sākūra's status only as an unresolved possible servile/client-origin question. Do not publish positive selected-year Mali territorial slavery from this packet.",
+      "release_ready_after_internal_adversary": true
+    }
+  ]
+}

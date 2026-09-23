@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE R1 / CHECKPOINT — tranche 01 survived after material correction; next tranche not yet authorized**
+**Execution state:** **ACTIVE R1 / MIDPOINT — tranche 02 complete; mandatory midpoint stop review next; tranche 03 not authorized**
 
 ## Direction after H2
 
@@ -354,6 +354,50 @@ Durable artifacts:
 - `programmes/r1/12_C1_TRANCHE_01_ADVERSARIAL_REPLAY.md`
 
 Decision: D-076.
+
+## R1.5 ordinary operational tranche 02 — completed
+
+Issue #166 tested Core Contract v1 on a six-row ordinary operational tranche selected only from the frozen R1 subject queue.
+
+### Final result
+
+- 6/6 rows internally adversarially replayed;
+- 1/1 earned C2 packet completed;
+- 1 classified/bounded-supported;
+- 5 inconclusive for the exact frozen target/year/frame question;
+- 0 final disputed rows;
+- 0 semantic release corrections required after fresh synthesis;
+- 2 material source-dependency/provenance normalizations during replay;
+- no target substitution.
+
+The U.S. 1800 legacy promotion survived fresh Core-v1 re-research because the federal 1800 census directly supports the bounded selected-year claim. Mali 1300 earned C2 and resolved to inconclusive because Sākūra's `mawlā`/servile-status traditions do not safely support an unqualified slave-status translation or a Mali-wide territorial-practice claim.
+
+### Review rule
+
+Core Contract v1 §19 is now active at 100% C1 replay for remaining R1 candidate work. Tranche 01's four material corrections in ten replayed rows exceeded the contract's 10% trigger.
+
+Tranche 02's ordinary rows required no semantic correction after fresh synthesis, but replay still corrected source-dependency handling for Lazica and Nālandā. The stronger replay setting therefore remains in force.
+
+### Boundary
+
+R1 has now researched 16 C1 rows across two bounded tranches:
+- 4 classified;
+- 12 inconclusive;
+- 3 C2 packets completed.
+
+These are not prevalence or progress percentages.
+
+The next stage is the mandatory R1 midpoint stop review. Tranche 03 is not automatically authorized.
+
+v0.6.1 remains canonical and unchanged.
+
+Durable artifacts:
+- `programmes/r1/c1_tranche_02_selection.json`
+- `programmes/r1/13_C1_TRANCHE_02_PROTOCOL.md`
+- `programmes/r1/c1_tranche_02_final.json`
+- `programmes/r1/15_C1_TRANCHE_02_ADVERSARIAL_REPLAY.md`
+
+Decision: D-077.
 
 ## Remaining bounded project-system debt
 
