@@ -48,7 +48,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | A-010 | The value of the flat coverage corpus compounds faster than review/update burden as it scales | current row-by-row workflow not demonstrated; broader systematic-coverage economics remain open | COV-002 found persistent reuse and strong static compression, but its maintenance gate does not discriminate the economics of tiered/versioned/batch-curated coverage. ADV-001 limits the stop to the tested workflow. |
 | A-011 | Tiering breadth, compact evidence and selective depth can make systematic coverage methodologically viable without default deep research for every target | survives with stronger QC | COV-004: escalation replay passed at 1/6 false negatives only after adding source-quality failure as a C2/review trigger; non-polity challenge and real update mechanics also survived. |
 | A-012 | A bespoke Atlas evidence inspector adds material value beyond a competent conventional map + tiered register | rejected at current scale | COV-004 Arm D: 0/4 material gains with identical frozen evidence/geometry; no misleading Atlas inferences. Ordinary map/register presentation remains valid. |
-| A-013 | A real bounded release programme can harden the surviving method better than further miniature architecture experiments | survives midpoint / one minimal closure tranche authorized | Tranche 01 required four semantic corrections; ordinary tranche 02 required none after fresh synthesis but still exposed two dependency/provenance normalizations. Midpoint finds one 3-row balance closure is proportionate; quota-fill to 36 is not. | Freeze/research only Tamna + Pandya + Chimu, replay 100%, then stop subject expansion and enter release QC unless a new stop condition appears. |
+| A-013 | A real bounded release programme can harden the surviving method better than further miniature architecture experiments | survives subject-research phase / release QC next | 19 C1 rows completed with 19/19 replay and 4 C2 packets; closure tranche changed legacy Pandya positive to inconclusive and legacy Chimú inconclusive to a narrower corvée positive. Frozen polity balance reaches A2/B1/C3/D2/E1/F3 without quota-fill. | Stop subject expansion. Test the assembled candidate package at release level; preserve remaining queue as research-state, not absence. |
 
 ## Standing risk register
 
@@ -886,3 +886,69 @@ No feature-friction threshold has been crossed; no bespoke Atlas/platform work i
 #### Boundary
 
 Authorize one closing C1 tranche of Tamna, Pandya and Chimu only. Freeze membership before subject research, prohibit substitution and replay 100%. Afterward, proceed to R1.6 release QC unless a new hold/rework condition emerges.
+
+
+### HC-013 — R1 closing C1 tranche and subject-research stop — 2026-09-24
+
+Decision: **CLOSURE PASSES; STOP SUBJECT EXPANSION; ENTER RELEASE QC.**
+
+Durable tranche:
+- `programmes/r1/c1_tranche_03_final.json`;
+- `programmes/r1/19_C1_TRANCHE_03_ADVERSARIAL_REPLAY.md`;
+- issue #170.
+
+#### Final closure result
+
+Three midpoint-authorized rows were researched and replayed:
+
+- **Tamna 500 CE** — inconclusive;
+- **Pandya Empire 1300 CE** — inconclusive after C2;
+- **Chimú Empire 1300 CE** — bounded-supported for state labor service/corvée.
+
+No target was substituted.
+
+No post-synthesis semantic correction was required, though source fitness/search-provenance handling was tightened during replay.
+
+#### Legacy reversal test
+
+The two legacy promotions move in opposite directions:
+- Pandya: legacy bounded-supported → Core-v1 inconclusive;
+- Chimú: legacy researched-inconclusive → Core-v1 bounded-supported corvée/labor service.
+
+This is evidence that fresh rereview is not mechanically conservative or permissive. The claim shape changes when source-to-target fit changes.
+
+#### R1 subject-research totals
+
+Across three tranches:
+- 19 researched C1;
+- 5 classified;
+- 14 inconclusive;
+- 0 final disputed;
+- 4 C2 packets completed;
+- 19/19 internally adversarially replayed.
+
+These counts are not prevalence.
+
+Researched polity-sector counts:
+A2 / B1 / C3 / D2 / E1 / F3.
+
+With 12 researched polity rows, the maximum sector share is 25%. The midpoint balance gap is closed.
+
+#### Research-stop judgment
+
+D-078 was satisfied by exactly three rows. No evidence justifies continuing toward the 36-row ceiling.
+
+The remaining frozen queue is valuable as research-state coverage and unresolved/planned scope. It must not be silently converted into absence or dropped from the release package.
+
+#### Next boundary
+
+Proceed to R1.6 release-level QC:
+- cross-row Core-v1 validation;
+- source/version and dependency audit;
+- selected-year/target/dimension guard audit;
+- C2 closure audit;
+- geometry/release-surface checks;
+- manifest/changelog/QC/unresolved-issues assembly;
+- candidate research release only.
+
+No subject-research tranche follows automatically. No new software feature has met the friction threshold.
