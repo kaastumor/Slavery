@@ -1,0 +1,44 @@
+{
+  "experiment": "COV-004",
+  "arm": "B-C2",
+  "frozen_before_deep_research": "2026-09-23",
+  "rule": "COV-003 escalation priorities; max 4. Priority 1 materially_disputed first; no priority-2 row qualifies; priority-3 supported ambiguity ties by SHA-256(COV-004-C2|target_id).",
+  "selected": [
+    {
+      "target_id": "cahokia_1200",
+      "target_label": "Cahokia",
+      "priority": 1,
+      "reason": "materially_disputed slave-status interpretation of Mound 72 sacrifice"
+    },
+    {
+      "target_id": "samoa_1700",
+      "target_label": "Samoan communities",
+      "priority": 1,
+      "reason": "materially disputed retrospective classification and temporal back-projection risk"
+    },
+    {
+      "target_id": "viking_900",
+      "target_label": "Viking trade network",
+      "priority": 3,
+      "reason": "network claim is strong but category/territorial inference boundary is material",
+      "tie_hash": "547db1810770524ab9129670b8d80ee12e4208a90c6fa15919ea68824854b75c"
+    },
+    {
+      "target_id": "cluny_1100",
+      "target_label": "Cluny Abbey",
+      "priority": 3,
+      "reason": "servus/ancilla terminology and slavery/serfdom boundary is material",
+      "tie_hash": "9feb6ac9bc81e0818603c808fa05da78791e4173aa3f983b6ce447d3d8ffada1"
+    }
+  ],
+  "not_selected_priority3": [
+    {
+      "target_id": "kilwa_1400",
+      "tie_hash": "d93aa2274fd915b87aefd0b915577a9223c5325a7ded1fa53fc59c8f42f28cfd"
+    },
+    {
+      "target_id": "silk_road_700",
+      "tie_hash": "f00f2064d88f44f69bd9617df0e03847ff2df1a778ba8a5b439d56455b4a4af3"
+    }
+  ]
+}
