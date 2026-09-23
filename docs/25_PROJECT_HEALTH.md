@@ -175,3 +175,46 @@ This is a state reconciliation, not a horizon health check.
 - **Operational blockers unchanged:** #43 and #26 remain blocked and do not displace M2.
 
 No new assumption is promoted by this note beyond D-058/D-059. The next mandatory Project Health Check remains #123.
+
+
+## Project-system conformance delta — 2026-09-23
+
+This is a **project-system reconciliation**, not the #123 horizon health decision.
+
+The repository was checked against a lean long-lived-project standard emphasizing repository-first state, strongest-baseline comparison, canonical ownership, adversarial evidence, resumability, sanitation, workflow discipline and explicit health boundaries.
+
+### Survives
+
+- GitHub `main` is the implementation/methodology source of truth.
+- Root `BACKLOG.md` is the single execution queue; issues/PRs hold durable task evidence.
+- `23_PROJECT_CHARTER.md` already carries a real north star, simpler baseline, success/failure conditions and non-goals.
+- This file remains the single owner of assumptions, material risks, value evidence and health decisions; separate duplicate ledgers are not justified.
+- `24_WAY_OF_WORKING.md` already uses question → adversary → experiment → evidence → decision → reconciliation rather than feature throughput.
+- M1/M2 demonstrate real revise/correct/re-attack behavior rather than ceremonial adversarial review.
+- Canonical historical releases, database working state, previews and experiments remain distinct.
+- Repository sanitation, release reconstruction, security boundaries and source-version provenance are already fail-closed in CI.
+- Persistent workflows mostly have distinct responsibilities: foundation, research-case validation, release candidate validation, geometry build/review/promotion, web build/deploy, availability/recovery.
+
+### Revised in this conformance pass
+
+- root `README.md` no longer points at completed M1;
+- `01_PROJECT_STATUS.md` now reflects the #123 stopping point instead of directing work to #120;
+- `20_CURRENT_HANDOFF.md` no longer carries a mutable gate snapshot;
+- `docs/README.md` is now an ownership/index document rather than a stale architecture-status narrative;
+- `23_PROJECT_CHARTER.md` now separates **problem / contribution / project form / implementation architecture**, strengthens the boring baseline, and makes shrinkage/parity explicit kill pressure;
+- `24_WAY_OF_WORKING.md` now makes canonical ownership, method maturity, discovery lanes, capability-bound acceptance, resumable chunks, competing identities, strongest-baseline comparison and shrinkage mandatory where relevant;
+- stale `docs/project_manifest.yaml` was removed because it duplicated current state and had drifted materially (repository visibility, migration count, schema draft and milestone);
+- the completed DVC evaluation remains as evidence but its dedicated persistent workflow was removed because no current adoption trigger exists.
+
+### Explicitly not created
+
+No new standalone assumptions register, value-evidence ledger, audit directory, roadmap, experiment platform or project-management database was added. Existing canonical owners already cover those responsibilities.
+
+### Remaining project-system pressure
+
+- The remote repository still contains a large number of old topic branches. This is already R-008; prune confirmed merged branches when an administrative/tooling path is available rather than inventing a new tracking system.
+- `main` is currently reported unprotected. Treat branch protection as repository-administration hardening when available; do not weaken PR/CI discipline because protection is absent.
+- Some historical numbered documents intentionally contain old phase/status language. They are historical evidence, not current-state owners. Do not churn them merely for cosmetic freshness.
+- The decisive unanswered questions are now project-value questions, not project-system setup questions. They belong to #123: baseline parity, competing identities, artifact shrinkage, demonstrated value, and continue/simplify/redirect/stop.
+
+No new development horizon is authorized by this reconciliation.
