@@ -620,3 +620,157 @@ Measure:
 Do this before productionizing M2 or resuming broad H2 expansion.
 
 **Checkpoint:** adversarial correctness survives strongly. Method maturity is now explicitly bounded. Project-value validation remains the critical missing test.
+
+
+---
+
+## Chunk 6 — External precedents and practice
+
+External review is used subtractively. The project should not become a generic digital-humanities platform, gazetteer, ontology platform or scholarly repository.
+
+### 1. nodegoat — **BENCHMARK + REMOVE FROM OUR SCOPE**
+
+Official project:
+- https://nodegoat.net/about
+- https://nodegoat.net/faq
+
+nodegoat already provides:
+
+- custom humanities data models;
+- source references at object/description level;
+- temporal and spatial attributes;
+- diachronic maps/timelines;
+- relational/network analysis;
+- data import/export and API access;
+- configurable public research interfaces;
+- collaborative research environments.
+
+This is a substantially stronger baseline than “spreadsheet + static GIS.”
+
+**Consequence:** do not build generic:
+
+- collaborative research database UI;
+- arbitrary data-model designer;
+- generic temporal/spatial visualization platform;
+- generic network-analysis workbench;
+- generic humanities publication interface.
+
+If the Atlas cannot demonstrate value beyond nodegoat + domain methodology/data, it should shrink/redirect rather than reproduce that platform class.
+
+### 2. Enslaved.org / Enslaved Ontology — **BENCHMARK + LEARN FROM + REMOVE FROM SCOPE**
+
+Sources:
+- https://enslaved.org/
+- Shimizu et al. 2020, DOI 10.1016/j.websem.2020.100567
+
+Enslaved.org already searches/interconnects very large record collections across People, Events, Places and Sources, with visual exploration.
+
+The Enslaved Ontology was explicitly developed from historian use cases to integrate heterogeneous historic slave-trade datasets, using modular ontology design.
+
+**Learn from:**
+- historian/use-case-driven ontology work;
+- modularity;
+- explicit person/event/place/source separation;
+- ethics and stewardship;
+- interoperability.
+
+**Remove from scope:**
+- becoming another generic person/event search repository for the historical slave trade;
+- duplicating large Atlantic/African record integration where Enslaved/other specialist projects already provide it.
+
+The Atlas should reference/import bounded evidence where needed for its distinct comparative questions, not compete on record count.
+
+### 3. Journal of Slavery and Data Preservation — **REUSE + BENCHMARK + REMOVE FROM SCOPE**
+
+Source:
+- https://ojs.msupress.org/index.php/JSDP
+
+JSDP treats curated slavery datasets and their documentation as scholarly outputs and deposits data/supporting documentation in durable repositories.
+
+**Consequence:**
+- benchmark release documentation against scholarly data-publication expectations;
+- later deposit suitable stable datasets in established scholarly repositories;
+- do **not** build a custom journal, peer-review system or long-term preservation institution.
+
+The Atlas's exact release bundles may support reproducibility, but should not be mistaken for a complete archival/publishing ecosystem.
+
+### 4. World Historical Gazetteer + OpenRefine reconciliation — **REUSE**
+
+Source:
+- https://docs.whgazetteer.org/content/technical/apis.html
+
+WHG exposes Linked Places Format and an OpenRefine-compatible reconciliation API, and explicitly describes reconciliation as **candidate suggestion for human review**, not adjudication.
+
+This matches the Atlas's identity rules almost exactly.
+
+**Consequence:** use/reuse candidate reconciliation when a real workload trigger appears; do not build a historical gazetteer or fuzzy-place-matching authority.
+
+WHG's source-specific licensing/attribution behavior is also a useful precedent for preserving source-native licensing rather than assigning one blanket licence to aggregated data.
+
+### 5. W3C PROV-O — **LEARN FROM / interoperability benchmark**
+
+Source:
+- https://www.w3.org/TR/prov-o/
+
+PROV-O provides a stable provenance interchange model around Entity / Activity / Agent and qualified derivation/attribution relationships.
+
+The Atlas already has domain-specific source/version/asset/ingest/claim/release provenance.
+
+**Consequence:** do not rewrite the relational core into RDF/OWL. If a real interoperability consumer appears, map representative provenance to PROV-O and test for loss.
+
+### 6. CIDOC CRM / ISO 21127:2023 — **BENCHMARK + LEARN FROM**
+
+Sources:
+- https://cidoc-crm.org/
+- https://cidoc-crm.org/node/8920
+
+CIDOC CRM is explicitly intended to mediate heterogeneous cultural-heritage information and now includes robust spatiotemporal/chronological modeling concerns.
+
+**Consequence:** use CIDOC CRM as a semantic adversary for events, actors, time, places, source/document relationships and interoperability.
+
+Do not create an ISO compliance program and do not migrate the internal model merely for standards alignment.
+
+### 7. Linked Art — **LEARN FROM**
+
+Source:
+- https://linked.art/model/
+
+Linked Art is a usability-oriented application profile over cultural-heritage standards and includes people, places, events, documents, provenance and specific assertions.
+
+**Consequence:** useful future export/interface precedent; no internal-model rewrite without a real consumer.
+
+### 8. Seshat / existing historical datastores — **REUSE + BENCHMARK**
+
+Source:
+- https://seshat-global-history-databank.readthedocs.io/
+
+Seshat demonstrates a mature global-history databank and reproducible research practices.
+
+The Atlas already correctly treats external historical datasets as sources rather than trying to become the authoritative global database for every historical variable.
+
+**Consequence:** continue to reuse/pin source datasets; do not expand into generic global-history data collection unrelated to the Atlas's slavery/coercion evidence question.
+
+### External-review synthesis
+
+The strongest external precedents materially narrow the Atlas contribution.
+
+The project should **not** justify itself as:
+
+- a digital-humanities database;
+- a temporal GIS;
+- a collaborative historical-research workbench;
+- a generic graph/network explorer;
+- a historical gazetteer;
+- an ontology platform;
+- a slave-trade person/event repository;
+- a scholarly preservation platform.
+
+Existing projects already cover those categories well.
+
+The remaining plausible contribution is domain-specific:
+
+> a globally/deep-time, claim-specific evidence corpus and comparison protocol for slavery/coercion that explicitly separates evidentiary structure, historical characterization, research coverage, uncertainty and historical geography, with a map as one derived inspection view.
+
+This makes **domain corpus + methodology + discriminating queries** more central and makes generic platform/UI expansion less defensible.
+
+**Checkpoint:** external practice strengthens the case for a narrower identity and removes multiple possible future feature families from scope.
