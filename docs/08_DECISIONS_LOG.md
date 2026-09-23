@@ -1081,3 +1081,45 @@ These are frozen members, not completion quotas. Rows may fail identity/time rev
 **Consequence:** R1 subject research may now begin only against this frozen frame. No post-evidence target substitution is allowed.
 
 **Durable artifact:** `programmes/r1/05_TARGET_FRAME_FREEZE.md`.
+
+
+## D-075 — Freeze the R1 subject-research queue after identity/time QA
+**Date:** 2026-09-23  
+**Status:** accepted R1 operational decision
+
+**Decision:** Freeze `programmes/r1/subject_research_queue.json` as the only R1.4 subject-research queue derived from the D-074 target frame.
+
+R1.3 performed identity/time/frame QA only; no slavery/coercion subject research occurred.
+
+**QA result across 36 planned C1 members:**
+- 18 `validated`;
+- 16 `validated_with_frame_limitation`;
+- 1 `ambiguous_requires_C2_or_hold`;
+- 1 `invalid_or_mismatched_hold`.
+
+**Held without replacement:**
+1. **French Louisiana, 1800** — annual target cannot safely collapse 1800 treaty/title retrocession into effective French possession/administration, which remained Spanish until formal 1803 delivery;
+2. **Duchy of Bavaria, 1800** — the source-native label is wrong for the anchor; Bavaria was an Electorate from 1623 to 1806.
+
+No replacement target is introduced.
+
+The resulting R1.4 queue contains **34** C1 research/re-review rows.
+
+**Frame-limit examples retained rather than normalized away:**
+- Sumerian City-States — polity aggregate;
+- Indus Valley Civilization — civilization/archaeological-cultural frame rather than one sovereign polity;
+- Teotihuacan — urban polity/site with uncertain territorial extent;
+- Later Mayan City-States — multi-polity aggregate;
+- Ethiopian Empire 1800 — imperial identity with fragmented effective sovereignty during Zemene Mesafint;
+- Incense Route / Mongol Yam — mobile networks;
+- Inuit / Yaghan — broad community-region frames;
+- Portuguese Colonies — aggregate of multiple jurisdictions;
+- Cuzco 1300 — site/incipient polity, not mature Inca Empire.
+
+**Consequence:** R1.4 may research only the 34 frozen queue members. Identity/time/frame failure remains part of the release evidence package; no post-evidence substitution is permitted.
+
+**Durable artifacts:**
+- `programmes/r1/c0_register.json`
+- `programmes/r1/identity_qa.json`
+- `programmes/r1/06_IDENTITY_QA.md`
+- `programmes/r1/subject_research_queue.json`
