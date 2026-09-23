@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE R1 — core contract frozen; target-frame freeze in progress; no new R1 subject research yet**
+**Execution state:** **ACTIVE R1 — Core Contract and target frame frozen; C0/identity QA is next; no new R1 subject research has started yet**
 
 ## Direction after H2
 
@@ -247,8 +247,8 @@ R1 is not another architecture experiment.
 
 Current programme:
 1. Core Contract v1 — **frozen after adversarial review**;
-2. target-frame freeze — **active**;
-3. C0 construction / identity QA;
+2. target-frame freeze — **completed**;
+3. C0 construction / identity QA — **next**;
 4. C1 research;
 5. selective C2;
 6. release-level QC and adversarial replay;
@@ -270,7 +270,7 @@ Setup adversary tightened R1 to:
 - no new backend/platform work;
 - mandatory midpoint stop review.
 
-Historical subject research remains blocked until the exact R1.2 target frame is frozen.
+Historical subject research is now gated only by C0 construction and identity/time QA for the planned C1 targets; the R1.2 target frame is frozen and immutable.
 
 Durable decision: D-073.  
 Programme files: `programmes/r1/`.
