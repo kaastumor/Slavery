@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE R1 — Core Contract and target frame frozen; C0/identity QA is next; no new R1 subject research has started yet**
+**Execution state:** **ACTIVE R1 — Core Contract, target frame and 34-row subject queue frozen; first C1 research tranche is next**
 
 ## Direction after H2
 
@@ -248,8 +248,8 @@ R1 is not another architecture experiment.
 Current programme:
 1. Core Contract v1 — **frozen after adversarial review**;
 2. target-frame freeze — **completed**;
-3. C0 construction / identity QA — **next**;
-4. C1 research;
+3. C0 construction / identity QA — **completed**;
+4. C1 research — **next / bounded tranches**;
 5. selective C2;
 6. release-level QC and adversarial replay;
 7. immutable candidate release + simple Atlas surface;
@@ -274,6 +274,30 @@ Historical subject research is now gated only by C0 construction and identity/ti
 
 Durable decision: D-073.  
 Programme files: `programmes/r1/`.
+
+## R1.3 identity/time QA — completed
+
+No slavery/coercion subject research occurred in R1.3.
+
+Outputs:
+- `programmes/r1/c0_register.json` — 65 new C0 targets;
+- `programmes/r1/identity_qa.json` — all 36 planned C1 rows;
+- `programmes/r1/subject_research_queue.json` — 34 research-ready rows;
+- `programmes/r1/06_IDENTITY_QA.md`.
+
+QA states:
+- 18 validated;
+- 16 validated with frame limitation;
+- 1 ambiguous/hold;
+- 1 invalid/mismatched hold.
+
+Held without replacement:
+- French Louisiana 1800;
+- Duchy of Bavaria 1800.
+
+The programme deliberately preserves source-native target labels/types while adding an R1 effective frame where needed. No raw source classification was silently rewritten.
+
+Decision: D-075.
 
 ## Remaining bounded project-system debt
 
