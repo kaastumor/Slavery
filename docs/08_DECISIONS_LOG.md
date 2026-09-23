@@ -705,3 +705,35 @@ This does **not** authorize:
 **Guardrail:** The deterministic sample must be frozen before slavery/coercion research. Missing/weak coverage never becomes historical absence. A positive result may authorize at most one further bounded corpus-scale test and cannot automatically revive the Atlas platform.
 
 **Durable setup:** `experiments/coverage-value/` and issue #148.
+
+
+## D-065 — COV-001 validates only a narrow flat coverage-corpus thesis
+**Date:** 2026-09-23  
+**Status:** accepted project-direction decision from COV-001 / issue #148
+
+**Decision:** COV-001 survives narrowly. Preserve the hypothesis that an explicitly incomplete, auditable global place/time **coverage corpus** can create reusable research value. Do not reinterpret this as a reversal of D-063 or as evidence for renewed Atlas application/platform expansion.
+
+**Evidence:**
+- deterministic sampling was frozen before historical research;
+- 21 polity-year cells plus four non-polity challenge contexts were researched under a bounded source ladder;
+- the frozen corpus contained 8 bounded-supported, 2 materially disputed and 15 researched-inconclusive rows;
+- a strong ordinary matrix reached parity for simple overview;
+- after result-adversary downgrade, 4/6 fixed tasks retained material value: law/practice separation, network/territorial-inference separation, global-handbook coverage visibility and unresolved/gap visibility;
+- terminology/category query value was not counted because an ordinary spreadsheet could reproduce most of it cheaply;
+- specialist narrative beat the index on deep Champa historiography;
+- SlaveVoyages beat the index on voyage-level/quantitative capability;
+- all four non-polity challenge cells remained inconclusive, limiting any claim to comprehensive global coverage.
+
+**Interpretation:** The surviving value is accumulation and reuse of explicit coverage state, provenance, inference boundaries and abstentions across many targets. It does not depend on the former Atlas stack. A flat table/JSON/CSV is sufficient for the demonstrated contribution.
+
+**Consequences:**
+- D-063 remains fully in force for product/platform work;
+- v0.6.1 remains canonical;
+- COV-001 rows remain experimental/non-canonical;
+- no H3 bulk research is authorized;
+- no database/API/frontend/infrastructure horizon is authorized;
+- no claim of literal historical completeness is authorized;
+- one future bounded corpus-scale experiment may be considered only to test reuse/value versus research-review-update cost at materially larger scale;
+- that next experiment is **not authorized by this decision**.
+
+**Durable result:** `experiments/coverage-value/11_FINAL_RESULT.md`.
