@@ -76,6 +76,18 @@ def semantic_diagnostics(features):
         "Components":dict(sorted(Counter(type(r.get("Components")).__name__ for r in relations).items())),
     }
 
+    def split_semicolon(value):
+        if not _present(value):
+            return []
+        return [part.strip() for part in str(value).split(";") if part.strip()]
+
+    member_of_arities=Counter(len(split_semicolon(r.get("MemberOf"))) for r in rows if _present(r.get("MemberOf")))
+    component_arities=Counter(len(split_semicolon(r.get("Components"))) for r in rows if _present(r.get("Components")))
+    nested_composite_samples=[
+        r for r in rows
+        if _present(r.get("MemberOf")) and _present(r.get("Components"))
+    ][:20]
+
     adjacency=Counter()
     overlap_examples=[]
     gap_examples=[]
@@ -114,6 +126,9 @@ def semantic_diagnostics(features):
             str(r.get("Name","")).startswith("(") and str(r.get("Name","")).endswith(")")
             for r in relations
         ),
+        "member_of_arity_counts":dict(sorted(member_of_arities.items())),
+        "component_arity_counts":dict(sorted(component_arities.items())),
+        "nested_composite_samples":nested_composite_samples,
         "relation_samples":relation_samples,
         "same_name_interval_adjacency":dict(sorted(adjacency.items())),
         "same_name_overlap_examples":overlap_examples,
