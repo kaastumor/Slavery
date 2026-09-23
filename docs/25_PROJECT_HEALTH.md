@@ -48,7 +48,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | A-010 | The value of the flat coverage corpus compounds faster than review/update burden as it scales | current row-by-row workflow not demonstrated; broader systematic-coverage economics remain open | COV-002 found persistent reuse and strong static compression, but its maintenance gate does not discriminate the economics of tiered/versioned/batch-curated coverage. ADV-001 limits the stop to the tested workflow. |
 | A-011 | Tiering breadth, compact evidence and selective depth can make systematic coverage methodologically viable without default deep research for every target | survives with stronger QC | COV-004: escalation replay passed at 1/6 false negatives only after adding source-quality failure as a C2/review trigger; non-polity challenge and real update mechanics also survived. |
 | A-012 | A bespoke Atlas evidence inspector adds material value beyond a competent conventional map + tiered register | rejected at current scale | COV-004 Arm D: 0/4 material gains with identical frozen evidence/geometry; no misleading Atlas inferences. Ordinary map/register presentation remains valid. |
-| A-013 | A real bounded release programme can harden the surviving method better than further miniature architecture experiments | survives two live tranches / R1 midpoint active | Tranche 01 required four semantic corrections; ordinary tranche 02 required none after fresh synthesis but still exposed two dependency/provenance normalizations. All 16 researched C1 rows were replayed and 3 earned C2 packets completed. | Run the mandatory midpoint stop review before any tranche 03; 100% C1 replay remains active under Core v1 §19. |
+| A-013 | A real bounded release programme can harden the surviving method better than further miniature architecture experiments | survives midpoint / one minimal closure tranche authorized | Tranche 01 required four semantic corrections; ordinary tranche 02 required none after fresh synthesis but still exposed two dependency/provenance normalizations. Midpoint finds one 3-row balance closure is proportionate; quota-fill to 36 is not. | Freeze/research only Tamna + Pandya + Chimu, replay 100%, then stop subject expansion and enter release QC unless a new stop condition appears. |
 
 ## Standing risk register
 
@@ -842,3 +842,47 @@ This is not a new ontology or source rule.
 Combined R1 subject research now covers 16 C1 rows across two bounded tranches.
 
 R1 therefore enters its mandatory midpoint stop review before any tranche 03. The review must decide whether to stop smaller, continue one bounded tranche, or change course. No new schema, ontology, platform feature or production migration is justified by tranche 02.
+
+
+### HC-012 — R1 mandatory midpoint stop review — 2026-09-24
+
+Decision: **CONTINUE ONCE — THREE-ROW BALANCE CLOSURE; THEN RELEASE QC.**
+
+Durable review: programmes/r1/16_MIDPOINT_STOP_REVIEW.md / issue #168.
+
+#### Evidence at midpoint
+
+Sixteen C1 rows have been researched under Core Contract v1:
+- 4 classified/bounded-supported;
+- 12 inconclusive;
+- 3 C2 packets completed;
+- 16/16 internally adversarially replayed.
+
+Tranche 01 required four semantic corrections. Tranche 02 required none after fresh synthesis but still required two dependency/provenance normalizations.
+
+Language/access confidence across the 16 rows ranges from high to limited. Gaps are material in several contexts but do not dominate the entire release. Source/version recovery is functioning and dependency grouping is repeatedly useful.
+
+#### Balance pressure
+
+Current researched polity-sector counts are A2/C3/D2/F2; B and E are absent.
+
+Adding only B and E produces 11 polity rows with C=3/11 (27.3%), failing the <=25% balance rule.
+
+The deterministic minimum closure from the frozen queue is:
+- Tamna (F);
+- Pandya Empire (E);
+- Chimu Empire (B).
+
+Projected counts: A2/B1/C3/D2/E1/F3 = 12 polity rows, maximum 25%.
+
+#### Burden/value judgment
+
+One three-row closure is proportionate because it buys a concrete declared-frame property. Continuing toward the 36-row ceiling is not justified by row count, completeness desire or current evidence.
+
+The repeated cross-history value remains methodological/release structural: selected-year applicability, bounded inference, dimension separation, source fitness/dependency and explicit abstention.
+
+No feature-friction threshold has been crossed; no bespoke Atlas/platform work is authorized.
+
+#### Boundary
+
+Authorize one closing C1 tranche of Tamna, Pandya and Chimu only. Freeze membership before subject research, prohibit substitution and replay 100%. Afterward, proceed to R1.6 release QC unless a new hold/rework condition emerges.

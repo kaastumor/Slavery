@@ -1194,3 +1194,38 @@ This is execution of Core Contract v1, not a new historical classification rule 
 - `programmes/r1/c1_tranche_02_final.json`;
 - `programmes/r1/15_C1_TRANCHE_02_ADVERSARIAL_REPLAY.md`;
 - `tests/test_r1_c1_tranche02.py`.
+
+
+## D-078 — Midpoint: authorize one minimal three-row balance-closing tranche, then stop subject expansion
+**Date:** 2026-09-24
+**Status:** accepted R1 midpoint programme decision
+
+**Decision:** After 16 researched C1 rows, choose **CONTINUE ONCE** rather than stop immediately or expand toward the 36-row ceiling.
+
+The only additional C1 subject research authorized is a three-row tranche frozen from the existing D-075 queue:
+- Tamna — 500 CE — sector F;
+- Pandya Empire — 1300 CE — sector E;
+- Chimu Empire — 1300 CE — sector B.
+
+**Reason:** The current researched polity subset lacks sectors B and E. Adding only one B and one E row would leave sector C at 3/11 = 27.3%, above the R1 25% balance ceiling. Adding the earliest remaining neutral-QA validated polity by frozen queue order (Tamna, sector F) yields 12 researched polity rows with counts A2/B1/C3/D2/E1/F3, so the maximum sector share is exactly 25%.
+
+This selection is based on the frozen sampling/QA frame, not slavery/coercion evidence.
+
+**Midpoint findings:**
+- bounded claims survive real use only with active temporal/inference/source controls;
+- language/access limitations are material but do not dominate all results;
+- source/version recovery is working, while source-family dependency normalization remains necessary;
+- recurring cross-history value lies in safe temporal/inference/abstention/provenance structure;
+- 100% replay remains active under Core v1 §19;
+- research/review burden supports one small closure tranche, not quota-filling to 36;
+- no repeated friction has earned a software/Atlas feature test.
+
+**Consequences:**
+- tranche membership must be frozen before subject research;
+- no target substitution;
+- 100% C1 replay and 100% C2 replay;
+- after the three-row tranche, no further C1 research tranche is authorized by default;
+- move next to R1.6 release QC unless the closing tranche creates a hold/rework condition;
+- v0.6.1 remains canonical.
+
+**Durable review:** programmes/r1/16_MIDPOINT_STOP_REVIEW.md.

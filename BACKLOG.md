@@ -9,77 +9,49 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE R1 / MIDPOINT BOUNDARY — Tranche 02 complete; midpoint stop review next
+# ACTIVE R1 / MIDPOINT DECISION — one final three-row C1 closure tranche authorized
 
-**Parent programme:** #159  
-**Completed research tranches:** #163, #166  
-**Current stage:** **R1 MIDPOINT STOP REVIEW — no tranche 03 authorized**  
-**Decisions:** D-076, D-077
+**Parent programme:** #159
+**Midpoint review:** #168
+**Decision:** D-078
+**Current stage:** **R1 midpoint closure — freeze final 3-row subject tranche before research**
 
-R1 remains the first real research/release programme after COV-001→004.
+Midpoint disposition: **CONTINUE ONCE**, then stop subject expansion and enter release QC unless a new stop condition appears.
 
-## Research completed under Core Contract v1
+## Why exactly three rows
 
-### Tranche 01 — stress/calibration
-- 10 frozen C1 rows;
-- 10/10 internally adversarially replayed;
-- 2/2 earned C2 packets completed;
-- final: 3 classified, 7 inconclusive;
-- replay found four material release-safety corrections.
+After tranches 01–02, 16 C1 rows are researched. The researched polity subset covers sectors A/C/D/F but not B/E.
 
-### Tranche 02 — ordinary operational
-- 6 frozen C1 rows;
-- 6/6 internally adversarially replayed;
-- 1/1 earned C2 packet completed;
-- final: 1 classified, 5 inconclusive;
-- 0 semantic release corrections after fresh synthesis;
-- 2 source-dependency/provenance normalizations during replay;
-- no target substitution.
+Stopping now would require a narrower non-systematic scope. Adding only B+E would leave sector C above the 25% polity-sector balance ceiling.
 
-Combined researched C1 so far:
-- 16 rows total;
-- 4 classified / bounded-supported;
-- 12 inconclusive for the exact frozen target/year/frame question;
-- 0 final disputed;
-- 3 C2 packets completed.
+The minimum neutral closure from the already frozen queue is:
+- Tamna — 500 CE — sector F — first remaining validated new-polity row by queue order;
+- Pandya Empire — 1300 CE — sector E — validated legacy promotion;
+- Chimu Empire — 1300 CE — sector B — validated legacy promotion.
 
-These proportions are **not prevalence, not an expected release yield, and not a progress score against the R1 ceiling**.
+Projected researched polity balance after those rows:
+A2 / B1 / C3 / D2 / E1 / F3 — maximum share **25%**.
 
-## Replay rule
+Selection is based only on frozen target/QA/balance metadata, not subject evidence.
 
-Core Contract v1 §19 is active at the stronger setting.
+## Hard rules for the closing tranche
 
-Tranche 01 produced material release-safety corrections in 4/10 replayed C1 rows, above the contract's 10% trigger. Therefore:
-- remaining R1 candidate C1 work receives **100% adversarial replay** unless a later explicit decision supersedes this;
-- 100% C2 replay remains required;
-- no source-count or row-count shortcut replaces review.
+- freeze exact membership before subject research;
+- no substitution;
+- Core Contract v1 unchanged;
+- 100% C1 adversarial replay under §19;
+- 100% C2 replay;
+- no schema/ontology/intensity change;
+- no feature/platform work;
+- v0.6.1 unchanged.
 
-This is execution of the frozen Core Contract, not a new historical classification rule.
+## After the closing tranche
 
-## Current execution boundary
+Do **not** open another subject-research tranche merely because queue rows remain.
 
-**Do not start tranche 03.**
+Move to R1.6 release-level QC, source-dependency/geometry/reconstructibility checks and candidate-release assembly unless the closing tranche creates a hold/rework condition.
 
-R1 has reached its mandatory midpoint stop review after 16 researched C1 rows. The next action is to evaluate:
-- whether bounded claims are surviving adversarial review;
-- whether language/access gaps are dominating results;
-- whether source recovery/reconstruction is working;
-- whether the cross-history structure is genuinely useful;
-- whether research/review burden is proportionate;
-- whether the candidate release should stop smaller;
-- whether any repeated friction has earned a feature test.
-
-A next research tranche requires a new explicit authorization from that midpoint review.
-
-## Still unchanged
-
-- frozen R1 subject queue remains 34 rows;
-- French Louisiana 1800 and Duchy of Bavaria 1800 remain held without replacement;
-- no target substitution;
-- v0.6.1 remains canonical;
-- no production migration;
-- no bespoke Atlas/platform work;
-- no bulk automated research.
+R1 subject research should therefore stop at **19 C1 rows maximum**, not the 36-row ceiling.
 
 ---
 

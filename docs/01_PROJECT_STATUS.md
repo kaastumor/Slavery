@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE R1 / MIDPOINT — tranche 02 complete; mandatory midpoint stop review next; tranche 03 not authorized**
+**Execution state:** **ACTIVE R1 / MIDPOINT DECISION — one final three-row balance-closing C1 tranche authorized; then release QC**
 
 ## Direction after H2
 
@@ -398,6 +398,31 @@ Durable artifacts:
 - `programmes/r1/15_C1_TRANCHE_02_ADVERSARIAL_REPLAY.md`
 
 Decision: D-077.
+
+## R1 midpoint stop review — CONTINUE ONCE
+
+Issue #168 completed the mandatory midpoint assessment after 16 researched C1 rows.
+
+Result: do not stop at 16 if R1 is to retain its frozen systematic release claim, and do not expand toward the 36-row ceiling.
+
+The current researched polity subset lacks neutral sectors B and E. The smallest frozen-queue closure that also respects the <=25% sector ceiling is exactly three validated polity rows:
+- Tamna 500 CE (F);
+- Pandya Empire 1300 CE (E);
+- Chimu Empire 1300 CE (B).
+
+Projected researched polity counts become A2/B1/C3/D2/E1/F3, maximum 25%.
+
+Midpoint evidence also finds:
+- Core v1 is useful across unrelated histories;
+- language/access gaps are material but not globally dominant;
+- source/version recovery works, with dependency normalization still necessary;
+- review burden supports one small closure tranche, not quota fill;
+- no software/Atlas feature has met the friction threshold.
+
+After this one closing tranche, R1 moves to release QC unless the tranche creates a hold/rework condition.
+
+Decision: D-078.
+Durable review: programmes/r1/16_MIDPOINT_STOP_REVIEW.md.
 
 ## Remaining bounded project-system debt
 
