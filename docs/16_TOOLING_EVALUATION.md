@@ -1,6 +1,8 @@
 # Tooling Evaluation — Phase 1
 
-**Status:** research/evaluation only. Nothing in this document changes the canonical methodology, ontology, schema, release model or public architecture. Any such change still requires the normal Decisions Log process.
+**Status:** historical evaluation snapshot. Current tooling eligibility and adoption triggers live in `docs/22_TOOLING_EVALUATION_TRIGGERS.md`.
+
+Nothing in this document changes the canonical methodology, ontology, schema, release model or public architecture. Historical “strong candidate” wording records what was worth testing at the time; it is not current authorization to adopt a tool. Any architecture change still requires a demonstrated trigger and the normal Decisions Log process.
 
 **Scope of this pass:** tools that can materially affect evidence quality or research reproducibility before frontend implementation.
 
