@@ -9,83 +9,72 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# IDLE / PRESERVATION — COV-002 completed with STOP
+# ACTIVE — COV-003 tiered systematic coverage (#155)
 
-COV-002 / issue #151 tested the final internally justified corpus-scale question:
+ADV-001 / D-068 reopened one narrow methodological hypothesis:
 
-> Does coverage-corpus value grow faster than research, review and update burden as the corpus becomes materially larger?
+> Can a tiered, versioned, batch-curated coverage architecture preserve the demonstrated cross-history value without reproducing COV-002's row-by-row research/maintenance model?
 
-Final disposition:
+The sponsor explicitly authorized COV-003.
 
-> **STOP FURTHER AUTOMATIC SCALING; PRESERVE THE COMPACT COVERAGE-REGISTER PATTERN**
+## Frozen architecture
 
-Durable result:
-- `experiments/coverage-scale/13_FINAL_RESULT.md`
-- HC-006 in `docs/25_PROJECT_HEALTH.md`
-- D-067 in `docs/08_DECISIONS_LOG.md`
+- **C0:** target/research-state register; no slavery conclusion required.
+- **C1:** compact evidence/coverage record for a preregistered subset.
+- **C2:** selective deep packet only when a frozen escalation rule justifies it.
+- flat JSON/CSV/Markdown only;
+- immutable/as-of experiment releases;
+- no Atlas product/database/API/frontend work.
 
-## What survived
+## Frozen sample
 
-At N=37:
-- compact/full coverage forms retained material reuse value over the strongest ordinary matrix on 3/4 cross-cell tasks;
-- the compact register matched the full row on all six fixed tasks;
-- compact static review surface was ~60.5% of the full row.
+Pinned Cliopatria source unchanged.
 
-This means a **small coverage register** remains useful when a concrete comparative research task needs:
-- research state;
-- bounded conclusion;
-- required abstention;
-- law/practice separation;
-- network/territorial warning;
-- global-handbook coverage;
-- unresolved reason;
-- source links;
-- access/language warning.
+Three deterministic batches:
+- `-500:F`
+- `1300:E`
+- `-500:E`
 
-## Why scaling stops
+Total:
+- 24 new C0 targets;
+- 12 preregistered C1 research targets;
+- 12 C0-only targets that cannot be promoted after evidence inspection;
+- 6 deterministic identity-validation probes;
+- at most 3 C2 escalations after C1 freeze.
 
-The preregistered maintenance-economy gate failed.
-
-Six deterministic update shocks:
-- 3 produced genuine new/contextual specialist evidence;
-- 3 produced no acceptable new source.
-
-In every material update, the compact register and full row required the same number of local review edits. The 0/0 rows were treated as neutral rather than fake savings.
-
-The full row also failed to earn its extra complexity over the compact register.
-
-COV-002 therefore does **not** justify:
-- comprehensive global ingestion through the tested row-by-row workflow;
-- another autonomous scale experiment from project momentum;
-- routine production of full detailed coverage rows across world history.
-
-Post-COV-002 adversarial audit ADV-001/#153 found that this stop must **not** be generalized into a finding that systematic comprehensive coverage itself is uneconomic or worthless. COV-002 did not test tiered, versioned, batch-curated coverage economics.
-
-Durable correction:
-- `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.md`
-- HC-007 in `docs/25_PROJECT_HEALTH.md`
-- D-068 in `docs/08_DECISIONS_LOG.md`
+Durable setup:
+- `experiments/coverage-tiered/00_PROTOCOL_PREREGISTERED.md`
+- `experiments/coverage-tiered/01_SETUP_ADVERSARY.md`
+- `experiments/coverage-tiered/02_SAMPLE_FREEZE.md`
+- `experiments/coverage-tiered/sample.json`
 
 ## Current execution state
 
-**IDLE / PRESERVATION.**
+**C1 BATCH RESEARCH ACTIVE; C1 NOT YET FROZEN.**
 
-Future corpus expansion requires a **new explicit value hypothesis plus a bounded cost model** whose expected value justifies research/review/update burden.
+The next justified work is only:
+1. freeze six C0 identity-validation results;
+2. freeze the three shared-source packets;
+3. freeze the twelve C1 outcomes;
+4. evaluate source reuse against the COV-002 row-centric baseline;
+5. apply the preregistered C2 escalation rule;
+6. test versioned maintenance, coverage/bias function and emergent queries;
+7. adversarially disposition the result.
 
-A real external consumer/use case is one valid trigger. A preregistered methodological objective—such as bias-resistant systematic coverage—may also be valid, but only if it tests a different workflow than COV-002's row-by-row expansion and does not use record count as the success metric.
+## Hard boundary
 
-Internal momentum, a prettier map, or undifferentiated record-count growth is not a trigger.
+COV-003 is not comprehensive ingestion.
 
-## Still explicitly not authorized
-
-- H3 bulk/global research;
-- comprehensive slavery ingestion;
+Still not authorized:
+- research beyond the 12 frozen C1 targets except the <=3 frozen C2 escalations and 3 maintenance searches;
+- promotion of C0-only targets because an interesting source appears;
 - canonical release changes;
 - M2 production migration;
-- Atlas frontend/map/product expansion;
-- new DB/API/search/vector/RAG/graph infrastructure;
-- autonomous bulk-research workers;
-- claims of literal historical completeness.
+- Atlas/frontend/map/platform work;
+- autonomous successor experiment;
+- literal “all known history” claims.
+
+COV-003 ends at its own gate.
 
 ---
 
