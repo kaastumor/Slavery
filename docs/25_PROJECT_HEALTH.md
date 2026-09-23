@@ -45,7 +45,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | A-007 | A serial issue-driven autonomous worker can create value without roadmap drift | survives only as a bounded gate mechanism / idle | M1/M2/H2 produced useful corrections, but H2 triggered the stop rule. No autonomous execution runway is justified in preservation state. |
 | A-008 | The full interactive Atlas platform is the best form for the demonstrated contribution | rejected for active expansion | H2 did not show a repeatable material advantage for the corpus/method over a strong baseline, and the thin view did not materially beat the corpus in any case. Preserve existing artifacts; do not expand the platform. |
 | A-009 | A systematically assembled global historical coverage corpus may have value distinct from Atlas representation/UI | survives narrowly / scale economics unresolved | COV-001 found robust material value on 4/6 cross-cell tasks after adversarial downgrade, while specialist narrative and SlaveVoyages remained superior in their domains. The value lives in a flat coverage corpus, not Atlas infrastructure. |
-| A-010 | The value of the flat coverage corpus compounds faster than review/update burden as it scales | not demonstrated strongly enough for systematic scaling | COV-002 found persistent cross-cell reuse and strong static compression, but the preregistered maintenance-economy gate failed. Preserve the compact register pattern; do not start comprehensive expansion. |
+| A-010 | The value of the flat coverage corpus compounds faster than review/update burden as it scales | current row-by-row workflow not demonstrated; broader systematic-coverage economics remain open | COV-002 found persistent reuse and strong static compression, but its maintenance gate does not discriminate the economics of tiered/versioned/batch-curated coverage. ADV-001 limits the stop to the tested workflow. |
 
 ## Standing risk register
 
@@ -82,7 +82,8 @@ Record meaningful outcomes, including no-value results.
 | V-011 | Has the current full application/platform form earned its maintenance cost? | unproven / simplify | Strong correctness evidence exists, but no external user-task evidence shows the full product materially outperforms a simpler corpus/method + GIS/model workflow | Make corpus + thin atlas the working identity; full platform must re-earn expansion. |
 | V-012 | Does the corpus/method, then a minimal thin view, materially outperform the strongest competent baseline on difficult historical reasoning? | **PARITY / threshold failure** | Three preregistered cases: B materially improved A only for the Mexica category case; repaired C did not materially improve B in any case under the fixed rule | Trigger D-062 kill rule: stop active Atlas expansion; preserve methodology/corpus/audit artifacts. |
 | V-013 | Does preassembled global coverage itself create value beyond narrative handbooks + ordinary research/matrices? | **NARROW VALUE / survives** | COV-001: 4/6 fixed cross-cell tasks retained material value after result adversary; basic overview reached matrix parity; terminology advantage was downgraded; specialist narrative and SlaveVoyages won the negative controls. | Preserve the flat coverage-corpus thesis; do not reopen Atlas product expansion. Next uncertainty is reuse/maintenance economics at larger scale. |
-| V-014 | Does corpus reuse value grow faster than research/review/update burden, and can a compact register preserve the gain? | **MIXED / STOP SCALE** | COV-002: reuse survives at N=37 and compact R is ~60.5% of F's static review surface, but 0 material maintenance shocks met the <=70% R/F update threshold; F also did not earn its extra complexity. | Return to preservation; use compact register only for concrete externally justified tasks. |
+| V-014 | Does corpus reuse value grow faster than research/review/update burden, and can a compact register preserve the gain? | **MIXED / STOP TESTED WORKFLOW** | COV-002: reuse survives at N=37 and compact R is ~60.5% of F's static review surface, but the maintenance gate failed under its frozen metric. ADV-001 shows that failure cannot be generalized to all systematic-coverage architectures. | Preserve compact register pattern; no automatic scaling. |
+| V-015 | Does COV-002 justify rejecting systematic comprehensive coverage as a project direction? | **NO — inference overreach** | ADV-001/#153: scope mismatch, non-discriminating 4/6 update gate after three neutral shocks, atom-granularity sensitivity, unmeasured batch/versioned economics and demand-bias risk. | Keep project idle, but leave tiered/versioned/batch-curated systematic coverage as an open hypothesis. |
 
 ## Health-check history
 
@@ -491,3 +492,60 @@ A compact coverage register is useful for real comparative work, but systematic 
 The project returns to **IDLE / preservation**.
 
 Future expansion requires a concrete external use case, consumer or research question that pays for the curation burden. “Completeness” alone is not sufficient.
+
+
+### HC-007 — Completeness-inference correction — 2026-09-23
+
+Decision: **NARROW THE COV-002 STOP — DO NOT TREAT IT AS A REJECTION OF SYSTEMATIC COVERAGE IN GENERAL.**
+
+Durable audit: `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.md` / issue #153.  
+Direction correction: D-068.
+
+#### What the audit attacked
+
+The post-COV-002 statement:
+
+> “Systematically researching all known history purely in pursuit of completeness is not justified by the evidence we have.”
+
+#### Result
+
+That formulation overstates what COV-002 tested.
+
+COV-002 legitimately supports:
+- no automatic continuation of its row-by-row expansion workflow;
+- no default global F-style detailed row;
+- preservation of the compact register pattern.
+
+It does not establish that:
+- tiered global target/research coverage is uneconomic;
+- versioned/as-of reference releases are uneconomic;
+- batch/source-centric research cannot reduce marginal cost;
+- comprehensive coverage has no option/reference/bias-correction value.
+
+#### Maintenance-gate problem
+
+The preregistered maintenance requirement was R <=70% of F update surface in >=4/6 shocks.
+
+Three shocks yielded no acceptable new source and were later treated as neutral 0/0 rather than savings wins.
+
+Under that interpretation, at most three rows could qualify, so the 4/6 gate became impossible to pass.
+
+Further, each rich F source object and each bare R source link counted as one source/citation atom, making the observed 2-vs-2 updates sensitive to atom granularity.
+
+This does not prove R has favorable long-run maintenance economics. It does mean the maintenance FAIL cannot settle the broader completeness thesis.
+
+#### Bias correction
+
+Requiring an external consumer/funded use case as the only future trigger is not methodologically neutral. It can favor already-visible, well-funded, well-digitized histories and recreate a demand-density analogue of the archive-density bias the project seeks to resist.
+
+#### Corrected state
+
+Project remains **IDLE / preservation**.
+
+No new corpus-growth experiment is authorized.
+
+A future evaluation may be triggered by:
+- a concrete external user/consumer/research task; or
+- an explicitly authorized methodological hypothesis such as bias-resistant systematic coverage.
+
+Any such evaluation must use a new cost/value model rather than repeat COV-002.
