@@ -13,7 +13,7 @@ This file answers **what is justified to work on next**.
 
 **Issue:** #159  
 **Decision:** D-073  
-**Current stage:** **R1.3 — construct C0 release register and run identity/time QA before C1 subject research**
+**Current stage:** **R1.4 — first bounded C1 research tranche; subject queue frozen at 34 rows**
 
 R1 is the first real research/release programme after COV-001→004.
 
@@ -27,14 +27,19 @@ R1 is the first real research/release programme after COV-001→004.
 
 ## Current task
 
-Build the release-facing C0 register from the frozen frame and validate identity/time state for every planned C1 target before subject research.
+Run the first bounded C1 research tranche from the frozen 34-row subject queue.
 
-Target frame is frozen in:
-- `programmes/r1/target_frame.json`
-- `programmes/r1/05_TARGET_FRAME_FREEZE.md`
-- D-074
+R1.3 is complete:
+- 65-row release-facing C0 register materialized;
+- all 36 planned C1 rows received neutral identity/time/frame QA;
+- 34 rows are research-ready;
+- French Louisiana 1800 and Duchy of Bavaria 1800 are held without replacement.
 
-No target substitution is permitted after subject evidence is inspected.
+Frozen controls:
+- D-074 target frame;
+- D-075 subject-research queue;
+- Core Contract v1;
+- no target substitution.
 
 ## R1 ceilings — not quotas
 
