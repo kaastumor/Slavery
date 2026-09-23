@@ -1229,3 +1229,48 @@ This selection is based on the frozen sampling/QA frame, not slavery/coercion ev
 - v0.6.1 remains canonical.
 
 **Durable review:** programmes/r1/16_MIDPOINT_STOP_REVIEW.md.
+
+
+## D-079 — Accept final R1 C1 closure tranche and stop subject-research expansion
+**Date:** 2026-09-24
+**Status:** accepted R1 programme checkpoint decision
+
+**Decision:** Accept the final internally adversarially reviewed three-row midpoint closure tranche and end R1 C1 subject-research expansion at **19 researched C1 rows**.
+
+Move next to R1.6 release-level QC and candidate-release assembly.
+
+**Evidence:**
+- 3/3 closure rows internally adversarially replayed;
+- 1/1 earned C2 packet completed;
+- final closure outcome: 1 classified, 2 inconclusive;
+- no target substitution;
+- no post-synthesis semantic release correction;
+- Pandya legacy `bounded_supported` did not survive fresh Core-v1 target-fit review and resolved to inconclusive after C2;
+- Chimú legacy `researched_inconclusive` became a narrower bounded-supported state-labor/corvée claim;
+- Tamna remained target-specific inconclusive rather than inheriting peninsula-wide Korean slavery evidence.
+
+**R1 subject-research totals:**
+- 19 C1 researched;
+- 5 classified;
+- 14 inconclusive;
+- 0 final disputed;
+- 4 C2 packets completed;
+- 19/19 internally replayed.
+
+**Balance consequence:**
+researched polity sectors are A2/B1/C3/D2/E1/F3. With 12 polity rows, the maximum sector share is 25%, satisfying the frozen R1 balance ceiling that motivated D-078.
+
+**Decision consequences:**
+- no tranche 04;
+- remaining frozen queue rows stay research-state/planned, not absence;
+- Core Contract v1 remains frozen;
+- 100% replay remains part of the R1 candidate provenance;
+- no schema/ontology/intensity-scale change;
+- no new Atlas/platform feature is earned;
+- v0.6.1 remains canonical;
+- next work is release QC, source/dependency/geometry/reconstructibility checks and candidate-release assembly.
+
+**Durable artifacts:**
+- `programmes/r1/c1_tranche_03_final.json`;
+- `programmes/r1/19_C1_TRANCHE_03_ADVERSARIAL_REPLAY.md`;
+- `tests/test_r1_c1_tranche03.py`.

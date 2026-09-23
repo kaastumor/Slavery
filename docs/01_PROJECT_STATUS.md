@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE R1 / MIDPOINT DECISION — one final three-row balance-closing C1 tranche authorized; then release QC**
+**Execution state:** **ACTIVE R1 / R1.6 RELEASE QC — subject research frozen at 19 C1 rows**
 
 ## Direction after H2
 
@@ -423,6 +423,54 @@ After this one closing tranche, R1 moves to release QC unless the tranche create
 
 Decision: D-078.
 Durable review: programmes/r1/16_MIDPOINT_STOP_REVIEW.md.
+
+## R1 closing C1 tranche — completed; subject expansion stopped
+
+Issue #170 executed exactly the three rows authorized by D-078:
+- Tamna 500 CE;
+- Pandya Empire 1300 CE;
+- Chimu Empire 1300 CE.
+
+### Final result
+
+- 3/3 internally adversarially replayed;
+- 1/1 earned C2 packet completed;
+- 1 classified/bounded-supported;
+- 2 inconclusive;
+- 0 substitutions;
+- 0 post-synthesis semantic release corrections.
+
+Tamna remains inconclusive because broader Korean slavery/nobi scholarship cannot be projected onto the distinct island polity.
+
+Pandya remains inconclusive after C2. The project recovered strong thirteenth-century Tamil slavery/dependency evidence and direct contemporary Pandya epigraphy, but not the missing source-level synchronization needed to assign the decisive slave-status records to the frozen Pandya-1300 frame. The earlier legacy positive is therefore not grandfathered.
+
+Chimú becomes bounded-supported for **state labor service/corvée** at the 1300 anchor. The claim remains explicitly narrower than slavery and is qualified by household archaeology that rejects uniform forced-labor models.
+
+### R1 subject-research total
+
+- 19 researched C1;
+- 5 classified;
+- 14 inconclusive;
+- 4 C2 packets completed;
+- 19/19 adversarially replayed.
+
+Researched polity sectors are A2/B1/C3/D2/E1/F3, satisfying the frozen <=25% sector ceiling at 12 polity rows.
+
+D-078 therefore closes successfully without approaching the 36-row ceiling.
+
+**No further C1 subject tranche is authorized.**
+
+R1 now moves to release-level QC and candidate-release assembly. Remaining frozen queue rows remain research-state/planned targets and are not absence claims.
+
+v0.6.1 remains canonical and unchanged.
+
+Durable artifacts:
+- `programmes/r1/c1_tranche_03_selection.json`
+- `programmes/r1/17_C1_TRANCHE_03_PROTOCOL.md`
+- `programmes/r1/c1_tranche_03_final.json`
+- `programmes/r1/19_C1_TRANCHE_03_ADVERSARIAL_REPLAY.md`
+
+Decision: D-079.
 
 ## Remaining bounded project-system debt
 
