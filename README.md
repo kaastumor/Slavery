@@ -26,13 +26,14 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - H2 / #146 value-discrimination pilot: completed;
 - HC-004 / D-063: **STOP ACTIVE ATLAS EXPANSION; PRESERVE METHOD/CORPUS/AUDIT ARTIFACTS**;
 - COV-001 / #148 coverage-value experiment: **completed — NARROW SURVIVE**;
+- COV-002 / #151 scale/reuse experiment: **completed — STOP FURTHER AUTOMATIC SCALING**;
 - execution state: **IDLE / PRESERVATION**; active Atlas expansion remains stopped;
-- a flat auditable coverage-corpus thesis survives narrowly; its scale economics remain untested;
+- compact coverage-register pattern is preserved for concrete task-driven use; systematic scale economics did not pass;
 - no H3/H4 bulk research, production-migration, frontend/platform or infrastructure horizon is authorized.
 
 The H2 pilot found a material corpus-method advantage in one of three cases, below the pre-registered two-case threshold; the repaired thin visual/query arm did not materially beat the corpus/method in any case.
 
-See `experiments/h2-value-discrimination/09_FINAL_RESULT.md` / D-063 for the Atlas stop decision and `experiments/coverage-value/11_FINAL_RESULT.md` / D-065 for the narrow coverage-corpus result.
+See `experiments/h2-value-discrimination/09_FINAL_RESULT.md` / D-063 for the Atlas stop decision, `experiments/coverage-value/11_FINAL_RESULT.md` / D-065 for the narrow corpus-value result, and `experiments/coverage-scale/13_FINAL_RESULT.md` / D-067 for the scale stop decision.
 
 ## Repository boundary
 
