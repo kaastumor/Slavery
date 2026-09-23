@@ -9,89 +9,54 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# IDLE / SPONSOR DECISION BOUNDARY — COV-004 completed with METHOD SURVIVE
+# ACTIVE R1 — Core Hardening + First Systematic Coverage Release
 
-COV-004 / issue #157 was the final architecture-falsification gate in the COV-001→004 sequence.
+**Issue:** #159  
+**Decision:** D-073  
+**Current stage:** **R1.2 — freeze target frame before subject research**
 
-Formal disposition:
+R1 is the first real research/release programme after COV-001→004.
 
-> **METHOD SURVIVE.**
+## Completed inside R1
 
-Product interpretation:
+- programme charter frozen;
+- setup adversary: **PROCEED** after tightening;
+- Core Contract v1 frozen;
+- Core Contract adversary: **SURVIVES AFTER SMALL CORRECTIONS**;
+- dependency-free release-row validator + regression tests added.
 
-> **A boring map/register Atlas survives; bespoke Atlas-specific semantic machinery still does not beat the strongest ordinary map + register baseline.**
+## Current task
 
-Durable result:
-- `experiments/falsification-atlas/27_FINAL_RESULT.md`
-- HC-009 in `docs/25_PROJECT_HEALTH.md`
-- D-072 in `docs/08_DECISIONS_LOG.md`
+Freeze the exact first-release sampling frame:
+- time bands/anchor years;
+- neutral geographic sampling sectors;
+- exact pinned polity candidate source/version;
+- non-polity candidate frame/source;
+- deterministic selectors;
+- new versus legacy-promotion allocation;
+- C1 selection before slavery evidence.
 
-## What survived
+**No new R1 slavery/coercion research is allowed until this freeze is committed.**
 
-### Research method
-- C0 broad target/research-state registration;
-- C1 compact bounded research;
-- selective C2 depth;
-- source-quality failure as an explicit escalation/review trigger;
-- source-to-claim dependency tracking;
-- immutable/as-of releases and explicit later review events.
+## R1 ceilings — not quotas
 
-### Non-polity coverage
-The experimental claim model successfully represented:
-- sites/nodes;
-- institutions/estates;
-- mobile/trading networks;
-- fuzzy community/region frames;
+- MAX 120 C0;
+- MAX 36 C1;
+- MAX 12 C2.
 
-without forcing them into polity polygons.
+Release may stop smaller.
 
-### Real update mechanics
-A frozen 2015-as-of test produced **3/6 genuine 2016–2026 evidence events**. Old snapshots remained auditable while later evidence could be represented as release-bound review/update state.
+## Hard rules
 
-### Atlas presentation
-A conventional world map + evidence register remains useful and compatible with:
-- points;
-- routes;
-- fuzzy/unresolved regions;
-- visible C0/unresearched targets;
-- citations and bounded claims.
-
-That is still a legitimate **Historical Slavery Atlas** presentation.
-
-## What did not survive
-
-### C1 safety without stronger QC
-Masked replay found **1/6** material false negatives among supposedly non-escalated C1 rows: Chandela's positive event proposition exceeded the quality of its decisive citation.
-
-Therefore production/public C1 requires source-quality escalation/review.
-
-### Bespoke Atlas UI
-The project-specific Atlas inspector materially beat the strong conventional map+register baseline on **0/4** frozen spatial/temporal tasks.
-
-The map survives. Extra custom semantic UI does not currently earn separate infrastructure.
-
-## Current execution state
-
-**IDLE.**
-
-COV-004 deliberately creates no fifth architecture experiment.
-
-The next project-level choice is now sponsor-level:
-
-1. preserve the project at the current evidence/method state; or
-2. explicitly authorize the first **real lean systematic coverage programme** using C0/C1/selective-C2 plus an ordinary map/register atlas surface.
-
-If option 2 is authorized, it must be operated as a research/release programme with QC and changelogs, not another architecture experiment and not a bulk automated ingestion.
-
-## Still not authorized
-
-- comprehensive world-history C1 completion;
-- global C2 completion;
-- automated mass research;
-- production database/schema migration from these experimental rows;
-- bespoke Atlas application/platform rebuild;
-- claims of literal completeness;
-- replacing specialist scholarship or specialist datasets.
+- v0.6.1 remains canonical until an explicit release decision;
+- candidate research release != independently reviewed/public release;
+- at least 50% of C1 gets adversarial replay;
+- all C2 gets adversarial replay;
+- no bulk automated research;
+- no bespoke Atlas/platform work;
+- features arise only from real R1 friction tickets;
+- C0 never means absence;
+- source/language/access limits remain visible.
 
 ---
 
