@@ -42,6 +42,9 @@ jobs:
       - name: Python tests
         run: ./scripts/test-python.sh
 
+      - name: M2 #120 post-M1 relational acceptance
+        run: bash ./scripts/db-test-post-m1-semantics.sh
+
       - name: Non-Atlantic rollback fixtures
         run: ./scripts/db-test-non-atlantic.sh
 
