@@ -996,3 +996,49 @@ Do not reopen bespoke Atlas application/platform work.
 - the next substantive horizon, if explicitly authorized, should be an actual lean research/release programme rather than another architecture prototype.
 
 **Durable result:** `experiments/falsification-atlas/27_FINAL_RESULT.md`.
+
+
+## D-073 — Authorize R1 and freeze Core Contract v1 as the first real release-method profile
+**Date:** 2026-09-23  
+**Status:** accepted programme decision from explicit sponsor authorization / issue #159
+
+**Decision:** Graduate the Historical Slavery Atlas from the COV architecture-experiment sequence into **R1 — Core Hardening + First Systematic Coverage Release**.
+
+R1 is a real research/release programme, not COV-005.
+
+Freeze `programmes/r1/03_CORE_CONTRACT_V1.md` as the binding R1 release-method profile.
+
+Core Contract v1:
+- consolidates existing methodology, source policy, geography rules, release/version rules and demonstrated COV failure modes;
+- does not replace the PostgreSQL/PostGIS target data model;
+- does not change canonical v0.6.1;
+- introduces C0/C1/C2 only as research/release tiers;
+- introduces claim-fitness/source-quality state as a release-review control;
+- requires source-quality failure to trigger deeper review where it makes a positive proposition unsafe;
+- requires language/access limitations and research coverage confidence to remain separate from historical classification;
+- requires at least 50% C1 adversarial replay for the R1 candidate release, 100% C2 replay, and 100% replay for single-decisive-source or limited-source positive claims;
+- preserves immutable/as-of release history and source-to-claim dependencies;
+- keeps the default Atlas surface deliberately simple.
+
+**R1 ceilings, not quotas:**
+- at most 120 C0 targets;
+- at most 36 C1 researched targets;
+- at most 12 C2 deep packets.
+
+**Scope correction from setup adversary:**
+- R1 is pre-1900 by default;
+- contemporary person-level forced-labour data are outside R1;
+- no progress metric may use percentage of row ceiling;
+- candidate research release and independently/publicly reviewed release remain distinct;
+- no new backend/platform work follows from programme authorization.
+
+**Hard sequence:** no new R1 historical subject research before the exact R1.2 target frame and C1 selection are frozen.
+
+**Durable programme setup:**
+- `programmes/r1/00_PROGRAMME_CHARTER.md`
+- `programmes/r1/01_SETUP_ADVERSARY.md`
+- `programmes/r1/03_CORE_CONTRACT_V1.md`
+- `programmes/r1/04_CORE_CONTRACT_ADVERSARY.md`
+- `programmes/r1/core_contract_fixtures.json`
+
+A successful R1 does not automatically authorize R2.
