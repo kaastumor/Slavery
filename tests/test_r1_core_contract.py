@@ -32,6 +32,19 @@ class CoreContractTests(unittest.TestCase):
         }
         self.assertTrue(m.validate_row(row))
 
+    def test_c1_without_sources_fails(self):
+        row = {
+            "tier":"C1","research_stage":"review_complete","classification_outcome":"inconclusive",
+            "bounded_proposition":"Reviewed packet does not establish target-level practice.",
+            "required_abstention":"Do not infer absence.",
+            "temporal_applicability":"unknown","temporal_precision":"broad",
+            "evidence_locus":"target","inference_extent":"target",
+            "language_access_limitations":"unknown","coverage_confidence":"limited",
+            "review_state":"internally_reviewed","release_id":"R1-candidate",
+            "sources":[]
+        }
+        self.assertTrue(m.validate_row(row))
+
     def test_positive_c1_with_production_source_passes(self):
         row = {
             "tier":"C1","research_stage":"review_complete","classification_outcome":"classified",
