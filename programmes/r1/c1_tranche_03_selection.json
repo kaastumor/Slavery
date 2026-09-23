@@ -1,0 +1,37 @@
+[
+  {
+    "target_id": "R1:P:500:F:r1",
+    "target_label": "Tamna",
+    "anchor": "500 CE",
+    "origin": "new_systematic_polity",
+    "qa": "validated",
+    "frame": "island_polity",
+    "sampling_sector": "F",
+    "queue_order": 9,
+    "selection_reason": "midpoint balance closure; first remaining validated new-polity row by frozen queue order"
+  },
+  {
+    "target_id": "R1:L:COV2:1300:E",
+    "legacy_ref": "COV2:1300:E",
+    "target_label": "Pandya Empire",
+    "anchor": "1300 CE",
+    "origin": "legacy_promotion_polity",
+    "qa": "validated",
+    "frame": "polity",
+    "sampling_sector": "E",
+    "queue_order": 25,
+    "selection_reason": "midpoint balance closure; supplies missing frozen polity sector E"
+  },
+  {
+    "target_id": "R1:L:COV2:1300:B",
+    "legacy_ref": "COV2:1300:B",
+    "target_label": "Chimu Empire",
+    "anchor": "1300 CE",
+    "origin": "legacy_promotion_polity",
+    "qa": "validated",
+    "frame": "polity",
+    "sampling_sector": "B",
+    "queue_order": 28,
+    "selection_reason": "midpoint balance closure; supplies missing frozen polity sector B"
+  }
+]
