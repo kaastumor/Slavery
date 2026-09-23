@@ -5,61 +5,70 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **IDLE**
+**Execution state:** **IDLE / PRESERVATION**
 
-## Direction after HC-003
+## Direction after H2
 
-The wide-angle M2 Project Health review chose:
+HC-003 first chose **CONTINUE + SIMPLIFY** and authorized no automatic successor. The sponsor then explicitly authorized H2 / issue #146, the bounded value-discrimination pilot proposed by that review.
 
-**CONTINUE + SIMPLIFY**
+H2 has now completed against its pre-registered threshold.
 
-Durable review: `docs/34_WIDE_ANGLE_PROJECT_REVIEW.md`  
-Direction decision: D-062 in `docs/08_DECISIONS_LOG.md`
+**Current disposition: STOP ACTIVE ATLAS EXPANSION; PRESERVE METHOD/CORPUS/AUDIT ARTIFACTS.**
 
-The project should now be understood primarily as:
+Durable experiment: `experiments/h2-value-discrimination/`  
+Health decision: HC-004 in `docs/25_PROJECT_HEALTH.md`  
+Direction decision: D-063 in `docs/08_DECISIONS_LOG.md`
 
-> an **auditable global/deep-time evidence corpus + comparison method**, with a **thin atlas/query/evidence-inspector surface** only where it demonstrates additional value.
+## What H2 found
 
-The full interactive application/platform is no longer the default project identity or roadmap.
+The pilot compared three real historical questions through:
+1. a strongest competent conventional baseline;
+2. the Atlas corpus/method without bespoke map interaction;
+3. a minimal dependency-free thin query/visual artifact.
+
+The corpus/method produced a material advantage over the baseline in **1 of 3** cases. The thin view produced a material advantage over the corpus/method in **0 of 3** cases under the fixed rule.
+
+That fails the project-level threshold requiring repeatable advantage in at least two independent cases.
+
+The visual arm still showed bounded pedagogical value in making the 1843 law/practice split and the 1475 Caffa control boundary more salient. That is preserved as evidence, but it does not earn another application horizon.
 
 ## What remains durable
 
-- claim-specific source/version provenance and contrary evidence;
-- separation of territorial practice, law, external participation, research coverage and geography;
-- post-M1 semantic separations at experimental maturity;
-- temporal applicability and evidence-locus/inference-extent discipline;
-- complete pinned Cliopatria raw geography infrastructure and tested selected-year resolver;
-- specialist-geometry precedence with explicit provenance;
-- PostgreSQL/PostGIS as research/integrity tooling;
-- exact release reconstruction and immutable release history;
-- adversarial fixtures and revise/correct/re-attack discipline.
+- immutable canonical v0.6.1 and its provenance;
+- M1/M2 methodological corrections and adversarial fixtures;
+- claim-specific source/version/evidence conventions;
+- uncertainty, disagreement and abstention discipline;
+- temporal applicability vs dating precision;
+- evidence locus vs inference extent;
+- separation of law, practice, external participation, research coverage and geography;
+- complete pinned Cliopatria raw geography infrastructure and selected-year resolver experiments;
+- specialist-geometry precedence/provenance work;
+- PostgreSQL/PostGIS implementation and migrations as preserved research/integrity artifacts;
+- release reconstruction and audit history;
+- H2 evidence packets, baseline/corpus/thin-view comparison and negative result.
 
-Repository migrations remain through `0029_claim_kind_function_privileges.sql`.
+## What is stopped / parked
 
-## What is parked/frozen
+No active horizon is authorized for:
+- M2 production schema migration;
+- broad/global evidence expansion;
+- bulk Cliopatria source→atlas identity publication;
+- richer application/frontend/platform development;
+- new serving/search/vector/graph/ontology infrastructure;
+- new monitoring/self-healing machinery;
+- a successor AUTO runway.
 
-- canonical v0.6.1 remains unchanged;
-- current preview remains non-canonical/legacy;
-- M2 production schema migration is parked;
-- broad/global evidence expansion is parked;
-- bulk Cliopatria source→atlas identity publication is parked;
-- richer application/frontend/platform development is parked;
-- no new autonomous execution runway exists.
+The current preview remains frozen/non-canonical.
 
-The old production-like preview posture has been reduced: self-heal is retired, liveness is weekly, production geometry promotion is explicit/manual, and duplicate main web build work is removed.
+## Reopen condition
 
-## Value boundary
+A future Atlas-development evaluation requires genuinely new external evidence, for example:
+- a real repeated researcher/user task that the strongest ordinary notes/table/GIS workflow cannot handle without losing provenance, uncertainty or correct cross-place/time reasoning;
+- a concrete scale failure of the simpler workflow;
+- an external consumer requiring machine-addressable comparison that the preserved method demonstrably serves better;
+- an independent evaluation showing repeatable gain on the D-062/D-063 criteria.
 
-A bounded Silla/Hittite challenge found **parity on core fact discovery** with ordinary targeted research + a strong general-purpose model.
-
-The remaining plausible project advantage is durable comparative semantics: preserving provenance, uncertainty, temporal/spatial truth, orthogonal historical dimensions and abstention when evidence is queried across place/time.
-
-The only currently justified **candidate** next experiment is a value-discrimination pilot comparing:
-1. strongest boring/external workflow;
-2. corpus/method without bespoke map interaction;
-3. smallest thin atlas/query view.
-
-That pilot is **not authorized by HC-003**. The backlog is intentionally idle.
+A trigger authorizes evaluation, not automatic platform expansion.
 
 ## Remaining bounded project-system debt
 
@@ -67,9 +76,9 @@ That pilot is **not authorized by HC-003**. The backlog is intentionally idle.
 - approximately 100 historical remote branches remain;
 - protected deployment environment/staging work remains trigger-bound (#43);
 - live migration-history reconciliation remains trigger-bound (#26);
-- the frontend still lacks a committed real npm lockfile and should gain one before substantive web expansion.
+- the frontend lacks a committed real npm lockfile.
 
-None of these items justifies creating a new development horizon.
+These are preservation/administrative debt. None creates a development horizon.
 
 ## Canonical operating documents
 
