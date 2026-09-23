@@ -27,7 +27,6 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - HC-004 / D-063: **STOP ACTIVE ATLAS EXPANSION; PRESERVE METHOD/CORPUS/AUDIT ARTIFACTS**;
 - COV-001 / #148 coverage-value experiment: **completed — NARROW SURVIVE**;
 - COV-002 / #151 scale/reuse experiment: **completed — STOP FURTHER AUTOMATIC SCALING**;
-- execution state: **IDLE / PRESERVATION**; active Atlas expansion remains stopped;
 - compact coverage-register pattern is preserved for concrete task-driven use; COV-002 did not justify automatic row-by-row scaling;
 - ADV-001 / D-068: the broad systematic-coverage thesis was reopened;
 - COV-003 / #155: **completed — TIERED SURVIVE; STRONG SURVIVE rejected**;
