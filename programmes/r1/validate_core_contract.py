@@ -57,11 +57,17 @@ def validate_row(row):
     if not str(row.get("required_abstention", "")).strip():
         errors.append("C1/C2 requires explicit abstention")
 
-    positive = bool(str(row.get("bounded_proposition", "")).strip())
-    decisive = [s for s in row.get("sources", []) if s.get("decisive")]
-    if positive and decisive:
-        if all(s.get("claim_fitness") in {"context_only", "review_required"} for s in decisive):
-            errors.append("positive claim cannot rely only on context/review-required decisive sources")
+    sources = row.get("sources", [])
+    if not sources:
+        errors.append("C1/C2 requires at least one recoverable source relation")
+
+    proposition = bool(str(row.get("bounded_proposition", "")).strip())
+    decisive = [s for s in sources if s.get("decisive")]
+    if proposition:
+        if not decisive:
+            errors.append("bounded proposition requires at least one decisive source relation")
+        elif all(s.get("claim_fitness") in {"context_only", "review_required"} for s in decisive):
+            errors.append("bounded proposition cannot rely only on context/review-required decisive sources")
 
     for s in row.get("sources", []):
         if s.get("claim_fitness") not in ALLOWED_SOURCE_QUALITY:
