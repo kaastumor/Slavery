@@ -9,57 +9,69 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE — COV-001 coverage-value experiment setup (#148)
+# IDLE / PRESERVATION — COV-001 completed with NARROW SURVIVE
 
-H2 / D-063 still controls the product boundary:
+COV-001 / issue #148 tested a distinct post-H2 thesis:
 
-> **STOP ACTIVE ATLAS EXPANSION; PRESERVE METHOD/CORPUS/AUDIT ARTIFACTS**
+> Does a systematically assembled global historical coverage corpus create reusable value even when the bespoke Atlas product does not?
 
-COV-001 does **not** reverse that decision. It tests a different unresolved thesis:
+Final result:
 
-> Does a small, systematically assembled global historical coverage corpus provide value because knowledge, uncertainty and research gaps are preassembled across place/time?
+> **NARROW SURVIVE — COVERAGE CORPUS VALUE EXISTS; ATLAS PRODUCT EXPANSION REMAINS STOPPED**
 
-## Current state
+Durable result:
+- `experiments/coverage-value/11_FINAL_RESULT.md`
+- HC-005 in `docs/25_PROJECT_HEALTH.md`
+- D-065 in `docs/08_DECISIONS_LOG.md`
 
-**SETUP COMPLETE; HISTORICAL RESEARCH NOT STARTED.**
+After adversarial downgrade, **4/6** fixed global tasks showed material value:
+- law vs practice;
+- network/participation vs territorial inference;
+- global-handbook coverage visibility;
+- unresolved/gap visibility.
 
-Durable setup:
-- `experiments/coverage-value/00_PROTOCOL_PREREGISTERED.md`
-- `experiments/coverage-value/01_BASELINE_LANDSCAPE.md`
-- `experiments/coverage-value/02_SETUP_ADVERSARY.md`
-- `experiments/coverage-value/03_PROTOCOL_REVISED.md`
-- `experiments/coverage-value/04_EXECUTION_PACKET.md`
-- `experiments/coverage-value/select_sample.py`
-- `experiments/coverage-value/coverage_row_template.json`
+The basic overview reached parity with a competent ordinary matrix, and the terminology query was not counted because one ordinary spreadsheet column could reproduce most of that gain.
 
-The setup adversary returned **REVISE** and corrected:
-- polity-only sampling bias by adding four fixed non-polity challenge contexts;
-- index-shaped/task tautology by adding a plain ordinary-matrix baseline;
-- architecture creep by requiring plain CSV/JSON/Markdown only;
-- same-model contamination through preferred isolated evaluation runs;
-- global-handbook coverage coding and language/access limitations.
+Both negative controls behaved correctly:
+- specialist narrative beat the index on deep Champa historiography;
+- SlaveVoyages beat the index on voyage-level/quantitative work.
 
-## Only justified next action
+## What survives
 
-1. obtain the exact pinned Cliopatria asset;
-2. run `select_sample.py`;
-3. verify >=18/24 deterministic polity-year cells are valid;
-4. commit the generated `sample.json`;
-5. **only then** begin bounded research for the frozen cells plus NP-01..NP-04.
+A small, auditable, explicitly incomplete **coverage corpus** may be worth further investigation as a flat table/JSON/CSV:
+- what can be said for a place/time target;
+- what cannot be said;
+- why research remains inconclusive/disputed;
+- law/practice/network distinctions;
+- source/provenance;
+- whether global syntheses directly cover the target.
 
-If the sampler yields fewer than 18 valid cells, revise the sampling frame **before** any slavery/coercion research.
+This is not authorization for the old Atlas application.
+
+## Current execution state
+
+**IDLE.**
+
+COV-001 permits at most one future bounded **corpus-scale economics/reuse experiment**, but no such experiment is currently authorized.
+
+The unresolved question is:
+
+> Does corpus value grow faster than research/review/update cost at materially larger scale?
+
+Do not answer that by simply researching more cells.
 
 ## Still explicitly not authorized
 
-- H3 bulk/global research expansion;
+- H3 bulk/global evidence expansion;
 - canonical release changes;
 - M2 production migration;
 - Atlas frontend/map/product expansion;
 - new database/API/service infrastructure;
 - autonomous bulk-research workers;
-- treating missing evidence as historical absence.
+- search/vector/RAG/graph/ontology infrastructure;
+- claims of literal historical completeness.
 
-A positive COV-001 result could authorize at most one further bounded **corpus-scale** value test. It cannot restart the old Atlas roadmap.
+If a further scale test is authorized, it must test reuse/maintenance economics and strongest-baseline parity, not record-count growth.
 
 ---
 
