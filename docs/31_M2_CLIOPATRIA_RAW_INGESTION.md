@@ -2,7 +2,7 @@
 
 **Gate:** #116  
 **Task:** #119  
-**Status:** implementation candidate; disposable PostGIS integration only  
+**Status:** validated in disposable PostGIS; not a production migration  
 **Canonical release:** v0.6.1 unchanged  
 **Public preview:** unchanged
 
@@ -89,10 +89,32 @@ The exact pinned dataset receives a stable `dataset_key` tied to its commit/chec
 With the ordinary disposable PostGIS stack already running and repository migrations applied:
 
 ```bash
-./scripts/db-test-cliopatria-ingest.sh
+bash ./scripts/db-test-cliopatria-ingest.sh
 ```
 
 The script downloads/caches only the exact pinned asset, runs the full ingestion and reconciliation, then repeats the exact input and requires the second run to report `noop`.
+
+## Observed full-corpus execution
+
+GitHub Actions run `35871937554` executed the exact pinned asset in a clean PostGIS 17 / PostGIS 3.5 database after the ordinary repository migrations.
+
+Observed first load:
+
+- action: `inserted`
+- source asset: 44,231,317 bytes
+- PostGIS extension schema detected as `public`
+- 13,765 staging features
+- 1,633 distinct names
+- 13,380 POLITY rows
+- 385 RELATION rows
+- source-native year extent -3400..2024
+- all reconciliation assertions passed
+
+The same source was then applied again in the same disposable database. The second run returned `action: noop` with identical counts, proving the exact retry path does not duplicate rows.
+
+The first real-corpus attempt (run `35871694930`) failed before data insertion because the prototype relied on unqualified PostGIS type lookup after the atlas schema already contained a `geometry` composite/table name. The importer was corrected to discover the actual PostGIS extension schema and put it first in its session search path. The succeeding run demonstrates the corrected behavior without weakening any reconciliation check.
+
+The full-corpus network/download gate is intentionally not part of every normal foundation CI run. `scripts/db-test-cliopatria-ingest.sh` remains the reproducible bounded integration harness; lightweight parser/projection behavior remains covered by the ordinary Python suite.
 
 ## Gate meaning
 
