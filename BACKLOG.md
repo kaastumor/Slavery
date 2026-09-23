@@ -55,10 +55,10 @@ Parent: **#116 — Integrate hardened semantics with complete geography backbone
 **Execution order / eligibility:**
 
 1. **DONE — #117 — Canonicalize M1 target semantics for M2**
-2. **NOW — #118 AUTO READY — Resolve Cliopatria calendar and relation semantics**
-3. **NEXT — #119 AUTO READY — Ingest complete pinned Cliopatria corpus into raw staging** (dependency #117 satisfied; source-native years remain preserved)
+2. **DONE — #118 — Resolve Cliopatria calendar and relation semantics**
+3. **NOW — #119 AUTO READY — Ingest complete pinned Cliopatria corpus into raw staging** (dependencies satisfied; preserve source-native years/hierarchy)
 4. **NEXT — #120 AUTO READY — Prototype post-M1 claim semantics in disposable PostGIS** (dependency #117 satisfied)
-5. **NEXT — #121 AUTO READY — Build complete Cliopatria selected-year resolver prototype** (depends on #118 and #119)
+5. **NEXT — #121 AUTO READY — Build complete Cliopatria selected-year resolver prototype** (dependency #118 satisfied; waits for #119)
 6. **GATE — #122 AUTO READY — M2 integrated adversarial gate** (depends on #117–#121)
 7. **GATE — #123 AUTO READY — M2 Project Health Check and reconciliation** (depends on #122)
 
