@@ -17,13 +17,15 @@ Can the complete Cliopatria corpus become a reproducible raw geography backbone 
 
 The profiler additionally emits SHA-256 of the downloaded bytes. It hard-fails unless the Git blob checksum matches, so a mutable network response cannot silently become the baseline.
 
+The release ZIP contains the actual data member `cliopatria_polities_only.geojson` plus a macOS `__MACOSX/._...` metadata entry. The loader ignores archive metadata but still requires exactly one real GeoJSON data member.
+
 ## Smallest proposal
 `tools/profile_cliopatria.py` downloads (or accepts a local copy of) that one immutable source blob, verifies its Git content identity, opens the single GeoJSON member, and emits a deterministic JSON profile. It does **not** write the database, normalize years, resolve atlas entities, or promote geometry.
 
 The profile reports whole-corpus feature/name counts, every source-native `Type` value (including composite/unexpected values rather than coercing them), geometry types, property-presence counts, and temporal diagnostics. Every property remains in the upstream object; this preparation step summarizes rather than rewrites the corpus.
 
 ## BCE/year convention test
-Upstream documents `FromYear`/`ToYear` as signed integers: negative for BCE, positive for CE, inclusive for row applicability. The profiler deliberately preserves those values and reports negative-year rows, rows spanning numeric zero, and invalid `FromYear > ToYear` rows. **No conversion to the atlas historical-year convention occurs in M1.** Any zero-boundary/calendar normalization must be a later explicit integration decision after the observed corpus is profiled.
+Upstream documents `FromYear`/`ToYear` as signed integers: negative for BCE, positive for CE, inclusive for row applicability. The profiler deliberately preserves those values and reports negative-year rows, rows spanning numeric zero, rows with an explicit zero endpoint, and invalid `FromYear > ToYear` rows. **No conversion to the atlas historical-year convention occurs in M1.** Any zero-boundary/calendar normalization must be a later explicit integration decision after the observed corpus is profiled.
 
 ## Adversary
 | Attack / alternative | Disposition | Evidence / consequence |
