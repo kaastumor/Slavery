@@ -499,6 +499,26 @@ Decision D-080 defines R1.7 as the MVP:
 
 No new historical subject-research tranche is authorized.
 
+## R1.7 / MVP v0.1 — delivery setup
+
+D-080 crystallizes the surviving Atlas core into a small technical MVP rather than reopening the former product platform.
+
+Parent: #174.
+
+Fixed MVP queue:
+- #175 frontend reproducibility;
+- #176 static candidate bundle;
+- #177 geometry representation manifest;
+- #178 static default data path;
+- #179 research-state map semantics;
+- #180 compact evidence register;
+- #181 temporal truth guard;
+- #182 technical MVP gate.
+
+After #182 records TECHNICAL_MVP_CANDIDATE, feature discovery #184–#187 may run. Discovery does not authorize production implementation.
+
+Delivery and discovery use WIP=1, short-lived branches/PRs, explicit dependencies, green CI and the Definition of Ready/Done in `docs/mvp/v0.1-plan.md`.
+
 ## Remaining bounded project-system debt
 
 - `main` currently reports unprotected;
