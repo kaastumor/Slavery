@@ -344,3 +344,151 @@ The semantic ownership model survives much better than the current product/opera
 There is no evidence here requiring an architecture reset. The harder question is whether all current serving/release/operations machinery is needed to deliver the demonstrated contribution.
 
 **Checkpoint:** conceptual foundation survives; no semantic redesign justified. Repair stale P-level research instructions. Keep M2 production migration parked until value/form review is complete.
+
+
+---
+
+## Chunk 4 — GitHub, CI, automation and sanitation
+
+### GitHub project-system result
+
+**Main is canonical in practice, but not technically protected.**
+
+- repository API reports `main.protected=false`;
+- repository rulesets returned none;
+- the connected integration cannot read/administer the protected-branch endpoint;
+- substantive autonomous work has nevertheless used short-lived branches + PR + green CI discipline.
+
+Do not describe branch protection as existing.
+
+### Autonomous execution
+
+The ChatGPT-side **Slavery Atlas Build Loop is disabled**. The old ChatGPT Atlas availability watch is also disabled.
+
+Therefore there is no hidden active autonomous project executor continuing #123 in the background.
+
+The repository-versioned worker runbook remains useful as an execution contract if automation is intentionally re-enabled later.
+
+### Workflow inventory
+
+12 repository workflows remain.
+
+Distinct responsibilities mostly survive:
+
+- foundation deterministic CI;
+- web PR build;
+- Pages deployment + static snapshot;
+- research-case validation;
+- release-candidate validation;
+- geometry candidate build;
+- geometry browser review;
+- geometry promotion gate;
+- production geometry promotion;
+- public live/fallback browser review;
+- live availability monitor;
+- event-triggered self-heal.
+
+### Deterministic CI vs live probes
+
+The separation is conceptually good:
+
+- `foundation-ci` is deterministic/local PostGIS and does not depend on public network availability;
+- browser/live monitoring uses separate workflows;
+- external availability does not determine ordinary branch-green.
+
+### Duplicate/overlapping execution
+
+`web-mvp.yml` runs on both PR and main push, while `deploy-pages.yml` also rebuilds the web application on main web changes.
+
+The PR validation role is distinct; the second main build is redundant. A small consolidation is justified: retain web build on PR, let deployment own main-build/deploy.
+
+### Scheduled/live operations
+
+Only one repository workflow is scheduled:
+
+- `MVP Availability Monitor` every **15 minutes**, plus every main push/manual dispatch.
+
+On monitor failure, `MVP Self Heal` may:
+
+- probe twice;
+- inspect Supabase project state;
+- use a management credential;
+- automatically restart the Supabase project;
+- write incident/recovery comments.
+
+This was sensible while proving outage handling, but the current preview is non-canonical, has static fallback, and has no demonstrated user-critical availability requirement.
+
+**Assessment:** 15-minute monitoring and automatic external-project restart have outlived the current horizon. Availability observation may remain useful at a much lower cadence; automatic self-heal does not currently justify its mutation authority.
+
+### Workflows that can mutate meaningful state
+
+No workflow commits to `main`.
+
+External/project mutations include:
+
+- Pages deployment;
+- production geometry promotion to Supabase from a specific execution request on main;
+- self-heal project restart;
+- incident issue create/update/close.
+
+Production geometry promotion currently lacks verified GitHub environment protection because #43 is blocked and main itself is unprotected. Its exact-artifact gate is strong, but automatic push-triggered external mutation should be reduced while no promotions are authorized.
+
+### Git is not being used as an operational research database
+
+Research state is stored in structured files/database/release artifacts; Git stores source, fixtures, manifests, reviewed public-safe research cases and decisions.
+
+Actions artifacts carry generated browser/release/geometry evidence with bounded retention.
+
+No large generated-output accumulation exists in Git.
+
+### Sanitation
+
+Current sanitation correctly rejects:
+
+- tracked `.env`;
+- canonical XLSX release binaries;
+- backups/cache directories;
+- dump/sql.gz;
+- PEM/private-key extensions;
+- common secret token patterns;
+- merge markers;
+- missing canonical project-system files.
+
+Gaps:
+
+- no generic maximum tracked-file threshold;
+- no explicit `.pfx/.p12` block;
+- no machine-specific local-user-path scan despite the project runbook prohibiting local paths.
+
+These can be strengthened cheaply without a new security system.
+
+### Dependency/reproducibility assessment
+
+Positive:
+
+- Python runtime dependency is exact-version pinned;
+- direct web dependencies are exact-version pinned;
+- QGIS production candidate container is digest-pinned;
+- Natural Earth input is exact commit/checksum pinned.
+
+Weaker:
+
+- no tracked npm lockfile; CI resolves transitive packages afresh with `npm install --package-lock-only`;
+- standard GitHub Actions use mutable major-version tags rather than commit SHAs;
+- local PostGIS compose image uses a version tag rather than digest.
+
+For current stakes, action/Docker SHA pinning is a **low-to-medium hardening opportunity**, not a reason to add enterprise supply-chain infrastructure.
+
+The missing npm lockfile is the clearest reproducibility defect and is worth fixing.
+
+### Project-system repair candidates for Chunk 8
+
+- retire automatic Supabase self-heal;
+- reduce live monitor from every 15 minutes to a modest demonstration cadence;
+- make production geometry promotion explicit/manual while environment protection remains unavailable;
+- eliminate duplicate main web build;
+- track an npm lockfile;
+- strengthen sanitation for file size, local paths and PFX/P12;
+- prune merged remote branches when an administrative path exists.
+
+**Checkpoint:** GitHub/CI design is basically sound, but operations are over-provisioned relative to demonstrated public value. Simplification is justified without weakening research correctness.
