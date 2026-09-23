@@ -19,7 +19,7 @@ def load_features(data):
     if obj.get('type')!='FeatureCollection': raise ValueError('not a FeatureCollection')
     return obj['features']
 def profile(features):
-    types=Counter(); geoms=Counter(); keys=Counter(); names=set(); lo=hi=None; neg=cross=bad=0
+    types=Counter(); geoms=Counter(); keys=Counter(); names=set(); lo=hi=None; neg=cross=zero_endpoint=bad=0
     for f in features:
         p=f.get('properties') or {}; keys.update(p.keys()); types[str(p.get('Type','<missing>'))]+=1
         geoms[str((f.get('geometry') or {}).get('type','<missing>'))]+=1
@@ -27,11 +27,11 @@ def profile(features):
         a,b=p.get('FromYear'),p.get('ToYear')
         if isinstance(a,int) and isinstance(b,int):
             lo=a if lo is None else min(lo,a); hi=b if hi is None else max(hi,b)
-            neg+=int(a<0 or b<0); cross+=int(a<0<b); bad+=int(a>b)
+            neg+=int(a<0 or b<0); cross+=int(a<0<b); zero_endpoint+=int(a==0 or b==0); bad+=int(a>b)
     return {'feature_count':len(features),'distinct_names':len(names),'type_counts':dict(sorted(types.items())),
       'geometry_type_counts':dict(sorted(geoms.items())),'property_presence_counts':dict(sorted(keys.items())),
       'source_native_years':{'minimum':lo,'maximum':hi,'rows_with_negative_year':neg,'rows_crossing_numeric_zero':cross,
-      'invalid_from_to_ranges':bad,'interpretation':'preserved source-native signed integers; negative=BCE, positive=CE; no atlas normalization performed'}}
+      'rows_with_zero_endpoint':zero_endpoint,'invalid_from_to_ranges':bad,'interpretation':'preserved source-native signed integers; negative=BCE, positive=CE; no atlas normalization performed'}}
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--input',type=Path); ap.add_argument('--output',type=Path); a=ap.parse_args()
     data=a.input.read_bytes() if a.input else urllib.request.urlopen(UPSTREAM_URL,timeout=60).read()
