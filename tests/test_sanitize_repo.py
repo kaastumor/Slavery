@@ -60,7 +60,7 @@ class SanitationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             paths = _baseline(root) + ["notes.md"]
-            _write(root, "notes.md", "workspace: C:\\\\Users\\\\alice\\\\project\\\\data.json\n")
+            _write(root, "notes.md", "workspace: C:\\Users\\alice\\project\\data.json\n")
             self.assertTrue(any("machine-local user path" in x for x in scan(root, paths)))
 
     def test_rejects_unexpected_large_tracked_file(self) -> None:
