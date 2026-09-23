@@ -1,0 +1,52 @@
+{
+  "schema_version": "m2-cliopatria-selected-year-validation-v1",
+  "status": "accepted_experimental_evidence_for_m2_121",
+  "github_actions_run_id": 35877196416,
+  "source": {
+    "repository": "Seshat-Global-History-Databank/cliopatria",
+    "release": "v0.2.0-duplicate",
+    "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+    "path": "cliopatria.geojson.zip",
+    "git_blob_sha1": "cefab0f4b622e2e7fb3daf68d4f461f83991204c",
+    "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+    "feature_count": 13765
+  },
+  "selected_year_probes": [
+    {"atlas_year": -13, "label": "14 BCE", "source_year": -14, "baseline_count": 44, "relation_count": 1, "composite_candidate_count": 0, "suppressed_component_count": 0, "unresolved_hierarchy_count": 0},
+    {"atlas_year": 0, "label": "1 BCE", "source_year": -1, "baseline_count": 44, "relation_count": 1, "composite_candidate_count": 0, "suppressed_component_count": 0, "unresolved_hierarchy_count": 0},
+    {"atlas_year": 1, "label": "1 CE", "source_year": 1, "baseline_count": 45, "relation_count": 1, "composite_candidate_count": 0, "suppressed_component_count": 0, "unresolved_hierarchy_count": 0},
+    {"atlas_year": 369, "label": "369 CE", "source_year": 369, "baseline_count": 51, "relation_count": 1, "composite_candidate_count": 0, "suppressed_component_count": 0, "unresolved_hierarchy_count": 0},
+    {"atlas_year": 1000, "label": "1000 CE", "source_year": 1000, "baseline_count": 107, "relation_count": 1, "composite_candidate_count": 6, "suppressed_component_count": 25, "unresolved_hierarchy_count": 0},
+    {"atlas_year": 2024, "label": "2024 CE", "source_year": 2024, "baseline_count": 190, "relation_count": 0, "composite_candidate_count": 3, "suppressed_component_count": 5, "unresolved_hierarchy_count": 0}
+  ],
+  "boundary_validation": {
+    "atlas_year_0_source_year": -1,
+    "atlas_year_1_source_year": 1,
+    "transition_names": ["Yuezhi", "Parthian Empire", "Indo-Greeks", "Indo-Scythians", "Judea", "Roman Empire"],
+    "source_zero_queried": false
+  },
+  "representative_cases": {
+    "baekje_369": {
+      "source_row_ordinal": 1478,
+      "from_year_raw": 347,
+      "to_year_raw": 391,
+      "hierarchy_status": "resolved_top_polity"
+    }
+  },
+  "invariants_at_369": {
+    "duplicate_candidate_keys": 0,
+    "relation_rows_in_default_baseline": 0,
+    "non_raw_baseline_state": 0
+  },
+  "specialist_precedence": {
+    "mechanism": "explicit case-specific accepted override only",
+    "accepted_override_fixture": "passes and outranks Cliopatria inside accepted interval",
+    "quarantined_override_fixture": "passes and does not outrank Cliopatria",
+    "outside_interval_fixture": "passes and falls back to Cliopatria",
+    "unreviewed_override_fixture": "rejected",
+    "current_repository_policy_reference": "D-055 and config/cartography/promotion_cliopatria_10km_7644ea.json"
+  },
+  "publication": "none; resolver outputs remain prototype_unapproved/raw_unapproved_global_baseline",
+  "canonical_release_changed": false,
+  "public_preview_changed": false
+}
