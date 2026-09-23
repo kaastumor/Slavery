@@ -1,0 +1,89 @@
+{
+  "experiment": "COV-004",
+  "arm": "A",
+  "review_type": "masked replay; non-independent",
+  "non_escalated": [
+    {
+      "target_id": "COV3:1300:E:r3",
+      "target_label": "Kathmandu",
+      "material_false_negative": false,
+      "replay_conclusion": "Near-anchor Nepalese legal/commentarial evidence supports slavery and multiple unfree-labour categories in the Kathmandu Valley context, but direct evidence at exactly 1300 is sparse and the categories are heterogeneous.",
+      "replay_abstention": "Do not infer exact 1300 prevalence or a uniform status regime from a fourteenth-century commentary.",
+      "deep_review_warranted": false,
+      "comparison": "C1 already preserves the key temporal and law/practice limitations."
+    },
+    {
+      "target_id": "COV3:-500:E:r4",
+      "target_label": "Janapada of Cedī",
+      "material_false_negative": false,
+      "replay_conclusion": "Broader ancient-Indian scholarship supports slavery/servitude in the Buddhist-era world, but the attached packet does not establish Cedī-specific practice at c.500 BCE.",
+      "replay_abstention": "Do not transfer regional slavery categories into Cedī territorial practice.",
+      "deep_review_warranted": false,
+      "comparison": "C1 abstention is appropriately conservative."
+    },
+    {
+      "target_id": "COV3:-500:F:r5",
+      "target_label": "Lu",
+      "material_false_negative": false,
+      "replay_conclusion": "Specialist scholarship supports slavery/unfree categories in the wider Eastern-Zhou/Warring-States transition, but the attached sources do not establish a Lu-specific slavery institution at c.500 BCE.",
+      "replay_abstention": "Do not infer Lu practice from later Qin legal material or generic Eastern-Zhou status categories.",
+      "deep_review_warranted": false,
+      "comparison": "The C1 row already separates broad-period context from Lu-specific evidence and does not require correction."
+    },
+    {
+      "target_id": "COV3:-500:F:r3",
+      "target_label": "Yan",
+      "material_false_negative": false,
+      "replay_conclusion": "Specialist scholarship supports slavery/unfree categories in the wider Eastern-Zhou/Warring-States transition, but the attached sources do not establish a Yan-specific slavery institution at c.500 BCE.",
+      "replay_abstention": "Do not infer Yan practice or prevalence from later Qin legal material, warfare or generic Eastern-Zhou context.",
+      "deep_review_warranted": false,
+      "comparison": "C1 already carries the crucial target-specific abstention."
+    },
+    {
+      "target_id": "COV3:1300:E:r4",
+      "target_label": "Chandela Kingdom",
+      "material_false_negative": true,
+      "error_class": "source-quality failure changes bounded proposition",
+      "replay_conclusion": "The attached bounded-event citation is a general web synthesis, not a source meeting the project's specialist/primary evidence standard. The 1203 Kalinjar captivity proposition should remain a review candidate rather than a production-grade bounded conclusion until independently sourced.",
+      "replay_abstention": "Do not use the current citation to assert a quantified or otherwise substantive captivity/enslavement event; even a verified 1203 event would remain external conquest evidence, not internal Chandela slavery practice at 1300.",
+      "deep_review_warranted": true,
+      "comparison": "C1's overall researched-inconclusive outcome remains safe, but its positive bounded-event proposition is too strong for the attached source quality."
+    },
+    {
+      "target_id": "COV3:-500:E:r6",
+      "target_label": "Janapada of Aśmaka",
+      "material_false_negative": false,
+      "replay_conclusion": "Regional ancient-Indian slavery/servitude scholarship does not establish Aśmaka-specific practice at c.500 BCE.",
+      "replay_abstention": "Do not project general Buddhist/Sanskrit categories or later South-Asian institutions into Aśmaka.",
+      "deep_review_warranted": false,
+      "comparison": "C1 remains appropriately inconclusive."
+    }
+  ],
+  "escalated_controls": [
+    {
+      "target_id": "COV3:-500:F:r4",
+      "target_label": "Zhu",
+      "material_depth_value": true,
+      "comparison": "C2 materially corrected temporal/category looseness in the compact framing."
+    },
+    {
+      "target_id": "COV3:1300:E:r5",
+      "target_label": "Hanthawaddy Kingdom",
+      "material_depth_value": true,
+      "comparison": "C2 materially sharpened legal-status versus practice/prevalence inference."
+    },
+    {
+      "target_id": "COV3:-500:E:r3",
+      "target_label": "Janapada of Pañcāla",
+      "material_depth_value": false,
+      "comparison": "C2 added bibliography/context but did not materially change the bounded conclusion."
+    }
+  ],
+  "non_escalated_false_negatives": 1,
+  "non_escalated_denominator": 6,
+  "escalated_material_gains": 2,
+  "escalated_denominator": 3,
+  "gate_result": "PASS_AT_BOUNDARY",
+  "required_repair": "Add source-quality failure / non-production-grade decisive citation as an explicit C2-or-review escalation trigger before any future C1 publication.",
+  "early_stop": "DO_NOT_STOP; proceed to Arm B because the single false negative is a repairable trigger failure rather than schema collapse."
+}
