@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **IDLE / PRESERVATION — COV-001 narrow corpus thesis survived; Atlas expansion remains stopped**
+**Execution state:** **ACTIVE BOUNDED EXPERIMENT — COV-002 scale/reuse economics; Atlas expansion remains stopped**
 
 ## Direction after H2
 
@@ -108,6 +108,23 @@ Health decision: HC-005
 Direction decision: D-065
 
 No successor experiment is authorized. The only candidate question is whether corpus reuse/value grows faster than research/review/update burden at materially larger scale.
+
+## COV-002 scale/reuse economics — active
+
+The sponsor explicitly authorized the one further bounded corpus-scale experiment permitted by D-065.
+
+Question:
+
+> Does coverage-corpus value grow faster than research, review and update burden as the corpus grows?
+
+The setup adversary has completed. The experiment now compares:
+- full coverage rows;
+- a compact value-preserving register;
+- a strong ordinary matrix.
+
+The sample must be frozen before historical research. The next permitted action is only the deterministic 12-cell expansion freeze.
+
+No Atlas application/product horizon is reopened.
 
 ## Remaining bounded project-system debt
 
