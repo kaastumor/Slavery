@@ -9,72 +9,94 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE — COV-003 tiered systematic coverage (#155)
+# IDLE / PRESERVATION — COV-003 completed with TIERED SURVIVE
 
-ADV-001 / D-068 reopened one narrow methodological hypothesis:
+COV-003 / issue #155 tested the systematic-coverage architecture left open by ADV-001 / D-068.
 
-> Can a tiered, versioned, batch-curated coverage architecture preserve the demonstrated cross-history value without reproducing COV-002's row-by-row research/maintenance model?
+Final disposition:
 
-The sponsor explicitly authorized COV-003.
+> **TIERED SURVIVE — architecture validated narrowly; STRONG batch-economy result rejected; no comprehensive ingestion authorized.**
 
-## Frozen architecture
+Durable result:
+- `experiments/coverage-tiered/13_FINAL_RESULT.md`
+- HC-008 in `docs/25_PROJECT_HEALTH.md`
+- D-070 in `docs/08_DECISIONS_LOG.md`
 
-- **C0:** target/research-state register; no slavery conclusion required.
-- **C1:** compact evidence/coverage record for a preregistered subset.
-- **C2:** selective deep packet only when a frozen escalation rule justifies it.
-- flat JSON/CSV/Markdown only;
-- immutable/as-of experiment releases;
-- no Atlas product/database/API/frontend work.
+## What survived
 
-## Frozen sample
+A tiered research architecture:
 
-Pinned Cliopatria source unchanged.
+- **C0 — broad target/research-state register**
+  - may register a target without making a slavery conclusion;
+  - keeps unresearched, identity-unreviewed, mismatch and ambiguity explicit;
+  - supports pre-research identity/time QA.
 
-Three deterministic batches:
-- `-500:F`
-- `1300:E`
-- `-500:E`
+- **C1 — compact researched coverage**
+  - bounded proposition + abstention;
+  - law/practice and network/territorial boundaries;
+  - handbook coverage;
+  - unresolved reason;
+  - recoverable source references.
 
-Total:
-- 24 new C0 targets;
-- 12 preregistered C1 research targets;
-- 12 C0-only targets that cannot be promoted after evidence inspection;
-- 6 deterministic identity-validation probes;
-- at most 3 C2 escalations after C1 freeze.
+- **C2 — selective deep packet**
+  - only when a frozen ambiguity/risk trigger earns it;
+  - C2 materially improved 2/3 escalated targets.
 
-Durable setup:
-- `experiments/coverage-tiered/00_PROTOCOL_PREREGISTERED.md`
-- `experiments/coverage-tiered/01_SETUP_ADVERSARY.md`
-- `experiments/coverage-tiered/02_SAMPLE_FREEZE.md`
-- `experiments/coverage-tiered/sample.json`
+- **immutable/as-of releases + review ledger**
+  - old experiment snapshots remain unchanged;
+  - later review tasks are explicit.
+
+- **source dependency tracking**
+  - shared sources must record dependent rows so a source-level correction can propagate to the correct review scope.
+
+## What did not survive
+
+The strong batch-economy claim.
+
+COV-003 C1 used:
+- 22 material cell-source links;
+- 10 unique sources;
+- source-reuse factor **2.20** versus COV-002's 1.00;
+- shared sources materially informed 4/4 cells in two of three batches.
+
+But **12/12 C1 targets still required target-specific follow-up search**.
+
+Therefore source reuse is real, but historian-effort savings are not demonstrated strongly enough to justify systematic global ingestion.
+
+The post-freeze maintenance sample also produced no genuinely new accepted source in 3/3 searches, so positive update economics remain untested.
+
+## Important adversarial findings
+
+- shared-source reuse creates **correlated review risk** as well as reuse;
+- C2 caught a temporal/category overstatement in the shared early-China framing, putting four dependent rows into next-release review scope;
+- one Chandela event citation is below the project's desired production-grade specialist-source standard and must remain a review item rather than being silently upgraded;
+- a direct Cambridge/Palgrave coverage proxy would have selected 0/12 C1 targets, despite four bounded-supported results and eight meaningful researched abstentions;
+- 2/6 preregistered C0 identity probes found a mismatch or ambiguity.
 
 ## Current execution state
 
-**C1 BATCH RESEARCH ACTIVE; C1 NOT YET FROZEN.**
+**IDLE / PRESERVATION.**
 
-The next justified work is only:
-1. freeze six C0 identity-validation results;
-2. freeze the three shared-source packets;
-3. freeze the twelve C1 outcomes;
-4. evaluate source reuse against the COV-002 row-centric baseline;
-5. apply the preregistered C2 escalation rule;
-6. test versioned maintenance, coverage/bias function and emergent queries;
-7. adversarially disposition the result.
+COV-003 keeps the systematic-coverage thesis alive in a specific form. It does **not** authorize the next scale step.
 
-## Hard boundary
+Any future validation requires explicit sponsor authorization and should test something COV-003 did not:
+- non-polity target frames;
+- preregistered source/historiographic-coherent batches;
+- independent or multi-reviewer evaluation;
+- a real positive post-release evidence update;
+- stronger source-quality gates.
 
-COV-003 is not comprehensive ingestion.
+## Still not authorized
 
-Still not authorized:
-- research beyond the 12 frozen C1 targets except the <=3 frozen C2 escalations and 3 maintenance searches;
-- promotion of C0-only targets because an interesting source appears;
+- comprehensive global slavery/coercion ingestion;
+- global C1 completion;
+- global C2 completion;
+- another autonomous scale experiment;
 - canonical release changes;
 - M2 production migration;
-- Atlas/frontend/map/platform work;
-- autonomous successor experiment;
-- literal “all known history” claims.
-
-COV-003 ends at its own gate.
+- Atlas/frontend/map/platform revival;
+- automated mass research;
+- claims of literal human-history completeness.
 
 ---
 
