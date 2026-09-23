@@ -1,0 +1,92 @@
+[
+  {
+    "id": "-500:C",
+    "label": "Sabaeans",
+    "outcome": "researched_inconclusive",
+    "conclusion": "By the 2015 cutoff, general ancient Near Eastern slavery scholarship and accessible South-Arabian epigraphic infrastructure make slavery a plausible regional research category, but this bounded reconstruction does not yet establish a Sabaean slavery/practice claim specifically at c.500 BCE.",
+    "abstention": "Do not infer Sabaean practice from generic ancient Near Eastern slavery or from ambiguous ʿbd terminology without target-specific contextual interpretation.",
+    "sources": [
+      {
+        "title": "Slavery in the Ancient Near East",
+        "author": "Daniel C. Snell",
+        "year": 2011,
+        "url": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-in-the-ancient-near-east/E9871B0E91F592E905BFC90BA83796CC"
+      }
+    ]
+  },
+  {
+    "id": "1300:F",
+    "label": "Chámpa",
+    "outcome": "bounded_supported",
+    "conclusion": "Pre-2016 scholarship reports early-thirteenth-century descriptions of people being bought and made slaves in Champa, supporting a bounded slavery/slave-purchasing claim near the 1300 anchor.",
+    "abstention": "Do not infer territorial prevalence across all Champa from commercial/transactional evidence.",
+    "sources": [
+      {
+        "title": "Money, Markets, and Trade in Early Southeast Asia",
+        "author": "Robert S. Wicks",
+        "year": 1992,
+        "url": "https://www.jstor.org/stable/10.7591/j.ctv1nhjzp"
+      }
+    ]
+  },
+  {
+    "id": "500:C",
+    "label": "Alodia",
+    "outcome": "researched_inconclusive",
+    "conclusion": "A late-sixth-century or later papyrus concerning sale of an Alodian slave girl establishes a bounded later transaction/context, not slavery in Alodia at exactly 500 CE.",
+    "abstention": "Do not back-project the later slave-sale evidence to the 500 anchor.",
+    "sources": [
+      {
+        "title": "A sale of an Alodian slave girl",
+        "author": "Richard Holton Pierce",
+        "year": 1995,
+        "url": "https://www.researchgate.net/publication/216645651_A_sale_of_an_Alodian_slave_girl_A_reexamination_of_papyrus_Strassburg_Inv_1404"
+      }
+    ]
+  },
+  {
+    "id": "COV3:-500:E:r6",
+    "label": "Janapada of Aśmaka",
+    "outcome": "researched_inconclusive",
+    "conclusion": "Ancient-Indian scholarship available before 2016 documents slavery/servitude in the broader Buddhist-era world but does not establish Aśmaka-specific practice at c.500 BCE.",
+    "abstention": "Do not transfer broad dāsa/dāsī or regional slavery categories into Aśmaka.",
+    "sources": [
+      {
+        "title": "Slavery in Ancient India",
+        "author": "Dev Raj Chanana",
+        "year": 1960,
+        "url": "https://books.google.com/books/about/Slavery_in_Ancient_India.html?id=CHPaAAAAMAAJ"
+      }
+    ]
+  },
+  {
+    "id": "COV3:-500:F:r6",
+    "label": "Cao",
+    "outcome": "researched_inconclusive",
+    "conclusion": "Pre-2016 early-China scholarship documents slavery/unfree categories and later legal evidence but does not establish a Cao-specific slavery institution at c.500 BCE.",
+    "abstention": "Do not treat later Qin legal categories or broad Eastern-Zhou hierarchy as Cao territorial practice.",
+    "sources": [
+      {
+        "title": "Slavery in Early China: A Socio-Cultural Approach",
+        "author": "Robin D. S. Yates",
+        "year": 2001,
+        "url": "https://doi.org/10.1163/156852301100402723"
+      }
+    ]
+  },
+  {
+    "id": "-500:E",
+    "label": "Janapada of Vatsa",
+    "outcome": "researched_inconclusive",
+    "conclusion": "Pre-2016 ancient-Indian slavery scholarship establishes slavery/servitude as a regional historical category but does not securely identify Vatsa-specific slavery at c.500 BCE.",
+    "abstention": "Do not map broad dāsa, Śūdra, or regional servitude evidence directly onto Vatsa.",
+    "sources": [
+      {
+        "title": "Slavery in Ancient India",
+        "author": "Dev Raj Chanana",
+        "year": 1960,
+        "url": "https://books.google.com/books/about/Slavery_in_Ancient_India.html?id=CHPaAAAAMAAJ"
+      }
+    ]
+  }
+]
