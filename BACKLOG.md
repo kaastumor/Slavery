@@ -9,57 +9,74 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE — COV-002 scale/reuse economics (#151)
+# IDLE / PRESERVATION — COV-002 completed with STOP
 
-COV-001 survived narrowly as a flat coverage-corpus thesis. The sponsor has now explicitly authorized the one further bounded experiment permitted by D-065:
+COV-002 / issue #151 tested the final internally justified corpus-scale question:
 
-> **Does coverage-corpus value grow faster than research, review and update burden when the corpus becomes materially larger?**
+> Does coverage-corpus value grow faster than research, review and update burden as the corpus becomes materially larger?
 
-This does **not** reopen Atlas product expansion.
+Final disposition:
 
-## Current state
+> **STOP FURTHER AUTOMATIC SCALING; PRESERVE THE COMPACT COVERAGE-REGISTER PATTERN**
 
-**PROTOCOL + SETUP ADVERSARY COMPLETE; SAMPLE NOT YET FROZEN; HISTORICAL RESEARCH NOT STARTED.**
+Durable result:
+- `experiments/coverage-scale/13_FINAL_RESULT.md`
+- HC-006 in `docs/25_PROJECT_HEALTH.md`
+- D-067 in `docs/08_DECISIONS_LOG.md`
 
-Durable setup:
-- `experiments/coverage-scale/00_PROTOCOL_PREREGISTERED.md`
-- `experiments/coverage-scale/01_SETUP_ADVERSARY.md`
-- `experiments/coverage-scale/02_PROTOCOL_REVISED.md`
-- `experiments/coverage-scale/select_expansion.py`
-- `tests/test_cov002_expansion_selector.py`
+## What survived
 
-The experiment compares:
-- F — full COV-001 row;
-- R — compact coverage register containing only demonstrated-value fields;
-- M — strongest ordinary research matrix.
+At N=37:
+- compact/full coverage forms retained material reuse value over the strongest ordinary matrix on 3/4 cross-cell tasks;
+- the compact register matched the full row on all six fixed tasks;
+- compact static review surface was ~60.5% of the full row.
 
-It tests:
-- reuse at N=25, 31 and 37;
-- review-surface growth;
-- information loss F→R;
-- six deterministic maintenance shocks;
-- specialist/specialized-data/single-cell negative controls.
+This means a **small coverage register** remains useful when a concrete comparative research task needs:
+- research state;
+- bounded conclusion;
+- required abstention;
+- law/practice separation;
+- network/territorial warning;
+- global-handbook coverage;
+- unresolved reason;
+- source links;
+- access/language warning.
 
-## Only justified next action
+## Why scaling stops
 
-1. generate the exact deterministic 12-cell rank-2 cohort from the pinned Cliopatria asset;
-2. freeze `expansion_sample.json`;
-3. remove the one-off networked freeze probe;
-4. **only then** research those 12 cells.
+The preregistered maintenance-economy gate failed.
 
-No cell may be substituted after slavery/coercion evidence is inspected.
+Six deterministic update shocks:
+- 3 produced genuine new/contextual specialist evidence;
+- 3 produced no acceptable new source.
 
-## Hard boundary
+In every material update, the compact register and full row required the same number of local review edits. The 0/0 rows were treated as neutral rather than fake savings.
 
-Still not authorized:
+The full row also failed to earn its extra complexity over the compact register.
+
+COV-002 therefore does **not** justify:
+- comprehensive global ingestion;
+- another autonomous scale experiment;
+- routine production of full detailed coverage rows across world history.
+
+## Current execution state
+
+**IDLE / PRESERVATION.**
+
+Future corpus expansion now requires an **external concrete use case** whose value justifies research/review/update burden.
+
+Internal desire for completeness, more records, a prettier map, or another experiment is not a trigger.
+
+## Still explicitly not authorized
+
 - H3 bulk/global research;
-- comprehensive ingestion;
-- canonical release change;
-- Postgres/API/frontend/map work;
-- automated bulk research;
-- Atlas product revival.
-
-COV-002 ends with STOP, REDIRECT, or NARROW SUSTAIN. It does not create its own successor horizon.
+- comprehensive slavery ingestion;
+- canonical release changes;
+- M2 production migration;
+- Atlas frontend/map/product expansion;
+- new DB/API/search/vector/RAG/graph infrastructure;
+- autonomous bulk-research workers;
+- claims of literal historical completeness.
 
 ---
 
