@@ -173,7 +173,7 @@ Key reasons:
 
 Corrected position:
 
-> **COV-002 stops automatic row-by-row scaling. The broader thesis of a tiered, versioned, batch-curated global coverage register remains open and untested.**
+> **At the ADV-001 boundary, COV-002 stopped automatic row-by-row scaling while the tiered/versioned/batch-curated thesis remained open. COV-003 later tested that architecture and returned TIERED SURVIVE without authorizing comprehensive ingestion.**
 
 Durable audit: `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.md`  
 Direction correction: D-068.
