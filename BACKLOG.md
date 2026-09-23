@@ -40,34 +40,38 @@ GitHub issues hold detailed discussion and acceptance history. This backlog hold
 
 ---
 
-# NOW — Gate M1 methodology hardening
+# DONE — Gate M1 methodology hardening
 
-Parent: **#100 — Methodology hardening before next scale expansion**
+Parent: **#100**
 
-The working product stack remains in service. M1 exists because the integrated adversarial review found credible risks of false equivalence and false temporal/spatial precision if the current semantics are scaled without another methodological pass.
-
-**Execution order for the autonomous worker:**
-
-1. **DONE — #101 — Build adversarial methodology fixtures**
-2. **DONE — #102 — Prototype practice and coverage semantic split**
-3. **DONE — #103 — Prototype temporal and spatial inference semantics**
-4. **DONE — #104 — Pin and profile the complete Cliopatria baseline**
-5. **DONE — #112 — Correct semantic axes and legacy map boundary**
-6. **DONE — #105 — M1 integrated adversarial gate** — first disposition REVISE; survived after #112 correction.
-7. **NOW — #106 AUTO READY — M1 Project Health Check and reconciliation**
-
-Rules for M1:
-
-- canonical release v0.6.1 remains unchanged;
-- current public preview may remain operational;
-- no draft semantic prototype becomes canonical merely because tests pass;
-- use synthetic fixtures **and** real atlas cases;
-- current P0–P4 remains backward-compatible until a replacement/compatibility plan survives the gate;
-- #106 must explicitly choose **continue / redirect / stop** before any next gate is created.
-
-Blocked production/admin work in #43 and #26 remains important but is not eligible autonomous work until its blocker changes.
+M1 completed with one deliberate revise/correct/re-attack cycle. The integrated gate rejected P0–P4 as the target universal comparative ordinal, retained it only for legacy compatibility, and accepted the corrected experimental semantic/temporal/spatial prototype for integration testing. Canonical release v0.6.1 and the public preview remain unchanged.
 
 ---
+
+# NOW — Gate M2 semantic integration + complete geography backbone
+
+Parent: **#116 — Integrate hardened semantics with complete geography backbone**
+
+**Execution order / eligibility:**
+
+1. **NOW — #117 AUTO READY — Canonicalize M1 target semantics for M2**
+2. **NOW — #118 AUTO READY — Resolve Cliopatria calendar and relation semantics**
+3. **NEXT — #119 AUTO READY — Ingest complete pinned Cliopatria corpus into raw staging** (depends on #117; source-native years remain preserved)
+4. **NEXT — #120 AUTO READY — Prototype post-M1 claim semantics in disposable PostGIS** (depends on #117)
+5. **NEXT — #121 AUTO READY — Build complete Cliopatria selected-year resolver prototype** (depends on #118 and #119)
+6. **GATE — #122 AUTO READY — M2 integrated adversarial gate** (depends on #117–#121)
+7. **GATE — #123 AUTO READY — M2 Project Health Check and reconciliation** (depends on #122)
+
+M2 rules:
+
+- do not resume bulk evidence expansion merely because M1 passed;
+- preserve v0.6.1 and the current preview exactly;
+- raw Cliopatria ingestion is infrastructure, not geometry approval;
+- no automatic P0–P4 conversion;
+- no production apply until disposable/local integration survives;
+- #123 must explicitly choose continue / redirect / stop before the next gate exists.
+
+Blocked #43 and #26 remain documented but are not eligible autonomous work while their external/admin blockers remain.
 
 # P0 — Map/cartographic quality
 
