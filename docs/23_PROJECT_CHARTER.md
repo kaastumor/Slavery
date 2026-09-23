@@ -173,4 +173,16 @@ Preservation is the resting state, not a new feature roadmap.
 
 Maintain reconstructibility, security and integrity of the existing artifacts when needed. Do not create public-product, contribution-platform or infrastructure work merely to keep the project active.
 
+### Post-H2 bounded value experiment — COV-001
+
+COV-001 / #148 is **not H3** and does not reopen Atlas expansion.
+
+It tests a distinct unresolved thesis: whether a small, systematically assembled global place/time coverage corpus has practical value because evidence, uncertainty and research gaps are preassembled and reusable.
+
+The artifact under test is deliberately plain CSV/JSON/Markdown. A positive result belongs first to the corpus concept, not to PostgreSQL, MapLibre, APIs or the previous Atlas application.
+
+The setup must freeze a deterministic sample before historical research and includes non-polity challenge contexts plus plain-matrix and specialist negative controls.
+
+A positive result may authorize at most one further bounded corpus-scale experiment. It cannot automatically authorize bulk global research or product development.
+
 At every horizon boundary, review evidence for **and against** the thesis, compare the strongest baseline, consider whether the artifact can shrink, and explicitly choose **continue / simplify / redirect / stop** before creating the next horizon.
