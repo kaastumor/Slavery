@@ -842,3 +842,42 @@ COV-002 is **not** evidence sufficient to reject the broader possibility of a ti
 **Not authorized by this correction:** any new historical research cohort, comprehensive ingestion, production migration, or successor experiment.
 
 **Durable audit:** `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.md`.
+
+
+## D-069 — Authorize one bounded COV-003 tiered systematic-coverage architecture test
+**Date:** 2026-09-23  
+**Status:** accepted bounded experiment authorization; no successor horizon authorized
+
+**Decision:** Authorize COV-003 / issue #155 after ADV-001 / D-068.
+
+COV-003 tests a workflow that COV-002 did not:
+- C0 target/research-state registration without slavery inference;
+- C1 compact bounded evidence for a preregistered subset;
+- C2 selective deep evidence only under a frozen escalation rule;
+- source-centric batch research;
+- immutable/as-of experiment releases with explicit review-state updates.
+
+**Frozen scale:**
+- 3 deterministic Cliopatria strata;
+- 24 new targets at C0;
+- 12 fixed C1 research targets;
+- 12 fixed C0-only targets;
+- 6 identity-validation probes;
+- at most 3 C2 escalations;
+- 3 later deterministic update searches.
+
+**Guardrails:**
+- v0.6.1 remains canonical;
+- unresearched and identity-unreviewed are never historical absence;
+- C0 may not imply a slavery conclusion;
+- C0-only targets cannot be promoted after evidence inspection;
+- shared-source reuse counts only when materially informative;
+- no product/database/API/UI horizon;
+- no comprehensive-ingestion authorization;
+- no autonomous successor.
+
+**Possible dispositions:** FAIL / STOP, TIERED SURVIVE, or STRONG SURVIVE.
+
+Even STRONG SURVIVE means only that the architecture deserves further bounded validation; it does not authorize a complete global corpus.
+
+**Durable setup:** `experiments/coverage-tiered/`.
