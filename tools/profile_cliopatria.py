@@ -160,18 +160,19 @@ def profile(features):
             'invalid_from_to_ranges':bad,
             'interpretation':'preserved source-native signed integers; negative=BCE, positive=CE; no atlas normalization performed'
         },
-        'semantic_diagnostics':semantic_diagnostics(features),
     }
 
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument('--input',type=Path)
     ap.add_argument('--output',type=Path)
+    ap.add_argument('--include-semantics',action='store_true')
     a=ap.parse_args()
     data=a.input.read_bytes() if a.input else urllib.request.urlopen(UPSTREAM_URL,timeout=60).read()
     blob=git_blob_sha1(data)
     if blob!=UPSTREAM_GIT_BLOB_SHA1:
         raise SystemExit(f"upstream blob mismatch: expected {UPSTREAM_GIT_BLOB_SHA1}, got {blob}")
+    features=load_features(data)
     out={
         'source':{
             'repository':UPSTREAM_REPO,
@@ -182,9 +183,11 @@ def main():
             'git_blob_sha1':blob,
             'sha256':hashlib.sha256(data).hexdigest()
         },
-        'profile':profile(load_features(data)),
+        'profile':profile(features),
         'promotion':'none; raw geography profile only'
     }
+    if a.include_semantics:
+        out['semantic_diagnostics']=semantic_diagnostics(features)
     text=json.dumps(out,indent=2,sort_keys=True)+'\n'
     a.output.write_text(text,encoding='utf-8') if a.output else print(text,end='')
 
