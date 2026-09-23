@@ -737,3 +737,39 @@ This does **not** authorize:
 - that next experiment is **not authorized by this decision**.
 
 **Durable result:** `experiments/coverage-value/11_FINAL_RESULT.md`.
+
+
+## D-066 — Authorize one bounded COV-002 scale/reuse economics experiment
+**Date:** 2026-09-23  
+**Status:** accepted bounded experiment authorization; no successor horizon authorized
+
+**Decision:** Authorize COV-002 / issue #151 as the single further corpus-scale experiment permitted by D-065.
+
+COV-002 tests whether the value of the flat coverage corpus grows faster than:
+- bounded historical research effort;
+- review surface;
+- maintenance/update burden;
+- repeated cross-cell reconstruction.
+
+It also tests whether the full COV-001 row should shrink into a compact coverage register.
+
+**Experimental form:**
+- add 12 deterministic rank-2 polity-year cells from the same pinned Cliopatria frame;
+- compare N=25, 31 and 37;
+- compare full rows, compact register and strongest ordinary matrix;
+- run a field-loss audit;
+- run six deterministic bounded evidence updates;
+- preserve specialist and specialized-data negative controls.
+
+**Guardrails:**
+- sample must be frozen before historical research;
+- flat files only;
+- no canonical data release change;
+- no Atlas product/platform/database horizon;
+- no automatic successor;
+- no literal-completeness claim;
+- no absence inference from inconclusive/missing evidence.
+
+**Possible dispositions:** STOP / preservation, REDIRECT to compact register, or NARROW SUSTAIN of the full row.
+
+A positive result still does not authorize comprehensive global ingestion.
