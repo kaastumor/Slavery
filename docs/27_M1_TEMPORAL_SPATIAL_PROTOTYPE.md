@@ -1,97 +1,122 @@
 # M1 temporal and spatial inference prototype
 
 **Gate:** #100  
-**Atomic task:** #103  
+**Original task:** #103  
+**Corrective task:** #112  
 **Status:** experimental; not canonical methodology or schema  
-**Baseline:** v0.6.1 and the current public preview remain unchanged
+**Prototype:** v2 after integrated adversarial correction  
+**Baseline:** v0.6.1 and current public preview remain unchanged
 
 ## Question
 
-How can the atlas distinguish uncertain dating from asserted historical duration, and the place where evidence was observed from the geographic extent that a reviewed claim may legitimately cover?
+How can the atlas distinguish uncertain dating from asserted historical duration, and evidence location from the spatial extent a reviewed claim may legitimately cover?
 
-## Smallest proposal
+## Correction from v1
 
-Keep the existing normalized integer ranges for coarse filtering, but add two independent semantic layers in a future-compatible representation.
+The first prototype correctly separated `query_window` from positive selected-year applicability, but put `approximate_period` in the same `time_mode` field as continuity and bounded occurrence.
 
-### 1. Temporal assertion
+That still mixed two concepts:
 
-A claim/evidence item carries:
+- **applicability** — what years the claim positively applies to;
+- **precision/certainty** — how exact the dates are.
 
-- `query_window`: the normalized outer interval in which the assertion may be relevant;
-- `time_mode`: `continuous_interval`, `bounded_occurrence`, `alternative_dates`, `terminus_after`, `terminus_before`, `approximate_period`, or `unknown`;
-- `asserted_intervals`: zero or more intervals actually asserted as applicable;
-- `display_date`: source-faithful human-readable dating/precision.
+Approximation cannot itself assert continuity.
 
-The key invariant is that **query-window membership is not sufficient for selected-year historical validity**. A year is positively active only when the temporal mode and asserted interval semantics support that year. `alternative_dates` may be discoverable throughout its outer query window, but must not render as continuous positive presence between alternatives.
-
-Open termini likewise constrain possibility without asserting an indefinitely continuous historical state. A later reviewed synthesis may separately assert continuity, but that is a different statement.
-
-### 2. Spatial inference
+## Temporal representation
 
 A claim/evidence item carries:
 
-- `evidence_locus`: the spatial entity/entities where the underlying observation or source is anchored;
-- `inference_extent`: the spatial entity/entities over which the reviewed historical assertion is justified;
-- `generalization_basis`: `same_as_locus`, `specialist_polity_synthesis`, `explicit_source_jurisdiction`, `multi_locus_synthesis`, `other_reviewed`, or `none`;
-- `generalization_rationale`: required when inference extent is broader than the evidence locus.
+- **query_window** — outer normalized interval used to retrieve candidate records;
+- **applicability_mode** — `continuous_interval`, `bounded_occurrence`, `alternative_dates`, `terminus_after`, `terminus_before`, or `unknown`;
+- **asserted_intervals** — intervals/dates positively asserted under the applicability mode;
+- **temporal_precision** — independently describes exactness such as `exact`, `approximate`, `broad_range`, `disputed_alternatives`, or `unknown`;
+- source-faithful date text/other existing certainty metadata may remain alongside these fields.
 
-The key invariant is that **geometry availability does not authorize generalization**. A polity polygon may receive a territorial fill only when the reviewed claim's inference extent includes that polity under an explicit rationale. Otherwise the locus remains local or geometry unresolved.
+### Invariant
 
-These semantics sit beside, rather than replace, source geometry, claim provenance, the #102 semantic prototype, or P0–P4.
+**Changing temporal precision alone must not change selected-year truth.**
+
+An approximate continuous period can be active throughout an asserted interval because continuity was separately reviewed and asserted. An approximately dated bounded occurrence does not become active across its entire uncertainty envelope.
+
+## Real cases
+
+### Silla Village Register
+
+The source case records 695–819 CE as an outer range because proposed dates include 695, 755, 815, and 818–819.
+
+Prototype v2:
+
+- query window: 695–819
+- applicability: alternative dates
+- precision: disputed alternatives
+- asserted intervals: 695, 755, 815, 818–819
+
+Years such as 700, 750, and 800 remain discoverable through the outer window but are not positive selected-year validity.
+
+### Hittite central Anatolia
+
+The reviewed claim is a broad period-level synthesis (1400–1200 BCE), not one uncertainly dated event.
+
+Prototype v2 therefore uses:
+
+- applicability: continuous interval
+- precision: broad range
+- asserted interval: the reviewed historical period
+
+Continuity comes from the synthesis, not from the fact that the boundaries are broad.
+
+## Spatial inference
+
+The #103 spatial split survives unchanged:
+
+- **evidence_locus** — where the observation/source is anchored;
+- **inference_extent** — where the reviewed historical assertion is justified;
+- **generalization_basis** — explicit reviewed basis for any enlargement;
+- **generalization_rationale** — required when extent exceeds locus.
+
+Geometry availability never authorizes generalization. A polity polygon can be drawn only when the claim's reviewed inference extent includes that polity.
 
 ## Selected-year behavior
 
-A minimal predicate is:
+1. use query window for candidate retrieval;
+2. evaluate applicability mode + asserted intervals for positive selected-year truth;
+3. treat temporal precision/certainty as metadata about the dates, not as the truth predicate;
+4. use inference extent, not a containing geometry, for map fill;
+5. unresolved applicability/extent remains representable without manufacturing a positive state.
 
-1. use `query_window` only to find candidates;
-2. evaluate `time_mode` + `asserted_intervals` for positive selected-year applicability;
-3. use `inference_extent`, not `evidence_locus` or convenient containing geometry, to choose what may be filled;
-4. if temporal applicability or spatial extent is unresolved, preserve the record/evidence but do not manufacture a positive continuous/polity-wide map state.
+## Compatibility boundary
 
-This keeps uncertain evidence inspectable without converting uncertainty into presence.
+The current preview still filters active claims using legacy `from_year/to_year`. M1 does not silently alter that released preview.
 
-## Adversary and alternatives
+Before post-M1 semantics become publishable, the serving/API path must carry enough temporal semantics for the client to evaluate selected-year applicability without treating uncertainty envelopes as continuous presence.
 
-| Attack / simpler alternative | Disposition | Evidence / consequence |
+That later integration must be deliberate and release-aware.
+
+## Adversarial alternatives
+
+| Alternative | Disposition | Result |
 | --- | --- | --- |
-| Keep one broad start/end range and explain uncertainty in prose | **reject** | Silla's competing 695/815/819 dating can become 125 years of apparent selected-year validity; prose cannot repair the query truth condition. |
-| Treat every year inside an uncertainty envelope as positive but style it as uncertain | **reject** | This still asserts occurrence/applicability at intermediate years; uncertainty styling changes confidence, not the predicate. |
-| Expand local evidence to the containing polity when a polygon exists | **reject** | Geometry is a display resource, not evidence of historical representativeness. M1-A04 and the Silla village case directly falsify this shortcut. |
-| Require exact dates before anything can be queried | **reject** | It discards legitimate approximate, terminus and alternative-date evidence rather than representing its limits. |
-| Preserve normalized outer ranges as candidate-search indexes | **survives** | They remain useful for retrieval if positive applicability is evaluated separately. |
-| Preserve unresolved geometry instead of inventing an extent | **survives** | Existing Maya/Silla restraint already satisfies the north-star requirement; no new geometry system is needed. |
-| Separate evidence locus from reviewed inference extent | **revise** | This makes the spatial generalization decision explicit and machine-testable without changing source geometry. |
-| Add a temporal mode plus asserted intervals beside the outer query window | **revise** | This is the smallest representation that distinguishes uncertainty envelopes from continuous validity. |
-| Build probabilistic temporal/spatial surfaces now | **park** | M1 demonstrates semantic ambiguity, not a need for probabilistic infrastructure or invented probability distributions. |
-
-## Real-case discriminating examples
-
-### Silla Village Register — BCE/CE-safe integer semantics, uncertain document date
-
-The existing case records a broad 695–819 CE window because scholarship offers competing dates for the register and explicitly warns that it is not a 125-year continuous observation. Under this prototype the outer query window remains 695–819 for discovery, while `time_mode=alternative_dates` and asserted candidate dates/intervals prevent an arbitrary intermediate year such as 750 from becoming positive continuous presence.
-
-The four village communities are the evidence locus. A whole-Silla polygon is not an inference extent merely because one is available; absent a reviewed polity-wide generalization rationale, the map remains local/unresolved.
-
-### BCE case — Hittite central Anatolia
-
-BCE normalized years remain ordinary signed historical-year values; no separate calendar system is introduced. A broad scholarly period can be represented as `approximate_period` and may be continuously applicable only when the reviewed synthesis actually asserts the practice across that period. This distinguishes a genuinely period-level synthesis from a single uncertainly dated attestation encoded with the same outer bounds.
-
-### Local evidence / large polity
-
-A city, village, estate, inscription findspot or port can be an evidence locus while a polity is the inference extent only when specialist synthesis or explicit source jurisdiction supports that enlargement. The rationale is therefore data, not an implicit spatial join.
+| Keep `approximate_period` as an applicability mode | **reject** | Approximation says nothing about continuity. |
+| Infer continuity from a broad range | **reject** | Recreates the Silla failure mode. |
+| Let precision change truth behavior | **reject** | Precision and applicability are orthogonal. |
+| Keep outer range for retrieval | **survives** | Useful and simple when not treated as positive validity. |
+| Evidence locus vs inference extent split | **survives** | Prevents geometry-driven generalization. |
+| Probabilistic time/space surfaces | **park** | No evidence M1 needs probability distributions. |
 
 ## Machine-testable invariants
 
-1. `alternative_dates` must not produce positive selected-year applicability merely because a year lies between minimum and maximum candidate dates.
-2. `continuous_interval` may produce positive applicability for years inside an asserted interval.
-3. open termini do not by themselves imply indefinite continuous applicability.
-4. an inference extent broader than its evidence locus requires a non-`none` generalization basis and rationale.
-5. drawable containing geometry cannot enlarge inference extent.
-6. unresolved extent remains representable and must not be coerced to a polity.
-7. existing signed historical-year/BCE convention is retained.
+1. query-window membership is not sufficient for positive selected-year validity;
+2. applicability mode is independent from temporal precision;
+3. approximation alone cannot assert continuity;
+4. alternative dates do not fill intermediate years;
+5. a reviewed continuous interval can remain continuous even with broad/approximate date precision;
+6. geometry cannot enlarge inference extent;
+7. broader inference requires a reviewed basis and rationale;
+8. unresolved extent is valid;
+9. the existing signed atlas historical-year convention remains intact; Cliopatria source-native year normalization remains a separate integration decision.
 
 ## Decision
 
-**Revise experimentally.** Keep outer normalized ranges and existing geometry/provenance machinery, but prototype temporal applicability separately from discovery windows and spatial inference extent separately from evidence locus. The simpler notes-only/range-only alternatives fail the selected-year and polity-fill attacks. Probabilistic modeling and schema migration are parked pending the integrated M1 gate.
+**Revise → survives at prototype level.**
 
-No historical case is reinterpreted or republished. Canonical release v0.6.1 and the public preview remain unchanged.
+The v2 representation removes the precision/applicability collision without changing source data, canonical releases, public serving, or database schema. #105 must still rerun the integrated gate before M1 can close.
