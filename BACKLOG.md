@@ -9,69 +9,57 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# IDLE / PRESERVATION — COV-001 completed with NARROW SURVIVE
+# ACTIVE — COV-002 scale/reuse economics (#151)
 
-COV-001 / issue #148 tested a distinct post-H2 thesis:
+COV-001 survived narrowly as a flat coverage-corpus thesis. The sponsor has now explicitly authorized the one further bounded experiment permitted by D-065:
 
-> Does a systematically assembled global historical coverage corpus create reusable value even when the bespoke Atlas product does not?
+> **Does coverage-corpus value grow faster than research, review and update burden when the corpus becomes materially larger?**
 
-Final result:
+This does **not** reopen Atlas product expansion.
 
-> **NARROW SURVIVE — COVERAGE CORPUS VALUE EXISTS; ATLAS PRODUCT EXPANSION REMAINS STOPPED**
+## Current state
 
-Durable result:
-- `experiments/coverage-value/11_FINAL_RESULT.md`
-- HC-005 in `docs/25_PROJECT_HEALTH.md`
-- D-065 in `docs/08_DECISIONS_LOG.md`
+**PROTOCOL + SETUP ADVERSARY COMPLETE; SAMPLE NOT YET FROZEN; HISTORICAL RESEARCH NOT STARTED.**
 
-After adversarial downgrade, **4/6** fixed global tasks showed material value:
-- law vs practice;
-- network/participation vs territorial inference;
-- global-handbook coverage visibility;
-- unresolved/gap visibility.
+Durable setup:
+- `experiments/coverage-scale/00_PROTOCOL_PREREGISTERED.md`
+- `experiments/coverage-scale/01_SETUP_ADVERSARY.md`
+- `experiments/coverage-scale/02_PROTOCOL_REVISED.md`
+- `experiments/coverage-scale/select_expansion.py`
+- `tests/test_cov002_expansion_selector.py`
 
-The basic overview reached parity with a competent ordinary matrix, and the terminology query was not counted because one ordinary spreadsheet column could reproduce most of that gain.
+The experiment compares:
+- F — full COV-001 row;
+- R — compact coverage register containing only demonstrated-value fields;
+- M — strongest ordinary research matrix.
 
-Both negative controls behaved correctly:
-- specialist narrative beat the index on deep Champa historiography;
-- SlaveVoyages beat the index on voyage-level/quantitative work.
+It tests:
+- reuse at N=25, 31 and 37;
+- review-surface growth;
+- information loss F→R;
+- six deterministic maintenance shocks;
+- specialist/specialized-data/single-cell negative controls.
 
-## What survives
+## Only justified next action
 
-A small, auditable, explicitly incomplete **coverage corpus** may be worth further investigation as a flat table/JSON/CSV:
-- what can be said for a place/time target;
-- what cannot be said;
-- why research remains inconclusive/disputed;
-- law/practice/network distinctions;
-- source/provenance;
-- whether global syntheses directly cover the target.
+1. generate the exact deterministic 12-cell rank-2 cohort from the pinned Cliopatria asset;
+2. freeze `expansion_sample.json`;
+3. remove the one-off networked freeze probe;
+4. **only then** research those 12 cells.
 
-This is not authorization for the old Atlas application.
+No cell may be substituted after slavery/coercion evidence is inspected.
 
-## Current execution state
+## Hard boundary
 
-**IDLE.**
+Still not authorized:
+- H3 bulk/global research;
+- comprehensive ingestion;
+- canonical release change;
+- Postgres/API/frontend/map work;
+- automated bulk research;
+- Atlas product revival.
 
-COV-001 permits at most one future bounded **corpus-scale economics/reuse experiment**, but no such experiment is currently authorized.
-
-The unresolved question is:
-
-> Does corpus value grow faster than research/review/update cost at materially larger scale?
-
-Do not answer that by simply researching more cells.
-
-## Still explicitly not authorized
-
-- H3 bulk/global evidence expansion;
-- canonical release changes;
-- M2 production migration;
-- Atlas frontend/map/product expansion;
-- new database/API/service infrastructure;
-- autonomous bulk-research workers;
-- search/vector/RAG/graph/ontology infrastructure;
-- claims of literal historical completeness.
-
-If a further scale test is authorized, it must test reuse/maintenance economics and strongest-baseline parity, not record-count growth.
+COV-002 ends with STOP, REDIRECT, or NARROW SUSTAIN. It does not create its own successor horizon.
 
 ---
 
