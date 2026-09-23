@@ -230,19 +230,32 @@ The audit found:
 
 D-068 therefore narrows the stop to the tested row-by-row workflow. The project remains idle and no new expansion is authorized.
 
-### COV-003 — tiered systematic coverage architecture (active bounded experiment)
+### COV-003 — tiered systematic coverage architecture (completed)
 
-ADV-001 / D-068 established that COV-002 stopped only the tested row-by-row workflow, not every possible systematic-coverage architecture.
+ADV-001 / D-068 left open whether broad systematic coverage could be separated from deep row-by-row research.
 
-COV-003 / #155 is explicitly authorized to test one alternative:
-- broad C0 target/research-state registration without slavery inference;
-- compact C1 evidence only for a frozen research subset;
-- selective C2 depth only when a preregistered escalation rule earns it;
-- source-centric batch research;
-- versioned/as-of maintenance rather than continuous mutation.
+COV-003 / #155 tested that architecture.
 
-The experiment uses 24 new targets but researches only 12 at C1 and at most 3 at C2. Record count itself is not a success metric.
+Result: **TIERED SURVIVE; STRONG SURVIVE rejected.**
 
-No result automatically authorizes comprehensive ingestion or the former Atlas product.
+The viable experimental form is:
+- C0 target/research-state registration without slavery inference;
+- C1 compact researched coverage for selected targets;
+- selective C2 depth when a predefined ambiguity/risk trigger earns it;
+- immutable/as-of releases;
+- explicit source-quality and source-dependency review state.
+
+Evidence:
+- 24 C0 targets can be represented without treating unresearched as absence;
+- 6 identity probes exposed one mismatch and one ambiguity before subject interpretation;
+- C1 recovered 4 bounded-supported and 8 researched-inconclusive outcomes;
+- shared-source reuse increased structurally from 1.00 to 2.20, but every C1 target still needed target-specific follow-up, so strong batch-economy claims fail;
+- C2 materially improved 2/3 escalated targets;
+- systematic selection reached targets with no direct Cambridge/Palgrave treatment;
+- shared-source correction risk can be localized through source-to-row dependencies.
+
+The architecture is therefore worth preserving as a research method. It is not evidence that comprehensive global ingestion is currently affordable or justified.
+
+No successor horizon is authorized by COV-003.
 
 At every horizon boundary, review evidence for **and against** the thesis, compare the strongest baseline, consider whether the artifact can shrink, and explicitly choose **continue / simplify / redirect / stop** before creating the next horizon.
