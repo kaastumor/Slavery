@@ -490,3 +490,57 @@ The target model keeps the existing universal CLAIM/provenance/release architect
 - probabilistic temporal/spatial modeling — parked; the evidence does not justify probability distributions.
 
 **Consequences:** docs/02_METHOD_AND_ONTOLOGY.md, docs/04_DATA_MODEL.md and docs/schema_draft.yaml define the post-M1 target. The schema draft advances to draft-0.11 and remains a target contract, not proof of live implementation. M2 must test the relational form in disposable PostGIS before any production apply or new canonical historical release. Existing v0.6.1/P-level semantics remain immutable historical release meaning.
+
+
+## D-059 — Cliopatria source-time and composite semantics are preserved before atlas resolution
+**Date:** 2026-09-23  
+**Status:** accepted source-normalization/resolver rule for pinned Cliopatria v0.2.0; implementation remains M2 work
+
+**Decision:** The complete pinned Cliopatria corpus is a raw global geography baseline, but its source timeline and composite hierarchy are not flattened into atlas polity geometry.
+
+### Time
+
+Upstream defines `FromYear` / `ToYear` as inclusive, negative integers as BCE and positive integers as CE. The exact pinned corpus contains six POLITY rows ending at source integer `0`, each followed by the same polity beginning at `1`. The pinned original-map sequence near the era boundary jumps from `B105-14.PNG` to `C001-1.PNG`; upstream prose does not assign source `0` a historical BCE/CE label.
+
+Atlas selected-year lookup therefore translates its astronomical internal year `y` to the Cliopatria source query year as:
+
+- `y <= 0` → `y - 1`
+- `y >= 1` → `y`
+
+This maps atlas 1 BCE (0) to source -1 and atlas 1 CE (1) to source 1. Source integer 0 is preserved exactly in raw data but receives no independent atlas historical-year meaning and is never selected directly by a historical-year query.
+
+This is an atlas normalization rule derived from upstream's explicit BCE/CE labels plus the observed boundary structure; it is not a claim that Cliopatria itself explicitly defines year zero as a particular historical year.
+
+Source-native ranges remain intact in raw/staging storage. Same-name gaps remain gaps and are not automatically interpolated.
+
+### Composite hierarchy and RELATION
+
+Cliopatria `MemberOf` and `Components` are preserved raw and may additionally be parsed as semicolon-delimited lists. The pinned corpus contains nested composites and multiple memberships; the hierarchy must not be reduced to one parent.
+
+`RELATION` remains a distinct source type. v0.2.0 introduced it for a subset of Seshat-based supra-polity relations such as personal unions, vassalages, alliances and allegiances. RELATION composite geometry duplicates component geometry and must not be coerced into a normal atlas POLITY.
+
+For the default atlas Cliopatria polity baseline:
+
+1. select source rows active under the translated source year;
+2. treat active `Type=POLITY` rows as polity candidates;
+3. resolve active `MemberOf` parent composites;
+4. suppress a constituent POLITY only when an active parent composite resolves to `Type=POLITY`;
+5. membership in `Type=RELATION` does not suppress the constituent polity;
+6. nested POLITY composites resolve recursively to the highest active POLITY composite;
+7. RELATION rows remain separate relationship/composite evidence or an optional relation layer;
+8. unresolved parent identity/type is flagged rather than guessed.
+
+Accepted specialist geometry still takes precedence over this baseline under D-055.
+
+**Alternatives considered:**
+- map source integer 0 directly to atlas astronomical 0 — rejected because upstream explicitly labels negative magnitudes as BCE and this would create an off-by-one BCE interpretation;
+- shift all source years by one — rejected because positive CE labels are already direct;
+- rewrite raw source years during ingestion — rejected because it destroys source-native lineage and obscures the special zero;
+- use Cliopatria's top-level display rule unchanged — rejected for the atlas default because RELATION composites can replace constituent polities and imply a stronger political unity than the source type warrants;
+- drop all composites — rejected because POLITY composites are legitimate source representations and nested composites occur in the corpus;
+- flatten hierarchy to one parent — rejected because the pinned corpus contains rows with multiple memberships and nested composites;
+- interpolate gaps between same-name rows — rejected because upstream explicitly documents temporary incorporation/gaps and the pinned corpus contains hundreds of gaps.
+
+**Evidence:** pinned commit `ad28a691b7c07c1fca89d0e0636d324667d2a258`; exact source blob SHA-1 `cefab0f4b622e2e7fb3daf68d4f461f83991204c`; SHA-256 `d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370`; upstream README and `notebooks/map_functions.py`; exact-corpus diagnostic recorded in `validation/cliopatria_v0.2.0_semantics.json`; Bennett et al. (2025), DOI 10.1038/s41597-025-04516-9.
+
+**Consequences:** #119 must preserve the raw source timeline/hierarchy and #121 must implement this type-aware selected-year resolution. No raw source row becomes reviewed/published atlas geometry merely through ingestion.
