@@ -170,7 +170,7 @@ Evidence supports or challenges a specific claim. It does not automatically vali
 
 Non-voyage network evidence is represented through `EXTERNAL_PARTICIPATION_CLAIM` rather than being forced into territorial practice. It may target a spatial entity, actor, or both, while remaining independent of P0–P4.
 
-For territorial-practice claims, `practice_level` may remain NULL until an explicit P0–P4 assessment is made. NULL is not P0: it means the assessment has not been recorded. P0 is an explicit unknown/no-usable-classification assessment. Disputed/RI coverage must not be coerced to P0.
+`practice_level` remains a nullable **legacy P0–P4 compatibility field** for historical releases. NULL is distinct from legacy P0, and disputed/inconclusive research states must not be coerced to P0. The post-M1 target model uses separate evidence, historical-characterization, temporal and spatial dimensions; no new P-level or post-M1 dimension is mechanically derived from the other.
 
 ## 7. Source provenance model
 
