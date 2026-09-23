@@ -1,7 +1,7 @@
 \pset tuples_only on
 \pset format unaligned
 
-DO $
+DO $m2$
 DECLARE
     expected record;
     actual_source_year integer;
@@ -110,7 +110,7 @@ BEGIN
     IF n <> 1 THEN
         RAISE EXCEPTION 'pinned Baekje 369 resolver example drifted';
     END IF;
-END $;
+END $m2$;
 
 WITH requested(atlas_year,label) AS (
     VALUES
