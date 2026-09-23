@@ -1,5 +1,5 @@
 schema_version: draft-0.11
-status: m2_target_semantics_canonicalized_not_yet_relationally_implemented
+status: m2_target_semantics_canonicalized_and_disposable_prototype_validated_not_production_migrated
 principle: identities, claims, relationships, source versions, time and geometry are
   separate
 database_target: PostgreSQL_PostGIS
