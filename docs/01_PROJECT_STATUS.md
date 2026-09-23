@@ -148,6 +148,38 @@ Direction decision: D-067
 
 No successor experiment or corpus-growth horizon is authorized.
 
+## ADV-001 completeness-inference audit — completed
+
+The sponsor requested a direct adversarial attack on the post-COV-002 statement that systematic comprehensive historical coverage is “not justified by the evidence we have.”
+
+Result: **THE BROAD INFERENCE WAS TOO STRONG.**
+
+What survives:
+- COV-002 does not justify automatic continuation of the tested row-by-row expansion workflow;
+- full F-style rows should not become the default global representation;
+- the compact coverage register remains the best demonstrated task-oriented form.
+
+What does not survive:
+- treating COV-002 as evidence that systematic comprehensive coverage itself is not worth pursuing;
+- requiring an external consumer as the only valid future trigger.
+
+Key reasons:
+- COV-002 explicitly tested artifact form/reuse economics, not world-history representativeness;
+- N=25→37 is not a long-run scale curve;
+- after three of six maintenance shocks became neutral 0/0 cases, the fixed 4/6 savings gate was mathematically unreachable under the result-adversary treatment;
+- rich F source objects and bare R source links were each counted as one update atom;
+- research effort, batch source reuse, periodic/versioned maintenance and emergent reference-corpus value were not measured;
+- an external-use-case-only trigger risks reintroducing demand-density bias.
+
+Corrected position:
+
+> **COV-002 stops automatic row-by-row scaling. The broader thesis of a tiered, versioned, batch-curated global coverage register remains open and untested.**
+
+Durable audit: `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.md`  
+Direction correction: D-068.
+
+No new research horizon is authorized by this correction.
+
 ## Remaining bounded project-system debt
 
 - `main` currently reports unprotected;
