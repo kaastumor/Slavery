@@ -1,0 +1,23 @@
+name: M2 Cliopatria semantics probe
+
+on:
+  pull_request:
+    paths:
+      - "tools/profile_cliopatria.py"
+      - "tests/test_profile_cliopatria.py"
+      - ".github/workflows/m2-cliopatria-semantics-probe.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - name: Inspect exact pinned Cliopatria corpus
+        run: |
+          python tools/profile_cliopatria.py --output /tmp/cliopatria-semantics.json
+          echo '---BEGIN CLIOPATRIA SEMANTICS---'
+          cat /tmp/cliopatria-semantics.json
+          echo '---END CLIOPATRIA SEMANTICS---'
