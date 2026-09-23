@@ -21,7 +21,7 @@ def load_features(data):
 def profile(features):
     types=Counter(); geoms=Counter(); keys=Counter(); names=set(); lo=hi=None; neg=cross=bad=0
     for f in features:
-        p=f.get('properties') or {}; keys.update(p); types[str(p.get('Type','<missing>'))]+=1
+        p=f.get('properties') or {}; keys.update(p.keys()); types[str(p.get('Type','<missing>'))]+=1
         geoms[str((f.get('geometry') or {}).get('type','<missing>'))]+=1
         if p.get('Name') is not None: names.add(str(p['Name']))
         a,b=p.get('FromYear'),p.get('ToYear')
