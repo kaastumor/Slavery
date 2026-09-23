@@ -55,17 +55,26 @@ In every material update, the compact register and full row required the same nu
 The full row also failed to earn its extra complexity over the compact register.
 
 COV-002 therefore does **not** justify:
-- comprehensive global ingestion;
-- another autonomous scale experiment;
+- comprehensive global ingestion through the tested row-by-row workflow;
+- another autonomous scale experiment from project momentum;
 - routine production of full detailed coverage rows across world history.
+
+Post-COV-002 adversarial audit ADV-001/#153 found that this stop must **not** be generalized into a finding that systematic comprehensive coverage itself is uneconomic or worthless. COV-002 did not test tiered, versioned, batch-curated coverage economics.
+
+Durable correction:
+- `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.md`
+- HC-007 in `docs/25_PROJECT_HEALTH.md`
+- D-068 in `docs/08_DECISIONS_LOG.md`
 
 ## Current execution state
 
 **IDLE / PRESERVATION.**
 
-Future corpus expansion now requires an **external concrete use case** whose value justifies research/review/update burden.
+Future corpus expansion requires a **new explicit value hypothesis plus a bounded cost model** whose expected value justifies research/review/update burden.
 
-Internal desire for completeness, more records, a prettier map, or another experiment is not a trigger.
+A real external consumer/use case is one valid trigger. A preregistered methodological objective—such as bias-resistant systematic coverage—may also be valid, but only if it tests a different workflow than COV-002's row-by-row expansion and does not use record count as the success metric.
+
+Internal momentum, a prettier map, or undifferentiated record-count growth is not a trigger.
 
 ## Still explicitly not authorized
 

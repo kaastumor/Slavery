@@ -28,12 +28,13 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - COV-001 / #148 coverage-value experiment: **completed — NARROW SURVIVE**;
 - COV-002 / #151 scale/reuse experiment: **completed — STOP FURTHER AUTOMATIC SCALING**;
 - execution state: **IDLE / PRESERVATION**; active Atlas expansion remains stopped;
-- compact coverage-register pattern is preserved for concrete task-driven use; systematic scale economics did not pass;
+- compact coverage-register pattern is preserved for concrete task-driven use; COV-002 did not justify automatic row-by-row scaling;
+- ADV-001 / D-068: the broader tiered/versioned/batch-curated systematic-coverage thesis remains open and untested;
 - no H3/H4 bulk research, production-migration, frontend/platform or infrastructure horizon is authorized.
 
 The H2 pilot found a material corpus-method advantage in one of three cases, below the pre-registered two-case threshold; the repaired thin visual/query arm did not materially beat the corpus/method in any case.
 
-See `experiments/h2-value-discrimination/09_FINAL_RESULT.md` / D-063 for the Atlas stop decision, `experiments/coverage-value/11_FINAL_RESULT.md` / D-065 for the narrow corpus-value result, and `experiments/coverage-scale/13_FINAL_RESULT.md` / D-067 for the scale stop decision.
+See `experiments/h2-value-discrimination/09_FINAL_RESULT.md` / D-063 for the Atlas stop decision, `experiments/coverage-value/11_FINAL_RESULT.md` / D-065 for the narrow corpus-value result, `experiments/coverage-scale/13_FINAL_RESULT.md` / D-067 for the tested-workflow scale stop, and `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.md` / D-068 for the completeness-inference correction.
 
 ## Repository boundary
 

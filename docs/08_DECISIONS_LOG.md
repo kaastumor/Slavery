@@ -808,3 +808,37 @@ Preserve the compact coverage-register pattern demonstrated by COV-002 for exter
 - future substantive expansion requires a new external use case, user/consumer, funded research question or other concrete trigger whose value justifies research/review/update cost.
 
 **Durable result:** `experiments/coverage-scale/13_FINAL_RESULT.md`.
+
+
+## D-068 — COV-002 stops the tested row-by-row workflow, not the systematic-coverage thesis
+**Date:** 2026-09-23  
+**Status:** accepted correction after ADV-001 / issue #153
+
+**Decision:** Narrow D-067's interpretation.
+
+COV-002 remains a valid reason **not to automatically continue its tested row-by-row corpus-expansion workflow** and not to make full F-style rows the default global representation.
+
+COV-002 is **not** evidence sufficient to reject the broader possibility of a tiered, versioned, batch-curated systematic global coverage register.
+
+**Reasons:**
+- the COV-002 revised protocol explicitly scoped itself to artifact form and reuse economics, not world-history representativeness;
+- 25→37 rows does not establish a long-run scale curve;
+- the maintenance gate required compact R to beat F in at least 4/6 shocks, but three shocks produced no change and were later treated as neutral 0/0 cases, making the threshold impossible to satisfy under that treatment;
+- the atom model counted a rich F source object and a bare R source link as one item each, so the 2-vs-2 maintenance result is sensitive to representation granularity;
+- total historical research cost, batch source reuse, distributed review, periodic/versioned maintenance and emergent reference-corpus value were not measured;
+- systematic coverage can itself reduce selection/demand bias, while an external-use-case-only trigger may preferentially attract already visible and well-funded histories;
+- target-frame error discovery is both a scaling cost and a data-quality benefit.
+
+**What still survives from D-067:**
+- v0.6.1 remains canonical;
+- COV-001/COV-002 remain non-canonical experiments;
+- no Atlas product/platform revival;
+- no automatic bulk/global research;
+- compact coverage-register fields are preferred over routine F-style rows for demonstrated cross-cell tasks;
+- record count/completeness is not itself a success metric.
+
+**Correct future trigger rule:** Future substantive expansion requires explicit authorization plus a concrete value hypothesis and bounded cost model. An external consumer is one valid trigger, but a preregistered methodological objective such as bias-resistant systematic coverage may also be valid.
+
+**Not authorized by this correction:** any new historical research cohort, comprehensive ingestion, production migration, or successor experiment.
+
+**Durable audit:** `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.md`.

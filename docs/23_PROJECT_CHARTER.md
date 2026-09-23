@@ -165,7 +165,7 @@ HC-004 / D-063 chose **STOP ACTIVE ATLAS EXPANSION; PRESERVE METHOD/CORPUS/AUDIT
 
 The former globally balanced evidence-expansion candidate is **not authorized**. More records are not a remedy for a failed value threshold.
 
-It may be reconsidered only after genuinely new external evidence identifies a repeated research/user need or simpler-baseline failure.
+It may be reconsidered only after explicit new authorization tied to a concrete value hypothesis and bounded cost model. A real external research/user need or simpler-baseline failure is one valid trigger; a preregistered methodological objective such as bias-resistant systematic coverage may also be valid if it tests a workflow not already rejected by COV-002.
 
 ### H4 — Preservation, not a product horizon
 
@@ -207,11 +207,27 @@ The compact register preserved the full row's fixed-task behavior and reduced st
 
 However, the preregistered maintenance-economy gate failed: the three material evidence updates required the same number of local review edits in compact and full forms. The full row also failed to earn its additional routine complexity.
 
-The durable lesson is:
-- use the compact coverage-register pattern when a concrete comparative task needs it;
+The durable lesson, as narrowed by ADV-001 / D-068, is:
+- use the compact coverage-register pattern for demonstrated cross-cell tasks;
 - preserve existing full evidence artifacts for audit/research;
-- do not pursue systematic world-scale corpus growth for completeness alone.
+- do not automatically continue the tested row-by-row expansion workflow;
+- do **not** treat COV-002 as a rejection of tiered, versioned, batch-curated systematic coverage in general.
 
-No successor experiment or corpus-expansion horizon exists after COV-002.
+The broader systematic-coverage thesis remains open and untested. No successor experiment or corpus-expansion horizon is currently authorized.
+
+### ADV-001 — completeness-inference audit (completed)
+
+ADV-001 / #153 adversarially attacked the inference from COV-002's maintenance-gate failure to the broader claim that systematic comprehensive historical coverage is not justified.
+
+Result: **the broad inference was too strong.**
+
+The audit found:
+- scope mismatch between COV-002's stated artifact/reuse-economics target and the broader strategic conclusion;
+- a maintenance threshold that became unreachable after three neutral no-change shocks under the adopted scoring rule;
+- atom-granularity sensitivity because rich source objects and bare source links counted equally;
+- no direct test of batch/source-centric research, periodic/versioned maintenance, long-run scale curves or emergent reference-corpus value;
+- a risk that an external-use-case-only trigger recreates demand-density bias.
+
+D-068 therefore narrows the stop to the tested row-by-row workflow. The project remains idle and no new expansion is authorized.
 
 At every horizon boundary, review evidence for **and against** the thesis, compare the strongest baseline, consider whether the artifact can shrink, and explicitly choose **continue / simplify / redirect / stop** before creating the next horizon.
