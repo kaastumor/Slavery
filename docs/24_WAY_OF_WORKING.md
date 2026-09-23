@@ -25,6 +25,44 @@ Current project ownership is deliberately small:
 
 Derived layers may reference canonical truth but must not silently become competing truth stores.
 
+## Delivery flow, WIP and readiness
+
+For bounded delivery horizons use a lean Kanban-style flow:
+
+`READY -> IN PROGRESS -> PR/REVIEW -> DONE`
+
+Default WIP is **1 per autonomous worker**. Do not start a second work item while the first has an open branch/PR or unresolved repository-caused CI failure.
+
+### Definition of Ready
+
+A work item is ready when:
+- its parent goal/horizon is explicit;
+- dependencies are complete;
+- the question and smallest acceptance slice are bounded;
+- acceptance criteria and material non-goals are explicit;
+- required source/data/permissions are available;
+- completion does not require an unmade project-level decision.
+
+### Definition of Done
+
+A delivery item is done when:
+- the smallest acceptance slice is complete;
+- the adversarial finding has a disposition;
+- relevant focused tests and sanitation pass;
+- normal CI is green;
+- provenance/reproducibility metadata is preserved where material;
+- PR is merged;
+- issue is closed;
+- canonical project state is reconciled only when evidence actually changed it.
+
+A discovery item is done when the bounded question has durable evidence and one explicit disposition. Discovery completion does not imply production implementation.
+
+### Release gates
+
+Technical completion, usability acceptance, historical review and canonical publication are separate gates.
+
+Never promote one because another passed.
+
 ## Adversarial dispositions
 
 Every material adversarial finding receives exactly one disposition:
