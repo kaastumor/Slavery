@@ -27,7 +27,7 @@ FORBIDDEN_PATH_PATTERNS = (
 )
 
 LOCAL_PATH_PATTERNS = (
-    re.compile(r"\b[A-Za-z]:\\\\Users\\\\[^\\\\\s]+\\\\"),
+    re.compile(r"\b[A-Za-z]:\\Users\\[^\\\s]+\\"),
     re.compile(r"/Users/[^/\s]+/"),
     re.compile(r"/home/[^/\s]+/"),
 )
