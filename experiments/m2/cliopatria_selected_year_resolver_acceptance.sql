@@ -148,7 +148,8 @@ BEGIN
     END IF;
 
     SELECT count(*) INTO n
-    FROM staging.m2_cliopatria_polity_baseline(100);
+    FROM staging.m2_cliopatria_polity_baseline(100)
+    WHERE dataset_key='m2-synthetic-cliopatria';
     IF n <> 7 THEN
         RAISE EXCEPTION 'synthetic baseline count %, expected 7', n;
     END IF;
@@ -156,54 +157,62 @@ BEGIN
     SELECT hierarchy_status,suppressed_component_count
       INTO v_status,v_suppressed
     FROM staging.m2_cliopatria_polity_baseline(100)
-    WHERE name_raw='RootPolity';
+    WHERE dataset_key='m2-synthetic-cliopatria'
+      AND name_raw='RootPolity';
     IF v_status <> 'resolved_polity_composite' OR v_suppressed <> 3 THEN
         RAISE EXCEPTION 'POLITY nested/component suppression failed: %, %',v_status,v_suppressed;
     END IF;
 
     IF EXISTS (
         SELECT 1 FROM staging.m2_cliopatria_polity_baseline(100)
-        WHERE name_raw IN ('ChildPolity','NestedComposite','NestedChild')
+        WHERE dataset_key='m2-synthetic-cliopatria'
+          AND name_raw IN ('ChildPolity','NestedComposite','NestedChild')
     ) THEN
         RAISE EXCEPTION 'suppressed POLITY components leaked into baseline';
     END IF;
 
     SELECT hierarchy_status INTO v_status
     FROM staging.m2_cliopatria_polity_baseline(100)
-    WHERE name_raw='RelationMember';
+    WHERE dataset_key='m2-synthetic-cliopatria'
+      AND name_raw='RelationMember';
     IF v_status <> 'relation_membership_retained' THEN
         RAISE EXCEPTION 'RELATION membership incorrectly suppressed polity: %',v_status;
     END IF;
 
     IF EXISTS (
         SELECT 1 FROM staging.m2_cliopatria_polity_baseline(100)
-        WHERE name_raw='(Alliance)'
+        WHERE dataset_key='m2-synthetic-cliopatria'
+          AND name_raw='(Alliance)'
     ) THEN
         RAISE EXCEPTION 'RELATION row leaked into default polity baseline';
     END IF;
 
-    SELECT count(*) INTO n FROM staging.m2_cliopatria_relation_layer(100);
+    SELECT count(*) INTO n FROM staging.m2_cliopatria_relation_layer(100)
+    WHERE dataset_key='m2-synthetic-cliopatria';
     IF n <> 1 THEN
         RAISE EXCEPTION 'optional relation layer count %, expected 1',n;
     END IF;
 
     SELECT hierarchy_status INTO v_status
     FROM staging.m2_cliopatria_polity_baseline(100)
-    WHERE name_raw='AmbiguousChild';
+    WHERE dataset_key='m2-synthetic-cliopatria'
+      AND name_raw='AmbiguousChild';
     IF v_status <> 'unresolved_hierarchy' THEN
         RAISE EXCEPTION 'multiple POLITY parents were guessed instead of unresolved';
     END IF;
 
     SELECT hierarchy_status INTO v_status
     FROM staging.m2_cliopatria_polity_baseline(100)
-    WHERE name_raw='MissingParentChild';
+    WHERE dataset_key='m2-synthetic-cliopatria'
+      AND name_raw='MissingParentChild';
     IF v_status <> 'unresolved_hierarchy' THEN
         RAISE EXCEPTION 'missing parent reference was guessed instead of unresolved';
     END IF;
 
     SELECT count(*) INTO n
     FROM staging.m2_cliopatria_polity_baseline(0)
-    WHERE name_raw='BoundaryPolity'
+    WHERE dataset_key='m2-synthetic-cliopatria'
+      AND name_raw='BoundaryPolity'
       AND source_row_ordinal=11
       AND cliopatria_source_year=-1;
     IF n <> 1 THEN
@@ -212,7 +221,8 @@ BEGIN
 
     SELECT count(*) INTO n
     FROM staging.m2_cliopatria_polity_baseline(1)
-    WHERE name_raw='BoundaryPolity'
+    WHERE dataset_key='m2-synthetic-cliopatria'
+      AND name_raw='BoundaryPolity'
       AND source_row_ordinal=12
       AND cliopatria_source_year=1;
     IF n <> 1 THEN
@@ -221,7 +231,8 @@ BEGIN
 
     IF EXISTS (
         SELECT 1 FROM staging.m2_cliopatria_polity_baseline(0)
-        WHERE cliopatria_source_year=0
+        WHERE dataset_key='m2-synthetic-cliopatria'
+          AND cliopatria_source_year=0
     ) THEN
         RAISE EXCEPTION 'source-native year zero was queried as an atlas year';
     END IF;
@@ -229,7 +240,8 @@ BEGIN
     SELECT geometry_choice_status,chosen_geometry_id
       INTO v_choice,v_geom
     FROM staging.m2_cliopatria_geometry_candidates(100)
-    WHERE name_raw='RootPolity';
+    WHERE dataset_key='m2-synthetic-cliopatria'
+      AND name_raw='RootPolity';
     IF v_choice <> 'accepted_specialist_override'
        OR v_geom <> '12100000-0000-0000-0000-000000000201'::uuid THEN
         RAISE EXCEPTION 'accepted specialist override did not outrank raw baseline';
@@ -238,7 +250,8 @@ BEGIN
     SELECT geometry_choice_status,chosen_geometry_id
       INTO v_choice,v_geom
     FROM staging.m2_cliopatria_geometry_candidates(100)
-    WHERE name_raw='QuarantinedPolity';
+    WHERE dataset_key='m2-synthetic-cliopatria'
+      AND name_raw='QuarantinedPolity';
     IF v_choice <> 'raw_cliopatria_baseline' OR v_geom IS NOT NULL THEN
         RAISE EXCEPTION 'quarantined specialist candidate incorrectly gained precedence';
     END IF;
@@ -246,7 +259,8 @@ BEGIN
     SELECT geometry_choice_status,chosen_geometry_id
       INTO v_choice,v_geom
     FROM staging.m2_cliopatria_geometry_candidates(160)
-    WHERE name_raw='RootPolity';
+    WHERE dataset_key='m2-synthetic-cliopatria'
+      AND name_raw='RootPolity';
     IF v_choice <> 'raw_cliopatria_baseline' OR v_geom IS NOT NULL THEN
         RAISE EXCEPTION 'specialist override leaked outside accepted interval';
     END IF;
@@ -304,6 +318,7 @@ SELECT
     geometry_choice_status,
     publication_state
 FROM staging.m2_cliopatria_geometry_candidates(100)
+WHERE dataset_key='m2-synthetic-cliopatria'
 ORDER BY name_raw;
 
 ROLLBACK;
