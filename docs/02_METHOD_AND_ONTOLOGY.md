@@ -45,7 +45,7 @@ Unknown does not mean:
 - the project searched exhaustively
 - surviving evidence does not exist
 
-Research coverage should explain why a claim is missing where possible: for example, not researched, source identified, reviewed but not yet classified, or researched-inconclusive.
+Research coverage should explain why a claim is missing where possible: for example, not researched, source identified, under review, review complete but inconclusive, or a reviewed dispute.
 
 A missing positive claim must never be rendered as a negative historical fact.
 
