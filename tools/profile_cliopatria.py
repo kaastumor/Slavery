@@ -13,8 +13,8 @@ UPSTREAM_GIT_BLOB_SHA1="cefab0f4b622e2e7fb3daf68d4f461f83991204c"
 def git_blob_sha1(data): return hashlib.sha1(f"blob {len(data)}\0".encode()+data).hexdigest()
 def load_features(data):
     with zipfile.ZipFile(io.BytesIO(data)) as z:
-        names=[n for n in z.namelist() if n.endswith('.geojson')]
-        if len(names)!=1: raise ValueError(f"expected one GeoJSON member, found {names}")
+        names=[n for n in z.namelist() if n.lower().endswith('.geojson') and not n.startswith('__MACOSX/') and not Path(n).name.startswith('._')]
+        if len(names)!=1: raise ValueError(f"expected one data GeoJSON member after metadata filtering, found {names}")
         obj=json.loads(z.read(names[0]))
     if obj.get('type')!='FeatureCollection': raise ValueError('not a FeatureCollection')
     return obj['features']
