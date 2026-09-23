@@ -1,0 +1,50 @@
+{
+  "programme": "R1",
+  "stage": "R1.6",
+  "issue": 172,
+  "disposition": "pass_with_explicit_unresolved_limitations",
+  "unresolved": [
+    {
+      "id": "R1QC-U01",
+      "area": "geometry",
+      "severity": "release_blocker_for_map_surface",
+      "statement": "Concrete candidate geometry/proxy/unresolved states are not yet materialized.",
+      "required_next": "Resolve representation state in R1.7 without allowing geometry to create historical truth."
+    },
+    {
+      "id": "R1QC-U02",
+      "area": "review",
+      "severity": "publication_label_constraint",
+      "statement": "All 19 C1 rows are internally adversarially reviewed, not independently reviewed.",
+      "required_next": "MVP/public labels must not imply independent review."
+    },
+    {
+      "id": "R1QC-U03",
+      "area": "language_access",
+      "severity": "release_limitation",
+      "statement": "Coverage and original-language access vary materially by row.",
+      "required_next": "Preserve row-level limitations and coverage confidence in evidence register."
+    },
+    {
+      "id": "R1QC-U04",
+      "area": "temporal_display",
+      "severity": "presentation_constraint",
+      "statement": "Middle Kingdom and Carthage are period-level positives; Gao is near-anchor/approximate.",
+      "required_next": "Use r1_temporal_render_annotations.json so map/timeline never implies exact-year observation."
+    },
+    {
+      "id": "R1QC-U05",
+      "area": "surface",
+      "severity": "release_blocker_for_r1_8",
+      "statement": "Simple Atlas candidate surface has not yet been built from the immutable QC package.",
+      "required_next": "Materialize the smallest read-only map/register MVP in R1.7."
+    },
+    {
+      "id": "R1QC-U06",
+      "area": "canonicality",
+      "severity": "governance_constraint",
+      "statement": "v0.6.1 remains canonical; R1 is candidate-only.",
+      "required_next": "Only R1.8 may choose publish/canonicalize, noncanonical publication, hold or rework."
+    }
+  ]
+}
