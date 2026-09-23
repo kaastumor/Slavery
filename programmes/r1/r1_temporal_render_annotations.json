@@ -1,0 +1,110 @@
+{
+  "programme": "R1",
+  "stage": "R1.6",
+  "issue": 172,
+  "purpose": "Candidate-surface temporal rendering guard derived from reviewed C1 semantics. This does not alter the historical research rows or Core Contract v1.",
+  "allowed_states": [
+    "supported_exact_cross_section",
+    "supported_period_level",
+    "supported_near_anchor_approximate",
+    "unknown",
+    "not_applicable_aggregate"
+  ],
+  "rows": [
+    {
+      "target_id": "R1:P:-2000:C:r1",
+      "state": "supported_period_level",
+      "display_rule": "May be visible at the 2000 BCE anchor only with period-level precision; do not imply an event dated exactly to 2000 BCE."
+    },
+    {
+      "target_id": "R1:P:500:A:r1",
+      "state": "unknown",
+      "display_rule": "Do not render positive selected-year practice at 500 CE."
+    },
+    {
+      "target_id": "R1:N:gao_1500",
+      "state": "supported_near_anchor_approximate",
+      "display_rule": "May be surfaced near the 1500 anchor only with approximate/near-anchor labeling; do not imply exact-year observation."
+    },
+    {
+      "target_id": "R1:N:shaolin_1000",
+      "state": "unknown",
+      "display_rule": "Do not render positive selected-year slavery at 1000 CE."
+    },
+    {
+      "target_id": "R1:N:incense_m100",
+      "state": "unknown",
+      "display_rule": "Do not render route-wide positive slave traffic at 100 BCE."
+    },
+    {
+      "target_id": "R1:N:inuit_arctic_1800",
+      "state": "unknown",
+      "display_rule": "Do not render positive circumpolar/internal territorial practice at 1800."
+    },
+    {
+      "target_id": "R1:L:-500:D",
+      "state": "supported_period_level",
+      "display_rule": "May be visible at the 500 BCE anchor only as Punic-period support; do not imply a single exact-year observation."
+    },
+    {
+      "target_id": "R1:L:1800:F",
+      "state": "not_applicable_aggregate",
+      "display_rule": "No single territorial selected-year state may be rendered for the Portuguese-colonies aggregate."
+    },
+    {
+      "target_id": "R1:L:cahokia_1200",
+      "state": "unknown",
+      "display_rule": "Do not project earlier Mound 72 evidence to 1200."
+    },
+    {
+      "target_id": "R1:L:al_azhar_1100",
+      "state": "unknown",
+      "display_rule": "Do not render institution-specific slavery at al-Azhar for 1100."
+    },
+    {
+      "target_id": "R1:P:-500:C:r1",
+      "state": "unknown",
+      "display_rule": "Separated pre/post-anchor captive attestations do not fill 500 BCE."
+    },
+    {
+      "target_id": "R1:P:-500:F:r1",
+      "state": "unknown",
+      "display_rule": "Broader early-China slavery context does not create a Cai 500 BCE state."
+    },
+    {
+      "target_id": "R1:P:500:D:r1",
+      "state": "unknown",
+      "display_rule": "Sixth-century Lazican slave-export evidence does not establish exact 500 CE selected-year truth."
+    },
+    {
+      "target_id": "R1:N:nalanda_700",
+      "state": "unknown",
+      "display_rule": "Generic monastic servants/slaves context does not create a Nālandā 700 CE positive."
+    },
+    {
+      "target_id": "R1:P:1300:C:r1",
+      "state": "unknown",
+      "display_rule": "Sākūra status uncertainty and later evidence do not create a Mali 1300 territorial state."
+    },
+    {
+      "target_id": "R1:L:1800:A",
+      "state": "supported_exact_cross_section",
+      "display_rule": "The dated 1800 federal census supports selected-year presence; subnational legal/practice uniformity remains prohibited."
+    },
+    {
+      "target_id": "R1:P:500:F:r1",
+      "state": "unknown",
+      "display_rule": "Broader Korean slavery/nobi context does not create a Tamna 500 CE positive."
+    },
+    {
+      "target_id": "R1:L:COV2:1300:E",
+      "state": "unknown",
+      "display_rule": "Contemporary Tamil slavery context is not synchronized tightly enough to the Pandya 1300 polity frame."
+    },
+    {
+      "target_id": "R1:L:COV2:1300:B",
+      "state": "supported_period_level",
+      "display_rule": "Corvée/labor-service support spans the archaeological phase containing 1300; do not imply an exact annual event or chattel-slavery status."
+    }
+  ]
+}

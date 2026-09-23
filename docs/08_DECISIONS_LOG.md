@@ -1274,3 +1274,56 @@ researched polity sectors are A2/B1/C3/D2/E1/F3. With 12 polity rows, the maximu
 - `programmes/r1/c1_tranche_03_final.json`;
 - `programmes/r1/19_C1_TRANCHE_03_ADVERSARIAL_REPLAY.md`;
 - `tests/test_r1_c1_tranche03.py`.
+
+
+## D-080 — Pass R1.6 release QC with explicit limitations and define R1.7 as the MVP
+**Date:** 2026-09-24
+**Status:** accepted R1 release-gate decision
+
+**Decision:** R1.6 passes release-level QC **with explicit unresolved limitations**.
+
+Proceed to R1.7 as a deliberately small MVP:
+
+> **immutable R1 candidate package + neutral world map + explicit geometry/research states + compact evidence register**
+
+This is the crystallized surviving core of the Historical Slavery Atlas.
+
+**QC evidence:**
+- 19 unique reviewed C1 rows;
+- 5 classified / bounded-supported;
+- 14 inconclusive;
+- 4 completed C2 packets;
+- 19/19 internally adversarially replayed;
+- 77 frozen targets preserved in the candidate research-state registry;
+- 45 source relations / 45 source-version references / 37 independence groups;
+- all six polity sectors represented with a maximum 25% share;
+- deterministic release-QC validator reports no blocking errors.
+
+**Explicit unresolved limitations:**
+- concrete geometry materialization remains an R1.7 task;
+- no independent historical review has occurred;
+- language/access coverage varies by row;
+- some positives are period-level or near-anchor rather than exact-year observations;
+- the simple Atlas surface has not yet been materialized;
+- v0.6.1 remains canonical.
+
+**MVP constraints:**
+- static/read-only by default;
+- no production migration;
+- no new backend/database/service;
+- no bespoke graph/search infrastructure;
+- neutral world land always visible;
+- unresearched/held/geometry-unresolved states remain visible and never imply absence;
+- exact source/version and review labels remain inspectable;
+- temporal rendering must use the R1.6 guard artifact rather than inventing annual precision.
+
+**After MVP:** feature work returns to discovery mode. A candidate feature must first beat the strongest boring baseline in a bounded experiment. Discovery does not authorize implementation.
+
+**Durable artifacts:**
+- `programmes/r1/20_RELEASE_QC.md`
+- `programmes/r1/r1_release_qc_manifest.json`
+- `programmes/r1/r1_candidate_target_registry.json`
+- `programmes/r1/r1_source_dependencies.json`
+- `programmes/r1/r1_temporal_render_annotations.json`
+- `programmes/r1/r1_release_qc_unresolved.json`
+- `programmes/r1/validate_r1_release_qc.py`

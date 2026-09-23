@@ -9,78 +9,52 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE R1 / RELEASE QC — subject research stopped at 19 C1 rows
+# ACTIVE R1.7 / MVP — crystallize the surviving core
 
 **Parent programme:** #159
-**Completed closing tranche:** #170
-**Decisions:** D-078, D-079
-**Current stage:** **R1.6 — release-level QC and candidate-release assembly**
+**R1.6 QC:** #172
+**Decision:** D-080
+**Current stage:** **R1.7 — MVP v0.1 candidate release + boring Atlas surface**
 
-The midpoint-authorized final three-row subject tranche is complete.
+R1.6 passes with explicit unresolved limitations.
 
-## Frozen subject-research result
+The project is no longer expanding historical subject research.
 
-Across all R1 C1 tranches:
-- **19** researched C1 rows;
-- **5** classified / bounded-supported;
-- **14** inconclusive for the exact frozen target/year/frame question;
-- **0** final disputed;
-- **4** completed C2 packets;
-- **19/19** internally adversarially replayed;
-- **0** target substitutions.
+The MVP is the smallest artifact that preserves the surviving value:
 
-These counts are not prevalence and are not completion percentages against the 36-row ceiling.
+> **immutable R1 candidate package + neutral world map + explicit geometry/research states + compact evidence register**
 
-The remaining frozen queue rows stay unresearched/planned research-state information. They do not imply historical absence.
+## Frozen evidence core
 
-## Final closure tranche
+- 77 frozen targets;
+- 19 reviewed C1;
+- 15 planned-C1 but intentionally unresearched;
+- 2 held;
+- 41 C0-only;
+- 45 source relations;
+- 37 independence groups;
+- v0.6.1 remains canonical until R1.8.
 
-- Tamna 500 CE — inconclusive; peninsula-wide Korean slavery is context, not Tamna evidence.
-- Pandya Empire 1300 CE — inconclusive after C2; strong contemporary Tamil slavery evidence did not safely reproduce target-polity synchronization.
-- Chimu Empire 1300 CE — bounded-supported for state labor service/corvée only; not chattel slavery or universal household coercion.
+## MVP rules
 
-Legacy state was not sticky:
-- Pandya legacy positive did not survive Core-v1 rereview;
-- Chimú legacy inconclusive became a narrower positive corvée/labor-service claim.
+- read-only/static by default;
+- no production database migration;
+- no new backend/service/search stack;
+- no target substitution or new subject research;
+- neutral world land always visible;
+- geometry may remain unresolved;
+- unresearched/inconclusive/held != absence;
+- review state and language/access limitations visible;
+- temporal display uses R1.6 render guards;
+- compact evidence register is the primary truth surface; map is navigation.
 
-## Balance state
+## Delivery order
 
-Researched polity sectors after the closing tranche:
-- A: 2
-- B: 1
-- C: 3
-- D: 2
-- E: 1
-- F: 3
+MVP execution is now tracked in the dedicated MVP parent/child issues created after R1.6 merge.
 
-12 researched polity rows; maximum sector share = **25%**.
+The worker must complete one atomic issue at a time, with WIP=1 and green CI before merge.
 
-The midpoint balance gap is therefore closed without expanding toward the 36-row ceiling.
-
-## Subject-research stop
-
-**Do not start another C1 subject-research tranche.**
-
-R1.6 should now:
-- verify the 19-row candidate package against Core Contract v1;
-- audit exact source/version recoverability and dependency groups;
-- audit language/access and coverage-state declarations;
-- verify all C2 packets are resolved and replayed;
-- verify selected-year / target / dimension guards globally;
-- verify frozen target-frame and balance invariants;
-- run geometry/Atlas-release checks without letting geometry create historical truth;
-- assemble candidate release manifest/changelog/QC/unresolved issues;
-- keep candidate research release separate from independently reviewed/public/canonical release.
-
-No new subject research is justified merely to fill remaining queue rows.
-
-## Still unchanged
-
-- v0.6.1 remains canonical;
-- no production migration;
-- no schema/ontology/intensity-scale change;
-- no bespoke Atlas/platform feature is earned;
-- no target substitution.
+After the technical MVP gate passes, transition to **feature discovery only**. Discovery issues produce evidence/dispositions, not production features.
 
 ---
 

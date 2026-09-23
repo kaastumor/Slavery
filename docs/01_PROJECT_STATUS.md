@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE R1 / R1.6 RELEASE QC — subject research frozen at 19 C1 rows**
+**Execution state:** **ACTIVE R1.7 / MVP — R1.6 QC passed with explicit limitations; subject research frozen**
 
 ## Direction after H2
 
@@ -471,6 +471,33 @@ Durable artifacts:
 - `programmes/r1/19_C1_TRANCHE_03_ADVERSARIAL_REPLAY.md`
 
 Decision: D-079.
+
+## R1.6 release QC — PASS WITH EXPLICIT LIMITATIONS
+
+Issue #172 audited the completed 19-row research package without reopening subject research.
+
+Result:
+- 19/19 C1 rows pass Core Contract v1;
+- 19/19 internally adversarially reviewed;
+- 4/4 earned C2 packets resolved;
+- 5 classified / 14 inconclusive;
+- 77 frozen targets preserved as reviewed/unresearched/held research state;
+- 45 source relations and 37 independence groups reconstructible;
+- polity-sector balance A2/B1/C3/D2/E1/F3, maximum 25%;
+- deterministic QC validator reports no blocking errors.
+
+Unresolved limitations carried forward:
+- concrete geometry state must be materialized;
+- no independent review yet;
+- language/access limitations vary;
+- period-level/near-anchor positives must not render as exact-year events;
+- the simple Atlas surface is not yet materialized;
+- v0.6.1 remains canonical.
+
+Decision D-080 defines R1.7 as the MVP:
+**immutable candidate package + neutral world map + explicit geometry/research states + compact evidence register.**
+
+No new historical subject-research tranche is authorized.
 
 ## Remaining bounded project-system debt
 

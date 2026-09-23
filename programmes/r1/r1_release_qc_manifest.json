@@ -1,0 +1,70 @@
+{
+  "programme": "R1",
+  "stage": "R1.6",
+  "issue": 172,
+  "base_commit": "4dd230dc6d4a5cd0a2edd0ab148b7a04ea1cb7ca",
+  "canonical_release": "v0.6.1",
+  "candidate_id": "R1-candidate-qc-2026-09-24",
+  "publication_state": "qc_only_not_published_not_canonical",
+  "immutable_inputs": [
+    {
+      "path": "programmes/r1/c1_tranche_01_final.json",
+      "blob_sha": "1d561a33779464264bb89cc501d62c97f14070c8"
+    },
+    {
+      "path": "programmes/r1/c1_tranche_02_final.json",
+      "blob_sha": "dd7db85f93d47deaa31eddef1d3697bcf6e5d1e9"
+    },
+    {
+      "path": "programmes/r1/c1_tranche_03_final.json",
+      "blob_sha": "68a6b6d57a318db9b48b46f30ae0e8b7ce363678"
+    },
+    {
+      "path": "programmes/r1/c0_register.json",
+      "blob_sha": "cd85352f0b0403a7a5fa43c9dfa64a12078d197c"
+    },
+    {
+      "path": "programmes/r1/identity_qa.json",
+      "blob_sha": "56a277984d5fac9ac73adb90cf1ab9fdad0d945d"
+    },
+    {
+      "path": "programmes/r1/subject_research_queue.json",
+      "blob_sha": "91c72803fe80d4ed370844d3244e98cdc888df51"
+    },
+    {
+      "path": "programmes/r1/target_frame.json",
+      "blob_sha": "3b56509e8105051f390decf104136c8d4ee6fd60"
+    }
+  ],
+  "c1_final_inputs": [
+    {
+      "path": "programmes/r1/c1_tranche_01_final.json",
+      "blob_sha": "1d561a33779464264bb89cc501d62c97f14070c8",
+      "rows": 10
+    },
+    {
+      "path": "programmes/r1/c1_tranche_02_final.json",
+      "blob_sha": "dd7db85f93d47deaa31eddef1d3697bcf6e5d1e9",
+      "rows": 6
+    },
+    {
+      "path": "programmes/r1/c1_tranche_03_final.json",
+      "blob_sha": "68a6b6d57a318db9b48b46f30ae0e8b7ce363678",
+      "rows": 3
+    }
+  ],
+  "counts": {
+    "c1_rows": 19,
+    "classified": 5,
+    "inconclusive": 14,
+    "c2_completed": 4,
+    "adversarially_reviewed": 19,
+    "frozen_target_registry": 77
+  },
+  "r1_7_preconditions": [
+    "materialize explicit geometry resolution/proxy/unresolved state for the candidate map surface",
+    "preserve every unresearched/held registry entry as non-absence research state",
+    "preserve row-level language/access limitations and internal-review-only label",
+    "bind the candidate surface to this immutable input manifest rather than live draft tables"
+  ]
+}
