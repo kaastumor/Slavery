@@ -1,0 +1,107 @@
+{
+  "programme": "R1",
+  "stage": "R1.4",
+  "issue": 163,
+  "review_state": "draft_pending_adversarial_replay",
+  "packets": [
+    {
+      "target_id": "R1:L:1800:F",
+      "target_label": "Portuguese Colonies",
+      "anchor": "1800 CE",
+      "trigger": [
+        "spatial/generalization risk",
+        "aggregate frame is not one territorial unit"
+      ],
+      "c2_disposition": "resolved_release_safe_abstention",
+      "classification_outcome": "inconclusive",
+      "territorial_practice_release_state": "no_single_aggregate_claim",
+      "bounded_proposition": "The 1800 evidence securely establishes enslaved populations and slavery in multiple constituent Portuguese possessions, but the frozen source-native aggregate 'Portuguese Colonies' cannot receive one territorial-practice state. Constituent conditions vary too sharply for an empire-wide territorial classification.",
+      "required_abstention": "Do not average, color, rank, or narrate the dispersed Portuguese possessions as one slavery-practice territory. An empire-wide demographic total is an aggregate statistic, not a territorial historical condition.",
+      "deeper_reasoning": [
+        "Matos's 1800 cross-section reports materially different enslaved shares across constituent possessions, from very low values in several Asian possessions to much higher values in Brazil, Mozambique and São Tomé e Príncipe.",
+        "Dedicated scholarship independently documents slavery in Portuguese Goa through the sixteenth–eighteenth centuries.",
+        "Dedicated scholarship documents an organized slave trade centered on Mozambique Island around 1797–1807.",
+        "These sources strengthen constituent claims while making the source-native aggregate less, not more, suitable for one territorial practice classification."
+      ],
+      "source_dependencies": [
+        {
+          "source_version_ref": "doi:10.20947/S0102-3098a0030",
+          "role": "decisive_heterogeneity",
+          "claim_fitness": "production_grade",
+          "direction": "supports_and_qualifies",
+          "independence_group": "matos-colonial-demography"
+        },
+        {
+          "source_version_ref": "doi:10.1017/S1356186325000124",
+          "role": "constituent_goa",
+          "claim_fitness": "production_grade",
+          "direction": "supports",
+          "independence_group": "zupanov-goa"
+        },
+        {
+          "source_version_ref": "doi:10.1080/03057070.2016.1178000",
+          "role": "constituent_mozambique_network",
+          "claim_fitness": "production_grade",
+          "direction": "supports",
+          "independence_group": "harries-mozambique"
+        }
+      ],
+      "inference_rule": "Retain the frozen aggregate target as a researched frame failure/abstention. Do not substitute constituent targets into the R1 queue. Future constituent research requires a separately frozen frame.",
+      "release_ready_after_internal_adversary": true
+    },
+    {
+      "target_id": "R1:L:cahokia_1200",
+      "target_label": "Cahokia",
+      "anchor": "1200 CE",
+      "trigger": [
+        "category/status ambiguity",
+        "material interpretive tension",
+        "coercive event must not mechanically create slave status"
+      ],
+      "c2_disposition": "resolved_to_inconclusive_status",
+      "classification_outcome": "inconclusive",
+      "territorial_practice_release_state": "slave_status_not_established",
+      "bounded_proposition": "Mound 72 securely supports sacrificial killing, pronounced social differentiation and coercive elite power. A published synthesis interprets some sacrificed individuals as slaves, but bioarchaeological and mortuary reanalyses revise premises about origin, sex and ritual structure. The reviewed evidence does not securely establish slave status for the victims or a Cahokia slavery institution.",
+      "required_abstention": "Do not infer slavery from execution, sacrifice, nutritional stress, social inferiority, foreignness, captivity, or elite coercive power alone; do not extrapolate Mound 72 to citywide prevalence.",
+      "deeper_reasoning": [
+        "The 2019 Frontiers synthesis explicitly interprets sacrificed young women as slaves, making the positive status interpretation real and preservable.",
+        "Thompson, Hedman and Slater (2015) find the main mass-grave groups broadly local/regionally similar and question the long-standing non-local-captive interpretation.",
+        "Odontometric and later mortuary reanalyses revise earlier sex assignments and ritual readings of Mound 72.",
+        "Those revisions do not prove the victims were free or establish another legal status; they remove supports often used to make the slave-status inference.",
+        "Because the negative/revision literature is not itself a direct competing historical slave-status classification, the stricter Core-v1 outcome is inconclusive rather than `disputed`."
+      ],
+      "source_dependencies": [
+        {
+          "source_version_ref": "doi:10.3389/frsc.2019.00006",
+          "role": "positive_slave_interpretation",
+          "claim_fitness": "usable_with_limitation",
+          "direction": "supports",
+          "independence_group": "frontiers-cahokia-synthesis"
+        },
+        {
+          "source_version_ref": "doi:10.1002/ajpa.22791",
+          "role": "origin_reassessment",
+          "claim_fitness": "production_grade",
+          "direction": "qualifies_challenges",
+          "independence_group": "thompson-hedman-slater-2015"
+        },
+        {
+          "source_version_ref": "PMID:23670116",
+          "role": "sex_reassessment",
+          "claim_fitness": "production_grade",
+          "direction": "qualifies_challenges",
+          "independence_group": "mound72-odontometrics"
+        },
+        {
+          "source_version_ref": "doi:10.7183/0002-7316.81.3.405",
+          "role": "mortuary_reinterpretation",
+          "claim_fitness": "production_grade",
+          "direction": "qualifies_challenges",
+          "independence_group": "emerson-et-al-2016"
+        }
+      ],
+      "inference_rule": "Release the coercive/sacrificial site claim and the explicit slave-status abstention. Do not publish a positive territorial-practice slavery classification from this packet.",
+      "release_ready_after_internal_adversary": true
+    }
+  ]
+}

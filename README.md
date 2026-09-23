@@ -36,7 +36,9 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - Core Contract v1 and the exact R1 target frame are frozen after adversarial/CI review;
 - R1 frame: 65 new C0 registrations, 24 new C1 targets, 12 legacy C1 re-reviews;
 - R1.3 identity/time QA: completed — 34 rows research-ready, French Louisiana 1800 and Duchy of Bavaria 1800 held without replacement;
-- v0.6.1 remains canonical; R1.4 subject research proceeds only from the frozen queue;
+- R1.4 tranche 01: completed on 10 frozen rows — **Core v1 survives after material correction**; 10/10 replayed, 2 C2 packets completed;
+- tranche 02 is not automatically authorized; R1 is at a deliberate calibration checkpoint;
+- v0.6.1 remains canonical; any further R1 subject research must remain inside the frozen queue;
 - no production migration, bespoke frontend/platform or bulk automated research is authorized.
 
 The H2 pilot found a material corpus-method advantage in one of three cases, below the pre-registered two-case threshold; the repaired thin visual/query arm did not materially beat the corpus/method in any case.

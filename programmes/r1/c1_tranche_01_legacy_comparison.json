@@ -1,0 +1,44 @@
+{
+  "programme": "R1",
+  "stage": "R1.4",
+  "issue": 163,
+  "protocol": "Fresh Core Contract v1 synthesis was committed before this legacy comparison.",
+  "comparisons": [
+    {
+      "target_id": "R1:L:-500:D",
+      "target_label": "Carthage",
+      "legacy_ref": "-500:D",
+      "disposition": "survives_with_stronger_release_metadata",
+      "fresh_vs_legacy": "Independent fresh review reaches the same bounded-supported conclusion using the same dedicated Lewis chapter. Core v1 adds explicit claim-fitness, abstention, temporal applicability, source independence and release state.",
+      "material_change": false,
+      "c2_required": false
+    },
+    {
+      "target_id": "R1:L:1800:F",
+      "target_label": "Portuguese Colonies",
+      "legacy_ref": "1800:F",
+      "disposition": "legacy_core_conclusion_survives_but_escalation_changes",
+      "fresh_vs_legacy": "Both reviews reject one territorial-practice state for the dispersed imperial aggregate. Core v1 turns the aggregate/generalization defect into an explicit C2 trigger rather than leaving it as an unresolved note.",
+      "material_change": true,
+      "c2_required": true
+    },
+    {
+      "target_id": "R1:L:cahokia_1200",
+      "target_label": "Cahokia",
+      "legacy_ref": "cahokia_1200",
+      "disposition": "legacy_dispute_survives_but_escalation_changes",
+      "fresh_vs_legacy": "Fresh review independently reproduces the tension between a slave-status interpretation and bioarchaeological challenge. Core v1 requires C2 for this material category/status dispute.",
+      "material_change": true,
+      "c2_required": true
+    },
+    {
+      "target_id": "R1:L:al_azhar_1100",
+      "target_label": "al-Azhar Mosque/university",
+      "legacy_ref": "al_azhar_1100",
+      "disposition": "survives_with_stronger_release_metadata",
+      "fresh_vs_legacy": "Independent fresh review again finds strong Fatimid-Cairo slavery context but no safe institution-specific al-Azhar slavery claim. Core v1 makes the inference boundary and source role explicit.",
+      "material_change": false,
+      "c2_required": false
+    }
+  ]
+}

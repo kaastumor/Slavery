@@ -1123,3 +1123,37 @@ The resulting R1.4 queue contains **34** C1 research/re-review rows.
 - `programmes/r1/identity_qa.json`
 - `programmes/r1/06_IDENTITY_QA.md`
 - `programmes/r1/subject_research_queue.json`
+
+
+## D-076 — Accept R1.4 tranche 01 after material correction; retain Core v1 review controls
+**Date:** 2026-09-24  
+**Status:** accepted R1 programme checkpoint decision
+
+**Decision:** Accept the final internally adversarially reviewed result of R1.4 tranche 01 as evidence that Core Contract v1 survives first real subject-research use **after material correction**.
+
+Do not infer a methodology success rate from the tranche.
+
+**Evidence:**
+- 10 frozen C1 rows researched and replayed;
+- 10/10 internal adversarial replay;
+- 2/2 earned C2 packets completed;
+- replay found and corrected four material overreach risks involving selected-year time, target/context evidence, external-versus-territorial inference and slave-status interpretation;
+- Portuguese Colonies C2 refused one aggregate territorial-practice classification;
+- Cahokia C2 changed preliminary `disputed` to `inconclusive` and removed selected-year 1200 implication.
+
+**Decision consequences:**
+- retain Core Contract v1;
+- retain the R1 minimum 50% C1 adversarial-replay floor;
+- retain 100% C2 replay;
+- do not relax selected-year temporal truth checks;
+- do not relax evidence-locus/inference-extent or dimension separation;
+- do not create a new schema/ontology from this tranche;
+- do not generalize the stress-set correction rate to the remaining queue;
+- no target substitution;
+- v0.6.1 remains canonical.
+
+**Execution boundary:** issue #163 does not authorize tranche 02 automatically. The next R1 research tranche, if authorized, should preferentially test ordinary operational repeatability and review burden rather than intentionally selecting another stress set.
+
+**Durable artifacts:**
+- `programmes/r1/c1_tranche_01_final.json`
+- `programmes/r1/12_C1_TRANCHE_01_ADVERSARIAL_REPLAY.md`

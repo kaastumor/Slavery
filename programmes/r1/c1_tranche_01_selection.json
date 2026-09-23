@@ -1,0 +1,86 @@
+[
+  {
+    "target_id": "R1:P:-2000:C:r1",
+    "target_label": "Middle Kingdom of Egypt",
+    "anchor": "2000 BCE",
+    "origin": "new_systematic_polity",
+    "qa": "validated",
+    "frame": "historical_period_polity"
+  },
+  {
+    "target_id": "R1:P:500:A:r1",
+    "target_label": "Teotihuacan",
+    "anchor": "500 CE",
+    "origin": "new_systematic_polity",
+    "qa": "validated_with_frame_limitation",
+    "frame": "urban_polity_site"
+  },
+  {
+    "target_id": "R1:N:gao_1500",
+    "target_label": "Gao",
+    "anchor": "1500 CE",
+    "origin": "new_systematic_nonpolity",
+    "qa": "validated",
+    "frame": "node_site"
+  },
+  {
+    "target_id": "R1:N:shaolin_1000",
+    "target_label": "Shaolin Monastery",
+    "anchor": "1000 CE",
+    "origin": "new_systematic_nonpolity",
+    "qa": "validated",
+    "frame": "institution_estate"
+  },
+  {
+    "target_id": "R1:N:incense_m100",
+    "target_label": "Incense Route network",
+    "anchor": "100 BCE",
+    "origin": "new_systematic_nonpolity",
+    "qa": "validated_with_frame_limitation",
+    "frame": "mobile_network"
+  },
+  {
+    "target_id": "R1:N:inuit_arctic_1800",
+    "target_label": "Inuit Arctic communities",
+    "anchor": "1800 CE",
+    "origin": "new_systematic_nonpolity",
+    "qa": "validated_with_frame_limitation",
+    "frame": "region_community"
+  },
+  {
+    "target_id": "R1:L:-500:D",
+    "target_label": "Carthage",
+    "anchor": "500 BCE",
+    "origin": "legacy_promotion_polity",
+    "qa": "validated",
+    "frame": "polity",
+    "legacy_ref": "-500:D"
+  },
+  {
+    "target_id": "R1:L:1800:F",
+    "target_label": "Portuguese Colonies",
+    "anchor": "1800 CE",
+    "origin": "legacy_promotion_polity",
+    "qa": "validated_with_frame_limitation",
+    "frame": "jurisdiction_aggregate",
+    "legacy_ref": "1800:F"
+  },
+  {
+    "target_id": "R1:L:cahokia_1200",
+    "target_label": "Cahokia",
+    "anchor": "1200 CE",
+    "origin": "legacy_promotion_nonpolity",
+    "qa": "validated_with_frame_limitation",
+    "frame": "node_site",
+    "legacy_ref": "cahokia_1200"
+  },
+  {
+    "target_id": "R1:L:al_azhar_1100",
+    "target_label": "al-Azhar Mosque/university",
+    "anchor": "1100 CE",
+    "origin": "legacy_promotion_nonpolity",
+    "qa": "validated_with_frame_limitation",
+    "frame": "institution_estate",
+    "legacy_ref": "al_azhar_1100"
+  }
+]

@@ -48,7 +48,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | A-010 | The value of the flat coverage corpus compounds faster than review/update burden as it scales | current row-by-row workflow not demonstrated; broader systematic-coverage economics remain open | COV-002 found persistent reuse and strong static compression, but its maintenance gate does not discriminate the economics of tiered/versioned/batch-curated coverage. ADV-001 limits the stop to the tested workflow. |
 | A-011 | Tiering breadth, compact evidence and selective depth can make systematic coverage methodologically viable without default deep research for every target | survives with stronger QC | COV-004: escalation replay passed at 1/6 false negatives only after adding source-quality failure as a C2/review trigger; non-polity challenge and real update mechanics also survived. |
 | A-012 | A bespoke Atlas evidence inspector adds material value beyond a competent conventional map + tiered register | rejected at current scale | COV-004 Arm D: 0/4 material gains with identical frozen evidence/geometry; no misleading Atlas inferences. Ordinary map/register presentation remains valid. |
-| A-013 | A real bounded release programme can harden the surviving method better than further miniature architecture experiments | active / R1 | D-073 authorizes R1. Core Contract v1 survived setup and contract adversaries; target frame is not yet frozen and no R1 subject research has begun. | Evaluate at midpoint and final release gates; row count is not progress. |
+| A-013 | A real bounded release programme can harden the surviving method better than further miniature architecture experiments | survives first live tranche with correction / R1 active | R1.4 tranche 01: 10/10 replayed; four material overreach risks caught and corrected; 2/2 earned C2 packets completed. | Continue only through deliberate tranche gates; do not weaken replay floor or generalize stress-set error rates. |
 
 ## Standing risk register
 
@@ -717,3 +717,61 @@ Choose:
 - explicitly authorize a real lean systematic coverage programme with releases/QC using C0/C1/selective-C2 and ordinary map/GIS presentation.
 
 No comprehensive ingestion or production platform follows automatically.
+
+
+### HC-010 — R1.4 tranche 01 calibration checkpoint — 2026-09-24
+
+Decision: **CORE SURVIVES AFTER MATERIAL CORRECTION; RETAIN REVIEW FLOOR; PAUSE BEFORE TRANCHE 02.**
+
+Durable tranche:
+- `programmes/r1/c1_tranche_01_final.json`
+- `programmes/r1/12_C1_TRANCHE_01_ADVERSARIAL_REPLAY.md`
+- issue #163.
+
+#### Why this is useful evidence
+
+This is the first use of Core Contract v1 on a real frozen research queue rather than an architecture experiment.
+
+The initial synthesis was already cautious, yet 100% replay still found four material correctness risks:
+- temporal leakage at Teotihuacan;
+- context-to-target inference at Shaolin;
+- external/captive relation leakage plus temporal projection for Inuit;
+- temporal/status overreach at Cahokia.
+
+The corrections changed release-safe semantics, not merely wording.
+
+#### C2
+
+Two of ten rows earned C2:
+- Portuguese Colonies — resolved by refusing one territorial-practice state for the dispersed aggregate;
+- Cahokia — resolved by changing preliminary `disputed` slave status to `inconclusive` and refusing selected-year 1200 continuity.
+
+Both deeper packets materially affected the safe release result.
+
+#### What cannot be inferred
+
+The tranche intentionally over-sampled difficult/frame-limited cases.
+
+Therefore:
+- 3/10 classified is not prevalence;
+- 7/10 inconclusive is not evidence of absence;
+- 4 material corrections do not estimate the error rate of the remaining queue;
+- the tranche does not estimate long-run historian labour.
+
+#### Control decision
+
+Do not weaken:
+- selected-year applicability review;
+- evidence-locus/inference-extent review;
+- claim-specific source fitness;
+- dimension separation;
+- selective C2;
+- minimum 50% C1 adversarial replay.
+
+No new schema or ontology is justified by this tranche.
+
+#### Boundary
+
+#163 ends at tranche 01.
+
+The next tranche is not automatically authorized. R1/#159 remains active, but continuation should deliberately choose a more ordinary operational tranche if it proceeds, so the project next tests repeatability/cost rather than stacking another stress sample.
