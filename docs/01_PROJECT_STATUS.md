@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **IDLE / PRESERVATION — COV-002 stopped further automatic corpus scaling; Atlas expansion remains stopped**
+**Execution state:** **ACTIVE BOUNDED EXPERIMENT — COV-003 tiered systematic coverage; Atlas expansion remains stopped**
 
 ## Direction after H2
 
@@ -179,6 +179,26 @@ Durable audit: `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.m
 Direction correction: D-068.
 
 No new research horizon is authorized by this correction.
+
+## COV-003 tiered systematic coverage — active
+
+After ADV-001 narrowed the COV-002 stop, the sponsor explicitly authorized issue #155 to test the broader architecture that COV-002 did not evaluate.
+
+COV-003 separates:
+- **C0:** target/research-state coverage with no slavery inference;
+- **C1:** compact bounded evidence for a frozen research subset;
+- **C2:** selective deep evidence only when a frozen escalation rule earns it.
+
+The deterministic sample is already frozen:
+- 24 C0 targets across 3 strata;
+- 12 C1 research targets;
+- 12 C0-only targets;
+- 6 identity-validation probes;
+- at most 3 C2 escalations.
+
+The experiment tests source-centric batch reuse, target-frame QA, selective depth, versioned/as-of maintenance, coverage-bias function and exploratory emergent corpus questions.
+
+Historical research is bounded to the frozen C1/C2/update protocol. No Atlas platform horizon or comprehensive-ingestion authorization exists.
 
 ## Remaining bounded project-system debt
 
