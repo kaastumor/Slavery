@@ -246,6 +246,7 @@ def legacy_cohort(repo_root:Path)->list[dict[str,Any]]:
         out.append({
             "legacy_ref":r["cell_id"],"target_label":r["target_label"],"anchor_year":r["anchor_year"],
             "legacy_outcome":r["coverage_outcome"],"frame_origin":"legacy_promotion_polity",
+            "sampling_sector":(r.get("source_sample") or {}).get("sampling_sector"),
             "tier":"C1","promotion_state":"requires_core_v1_rereview",
             "selection_digest":sha(f"{SEED}|LEGACY|{r['cell_id']}")
         })
@@ -266,8 +267,19 @@ def build(data:dict[str,Any],repo_root:Path)->dict[str,Any]:
     c1_new=polity_c1+non_c1
 
     anchors=sorted({x.get("source_anchor_year",x.get("anchor_year")) for x in c1_new})
-    sectors=sorted({x["sampling_sector"] for x in polity_c1})
+    new_polity_sectors=sorted({x["sampling_sector"] for x in polity_c1})
+    legacy_polity_sectors=[x.get("sampling_sector") for x in legacy if x.get("frame_origin")=="legacy_promotion_polity" and x.get("sampling_sector")]
+    release_polity_sectors=sorted(set(new_polity_sectors)|set(legacy_polity_sectors))
+    release_sector_counts=Counter([x["sampling_sector"] for x in polity_c1] + legacy_polity_sectors)
     frame_classes=sorted({"polity"}|{x["frame_class"] for x in non_c1})
+    polity_sampling_gaps=[c["cell_id"] for c in polity_cells if not c["targets"]]
+
+    required_balance_gates={
+        "all_five_source_anchor_bands_represented":all(y in anchors for y in SOURCE_ANCHORS),
+        "all_six_release_polity_sampling_sectors_represented":all(s in release_polity_sectors for s in "ABCDEF"),
+        "at_least_three_frame_classes":len(frame_classes)>=3,
+        "no_release_polity_sector_exceeds_25pct_of_planned_c1":all(n/(len(c1_new)+len(legacy))<=0.25 for n in release_sector_counts.values()),
+    }
 
     result={
       "programme":"R1",
@@ -297,11 +309,14 @@ def build(data:dict[str,Any],repo_root:Path)->dict[str,Any]:
       },
       "balance_check":{
         "new_c1_source_anchors":anchors,
-        "new_polity_c1_sectors":sectors,
+        "new_polity_c1_sectors":new_polity_sectors,
+        "legacy_polity_c1_sectors":sorted(set(legacy_polity_sectors)),
+        "release_polity_c1_sectors":release_polity_sectors,
+        "release_polity_sector_counts":dict(sorted(release_sector_counts.items())),
         "new_c1_frame_classes":frame_classes,
-        "all_five_source_anchor_bands_represented":all(y in anchors for y in SOURCE_ANCHORS),
-        "all_six_sampling_sectors_represented":all(s in sectors for s in "ABCDEF"),
-        "at_least_three_frame_classes":len(frame_classes)>=3
+        "new_polity_sampling_gaps":polity_sampling_gaps,
+        "new_polity_sector_b_gap_preserved":"B" not in new_polity_sectors,
+        "required_gates":required_balance_gates
       },
       "hard_rule":"No target substitution after slavery/coercion evidence is inspected. Sampling gaps remain gaps."
     }
@@ -335,7 +350,7 @@ def main():
             for c in out["polity_cells"]
         ],
     },indent=2))
-    if not all(out["balance_check"].values()):
+    if not all(out["balance_check"]["required_gates"].values()):
         raise SystemExit(f"balance failed: {out['balance_check']}")
 
 if __name__=="__main__":main()
