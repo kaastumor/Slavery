@@ -17,6 +17,26 @@ INSERT INTO atlas.source_version(
     'm2 synthetic resolver v1','fixture://m2-cliopatria-resolver','test fixture'
 );
 
+INSERT INTO atlas.source(
+    source_id,title,author_or_institution,source_type,source_classification
+) VALUES (
+    '12100000-0000-0000-0000-000000000301',
+    'M2 synthetic specialist geometry source',
+    'Historical Slavery Atlas test fixture',
+    'synthetic_specialist',
+    'methodology'
+);
+
+INSERT INTO atlas.source_version(
+    source_version_id,source_id,version_label,url_or_identifier,license_status
+) VALUES (
+    '12100000-0000-0000-0000-000000000302',
+    '12100000-0000-0000-0000-000000000301',
+    'm2 synthetic specialist v1',
+    'fixture://m2-specialist-geometry',
+    'test fixture'
+);
+
 INSERT INTO atlas.source_asset(
     source_asset_id,source_version_id,filename_or_object_key,media_type,
     checksum_sha256,storage_location
@@ -102,16 +122,18 @@ INSERT INTO atlas.spatial_entity(
 
 INSERT INTO atlas.geometry(
     geometry_id,spatial_entity_id,from_year,to_year,geometry_source_version_id,
-    resolution_method,accuracy_status,geom,review_status
+    geometry_source_native_id,resolution_method,accuracy_status,geom,review_status
 ) VALUES
 ('12100000-0000-0000-0000-000000000201',
  '12100000-0000-0000-0000-000000000101',50,150,
- '12100000-0000-0000-0000-000000000002',
+ '12100000-0000-0000-0000-000000000302',
+ 'specialist-accepted-201',
  'Synthetic explicitly accepted specialist replacement','specialist',
  'SRID=4326;POLYGON((0 0,10 0,10 10,0 10,0 0))','reviewed'),
 ('12100000-0000-0000-0000-000000000202',
  '12100000-0000-0000-0000-000000000102',50,150,
- '12100000-0000-0000-0000-000000000002',
+ '12100000-0000-0000-0000-000000000302',
+ 'specialist-quarantined-202',
  'Synthetic quarantined specialist candidate','specialist',
  'SRID=4326;POLYGON((11 0,15 0,15 4,11 4,11 0))','reviewed');
 
@@ -140,6 +162,9 @@ DECLARE
     v_suppressed integer;
     v_choice text;
     v_geom uuid;
+    v_baseline_source_version uuid;
+    v_chosen_source_version uuid;
+    v_chosen_source_native_id text;
 BEGIN
     IF staging.m2_cliopatria_source_year(-13) <> -14
        OR staging.m2_cliopatria_source_year(0) <> -1
@@ -237,8 +262,18 @@ BEGIN
         RAISE EXCEPTION 'source-native year zero was queried as an atlas year';
     END IF;
 
-    SELECT geometry_choice_status,chosen_geometry_id
-      INTO v_choice,v_geom
+    SELECT
+        geometry_choice_status,
+        chosen_geometry_id,
+        baseline_source_version_id,
+        chosen_geometry_source_version_id,
+        chosen_geometry_source_native_id
+      INTO
+        v_choice,
+        v_geom,
+        v_baseline_source_version,
+        v_chosen_source_version,
+        v_chosen_source_native_id
     FROM staging.m2_cliopatria_geometry_candidates(100)
     WHERE dataset_key='m2-synthetic-cliopatria'
       AND name_raw='RootPolity';
@@ -246,14 +281,35 @@ BEGIN
        OR v_geom <> '12100000-0000-0000-0000-000000000201'::uuid THEN
         RAISE EXCEPTION 'accepted specialist override did not outrank raw baseline';
     END IF;
+    IF v_baseline_source_version <> '12100000-0000-0000-0000-000000000002'::uuid
+       OR v_chosen_source_version <> '12100000-0000-0000-0000-000000000302'::uuid
+       OR v_chosen_source_native_id <> 'specialist-accepted-201' THEN
+        RAISE EXCEPTION
+            'chosen specialist provenance was not separated from baseline provenance';
+    END IF;
 
-    SELECT geometry_choice_status,chosen_geometry_id
-      INTO v_choice,v_geom
+    SELECT
+        geometry_choice_status,
+        chosen_geometry_id,
+        baseline_source_version_id,
+        chosen_geometry_source_version_id,
+        chosen_geometry_source_native_id
+      INTO
+        v_choice,
+        v_geom,
+        v_baseline_source_version,
+        v_chosen_source_version,
+        v_chosen_source_native_id
     FROM staging.m2_cliopatria_geometry_candidates(100)
     WHERE dataset_key='m2-synthetic-cliopatria'
       AND name_raw='QuarantinedPolity';
     IF v_choice <> 'raw_cliopatria_baseline' OR v_geom IS NOT NULL THEN
         RAISE EXCEPTION 'quarantined specialist candidate incorrectly gained precedence';
+    END IF;
+    IF v_baseline_source_version <> '12100000-0000-0000-0000-000000000002'::uuid
+       OR v_chosen_source_version IS NOT NULL
+       OR v_chosen_source_native_id IS NOT NULL THEN
+        RAISE EXCEPTION 'quarantined candidate leaked chosen specialist provenance';
     END IF;
 
     SELECT geometry_choice_status,chosen_geometry_id
