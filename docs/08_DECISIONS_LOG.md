@@ -544,3 +544,28 @@ Accepted specialist geometry still takes precedence over this baseline under D-0
 **Evidence:** pinned commit `ad28a691b7c07c1fca89d0e0636d324667d2a258`; exact source blob SHA-1 `cefab0f4b622e2e7fb3daf68d4f461f83991204c`; SHA-256 `d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370`; upstream README and `notebooks/map_functions.py`; exact-corpus diagnostic recorded in `validation/cliopatria_v0.2.0_semantics.json`; Bennett et al. (2025), DOI 10.1038/s41597-025-04516-9.
 
 **Consequences:** #119 must preserve the raw source timeline/hierarchy and #121 must implement this type-aware selected-year resolution. No raw source row becomes reviewed/published atlas geometry merely through ingestion.
+
+## D-060 — Claim kind is structural and must match typed claim relations
+**Date:** 2026-09-23  
+**Status:** accepted integrity rule for the existing live claim architecture; does not replace D-058 target semantics
+
+**Decision:** A universal `atlas.claim` row and any typed subtype or claim-bearing relationship row must agree on the claim's semantic kind. The database must reject a typed row when its `claim_id` points to a claim with a different `claim_kind_code`.
+
+For the current live architecture this applies to:
+- territorial-practice claims;
+- legal events;
+- actor-attribute claims;
+- external/network-participation claims;
+- spatial relations carrying claims;
+- voyage-owner, voyage-finance and voyage-stop claim relations.
+
+Once a claim exists, `claim_kind_code` is immutable. A correction that changes the semantic kind must create/supersede with a new claim rather than retyping an existing claim underneath already-linked subtype, provenance or release-history rows.
+
+This rule is semantic integrity only. It does not infer claim kind from source density, geography, P0–P4, actor attributes or other evidence. It does not promote the legacy P0–P4 model, and it does not pre-empt the post-M1 relational implementation still required under D-058/M2.
+
+**Evidence:** Before production hardening, all 42 existing live territorial-practice subtype rows were checked against their universal claims and had zero kind mismatches. Migration `0028_claim_kind_integrity` was then applied to production with negative controls proving that a wrong-kind legal-event insert and a claim-kind mutation are rejected. The v0.6.1 reconciliation and non-Atlantic acceptance suites continued to pass after the change.
+
+**Reason:** The universal claim table is intentionally shared across heterogeneous historical assertion types. Without an explicit compatibility guard, a foreign key proves only that a claim exists, not that a typed row preserves the claim's stated semantics. Silent retyping would make claim-specific provenance and release history internally contradictory.
+
+**Consequences:** Migration `0028_claim_kind_integrity.sql` and its rollback-only regression test are part of the canonical schema history. Future typed claim relations must either use the same structural guard or provide an equivalent integrity mechanism. Any later M2 schema replacement must preserve this invariant even if claim-kind vocabulary or subtype tables evolve.
+
