@@ -11,55 +11,31 @@ Detailed completed-work history belongs in GitHub issues/PRs, the Decisions Log 
 
 ---
 
-# IDLE — no new execution horizon is authorized
+# ACTIVE — H2 value-discrimination pilot (#146)
 
-HC-003 / issue #123 completed the M2 wide-angle review with:
+Explicit sponsor authorization on 2026-09-23 activates one bounded experiment:
 
-**CONTINUE + SIMPLIFY**
+> **Does the corpus/method, and then the smallest thin atlas/query representation, materially improve difficult historical reasoning over the strongest competent boring baseline?**
 
-Working identity:
+Execution order is fixed:
 
-> **auditable historical slavery/coercion evidence corpus + comparison method + thin atlas/query surface**
+1. pre-register protocol and cases;
+2. adversarially attack the setup;
+3. revise or reject the setup before historical execution;
+4. run all three historical questions against the same-source three-arm comparison;
+5. reconcile value evidence and choose **continue / simplify / redirect / stop**.
 
-Durable review:
-- `docs/34_WIDE_ANGLE_PROJECT_REVIEW.md`
+The issue is #146. Durable experiment artifacts live under `experiments/h2-value-discrimination/`.
 
-Direction decision:
-- D-062 in `docs/08_DECISIONS_LOG.md`
+This authorization does **not** reopen:
+- M2 production migration;
+- bulk/global research expansion;
+- bulk Cliopatria publication;
+- frontend/platform expansion;
+- new infrastructure/monitoring;
+- an automatic successor horizon.
 
-Completed horizons:
-- M1 methodology hardening — #100 / `docs/29_M1_INTEGRATED_ADVERSARIAL_GATE.md`
-- M2 semantic/geography integration — #116 / `docs/33_M2_INTEGRATED_ADVERSARIAL_GATE.md`
-
-The execution queue is deliberately idle. Do **not** manufacture an AUTO runway merely because the previous gate finished.
-
-## Candidate next experiment — NOT AUTHORIZED
-
-**Value-discrimination pilot**
-
-Question:
-
-> Does the corpus/method, and then the smallest thin atlas/query view, materially improve difficult cross-place/time historical reasoning over the strongest boring/external workflow?
-
-Candidate design:
-- three independent difficult historical questions from different regions/periods;
-- at least one temporal/spatial ambiguity case;
-- at least one conflicting/qualified-evidence case;
-- compare:
-  1. specialist literature + structured notes/table + QGIS/nodegoat/general model as appropriate;
-  2. Atlas corpus/method without bespoke map interaction;
-  3. smallest thin atlas/query/evidence view;
-- record effort, provenance recovery, uncertainty/abstention preservation, cross-place/time comparison quality, overclaim and parity/no-value.
-
-Starting this pilot requires an explicit new authorization/horizon. HC-003 itself does not start it.
-
-## Kill rule
-
-A richer Atlas product earns no further application/infrastructure horizon unless at least two independent tasks from different historical contexts demonstrate a repeatable practical advantage over the strongest baseline in inspectable cross-place/time reasoning, provenance recovery or uncertainty preservation without increased overclaim.
-
-If the corpus/method provides the advantage but the thin atlas does not, shrink to the methodology/corpus identity and stop application expansion.
-
-If neither materially outperforms the strongest baseline, stop further Atlas expansion and preserve the methodology/corpus/audit artifacts as the result.
+After #146 is decided, the queue returns to IDLE unless a new horizon is explicitly authorized.
 
 ---
 
