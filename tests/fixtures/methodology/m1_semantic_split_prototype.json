@@ -1,19 +1,73 @@
 {
-  "prototype_version": "m1-semantic-split-v1",
+  "prototype_version": "m1-semantic-split-v2",
   "status": "experimental_not_canonical",
   "legacy_release": "v0.6.1",
   "dimensions": {
-    "evidence_basis": ["isolated_attestation", "recurrent_attestation", "specialist_synthesis", "mixed"],
-    "historical_characterization": ["unassessed", "bounded_occurrence", "recurrent", "institutional", "widespread_structurally_major"],
-    "research_stage": ["not_researched", "source_identified", "under_review", "review_complete"],
-    "classification_outcome": ["unassessed", "classified", "disputed", "inconclusive"],
-    "assertion_form": ["practice_or_status", "event_or_process"],
-    "facet_dimensions": ["status", "function", "property_legal", "transmission", "process"]
+    "attestation_pattern": [
+      "unassessed",
+      "single_bounded_attestation",
+      "recurrent_attestation",
+      "multiple_independent_attestations",
+      "mixed_or_unclear"
+    ],
+    "interpretive_basis": [
+      "unassessed",
+      "primary_or_source_native",
+      "specialist_synthesis",
+      "mixed_primary_and_specialist"
+    ],
+    "occurrence_pattern": [
+      "unassessed",
+      "bounded_occurrence",
+      "recurrent",
+      "continuous_period"
+    ],
+    "institutionalization": [
+      "unassessed",
+      "institutional_features_supported"
+    ],
+    "prevalence_scope": [
+      "unassessed",
+      "localized",
+      "broader",
+      "widespread"
+    ],
+    "structural_significance": [
+      "unassessed",
+      "structurally_major_supported"
+    ],
+    "research_stage": [
+      "not_researched",
+      "source_identified",
+      "under_review",
+      "review_complete"
+    ],
+    "classification_outcome": [
+      "unassessed",
+      "classified",
+      "disputed",
+      "inconclusive"
+    ],
+    "assertion_form": [
+      "practice_or_status",
+      "event_or_process"
+    ],
+    "facet_dimensions": [
+      "status",
+      "function",
+      "property_legal",
+      "transmission",
+      "process"
+    ]
   },
   "compatibility": {
     "legacy_practice_level_preserved": true,
+    "legacy_practice_level_role": "compatibility_only",
+    "target_universal_ordinal": false,
     "derive_new_dimensions_from_legacy_level": false,
     "derive_p0_from_inconclusive": false,
+    "future_serving_requires_semantic_integration": true,
+    "public_preview_unchanged_during_m1": true,
     "sql_migration_required_now": false
   },
   "cases": [
@@ -27,13 +81,24 @@
       "id": "synthetic_reviewed_inconclusive",
       "research_stage": "review_complete",
       "classification_outcome": "inconclusive",
-      "legacy_practice_level": "P0"
+      "legacy_practice_level": null
+    },
+    {
+      "id": "synthetic_explicit_legacy_p0",
+      "research_stage": "review_complete",
+      "classification_outcome": "inconclusive",
+      "legacy_practice_level": "P0",
+      "legacy_p0_explicitly_reviewed": true
     },
     {
       "id": "baekje_369",
       "source_case": "data/research/ancient_expansion_02/03_baekje_369_war_captive_enslavement.json",
-      "evidence_basis": "isolated_attestation",
-      "historical_characterization": "bounded_occurrence",
+      "attestation_pattern": "single_bounded_attestation",
+      "interpretive_basis": "mixed_primary_and_specialist",
+      "occurrence_pattern": "bounded_occurrence",
+      "institutionalization": "unassessed",
+      "prevalence_scope": "unassessed",
+      "structural_significance": "unassessed",
       "research_stage": "review_complete",
       "classification_outcome": "classified",
       "assertion_form": "event_or_process",
@@ -46,8 +111,12 @@
     {
       "id": "hittite_central_anatolia",
       "source_case": "data/research/ancient_expansion_01/03_hittite_slavery.json",
-      "evidence_basis": "specialist_synthesis",
-      "historical_characterization": "recurrent",
+      "attestation_pattern": "recurrent_attestation",
+      "interpretive_basis": "mixed_primary_and_specialist",
+      "occurrence_pattern": "recurrent",
+      "institutionalization": "institutional_features_supported",
+      "prevalence_scope": "unassessed",
+      "structural_significance": "unassessed",
       "research_stage": "review_complete",
       "classification_outcome": "classified",
       "assertion_form": "practice_or_status",
@@ -58,6 +127,20 @@
         {"dimension": "function", "concept": "herding_labour"},
         {"dimension": "transmission", "concept": "status_flexibility"}
       ]
+    },
+    {
+      "id": "synthetic_recurrent_institutional_localized",
+      "attestation_pattern": "multiple_independent_attestations",
+      "interpretive_basis": "specialist_synthesis",
+      "occurrence_pattern": "recurrent",
+      "institutionalization": "institutional_features_supported",
+      "prevalence_scope": "localized",
+      "structural_significance": "unassessed",
+      "research_stage": "review_complete",
+      "classification_outcome": "classified",
+      "assertion_form": "practice_or_status",
+      "legacy_practice_level": null,
+      "facets": []
     }
   ]
 }
