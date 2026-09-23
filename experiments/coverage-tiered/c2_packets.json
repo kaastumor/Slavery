@@ -1,0 +1,112 @@
+{
+  "experiment": "COV-003",
+  "release_id": "COV-003-exp-v1",
+  "c2_targets": 3,
+  "material_gains": 2,
+  "gate_required": "material gain in at least 2 of 3 escalated targets",
+  "gate_result": "PASS",
+  "packets": [
+    {
+      "target_id": "COV3:-500:F:r4",
+      "target_label": "Zhu",
+      "batch": "-500:F",
+      "c1_outcome": "researched_inconclusive",
+      "c2_outcome": "researched_inconclusive",
+      "material_gain": true,
+      "gain_dimensions": [
+        "correctness",
+        "temporal uncertainty",
+        "terminology/inference boundary"
+      ],
+      "c2_bounded_conclusion": "The C1 row was directionally correct to abstain, but its phrase 'broader Eastern-Zhou scholarship establishes slavery' was too temporally loose. Yates's most concrete legal evidence is Qin material later than the -500 anchor, while Adamski shows that earlier Zhou epigraphic status terms cannot be securely normalized into a simple slave category. No Zhu-specific slavery institution at c.500 BCE is established.",
+      "c2_required_abstention": "Do not use later Qin legal slave categories, earlier Western-Zhou disputed status terms, or generic Eastern-Zhou hierarchy to assert Zhu territorial slavery practice at -500.",
+      "terminology_category_qualification": "Early Chinese terms translated as slave, servant, bondservant or subordinate are historiographically contested and change across source corpora and periods.",
+      "temporal_scope_precision": "Target anchor is -500. Yates's strongest legal corpus is Qin (later); Adamski focuses Shang/Western Zhou (earlier). Neither supplies Zhu-specific contemporaneous evidence.",
+      "evidence_locus": "Zhu/Zou target identity plus non-target-specific early-China status scholarship.",
+      "inference_extent": "Abstention only; no Zhu practice/prevalence claim.",
+      "new_sources": [
+        {
+          "title": "Indefinite Terms? Social Groups in Early Ancient China (ca. 1300–771 BC) and Strong Asymmetrical Dependency",
+          "author": "Susanne Adamski",
+          "year": 2022,
+          "url": "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/21/75/88/24/2021758824/2021758824.pdf",
+          "role": "specialist_chapter",
+          "direction": "qualifies"
+        },
+        {
+          "title": "The Background of the Kong Family of Lu and the Origins of Ruism",
+          "author": "Robert Eno",
+          "year": 2003,
+          "url": "https://www.cambridge.org/core/journals/early-china/article/abs/background-of-the-kong-family-of-lu-and-the-origins-of-ruism/76883FC69F9815D9E3F30C8960F6DF33",
+          "role": "specialist_article",
+          "direction": "target_identity_context"
+        }
+      ],
+      "comparison_to_c1": "MATERIAL: C2 narrows C1's temporal/category wording and prevents later Qin evidence from sounding contemporaneous with Zhu at -500."
+    },
+    {
+      "target_id": "COV3:1300:E:r5",
+      "target_label": "Hanthawaddy Kingdom",
+      "batch": "1300:E",
+      "c1_outcome": "bounded_supported",
+      "c2_outcome": "bounded_supported",
+      "material_gain": true,
+      "gain_dimensions": [
+        "law/practice boundary",
+        "source recovery",
+        "status interpretation"
+      ],
+      "c2_bounded_conclusion": "Wareru's late-thirteenth-century dhammasattha gives direct legal recognition to slavery near the 1300 anchor. Comparative legal scholarship further shows that slavery was one of the foundational dhammasattha titles and that hereditary slave status could be treated as a durable legal identity across changes of ruler. This strengthens the legal-status claim, not a prevalence claim.",
+      "c2_required_abstention": "Do not infer frequency, enforcement, territorial prevalence, or lived uniformity from a law code; the durable legal category of hereditary slave is not a census of Hanthawaddy practice.",
+      "terminology_category_qualification": "Dhammasattha law distinguishes hereditary slave status from other ruler-dependent socioeconomic statuses; that distinction is legally meaningful but does not make all slavery relations identical.",
+      "temporal_scope_precision": "Wareru's code was compiled at Martaban around 1290/91, directly adjacent to the 1300 anchor. Lammerts is a modern specialist interpretation of the broader dhammasattha tradition.",
+      "evidence_locus": "Wareru/Martaban legal corpus and specialist interpretation of precolonial Southeast Asian dhammasattha.",
+      "inference_extent": "Direct legal recognition near the anchor; territorial practice intensity remains unassessed.",
+      "new_sources": [
+        {
+          "title": "Buddhism and Constitutionalism in Precolonial Southeast Asia",
+          "author": "D. Christian Lammerts",
+          "year": 2022,
+          "url": "https://doi.org/10.1017/9781009286022.004",
+          "role": "specialist_chapter",
+          "direction": "supports_and_qualifies"
+        }
+      ],
+      "comparison_to_c1": "MATERIAL: C2 clarifies that the code encodes a durable hereditary-slave legal status while simultaneously sharpening the prohibition on inferring practice/prevalence."
+    },
+    {
+      "target_id": "COV3:-500:E:r3",
+      "target_label": "Janapada of Pañcāla",
+      "batch": "-500:E",
+      "c1_outcome": "researched_inconclusive",
+      "c2_outcome": "researched_inconclusive",
+      "material_gain": false,
+      "gain_dimensions": [],
+      "c2_bounded_conclusion": "Deeper search identified a target-specific social-history paper on Pañcāla and broader scholarship supporting the presence of slavery in northern India by the Buddhist period, but accessible evidence still does not establish a Pañcāla-specific slavery institution at c.500 BCE.",
+      "c2_required_abstention": "Do not turn continent/regional Buddhist-period slavery into Pañcāla territorial practice without recoverable target-specific status evidence.",
+      "terminology_category_qualification": "Dāsa/dāsī and related dependent statuses require source-specific interpretation; broad Indian slavery history does not resolve Pañcāla.",
+      "temporal_scope_precision": "Regional evidence is compatible with the anchor, but target-specific slavery evidence remains unresolved.",
+      "evidence_locus": "Pañcāla target; broader northern-Indian/Buddhist-period context.",
+      "inference_extent": "No target-specific slavery practice/prevalence claim.",
+      "new_sources": [
+        {
+          "title": "Social Condition of Panchala Janpada from circa 6th to 1200 A.D.",
+          "author": "Jyoti Khatri",
+          "year": 2007,
+          "url": "https://www.jstor.org/stable/44145657",
+          "role": "target_specific_specialist_paper_metadata",
+          "direction": "context_only_access_limited"
+        },
+        {
+          "title": "Hindus Beyond the Hindu Kush: Indians in the Central Asian Slave Trade",
+          "author": "Scott C. Levi",
+          "year": 2002,
+          "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/hindus-beyond-the-hindu-kush-indians-inthe-central-asian-slave-trade/00516BAA0BCD78AD19407E2996F49FAF",
+          "role": "specialist_article",
+          "direction": "regional_chronology_context"
+        }
+      ],
+      "comparison_to_c1": "NOT MATERIAL: C2 improves bibliography and confirms that the target-specific question has been studied, but accessible evidence does not change the historical conclusion, uncertainty state, or inference boundary enough to justify routine deep packets."
+    }
+  ]
+}
