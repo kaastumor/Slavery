@@ -7,35 +7,51 @@
 
 This file answers **what is justified to work on next**.
 
-Detailed completed-work history belongs in GitHub issues/PRs, the Decisions Log and durable gate/audit records. It is intentionally not repeated here.
-
 ---
 
-# ACTIVE — H2 value-discrimination pilot (#146)
+# IDLE / PRESERVATION — H2 stop rule triggered
 
-Explicit sponsor authorization on 2026-09-23 activates one bounded experiment:
+H2 / issue #146 completed the value-discrimination pilot authorized after HC-003.
 
-> **Does the corpus/method, and then the smallest thin atlas/query representation, materially improve difficult historical reasoning over the strongest competent boring baseline?**
+Final disposition:
 
-Execution order is fixed:
+> **STOP ACTIVE ATLAS EXPANSION; PRESERVE METHOD/CORPUS/AUDIT ARTIFACTS**
 
-1. pre-register protocol and cases;
-2. adversarially attack the setup;
-3. revise or reject the setup before historical execution;
-4. run all three historical questions against the same-source three-arm comparison;
-5. reconcile value evidence and choose **continue / simplify / redirect / stop**.
+Durable result:
+- `experiments/h2-value-discrimination/09_FINAL_RESULT.md`
+- HC-004 in `docs/25_PROJECT_HEALTH.md`
+- D-063 in `docs/08_DECISIONS_LOG.md`
 
-The issue is #146. Durable experiment artifacts live under `experiments/h2-value-discrimination/`.
+The pre-registered project-value threshold was not met:
+- Atlas corpus/method materially beat the strongest baseline in **1/3** cases;
+- the repaired thin query/visual arm materially beat the corpus/method in **0/3** cases.
 
-This authorization does **not** reopen:
-- M2 production migration;
-- bulk/global research expansion;
-- bulk Cliopatria publication;
-- frontend/platform expansion;
-- new infrastructure/monitoring;
-- an automatic successor horizon.
+Do **not** manufacture a successor horizon to escape the result.
 
-After #146 is decided, the queue returns to IDLE unless a new horizon is explicitly authorized.
+## What is justified now
+
+Routine preservation and bounded maintenance only:
+- keep canonical/release artifacts reconstructible;
+- repair security, link/source rot, CI breakage or repository decay when it threatens preserved artifacts;
+- handle parked operational debt only when its existing trigger becomes real;
+- retain the H2 negative result and M1/M2 adversarial evidence.
+
+A new Atlas-development experiment requires a **new external trigger** showing a concrete failure of the strongest simpler workflow. Internal desire to add more data/features is not such a trigger.
+
+## Explicitly not authorized
+
+- H3 broad/global research expansion;
+- M2 production schema migration;
+- bulk Cliopatria source-row → atlas identity publication;
+- another frontend/map redesign;
+- PMTiles/vector-tile expansion;
+- search/vector/RAG/graph/ontology infrastructure;
+- new research platform/gazetteer/reconciliation services;
+- contributor/peer-review platform;
+- production-like monitoring/self-heal;
+- autonomous build/research runway.
+
+If no new external trigger exists, **idle is the correct state**.
 
 ---
 
