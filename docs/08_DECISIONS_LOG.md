@@ -842,3 +842,97 @@ COV-002 is **not** evidence sufficient to reject the broader possibility of a ti
 **Not authorized by this correction:** any new historical research cohort, comprehensive ingestion, production migration, or successor experiment.
 
 **Durable audit:** `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.md`.
+
+
+## D-069 — Authorize one bounded COV-003 tiered systematic-coverage architecture test
+**Date:** 2026-09-23  
+**Status:** accepted bounded experiment authorization; no successor horizon authorized
+
+**Decision:** Authorize COV-003 / issue #155 after ADV-001 / D-068.
+
+COV-003 tests a workflow that COV-002 did not:
+- C0 target/research-state registration without slavery inference;
+- C1 compact bounded evidence for a preregistered subset;
+- C2 selective deep evidence only under a frozen escalation rule;
+- source-centric batch research;
+- immutable/as-of experiment releases with explicit review-state updates.
+
+**Frozen scale:**
+- 3 deterministic Cliopatria strata;
+- 24 new targets at C0;
+- 12 fixed C1 research targets;
+- 12 fixed C0-only targets;
+- 6 identity-validation probes;
+- at most 3 C2 escalations;
+- 3 later deterministic update searches.
+
+**Guardrails:**
+- v0.6.1 remains canonical;
+- unresearched and identity-unreviewed are never historical absence;
+- C0 may not imply a slavery conclusion;
+- C0-only targets cannot be promoted after evidence inspection;
+- shared-source reuse counts only when materially informative;
+- no product/database/API/UI horizon;
+- no comprehensive-ingestion authorization;
+- no autonomous successor.
+
+**Possible dispositions:** FAIL / STOP, TIERED SURVIVE, or STRONG SURVIVE.
+
+Even STRONG SURVIVE means only that the architecture deserves further bounded validation; it does not authorize a complete global corpus.
+
+**Durable setup:** `experiments/coverage-tiered/`.
+
+
+## D-070 — COV-003 validates tiered systematic coverage, not comprehensive ingestion
+**Date:** 2026-09-23  
+**Status:** accepted direction decision from COV-003 / issue #155
+
+**Decision:** Preserve a tiered systematic-coverage architecture as the best-supported research form after COV-003:
+
+1. **C0 — target/research-state register**
+   - broad registration;
+   - no slavery conclusion required;
+   - explicit identity/research status;
+   - unresearched is never absence.
+
+2. **C1 — compact bounded coverage**
+   - used when subject research is actually performed;
+   - bounded conclusion + abstention;
+   - law/practice and network/territorial boundaries;
+   - handbook coverage, unresolved reason and source references.
+
+3. **C2 — selective deep evidence**
+   - only under explicit ambiguity/risk triggers;
+   - richer temporal/category/source-direction/inference metadata.
+
+4. **immutable/as-of releases + review ledger**
+   - do not silently rewrite historical experiment states.
+
+5. **source-to-row dependency tracking**
+   - shared-source corrections propagate review state to dependent rows.
+
+**Evidence:**
+- 24 C0 targets were represented while only 12 required C1 research;
+- 6 identity/time probes surfaced one mismatch and one ambiguity without forcing subject conclusions;
+- C1 produced 4 bounded-supported and 8 researched-inconclusive outcomes;
+- source-reuse factor increased from 1.00 in the COV-002 row-centric cohort to 2.20 in COV-003;
+- two of three batches had shared specialist sources materially informing all four C1 targets;
+- all 12 C1 targets nevertheless needed target-specific follow-up, so the strong batch-economy gate failed;
+- C2 materially improved 2 of 3 escalated targets, supporting selective rather than universal deep packets;
+- the deterministic maintenance searches produced no positive new-source shock, so lower long-run update cost remains unproven;
+- a real C2 correction exposed correlated shared-source review risk across four early-China rows, demonstrating the need for dependency tracking;
+- none of the 12 C1 targets had direct Cambridge/Palgrave coverage, yet systematic selection recovered both supported results and meaningful abstentions.
+
+**Consequences:**
+- COV-003 receives **TIERED SURVIVE**, not STRONG SURVIVE;
+- tiering is a methodological architecture, not authorization for bulk research;
+- v0.6.1 remains canonical;
+- COV-003 remains experimental/non-canonical;
+- D-063 remains in force for Atlas product/platform work;
+- no global C1/C2 completion is authorized;
+- no automated mass research or successor experiment is authorized;
+- record count remains an invalid success metric;
+- source-quality state and source-dependency review propagation are required in any future tiered validation;
+- future testing requires explicit sponsor authorization and should address non-polity frames, coherent batching, independent review and a real positive update event.
+
+**Durable result:** `experiments/coverage-tiered/13_FINAL_RESULT.md`.

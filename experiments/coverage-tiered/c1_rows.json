@@ -1,0 +1,418 @@
+[
+  {
+    "target_id": "COV3:-500:F:r3",
+    "target_label": "Yan",
+    "anchor_year": -500,
+    "stratum": "-500:F",
+    "tier": "C1",
+    "source_sample": {
+      "source_row_ordinal": 175,
+      "source_from_year": -750,
+      "source_to_year": -405,
+      "source_wikidata": "Q1472004",
+      "selection_rank": 3
+    },
+    "identity_validation_state": "identity_unreviewed",
+    "research_state": "researched",
+    "coverage_outcome": "researched_inconclusive",
+    "bounded_conclusion": "Early-China scholarship establishes slavery, captivity, bondservant and forced-labour categories in the broader Eastern Zhou context, but the bounded packet does not establish slavery specifically in Yan at c.500 BCE.",
+    "required_abstention": "Do not infer Yan-specific territorial practice or prevalence from pan-Eastern-Zhou evidence, warfare, captivity, or later Qin/Han legal material.",
+    "law_practice_note": "",
+    "network_territorial_warning": "",
+    "cambridge_coverage": "adjacent",
+    "palgrave_coverage": "none",
+    "unresolved_reason": "No target-specific Yan slavery-status evidence was established within the bounded follow-up.",
+    "access_language_warning": "English-accessible bounded packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "source_refs": [
+      "CN-YATES-2001",
+      "CN-SCHEIDEL-2017"
+    ],
+    "target_specific_followup_search_performed": true,
+    "target_specific_followup_accepted_sources": [],
+    "reviewed_through": "2026-09-23",
+    "release_id": "COV-003-exp-v1",
+    "review_state": "current"
+  },
+  {
+    "target_id": "COV3:-500:F:r4",
+    "target_label": "Zhu",
+    "anchor_year": -500,
+    "stratum": "-500:F",
+    "tier": "C1",
+    "source_sample": {
+      "source_row_ordinal": 174,
+      "source_from_year": -750,
+      "source_to_year": -451,
+      "source_wikidata": "Q227007",
+      "selection_rank": 4
+    },
+    "identity_validation_state": "identity_unreviewed",
+    "research_state": "researched",
+    "coverage_outcome": "researched_inconclusive",
+    "bounded_conclusion": "Early-China scholarship establishes slavery and other unfree statuses in the broader Eastern Zhou period, but the bounded packet does not establish slavery specifically in Zhu at c.500 BCE.",
+    "required_abstention": "Do not project general Spring-and-Autumn/Eastern-Zhou slavery evidence onto Zhu or infer prevalence from regional institutions.",
+    "law_practice_note": "",
+    "network_territorial_warning": "",
+    "cambridge_coverage": "adjacent",
+    "palgrave_coverage": "none",
+    "unresolved_reason": "No target-specific Zhu slavery-status evidence was established within the bounded follow-up.",
+    "access_language_warning": "English-accessible bounded packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "source_refs": [
+      "CN-YATES-2001",
+      "CN-SCHEIDEL-2017"
+    ],
+    "target_specific_followup_search_performed": true,
+    "target_specific_followup_accepted_sources": [],
+    "reviewed_through": "2026-09-23",
+    "release_id": "COV-003-exp-v1",
+    "review_state": "current"
+  },
+  {
+    "target_id": "COV3:-500:F:r5",
+    "target_label": "Lu",
+    "anchor_year": -500,
+    "stratum": "-500:F",
+    "tier": "C1",
+    "source_sample": {
+      "source_row_ordinal": 169,
+      "source_from_year": -750,
+      "source_to_year": -481,
+      "source_wikidata": "Q555994",
+      "selection_rank": 5
+    },
+    "identity_validation_state": "identity_unreviewed",
+    "research_state": "researched",
+    "coverage_outcome": "researched_inconclusive",
+    "bounded_conclusion": "The Lu chronicle tradition sits inside a broader Eastern-Zhou world in which specialist scholarship documents slavery, captivity and unfree statuses, but this packet does not establish a Lu-specific slavery institution at c.500 BCE.",
+    "required_abstention": "Do not treat the existence of Lu's rich textual record or general Eastern-Zhou status categories as proof of Lu territorial practice or prevalence.",
+    "law_practice_note": "",
+    "network_territorial_warning": "",
+    "cambridge_coverage": "adjacent",
+    "palgrave_coverage": "none",
+    "unresolved_reason": "No target-specific Lu slavery-status claim was established within the bounded follow-up.",
+    "access_language_warning": "English-accessible bounded packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "source_refs": [
+      "CN-YATES-2001",
+      "CN-SCHEIDEL-2017"
+    ],
+    "target_specific_followup_search_performed": true,
+    "target_specific_followup_accepted_sources": [],
+    "reviewed_through": "2026-09-23",
+    "release_id": "COV-003-exp-v1",
+    "review_state": "current"
+  },
+  {
+    "target_id": "COV3:-500:F:r6",
+    "target_label": "Cao",
+    "anchor_year": -500,
+    "stratum": "-500:F",
+    "tier": "C1",
+    "source_sample": {
+      "source_row_ordinal": 168,
+      "source_from_year": -750,
+      "source_to_year": -481,
+      "source_wikidata": "Q204077",
+      "selection_rank": 6
+    },
+    "identity_validation_state": "identity_unreviewed",
+    "research_state": "researched",
+    "coverage_outcome": "researched_inconclusive",
+    "bounded_conclusion": "Broader Eastern-Zhou scholarship documents slavery and related unfree statuses, but the bounded packet does not establish those relations specifically for Cao at c.500 BCE.",
+    "required_abstention": "Do not infer Cao-specific slavery practice from regional warfare, captivity, forced labour or later legal systems.",
+    "law_practice_note": "",
+    "network_territorial_warning": "",
+    "cambridge_coverage": "adjacent",
+    "palgrave_coverage": "none",
+    "unresolved_reason": "No target-specific Cao slavery-status evidence was established within the bounded follow-up.",
+    "access_language_warning": "English-accessible bounded packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "source_refs": [
+      "CN-YATES-2001",
+      "CN-SCHEIDEL-2017"
+    ],
+    "target_specific_followup_search_performed": true,
+    "target_specific_followup_accepted_sources": [],
+    "reviewed_through": "2026-09-23",
+    "release_id": "COV-003-exp-v1",
+    "review_state": "current"
+  },
+  {
+    "target_id": "COV3:1300:E:r3",
+    "target_label": "Kathmandu",
+    "anchor_year": 1300,
+    "stratum": "1300:E",
+    "tier": "C1",
+    "source_sample": {
+      "source_row_ordinal": 5211,
+      "source_from_year": 1202,
+      "source_to_year": 1743,
+      "source_wikidata": "Q3037",
+      "selection_rank": 3
+    },
+    "identity_validation_state": "identity_unreviewed",
+    "research_state": "researched",
+    "coverage_outcome": "bounded_supported",
+    "bounded_conclusion": "Nepalese evidence establishes slavery and multiple forms of unfree labour before and around the Early Malla period; a fourteenth-century Newari legal commentary describes slave/service/forced-labour categories relevant to the Kathmandu Valley context.",
+    "required_abstention": "Do not claim exact 1300 prevalence, a single uniform slave status, or that the fourteenth-century commentary is a census of Kathmandu practice.",
+    "law_practice_note": "A fourteenth-century legal/commentarial source records slavery and related service categories; legal/textual recognition is not a prevalence measure.",
+    "network_territorial_warning": "",
+    "cambridge_coverage": "none",
+    "palgrave_coverage": "adjacent",
+    "unresolved_reason": "Direct Early Malla documents are sparse; the strongest near-anchor evidence is fourteenth-century and category distinctions are not always recoverable.",
+    "access_language_warning": "English-accessible bounded packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "source_refs": [
+      "NP-BAJRACHARYA-MICHAELS"
+    ],
+    "target_specific_followup_search_performed": true,
+    "target_specific_followup_accepted_sources": [
+      "NP-BAJRACHARYA-MICHAELS"
+    ],
+    "reviewed_through": "2026-09-23",
+    "release_id": "COV-003-exp-v1",
+    "review_state": "current"
+  },
+  {
+    "target_id": "COV3:1300:E:r4",
+    "target_label": "Chandela Kingdom",
+    "anchor_year": 1300,
+    "stratum": "1300:E",
+    "tier": "C1",
+    "source_sample": {
+      "source_row_ordinal": 6025,
+      "source_from_year": 1294,
+      "source_to_year": 1304,
+      "source_wikidata": "Q2039087",
+      "selection_rank": 4
+    },
+    "identity_validation_state": "identity_unreviewed",
+    "research_state": "researched",
+    "coverage_outcome": "researched_inconclusive",
+    "bounded_conclusion": "A documented Ghurid conquest of Chandela Kalinjar in 1202–1203 involved mass captivity/enslavement claims, establishing that Chandela populations could be targets of enslavement in the preceding century.",
+    "required_abstention": "Do not convert a 1203 conquest/captivity event into evidence for an internal Chandela slavery institution or territorial practice at the 1300 anchor.",
+    "law_practice_note": "",
+    "network_territorial_warning": "External conquest/captive evidence is kept separate from Chandela internal territorial practice.",
+    "cambridge_coverage": "adjacent",
+    "palgrave_coverage": "adjacent",
+    "unresolved_reason": "The event is nearly a century before the anchor and concerns external enslavement of Chandela subjects, not an internal Chandela slavery regime.",
+    "access_language_warning": "English-accessible bounded packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "source_refs": [
+      "IN-KALINJAR-1203"
+    ],
+    "target_specific_followup_search_performed": true,
+    "target_specific_followup_accepted_sources": [
+      "IN-KALINJAR-1203"
+    ],
+    "reviewed_through": "2026-09-23",
+    "release_id": "COV-003-exp-v1",
+    "review_state": "current"
+  },
+  {
+    "target_id": "COV3:1300:E:r5",
+    "target_label": "Hanthawaddy Kingdom",
+    "anchor_year": 1300,
+    "stratum": "1300:E",
+    "tier": "C1",
+    "source_sample": {
+      "source_row_ordinal": 6015,
+      "source_from_year": 1294,
+      "source_to_year": 1374,
+      "source_wikidata": "Q1572529",
+      "selection_rank": 5
+    },
+    "identity_validation_state": "identity_unreviewed",
+    "research_state": "researched",
+    "coverage_outcome": "bounded_supported",
+    "bounded_conclusion": "The Wareru legal code compiled at Martaban around 1290/91 contains a dedicated chapter regulating slaves, supporting legal recognition of slavery in the nascent Martaban/Hanthawaddy polity close to the 1300 anchor.",
+    "required_abstention": "Do not infer how common slavery was, how rules were enforced, or territorial prevalence from the existence of the legal code.",
+    "law_practice_note": "Direct legal recognition is strong; actual practice and prevalence remain separate and unquantified.",
+    "network_territorial_warning": "",
+    "cambridge_coverage": "adjacent",
+    "palgrave_coverage": "adjacent",
+    "unresolved_reason": "Legal-text evidence does not by itself establish practice intensity.",
+    "access_language_warning": "English-accessible bounded packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "source_refs": [
+      "MM-WARERU-1892",
+      "MM-HUXLEY-1997"
+    ],
+    "target_specific_followup_search_performed": true,
+    "target_specific_followup_accepted_sources": [
+      "MM-WARERU-1892",
+      "MM-HUXLEY-1997"
+    ],
+    "reviewed_through": "2026-09-23",
+    "release_id": "COV-003-exp-v1",
+    "review_state": "current"
+  },
+  {
+    "target_id": "COV3:1300:E:r6",
+    "target_label": "Myinsaing Kingdom",
+    "anchor_year": 1300,
+    "stratum": "1300:E",
+    "tier": "C1",
+    "source_sample": {
+      "source_row_ordinal": 6022,
+      "source_from_year": 1294,
+      "source_to_year": 1304,
+      "source_wikidata": "Q3446205",
+      "selection_rank": 6
+    },
+    "identity_validation_state": "valid_at_anchor",
+    "research_state": "researched",
+    "coverage_outcome": "bounded_supported",
+    "bounded_conclusion": "Late-Pagan inscriptional scholarship documents kywan/slave populations and slave villages in the Myinsaing/Kyaukse area, providing bounded evidence of unfree/slave populations in the immediate transition into the Myinsaing polity.",
+    "required_abstention": "Do not treat every kywan as equivalent to chattel slavery or infer a polity-wide Myinsaing prevalence from local late-Pagan inscriptions.",
+    "law_practice_note": "",
+    "network_territorial_warning": "Some slave populations were linked to conquest/forced settlement; this does not quantify territorial prevalence.",
+    "cambridge_coverage": "adjacent",
+    "palgrave_coverage": "adjacent",
+    "unresolved_reason": "The strongest evidence straddles the late-Pagan/Myinsaing transition and the kywan category was heterogeneous.",
+    "access_language_warning": "English-accessible bounded packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "source_refs": [
+      "MM-AYECHAN-2006",
+      "MM-THANTUN-1958"
+    ],
+    "target_specific_followup_search_performed": true,
+    "target_specific_followup_accepted_sources": [
+      "MM-AYECHAN-2006",
+      "MM-THANTUN-1958"
+    ],
+    "reviewed_through": "2026-09-23",
+    "release_id": "COV-003-exp-v1",
+    "review_state": "current"
+  },
+  {
+    "target_id": "COV3:-500:E:r3",
+    "target_label": "Janapada of Pañcāla",
+    "anchor_year": -500,
+    "stratum": "-500:E",
+    "tier": "C1",
+    "source_sample": {
+      "source_row_ordinal": 247,
+      "source_from_year": -600,
+      "source_to_year": -451,
+      "source_wikidata": "Q558603",
+      "selection_rank": 3
+    },
+    "identity_validation_state": "valid_at_anchor",
+    "research_state": "researched",
+    "coverage_outcome": "researched_inconclusive",
+    "bounded_conclusion": "Buddhist-period scholarship documents slavery in northern India around the sixth–fifth centuries BCE, but the bounded packet does not establish a Pañcāla-specific slavery practice at c.500 BCE.",
+    "required_abstention": "Do not map general dāsa/dāsī, oligarchic/monarchical, war or debt-slavery evidence directly onto Pañcāla without target-specific evidence.",
+    "law_practice_note": "",
+    "network_territorial_warning": "",
+    "cambridge_coverage": "adjacent",
+    "palgrave_coverage": "adjacent",
+    "unresolved_reason": "No Pañcāla-specific slavery-status evidence was established within the bounded follow-up.",
+    "access_language_warning": "English-accessible bounded packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "source_refs": [
+      "IN-CHANANA-1960",
+      "IN-KALB-2023"
+    ],
+    "target_specific_followup_search_performed": true,
+    "target_specific_followup_accepted_sources": [],
+    "reviewed_through": "2026-09-23",
+    "release_id": "COV-003-exp-v1",
+    "review_state": "current"
+  },
+  {
+    "target_id": "COV3:-500:E:r4",
+    "target_label": "Janapada of Cedī",
+    "anchor_year": -500,
+    "stratum": "-500:E",
+    "tier": "C1",
+    "source_sample": {
+      "source_row_ordinal": 241,
+      "source_from_year": -600,
+      "source_to_year": -481,
+      "source_wikidata": "Q124207979",
+      "selection_rank": 4
+    },
+    "identity_validation_state": "identity_unreviewed",
+    "research_state": "researched",
+    "coverage_outcome": "researched_inconclusive",
+    "bounded_conclusion": "Ancient-Indian scholarship documents slavery and servitude in the broader Buddhist-era political world, but the bounded packet does not establish a Cedī-specific slavery practice at c.500 BCE.",
+    "required_abstention": "Do not infer Cedī territorial practice from regional slavery evidence or later South Asian institutions.",
+    "law_practice_note": "",
+    "network_territorial_warning": "",
+    "cambridge_coverage": "adjacent",
+    "palgrave_coverage": "adjacent",
+    "unresolved_reason": "No Cedī-specific slavery-status evidence was established within the bounded follow-up.",
+    "access_language_warning": "English-accessible bounded packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "source_refs": [
+      "IN-CHANANA-1960",
+      "IN-KALB-2023"
+    ],
+    "target_specific_followup_search_performed": true,
+    "target_specific_followup_accepted_sources": [],
+    "reviewed_through": "2026-09-23",
+    "release_id": "COV-003-exp-v1",
+    "review_state": "current"
+  },
+  {
+    "target_id": "COV3:-500:E:r5",
+    "target_label": "Janapada of Malla",
+    "anchor_year": -500,
+    "stratum": "-500:E",
+    "tier": "C1",
+    "source_sample": {
+      "source_row_ordinal": 238,
+      "source_from_year": -600,
+      "source_to_year": -481,
+      "source_wikidata": "Q1376303",
+      "selection_rank": 5
+    },
+    "identity_validation_state": "identity_unreviewed",
+    "research_state": "researched",
+    "coverage_outcome": "bounded_supported",
+    "bounded_conclusion": "Chanana's synthesis of Buddhist-era sources identifies the Mallas among oligarchic communities in which part of the resident population was treated as the ruling group's natural property, supporting a bounded slavery/dependency claim for the Malla context around the Buddha's era.",
+    "required_abstention": "Do not infer a numeric prevalence, uniform legal status, or extend the claim to every person under Malla rule.",
+    "law_practice_note": "",
+    "network_territorial_warning": "",
+    "cambridge_coverage": "adjacent",
+    "palgrave_coverage": "adjacent",
+    "unresolved_reason": "The evidence is a specialist interpretation of textual traditions, not a census or uniform-status code.",
+    "access_language_warning": "English-accessible bounded packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "source_refs": [
+      "IN-CHANANA-1960",
+      "IN-KALB-2023"
+    ],
+    "target_specific_followup_search_performed": true,
+    "target_specific_followup_accepted_sources": [],
+    "reviewed_through": "2026-09-23",
+    "release_id": "COV-003-exp-v1",
+    "review_state": "current"
+  },
+  {
+    "target_id": "COV3:-500:E:r6",
+    "target_label": "Janapada of Aśmaka",
+    "anchor_year": -500,
+    "stratum": "-500:E",
+    "tier": "C1",
+    "source_sample": {
+      "source_row_ordinal": 264,
+      "source_from_year": -550,
+      "source_to_year": -367,
+      "source_wikidata": "Q1194906",
+      "selection_rank": 6
+    },
+    "identity_validation_state": "identity_unreviewed",
+    "research_state": "researched",
+    "coverage_outcome": "researched_inconclusive",
+    "bounded_conclusion": "Ancient-Indian scholarship documents slavery and servitude in the broader sixth–fifth-century BCE world, but the bounded packet does not establish an Aśmaka-specific slavery practice at c.500 BCE.",
+    "required_abstention": "Do not infer Aśmaka territorial practice from general Buddhist/Sanskrit slavery categories or from later South Asian institutions.",
+    "law_practice_note": "",
+    "network_territorial_warning": "",
+    "cambridge_coverage": "adjacent",
+    "palgrave_coverage": "adjacent",
+    "unresolved_reason": "No Aśmaka-specific slavery-status evidence was established within the bounded follow-up.",
+    "access_language_warning": "English-accessible bounded packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "source_refs": [
+      "IN-CHANANA-1960",
+      "IN-KALB-2023"
+    ],
+    "target_specific_followup_search_performed": true,
+    "target_specific_followup_accepted_sources": [],
+    "reviewed_through": "2026-09-23",
+    "release_id": "COV-003-exp-v1",
+    "review_state": "current"
+  }
+]

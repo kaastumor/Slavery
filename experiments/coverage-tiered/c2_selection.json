@@ -1,0 +1,32 @@
+{
+  "experiment": "COV-003",
+  "frozen_before_c2_research": "2026-09-23",
+  "rule": "C1 escalation hierarchy from 00_PROTOCOL_PREREGISTERED.md",
+  "selected": [
+    {
+      "batch": "-500:F",
+      "target_id": "COV3:-500:F:r4",
+      "target_label": "Zhu",
+      "priority": 2,
+      "reason": "researched_inconclusive with two credible shared specialist treatments that materially frame early-Chinese slavery/unfree-status categories from different evidentiary/analytic vantage points; tie broken by smallest COV-003-C2 hash among qualifying batch rows",
+      "tie_hash": "0dead84c6a36cd7eff6c17d222b96603804842165ca9820ddca12b49ff43a2c6"
+    },
+    {
+      "batch": "1300:E",
+      "target_id": "COV3:1300:E:r5",
+      "target_label": "Hanthawaddy Kingdom",
+      "priority": 3,
+      "reason": "bounded_supported with material law/practice ambiguity: Wareru legal recognition is direct but practice/prevalence remain unquantified; no priority-1/2 row qualified; tie broken by smallest COV-003-C2 hash among priority-3 candidates",
+      "tie_hash": "505b923f98a335482db909bb5c8920138f1a587a3c2124f889a0c00f18352554"
+    },
+    {
+      "batch": "-500:E",
+      "target_id": "COV3:-500:E:r3",
+      "target_label": "Janapada of Pañcāla",
+      "priority": 2,
+      "reason": "researched_inconclusive with ancient-period synthesis plus a later South-Asia synthesis providing materially different temporal/category framing; tie broken by smallest COV-003-C2 hash among qualifying batch rows",
+      "tie_hash": "9c91bb29aaa94ac4a854102dc87721ef9fc030f0f1a76626c203aaf35c321536"
+    }
+  ],
+  "guardrail": "C2 may improve only correctness, uncertainty, source recovery or inference boundaries; richer prose alone is not a material gain."
+}

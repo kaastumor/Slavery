@@ -46,6 +46,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | A-008 | The full interactive Atlas platform is the best form for the demonstrated contribution | rejected for active expansion | H2 did not show a repeatable material advantage for the corpus/method over a strong baseline, and the thin view did not materially beat the corpus in any case. Preserve existing artifacts; do not expand the platform. |
 | A-009 | A systematically assembled global historical coverage corpus may have value distinct from Atlas representation/UI | survives narrowly / scale economics unresolved | COV-001 found robust material value on 4/6 cross-cell tasks after adversarial downgrade, while specialist narrative and SlaveVoyages remained superior in their domains. The value lives in a flat coverage corpus, not Atlas infrastructure. |
 | A-010 | The value of the flat coverage corpus compounds faster than review/update burden as it scales | current row-by-row workflow not demonstrated; broader systematic-coverage economics remain open | COV-002 found persistent reuse and strong static compression, but its maintenance gate does not discriminate the economics of tiered/versioned/batch-curated coverage. ADV-001 limits the stop to the tested workflow. |
+| A-011 | Tiering breadth, compact evidence and selective depth can make systematic coverage methodologically viable without default deep research for every target | survives narrowly / strong economics unproven | COV-003: C0/C1/selective-C2 architecture survived; C2 improved 2/3 escalations; source reuse rose to 2.20, but 12/12 C1 targets still needed follow-up and positive update economics were not tested. |
 
 ## Standing risk register
 
@@ -83,7 +84,8 @@ Record meaningful outcomes, including no-value results.
 | V-012 | Does the corpus/method, then a minimal thin view, materially outperform the strongest competent baseline on difficult historical reasoning? | **PARITY / threshold failure** | Three preregistered cases: B materially improved A only for the Mexica category case; repaired C did not materially improve B in any case under the fixed rule | Trigger D-062 kill rule: stop active Atlas expansion; preserve methodology/corpus/audit artifacts. |
 | V-013 | Does preassembled global coverage itself create value beyond narrative handbooks + ordinary research/matrices? | **NARROW VALUE / survives** | COV-001: 4/6 fixed cross-cell tasks retained material value after result adversary; basic overview reached matrix parity; terminology advantage was downgraded; specialist narrative and SlaveVoyages won the negative controls. | Preserve the flat coverage-corpus thesis; do not reopen Atlas product expansion. Next uncertainty is reuse/maintenance economics at larger scale. |
 | V-014 | Does corpus reuse value grow faster than research/review/update burden, and can a compact register preserve the gain? | **MIXED / STOP TESTED WORKFLOW** | COV-002: reuse survives at N=37 and compact R is ~60.5% of F's static review surface, but the maintenance gate failed under its frozen metric. ADV-001 shows that failure cannot be generalized to all systematic-coverage architectures. | Preserve compact register pattern; no automatic scaling. |
-| V-015 | Does COV-002 justify rejecting systematic comprehensive coverage as a project direction? | **NO — inference overreach** | ADV-001/#153: scope mismatch, non-discriminating 4/6 update gate after three neutral shocks, atom-granularity sensitivity, unmeasured batch/versioned economics and demand-bias risk. | Keep project idle, but leave tiered/versioned/batch-curated systematic coverage as an open hypothesis. |
+| V-015 | Does COV-002 justify rejecting systematic comprehensive coverage as a project direction? | **NO — inference overreach** | ADV-001/#153: scope mismatch, non-discriminating 4/6 update gate after three neutral shocks, atom-granularity sensitivity, unmeasured batch/versioned economics and demand-bias risk. | Keep project idle unless a new explicit hypothesis is authorized. |
+| V-016 | Can a C0/C1/C2 tiered, batch-curated, versioned architecture improve the systematic-coverage case? | **TIERED VALUE / survives narrowly** | COV-003: C0 and C1 survive with review controls; C2 materially improved 2/3 escalations; systematic selection retained difficult/non-direct-handbook targets. Strong batch-economy gate failed because 12/12 C1 targets required follow-up. | Preserve tiered architecture; do not infer cheap comprehensive ingestion. |
 
 ## Health-check history
 
@@ -549,3 +551,97 @@ A future evaluation may be triggered by:
 - an explicitly authorized methodological hypothesis such as bias-resistant systematic coverage.
 
 Any such evaluation must use a new cost/value model rather than repeat COV-002.
+
+
+### HC-008 — COV-003 tiered-coverage boundary — 2026-09-23
+
+Decision: **TIERED SURVIVE — PRESERVE C0/C1/SELECTIVE-C2 ARCHITECTURE; DO NOT AUTHORIZE COMPREHENSIVE INGESTION.**
+
+Durable experiment: `experiments/coverage-tiered/` / issue #155.  
+Direction decision: D-070.
+
+#### C0
+
+24 deterministic targets were registered before subject research.
+
+Only 12 were assigned C1 research.
+
+Every C0-only target explicitly remains:
+> Registered target; historical slavery/coercion research not yet performed.
+
+Six preregistered identity/time probes:
+- four valid at anchor;
+- Later Zhou at -500 — mismatch;
+- Xu at -500 — ambiguous.
+
+C0 therefore demonstrates research-state coverage and pre-research target QA without creating a slavery inference.
+
+#### C1
+
+12 researched rows:
+- 4 bounded-supported;
+- 8 researched-inconclusive.
+
+The compact tier preserves:
+- bounded proposition and abstention;
+- law/practice distinction;
+- network/territorial warning;
+- handbook coverage;
+- unresolved reason;
+- recoverable source references.
+
+Source reuse:
+- row-centric COV-002 baseline: 1.00;
+- COV-003 C1: 2.20;
+- two of three batches reused shared specialist sources across all four C1 targets.
+
+But 12/12 C1 targets still required target-specific follow-up.
+
+Therefore the strong batch-economy gate fails.
+
+#### C2
+
+Three frozen escalations:
+- Zhu — material correctness/temporal/category gain;
+- Hanthawaddy — material legal-status/law-practice gain;
+- Pañcāla — no material gain.
+
+2/3 threshold passes.
+
+Selective deep evidence is justified; deep evidence by default is not.
+
+#### Versioning and source dependencies
+
+The three deterministic post-freeze source searches found no genuinely new accepted source, so positive update economics remain untested.
+
+C2 nevertheless created a real quality event: the early-China shared packet requires review, affecting four dependent C1 rows.
+
+The experiment therefore adds a required control:
+
+> shared source packets must maintain explicit source-to-row dependencies and propagate next-release review state to their dependents.
+
+Frozen releases remain immutable.
+
+#### Coverage / bias
+
+None of the 12 C1 targets had direct Cambridge or Palgrave coverage, yet four yielded bounded-supported results and eight yielded meaningful researched abstentions.
+
+A direct-handbook easy-evidence rule would omit every C1 target.
+
+This supports systematic selection as a bias-resistance function, not as proof that every target deserves equal research depth.
+
+#### Adversarial corrections
+
+- the 2.20 reuse factor is source/context reuse, not a 2.20x historian-effort saving;
+- the heterogeneous 1300:E batch shows longitude sector is not a good universal batching unit;
+- one Chandela event citation is below production-grade specialist-source expectations and remains a next-release review item;
+- identity triage used some general reference sources and is not publication-grade identity evidence;
+- the polity frame still does not solve non-polity human-history coverage.
+
+#### Boundary
+
+**STRONG SURVIVE rejected. TIERED SURVIVE accepted.**
+
+No comprehensive-ingestion, successor experiment, production migration or Atlas product horizon follows automatically.
+
+Future validation, if explicitly authorized, should test non-polity frames, historiographically coherent batching, independent/multi-reviewer evaluation, a real positive post-release evidence update and stronger source-quality gates.

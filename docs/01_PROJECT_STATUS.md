@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **IDLE / PRESERVATION — COV-002 stopped further automatic corpus scaling; Atlas expansion remains stopped**
+**Execution state:** **IDLE / PRESERVATION — COV-003 tiered architecture survived narrowly; Atlas expansion remains stopped**
 
 ## Direction after H2
 
@@ -173,12 +173,71 @@ Key reasons:
 
 Corrected position:
 
-> **COV-002 stops automatic row-by-row scaling. The broader thesis of a tiered, versioned, batch-curated global coverage register remains open and untested.**
+> **At the ADV-001 boundary, COV-002 stopped automatic row-by-row scaling while the tiered/versioned/batch-curated thesis remained open. COV-003 later tested that architecture and returned TIERED SURVIVE without authorizing comprehensive ingestion.**
 
 Durable audit: `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.md`  
 Direction correction: D-068.
 
 No new research horizon is authorized by this correction.
+
+## COV-003 tiered systematic coverage — completed
+
+Result: **TIERED SURVIVE; STRONG SURVIVE rejected.**
+
+COV-003 tested a workflow different from COV-002:
+- 24 C0 target/research-state registrations;
+- 12 frozen C1 researched targets;
+- 12 C0-only targets kept unresearched;
+- 6 deterministic identity/time probes;
+- 3 frozen C2 escalations;
+- source-centric shared packets;
+- immutable/as-of experiment release + update ledger;
+- coverage/bias and emergent-query audits.
+
+C1 outcomes:
+- 4 bounded-supported;
+- 8 researched-inconclusive.
+
+C0 identity probes:
+- 4 valid at anchor;
+- 1 mismatch;
+- 1 ambiguous.
+
+Batch/source reuse:
+- COV-002 expansion baseline reuse factor: 1.00;
+- COV-003 C1: 2.20;
+- 2/3 batches had shared specialist sources informing all four C1 cells;
+- but 12/12 C1 targets still required target-specific follow-up.
+
+Therefore the strong batch-economy gate failed.
+
+Selective C2:
+- Zhu — material temporal/category correction;
+- Hanthawaddy — material law/practice/status sharpening;
+- Pañcāla — no material gain.
+
+**2/3 — C2 selective-depth gate passes.**
+
+Versioned maintenance:
+- 3/3 deterministic new-source searches produced no genuinely new accepted source;
+- no positive update-cost claim is made;
+- an internal C2 correction did create a real four-row shared-source review dependency without rewriting the frozen release.
+
+Coverage/bias audit:
+- 0/12 C1 targets had direct Cambridge or Palgrave coverage;
+- systematic selection nevertheless produced four bounded-supported results and eight researched abstentions.
+
+Final interpretation:
+
+> **Breadth and depth can be separated. A target can belong to systematic coverage without receiving a deep slavery dossier.**
+
+The surviving future pattern is C0 -> C1 -> selective C2, with immutable releases, source-quality state and source-to-row review dependencies.
+
+Durable result: `experiments/coverage-tiered/13_FINAL_RESULT.md`  
+Health decision: HC-008  
+Direction decision: D-070
+
+No successor experiment, comprehensive-ingestion horizon or Atlas product horizon is authorized.
 
 ## Remaining bounded project-system debt
 

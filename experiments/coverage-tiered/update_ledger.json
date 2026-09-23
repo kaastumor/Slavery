@@ -1,0 +1,46 @@
+{
+  "experiment": "COV-003",
+  "frozen_release": "COV-003-exp-v1",
+  "rule": "one bounded genuinely-new-source search per frozen update target; immutable release is not rewritten",
+  "updates": [
+    {
+      "target_id": "COV3:-500:E:r4",
+      "target_label": "Janapada of Cedī",
+      "result": "no_source_found",
+      "note": "The bounded search surfaced Chedi political/epigraphic context but no credible genuinely new specialist source establishing or materially qualifying a Cedī-specific slavery/unfree-status claim at c.500 BCE.",
+      "review_state_after": "current",
+      "next_release_task": null
+    },
+    {
+      "target_id": "COV3:1300:E:r3",
+      "target_label": "Kathmandu",
+      "result": "no_source_found",
+      "note": "The bounded search surfaced Documenta Nepalica and modern Nepal unfree-labour scholarship. The relevant premodern slavery research stream is already represented in C1 through Bajracharya/Michaels; the other results do not materially address Kathmandu c.1300. No genuinely new anchor-relevant source was accepted.",
+      "review_state_after": "current",
+      "next_release_task": null
+    },
+    {
+      "target_id": "COV3:-500:E:r5",
+      "target_label": "Janapada of Malla",
+      "result": "no_source_found",
+      "note": "The bounded search surfaced an OpenEdition version of Chanana's Buddha-era slavery discussion already represented by IN-CHANANA-1960, plus general political-history material. No genuinely new Malla-specific slavery source was accepted.",
+      "review_state_after": "current",
+      "next_release_task": null
+    }
+  ],
+  "maintenance_shock_result": "INCONCLUSIVE_FOR_POSITIVE_UPDATE_LOCALIZATION",
+  "maintenance_shock_interpretation": "The immutable-release mechanism avoided silent mutation, but no selected post-freeze search produced material new evidence. Therefore this shock does not demonstrate lower update cost or positive staleness localization under a real external evidence change.",
+  "internal_quality_event": {
+    "trigger": "C2 escalation of Zhu",
+    "dependency_scope": [
+      "COV3:-500:F:r3",
+      "COV3:-500:F:r4",
+      "COV3:-500:F:r5",
+      "COV3:-500:F:r6"
+    ],
+    "reason": "C2 showed that the shared early-China packet can make C1 wording temporally too loose: later Qin legal evidence and earlier Zhou terminology should not be phrased as if they directly establish -500 target conditions.",
+    "action": "Do not mutate COV-003-exp-v1. Mark the shared -500:F packet and its four dependent C1 rows as next-release review candidates.",
+    "demonstrates": "Shared-source reuse creates correlated review risk as well as reuse. A source-to-row dependency map can localize that review to the dependent batch rather than the whole corpus.",
+    "does_not_demonstrate": "Lower lifetime maintenance cost."
+  }
+}

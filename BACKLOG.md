@@ -9,83 +9,94 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# IDLE / PRESERVATION — COV-002 completed with STOP
+# IDLE / PRESERVATION — COV-003 completed with TIERED SURVIVE
 
-COV-002 / issue #151 tested the final internally justified corpus-scale question:
-
-> Does coverage-corpus value grow faster than research, review and update burden as the corpus becomes materially larger?
+COV-003 / issue #155 tested the systematic-coverage architecture left open by ADV-001 / D-068.
 
 Final disposition:
 
-> **STOP FURTHER AUTOMATIC SCALING; PRESERVE THE COMPACT COVERAGE-REGISTER PATTERN**
+> **TIERED SURVIVE — architecture validated narrowly; STRONG batch-economy result rejected; no comprehensive ingestion authorized.**
 
 Durable result:
-- `experiments/coverage-scale/13_FINAL_RESULT.md`
-- HC-006 in `docs/25_PROJECT_HEALTH.md`
-- D-067 in `docs/08_DECISIONS_LOG.md`
+- `experiments/coverage-tiered/13_FINAL_RESULT.md`
+- HC-008 in `docs/25_PROJECT_HEALTH.md`
+- D-070 in `docs/08_DECISIONS_LOG.md`
 
 ## What survived
 
-At N=37:
-- compact/full coverage forms retained material reuse value over the strongest ordinary matrix on 3/4 cross-cell tasks;
-- the compact register matched the full row on all six fixed tasks;
-- compact static review surface was ~60.5% of the full row.
+A tiered research architecture:
 
-This means a **small coverage register** remains useful when a concrete comparative research task needs:
-- research state;
-- bounded conclusion;
-- required abstention;
-- law/practice separation;
-- network/territorial warning;
-- global-handbook coverage;
-- unresolved reason;
-- source links;
-- access/language warning.
+- **C0 — broad target/research-state register**
+  - may register a target without making a slavery conclusion;
+  - keeps unresearched, identity-unreviewed, mismatch and ambiguity explicit;
+  - supports pre-research identity/time QA.
 
-## Why scaling stops
+- **C1 — compact researched coverage**
+  - bounded proposition + abstention;
+  - law/practice and network/territorial boundaries;
+  - handbook coverage;
+  - unresolved reason;
+  - recoverable source references.
 
-The preregistered maintenance-economy gate failed.
+- **C2 — selective deep packet**
+  - only when a frozen ambiguity/risk trigger earns it;
+  - C2 materially improved 2/3 escalated targets.
 
-Six deterministic update shocks:
-- 3 produced genuine new/contextual specialist evidence;
-- 3 produced no acceptable new source.
+- **immutable/as-of releases + review ledger**
+  - old experiment snapshots remain unchanged;
+  - later review tasks are explicit.
 
-In every material update, the compact register and full row required the same number of local review edits. The 0/0 rows were treated as neutral rather than fake savings.
+- **source dependency tracking**
+  - shared sources must record dependent rows so a source-level correction can propagate to the correct review scope.
 
-The full row also failed to earn its extra complexity over the compact register.
+## What did not survive
 
-COV-002 therefore does **not** justify:
-- comprehensive global ingestion through the tested row-by-row workflow;
-- another autonomous scale experiment from project momentum;
-- routine production of full detailed coverage rows across world history.
+The strong batch-economy claim.
 
-Post-COV-002 adversarial audit ADV-001/#153 found that this stop must **not** be generalized into a finding that systematic comprehensive coverage itself is uneconomic or worthless. COV-002 did not test tiered, versioned, batch-curated coverage economics.
+COV-003 C1 used:
+- 22 material cell-source links;
+- 10 unique sources;
+- source-reuse factor **2.20** versus COV-002's 1.00;
+- shared sources materially informed 4/4 cells in two of three batches.
 
-Durable correction:
-- `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.md`
-- HC-007 in `docs/25_PROJECT_HEALTH.md`
-- D-068 in `docs/08_DECISIONS_LOG.md`
+But **12/12 C1 targets still required target-specific follow-up search**.
+
+Therefore source reuse is real, but historian-effort savings are not demonstrated strongly enough to justify systematic global ingestion.
+
+The post-freeze maintenance sample also produced no genuinely new accepted source in 3/3 searches, so positive update economics remain untested.
+
+## Important adversarial findings
+
+- shared-source reuse creates **correlated review risk** as well as reuse;
+- C2 caught a temporal/category overstatement in the shared early-China framing, putting four dependent rows into next-release review scope;
+- one Chandela event citation is below the project's desired production-grade specialist-source standard and must remain a review item rather than being silently upgraded;
+- a direct Cambridge/Palgrave coverage proxy would have selected 0/12 C1 targets, despite four bounded-supported results and eight meaningful researched abstentions;
+- 2/6 preregistered C0 identity probes found a mismatch or ambiguity.
 
 ## Current execution state
 
 **IDLE / PRESERVATION.**
 
-Future corpus expansion requires a **new explicit value hypothesis plus a bounded cost model** whose expected value justifies research/review/update burden.
+COV-003 keeps the systematic-coverage thesis alive in a specific form. It does **not** authorize the next scale step.
 
-A real external consumer/use case is one valid trigger. A preregistered methodological objective—such as bias-resistant systematic coverage—may also be valid, but only if it tests a different workflow than COV-002's row-by-row expansion and does not use record count as the success metric.
+Any future validation requires explicit sponsor authorization and should test something COV-003 did not:
+- non-polity target frames;
+- preregistered source/historiographic-coherent batches;
+- independent or multi-reviewer evaluation;
+- a real positive post-release evidence update;
+- stronger source-quality gates.
 
-Internal momentum, a prettier map, or undifferentiated record-count growth is not a trigger.
+## Still not authorized
 
-## Still explicitly not authorized
-
-- H3 bulk/global research;
-- comprehensive slavery ingestion;
+- comprehensive global slavery/coercion ingestion;
+- global C1 completion;
+- global C2 completion;
+- another autonomous scale experiment;
 - canonical release changes;
 - M2 production migration;
-- Atlas frontend/map/product expansion;
-- new DB/API/search/vector/RAG/graph infrastructure;
-- autonomous bulk-research workers;
-- claims of literal historical completeness.
+- Atlas/frontend/map/platform revival;
+- automated mass research;
+- claims of literal human-history completeness.
 
 ---
 

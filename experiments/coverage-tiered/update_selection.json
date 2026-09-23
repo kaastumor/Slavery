@@ -1,0 +1,23 @@
+{
+  "experiment": "COV-003",
+  "frozen_before_update_search": "2026-09-23",
+  "selector": "SHA-256(COV-003-UPDATE|cell_id), smallest three researched C1 rows",
+  "selected": [
+    {
+      "target_id": "COV3:-500:E:r4",
+      "target_label": "Janapada of Cedī",
+      "digest": "0ab705475783530a10234fa4a53c80b752e0b74dc9a409a3aa717908bb9956dc"
+    },
+    {
+      "target_id": "COV3:1300:E:r3",
+      "target_label": "Kathmandu",
+      "digest": "10d22636d84224fbc059c8cfb265c2a417d06ce0765090bed6d21e946c7f9832"
+    },
+    {
+      "target_id": "COV3:-500:E:r5",
+      "target_label": "Janapada of Malla",
+      "digest": "15c7562226bf1a4f46f1520b635de87377715066ae5394c74b283d69c71d3ec9"
+    }
+  ],
+  "rule": "one bounded new-source search per target; freeze update ledger; do not rewrite COV-003-exp-v1 snapshot"
+}
