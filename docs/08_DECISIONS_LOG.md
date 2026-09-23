@@ -569,3 +569,31 @@ This rule is semantic integrity only. It does not infer claim kind from source d
 
 **Consequences:** Migrations `0028_claim_kind_integrity.sql` and `0029_claim_kind_function_privileges.sql`, plus the rollback-only regression test, are part of the canonical schema history. The follow-up 0029 explicitly revokes PostgreSQL's default PUBLIC EXECUTE grant on the new guard functions so D-051 remains true for future schema-exposure changes. Future typed claim relations must either use the same structural guard or provide an equivalent integrity mechanism. Any later M2 schema replacement must preserve this invariant even if claim-kind vocabulary or subtype tables evolve.
 
+
+
+## D-061 — Open termini constrain candidate time; they do not create indefinite positive applicability
+**Date:** 2026-09-23  
+**Status:** accepted M2 clarification of D-058 / M1 temporal semantics
+
+**Decision:** `terminus_after` and `terminus_before` are temporal **constraints on an uncertain historical date/window**, not assertions that a condition held continuously from the bound to infinity.
+
+This restores the surviving M1 invariant `open_terminus_does_not_imply_indefinite_continuity`.
+
+For the post-M1 prototype:
+
+- `terminus_after` requires an open-upper outer query window: `from_year IS NOT NULL`, `to_year IS NULL`;
+- `terminus_before` requires an open-lower outer query window: `from_year IS NULL`, `to_year IS NOT NULL`;
+- neither mode creates a positive `claim_asserted_interval` merely from the terminus;
+- selected-year truth therefore remains false from the terminus alone;
+- if evidence separately supports positive applicability, represent that support explicitly with the appropriate claim/applicability semantics rather than treating the terminus as continuity.
+
+The outer `CLAIM.valid_years` range remains useful for candidate retrieval. It is not sufficient positive historical truth.
+
+**Reason:** #135 made open termini structurally representable, but its first implementation encoded them as half-infinite asserted intervals and thereby made `terminus_after` true arbitrarily far into the future and `terminus_before` true arbitrarily far into the past. That contradicted M1's accepted temporal invariant and silently changed methodology during an integrity correction.
+
+**Alternatives considered:**
+- retain half-infinite asserted intervals — rejected because a terminus post/ante quem constrains an unknown date and does not itself prove indefinite continuity;
+- remove terminus modes entirely — rejected because the distinction remains useful for source-faithful temporal uncertainty and candidate retrieval;
+- introduce probabilistic time surfaces — parked under D-058; the evidence does not justify probability distributions.
+
+**Consequences:** M2 validators must reject positive asserted intervals for terminus modes, while preserving open outer query bounds. The correction remains disposable prototype work; no production schema, canonical v0.6.1 release or public preview is changed.
