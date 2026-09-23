@@ -6,6 +6,44 @@ Build a globally scoped, time-aware historical atlas that lets a reader inspect 
 
 The project is an evidence-synthesis and data-curation system. It does not claim that one universal category can make all forms of coercion equivalent, and it does not replace specialist historical scholarship.
 
+## Four distinct questions
+
+### Problem
+
+Historical evidence about slavery, slavery-like systems, coerced labour and dependency is distributed across periods, regions, source traditions and analytical vocabularies. Conventional maps, spreadsheets and narrative syntheses can make it difficult to compare place/time claims while keeping provenance, uncertainty, research coverage, legal/practice distinctions and changing historical geography visible.
+
+### Contribution
+
+The project’s claimed contribution is **not** “a map plus a database.” It is a traceable comparison layer that can keep unlike evidentiary dimensions separate while still allowing place/time inspection across a global corpus.
+
+That contribution is only justified where it materially improves on the strongest simpler workflow in:
+
+- traceability;
+- temporal/spatial uncertainty;
+- distinction between unknown / inconclusive / negative;
+- separation of law, practice, participation, coverage and geometry;
+- reproducibility;
+- comparison without false equivalence;
+- public inspectability.
+
+### Project / product form
+
+The current artifact is a historical research system with:
+
+- a curated claim/evidence corpus;
+- a time-aware atlas/map as navigation and comparison surface;
+- reviewed relational research state;
+- reconstructible release artifacts;
+- public evidence inspection.
+
+The map is a product form, not the historical truth store.
+
+### Implementation architecture
+
+PostgreSQL/PostGIS, MapLibre, GitHub Actions, Supabase/API serving, JSON/GeoJSON and the current web stack are implementation choices. They remain contingent.
+
+No implementation technology defines the project’s contribution. If a materially smaller artifact preserves the demonstrated contribution, shrinking is a valid outcome.
+
 ## Current central question
 
 Can the atlas make historically diverse evidence genuinely more inspectable and comparable than a conventional map, spreadsheet, source catalogue, or ordinary narrative synthesis **without manufacturing false precision, false absence, false equivalence, or false territorial generalization**?
@@ -22,16 +60,19 @@ A user should be able to select a place/time and understand the strongest defens
 
 The map is a navigation and comparison surface over the evidence system. It is not itself the source of historical truth.
 
-## Simpler baseline
+## Strongest boring baseline
 
-The project must justify its complexity against a simpler workflow:
+The project must justify its complexity against a competent simpler workflow:
 
 1. specialist literature + source notes;
 2. a spreadsheet/ordinary relational table of claims and citations;
 3. a conventional GIS layer or static map;
-4. ordinary search or LLM-assisted retrieval over those materials.
+4. ordinary search or a strong general-purpose model used competently over those materials;
+5. small scripts/notebooks where needed.
 
-A feature earns its place only if it materially improves traceability, historical scope, uncertainty handling, reproducibility, comparison, or public usability over that baseline.
+Do not cripple this baseline so the atlas can “win.”
+
+A feature earns its place only if it materially improves traceability, historical scope, uncertainty handling, reproducibility, comparison, or public usability over that baseline. Integration novelty by itself is not a contribution.
 
 ## Success condition
 
@@ -45,7 +86,7 @@ The project succeeds if it can publish useful global historical views in which:
 - releases remain reconstructible;
 - real users can gain findings, confirmations, contradictions or useful uncertainty that the simpler baseline makes materially harder to obtain.
 
-## Failure condition
+## Failure / kill conditions
 
 The project should simplify, redirect or stop if repeated evaluation shows that:
 
@@ -53,7 +94,9 @@ The project should simplify, redirect or stop if repeated evaluation shows that:
 - cross-period comparison systematically creates false equivalence or false precision;
 - provenance cannot remain inspectable at useful scale;
 - maintenance/infrastructure burden materially exceeds research/user value;
-- public presentation cannot communicate uncertainty without misleading users.
+- public presentation cannot communicate uncertainty without misleading users;
+- the strongest boring baseline repeatedly reaches practical parity on the project’s claimed contribution;
+- the demonstrated value survives in a substantially smaller artifact and the larger system adds little.
 
 Failure of a thesis is valid project evidence.
 
@@ -80,25 +123,35 @@ The existing canonical methodology remains binding unless explicitly superseded.
 - replacing all specialist historical GIS with one global source;
 - adopting infrastructure because it is fashionable or conventional;
 - maximizing record count, issue count, feature count or commit count;
-- making the public preview silently become the canonical historical release.
+- making the public preview silently become the canonical historical release;
+- preserving a larger architecture merely because it has already been built.
 
 ## Strategic horizons
 
 Horizons are hypotheses, not promises.
 
 ### H0 — M1 methodology hardening (completed)
+
 M1 (#100) attacked the original semantics, returned REVISE, corrected the displaced overloads, and survived the integrated re-attack. P0–P4 is no longer the target universal comparative ordinal; the accepted prototype keeps evidence, historical structure, workflow/outcome, temporal applicability/precision and spatial locus/extent separable.
 
-### H1 — Semantic/geography integration (current)
-M2 (#116) must integrate only the semantics that survived M1, resolve Cliopatria calendar/RELATION behavior, ingest the complete pinned corpus as raw geography infrastructure, and prove selected-year behavior in the real relational architecture without altering v0.6.1 or silently changing the current preview.
+### H1 — Semantic/geography integration (implementation gate completed; health decision pending)
 
-### H2 — Globally balanced evidence expansion
-Resume broad research growth under the hardened model, deliberately prioritizing weak and underrepresented regions/periods before dense archive ingestion dominates.
+M2 (#116) integrated only the semantics that survived M1, resolved Cliopatria calendar/RELATION behavior, ingested the complete pinned corpus as raw geography infrastructure, and proved selected-year behavior in the real relational architecture without altering v0.6.1 or silently changing the current preview.
 
-### H3 — Public research usefulness
+Its integrated adversarial gate #122 passed only after corrective cycles. **H1 is not considered directionally complete until #123 performs the Project Health Check and chooses continue / simplify / redirect / stop.**
+
+### H2 — Globally balanced evidence expansion (candidate only)
+
+Possible next horizon: resume broad research growth under the hardened model, deliberately prioritizing weak and underrepresented regions/periods before dense archive ingestion dominates.
+
+H2 is not authorized merely because M2 implementation passed.
+
+### H3 — Public research usefulness (candidate)
+
 Evaluate whether the atlas actually produces useful discoveries, confirmations, contradictions or useful uncertainty compared with the simpler baseline. Improve the interface only where evidence shows a need.
 
-### H4 — Scale/preservation
+### H4 — Scale/preservation (candidate)
+
 Only if prior horizons justify it, optimize distribution, preservation, contribution workflows and larger-scale ingestion.
 
-At every horizon boundary, run an integrated adversarial review and Project Health Check, then explicitly choose **continue / redirect / stop**.
+At every horizon boundary, review evidence for **and against** the thesis, compare the strongest baseline, consider whether the artifact can shrink, and explicitly choose **continue / simplify / redirect / stop** before creating the next horizon.

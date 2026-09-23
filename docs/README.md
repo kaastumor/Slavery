@@ -1,44 +1,43 @@
-# Historical Slavery Atlas — Project Setup Pack
+# Historical Slavery Atlas — Documentation Index
 
-This folder is the governance, methodology and architecture layer for the Historical Slavery Atlas.
+This directory contains the project’s durable methodology, architecture, decisions, operating rules and historical gate records.
 
-## Canonical data baseline
+It is **not** a second project-status system. Current execution order lives in repository-root `BACKLOG.md`; current implementation truth lives on GitHub `main`; assumptions/risks/value evidence live in `25_PROJECT_HEALTH.md`.
 
-As of 2026-09-19, the latest canonical data workbook is:
+## Start here
 
-- `Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx`
+1. `23_PROJECT_CHARTER.md` — problem, contribution, north star, baseline, success/failure and horizons
+2. `24_WAY_OF_WORKING.md` — evidence/adversarial/discovery method
+3. `25_PROJECT_HEALTH.md` — live assumptions, risks, value evidence and health decisions
+4. `00_START_HERE.md` — historical-methodology entry point
+5. `08_DECISIONS_LOG.md` — durable canonical decisions
+6. `01_PROJECT_STATUS.md` — subordinate current-state snapshot; verify against live GitHub state
 
-Its global baseline is:
+Before data/schema work, follow the reading order in `00_START_HERE.md`.
 
-- `Historical_Slavery_Atlas_Global_Coverage_Audit_v0.5.0.xlsx`
+## Canonical ownership
 
-Earlier v0.4.x and v0.5.1 files are historical intermediates, not the current source of truth unless a later file explicitly references them.
+- execution queue: repository-root `BACKLOG.md`;
+- durable task evidence: GitHub issues / pull requests;
+- methodology and ontology: `02_METHOD_AND_ONTOLOGY.md` plus accepted Decisions Log entries;
+- source policy: `03_SOURCE_POLICY.md`;
+- data model: `04_DATA_MODEL.md`;
+- geography/map rules: `05_GEOGRAPHY_AND_MAP.md`;
+- decisions: `08_DECISIONS_LOG.md`;
+- system architecture: `11_SYSTEM_ARCHITECTURE.md`;
+- assumptions / material risks / value evidence / health dispositions: `25_PROJECT_HEALTH.md`;
+- autonomous worker rules: `automation/hourly-worker.md`.
 
-## Architecture state
+Historical gate/audit records (for example M1/M2 adversarial records) are evidence of how a decision was reached. They do not become competing current-state owners.
 
-The project is now preparing a migration from workbook-led storage to a PostgreSQL/PostGIS research database suitable for a fully interactive web map.
+## Canonical historical data baseline
 
-- `11_SYSTEM_ARCHITECTURE.md` defines the approved migration target.
-- `schema_draft.yaml` draft-0.10 expresses the current structural model.
-- These files do not replace or rewrite v0.6.1 until migration, reconciliation and QC succeed.
+The immutable historical release remains v0.6.1 until a deliberately validated successor release is created. Git stores checksums/manifests and reconstruction logic; the canonical workbook binary remains external.
 
-## How to use this pack
+Architecture drafts, experiments, database working state, public previews and published/canonical historical releases are distinct states. A newer file is not canonical merely because it is newer.
 
-Start with `00_START_HERE.md`. Before data/schema work, read the methodology, source policy, data model, geography rules, decisions log and system architecture referenced there.
+## Historical documents
 
-The canonical dataset must never be treated as self-explanatory. These files control how records may be interpreted, normalized, linked, published and visualized.
+Several numbered documents record earlier implementation phases. Read them as historical evidence unless a current canonical document explicitly points to them for active rules.
 
-## Current execution plan
-
-`12_DATABASE_FOUNDATION_PLAN.md` defines the acceptance tests and migration sequence that must pass before the database can replace the v0.6.1 workbook as canonical.
-
-## Database implementation package
-
-The architecture now has DB Foundation v0.3 (`db/migrations/0001`–`0011`, schema/v0.6.1/non-Atlantic acceptance tests, and the automated v0.6.1 importer). It has not yet been executed against a live PostgreSQL/PostGIS instance, so the workbook remains canonical.
-
-
-The v0.3 importer validates and raw-preserves all 18 workbook tabs / 288 non-empty rows. The global evidence sheets still require reviewed semantic migration, which remains a blocking condition before the database can replace v0.6.1 as canonical.
-
-## Development environment v0.4
-
-A repository-shaped Docker development environment now wraps DB Foundation v0.3. It includes containerized Python tooling, checksum-tracked migrations, the exact v0.6.1 release file/checksum, one-command Windows bootstrap, backup/restore, GitHub Actions CI and staging/production boundary documentation. Live PostgreSQL/PostGIS execution remains pending.
+Do not update historical phase documents merely to make their old status prose appear current. Prefer correcting the small set of canonical/current owner documents above.

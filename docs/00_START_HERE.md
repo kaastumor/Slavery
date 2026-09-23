@@ -54,7 +54,7 @@ A missing claim must never be rendered as a historical negative.
 - Global research baseline: v0.5.0
 - All 99 broad region-period cells received at least one targeted first-pass research review.
 - Atlantic bulk ingestion was deliberately held back until this global first-pass baseline existed.
-- PostgreSQL + PostGIS is now the working normalized research system, using repository migrations through `0027`.
+- PostgreSQL + PostGIS is now the working normalized research system, using repository migrations through `0029`.
 - The canonical v0.6.1 workbook remains preserved and has not been overwritten.
 - The repository contains a real MapLibre web MVP and a release-gated API.
 - `mvp-preview-ancient-v2` is an explicitly **non-canonical** public preview used to validate the end-to-end product path.
@@ -83,26 +83,30 @@ A missing claim must never be rendered as a historical negative.
 18. Draft research, reviewed research, public previews and canonical releases are separate states.
 19. Draft architecture/schema changes do not become canonical data until migration and QC are explicitly completed.
 
-## Map layers that must stay separate
+## Analytical layers that must stay separate
 
-- Territorial practice intensity: P0–P4
+- Territorial-practice claims, represented through the post-M1 multidimensional model
 - Legal/status layer
 - External participation networks: voyages, actors, finance, ports, companies
-- Research coverage / confidence
+- Research stage / classification outcome
 - Historical political/other geometry
 - Neutral land base layer
 
-## Practice levels
+Territorial practice must not be reduced to one universal intensity score. The target model keeps evidence pattern, interpretive basis, occurrence pattern, institutionalization, prevalence scope, structural significance, temporal applicability/precision and spatial locus/inference extent separable where supported.
 
-- P0 — explicit reviewed assessment that no usable P1–P4 classification is currently available; never absence
-- P1 — isolated direct attestation
-- P2 — recurrent/repeatedly evidenced practice
-- P3 — systemic or institutional practice strongly supported
-- P4 — widespread or structurally major practice supported by scholarship
+## Legacy P0–P4 compatibility
+
+P0–P4 remains only for reproducing and interpreting historical releases that already use it.
+
+- P0 — explicit reviewed legacy assessment that no usable P1–P4 classification was assigned; never absence
+- P1–P4 — retain their historical release meanings
+- NULL/no claim — remains distinct from P0
+
+Do not infer new post-M1 dimensions mechanically from a legacy P-level, and do not derive a new P-level mechanically from the post-M1 dimensions.
 
 Source count never mechanically sets a P-level.
 
-No claim is different from P0: if no defensible territorial-practice claim exists, the atlas simply remains unknown for that place/time.
+If no defensible territorial-practice claim exists, the atlas remains unknown for that place/time.
 
 ## Before starting work
 
@@ -130,6 +134,6 @@ Read:
 10. `15_DEVELOPMENT_ENVIRONMENT.md`
 11. `17_SOURCE_EVIDENCE_LIFECYCLE.md`
 12. `19_PIPELINE_ARCHITECTURE.md`
-13. `20_CURRENT_HANDOFF.md` — session-level current implementation status; verify against GitHub main/issues before acting
+13. `20_CURRENT_HANDOFF.md` — pointer to canonical live repository state; it is deliberately not a second mutable execution narrative
 
 Then record any schema or methodology change in the decision log before treating it as canonical methodology.

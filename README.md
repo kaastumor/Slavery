@@ -8,12 +8,12 @@ The repository is the canonical source of truth for project implementation, meth
 
 Read in this order:
 
-1. `docs/23_PROJECT_CHARTER.md` — purpose, north star, success/failure and horizons
-2. `BACKLOG.md` — current execution order
-3. `docs/24_WAY_OF_WORKING.md` — evidence/adversarial loop
+1. `docs/23_PROJECT_CHARTER.md` — purpose, contribution, baseline, success/failure and horizons
+2. `BACKLOG.md` — canonical execution queue and current stopping point
+3. `docs/24_WAY_OF_WORKING.md` — evidence/adversarial/discovery method
 4. `docs/25_PROJECT_HEALTH.md` — assumptions, risks, value evidence and health decisions
 5. `docs/00_START_HERE.md` — historical methodology entry point
-6. `docs/08_DECISIONS_LOG.md` — durable decisions
+6. `docs/08_DECISIONS_LOG.md` — durable methodology/architecture decisions
 
 For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonical runbook.
 
@@ -23,7 +23,9 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - public non-canonical preview: `mvp-preview-ancient-v2`;
 - working normalized store: PostgreSQL/PostGIS;
 - public client: MapLibre web application backed by the release-gated `atlas-data` API and deployment-bound static fallback;
-- current substantive gate: M1 methodology hardening, issue #100.
+- M2 integrated adversarial gate: completed after correction/re-attack cycles;
+- **current substantive boundary: #123 — M2 Project Health Check and reconciliation**;
+- no H2/bulk-research, production-M2 migration, public geography promotion or successor canonical release is authorized until that health check chooses continue / simplify / redirect / stop.
 
 ## Repository boundary
 
