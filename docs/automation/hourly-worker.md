@@ -126,7 +126,7 @@ Then close the AUTO issue and update the parent gate/backlog/decision record onl
 
 Gate adversary and Project Health Check AUTO issues are dependency-gated.
 
-The worker must not create or enter a new gate because the old issue list is empty. The health task must explicitly choose **continue / redirect / stop** and establish the next short runway.
+The worker must not create or enter a new gate because the old issue list is empty. The health task must explicitly choose **continue / simplify / redirect / stop**. If continuing, it may establish only a short justified runway after the health evidence supports that choice.
 
 ## Blockers
 
