@@ -60,7 +60,7 @@ def semantic_features():
     return [
         feature("Polity A", "POLITY", -3, -1, "(Union)", ""),
         feature("Polity A", "POLITY", 0, 2, "(Union)", ""),
-        feature("(Union)", "RELATION", -3, 2, "", "Polity A, Polity B"),
+        feature("(Union)", "RELATION", -3, 2, "", "Polity A;Polity B"),
         feature("Polity B", "POLITY", -3, 2, "(Union)", ""),
         feature("Gap Polity", "POLITY", 10, 12),
         feature("Gap Polity", "POLITY", 15, 20),
