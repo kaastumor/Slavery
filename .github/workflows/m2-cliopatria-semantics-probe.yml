@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v7
       - name: Inspect exact pinned Cliopatria corpus
         run: |
-          python tools/profile_cliopatria.py --output /tmp/cliopatria-semantics.json
+          python tools/profile_cliopatria.py --include-semantics --output /tmp/cliopatria-semantics.json
           echo '---BEGIN CLIOPATRIA SEMANTICS---'
           cat /tmp/cliopatria-semantics.json
           echo '---END CLIOPATRIA SEMANTICS---'
