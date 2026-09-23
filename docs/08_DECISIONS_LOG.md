@@ -438,3 +438,55 @@ The gate ends with an integrated adversarial review followed by a Project Health
 **Alternatives considered:** immediately resume broad research ingestion; immediately replace P0–P4; freeze the working project for a wholesale ontology rewrite.
 
 **Reason:** the current stack already demonstrates real operational value. The strongest unresolved risk is analytical overclaiming at scale, so the smallest useful next step is discriminating semantic tests rather than more infrastructure or more records.
+
+
+## D-058 — Post-M1 territorial-practice semantics become the canonical target model
+**Date:** 2026-09-23  
+**Status:** accepted target semantics; relational implementation and release migration remain M2 work
+
+**Decision:** The corrected M1 v2 semantic structure is promoted from experiment to the canonical **target methodology/data model** for new integration work. This does not mutate canonical historical release v0.6.1, the current public preview, or the live PostgreSQL schema.
+
+The target model keeps the existing universal CLAIM/provenance/release architecture and introduces only the separations demonstrated necessary by M1:
+
+1. **Evidence package**
+   - attestation pattern is separate from interpretive basis;
+   - source/document count does not prove independence.
+
+2. **Historical characterization**
+   - occurrence pattern, institutionalization, prevalence scope and structural significance are independent dimensions;
+   - one dimension must not be mechanically inferred from another.
+
+3. **Research/epistemic state**
+   - research stage is workflow progress;
+   - classification outcome is the result of synthesis;
+   - review_complete may coexist with disputed or inconclusive.
+
+4. **Assertion form and practice concepts**
+   - bounded event/process assertions are distinct from enduring practice/status assertions;
+   - practice concepts are faceted and may coexist across status, function, property/legal, transmission and process dimensions;
+   - M1 does not establish an exhaustive final controlled vocabulary.
+
+5. **Time**
+   - outer query/legacy bounds are not sufficient selected-year truth;
+   - applicability semantics are separate from temporal precision/certainty;
+   - approximation or broad dating does not itself imply continuity.
+
+6. **Space**
+   - evidence locus is separate from reviewed inference extent;
+   - a broader inference extent requires an explicit reviewed basis/rationale;
+   - geometry availability or containment cannot create historical generalization.
+
+7. **Legacy compatibility**
+   - P0–P4 and legacy coverage_state remain available to reproduce and interpret historical releases;
+   - they are not the target universal comparative ontology;
+   - no post-M1 dimension may be backfilled from legacy P-level alone;
+   - no new P-level may be mechanically derived from the post-M1 dimensions;
+   - inconclusive does not imply P0.
+
+**Alternatives considered:**
+- keep P0–P4/coverage_state as the primary model and improve wording only — rejected by M1 because wording cannot fix query truth or simultaneous categories;
+- replace the entire claim/provenance architecture — rejected because it survived the adversarial gate;
+- immediately implement a large final ontology/schema — rejected as premature; only the proven structural separations are promoted;
+- probabilistic temporal/spatial modeling — parked; the evidence does not justify probability distributions.
+
+**Consequences:** docs/02_METHOD_AND_ONTOLOGY.md, docs/04_DATA_MODEL.md and docs/schema_draft.yaml define the post-M1 target. The schema draft advances to draft-0.11 and remains a target contract, not proof of live implementation. M2 must test the relational form in disposable PostGIS before any production apply or new canonical historical release. Existing v0.6.1/P-level semantics remain immutable historical release meaning.
