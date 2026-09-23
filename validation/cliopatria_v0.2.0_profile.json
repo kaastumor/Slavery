@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "distinct_names": 1633,
+    "feature_count": 13765,
+    "geometry_type_counts": {
+      "MultiPolygon": 7234,
+      "Polygon": 6531
+    },
+    "property_presence_counts": {
+      "Area": 13765,
+      "Components": 13765,
+      "FromYear": 13765,
+      "MemberOf": 13765,
+      "Name": 13765,
+      "SeshatID": 13765,
+      "ToYear": 13765,
+      "Type": 13765,
+      "Wikidata": 13765,
+      "Wikipedia": 13765
+    },
+    "source_native_years": {
+      "interpretation": "preserved source-native signed integers; negative=BCE, positive=CE; no atlas normalization performed",
+      "invalid_from_to_ranges": 0,
+      "maximum": 2024,
+      "minimum": -3400,
+      "rows_crossing_numeric_zero": 39,
+      "rows_with_negative_year": 1106,
+      "rows_with_zero_endpoint": 6
+    },
+    "type_counts": {
+      "POLITY": 13380,
+      "RELATION": 385
+    }
+  },
+  "promotion": "none; raw geography profile only",
+  "source": {
+    "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+    "git_blob_sha1": "cefab0f4b622e2e7fb3daf68d4f461f83991204c",
+    "path": "cliopatria.geojson.zip",
+    "release": "v0.2.0-duplicate",
+    "repository": "Seshat-Global-History-Databank/cliopatria",
+    "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+    "url": "https://raw.githubusercontent.com/Seshat-Global-History-Databank/cliopatria/ad28a691b7c07c1fca89d0e0636d324667d2a258/cliopatria.geojson.zip"
+  }
+}
