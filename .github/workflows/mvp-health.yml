@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: "*/15 * * * *"
+    # Non-canonical, unused preview: weekly liveness is enough; static fallback preserves published state.
+    - cron: "17 6 * * 1"
   workflow_dispatch:
 
 permissions:

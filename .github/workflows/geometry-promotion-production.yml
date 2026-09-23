@@ -1,10 +1,10 @@
 name: Production Geometry Promotion
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "config/cartography/promotion_execution_*.json"
+  # Production mutation remains explicit/manual while protected deployment
+  # environments are unavailable (#43). The exact execution request must
+  # already exist on main and still passes the immutable-artifact gates below.
+  workflow_dispatch:
 
 permissions:
   contents: read

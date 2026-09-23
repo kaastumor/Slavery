@@ -23,7 +23,13 @@ FORBIDDEN_PATH_PATTERNS = (
     re.compile(r"^data/releases/.*\.xlsx$", re.I),
     re.compile(r"^backups/(?!\.gitkeep$).+"),
     re.compile(r"(^|/)(?:node_modules|__pycache__|\.pytest_cache)(/|$)"),
-    re.compile(r"\.(?:dump|sql\.gz|pem|key)$", re.I),
+    re.compile(r"\.(?:dump|sql\.gz|pem|key|pfx|p12)$", re.I),
+)
+
+LOCAL_PATH_PATTERNS = (
+    re.compile(r"\b[A-Za-z]:\\Users\\[^\\\s]+\\"),
+    re.compile(r"/" + r"Users/" + r"[^/\s]+/"),
+    re.compile(r"/" + r"home/" + r"[^/\s]+/"),
 )
 
 SECRET_PATTERNS = (
@@ -71,13 +77,20 @@ def scan(root: Path, paths: list[str]) -> list[str]:
                 failures.append(f"forbidden tracked path: {rel}")
                 break
 
+        file_path = root / rel
+        try:
+            size = file_path.stat().st_size
+        except OSError:
+            continue
+
+        if size > 5_000_000:
+            failures.append(f"unexpected tracked file larger than 5 MB: {rel} ({size} bytes)")
+            continue
+
         if not is_text_candidate(rel):
             continue
 
-        file_path = root / rel
         try:
-            if file_path.stat().st_size > 5_000_000:
-                continue
             text = file_path.read_text(encoding="utf-8")
         except (OSError, UnicodeDecodeError):
             continue
@@ -89,6 +102,11 @@ def scan(root: Path, paths: list[str]) -> list[str]:
         for label, pattern in SECRET_PATTERNS:
             if pattern.search(text):
                 failures.append(f"possible {label}: {rel}")
+
+        for pattern in LOCAL_PATH_PATTERNS:
+            if pattern.search(text):
+                failures.append(f"machine-local user path: {rel}")
+                break
 
     return failures
 

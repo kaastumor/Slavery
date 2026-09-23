@@ -36,28 +36,30 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 
 | ID | Assumption | Status | Strongest pressure / discriminating evidence |
 | --- | --- | --- | --- |
-| A-001 | Global comparison can be useful without implying equivalence | survives provisionally | M1 shows separable dimensions can represent Hittite, Baekje, Silla and contested cases without one universal ordinal; real user-value comparison remains for a later horizon. |
+| A-001 | Global comparison can be useful without implying equivalence | survives provisionally | M1/M2 preserve separable dimensions; the wide review found parity on bounded fact discovery, so a value-discrimination pilot must now test whether durable cross-place/time comparison adds practical value. |
 | A-002 | P0–P4 can remain the target universal public summary | rejected | M1 shows the scale mixes evidentiary configuration with different historical structures. Preserve it only as legacy compatibility until a post-M1 interface exists. |
-| A-003 | Cliopatria is the best open global deep-time fallback backbone | survives / integrate | The complete pinned corpus is reproducibly profiled at 13,765 features; D-059 now defines calendar and POLITY/RELATION/composite semantics, while specialist overrides remain necessary. Raw/staging ingestion and selected-year resolver behavior remain M2 tests. |
-| A-004 | PostgreSQL/PostGIS is justified over files/spreadsheets for the working system | survives | Time/spatial joins, release reconstruction, provenance, publication and the coming full-corpus geometry resolver require relational/spatial behavior already exercised. |
-| A-005 | MapLibre + current API/GeoJSON delivery is sufficient at current scale | survives | Performance triggers in `docs/21_PERFORMANCE_STRATEGY.md` are not met; do not add tile infrastructure yet. |
+| A-003 | Cliopatria is the best open global deep-time fallback backbone | survives for raw infrastructure | Exact 13,765-feature ingestion and selected-year behavior survive M2. The resolver remains experimental Atlas truth; specialist overrides and reviewed source→atlas identity remain necessary. |
+| A-004 | PostgreSQL/PostGIS is justified over files/spreadsheets for the working research/integrity system | survives with boundary | Time/spatial joins, provenance, release reconstruction and integrity are demonstrated. This does not prove that the public product needs an always-on database/API platform. |
+| A-005 | MapLibre + current API/GeoJSON delivery is sufficient at current scale | survives / freeze | It is sufficient for the existing non-canonical demonstration. Do not expand serving/render infrastructure until the thin-atlas value hypothesis is demonstrated. |
 | A-006 | The project can responsibly cover the present as well as antiquity | unproven / blocked for sensitive person-level expansion | Living-person/sensitive-data policy remains insufficient; do not let H2 modern expansion outrun this. |
-| A-007 | A serial issue-driven autonomous worker can create value without roadmap drift | survives with constraint | M1 completed a short queue, discovered a real integrated defect, inserted #112, and did not advance until correction + health review. Evidence quality, not issue throughput, remains the metric. |
+| A-007 | A serial issue-driven autonomous worker can create value without roadmap drift | survives with constraint / idle | M1/M2 produced real corrections, but no next execution runway is authorized after HC-003. The worker must remain idle/disabled until a discriminating horizon is explicitly approved. |
+| A-008 | The full interactive Atlas platform is the best form for the demonstrated contribution | weakened / unproven | External precedents cover generic DH platform functions; bounded Silla/Hittite discovery reached parity with ordinary research. Corpus + methodology + thin atlas is now the preferred hypothesis. |
 
 ## Standing risk register
 
 | ID | Risk | State | Current control / next pressure |
 | --- | --- | --- | --- |
-| R-001 | False equivalence across unlike coercive systems | medium-high / active | M1 prototype reduces the risk; M2 must integrate the orthogonal semantics before new large-scale claims/public rendering rely on them. |
-| R-002 | False temporal/spatial precision from map UI | high / active | M1 semantics survive at prototype level, but current preview still uses legacy from/to filtering; M2 integration is the next control. |
+| R-001 | False equivalence across unlike coercive systems | medium-high / controlled experimentally | Post-M1 dimensions and adversarial fixtures reduce the risk, but remain experimental for broad publication. No production migration or bulk expansion is authorized. |
+| R-002 | False temporal/spatial precision from map UI | high / active | M2 prototypes solve key truth conditions, but the public preview remains legacy/non-canonical. The next question is whether a thin atlas adds value without reintroducing map rhetoric. |
 | R-003 | Archive/research-density bias mistaken for prevalence | high / controlled | Global-balance strategy; coverage kept separate; no count-derived P-level. |
 | R-004 | Governance/document drift | medium / controlled | Root backlog, gate issues, sanitation and health checks remained synchronized through M1; continue deleting stale state rather than adding parallel systems. |
 | R-005 | Public-repository leakage of secrets/private/sensitive source material or derivatives | high / controlled | SECURITY classification, .gitignore, sanitation, synthetic/public-safe CI fixtures. |
-| R-006 | Production/cloud dependence or outage erases public state | medium / controlled | static release fallback, health monitoring, explicit release pointer. |
-| R-007 | Automation creates activity rather than evidence | medium / controlled | M1 produced discriminating evidence and a corrective loop; retain short queues, resume-first behavior and gate health checks. |
-| R-008 | Branch/workflow/experiment accumulation increases cognitive load | medium / active | close parked issues; prune confirmed merged branches; no new workflow per experiment. |
+| R-006 | Production/cloud dependence or outage erases public state | low-medium / controlled | Static release fallback and explicit release pointer preserve published preview state. Weekly liveness is enough; automatic cloud restart was retired. |
+| R-007 | Automation creates activity rather than evidence | medium / controlled | M1/M2 produced discriminating evidence, but HC-003 intentionally leaves no execution runway. Disabled/idle automation is the correct state. |
+| R-008 | Branch/workflow/experiment accumulation increases cognitive load | medium / active | DVC and self-heal workflows were retired and duplicate main web build removed; ~100 historical remote branches still need admin-capable pruning. |
 | R-009 | Public preview is mistaken for canonical historical release | medium / controlled | explicit non-canonical release identity and immutable v0.6.1 baseline. |
 | R-010 | No repository license creates ambiguity if outside contribution/reuse begins | low / parked | Decide only when external contribution/distribution needs make it material. |
+| R-011 | Research/platform effort grows faster than demonstrated value over the strongest baseline | high / active | HC-003 found parity on bounded fact discovery and strong external platform precedents. No scale/production horizon before a value-discrimination pilot. |
 
 ## Value evidence
 
@@ -71,6 +73,11 @@ Record meaningful outcomes, including no-value results.
 | V-004 | Does the original P0–P4 / coverage / time model survive a serious cross-period attack? | contradiction / redesign | Better labels on the old model would not change query truth or simultaneous categories | M1 rejected P0–P4 as the target universal ordinal and split the overloaded semantics. |
 | V-005 | Is complete Cliopatria ingestion worth pursuing instead of polity-by-polity geometry acquisition? | useful confirmation + blocker discovery | On-demand resolution hides corpus-wide failure modes | Exact v0.2.0 corpus profile found 13,765 features and explicit year-zero endpoints; whole-corpus integration proceeds, silent calendar normalization does not. |
 | V-006 | Did the first M1 semantic redesign actually solve the adversarial findings? | contradiction then correction | Green component tests alone would have accepted an overloaded v1 prototype | Integrated gate found three displaced overloads; #112 corrected them and the re-attack survived. |
+| V-007 | Does integrated adversarial review add value beyond ordinary green CI? | value | Component tests repeatedly missed semantic/integrity defects later found by M1/M2 integrated attacks | Preserve the adversarial fixture/re-attack method as a core project artifact. |
+| V-008 | Does the Atlas uniquely discover the core facts in the Silla/Hittite benchmark cases? | parity | Targeted literature/search + strong general model recovered the core facts and major caveats quickly | Factual discovery is not the differentiator; durable comparison semantics may still be. |
+| V-009 | Is a generic historical database/timeline/map/research platform a distinctive project contribution? | contradiction / remove scope | nodegoat and adjacent DH/cultural-heritage systems already provide generic modeling, sources, temporal/spatial views and publication | Do not generalize into a DH platform; narrow to slavery/coercion corpus + method. |
+| V-010 | Does the non-canonical unused preview justify 15-minute monitoring and automatic cloud restart? | no value / retire | Static fallback preserves the demonstration and no user-critical availability need is evidenced | Retire self-heal and reduce liveness to weekly. |
+| V-011 | Has the current full application/platform form earned its maintenance cost? | unproven / simplify | Strong correctness evidence exists, but no external user-task evidence shows the full product materially outperforms a simpler corpus/method + GIS/model workflow | Make corpus + thin atlas the working identity; full platform must re-earn expansion. |
 
 ## Health-check history
 
@@ -218,3 +225,78 @@ No new standalone assumptions register, value-evidence ledger, audit directory, 
 - The decisive unanswered questions are now project-value questions, not project-system setup questions. They belong to #123: baseline parity, competing identities, artifact shrinkage, demonstrated value, and continue/simplify/redirect/stop.
 
 No new development horizon is authorized by this reconciliation.
+
+
+### HC-003 — M2 wide-angle project review — 2026-09-23
+
+Decision: **CONTINUE + SIMPLIFY.**
+
+Durable review: `docs/34_WIDE_ANGLE_PROJECT_REVIEW.md`.
+
+#### What survives
+
+- the global/deep-time evidence problem;
+- claim-specific source/provenance discipline;
+- uncertainty, disagreement and abstention;
+- post-M1 structural separations at experimental maturity;
+- raw Cliopatria global geography infrastructure;
+- PostgreSQL/PostGIS as research/integrity tooling;
+- exact release reconstruction;
+- adversarial fixtures and revise/correct/re-attack discipline;
+- a thin map/query surface as a hypothesis worth testing.
+
+#### What does not survive as the default direction
+
+- the full interactive application platform as the presumed project identity;
+- generic digital-humanities platform expansion;
+- broad H2 research expansion merely because M2 passed;
+- M2 production migration as the next task;
+- production-like preview operations;
+- new P0–P4 assignment in current research.
+
+#### Baseline result
+
+A bounded Silla/Hittite challenge reached **parity on core fact discovery** with targeted literature/search + a strong general model. The Atlas's remaining plausible advantage is durable comparative semantics: preserving temporal/spatial truth, provenance, orthogonal historical dimensions and abstention when evidence is later queried across place/time.
+
+External precedent review also shows that nodegoat and adjacent projects already cover generic DH platform functions.
+
+#### Working identity
+
+Preferred: **auditable evidence corpus + thin atlas**.
+
+Fallback if the thin atlas adds no material value: **methodology / adversarial benchmark corpus**.
+
+The full platform may only be re-earned through evidence.
+
+#### Repairs authorized and completed in the review branch
+
+- active research workflow/lifecycle aligned with post-M1 legacy-only P0–P4 rule;
+- automatic Supabase self-heal retired;
+- preview monitor reduced to weekly;
+- production geometry promotion made explicit/manual;
+- duplicate main web build removed;
+- sanitation strengthened for key containers, machine-local paths and >5 MB tracked files.
+
+#### Remaining bounded debt
+
+- real npm lockfile must be generated/committed in a networked environment before substantive frontend expansion;
+- remote historical branches should be pruned when admin-capable tooling is available;
+- main currently reports unprotected; branch/environment protection remains an administrative hardening boundary.
+
+#### Candidate next experiment — NOT AUTHORIZED BY THIS REVIEW
+
+A three-question value-discrimination pilot comparing:
+
+1. strongest boring/external workflow;
+2. corpus/method without custom map interaction;
+3. smallest thin atlas/query view.
+
+The project remains execution-idle until that pilot is explicitly authorized.
+
+#### Kill rule
+
+A richer Atlas product earns no further application/infrastructure horizon unless at least two independent tasks from different historical contexts show a repeatable practical advantage over the strongest baseline in inspectable cross-place/time reasoning, provenance recovery or uncertainty preservation without increased overclaim.
+
+If the corpus/method adds the value but the thin atlas does not, collapse to the methodology/corpus identity and stop application expansion.
+
+If neither adds material value, stop further Atlas expansion and preserve the methodology/corpus/audit artifacts as the final project result.

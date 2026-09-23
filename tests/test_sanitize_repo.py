@@ -49,6 +49,28 @@ class SanitationTests(unittest.TestCase):
             self.assertTrue(any("merge marker" in x for x in failures))
             self.assertTrue(any("GitHub token" in x for x in failures))
 
+    def test_rejects_private_key_container_extensions(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paths = _baseline(root) + ["certs/private.pfx"]
+            _write(root, paths[-1], "not-a-real-key")
+            self.assertTrue(any("forbidden tracked path" in x for x in scan(root, paths)))
+
+    def test_rejects_machine_local_user_path(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paths = _baseline(root) + ["notes.md"]
+            _write(root, "notes.md", "workspace: C:\\Users\\alice\\project\\data.json\n")
+            self.assertTrue(any("machine-local user path" in x for x in scan(root, paths)))
+
+    def test_rejects_unexpected_large_tracked_file(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paths = _baseline(root) + ["generated.bin"]
+            path = root / "generated.bin"
+            path.write_bytes(b"0" * 5_000_001)
+            self.assertTrue(any("larger than 5 MB" in x for x in scan(root, paths)))
+
 
 if __name__ == "__main__":
     unittest.main()
