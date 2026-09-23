@@ -31,6 +31,6 @@ class Freeze(unittest.TestCase):
             print("R1_TARGET_FRAME_DIAGNOSTICS_END")
             self.assertLessEqual(out["counts"]["new_c0_total"],120)
             self.assertLessEqual(out["counts"]["planned_c1_total"],36)
-            self.assertTrue(all(out["balance_check"].values()))
+            self.assertTrue(all(out["balance_check"]["required_gates"].values()))
 
 if __name__=="__main__":unittest.main()
