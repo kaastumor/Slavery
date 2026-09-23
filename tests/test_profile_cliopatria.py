@@ -17,7 +17,7 @@ def fixture_bytes():
             },
             {
                 "type": "Feature",
-                "properties": {"Name": "B", "Type": "RELATION", "FromYear": -2, "ToYear": 3, "MemberOf": "", "Components": "A, C"},
+                "properties": {"Name": "B", "Type": "RELATION", "FromYear": -2, "ToYear": 3, "MemberOf": "", "Components": "A;C"},
                 "geometry": {"type": "MultiPolygon", "coordinates": []},
             },
             {
