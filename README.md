@@ -19,31 +19,21 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 
 ## Current state
 
-- canonical historical data release: `v0.6.1` (external immutable workbook);
-- public non-canonical preview: `mvp-preview-ancient-v2` (frozen legacy demonstration);
-- M1 and M2 methodology/integration gates: completed;
-- HC-003: **CONTINUE + SIMPLIFY**;
-- H2 / #146 value-discrimination pilot: completed;
-- HC-004 / D-063: **STOP ACTIVE ATLAS EXPANSION; PRESERVE METHOD/CORPUS/AUDIT ARTIFACTS**;
-- COV-001 / #148 coverage-value experiment: **completed — NARROW SURVIVE**;
-- COV-002 / #151 scale/reuse experiment: **completed — STOP FURTHER AUTOMATIC SCALING**;
-- compact coverage-register pattern is preserved for concrete task-driven use; COV-002 did not justify automatic row-by-row scaling;
-- ADV-001 / D-068: the broad systematic-coverage thesis was reopened;
-- COV-003 / #155: **completed — TIERED SURVIVE; STRONG SURVIVE rejected**;
-- COV-004 / #157: **completed — METHOD SURVIVE**;
-- D-072: preserve C0 -> C1 -> selective C2, versioned review, and an ordinary map/register Atlas surface; bespoke Atlas semantics remain unearned;
-- R1 / #159: **ACTIVE — Core Hardening + First Systematic Coverage Release**;
-- Core Contract v1 and the exact R1 target frame are frozen after adversarial/CI review;
-- R1 frame: 65 new C0 registrations, 24 new C1 targets, 12 legacy C1 re-reviews;
-- R1.3 identity/time QA: completed — 34 rows research-ready, French Louisiana 1800 and Duchy of Bavaria 1800 held without replacement;
-- R1.4 tranche 01: completed on 10 frozen rows — **Core v1 survives after material correction**; 10/10 replayed, 2 C2 packets completed;
-- tranche 02 is not automatically authorized; R1 is at a deliberate calibration checkpoint;
-- v0.6.1 remains canonical; any further R1 subject research must remain inside the frozen queue;
-- no production migration, bespoke frontend/platform or bulk automated research is authorized.
+- canonical historical data release: `v0.6.1` (external immutable workbook; unchanged);
+- frozen legacy public preview: `mvp-preview-ancient-v2` (non-canonical demonstration);
+- architecture experiments COV-001→004: completed;
+- R1 historical subject research: **complete and frozen at 19 reviewed C1 rows**;
+- R1.6 release QC: **PASS WITH EXPLICIT LIMITATIONS**;
+- R1 candidate registry: 77 frozen targets = 19 reviewed C1 + 15 planned/unresearched C1 + 2 held + 41 C0-only;
+- source dependency layer: 45 source relations / 37 independence groups;
+- D-080: the project has crystallized to an **MVP v0.1** rather than returning to broad platform work;
+- active MVP parent: **#174**;
+- MVP definition: **immutable R1 candidate package + neutral world map + explicit geometry/research states + compact evidence register**;
+- delivery queue: #175→#182, WIP=1, short-lived PRs, green CI;
+- post-MVP discovery: #184→#187 only after #182 records `TECHNICAL_MVP_CANDIDATE`;
+- no new subject-research tranche, production migration, backend/service expansion, or new universal P0–P4 scale is authorized.
 
-The H2 pilot found a material corpus-method advantage in one of three cases, below the pre-registered two-case threshold; the repaired thin visual/query arm did not materially beat the corpus/method in any case.
-
-See `experiments/h2-value-discrimination/09_FINAL_RESULT.md` / D-063 for the original Atlas stop, `experiments/coverage-value/11_FINAL_RESULT.md` / D-065 for corpus value, `experiments/coverage-scale/13_FINAL_RESULT.md` and `14_COMPLETENESS_INFERENCE_ADVERSARY.md` / D-067–D-068 for scale/completeness, `experiments/coverage-tiered/13_FINAL_RESULT.md` / D-070 for tiering, and `experiments/falsification-atlas/27_FINAL_RESULT.md` / D-072 for the final architecture-falsification result.
+See `programmes/r1/20_RELEASE_QC.md`, `docs/mvp/v0.1-plan.md`, and `docs/mvp/delivery-discovery-cadence.md`.
 
 ## Repository boundary
 
