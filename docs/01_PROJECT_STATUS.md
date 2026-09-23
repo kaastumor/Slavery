@@ -20,7 +20,7 @@ Major product/infrastructure foundations already demonstrated include:
 - public availability monitoring and guarded recovery;
 - mobile/accessibility and evidence-inspector work.
 
-Repository migrations currently run through `0027_release_artifact_immutability.sql`.
+Repository migrations currently run through `0029_claim_kind_function_privileges.sql`.
 
 ## Current gate
 
@@ -33,9 +33,9 @@ M2 must now prove those semantics in the real relational/query architecture whil
 M2 progress as of this snapshot:
 - **#117 complete:** D-058 promotes the corrected M1 structure to the canonical **target** methodology/data model; schema draft is now draft-0.11 and explicitly not yet a claim of live relational implementation.
 - **#118 complete:** D-059 resolves the Cliopatria v0.2.0 source-time and composite/RELATION handling needed for safe integration, while preserving source-native year zero/raw hierarchy.
-- **#119 is the current highest-priority eligible task:** ingest the complete pinned Cliopatria corpus into raw/staging PostGIS without publishing or flattening it.
-- #120 is also dependency-ready after #117, but follows #119 in the canonical backlog.
-- #121 waits on #119; #122/#123 remain the integrated adversarial and health gates.
+- **#119 complete:** the exact pinned 44,231,317-byte Cliopatria asset loaded all 13,765 features into disposable raw/staging PostGIS, reconciled to the accepted corpus profile, preserved source-native years/type/hierarchy/geometry, and an exact second run was a verified no-op. No production schema/data or publication path changed.
+- **#120 is now the highest-priority eligible task:** prototype the post-M1 claim semantics in disposable PostGIS without rewriting legacy v0.6.1 meaning.
+- #121's #119 dependency is now satisfied but follows #120 in the M2 execution order; #122/#123 remain the integrated adversarial and health gates.
 
 ## Existing blockers
 
