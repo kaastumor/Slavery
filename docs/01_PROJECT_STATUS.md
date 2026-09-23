@@ -4,60 +4,72 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
-**Current public preview:** `mvp-preview-ancient-v2` (non-canonical)
+**Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
+**Execution state:** **IDLE**
 
-## Current position
+## Direction after HC-003
 
-The atlas has a working end-to-end research, PostgreSQL/PostGIS, cartography, release, API and MapLibre path. The database is the working normalized research system; it has not silently replaced the immutable canonical v0.6.1 historical release.
+The wide-angle M2 Project Health review chose:
 
-Repository migrations currently run through `0029_claim_kind_function_privileges.sql`.
+**CONTINUE + SIMPLIFY**
 
-M1 methodology hardening and the M2 semantic/geography integration gate are complete. M2 survived an integrated adversarial process only after corrections for:
+Durable review: `docs/34_WIDE_ANGLE_PROJECT_REVIEW.md`  
+Direction decision: D-062 in `docs/08_DECISIONS_LOG.md`
 
-- reverse cross-table semantic integrity;
-- chosen specialist-geometry provenance;
-- open-terminus semantics.
+The project should now be understood primarily as:
 
-The durable final M2 gate record is `docs/33_M2_INTEGRATED_ADVERSARIAL_GATE.md`.
+> an **auditable global/deep-time evidence corpus + comparison method**, with a **thin atlas/query/evidence-inspector surface** only where it demonstrates additional value.
 
-## Current boundary
+The full interactive application/platform is no longer the default project identity or roadmap.
 
-**#123 — M2 Project Health Check and reconciliation.**
+## What remains durable
 
-This is intentionally a stopping point, not permission to keep building.
+- claim-specific source/version provenance and contrary evidence;
+- separation of territorial practice, law, external participation, research coverage and geography;
+- post-M1 semantic separations at experimental maturity;
+- temporal applicability and evidence-locus/inference-extent discipline;
+- complete pinned Cliopatria raw geography infrastructure and tested selected-year resolver;
+- specialist-geometry precedence with explicit provenance;
+- PostgreSQL/PostGIS as research/integrity tooling;
+- exact release reconstruction and immutable release history;
+- adversarial fixtures and revise/correct/re-attack discipline.
 
-The health check must reconsider:
+Repository migrations remain through `0029_claim_kind_function_privileges.sql`.
 
-- the north star;
-- demonstrated value **for and against** the project thesis;
-- the strongest boring baseline;
-- competing project identities;
-- whether the artifact can shrink materially while preserving its contribution;
-- architecture/governance complexity;
-- assumptions, risks, privacy and reproducibility;
-- whether H2 globally balanced evidence expansion is actually the best next horizon.
+## What is parked/frozen
 
-It must end with an explicit disposition: **continue / simplify / redirect / stop**.
+- canonical v0.6.1 remains unchanged;
+- current preview remains non-canonical/legacy;
+- M2 production schema migration is parked;
+- broad/global evidence expansion is parked;
+- bulk Cliopatria source→atlas identity publication is parked;
+- richer application/frontend/platform development is parked;
+- no new autonomous execution runway exists.
 
-Until #123 is complete, do not create a new broad execution runway, resume bulk evidence expansion, productionize the M2 experimental schema/resolver, promote the raw global geography baseline, or supersede canonical v0.6.1.
+The old production-like preview posture has been reduced: self-heal is retired, liveness is weekly, production geometry promotion is explicit/manual, and duplicate main web build work is removed.
 
-## M2 evidence now established
+## Value boundary
 
-- D-058: post-M1 target semantics separate evidence, historical structure, workflow/outcome, temporal applicability/precision and spatial locus/inference extent.
-- D-059: pinned Cliopatria calendar and POLITY/RELATION/composite behavior are explicit.
-- #119: all 13,765 pinned Cliopatria features survived exact raw/staging ingestion and retry/no-op.
-- #120/#135/#140: post-M1 relational semantics survived bounded and reverse-mutation adversaries, including restoration of non-positive open termini.
-- #121/#136: complete selected-year resolution survived synthetic and exact full-corpus checks; specialist provenance remains distinct from baseline provenance.
-- #122: integrated adversarial gate passed after two revise/correct/re-attack cycles.
-- post-merge foundation CI, release reconstruction/security checks and public availability remained green.
-- production/public release pointers remained unchanged throughout M2.
+A bounded Silla/Hittite challenge found **parity on core fact discovery** with ordinary targeted research + a strong general-purpose model.
 
-## Existing blockers
+The remaining plausible project advantage is durable comparative semantics: preserving provenance, uncertainty, temporal/spatial truth, orthogonal historical dimensions and abstention when evidence is queried across place/time.
 
-- **#43** — remaining protected staging/production boundary work requires sponsor/admin/credential action. Do not manufacture a workaround.
-- **#26** — live migration-ledger metadata mismatch remains documented. Do not replay already-live schema migrations or rewrite production history casually.
+The only currently justified **candidate** next experiment is a value-discrimination pilot comparing:
+1. strongest boring/external workflow;
+2. corpus/method without bespoke map interaction;
+3. smallest thin atlas/query view.
 
-These blockers do not decide #123.
+That pilot is **not authorized by HC-003**. The backlog is intentionally idle.
+
+## Remaining bounded project-system debt
+
+- `main` currently reports unprotected;
+- approximately 100 historical remote branches remain;
+- protected deployment environment/staging work remains trigger-bound (#43);
+- live migration-history reconciliation remains trigger-bound (#26);
+- the frontend still lacks a committed real npm lockfile and should gain one before substantive web expansion.
+
+None of these items justifies creating a new development horizon.
 
 ## Canonical operating documents
 
@@ -65,11 +77,12 @@ These blockers do not decide #123.
 - repository-root `BACKLOG.md`
 - `docs/24_WAY_OF_WORKING.md`
 - `docs/25_PROJECT_HEALTH.md`
-- `docs/automation/hourly-worker.md`
 - `docs/08_DECISIONS_LOG.md`
+- `docs/34_WIDE_ANGLE_PROJECT_REVIEW.md`
+- `docs/automation/hourly-worker.md`
 
-This file is only a subordinate status snapshot. It must never become a second execution queue.
+This file is only a subordinate state snapshot.
 
 ## Important invariants
 
-The atlas remains an evidence-synthesis/data-curation project. Territorial practice, legal regime, external participation, research coverage and geometry stay separate. Unknown is not absence. Raw/source-native values remain recoverable. Draft/reviewed/published/canonical are different states. Canonical releases are immutable.
+The project remains evidence synthesis/data curation. Unknown is not absence. Law is not practice. External participation is not territorial prevalence. Geometry does not create historical truth. P0–P4 is legacy compatibility only. Draft/reviewed/published/canonical states remain distinct. Canonical releases are immutable.
