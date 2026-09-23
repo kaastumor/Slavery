@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Preserve the Historical Slavery Atlas's globally scoped, time-aware **historical evidence method, curated artifacts and audit trail** after H2 failed to demonstrate enough repeatable value to justify continued active Atlas expansion. Future development is trigger-bound rather than assumed.
+Build and preserve the Historical Slavery Atlas as a globally scoped, time-aware **historical evidence method + compact auditable Atlas**, while requiring every increment beyond the core to earn itself against the strongest simpler baseline. Broad platform expansion remains stopped; bounded release/MVP work is explicitly authorized by R1.
 
 The project is an evidence-synthesis and data-curation system. It does not claim that one universal category can make all forms of coercion equivalent, and it does not replace specialist historical scholarship.
 
@@ -39,9 +39,9 @@ The durable project result is therefore:
 - reproducible audit/release history;
 - the H2 baseline/corpus/thin-view comparison, including its negative result.
 
-The current web/API preview and thin-view experiments are preserved demonstrations, not an active product roadmap.
+The legacy web/API preview and thin-view experiments remain preserved demonstrations rather than the product roadmap.
 
-No active Atlas development horizon exists after HC-004 / D-063.
+HC-004 / D-063 stopped the former broad Atlas expansion. COV-003/COV-004 subsequently preserved the tiered evidence core, and D-073 authorized R1 as a bounded real release programme. D-080 now narrows that programme further to MVP v0.1: an immutable candidate package, ordinary map and compact evidence register. This does not reopen the discarded full-platform roadmap.
 
 ### Implementation architecture
 
@@ -290,7 +290,7 @@ rather than:
 
 COV-004 closes the architecture-experiment sequence. Any next horizon should be a real research/release programme or preservation, not COV-005 by default.
 
-### R1 — first real systematic coverage release programme (active)
+### R1 — first real systematic coverage release programme (active; MVP delivery stage)
 
 After COV-004, the sponsor explicitly authorized the project to graduate from architecture experiments into a real bounded research/release programme.
 
@@ -308,7 +308,16 @@ Binding constraints:
 - new features must emerge from repeated real research/release friction;
 - no successor release is automatic.
 
-Decision: D-073.  
-Programme: `programmes/r1/`.
+R1 subject research is now frozen at 19 reviewed C1 rows. R1.6 release QC passed with explicit limitations.
+
+D-080 defines R1.7 as the MVP delivery stage:
+
+> **immutable R1 candidate package + neutral world map + explicit geometry/research states + compact evidence register**
+
+After the technical MVP gate, feature ideas return to bounded discovery experiments rather than automatic implementation.
+
+Decisions: D-073, D-080.  
+Programme: `programmes/r1/`.  
+MVP plan: `docs/mvp/v0.1-plan.md`.
 
 At every horizon boundary, review evidence for **and against** the thesis, compare the strongest baseline, consider whether the artifact can shrink, and explicitly choose **continue / simplify / redirect / stop** before creating the next horizon.
