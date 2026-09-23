@@ -30,12 +30,13 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - compact coverage-register pattern is preserved for concrete task-driven use; COV-002 did not justify automatic row-by-row scaling;
 - ADV-001 / D-068: the broad systematic-coverage thesis was reopened;
 - COV-003 / #155: **completed — TIERED SURVIVE; STRONG SURVIVE rejected**;
-- D-070: preserve C0 target/research-state coverage -> C1 compact research -> selective C2 depth, with immutable releases and source-dependency review;
-- execution state: **IDLE / PRESERVATION**; no comprehensive-ingestion, H3/H4 bulk research, production-migration, frontend/platform or infrastructure horizon is authorized.
+- COV-004 / #157: **completed — METHOD SURVIVE**;
+- D-072: preserve C0 -> C1 -> selective C2, versioned review, and an ordinary map/register Atlas surface; bespoke Atlas semantics remain unearned;
+- execution state: **IDLE / SPONSOR DECISION**; no comprehensive-ingestion, production-migration, bespoke frontend/platform or infrastructure horizon is authorized.
 
 The H2 pilot found a material corpus-method advantage in one of three cases, below the pre-registered two-case threshold; the repaired thin visual/query arm did not materially beat the corpus/method in any case.
 
-See `experiments/h2-value-discrimination/09_FINAL_RESULT.md` / D-063 for the Atlas stop decision, `experiments/coverage-value/11_FINAL_RESULT.md` / D-065 for the narrow corpus-value result, `experiments/coverage-scale/13_FINAL_RESULT.md` / D-067 for the tested-workflow scale stop, `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.md` / D-068 for the completeness-inference correction, and `experiments/coverage-tiered/13_FINAL_RESULT.md` / D-070 for the tiered-coverage result.
+See `experiments/h2-value-discrimination/09_FINAL_RESULT.md` / D-063 for the original Atlas stop, `experiments/coverage-value/11_FINAL_RESULT.md` / D-065 for corpus value, `experiments/coverage-scale/13_FINAL_RESULT.md` and `14_COMPLETENESS_INFERENCE_ADVERSARY.md` / D-067–D-068 for scale/completeness, `experiments/coverage-tiered/13_FINAL_RESULT.md` / D-070 for tiering, and `experiments/falsification-atlas/27_FINAL_RESULT.md` / D-072 for the final architecture-falsification result.
 
 ## Repository boundary
 

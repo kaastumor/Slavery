@@ -258,4 +258,36 @@ The architecture is therefore worth preserving as a research method. It is not e
 
 No successor horizon is authorized by COV-003.
 
+### COV-004 — final architecture falsification gate (completed)
+
+COV-004 / #157 attacked COV-003 rather than extending it by momentum.
+
+It tested:
+- C1/C2 false-negative escalation behavior;
+- non-polity coverage;
+- real publication-time evidence updates;
+- the Atlas concept against a competent conventional map + register.
+
+Result: **METHOD SURVIVE.**
+
+The research method survives with one additional guard:
+- source-quality failure itself must trigger deeper review/escalation.
+
+The claim architecture also survived sites, institutions, networks and fuzzy community/region targets without forcing polity semantics.
+
+A 2015→2016–2026 time-split produced three genuine evidence events out of six frozen rows, validating immutable/as-of revision mechanics.
+
+The bespoke Atlas evidence inspector did not materially outperform the competent conventional map/register baseline on any of four frozen map tasks.
+
+This does **not** remove geographic presentation from the project. The strongest boring baseline is itself a small historical atlas.
+
+The best-supported project form after COV-004 is therefore:
+
+> **tiered historical evidence programme + ordinary map/GIS navigation surface**
+
+rather than:
+> custom Atlas application/platform.
+
+COV-004 closes the architecture-experiment sequence. Any next horizon should be a real research/release programme or preservation, not COV-005 by default.
+
 At every horizon boundary, review evidence for **and against** the thesis, compare the strongest baseline, consider whether the artifact can shrink, and explicitly choose **continue / simplify / redirect / stop** before creating the next horizon.

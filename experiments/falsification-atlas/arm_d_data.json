@@ -1,0 +1,355 @@
+{
+  "experiment": "COV-004",
+  "arm": "D",
+  "release_id": "COV-004-arm-d-v1",
+  "note": "Experiment-only display geometry. Same evidence and geometry are used by baseline and Atlas artifacts. No display geometry is canonical.",
+  "world_outline": "coarse neutral land outline embedded identically in both HTML artifacts",
+  "targets": [
+    {
+      "id": "cahokia_1200",
+      "name": "Cahokia",
+      "year": 1200,
+      "frame": "node/site",
+      "tier": "C1",
+      "outcome": "materially_disputed",
+      "geometry": {
+        "type": "point",
+        "lon": -90.06,
+        "lat": 38.66,
+        "precision": "site locus / bounded archaeological area; point is display centroid"
+      },
+      "practice": "ritual sacrifice/hierarchical coercion securely supported; slave status disputed",
+      "legal": "",
+      "network": "",
+      "research": "researched; materially disputed",
+      "inference": "site-level only; no citywide prevalence",
+      "sources": [
+        "https://doi.org/10.1002/ajpa.22791"
+      ]
+    },
+    {
+      "id": "kilwa_1400",
+      "name": "Kilwa Kisiwani",
+      "year": 1400,
+      "frame": "node/site",
+      "tier": "C1",
+      "outcome": "bounded_supported",
+      "geometry": {
+        "type": "point",
+        "lon": 39.52,
+        "lat": -8.96,
+        "precision": "island/urban-site locus"
+      },
+      "practice": "enslaved people supported in Kilwa/nearby archipelago context; local scale unquantified",
+      "legal": "",
+      "network": "Indian Ocean / Swahili network participation supported",
+      "research": "researched; bounded supported",
+      "inference": "site/network claim only; not whole Swahili coast",
+      "sources": [
+        "https://doi.org/10.1080/0067270X.2020.1841978"
+      ]
+    },
+    {
+      "id": "samarkand_1400",
+      "name": "Samarkand",
+      "year": 1400,
+      "frame": "node/site",
+      "tier": "C0",
+      "outcome": null,
+      "geometry": {
+        "type": "point",
+        "lon": 66.96,
+        "lat": 39.65,
+        "precision": "historic urban locus; no historical jurisdiction inferred"
+      },
+      "practice": "",
+      "legal": "",
+      "network": "",
+      "research": "registered; slavery/coercion research not performed",
+      "inference": "none",
+      "sources": []
+    },
+    {
+      "id": "cluny_1100",
+      "name": "Cluny Abbey",
+      "year": 1100,
+      "frame": "institution/estate",
+      "tier": "C1",
+      "outcome": "bounded_supported",
+      "geometry": {
+        "type": "point",
+        "lon": 4.66,
+        "lat": 46.43,
+        "precision": "institutional locus; dependencies extend beyond point"
+      },
+      "practice": "documented institutional unfree servile dependency",
+      "legal": "charters record transfers/status relations; terminology does not equal one universal chattel category",
+      "network": "",
+      "research": "researched; bounded supported",
+      "inference": "institutional relationship, not territorial prevalence",
+      "sources": [
+        "https://deeds.utsc.utoronto.ca/charters/02173067/",
+        "https://deeds.utsc.utoronto.ca/charters/02183976"
+      ]
+    },
+    {
+      "id": "al_azhar_1100",
+      "name": "al-Azhar",
+      "year": 1100,
+      "frame": "institution/estate",
+      "tier": "C1",
+      "outcome": "researched_inconclusive",
+      "geometry": {
+        "type": "point",
+        "lon": 31.26,
+        "lat": 30.05,
+        "precision": "institutional locus in Cairo"
+      },
+      "practice": "target-specific slaveholding/labour not established",
+      "legal": "",
+      "network": "Cairo/Fatimid slavery is context, not al-Azhar practice",
+      "research": "researched; inconclusive",
+      "inference": "institution-specific abstention",
+      "sources": [
+        "https://www.jstor.org/stable/jj.33382246"
+      ]
+    },
+    {
+      "id": "shaolin_1000",
+      "name": "Shaolin Monastery",
+      "year": 1000,
+      "frame": "institution/estate",
+      "tier": "C0",
+      "outcome": null,
+      "geometry": {
+        "type": "point",
+        "lon": 112.94,
+        "lat": 34.51,
+        "precision": "monastic-site locus; holdings not represented"
+      },
+      "practice": "",
+      "legal": "",
+      "network": "",
+      "research": "registered; slavery/coercion research not performed",
+      "inference": "none",
+      "sources": []
+    },
+    {
+      "id": "silk_road_700",
+      "name": "Silk Road network",
+      "year": 700,
+      "frame": "mobile/network",
+      "tier": "C1",
+      "outcome": "bounded_supported",
+      "geometry": {
+        "type": "route",
+        "paths": [
+          [
+            [
+              108.94,
+              34.34
+            ],
+            [
+              94.66,
+              40.14
+            ],
+            [
+              75.99,
+              39.47
+            ],
+            [
+              66.96,
+              39.65
+            ],
+            [
+              62.18,
+              37.66
+            ]
+          ]
+        ],
+        "precision": "schematic corridor through selected documented hubs; network shifted over time"
+      },
+      "practice": "",
+      "legal": "Tang legal context is node/imperial context, not one network-wide regime",
+      "network": "Turfan/Sogdian evidence supports movement and trade in enslaved people on network segments",
+      "research": "researched; bounded supported",
+      "inference": "network participation only; no territorial-practice fill along route",
+      "sources": [
+        "https://isaw.nyu.edu/events/archive/2015/rostovtzeff-silk-roads-lecture-1"
+      ]
+    },
+    {
+      "id": "viking_900",
+      "name": "Viking trade network",
+      "year": 900,
+      "frame": "mobile/network",
+      "tier": "C1",
+      "outcome": "bounded_supported",
+      "geometry": {
+        "type": "route",
+        "paths": [
+          [
+            [
+              -6.26,
+              53.35
+            ],
+            [
+              8.76,
+              55.33
+            ],
+            [
+              9.57,
+              54.49
+            ],
+            [
+              17.55,
+              59.33
+            ],
+            [
+              30.3,
+              59.95
+            ]
+          ]
+        ],
+        "precision": "schematic maritime/river trading network; not a border"
+      },
+      "practice": "",
+      "legal": "free/unfree status categories were fluid and regionally varied",
+      "network": "captive-taking, enslavement, transport and sale recur across Viking trading/raiding network",
+      "research": "researched; bounded supported",
+      "inference": "network participation; not one homogeneous Viking territorial slave society",
+      "sources": [
+        "https://doi.org/10.1093/oso/9780197532355.001.0001"
+      ]
+    },
+    {
+      "id": "trans_saharan_1300",
+      "name": "Trans-Saharan trade network",
+      "year": 1300,
+      "frame": "mobile/network",
+      "tier": "C0",
+      "outcome": null,
+      "geometry": {
+        "type": "route",
+        "paths": [
+          [
+            [
+              -4.28,
+              31.28
+            ],
+            [
+              -5.5,
+              23.5
+            ],
+            [
+              -3,
+              16.77
+            ]
+          ]
+        ],
+        "precision": "schematic corridor; routes shifted"
+      },
+      "practice": "",
+      "legal": "",
+      "network": "",
+      "research": "registered; slavery/coercion research not performed",
+      "inference": "none",
+      "sources": []
+    },
+    {
+      "id": "samoa_1700",
+      "name": "Samoan communities",
+      "year": 1700,
+      "frame": "region/community",
+      "tier": "C1",
+      "outcome": "materially_disputed",
+      "geometry": {
+        "type": "fuzzy",
+        "boxes": [
+          [
+            -173.2,
+            -14.2,
+            -171,
+            -13.2
+          ]
+        ],
+        "precision": "fuzzy archipelago/community frame; not a political boundary"
+      },
+      "practice": "later sources disagree/are temporally remote; 1700 institution unresolved",
+      "legal": "",
+      "network": "",
+      "research": "researched; materially disputed",
+      "inference": "no single polity or territorial prevalence",
+      "sources": [
+        "https://books.google.com/books/about/Old_Samoa.html?id=98IRAAAAYAAJ",
+        "https://d-place.org/valuesets/EA070-Ii1"
+      ]
+    },
+    {
+      "id": "andaman_1800",
+      "name": "Andaman Islands communities",
+      "year": 1800,
+      "frame": "region/community",
+      "tier": "C1",
+      "outcome": "bounded_supported",
+      "geometry": {
+        "type": "fuzzy",
+        "boxes": [
+          [
+            92,
+            10,
+            93.2,
+            13.6
+          ]
+        ],
+        "precision": "fuzzy island-group/community frame; multiple peoples"
+      },
+      "practice": "indigenous internal slavery unassessed",
+      "legal": "colonial capture/confinement is external, not indigenous regime",
+      "network": "British kidnapping/confinement supports bounded external colonial coercion",
+      "research": "researched; bounded supported",
+      "inference": "external encounter only; no island-wide indigenous practice",
+      "sources": [
+        "https://doi.org/10.1016/j.jhg.2010.07.001"
+      ]
+    },
+    {
+      "id": "inuit_arctic_1800",
+      "name": "Inuit Arctic communities",
+      "year": 1800,
+      "frame": "region/community",
+      "tier": "C0",
+      "outcome": null,
+      "geometry": {
+        "type": "fuzzy",
+        "boxes": [
+          [
+            -170,
+            66,
+            -145,
+            73
+          ],
+          [
+            -135,
+            62,
+            -60,
+            76
+          ],
+          [
+            -55,
+            62,
+            -20,
+            78
+          ]
+        ],
+        "precision": "multiple broad display regions; no single society or boundary"
+      },
+      "practice": "",
+      "legal": "",
+      "network": "",
+      "research": "registered; slavery/coercion research not performed",
+      "inference": "none",
+      "sources": []
+    }
+  ]
+}

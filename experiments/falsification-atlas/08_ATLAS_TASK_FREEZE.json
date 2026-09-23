@@ -1,0 +1,44 @@
+{
+  "experiment": "COV-004",
+  "arm": "D",
+  "frozen_before_arm_b_subject_outcomes": "2026-09-23",
+  "tasks": [
+    {
+      "id": "D1",
+      "family": "spatial_locus_mismatch",
+      "target": "Kilwa Kisiwani",
+      "question": "At 1400, what geographic extent can evidence tied to Kilwa itself safely support, and what wider Swahili-coast inference must remain unmade?"
+    },
+    {
+      "id": "D2",
+      "family": "network_vs_territory",
+      "target": "Silk Road network",
+      "question": "What can be shown about slavery/coercion evidence associated with a transregional network without converting route participation into territorial practice along the entire network?"
+    },
+    {
+      "id": "D3",
+      "family": "selected_year_geometry_uncertainty",
+      "target": "Samoan communities",
+      "question": "At 1700, what can safely be visualized for a community/archipelago frame whose historical social and spatial boundaries are not one resolved polity polygon?"
+    },
+    {
+      "id": "D4",
+      "family": "research_coverage_without_false_absence",
+      "target_group": [
+        "Samarkand",
+        "Shaolin Monastery",
+        "Trans-Saharan trade network",
+        "Inuit Arctic communities"
+      ],
+      "question": "Which registered targets remain C0-only/unresearched, and can that state be seen spatially without blank areas implying 'no slavery'?"
+    },
+    {
+      "id": "D5",
+      "family": "single_target_negative_control",
+      "target": "Cluny Abbey",
+      "question": "What is the strongest bounded conclusion for this one institution at 1100, and does a map add anything material beyond a competent register entry?"
+    }
+  ],
+  "baseline": "compact register + conventional static map/GIS with identical geometries, year/frame/outcome filters and citations",
+  "atlas": "same evidence/geometries plus explicit claim layers, inference extent, research state, geometry certainty and selected-year applicability"
+}

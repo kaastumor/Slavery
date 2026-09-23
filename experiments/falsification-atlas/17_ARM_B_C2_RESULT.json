@@ -1,0 +1,42 @@
+{
+  "experiment": "COV-004",
+  "arm": "B-C2",
+  "result": "2_OF_4_MATERIAL",
+  "packets": [
+    {
+      "target_id": "cahokia_1200",
+      "target_label": "Cahokia",
+      "material_gain": false,
+      "conclusion": "Deeper review reinforces that Mound 72 securely supports ritual sacrifice/hierarchy more strongly than slave status. Recent bioarchaeological reinterpretation further weakens older captive/non-local assumptions but does not create a new bounded conclusion beyond the already disputed C1 state.",
+      "gain": "No material C1 correction; dispute was already explicit."
+    },
+    {
+      "target_id": "samoa_1700",
+      "target_label": "Samoan communities",
+      "material_gain": false,
+      "conclusion": "Deeper review does not resolve the temporal gap between late ethnographic descriptions of conquered status and the 1700 anchor, nor the conflict with later comparative coding. Oral/Samoan-language evidence remains underrepresented.",
+      "gain": "No material C1 correction; retrospective-category uncertainty remains the decisive boundary."
+    },
+    {
+      "target_id": "viking_900",
+      "target_label": "Viking trade network",
+      "material_gain": true,
+      "conclusion": "Stefan Brink's 2021 synthesis materially sharpens the network/territory distinction: Scandinavian actors were major participants in European slave trading, while the social boundary between free and unfree was fluid and labeling Viking-Age Scandinavia as a unitary 'slave society' is probably misleading.",
+      "gain": "Material inference-boundary improvement: strong slave-trade network participation is explicitly separated from a territorial/societal classification.",
+      "new_source": {
+        "title": "Thraldom: A History of Slavery in the Viking Age",
+        "author": "Stefan Brink",
+        "year": 2021,
+        "url": "https://doi.org/10.1093/oso/9780197532355.001.0001"
+      }
+    },
+    {
+      "target_id": "cluny_1100",
+      "target_label": "Cluny Abbey",
+      "material_gain": true,
+      "conclusion": "Deeper status-history review materially sharpens the servus/ancilla boundary: the Cluny charters directly evidence transferable/hereditary servile dependence, but medieval Mâconnais scholarship disputes simple equivalence between charter labels, chattel slavery and later serfdom.",
+      "gain": "Material category/inference improvement: institutional unfreedom is secure while the slavery/serfdom normalization remains explicitly unresolved."
+    }
+  ],
+  "interpretation": "Selective C2 remains useful outside polity targets, but only half of these escalations materially improve the compact row. Deep packets should remain triggered rather than universal."
+}

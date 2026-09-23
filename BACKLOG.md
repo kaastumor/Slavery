@@ -9,94 +9,89 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# IDLE / PRESERVATION — COV-003 completed with TIERED SURVIVE
+# IDLE / SPONSOR DECISION BOUNDARY — COV-004 completed with METHOD SURVIVE
 
-COV-003 / issue #155 tested the systematic-coverage architecture left open by ADV-001 / D-068.
+COV-004 / issue #157 was the final architecture-falsification gate in the COV-001→004 sequence.
 
-Final disposition:
+Formal disposition:
 
-> **TIERED SURVIVE — architecture validated narrowly; STRONG batch-economy result rejected; no comprehensive ingestion authorized.**
+> **METHOD SURVIVE.**
+
+Product interpretation:
+
+> **A boring map/register Atlas survives; bespoke Atlas-specific semantic machinery still does not beat the strongest ordinary map + register baseline.**
 
 Durable result:
-- `experiments/coverage-tiered/13_FINAL_RESULT.md`
-- HC-008 in `docs/25_PROJECT_HEALTH.md`
-- D-070 in `docs/08_DECISIONS_LOG.md`
+- `experiments/falsification-atlas/27_FINAL_RESULT.md`
+- HC-009 in `docs/25_PROJECT_HEALTH.md`
+- D-072 in `docs/08_DECISIONS_LOG.md`
 
 ## What survived
 
-A tiered research architecture:
+### Research method
+- C0 broad target/research-state registration;
+- C1 compact bounded research;
+- selective C2 depth;
+- source-quality failure as an explicit escalation/review trigger;
+- source-to-claim dependency tracking;
+- immutable/as-of releases and explicit later review events.
 
-- **C0 — broad target/research-state register**
-  - may register a target without making a slavery conclusion;
-  - keeps unresearched, identity-unreviewed, mismatch and ambiguity explicit;
-  - supports pre-research identity/time QA.
+### Non-polity coverage
+The experimental claim model successfully represented:
+- sites/nodes;
+- institutions/estates;
+- mobile/trading networks;
+- fuzzy community/region frames;
 
-- **C1 — compact researched coverage**
-  - bounded proposition + abstention;
-  - law/practice and network/territorial boundaries;
-  - handbook coverage;
-  - unresolved reason;
-  - recoverable source references.
+without forcing them into polity polygons.
 
-- **C2 — selective deep packet**
-  - only when a frozen ambiguity/risk trigger earns it;
-  - C2 materially improved 2/3 escalated targets.
+### Real update mechanics
+A frozen 2015-as-of test produced **3/6 genuine 2016–2026 evidence events**. Old snapshots remained auditable while later evidence could be represented as release-bound review/update state.
 
-- **immutable/as-of releases + review ledger**
-  - old experiment snapshots remain unchanged;
-  - later review tasks are explicit.
+### Atlas presentation
+A conventional world map + evidence register remains useful and compatible with:
+- points;
+- routes;
+- fuzzy/unresolved regions;
+- visible C0/unresearched targets;
+- citations and bounded claims.
 
-- **source dependency tracking**
-  - shared sources must record dependent rows so a source-level correction can propagate to the correct review scope.
+That is still a legitimate **Historical Slavery Atlas** presentation.
 
 ## What did not survive
 
-The strong batch-economy claim.
+### C1 safety without stronger QC
+Masked replay found **1/6** material false negatives among supposedly non-escalated C1 rows: Chandela's positive event proposition exceeded the quality of its decisive citation.
 
-COV-003 C1 used:
-- 22 material cell-source links;
-- 10 unique sources;
-- source-reuse factor **2.20** versus COV-002's 1.00;
-- shared sources materially informed 4/4 cells in two of three batches.
+Therefore production/public C1 requires source-quality escalation/review.
 
-But **12/12 C1 targets still required target-specific follow-up search**.
+### Bespoke Atlas UI
+The project-specific Atlas inspector materially beat the strong conventional map+register baseline on **0/4** frozen spatial/temporal tasks.
 
-Therefore source reuse is real, but historian-effort savings are not demonstrated strongly enough to justify systematic global ingestion.
-
-The post-freeze maintenance sample also produced no genuinely new accepted source in 3/3 searches, so positive update economics remain untested.
-
-## Important adversarial findings
-
-- shared-source reuse creates **correlated review risk** as well as reuse;
-- C2 caught a temporal/category overstatement in the shared early-China framing, putting four dependent rows into next-release review scope;
-- one Chandela event citation is below the project's desired production-grade specialist-source standard and must remain a review item rather than being silently upgraded;
-- a direct Cambridge/Palgrave coverage proxy would have selected 0/12 C1 targets, despite four bounded-supported results and eight meaningful researched abstentions;
-- 2/6 preregistered C0 identity probes found a mismatch or ambiguity.
+The map survives. Extra custom semantic UI does not currently earn separate infrastructure.
 
 ## Current execution state
 
-**IDLE / PRESERVATION.**
+**IDLE.**
 
-COV-003 keeps the systematic-coverage thesis alive in a specific form. It does **not** authorize the next scale step.
+COV-004 deliberately creates no fifth architecture experiment.
 
-Any future validation requires explicit sponsor authorization and should test something COV-003 did not:
-- non-polity target frames;
-- preregistered source/historiographic-coherent batches;
-- independent or multi-reviewer evaluation;
-- a real positive post-release evidence update;
-- stronger source-quality gates.
+The next project-level choice is now sponsor-level:
+
+1. preserve the project at the current evidence/method state; or
+2. explicitly authorize the first **real lean systematic coverage programme** using C0/C1/selective-C2 plus an ordinary map/register atlas surface.
+
+If option 2 is authorized, it must be operated as a research/release programme with QC and changelogs, not another architecture experiment and not a bulk automated ingestion.
 
 ## Still not authorized
 
-- comprehensive global slavery/coercion ingestion;
-- global C1 completion;
+- comprehensive world-history C1 completion;
 - global C2 completion;
-- another autonomous scale experiment;
-- canonical release changes;
-- M2 production migration;
-- Atlas/frontend/map/platform revival;
 - automated mass research;
-- claims of literal human-history completeness.
+- production database/schema migration from these experimental rows;
+- bespoke Atlas application/platform rebuild;
+- claims of literal completeness;
+- replacing specialist scholarship or specialist datasets.
 
 ---
 

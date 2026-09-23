@@ -1,0 +1,174 @@
+{
+  "selection_rule": "Within each experimental frame class, take the three smallest SHA-256 values of COV-004-NONPOLITY|frame_class|candidate_id. Then take two smallest SHA-256 values of COV-004-C1|candidate_id for C1.",
+  "note": "Candidate pool was curated from general historical/gazetteer/reference knowledge before slavery/coercion evidence inspection. It is an experimental challenge frame, not a representative world sample or canonical ontology.",
+  "classes": {
+    "node_site": [
+      [
+        "great_zimbabwe_1400",
+        "Great Zimbabwe",
+        1400
+      ],
+      [
+        "timbuktu_1500",
+        "Timbuktu",
+        1500
+      ],
+      [
+        "cahokia_1200",
+        "Cahokia",
+        1200
+      ],
+      [
+        "tenochtitlan_1500",
+        "Tenochtitlan",
+        1500
+      ],
+      [
+        "samarkand_1400",
+        "Samarkand",
+        1400
+      ],
+      [
+        "kilwa_1400",
+        "Kilwa Kisiwani",
+        1400
+      ],
+      [
+        "angkor_1200",
+        "Angkor",
+        1200
+      ],
+      [
+        "gao_1500",
+        "Gao",
+        1500
+      ]
+    ],
+    "institution_estate": [
+      [
+        "cluny_1100",
+        "Cluny Abbey",
+        1100
+      ],
+      [
+        "todaiji_800",
+        "Tōdai-ji",
+        800
+      ],
+      [
+        "nalanda_700",
+        "Nalanda Mahavihara",
+        700
+      ],
+      [
+        "karnak_amun_m1000",
+        "Temple of Amun at Karnak",
+        -1000
+      ],
+      [
+        "great_lavra_1100",
+        "Great Lavra, Mount Athos",
+        1100
+      ],
+      [
+        "shaolin_1000",
+        "Shaolin Monastery",
+        1000
+      ],
+      [
+        "ise_1000",
+        "Ise Grand Shrine",
+        1000
+      ],
+      [
+        "al_azhar_1100",
+        "al-Azhar Mosque/university",
+        1100
+      ]
+    ],
+    "mobile_network": [
+      [
+        "silk_road_700",
+        "Silk Road network",
+        700
+      ],
+      [
+        "trans_saharan_1300",
+        "Trans-Saharan trade network",
+        1300
+      ],
+      [
+        "indian_ocean_1400",
+        "Indian Ocean trade network",
+        1400
+      ],
+      [
+        "hanseatic_1400",
+        "Hanseatic League network",
+        1400
+      ],
+      [
+        "viking_900",
+        "Viking trade network",
+        900
+      ],
+      [
+        "mongol_yam_1300",
+        "Mongol Yam/postal network",
+        1300
+      ],
+      [
+        "swahili_1400",
+        "Swahili maritime trade network",
+        1400
+      ],
+      [
+        "incense_m100",
+        "Incense Route network",
+        -100
+      ]
+    ],
+    "region_community": [
+      [
+        "sapmi_1600",
+        "Sápmi / Sámi communities",
+        1600
+      ],
+      [
+        "kalahari_san_1800",
+        "Kalahari San communities",
+        1800
+      ],
+      [
+        "inuit_arctic_1800",
+        "Inuit Arctic communities",
+        1800
+      ],
+      [
+        "samoa_1700",
+        "Samoan communities",
+        1700
+      ],
+      [
+        "maori_1700",
+        "Māori communities in Aotearoa",
+        1700
+      ],
+      [
+        "yaghan_1800",
+        "Yaghan communities, Tierra del Fuego",
+        1800
+      ],
+      [
+        "andaman_1800",
+        "Andaman Islands communities",
+        1800
+      ],
+      [
+        "ifugao_1700",
+        "Ifugao communities, northern Luzon",
+        1700
+      ]
+    ]
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "experiment": "COV-004",
+  "arm": "B",
+  "rows": [
+    {
+      "target_id": "cahokia_1200",
+      "target_label": "Cahokia",
+      "anchor_year": 1200,
+      "frame_class": "node_site",
+      "geometry_type": "bounded_area",
+      "geometry_precision": "archaeological settlement/site extent; modern heritage boundary is only a display proxy",
+      "territorial_inference_allowed": false,
+      "coverage_outcome": "materially_disputed",
+      "bounded_conclusion": "Cahokia's Mound 72 provides strong evidence of hierarchical violence and ritual sacrifice. Some scholarship interprets sacrificed low-status individuals as enslaved, but bioarchaeological work undermines older assumptions that key mass-burial groups were non-local captives; slave status is therefore not securely established for the site at c.1200.",
+      "required_abstention": "Do not convert sacrifice, poor health, hierarchy, or presumed foreign origin into a slavery-status claim; do not generalize Mound 72 to citywide prevalence.",
+      "law_practice_note": "",
+      "network_territorial_warning": "",
+      "evidence_locus_type": "archaeological mortuary context within Cahokia",
+      "allowed_inference_types": [
+        "site-level coercive hierarchy",
+        "ritualized killing",
+        "disputed status interpretation"
+      ],
+      "cambridge_coverage": "adjacent",
+      "palgrave_coverage": "adjacent",
+      "unresolved_reason": "Whether particular Mound 72 individuals were enslaved remains interpretively disputed; the archaeological evidence establishes sacrifice more securely than legal/social slave status.",
+      "sources": [
+        {
+          "title": "Cahokia: Urbanization, Metabolism, and Collapse",
+          "author": "Timothy R. Pauketat et al. / Frontiers synthesis",
+          "year": 2019,
+          "url": "https://www.frontiersin.org/journals/sustainable-cities/articles/10.3389/frsc.2019.00006/full",
+          "role": "specialist_synthesis",
+          "direction": "supports_slave_interpretation"
+        },
+        {
+          "title": "New dental and isotope evidence of biological distance and place of origin for mass burial groups at Cahokia's Mound 72",
+          "author": "Andrew R. Thompson; Kristin M. Hedman; Philip A. Slater",
+          "year": 2015,
+          "url": "https://doi.org/10.1002/ajpa.22791",
+          "role": "specialist_article",
+          "direction": "challenges_captive_nonlocal_interpretation"
+        }
+      ],
+      "access_language_warning": "English-accessible bounded packet; slave-status interpretation remains archaeological/historiographic rather than directly documented."
+    },
+    {
+      "target_id": "kilwa_1400",
+      "target_label": "Kilwa Kisiwani",
+      "anchor_year": 1400,
+      "frame_class": "node_site",
+      "geometry_type": "point_or_bounded_site",
+      "geometry_precision": "Kilwa island/urban locus; not the whole Swahili coast",
+      "territorial_inference_allowed": false,
+      "coverage_outcome": "bounded_supported",
+      "bounded_conclusion": "Near-anchor written and archaeological scholarship supports the presence of enslaved people in the Kilwa urban/archipelago context and a longer Swahili-coast history of slaving. The scale and exact mechanics of slave trading at Kilwa around 1400 remain poorly resolved.",
+      "required_abstention": "Do not infer that all Swahili-coast urban life or trade was slave-based, and do not treat proposed holding/market structures as proven slave-market facilities.",
+      "law_practice_note": "",
+      "network_territorial_warning": "Kilwa's Indian Ocean connectivity and evidence of enslaved people are network/site claims; they do not establish territorial prevalence along the wider Swahili coast.",
+      "evidence_locus_type": "port-city / island / nearby archipelago archaeology and written travel context",
+      "allowed_inference_types": [
+        "site-level presence",
+        "network participation",
+        "bounded local practice"
+      ],
+      "cambridge_coverage": "adjacent",
+      "palgrave_coverage": "adjacent",
+      "unresolved_reason": "Pre-sixteenth-century scale and local prevalence are not quantifiable from the bounded evidence; some archaeological slave-market interpretations remain tentative.",
+      "sources": [
+        {
+          "title": "Slave trade and slavery on the Swahili Coast, 1500–1750",
+          "author": "Thomas Vernet",
+          "year": 2009,
+          "url": "https://www.researchgate.net/publication/281752314_Slave_trade_and_slavery_on_the_swahili_coast",
+          "role": "specialist_chapter",
+          "direction": "context_and_near_anchor_written_evidence"
+        },
+        {
+          "title": "No such thing as invisible people: toward an archaeology of slavery at the fifteenth-century Swahili site of Songo Mnara",
+          "author": "Henriette Rødland et al.",
+          "year": 2020,
+          "url": "https://doi.org/10.1080/0067270X.2020.1841978",
+          "role": "specialist_article",
+          "direction": "supports_archipelago_context_and_qualifies_archaeology"
+        }
+      ],
+      "access_language_warning": "Bounded English-accessible packet; much premodern Swahili slavery evidence is indirect or archaeologically ambiguous."
+    },
+    {
+      "target_id": "cluny_1100",
+      "target_label": "Cluny Abbey",
+      "anchor_year": 1100,
+      "frame_class": "institution_estate",
+      "geometry_type": "point_or_estate_locus",
+      "geometry_precision": "Cluny institutional locus plus documented dependent properties; no single bounded territorial jurisdiction",
+      "territorial_inference_allowed": false,
+      "coverage_outcome": "bounded_supported",
+      "bounded_conclusion": "Cluniac charters around the late eleventh and early twelfth centuries directly record persons designated servi and ancillae being donated to, attached to, or becoming property/dependents of Cluniac churches and monks. This securely supports institutional unfree servile dependency around 1100.",
+      "required_abstention": "Do not automatically translate every medieval servus/ancilla as chattel slave, and do not infer a single prevalence rate or uniform status across all Cluniac lands.",
+      "law_practice_note": "Charters document formal transfers/status relations; they do not by themselves recover lived conditions or a uniform legal category across all estates.",
+      "network_territorial_warning": "",
+      "evidence_locus_type": "institutional charters and dependent church/estate relationships",
+      "allowed_inference_types": [
+        "institutional unfree dependency",
+        "documented transfer/status"
+      ],
+      "cambridge_coverage": "adjacent",
+      "palgrave_coverage": "adjacent",
+      "unresolved_reason": "Terminological boundary between slavery, serfdom, and other hereditary servile dependence requires contextual interpretation.",
+      "sources": [
+        {
+          "title": "Recueil des Chartes de l'Abbaye de Cluny, charter 02173067",
+          "author": "Cluny cartulary / CCE",
+          "year": null,
+          "url": "https://deeds.utsc.utoronto.ca/charters/02173067/",
+          "role": "primary_charter",
+          "direction": "supports_person_transfer"
+        },
+        {
+          "title": "Recueil des Chartes de l'Abbaye de Cluny, charter 02183976",
+          "author": "Cluny cartulary / TELMA/CCE",
+          "year": null,
+          "url": "https://deeds.utsc.utoronto.ca/charters/02183976",
+          "role": "primary_charter",
+          "direction": "supports_servi_ancillae_status"
+        },
+        {
+          "title": "Review/discussion of Georges Duby's and Guy Bois's Mâconnais slavery analysis",
+          "author": "University of Münster Cluny project",
+          "year": 1994,
+          "url": "https://www.uni-muenster.de/Fruehmittelalter/Projekte/Cluny/BiblClun/bmr-002.html",
+          "role": "specialist_review",
+          "direction": "context"
+        }
+      ],
+      "access_language_warning": "Latin charter terminology requires medieval social-status interpretation; primary wording is preserved rather than silently normalized."
+    },
+    {
+      "target_id": "al_azhar_1100",
+      "target_label": "al-Azhar Mosque/university",
+      "anchor_year": 1100,
+      "frame_class": "institution_estate",
+      "geometry_type": "point",
+      "geometry_precision": "institutional locus in Fatimid Cairo only",
+      "territorial_inference_allowed": false,
+      "coverage_outcome": "researched_inconclusive",
+      "bounded_conclusion": "Slavery was deeply embedded in Fatimid and eleventh–twelfth-century Cairo, but the bounded packet does not establish slave ownership, slave labour, or a slavery institution specifically within al-Azhar at c.1100.",
+      "required_abstention": "Do not infer al-Azhar institutional slaveholding from slavery in Fatimid armies, Cairo households, markets, or from the fact that al-Azhar was founded by the Fatimid conqueror Jawhar.",
+      "law_practice_note": "",
+      "network_territorial_warning": "Cairo-wide slave markets and imperial slave recruitment are contextual layers, not al-Azhar institutional practice.",
+      "evidence_locus_type": "institutional point within a slaveholding urban/imperial context",
+      "allowed_inference_types": [
+        "institution-specific abstention",
+        "urban contextual connection"
+      ],
+      "cambridge_coverage": "adjacent",
+      "palgrave_coverage": "adjacent",
+      "unresolved_reason": "No target-specific al-Azhar ownership/labour evidence was established within the bounded packet.",
+      "sources": [
+        {
+          "title": "Slavery and the Jews of Medieval Egypt: A History",
+          "author": "Craig Perry",
+          "year": 2026,
+          "url": "https://www.jstor.org/stable/jj.33382246",
+          "role": "specialist_monograph",
+          "direction": "supports_cairo_context_not_institution"
+        }
+      ],
+      "access_language_warning": "Geniza-based Cairo evidence is rich but does not automatically identify al-Azhar as slaveholding."
+    },
+    {
+      "target_id": "silk_road_700",
+      "target_label": "Silk Road network",
+      "anchor_year": 700,
+      "frame_class": "mobile_network",
+      "geometry_type": "route_network",
+      "geometry_precision": "schematic changing network of corridors and hubs; no single fixed line",
+      "territorial_inference_allowed": false,
+      "coverage_outcome": "bounded_supported",
+      "bounded_conclusion": "Sixth- and seventh-century Turfan evidence documents Sogdian and other merchants buying, selling, and travelling with enslaved people on an identifiable Silk Road segment, supporting slavery/slave-trade participation in the network around the 700 anchor.",
+      "required_abstention": "Do not paint the whole Silk Road as a slave-trading territory or infer equal incidence along every corridor; the evidence is concentrated in specific hubs, documents, and travelers.",
+      "law_practice_note": "Tang legal restrictions on enslaving free imperial subjects may have shaped demand for foreign enslaved people, but this is not a network-wide legal regime.",
+      "network_territorial_warning": "This is explicitly a route/network participation claim, not territorial practice for every polity crossed by the network.",
+      "evidence_locus_type": "Turfan oasis documents and transregional traveler/merchant network",
+      "allowed_inference_types": [
+        "network participation",
+        "node-specific trade",
+        "movement of enslaved people"
+      ],
+      "cambridge_coverage": "adjacent",
+      "palgrave_coverage": "adjacent",
+      "unresolved_reason": "The network has no singular boundary or uniform practice; quantitative claims from small Turfan document samples cannot be generalized network-wide.",
+      "sources": [
+        {
+          "title": "A Slave Road? Sogdian Merchants and Foreign Slaves at Turfan",
+          "author": "Jonathan K. Skaff",
+          "year": 2016,
+          "url": "https://isaw.nyu.edu/events/archive/2015/rostovtzeff-silk-roads-lecture-1",
+          "role": "specialist_research_lecture",
+          "direction": "supports_turfan_segment"
+        },
+        {
+          "title": "Silk Roads or Slave Roads? Slavery in Tang Dynasty Caravans",
+          "author": "Jonathan K. Skaff",
+          "year": 2019,
+          "url": "https://www.censcakmu.org/abstracts_file/Jonahan.pdf",
+          "role": "specialist_conference_paper",
+          "direction": "supports_network_segment"
+        }
+      ],
+      "access_language_warning": "Evidence is strongest for documented Turfan/Tang frontier segments; route-wide synthesis would require wider multilingual work."
+    },
+    {
+      "target_id": "viking_900",
+      "target_label": "Viking trade network",
+      "anchor_year": 900,
+      "frame_class": "mobile_network",
+      "geometry_type": "route_network",
+      "geometry_precision": "schematic maritime/river/trading network varying by decade",
+      "territorial_inference_allowed": false,
+      "coverage_outcome": "bounded_supported",
+      "bounded_conclusion": "Ninth-century and broader Viking-Age evidence supports captive-taking, enslavement, transport, and sale as recurring components of Viking raiding and trading networks, including Dublin, Birka, Hedeby and related routes.",
+      "required_abstention": "Do not treat 'Vikings' as one territorial society, infer uniform household slavery across all Scandinavian regions, or map every Viking route as equally involved in slave trading.",
+      "law_practice_note": "",
+      "network_territorial_warning": "The strongest claim is network/activity participation; individual port and territorial practice require separate evidence.",
+      "evidence_locus_type": "mobile raiding/trading networks and documented market nodes",
+      "allowed_inference_types": [
+        "network participation",
+        "captive movement",
+        "market-node involvement"
+      ],
+      "cambridge_coverage": "direct",
+      "palgrave_coverage": "adjacent",
+      "unresolved_reason": "The archaeology of sale/holding spaces is often indirect and the network has no single territorial boundary.",
+      "sources": [
+        {
+          "title": "The Slave Trade of Dublin, Ninth to Twelfth Centuries",
+          "author": "Poul Holm",
+          "year": 1986,
+          "url": "https://doi.org/10.1484/J.Peri.3.139",
+          "role": "specialist_article",
+          "direction": "supports_ninth_century_network"
+        },
+        {
+          "title": "The slave markets of the Viking world: comparative perspectives on an 'invisible archaeology'",
+          "author": "Ben Raffield",
+          "year": 2019,
+          "url": "https://doi.org/10.1080/0144039X.2019.1592976",
+          "role": "specialist_article",
+          "direction": "supports_and_qualifies_network"
+        }
+      ],
+      "access_language_warning": "Literary, annalistic, and archaeological source traditions are uneven across network regions."
+    },
+    {
+      "target_id": "samoa_1700",
+      "target_label": "Samoan communities",
+      "anchor_year": 1700,
+      "frame_class": "region_community",
+      "geometry_type": "fuzzy_region",
+      "geometry_precision": "archipelago/community frame; historical community boundaries are not a single resolved polygon",
+      "territorial_inference_allowed": false,
+      "coverage_outcome": "materially_disputed",
+      "bounded_conclusion": "Later ethnographic writing preserves a Samoan category of conquered people (tangata taua) whose condition was described as little better than slavery, while twentieth-century comparative coding records 'absence of slavery.' These retrospective sources do not securely resolve the institution or its prevalence at c.1700.",
+      "required_abstention": "Do not back-project nineteenth- or twentieth-century ethnographic classification unchanged to 1700, and do not equate chiefly/kin obligations, conquered status, or later plantation indenture with one slavery category.",
+      "law_practice_note": "",
+      "network_territorial_warning": "",
+      "evidence_locus_type": "retrospective ethnographic descriptions across Samoan communities",
+      "allowed_inference_types": [
+        "category dispute",
+        "retrospective evidence boundary",
+        "research abstention"
+      ],
+      "cambridge_coverage": "none",
+      "palgrave_coverage": "none",
+      "unresolved_reason": "The accessible evidence is retrospective and internally difficult to reconcile; target-year institutional continuity is not established.",
+      "sources": [
+        {
+          "title": "Old Samoa, or, Flotsam and Jetsam from the Pacific Ocean",
+          "author": "John B. Stair",
+          "year": 1897,
+          "url": "https://books.google.com/books/about/Old_Samoa.html?id=98IRAAAAYAAJ",
+          "role": "historical_ethnography",
+          "direction": "supports_conquered_status_slave_like_description"
+        },
+        {
+          "title": "American Samoans / Slavery: type (Ethnographic Atlas)",
+          "author": "D-PLACE / Murdock et al.",
+          "year": 1920,
+          "url": "https://d-place.org/valuesets/EA070-Ii1",
+          "role": "structured_ethnographic_dataset",
+          "direction": "challenges_later_classification"
+        }
+      ],
+      "access_language_warning": "Both principal classifications are much later than 1700; oral history and Samoan-language scholarship are underrepresented."
+    },
+    {
+      "target_id": "andaman_1800",
+      "target_label": "Andaman Islands communities",
+      "anchor_year": 1800,
+      "frame_class": "region_community",
+      "geometry_type": "fuzzy_region",
+      "geometry_precision": "island-group/community frame containing multiple distinct peoples; no single indigenous polity",
+      "territorial_inference_allowed": false,
+      "coverage_outcome": "bounded_supported",
+      "bounded_conclusion": "British activity in the Andamans from the late eighteenth century included the kidnapping and confinement of indigenous islanders; this supports a bounded external-colonial captivity/coercion claim around the 1800 anchor.",
+      "required_abstention": "Do not convert British kidnapping/confinement into evidence that Andamanese communities practiced internal slavery, and do not collapse multiple island peoples into one society.",
+      "law_practice_note": "Colonial capture/confinement is an external coercive relation, not an indigenous legal regime.",
+      "network_territorial_warning": "The evidence concerns colonial encounters and captured individuals rather than island-wide territorial practice.",
+      "evidence_locus_type": "colonial encounter across specific island/coastal contacts",
+      "allowed_inference_types": [
+        "external colonial captivity",
+        "bounded coercive encounter"
+      ],
+      "cambridge_coverage": "none",
+      "palgrave_coverage": "adjacent",
+      "unresolved_reason": "Internal community slavery/status at 1800 remains unassessed; the supported claim is external British captivity.",
+      "sources": [
+        {
+          "title": "Colonization, kidnap and confinement in the Andamans penal colony, 1771–1864",
+          "author": "Clare Anderson",
+          "year": 2011,
+          "url": "https://doi.org/10.1016/j.jhg.2010.07.001",
+          "role": "specialist_article",
+          "direction": "supports_external_captivity"
+        }
+      ],
+      "access_language_warning": "Colonial documentation dominates the accessible record; indigenous perspectives and distinct community histories are unevenly preserved."
+    }
+  ],
+  "gate": {
+    "total_registered": 12,
+    "c1_researched": 8,
+    "expressible_without_polity_pretense": 8,
+    "schema_abandonments": 0,
+    "unresolved_geometry_silently_proxied": 0,
+    "false_territorializations_observed": 0,
+    "result": "PASS",
+    "note": "All eight researched cases are representable as site, institution, network, or fuzzy-community claims while territorial inference remains explicitly prohibited."
+  }
+}

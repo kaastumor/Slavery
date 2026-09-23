@@ -46,14 +46,15 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | A-008 | The full interactive Atlas platform is the best form for the demonstrated contribution | rejected for active expansion | H2 did not show a repeatable material advantage for the corpus/method over a strong baseline, and the thin view did not materially beat the corpus in any case. Preserve existing artifacts; do not expand the platform. |
 | A-009 | A systematically assembled global historical coverage corpus may have value distinct from Atlas representation/UI | survives narrowly / scale economics unresolved | COV-001 found robust material value on 4/6 cross-cell tasks after adversarial downgrade, while specialist narrative and SlaveVoyages remained superior in their domains. The value lives in a flat coverage corpus, not Atlas infrastructure. |
 | A-010 | The value of the flat coverage corpus compounds faster than review/update burden as it scales | current row-by-row workflow not demonstrated; broader systematic-coverage economics remain open | COV-002 found persistent reuse and strong static compression, but its maintenance gate does not discriminate the economics of tiered/versioned/batch-curated coverage. ADV-001 limits the stop to the tested workflow. |
-| A-011 | Tiering breadth, compact evidence and selective depth can make systematic coverage methodologically viable without default deep research for every target | survives narrowly / strong economics unproven | COV-003: C0/C1/selective-C2 architecture survived; C2 improved 2/3 escalations; source reuse rose to 2.20, but 12/12 C1 targets still needed follow-up and positive update economics were not tested. |
+| A-011 | Tiering breadth, compact evidence and selective depth can make systematic coverage methodologically viable without default deep research for every target | survives with stronger QC | COV-004: escalation replay passed at 1/6 false negatives only after adding source-quality failure as a C2/review trigger; non-polity challenge and real update mechanics also survived. |
+| A-012 | A bespoke Atlas evidence inspector adds material value beyond a competent conventional map + tiered register | rejected at current scale | COV-004 Arm D: 0/4 material gains with identical frozen evidence/geometry; no misleading Atlas inferences. Ordinary map/register presentation remains valid. |
 
 ## Standing risk register
 
 | ID | Risk | State | Current control / next pressure |
 | --- | --- | --- | --- |
 | R-001 | False equivalence across unlike coercive systems | medium-high / controlled experimentally | Post-M1 dimensions and adversarial fixtures reduce the risk, but remain experimental for broad publication. No production migration or bulk expansion is authorized. |
-| R-002 | False temporal/spatial precision from map UI | high / active | M2 prototypes solve key truth conditions, but the public preview remains legacy/non-canonical. The next question is whether a thin atlas adds value without reintroducing map rhetoric. |
+| R-002 | False temporal/spatial precision from map UI | high / controlled experimentally | COV-004 non-polity map test preserved points/routes/fuzzy/unresolved framing without false territorialization. Bespoke map semantics failed the value gate; ordinary map/register remains the safer default. |
 | R-003 | Archive/research-density bias mistaken for prevalence | high / controlled | Global-balance strategy; coverage kept separate; no count-derived P-level. |
 | R-004 | Governance/document drift | medium / controlled | Root backlog, gate issues, sanitation and health checks remained synchronized through M1; continue deleting stale state rather than adding parallel systems. |
 | R-005 | Public-repository leakage of secrets/private/sensitive source material or derivatives | high / controlled | SECURITY classification, .gitignore, sanitation, synthetic/public-safe CI fixtures. |
@@ -86,6 +87,7 @@ Record meaningful outcomes, including no-value results.
 | V-014 | Does corpus reuse value grow faster than research/review/update burden, and can a compact register preserve the gain? | **MIXED / STOP TESTED WORKFLOW** | COV-002: reuse survives at N=37 and compact R is ~60.5% of F's static review surface, but the maintenance gate failed under its frozen metric. ADV-001 shows that failure cannot be generalized to all systematic-coverage architectures. | Preserve compact register pattern; no automatic scaling. |
 | V-015 | Does COV-002 justify rejecting systematic comprehensive coverage as a project direction? | **NO — inference overreach** | ADV-001/#153: scope mismatch, non-discriminating 4/6 update gate after three neutral shocks, atom-granularity sensitivity, unmeasured batch/versioned economics and demand-bias risk. | Keep project idle unless a new explicit hypothesis is authorized. |
 | V-016 | Can a C0/C1/C2 tiered, batch-curated, versioned architecture improve the systematic-coverage case? | **TIERED VALUE / survives narrowly** | COV-003: C0 and C1 survive with review controls; C2 materially improved 2/3 escalations; systematic selection retained difficult/non-direct-handbook targets. Strong batch-economy gate failed because 12/12 C1 targets required follow-up. | Preserve tiered architecture; do not infer cheap comprehensive ingestion. |
+| V-017 | Does the tiered method survive direct falsification, non-polity targets, real later scholarship, and a renewed Atlas comparison? | **METHOD SURVIVE** | COV-004: A passed narrowly (1/6 FN), B passed, C passed with 3/6 real updates, bespoke Atlas D failed 0/4 versus strong ordinary map/register. | Move only to preservation or an explicitly authorized lean research/release programme; no more architecture experiments by default. |
 
 ## Health-check history
 
@@ -645,3 +647,70 @@ This supports systematic selection as a bias-resistance function, not as proof t
 No comprehensive-ingestion, successor experiment, production migration or Atlas product horizon follows automatically.
 
 Future validation, if explicitly authorized, should test non-polity frames, historiographically coherent batching, independent/multi-reviewer evaluation, a real positive post-release evidence update and stronger source-quality gates.
+
+
+### HC-009 — COV-004 falsification boundary — 2026-09-23
+
+Decision: **METHOD SURVIVE; RETAIN BORING MAP/REGISTER ATLAS; DO NOT REOPEN BESPOKE ATLAS PLATFORM.**
+
+Durable experiment: `experiments/falsification-atlas/` / issue #157.  
+Direction decision: D-072.
+
+#### Arm A — escalation
+- 1/6 material false negatives among previously non-escalated C1 rows;
+- 2/3 prior C2 escalations remain materially useful;
+- pass at boundary.
+
+Mandatory repair:
+**source-quality failure is an explicit C2/review trigger.**
+
+Independent/multi-reviewer calibration remains required before broad public C1 publication.
+
+#### Arm B — non-polity
+- 12/12 registered without false territorialization;
+- 8/8 researched C1 rows represented without polity pretense;
+- sites, institutions, mobile networks and fuzzy community/region frames all fit experimentally;
+- 0 silent geometry proxies.
+
+This is representability evidence, not a canonical non-polity ontology.
+
+#### Arm C — time-split updates
+Six 2015-as-of rows were frozen before later-literature reveal.
+
+Three genuine 2016–2026 evidence events:
+- Sabaeans — material strengthening/qualification;
+- Champa — corroboration/qualification;
+- Cao — contextual corroboration.
+
+Gate passed.
+
+Versioned release/review mechanics therefore survive a real update test. Maintenance labour economics remain unmeasured.
+
+#### Arm D — Atlas
+Strong conventional map/register baseline versus bespoke semantic Atlas:
+- D1–D4 material bespoke gains: 0/4;
+- D5 parity;
+- no new misleading Atlas inference.
+
+Bespoke Atlas re-entry fails.
+
+But baseline B is already a legitimate thin atlas:
+- world map;
+- points/routes/fuzzy frames;
+- C0 research coverage;
+- evidence register;
+- citations.
+
+Therefore the project does not abandon maps. It abandons the assumption that custom Atlas interaction is itself the contribution.
+
+#### Boundary
+
+The architecture-falsification sequence is complete.
+
+The next decision is not another experiment by default.
+
+Choose:
+- preservation; or
+- explicitly authorize a real lean systematic coverage programme with releases/QC using C0/C1/selective-C2 and ordinary map/GIS presentation.
+
+No comprehensive ingestion or production platform follows automatically.

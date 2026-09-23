@@ -1,0 +1,37 @@
+{
+  "experiment": "COV-004",
+  "arm": "D",
+  "tasks": {
+    "D1": {
+      "baseline": "direct/traceable",
+      "atlas": "direct",
+      "material_atlas_gain": false
+    },
+    "D2": {
+      "baseline": "direct/traceable",
+      "atlas": "direct",
+      "material_atlas_gain": false
+    },
+    "D3": {
+      "baseline": "direct/traceable",
+      "atlas": "direct",
+      "material_atlas_gain": false
+    },
+    "D4": {
+      "baseline": "direct",
+      "atlas": "direct",
+      "material_atlas_gain": false
+    },
+    "D5": {
+      "baseline": "direct",
+      "atlas": "direct",
+      "material_atlas_gain": false,
+      "negative_control": "parity"
+    }
+  },
+  "misleading_atlas_inferences": 0,
+  "material_gains_d1_d4": 0,
+  "required_material_gains": 2,
+  "gate_result": "FAIL",
+  "interpretation": "Bespoke Atlas evidence semantics do not outperform a competent ordinary map + register on the frozen tasks. The boring map/register baseline itself remains a legitimate thin-atlas presentation."
+}

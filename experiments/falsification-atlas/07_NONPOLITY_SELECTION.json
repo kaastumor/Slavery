@@ -1,0 +1,134 @@
+[
+  {
+    "id": "cahokia_1200",
+    "name": "Cahokia",
+    "year": 1200,
+    "frame_class": "node_site",
+    "tier": "C1",
+    "geometry_type": "bounded_area",
+    "geometry_precision": "archaeological/site extent; modern protected boundary is not the historical settlement boundary",
+    "territorial_inference_allowed": false,
+    "neutral_reference": "https://whc.unesco.org/en/list/198"
+  },
+  {
+    "id": "kilwa_1400",
+    "name": "Kilwa Kisiwani",
+    "year": 1400,
+    "frame_class": "node_site",
+    "tier": "C1",
+    "geometry_type": "point_or_bounded_site",
+    "geometry_precision": "island/urban-site locus; not the whole Swahili coast",
+    "territorial_inference_allowed": false,
+    "neutral_reference": "https://whc.unesco.org/en/list/144"
+  },
+  {
+    "id": "samarkand_1400",
+    "name": "Samarkand",
+    "year": 1400,
+    "frame_class": "node_site",
+    "tier": "C0",
+    "geometry_type": "point_or_bounded_site",
+    "geometry_precision": "historic urban locus; present heritage boundary not historical jurisdiction",
+    "territorial_inference_allowed": false,
+    "neutral_reference": "https://whc.unesco.org/en/list/603"
+  },
+  {
+    "id": "cluny_1100",
+    "name": "Cluny Abbey",
+    "year": 1100,
+    "frame_class": "institution_estate",
+    "tier": "C1",
+    "geometry_type": "point_or_estate_locus",
+    "geometry_precision": "institutional/site locus; dependency lands may extend beyond point geometry",
+    "territorial_inference_allowed": false,
+    "neutral_reference": "https://www.britannica.com/topic/Cluny"
+  },
+  {
+    "id": "al_azhar_1100",
+    "name": "al-Azhar Mosque/university",
+    "year": 1100,
+    "frame_class": "institution_estate",
+    "tier": "C1",
+    "geometry_type": "point",
+    "geometry_precision": "institutional locus in Cairo; not a territorial jurisdiction",
+    "territorial_inference_allowed": false,
+    "neutral_reference": "https://www.britannica.com/topic/al-Azhar-University"
+  },
+  {
+    "id": "shaolin_1000",
+    "name": "Shaolin Monastery",
+    "year": 1000,
+    "frame_class": "institution_estate",
+    "tier": "C0",
+    "geometry_type": "point_or_bounded_site",
+    "geometry_precision": "monastic complex locus; broader holdings not represented",
+    "territorial_inference_allowed": false,
+    "neutral_reference": "https://whc.unesco.org/en/list/1305"
+  },
+  {
+    "id": "silk_road_700",
+    "name": "Silk Road network",
+    "year": 700,
+    "frame_class": "mobile_network",
+    "tier": "C1",
+    "geometry_type": "route_network",
+    "geometry_precision": "schematic multi-route network; no single fixed line",
+    "territorial_inference_allowed": false,
+    "neutral_reference": "https://www.unesco.org/en/silk-roads/about-silk-roads"
+  },
+  {
+    "id": "viking_900",
+    "name": "Viking trade network",
+    "year": 900,
+    "frame_class": "mobile_network",
+    "tier": "C1",
+    "geometry_type": "route_network",
+    "geometry_precision": "schematic maritime/river network; variable by period",
+    "territorial_inference_allowed": false,
+    "neutral_reference": "https://www.britannica.com/topic/Viking-people"
+  },
+  {
+    "id": "trans_saharan_1300",
+    "name": "Trans-Saharan trade network",
+    "year": 1300,
+    "frame_class": "mobile_network",
+    "tier": "C0",
+    "geometry_type": "route_network",
+    "geometry_precision": "schematic corridor network; routes shift over time",
+    "territorial_inference_allowed": false,
+    "neutral_reference": "https://www.britannica.com/topic/trans-Saharan-trade"
+  },
+  {
+    "id": "samoa_1700",
+    "name": "Samoan communities",
+    "year": 1700,
+    "frame_class": "region_community",
+    "tier": "C1",
+    "geometry_type": "fuzzy_region",
+    "geometry_precision": "archipelago/community frame; no single sovereign polygon implied",
+    "territorial_inference_allowed": false,
+    "neutral_reference": "https://www.britannica.com/place/Samoa-island-nation-Pacific-Ocean"
+  },
+  {
+    "id": "andaman_1800",
+    "name": "Andaman Islands communities",
+    "year": 1800,
+    "frame_class": "region_community",
+    "tier": "C1",
+    "geometry_type": "fuzzy_region",
+    "geometry_precision": "island-group/community frame; multiple distinct peoples, no single polity implied",
+    "territorial_inference_allowed": false,
+    "neutral_reference": "https://www.britannica.com/place/Andaman-Islands"
+  },
+  {
+    "id": "inuit_arctic_1800",
+    "name": "Inuit Arctic communities",
+    "year": 1800,
+    "frame_class": "region_community",
+    "tier": "C0",
+    "geometry_type": "fuzzy_region",
+    "geometry_precision": "very broad multi-community Arctic frame; no single society/polygon",
+    "territorial_inference_allowed": false,
+    "neutral_reference": "https://www.britannica.com/topic/Inuit-people"
+  }
+]

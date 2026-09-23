@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **IDLE / PRESERVATION — COV-003 tiered architecture survived narrowly; Atlas expansion remains stopped**
+**Execution state:** **IDLE / SPONSOR DECISION — COV-004 method survived; boring map/register Atlas retained; bespoke Atlas expansion remains stopped**
 
 ## Direction after H2
 
