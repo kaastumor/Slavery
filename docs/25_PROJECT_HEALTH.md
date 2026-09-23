@@ -44,7 +44,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | A-006 | The project can responsibly cover the present as well as antiquity | unproven / blocked for sensitive person-level expansion | Living-person/sensitive-data policy remains insufficient; do not let H2 modern expansion outrun this. |
 | A-007 | A serial issue-driven autonomous worker can create value without roadmap drift | survives only as a bounded gate mechanism / idle | M1/M2/H2 produced useful corrections, but H2 triggered the stop rule. No autonomous execution runway is justified in preservation state. |
 | A-008 | The full interactive Atlas platform is the best form for the demonstrated contribution | rejected for active expansion | H2 did not show a repeatable material advantage for the corpus/method over a strong baseline, and the thin view did not materially beat the corpus in any case. Preserve existing artifacts; do not expand the platform. |
-| A-009 | A systematically assembled global historical coverage corpus may have value distinct from Atlas representation/UI | active experiment / unresolved | H2 did not test coverage accumulation, gap visibility or research compression. COV-001/#148 now tests this with a deterministic global sample, non-polity challenges and plain-table baselines. |
+| A-009 | A systematically assembled global historical coverage corpus may have value distinct from Atlas representation/UI | survives narrowly / scale economics unresolved | COV-001 found robust material value on 4/6 cross-cell tasks after adversarial downgrade, while specialist narrative and SlaveVoyages remained superior in their domains. The value lives in a flat coverage corpus, not Atlas infrastructure. |
 
 ## Standing risk register
 
@@ -80,7 +80,7 @@ Record meaningful outcomes, including no-value results.
 | V-010 | Does the non-canonical unused preview justify 15-minute monitoring and automatic cloud restart? | no value / retire | Static fallback preserves the demonstration and no user-critical availability need is evidenced | Retire self-heal and reduce liveness to weekly. |
 | V-011 | Has the current full application/platform form earned its maintenance cost? | unproven / simplify | Strong correctness evidence exists, but no external user-task evidence shows the full product materially outperforms a simpler corpus/method + GIS/model workflow | Make corpus + thin atlas the working identity; full platform must re-earn expansion. |
 | V-012 | Does the corpus/method, then a minimal thin view, materially outperform the strongest competent baseline on difficult historical reasoning? | **PARITY / threshold failure** | Three preregistered cases: B materially improved A only for the Mexica category case; repaired C did not materially improve B in any case under the fixed rule | Trigger D-062 kill rule: stop active Atlas expansion; preserve methodology/corpus/audit artifacts. |
-| V-013 | Does preassembled global coverage itself create value beyond narrative handbooks + ordinary research/matrices? | **ACTIVE / untested** | Cambridge and Palgrave already provide strong global synthesis; Enslaved.org and SlaveVoyages provide deep structured coverage in narrower domains. COV-001 tests whether explicit place/time coverage, gaps and provenance add something distinct. | Do not infer value from tabular form alone; freeze sample before research and compare against plain-matrix and specialist baselines. |
+| V-013 | Does preassembled global coverage itself create value beyond narrative handbooks + ordinary research/matrices? | **NARROW VALUE / survives** | COV-001: 4/6 fixed cross-cell tasks retained material value after result adversary; basic overview reached matrix parity; terminology advantage was downgraded; specialist narrative and SlaveVoyages won the negative controls. | Preserve the flat coverage-corpus thesis; do not reopen Atlas product expansion. Next uncertainty is reuse/maintenance economics at larger scale. |
 
 ## Health-check history
 
@@ -349,3 +349,62 @@ This is not a universal claim that maps, relational claims, PostGIS or structure
 - repository moves to **IDLE / preservation**.
 
 A future development horizon requires new external evidence or a concrete simpler-baseline failure; internal desire to continue building is not a trigger.
+
+
+### HC-005 — COV-001 coverage-value boundary — 2026-09-23
+
+Decision: **NARROW SURVIVE — COVERAGE CORPUS THESIS SURVIVES; ATLAS PRODUCT EXPANSION REMAINS STOPPED.**
+
+Durable experiment: `experiments/coverage-value/` / issue #148.  
+Direction decision: D-065.
+
+#### Sample and research
+
+- exact deterministic Cliopatria sampling frame frozen before slavery/coercion research;
+- 21/24 polity-year strata valid;
+- 3 sampling gaps preserved;
+- 4 preregistered non-polity challenge contexts added;
+- 25 research rows frozen as plain JSON/CSV/Markdown;
+- outcomes: 8 bounded-supported, 2 materially disputed, 15 researched-inconclusive;
+- no inconclusive/gap state treated as historical absence.
+
+The sample also exposed a source-frame failure: the selected `1300:C` Mahdids row conflicts with its supplied Wikidata identity/date. It remains unresolved rather than silently substituted.
+
+#### Fixed-query result
+
+Preliminary: 5/6 material tasks.
+
+Result adversary downgraded the terminology/category task because a competent ordinary spreadsheet could reproduce most of that gain with one added column.
+
+Robust final:
+- Q1 basic overview — parity;
+- Q2 law vs practice — material;
+- Q3 network vs territorial inference — material;
+- Q4 terminology/category — marginal/not counted;
+- Q5 global-handbook coverage — material, bounded;
+- Q6 unresolved/gap map — material.
+
+**4/6 robust material tasks — PASS** against the preregistered >=3/6 rule.
+
+#### Negative controls
+
+- deep Champa why/how question: specialist narrative > index;
+- Jamaica 1750–1800 voyage/traffic capability: SlaveVoyages > index.
+
+Both controls pass and constrain the contribution.
+
+#### Interpretation
+
+The evidence supports a smaller identity than the Atlas:
+
+> a curated, auditable, explicitly incomplete global coverage corpus recording what can be said, what cannot, why, and from which sources.
+
+No evidence from COV-001 supports Postgres/API/MapLibre/frontend expansion.
+
+The project remains **IDLE / preservation** after COV-001. A future bounded scale test is a candidate only, not authorized.
+
+#### Next unresolved value question
+
+Does corpus reuse/value grow faster than research, review and update burden at materially larger scale?
+
+Any future experiment must test that directly rather than maximizing record count.
