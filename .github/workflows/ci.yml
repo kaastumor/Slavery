@@ -82,6 +82,9 @@ jobs:
       - name: M2 Cliopatria selected-year resolver
         run: bash ./scripts/db-test-cliopatria-resolver.sh
 
+      - name: M2 complete corpus resolver correction acceptance
+        run: bash ./scripts/db-test-cliopatria-resolver-full.sh
+
       - name: Compose logs on failure
         if: failure()
         run: docker compose logs --no-color db
