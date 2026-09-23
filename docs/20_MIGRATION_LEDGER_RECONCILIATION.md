@@ -15,3 +15,9 @@ Reconciliation is non-destructive: inventory names; verify schema effects separa
 `tools/check_migration_ledger.py` is the read-only future divergence check. It reports missing, duplicate and unknown remote migration names and exits non-zero when any exist.
 
 Actual platform-ledger mutation is not performed by this change. Production writes require an already-reviewed explicit gate, and no safe metadata-only reconciliation gate currently exists. Until one does, the gaps/retries remain explicitly documented rather than concealed or replayed.
+
+## 2026-09-23 integrity migration follow-up
+
+Production now also records `0028_claim_kind_integrity` at platform version `20260923131112`. The repository migration of the same name adds the D-060 semantic-kind guard and a transactional regression test. This is an additive integrity migration; it does not repair or rewrite the older platform-ledger gaps for 0012–0014, and the three historical 0016 retry rows remain preserved.
+
+The v0.6.1 controlled-seed data migration performed on 2026-09-23 is an auditable data ingest/reconciliation run, not a schema migration entry. It therefore does not receive a fabricated Supabase schema-migration ledger row.
