@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Build a globally scoped, time-aware historical atlas that lets a reader inspect **what is claimed, where, when, on what evidence, with what uncertainty, and under which analytical layer** for slavery and related coerced-labour or dependency systems.
+Build a globally scoped, time-aware **historical evidence corpus and comparison method**, with a thin atlas/query surface where it demonstrably helps a reader inspect **what is claimed, where, when, on what evidence, with what uncertainty, and under which analytical layer** for slavery and related coerced-labour or dependency systems.
 
 The project is an evidence-synthesis and data-curation system. It does not claim that one universal category can make all forms of coercion equivalent, and it does not replace specialist historical scholarship.
 
@@ -28,15 +28,19 @@ That contribution is only justified where it materially improves on the stronges
 
 ### Project / product form
 
-The current artifact is a historical research system with:
+After HC-003, the working identity is **auditable evidence corpus + thin atlas**.
+
+The durable core is:
 
 - a curated claim/evidence corpus;
-- a time-aware atlas/map as navigation and comparison surface;
+- domain methodology and adversarial fixtures;
 - reviewed relational research state;
-- reconstructible release artifacts;
-- public evidence inspection.
+- historical geography/query logic;
+- reconstructible release artifacts.
 
-The map is a product form, not the historical truth store.
+A time-aware map/query/evidence inspector is a **derived inspection surface whose value must be demonstrated**, not the project identity by default.
+
+The current richer web/API preview is preserved as a non-canonical demonstration, not as an automatically expanding product roadmap.
 
 ### Implementation architecture
 
@@ -134,24 +138,30 @@ Horizons are hypotheses, not promises.
 
 M1 (#100) attacked the original semantics, returned REVISE, corrected the displaced overloads, and survived the integrated re-attack. P0–P4 is no longer the target universal comparative ordinal; the accepted prototype keeps evidence, historical structure, workflow/outcome, temporal applicability/precision and spatial locus/extent separable.
 
-### H1 — Semantic/geography integration (implementation gate completed; health decision pending)
+### H1 — Semantic/geography integration (completed)
 
 M2 (#116) integrated only the semantics that survived M1, resolved Cliopatria calendar/RELATION behavior, ingested the complete pinned corpus as raw geography infrastructure, and proved selected-year behavior in the real relational architecture without altering v0.6.1 or silently changing the current preview.
 
-Its integrated adversarial gate #122 passed only after corrective cycles. **H1 is not considered directionally complete until #123 performs the Project Health Check and chooses continue / simplify / redirect / stop.**
+Its integrated adversarial gate #122 passed only after corrective cycles. HC-003 then chose **CONTINUE + SIMPLIFY** and removed the full application platform from default status.
 
-### H2 — Globally balanced evidence expansion (candidate only)
+### H2 — Value-discrimination pilot (candidate only; not authorized)
 
-Possible next horizon: resume broad research growth under the hardened model, deliberately prioritizing weak and underrepresented regions/periods before dense archive ingestion dominates.
+The only justified next experiment is a small comparison of three difficult historical questions across:
 
-H2 is not authorized merely because M2 implementation passed.
+1. strongest boring/external workflow;
+2. Atlas corpus/method without custom map interaction;
+3. the smallest thin atlas/query view.
 
-### H3 — Public research usefulness (candidate)
+The pilot exists to decide whether the thin atlas adds practical value beyond the corpus/method, and whether either materially outperforms the strongest baseline.
 
-Evaluate whether the atlas actually produces useful discoveries, confirmations, contradictions or useful uncertainty compared with the simpler baseline. Improve the interface only where evidence shows a need.
+Completion of HC-003 does **not** authorize this horizon automatically.
 
-### H4 — Scale/preservation (candidate)
+### H3 — Globally balanced evidence expansion (conditional candidate)
 
-Only if prior horizons justify it, optimize distribution, preservation, contribution workflows and larger-scale ingestion.
+Resume broad research growth only if H2 demonstrates that the corpus/method has material comparative value. Continue prioritizing weak and underrepresented regions/periods before dense archive ingestion dominates.
+
+### H4 — Public research usefulness / preservation (conditional candidate)
+
+Only if prior horizons justify it, improve public inspection, distribution, preservation and contribution workflows. A richer application platform must be re-earned rather than assumed.
 
 At every horizon boundary, review evidence for **and against** the thesis, compare the strongest baseline, consider whether the artifact can shrink, and explicitly choose **continue / simplify / redirect / stop** before creating the next horizon.
