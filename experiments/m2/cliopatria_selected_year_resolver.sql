@@ -424,7 +424,7 @@ AS $$
     LEFT JOIN LATERAL (
         SELECT
             count(*)::integer AS accepted_count,
-            min(g.geometry_id) AS geometry_id,
+            (array_agg(g.geometry_id ORDER BY g.geometry_id))[1] AS geometry_id,
             min(g.accuracy_status::text)::atlas.geometry_accuracy AS accuracy_status,
             CASE WHEN count(*) = 1 THEN (array_agg(g.geom))[1] ELSE NULL END AS specialist_geom
         FROM staging.m2_geometry_precedence p
