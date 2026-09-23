@@ -1,0 +1,2037 @@
+[
+  {
+    "target_id": "R1:P:-2000:C:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Middle Kingdom of Egypt",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 30,
+      "name": "Middle Kingdom of Egypt",
+      "type": "POLITY",
+      "from_year": -2000,
+      "to_year": -1801,
+      "seshat_id": "eg_middle_k",
+      "wikidata": "Q191324"
+    },
+    "temporal_frame": {
+      "source_anchor_year": -2000,
+      "display_anchor": "2000 BCE",
+      "atlas_astronomical_anchor_year": -1999
+    },
+    "sampling": {
+      "sector": "C",
+      "cell_id": "-2000:C",
+      "selection_rank": 1,
+      "selection_digest": "899fe3251bd3175de7ed789de2430d303018bf4d05926351e9fcd3f61f7a47cb"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:-2000:D:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Sumerian City-States",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 28,
+      "name": "Sumerian City-States",
+      "type": "POLITY",
+      "from_year": -2000,
+      "to_year": -1801,
+      "seshat_id": "",
+      "wikidata": "Q2345840"
+    },
+    "temporal_frame": {
+      "source_anchor_year": -2000,
+      "display_anchor": "2000 BCE",
+      "atlas_astronomical_anchor_year": -1999
+    },
+    "sampling": {
+      "sector": "D",
+      "cell_id": "-2000:D",
+      "selection_rank": 1,
+      "selection_digest": "621ed8401ddd9c8004bd3b701c922750b88b8cdf4236d5ed101696ecac988653"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:-2000:D:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Elam",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 29,
+      "name": "Elam",
+      "type": "POLITY",
+      "from_year": -2000,
+      "to_year": -1801,
+      "seshat_id": "ir_elam_2",
+      "wikidata": "Q128904"
+    },
+    "temporal_frame": {
+      "source_anchor_year": -2000,
+      "display_anchor": "2000 BCE",
+      "atlas_astronomical_anchor_year": -1999
+    },
+    "sampling": {
+      "sector": "D",
+      "cell_id": "-2000:D",
+      "selection_rank": 2,
+      "selection_digest": "cf082105d17f88c5fb002898c55e2b2e21b7605a57dc892fab93767bb26c16f5"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:-2000:E:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Indus Valley Civilization",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 27,
+      "name": "Indus Valley Civilization",
+      "type": "POLITY",
+      "from_year": -2000,
+      "to_year": -1801,
+      "seshat_id": "pk_kachi_urban_2",
+      "wikidata": "Q42534"
+    },
+    "temporal_frame": {
+      "source_anchor_year": -2000,
+      "display_anchor": "2000 BCE",
+      "atlas_astronomical_anchor_year": -1999
+    },
+    "sampling": {
+      "sector": "E",
+      "cell_id": "-2000:E",
+      "selection_rank": 1,
+      "selection_digest": "9873999cf6d5113730451f7abc7e7d25e0ef0939edc799d84e414e57cb6747ce"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:-500:C:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Kingdom of Kush",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 217,
+      "name": "Kingdom of Kush",
+      "type": "POLITY",
+      "from_year": -630,
+      "to_year": 337,
+      "seshat_id": "",
+      "wikidata": "Q241790"
+    },
+    "temporal_frame": {
+      "source_anchor_year": -500,
+      "display_anchor": "500 BCE",
+      "atlas_astronomical_anchor_year": -499
+    },
+    "sampling": {
+      "sector": "C",
+      "cell_id": "-500:C",
+      "selection_rank": 1,
+      "selection_digest": "35719392a8619383f470eaad4eb406644053d49ec8f58da9ec6d949957d3a59d"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:-500:D:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Macedonian Empire",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 297,
+      "name": "Macedonian Empire",
+      "type": "POLITY",
+      "from_year": -500,
+      "to_year": -481,
+      "seshat_id": "",
+      "wikidata": "Q83958"
+    },
+    "temporal_frame": {
+      "source_anchor_year": -500,
+      "display_anchor": "500 BCE",
+      "atlas_astronomical_anchor_year": -499
+    },
+    "sampling": {
+      "sector": "D",
+      "cell_id": "-500:D",
+      "selection_rank": 1,
+      "selection_digest": "0998286c97b08d6f25c6d1ae63897580d332827f0bc9e87bbaa549ef6e1fe4b7"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:-500:D:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Peloponnesian League",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 258,
+      "name": "Peloponnesian League",
+      "type": "POLITY",
+      "from_year": -550,
+      "to_year": -481,
+      "seshat_id": "",
+      "wikidata": "Q208742"
+    },
+    "temporal_frame": {
+      "source_anchor_year": -500,
+      "display_anchor": "500 BCE",
+      "atlas_astronomical_anchor_year": -499
+    },
+    "sampling": {
+      "sector": "D",
+      "cell_id": "-500:D",
+      "selection_rank": 2,
+      "selection_digest": "0a0e99271ebe8a0afd32adf58d0ba8ea30fced64ef2eb49729402a9601f41c65"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:-500:E:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Magadha - Haryanka dynasty",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 296,
+      "name": "Magadha - Haryanka dynasty",
+      "type": "POLITY",
+      "from_year": -500,
+      "to_year": -481,
+      "seshat_id": "in_mahajanapada",
+      "wikidata": "Q12459974"
+    },
+    "temporal_frame": {
+      "source_anchor_year": -500,
+      "display_anchor": "500 BCE",
+      "atlas_astronomical_anchor_year": -499
+    },
+    "sampling": {
+      "sector": "E",
+      "cell_id": "-500:E",
+      "selection_rank": 1,
+      "selection_digest": "06c9afefc31a03f419cf5373c5d4908ce236fbd943e1e6b884c4d2c941af4429"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:-500:E:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Janapada of Avanti",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 232,
+      "name": "Janapada of Avanti",
+      "type": "POLITY",
+      "from_year": -600,
+      "to_year": -451,
+      "seshat_id": "in_mahajanapada",
+      "wikidata": "Q4827705"
+    },
+    "temporal_frame": {
+      "source_anchor_year": -500,
+      "display_anchor": "500 BCE",
+      "atlas_astronomical_anchor_year": -499
+    },
+    "sampling": {
+      "sector": "E",
+      "cell_id": "-500:E",
+      "selection_rank": 2,
+      "selection_digest": "9d790370a1c32391e9f71f589f66446ba02e67cb48b20c664b3f8071bd058313"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:-500:F:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Cai",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 173,
+      "name": "Cai",
+      "type": "POLITY",
+      "from_year": -750,
+      "to_year": -481,
+      "seshat_id": "",
+      "wikidata": "Q1025803"
+    },
+    "temporal_frame": {
+      "source_anchor_year": -500,
+      "display_anchor": "500 BCE",
+      "atlas_astronomical_anchor_year": -499
+    },
+    "sampling": {
+      "sector": "F",
+      "cell_id": "-500:F",
+      "selection_rank": 1,
+      "selection_digest": "0cb77af25acfc144d5ae908fbf98ba85cb8691ace21b47bbfd4209058298dfde"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:-500:F:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Qi",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 263,
+      "name": "Qi",
+      "type": "POLITY",
+      "from_year": -550,
+      "to_year": -481,
+      "seshat_id": "cn_qi_spring_autumn",
+      "wikidata": "Q1143524"
+    },
+    "temporal_frame": {
+      "source_anchor_year": -500,
+      "display_anchor": "500 BCE",
+      "atlas_astronomical_anchor_year": -499
+    },
+    "sampling": {
+      "sector": "F",
+      "cell_id": "-500:F",
+      "selection_rank": 2,
+      "selection_digest": "23ba5fd2213f8b201438c934e43e8160698d2cfabc34bc3fc84c36b53b140562"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:500:A:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Teotihuacan",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 1226,
+      "name": "Teotihuacan",
+      "type": "POLITY",
+      "from_year": 106,
+      "to_year": 655,
+      "seshat_id": "mx_basin_of_mexico_7",
+      "wikidata": "Q172613"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 500,
+      "display_anchor": "500 CE",
+      "atlas_astronomical_anchor_year": 500
+    },
+    "sampling": {
+      "sector": "A",
+      "cell_id": "500:A",
+      "selection_rank": 1,
+      "selection_digest": "905e1698da1e0c1370c81d7e4ea922bff2fd7c0aa699a25096e88f3f94f9daa1"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:500:A:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Zapotec Civilization",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 1306,
+      "name": "Zapotec Civilization",
+      "type": "POLITY",
+      "from_year": 207,
+      "to_year": 509,
+      "seshat_id": "mx_monte_alban_3_a",
+      "wikidata": "Q844750"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 500,
+      "display_anchor": "500 CE",
+      "atlas_astronomical_anchor_year": 500
+    },
+    "sampling": {
+      "sector": "A",
+      "cell_id": "500:A",
+      "selection_rank": 2,
+      "selection_digest": "c8a5c463fea88fdfa8431b5f4988d424c2851ff7abbd75d75eb7ad2cd7e8d0c1"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:500:C:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Nobatia",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 1475,
+      "name": "Nobatia",
+      "type": "POLITY",
+      "from_year": 347,
+      "to_year": 646,
+      "seshat_id": "",
+      "wikidata": "Q568523"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 500,
+      "display_anchor": "500 CE",
+      "atlas_astronomical_anchor_year": 500
+    },
+    "sampling": {
+      "sector": "C",
+      "cell_id": "500:C",
+      "selection_rank": 1,
+      "selection_digest": "57d00964428df01038f80127c1c93b748c089136c64fda30dadca50f57a2fd79"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:500:C:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Himyarite Kingdom",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 1526,
+      "name": "Himyarite Kingdom",
+      "type": "POLITY",
+      "from_year": 378,
+      "to_year": 533,
+      "seshat_id": "ye_himyar_2",
+      "wikidata": "Q289577"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 500,
+      "display_anchor": "500 CE",
+      "atlas_astronomical_anchor_year": 500
+    },
+    "sampling": {
+      "sector": "C",
+      "cell_id": "500:C",
+      "selection_rank": 2,
+      "selection_digest": "c42d39fd3fd8e972b80786e99a6c6248ff8a1cd52a4b01cba7f0b21c144790f5"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:500:D:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Lazica",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 1630,
+      "name": "Lazica",
+      "type": "POLITY",
+      "from_year": 402,
+      "to_year": 533,
+      "seshat_id": "",
+      "wikidata": "Q136884"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 500,
+      "display_anchor": "500 CE",
+      "atlas_astronomical_anchor_year": 500
+    },
+    "sampling": {
+      "sector": "D",
+      "cell_id": "500:D",
+      "selection_rank": 1,
+      "selection_digest": "1666a9035e02a694d31ad4b31f01b95f4c6ed42af547422ce2b9587c9aa803f0"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:500:D:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Caucasian Iberia",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 1617,
+      "name": "Caucasian Iberia",
+      "type": "POLITY",
+      "from_year": 402,
+      "to_year": 509,
+      "seshat_id": "",
+      "wikidata": "Q19083"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 500,
+      "display_anchor": "500 CE",
+      "atlas_astronomical_anchor_year": 500
+    },
+    "sampling": {
+      "sector": "D",
+      "cell_id": "500:D",
+      "selection_rank": 2,
+      "selection_digest": "20a97327e0b6ff1b759ad10f2a7d939b9aa2b04f9bc66c411081165e298d202c"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:500:E:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Kalabhra Dynasty",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 1484,
+      "name": "Kalabhra Dynasty",
+      "type": "POLITY",
+      "from_year": 353,
+      "to_year": 591,
+      "seshat_id": "in_kalabhra_dyn",
+      "wikidata": "Q2572901"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 500,
+      "display_anchor": "500 CE",
+      "atlas_astronomical_anchor_year": 500
+    },
+    "sampling": {
+      "sector": "E",
+      "cell_id": "500:E",
+      "selection_rank": 1,
+      "selection_digest": "015dbff3a07a5c2281a6625bcbd061ca3daeb0123af2cf2cb0ab2f5170a6ec87"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:500:E:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Maitraka Dynasty",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 1865,
+      "name": "Maitraka Dynasty",
+      "type": "POLITY",
+      "from_year": 476,
+      "to_year": 533,
+      "seshat_id": "in_maitraka_dyn",
+      "wikidata": "Q6737189"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 500,
+      "display_anchor": "500 CE",
+      "atlas_astronomical_anchor_year": 500
+    },
+    "sampling": {
+      "sector": "E",
+      "cell_id": "500:E",
+      "selection_rank": 2,
+      "selection_digest": "13a046f03c1b6ad3bdc9bd372b4fcdfaf22866516ee1b838704f2dfd484e3159"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:500:F:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Tamna",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 1371,
+      "name": "Tamna",
+      "type": "POLITY",
+      "from_year": 263,
+      "to_year": 681,
+      "seshat_id": "",
+      "wikidata": "Q28057"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 500,
+      "display_anchor": "500 CE",
+      "atlas_astronomical_anchor_year": 500
+    },
+    "sampling": {
+      "sector": "F",
+      "cell_id": "500:F",
+      "selection_rank": 1,
+      "selection_digest": "10e30f4a6df9b85cb4a3410a719fe66d78801546808de201437f7dd29a965ea2"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:500:F:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Southern Qi",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 1928,
+      "name": "Southern Qi",
+      "type": "POLITY",
+      "from_year": 500,
+      "to_year": 509,
+      "seshat_id": "cn_southern_qi_dyn",
+      "wikidata": "Q62456"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 500,
+      "display_anchor": "500 CE",
+      "atlas_astronomical_anchor_year": 500
+    },
+    "sampling": {
+      "sector": "F",
+      "cell_id": "500:F",
+      "selection_rank": 2,
+      "selection_digest": "423188fd3c682bf266d4ac657bbb7c24e158ffaf782509ab38e231ae790fed7c"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1300:A:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Later Mayan City-States",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 5791,
+      "name": "Later Mayan City-States",
+      "type": "POLITY",
+      "from_year": 1260,
+      "to_year": 1428,
+      "seshat_id": "",
+      "wikidata": "Q28567"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1300,
+      "display_anchor": "1300 CE",
+      "atlas_astronomical_anchor_year": 1300
+    },
+    "sampling": {
+      "sector": "A",
+      "cell_id": "1300:A",
+      "selection_rank": 1,
+      "selection_digest": "6f53bc4485d838bd760090782f126aa12d7bd494c95016f6fd8da38f6de459ba"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1300:A:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Puebloans - Aztec Regional System",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 5971,
+      "name": "Puebloans - Aztec Regional System",
+      "type": "POLITY",
+      "from_year": 1294,
+      "to_year": 1304,
+      "seshat_id": "us_aztec_puebloan",
+      "wikidata": "Q478805"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1300,
+      "display_anchor": "1300 CE",
+      "atlas_astronomical_anchor_year": 1300
+    },
+    "sampling": {
+      "sector": "A",
+      "cell_id": "1300:A",
+      "selection_rank": 2,
+      "selection_digest": "cea9eea9000520f79aef71cbe32bdae62c40d17a8b070a10977a56b5eda4b2b1"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1300:C:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Mali Empire",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 5645,
+      "name": "Mali Empire",
+      "type": "POLITY",
+      "from_year": 1241,
+      "to_year": 1414,
+      "seshat_id": "ml_mali_emp",
+      "wikidata": "Q184536"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1300,
+      "display_anchor": "1300 CE",
+      "atlas_astronomical_anchor_year": 1300
+    },
+    "sampling": {
+      "sector": "C",
+      "cell_id": "1300:C",
+      "selection_rank": 1,
+      "selection_digest": "0cfd3869c022f2b02d83638457b49451ced98f5ec2afa2d24e3c5b9d8aeff1d9"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1300:C:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Makuria",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 6003,
+      "name": "Makuria",
+      "type": "POLITY",
+      "from_year": 1294,
+      "to_year": 1406,
+      "seshat_id": "",
+      "wikidata": "Q829356"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1300,
+      "display_anchor": "1300 CE",
+      "atlas_astronomical_anchor_year": 1300
+    },
+    "sampling": {
+      "sector": "C",
+      "cell_id": "1300:C",
+      "selection_rank": 2,
+      "selection_digest": "24454f2871830515b42dc7f5e669de2e4daaffa9442ffd9033ddfa735af95ae9"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1300:D:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Grand Duchy of Lithuania",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 5987,
+      "name": "Grand Duchy of Lithuania",
+      "type": "POLITY",
+      "from_year": 1294,
+      "to_year": 1313,
+      "seshat_id": "lt_lithuania_grand_duc",
+      "wikidata": "Q49683"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1300,
+      "display_anchor": "1300 CE",
+      "atlas_astronomical_anchor_year": 1300
+    },
+    "sampling": {
+      "sector": "D",
+      "cell_id": "1300:D",
+      "selection_rank": 1,
+      "selection_digest": "035e118e91ff424ca2751e6bc84e7eecdc5189c2a22bc3511e5878efff353b0d"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1300:D:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Duchy of the Archipelago",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 5359,
+      "name": "Duchy of the Archipelago",
+      "type": "POLITY",
+      "from_year": 1210,
+      "to_year": 1304,
+      "seshat_id": "",
+      "wikidata": "Q777981"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1300,
+      "display_anchor": "1300 CE",
+      "atlas_astronomical_anchor_year": 1300
+    },
+    "sampling": {
+      "sector": "D",
+      "cell_id": "1300:D",
+      "selection_rank": 2,
+      "selection_digest": "04afeb769527450a6a5d42cb40574d358bedb6bc7d80fb132a8cdedd659d4c9c"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1300:E:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Lan Na Kingdom",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 6026,
+      "name": "Lan Na Kingdom",
+      "type": "POLITY",
+      "from_year": 1294,
+      "to_year": 1343,
+      "seshat_id": "",
+      "wikidata": "Q1059707"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1300,
+      "display_anchor": "1300 CE",
+      "atlas_astronomical_anchor_year": 1300
+    },
+    "sampling": {
+      "sector": "E",
+      "cell_id": "1300:E",
+      "selection_rank": 1,
+      "selection_digest": "01fabac78bc2fb3bf8cd0fcd8ebb70abff317917f9b6c67fc1a501d1e8fecd6b"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1300:E:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Kampili Kingdom",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 5919,
+      "name": "Kampili Kingdom",
+      "type": "POLITY",
+      "from_year": 1285,
+      "to_year": 1325,
+      "seshat_id": "in_kampili_k",
+      "wikidata": "Q1446192"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1300,
+      "display_anchor": "1300 CE",
+      "atlas_astronomical_anchor_year": 1300
+    },
+    "sampling": {
+      "sector": "E",
+      "cell_id": "1300:E",
+      "selection_rank": 2,
+      "selection_digest": "0f89c54cc31c935d4f7091144d07ee9564cef5b2854984537928b17981fcae99"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1300:F:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Khmer Empire",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 5654,
+      "name": "Khmer Empire",
+      "type": "POLITY",
+      "from_year": 1241,
+      "to_year": 1313,
+      "seshat_id": "",
+      "wikidata": "Q201705"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1300,
+      "display_anchor": "1300 CE",
+      "atlas_astronomical_anchor_year": 1300
+    },
+    "sampling": {
+      "sector": "F",
+      "cell_id": "1300:F",
+      "selection_rank": 1,
+      "selection_digest": "00a02e15bb073d1c95b6c0dff0fd9d49e76c314424bbd95a3c03132e68ac6b19"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1300:F:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Kamakura Shogunate",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 5194,
+      "name": "Kamakura Shogunate",
+      "type": "POLITY",
+      "from_year": 1192,
+      "to_year": 1325,
+      "seshat_id": "jp_kamakura",
+      "wikidata": "Q736839"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1300,
+      "display_anchor": "1300 CE",
+      "atlas_astronomical_anchor_year": 1300
+    },
+    "sampling": {
+      "sector": "F",
+      "cell_id": "1300:F",
+      "selection_rank": 2,
+      "selection_digest": "313140ce9620800370b402ee1a22e1fbd3b2713633d202871ffd47e6e14b646b"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1800:A:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "French Louisiana",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 10547,
+      "name": "French Louisiana",
+      "type": "POLITY",
+      "from_year": 1800,
+      "to_year": 1802,
+      "seshat_id": "",
+      "wikidata": "Q5501836"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1800,
+      "display_anchor": "1800 CE",
+      "atlas_astronomical_anchor_year": 1800
+    },
+    "sampling": {
+      "sector": "A",
+      "cell_id": "1800:A",
+      "selection_rank": 1,
+      "selection_digest": "359f97b37253b74bfa4a3877ff210691fab24e9ef8ad1724e0c6749d7007c873"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1800:A:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Kingdom of Hawaï'i",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 10406,
+      "name": "Kingdom of Hawaï'i",
+      "type": "POLITY",
+      "from_year": 1796,
+      "to_year": 1810,
+      "seshat_id": "us_kamehameha_k",
+      "wikidata": "Q156418"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1800,
+      "display_anchor": "1800 CE",
+      "atlas_astronomical_anchor_year": 1800
+    },
+    "sampling": {
+      "sector": "A",
+      "cell_id": "1800:A",
+      "selection_rank": 2,
+      "selection_digest": "5bd420ecbe77b7025034f66eec56a4ef71d5630073cdaf046ad44f7937cf88ca"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1800:C:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Ethiopian Empire",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 10076,
+      "name": "Ethiopian Empire",
+      "type": "POLITY",
+      "from_year": 1769,
+      "to_year": 1889,
+      "seshat_id": "",
+      "wikidata": "Q207521"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1800,
+      "display_anchor": "1800 CE",
+      "atlas_astronomical_anchor_year": 1800
+    },
+    "sampling": {
+      "sector": "C",
+      "cell_id": "1800:C",
+      "selection_rank": 1,
+      "selection_digest": "02be6fb5fe46e9a4c9402dc549a2039a2a8395993788e87bb35702a3a5ff92fd"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1800:C:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Spanish Empire",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 10519,
+      "name": "Spanish Empire",
+      "type": "POLITY",
+      "from_year": 1800,
+      "to_year": 1802,
+      "seshat_id": "es_spanish_emp_2",
+      "wikidata": "Q80702"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1800,
+      "display_anchor": "1800 CE",
+      "atlas_astronomical_anchor_year": 1800
+    },
+    "sampling": {
+      "sector": "C",
+      "cell_id": "1800:C",
+      "selection_rank": 2,
+      "selection_digest": "05a6ed6c33159113dd8de2e9d502552a8e4a125a4fcf31ad77ddcccfb284cbd6"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1800:D:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Duchy of Bavaria",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 10468,
+      "name": "Duchy of Bavaria",
+      "type": "POLITY",
+      "from_year": 1797,
+      "to_year": 1802,
+      "seshat_id": "de_bavaria_1",
+      "wikidata": "Q47261"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1800,
+      "display_anchor": "1800 CE",
+      "atlas_astronomical_anchor_year": 1800
+    },
+    "sampling": {
+      "sector": "D",
+      "cell_id": "1800:D",
+      "selection_rank": 1,
+      "selection_digest": "00fbbaf368cf54f85494b14938babbaf9bbc29c34b256620be8e8128affabbfb"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1800:D:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Qajar Dynasty",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 10514,
+      "name": "Qajar Dynasty",
+      "type": "POLITY",
+      "from_year": 1800,
+      "to_year": 1804,
+      "seshat_id": "ir_qajar_dyn",
+      "wikidata": "Q189326"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1800,
+      "display_anchor": "1800 CE",
+      "atlas_astronomical_anchor_year": 1800
+    },
+    "sampling": {
+      "sector": "D",
+      "cell_id": "1800:D",
+      "selection_rank": 2,
+      "selection_digest": "024a81e295cf7dc8bdd8f0e1e27e7240f1acbd2588be7a04ec97bc23b1c3f3d4"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1800:E:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Khanate of Kokand",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 10279,
+      "name": "Khanate of Kokand",
+      "type": "POLITY",
+      "from_year": 1788,
+      "to_year": 1802,
+      "seshat_id": "",
+      "wikidata": "Q696241"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1800,
+      "display_anchor": "1800 CE",
+      "atlas_astronomical_anchor_year": 1800
+    },
+    "sampling": {
+      "sector": "E",
+      "cell_id": "1800:E",
+      "selection_rank": 1,
+      "selection_digest": "368f8d6d2ba4101ddeefe0bff10d860efd3657d69a7046f9f767f44c48b6c769"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1800:E:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Kazakh Khanate",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 10424,
+      "name": "Kazakh Khanate",
+      "type": "POLITY",
+      "from_year": 1796,
+      "to_year": 1802,
+      "seshat_id": "kz_kazakh_khanate_2",
+      "wikidata": "Q1433867"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1800,
+      "display_anchor": "1800 CE",
+      "atlas_astronomical_anchor_year": 1800
+    },
+    "sampling": {
+      "sector": "E",
+      "cell_id": "1800:E",
+      "selection_rank": 2,
+      "selection_digest": "3ca8e0faf5074b08aa1e8b62a6a68c2051f510749941d9dd335f583e082d8c59"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1800:F:r1",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Tokugawa Shogunate",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 10496,
+      "name": "Tokugawa Shogunate",
+      "type": "POLITY",
+      "from_year": 1799,
+      "to_year": 1821,
+      "seshat_id": "jp_tokugawa_shogunate",
+      "wikidata": "Q205662"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1800,
+      "display_anchor": "1800 CE",
+      "atlas_astronomical_anchor_year": 1800
+    },
+    "sampling": {
+      "sector": "F",
+      "cell_id": "1800:F",
+      "selection_rank": 1,
+      "selection_digest": "069f175966c3f6884961f29edbc675a4d91e022dbeeba37fa8f825e3d25554ec"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:P:1800:F:r2",
+    "frame_origin": "new_systematic_polity",
+    "target_label": "Kingdom of Champasak",
+    "source_native": {
+      "dataset": "Cliopatria",
+      "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+      "row_ordinal": 10408,
+      "name": "Kingdom of Champasak",
+      "type": "POLITY",
+      "from_year": 1796,
+      "to_year": 1827,
+      "seshat_id": "",
+      "wikidata": "Q403369"
+    },
+    "temporal_frame": {
+      "source_anchor_year": 1800,
+      "display_anchor": "1800 CE",
+      "atlas_astronomical_anchor_year": 1800
+    },
+    "sampling": {
+      "sector": "F",
+      "cell_id": "1800:F",
+      "selection_rank": 2,
+      "selection_digest": "06c6f03fc7229fab63e50eddcf75d1d30f9cde8c88c36920234fa1799b782444"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:tenochtitlan_1500",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Tenochtitlan",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "tenochtitlan_1500"
+    },
+    "temporal_frame": {
+      "display_anchor": "1500",
+      "anchor_year": 1500
+    },
+    "sampling": {
+      "frame_class": "node_site",
+      "selection_digest": "24d1884174a520f5d10b4b028c422fa3ce551d1e25968f8e23a24082605ed928"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:samarkand_1400",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Samarkand",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "samarkand_1400"
+    },
+    "temporal_frame": {
+      "display_anchor": "1400",
+      "anchor_year": 1400
+    },
+    "sampling": {
+      "frame_class": "node_site",
+      "selection_digest": "36d6bec16d060d9c0fcfa4899ed862c5c2de0cb77822aa6610dc1c18e981c5d9"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:timbuktu_1500",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Timbuktu",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "timbuktu_1500"
+    },
+    "temporal_frame": {
+      "display_anchor": "1500",
+      "anchor_year": 1500
+    },
+    "sampling": {
+      "frame_class": "node_site",
+      "selection_digest": "59b6686f15f40d22097163da97ed9ee061d93ce77932d8da929a1baf783bfdbe"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:gao_1500",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Gao",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "gao_1500"
+    },
+    "temporal_frame": {
+      "display_anchor": "1500",
+      "anchor_year": 1500
+    },
+    "sampling": {
+      "frame_class": "node_site",
+      "selection_digest": "68633f3026004c6e1853ea0f58416c8bbeccb20a929459be27fd11ee8d874b83"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:angkor_1200",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Angkor",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "angkor_1200"
+    },
+    "temporal_frame": {
+      "display_anchor": "1200",
+      "anchor_year": 1200
+    },
+    "sampling": {
+      "frame_class": "node_site",
+      "selection_digest": "975d9b96a176fecde4a5145c5b399553dc2fee23892ddfc84f6682305a10df62"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:great_zimbabwe_1400",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Great Zimbabwe",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "great_zimbabwe_1400"
+    },
+    "temporal_frame": {
+      "display_anchor": "1400",
+      "anchor_year": 1400
+    },
+    "sampling": {
+      "frame_class": "node_site",
+      "selection_digest": "ebf63d494b5b4d7f89653d759c2bf50eda2ea80fe4121b68803330b1d23717f9"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:great_lavra_1100",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Great Lavra, Mount Athos",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "great_lavra_1100"
+    },
+    "temporal_frame": {
+      "display_anchor": "1100",
+      "anchor_year": 1100
+    },
+    "sampling": {
+      "frame_class": "institution_estate",
+      "selection_digest": "0c6acfc11300f01e7d3abb6ee520b877782e571d0ad6d6d6e1a21c8540cb69a9"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:todaiji_800",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Tōdai-ji",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "todaiji_800"
+    },
+    "temporal_frame": {
+      "display_anchor": "800",
+      "anchor_year": 800
+    },
+    "sampling": {
+      "frame_class": "institution_estate",
+      "selection_digest": "4eb8dee5bb83301ebedfe0bb4cd68979b3e72cb67528ec88adfdadeeae54beaa"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:shaolin_1000",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Shaolin Monastery",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "shaolin_1000"
+    },
+    "temporal_frame": {
+      "display_anchor": "1000",
+      "anchor_year": 1000
+    },
+    "sampling": {
+      "frame_class": "institution_estate",
+      "selection_digest": "571c661b2de110a5b9be65eec9edf4d2b6b903256b3847172c096cf813051bf0"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:ise_1000",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Ise Grand Shrine",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "ise_1000"
+    },
+    "temporal_frame": {
+      "display_anchor": "1000",
+      "anchor_year": 1000
+    },
+    "sampling": {
+      "frame_class": "institution_estate",
+      "selection_digest": "5f01f731412a3ece907dbdafe8b6de280fad337cae11b174baa4f09c3f3c2e56"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:nalanda_700",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Nalanda Mahavihara",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "nalanda_700"
+    },
+    "temporal_frame": {
+      "display_anchor": "700",
+      "anchor_year": 700
+    },
+    "sampling": {
+      "frame_class": "institution_estate",
+      "selection_digest": "63bce698072456d51b1d2b548116b6a2000392b2935370b81de0b4c39dbcf5d0"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:karnak_amun_m1000",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Temple of Amun at Karnak",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "karnak_amun_m1000"
+    },
+    "temporal_frame": {
+      "display_anchor": "-1000",
+      "anchor_year": -1000
+    },
+    "sampling": {
+      "frame_class": "institution_estate",
+      "selection_digest": "df72e363581a43b70bd2c360b2df3d0e861f3e29bc88ef7729307d05bcc7b7a4"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:swahili_1400",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Swahili maritime trade network",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "swahili_1400"
+    },
+    "temporal_frame": {
+      "display_anchor": "1400",
+      "anchor_year": 1400
+    },
+    "sampling": {
+      "frame_class": "mobile_network",
+      "selection_digest": "088e401232f97a8b4da51f14cda41917bf5e7e3170562d7d07b4a6d571cc4060"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:indian_ocean_1400",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Indian Ocean trade network",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "indian_ocean_1400"
+    },
+    "temporal_frame": {
+      "display_anchor": "1400",
+      "anchor_year": 1400
+    },
+    "sampling": {
+      "frame_class": "mobile_network",
+      "selection_digest": "2e8c417c587e1275394469be214c77f5e5535c7220af742507015dff4e6859fb"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:hanseatic_1400",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Hanseatic League network",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "hanseatic_1400"
+    },
+    "temporal_frame": {
+      "display_anchor": "1400",
+      "anchor_year": 1400
+    },
+    "sampling": {
+      "frame_class": "mobile_network",
+      "selection_digest": "429d67c35b170fd3e51807be417b5dd712180ae9c1ca6825f2eef580264fd90c"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:incense_m100",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Incense Route network",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "incense_m100"
+    },
+    "temporal_frame": {
+      "display_anchor": "-100",
+      "anchor_year": -100
+    },
+    "sampling": {
+      "frame_class": "mobile_network",
+      "selection_digest": "9d548974594fb2258edafb28c5a42938ac3e0c87aff1bfdfed9d1ffd8aa85bdd"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:mongol_yam_1300",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Mongol Yam/postal network",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "mongol_yam_1300"
+    },
+    "temporal_frame": {
+      "display_anchor": "1300",
+      "anchor_year": 1300
+    },
+    "sampling": {
+      "frame_class": "mobile_network",
+      "selection_digest": "a3f493fc8d9b167086b4bf3ac04d53cf35b294e0a12292c282b1341526d5a98d"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:trans_saharan_1300",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Trans-Saharan trade network",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "trans_saharan_1300"
+    },
+    "temporal_frame": {
+      "display_anchor": "1300",
+      "anchor_year": 1300
+    },
+    "sampling": {
+      "frame_class": "mobile_network",
+      "selection_digest": "fedd0455186ff4e28080b675c6e19eb495f6a19e1a8c5ddefd3ebc402a23264b"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:inuit_arctic_1800",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Inuit Arctic communities",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "inuit_arctic_1800"
+    },
+    "temporal_frame": {
+      "display_anchor": "1800",
+      "anchor_year": 1800
+    },
+    "sampling": {
+      "frame_class": "region_community",
+      "selection_digest": "35b7a31ec0548f81c32c94cd7825b8ba1197e6d3e75b1134ebf55b3a8ba63e53"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:ifugao_1700",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Ifugao communities, northern Luzon",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "ifugao_1700"
+    },
+    "temporal_frame": {
+      "display_anchor": "1700",
+      "anchor_year": 1700
+    },
+    "sampling": {
+      "frame_class": "region_community",
+      "selection_digest": "5e7e17c0b79ba0445ae70660ef325f7ee8da65730f6537f7cbce5194a05055d7"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:kalahari_san_1800",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Kalahari San communities",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "kalahari_san_1800"
+    },
+    "temporal_frame": {
+      "display_anchor": "1800",
+      "anchor_year": 1800
+    },
+    "sampling": {
+      "frame_class": "region_community",
+      "selection_digest": "5ee41cb2d95f91d32a3ce7a32ee0a6ea8b1bc463dee098c6a0719f2e9cbfbfb3"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:sapmi_1600",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Sápmi / Sámi communities",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "sapmi_1600"
+    },
+    "temporal_frame": {
+      "display_anchor": "1600",
+      "anchor_year": 1600
+    },
+    "sampling": {
+      "frame_class": "region_community",
+      "selection_digest": "7da15e691ab3a793e792478151b0746cbd6dcd324b2c75e3cb7c593889c962e6"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:maori_1700",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Māori communities in Aotearoa",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "maori_1700"
+    },
+    "temporal_frame": {
+      "display_anchor": "1700",
+      "anchor_year": 1700
+    },
+    "sampling": {
+      "frame_class": "region_community",
+      "selection_digest": "bf0ec5b0971066f196ac6a2627993b97c763aa12b52c9258ccb3b4e023958509"
+    },
+    "planned_tier": "C0",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "source_registered_unreviewed",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  },
+  {
+    "target_id": "R1:N:yaghan_1800",
+    "frame_origin": "new_systematic_nonpolity",
+    "target_label": "Yaghan communities, Tierra del Fuego",
+    "source_native": {
+      "dataset": "COV-004 neutral non-polity candidate universe",
+      "source_file": "experiments/falsification-atlas/06_NONPOLITY_CANDIDATE_POOL.json",
+      "candidate_id": "yaghan_1800"
+    },
+    "temporal_frame": {
+      "display_anchor": "1800",
+      "anchor_year": 1800
+    },
+    "sampling": {
+      "frame_class": "region_community",
+      "selection_digest": "d268e2d9f3d684fef7556ceff5dfc4477e5f09b81350fd70f0fd47d80bb74d89"
+    },
+    "planned_tier": "C1",
+    "research_stage": "not_researched",
+    "classification_outcome": "unassessed",
+    "identity_state": "qa_recorded_separately",
+    "review_state": "draft",
+    "interpretation": "Registered target; historical slavery/coercion research not yet performed.",
+    "absence_inference_prohibited": true
+  }
+]
