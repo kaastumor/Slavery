@@ -213,7 +213,7 @@ The durable lesson, as narrowed by ADV-001 / D-068, is:
 - do not automatically continue the tested row-by-row expansion workflow;
 - do **not** treat COV-002 as a rejection of tiered, versioned, batch-curated systematic coverage in general.
 
-The broader systematic-coverage thesis remains open and untested. No successor experiment or corpus-expansion horizon is currently authorized.
+At the ADV-001 boundary the broader systematic-coverage thesis remained open and untested. COV-003 subsequently tested a tiered architecture and returned TIERED SURVIVE; no successor experiment or corpus-expansion horizon is currently authorized.
 
 ### ADV-001 — completeness-inference audit (completed)
 
