@@ -1,0 +1,572 @@
+{
+  "programme": "R1",
+  "stage": "R1.3",
+  "frozen_at": "2026-09-23",
+  "scope": "neutral identity/time/frame QA only; no slavery/coercion research",
+  "planned_c1_total": 36,
+  "qa_counts": {
+    "validated": 18,
+    "validated_with_frame_limitation": 16,
+    "ambiguous_requires_C2_or_hold": 1,
+    "invalid_or_mismatched_hold": 1
+  },
+  "subject_research_ready": 34,
+  "holds": [
+    "R1:P:1800:A:r1",
+    "R1:P:1800:D:r1"
+  ],
+  "rows": [
+    {
+      "target_id": "R1:P:-2000:C:r1",
+      "target_label": "Middle Kingdom of Egypt",
+      "anchor": "2000 BCE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "validated",
+      "effective_frame_class": "historical_period_polity",
+      "raw_source_type": "POLITY",
+      "limitation": "None material to target identity at this anchor.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q191324",
+        "https://www.metmuseum.org/toah/hd/mking/hd_mking.htm"
+      ],
+      "basis": "Cliopatria row spans the anchor; Met dates the Middle Kingdom to roughly 2030–1640 BCE.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:P:-2000:D:r1",
+      "target_label": "Sumerian City-States",
+      "anchor": "2000 BCE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "polity_aggregate",
+      "raw_source_type": "POLITY",
+      "limitation": "Aggregate of multiple Sumerian city-state polities around a transition period; never treat as one sovereign territorial polity.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q2345840"
+      ],
+      "basis": "Source-native aggregate spans the anchor; label is retained as aggregate rather than normalized to one state.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:P:-2000:E:r1",
+      "target_label": "Indus Valley Civilization",
+      "anchor": "2000 BCE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "civilization_region",
+      "raw_source_type": "POLITY",
+      "limitation": "Civilization/archaeological-cultural frame, not one demonstrated sovereign polity; territorial inference must remain bounded.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q42534",
+        "https://82nd-and-fifth.metmuseum.org/toah/ht/02/ssa.html"
+      ],
+      "basis": "Met chronology places mature Harappan/Indus civilization ca. 2600–1900 BCE; 2000 BCE is valid, but polity semantics are too strong.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:P:-500:C:r1",
+      "target_label": "Kingdom of Kush",
+      "anchor": "500 BCE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "validated",
+      "effective_frame_class": "polity",
+      "raw_source_type": "POLITY",
+      "limitation": "Anchor falls in the Kushite/Napatan kingdom; later Meroitic phase must not be back-projected.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q241790",
+        "https://82nd-and-fifth.metmuseum.org/toah/ht/04/afe.html"
+      ],
+      "basis": "Met chronology places Kingdom of Kush ca. 760 BCE–350 CE.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:P:-500:E:r1",
+      "target_label": "Magadha - Haryanka dynasty",
+      "anchor": "500 BCE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "dynastic_polity",
+      "raw_source_type": "POLITY",
+      "limitation": "Early Magadhan dynastic chronology is tradition-dependent and contested; treat 500 BCE as approximate anchor, not exact regnal dating.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q12459974"
+      ],
+      "basis": "Frozen source row includes 500 BCE; neutral chronologies place Bimbisara/Ajatashatru around this period but differ in exact dates.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:P:-500:F:r1",
+      "target_label": "Cai",
+      "anchor": "500 BCE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "validated",
+      "effective_frame_class": "polity",
+      "raw_source_type": "POLITY",
+      "limitation": "None material to target identity at anchor.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q1025803"
+      ],
+      "basis": "Frozen source-native state range includes 500 BCE; Cai is an attested Zhou-era state.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:P:500:A:r1",
+      "target_label": "Teotihuacan",
+      "anchor": "500 CE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "urban_polity_site",
+      "raw_source_type": "POLITY",
+      "limitation": "Major urban/political centre; exact territorial jurisdiction is uncertain and must not be inferred from city/site geometry.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q172613",
+        "https://www.metmuseum.org/TOAH/hd/teot/hd_teot.htm"
+      ],
+      "basis": "Met places Teotihuacan ca. 100 BCE–800 CE and near peak around 400 CE; 500 CE is valid for the urban centre.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:P:500:D:r1",
+      "target_label": "Lazica",
+      "anchor": "500 CE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "validated",
+      "effective_frame_class": "polity",
+      "raw_source_type": "POLITY",
+      "limitation": "Byzantine/Iranian suzerainty and changing dependency must be kept separate from target identity.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q136884",
+        "https://www.iranicaonline.org/articles/abkaz/"
+      ],
+      "basis": "Lazica is independently attested in the sixth century; Iranica discusses it as a Byzantine dependency by 532.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:P:500:F:r1",
+      "target_label": "Tamna",
+      "anchor": "500 CE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "validated",
+      "effective_frame_class": "island_polity",
+      "raw_source_type": "POLITY",
+      "limitation": "Island kingdom frame; later tributary/title relations do not erase local polity identity.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q28057",
+        "https://jeju.museum.go.kr/html/en/sub03/sub03_030105.html"
+      ],
+      "basis": "Jeju National Museum places formation around the second century and documents later regional interactions.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:P:1300:A:r1",
+      "target_label": "Later Mayan City-States",
+      "anchor": "1300 CE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "polity_aggregate",
+      "raw_source_type": "POLITY",
+      "limitation": "Multi-polity Postclassic Maya aggregate; no single territorial jurisdiction or uniform practice may be inferred.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q28567",
+        "https://82nd-and-fifth.metmuseum.org/toah/ht/07/caa.html"
+      ],
+      "basis": "Met chronology shows Mayapan and K’iche’/neighboring states plus numerous city-states at 1300 CE.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:P:1300:C:r1",
+      "target_label": "Mali Empire",
+      "anchor": "1300 CE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "validated",
+      "effective_frame_class": "polity",
+      "raw_source_type": "POLITY",
+      "limitation": "Imperial extent changes over time; selected-year geometry must remain year-specific.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q184536"
+      ],
+      "basis": "Frozen source and standard chronology place Mali firmly in existence at 1300 CE.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:P:1300:D:r1",
+      "target_label": "Grand Duchy of Lithuania",
+      "anchor": "1300 CE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "validated",
+      "effective_frame_class": "polity",
+      "raw_source_type": "POLITY",
+      "limitation": "Territorial extent is historically changing; identity itself is valid.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q49683"
+      ],
+      "basis": "Grand Duchy exists by the late thirteenth century and source range includes 1300.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:P:1300:F:r1",
+      "target_label": "Khmer Empire",
+      "anchor": "1300 CE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "validated",
+      "effective_frame_class": "polity",
+      "raw_source_type": "POLITY",
+      "limitation": "Angkor is a capital/site locus; empire-wide geometry must not be inferred from the site boundary.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q201705",
+        "https://whc.unesco.org/en/list/668"
+      ],
+      "basis": "UNESCO places the Khmer Empire/Angkor period from the ninth through fourteenth/fifteenth centuries; 1300 CE is valid.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:P:1800:A:r1",
+      "target_label": "French Louisiana",
+      "anchor": "1800 CE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "ambiguous_requires_C2_or_hold",
+      "effective_frame_class": "jurisdiction_title_transition",
+      "raw_source_type": "POLITY",
+      "limitation": "Treaty of San Ildefonso in 1800 created a French title/cession claim, but Spanish administration and actual delivery to France continued until 1803. Annual anchor cannot safely collapse title, possession and governance.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q5501836",
+        "https://www.archives.gov/publications/prologue/2003/spring/louisiana-purchase.html",
+        "https://www.archives.gov/research/catalog/catalog-bulk-downloads/france-bulk-download"
+      ],
+      "basis": "National Archives records retrocession by treaty in 1800–1801 but formal delivery from Spain to France at New Orleans only on 30 Nov 1803. Hold before subject research.",
+      "subject_research_allowed": false
+    },
+    {
+      "target_id": "R1:P:1800:C:r1",
+      "target_label": "Ethiopian Empire",
+      "anchor": "1800 CE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "imperial_title_fragmented_sovereignty",
+      "raw_source_type": "POLITY",
+      "limitation": "At 1800 the Solomonic imperial institution persists during Zemene Mesafint, but effective sovereignty is fragmented among regional lords; do not infer uniform imperial territorial practice.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q207521",
+        "https://82nd-and-fifth.metmuseum.org/toah/ht/10/afa.html"
+      ],
+      "basis": "1800 falls within the Age of Princes; imperial identity persists while central authority is weak/fragmented.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:P:1800:D:r1",
+      "target_label": "Duchy of Bavaria",
+      "anchor": "1800 CE",
+      "frame_origin": "new_systematic_polity",
+      "qa_state": "invalid_or_mismatched_hold",
+      "effective_frame_class": "invalid_label_at_anchor",
+      "raw_source_type": "POLITY",
+      "limitation": "Bavaria was an Electorate from 1623 to 1806. The source-native label 'Duchy of Bavaria' is not valid for 1800. Do not silently replace it with Electorate of Bavaria.",
+      "neutral_refs": [
+        "https://www.wikidata.org/wiki/Q47261",
+        "https://archiv.hdbg.de/geschichte-bayerns/en-02-die-geschichte-04.php"
+      ],
+      "basis": "Haus der Bayerischen Geschichte explicitly dates the Electorate of Bavaria 1623–1806. Hold without substitution.",
+      "subject_research_allowed": false
+    },
+    {
+      "target_id": "R1:N:gao_1500",
+      "target_label": "Gao",
+      "anchor": "1500 CE",
+      "frame_origin": "new_systematic_nonpolity",
+      "qa_state": "validated",
+      "effective_frame_class": "node_site",
+      "raw_source_type": "neutral_nonpolity_candidate",
+      "limitation": "City/site locus; not identical to the entire Songhai Empire.",
+      "neutral_refs": [
+        "https://whc.unesco.org/en/list/1139"
+      ],
+      "basis": "UNESCO identifies Gao as Askia Muhammad’s capital and dates the Tomb of Askia to 1495.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:N:angkor_1200",
+      "target_label": "Angkor",
+      "anchor": "1200 CE",
+      "frame_origin": "new_systematic_nonpolity",
+      "qa_state": "validated",
+      "effective_frame_class": "node_site",
+      "raw_source_type": "neutral_nonpolity_candidate",
+      "limitation": "Capital/site complex; no empire-wide inference from the archaeological park boundary.",
+      "neutral_refs": [
+        "https://whc.unesco.org/en/list/668"
+      ],
+      "basis": "UNESCO identifies Angkor as the centre/capitals of the Khmer Empire from the ninth to fifteenth centuries.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:N:shaolin_1000",
+      "target_label": "Shaolin Monastery",
+      "anchor": "1000 CE",
+      "frame_origin": "new_systematic_nonpolity",
+      "qa_state": "validated",
+      "effective_frame_class": "institution_estate",
+      "raw_source_type": "neutral_nonpolity_candidate",
+      "limitation": "Institution/site locus; broader holdings or dependencies require separate evidence.",
+      "neutral_refs": [
+        "https://www.unesco.org/en/memory-world/steles-shaolin-temple-566-1990?hub=1081"
+      ],
+      "basis": "UNESCO records Shaolin Temple as established in 495 CE; 1000 CE is safely within institutional continuity.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:N:nalanda_700",
+      "target_label": "Nalanda Mahavihara",
+      "anchor": "700 CE",
+      "frame_origin": "new_systematic_nonpolity",
+      "qa_state": "validated",
+      "effective_frame_class": "institution_estate",
+      "raw_source_type": "neutral_nonpolity_candidate",
+      "limitation": "Scholastic/monastic institution; site geometry is not territorial jurisdiction.",
+      "neutral_refs": [
+        "https://whc.unesco.org/en/list/1502"
+      ],
+      "basis": "UNESCO dates Nalanda’s monastic-scholastic establishment from roughly the fifth to thirteenth centuries.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:N:incense_m100",
+      "target_label": "Incense Route network",
+      "anchor": "100 BCE",
+      "frame_origin": "new_systematic_nonpolity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "mobile_network",
+      "raw_source_type": "neutral_nonpolity_candidate",
+      "limitation": "Multi-route, changing trade network; any display geometry is schematic and never territorial.",
+      "neutral_refs": [
+        "https://whc.unesco.org/en/list/1107",
+        "https://whc.unesco.org/en/tentativelists/6862"
+      ],
+      "basis": "UNESCO describes a multi-thousand-kilometre incense trade network flourishing from the third century BCE into the early centuries CE; 100 BCE is valid.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:N:mongol_yam_1300",
+      "target_label": "Mongol Yam/postal network",
+      "anchor": "1300 CE",
+      "frame_origin": "new_systematic_nonpolity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "mobile_network",
+      "raw_source_type": "neutral_nonpolity_candidate",
+      "limitation": "Imperial/postal network varied by khanate and period; route/station extent must be source-specific.",
+      "neutral_refs": [
+        "https://doi.org/10.1017/CBO9780511497520.005",
+        "https://journals.rcsi.science/2308-152X/article/view/349578"
+      ],
+      "basis": "Specialist postal-history scholarship places the Mongol Yām from Chinggisid/Ögedei reforms through successor khanates; 1300 is valid.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:N:inuit_arctic_1800",
+      "target_label": "Inuit Arctic communities",
+      "anchor": "1800 CE",
+      "frame_origin": "new_systematic_nonpolity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "region_community",
+      "raw_source_type": "neutral_nonpolity_candidate",
+      "limitation": "Very broad multi-community/circumpolar frame with different colonial-contact histories; no single society, jurisdiction, or uniform institution may be inferred.",
+      "neutral_refs": [
+        "https://naturalhistory.si.edu/education/teaching-resources/anthropology-and-social-studies/arctic-lands-and-peoples",
+        "https://whc.unesco.org/en/list/1557"
+      ],
+      "basis": "Smithsonian/UNESCO document long-standing Inuit communities across multiple Arctic regions; 1800 is valid but the aggregate frame is intentionally broad.",
+      "subject_research_allowed": true
+    },
+    {
+      "target_id": "R1:N:yaghan_1800",
+      "target_label": "Yaghan communities, Tierra del Fuego",
+      "anchor": "1800 CE",
+      "frame_origin": "new_systematic_nonpolity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "region_community",
+      "raw_source_type": "neutral_nonpolity_candidate",
+      "limitation": "Community/ethnonym and archipelago frame; no single territorial polity or fixed boundary.",
+      "neutral_refs": [
+        "https://www.si.edu/object/siris_sil_916538",
+        "https://americanindian.si.edu/collections-search/object/NMAI_152329"
+      ],
+      "basis": "Smithsonian records identify Yagán/Yámana/Yahgan people in Tierra del Fuego; 1800 predates the later ethnographic documentation and requires retrospective identity caution.",
+      "subject_research_allowed": true
+    },
+    {
+      "legacy_ref": "-500:D",
+      "target_id": "R1:L:-500:D",
+      "target_label": "Carthage",
+      "anchor": "500 BCE",
+      "frame_origin": "legacy_promotion_polity",
+      "qa_state": "validated",
+      "effective_frame_class": "polity",
+      "raw_source_type": "legacy_cliopatria",
+      "limitation": "Frozen Cliopatria row spans the anchor; no identity defect identified in prior QC.",
+      "neutral_refs": [],
+      "basis": "Explicit Core-v1 identity/frame recheck of frozen legacy target; prior historical outcome is not grandfathered.",
+      "subject_research_allowed": true
+    },
+    {
+      "legacy_ref": "1800:A",
+      "target_id": "R1:L:1800:A",
+      "target_label": "United States of America",
+      "anchor": "1800 CE",
+      "frame_origin": "legacy_promotion_polity",
+      "qa_state": "validated",
+      "effective_frame_class": "polity",
+      "raw_source_type": "legacy_cliopatria",
+      "limitation": "Frozen Cliopatria row/anchor is valid; no frame defect identified.",
+      "neutral_refs": [],
+      "basis": "Explicit Core-v1 identity/frame recheck of frozen legacy target; prior historical outcome is not grandfathered.",
+      "subject_research_allowed": true
+    },
+    {
+      "legacy_ref": "COV2:1300:E",
+      "target_id": "R1:L:COV2:1300:E",
+      "target_label": "Pandya Empire",
+      "anchor": "1300 CE",
+      "frame_origin": "legacy_promotion_polity",
+      "qa_state": "validated",
+      "effective_frame_class": "polity",
+      "raw_source_type": "legacy_cliopatria",
+      "limitation": "Frozen source-native polity interval contains the anchor.",
+      "neutral_refs": [],
+      "basis": "Explicit Core-v1 identity/frame recheck of frozen legacy target; prior historical outcome is not grandfathered.",
+      "subject_research_allowed": true
+    },
+    {
+      "legacy_ref": "1800:F",
+      "target_id": "R1:L:1800:F",
+      "target_label": "Portuguese Colonies",
+      "anchor": "1800 CE",
+      "frame_origin": "legacy_promotion_polity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "jurisdiction_aggregate",
+      "raw_source_type": "legacy_cliopatria",
+      "limitation": "Aggregate of multiple Portuguese colonial jurisdictions; no single territorial-practice claim may attach to the aggregate.",
+      "neutral_refs": [],
+      "basis": "Explicit Core-v1 identity/frame recheck of frozen legacy target; prior historical outcome is not grandfathered.",
+      "subject_research_allowed": true
+    },
+    {
+      "legacy_ref": "500:F",
+      "target_id": "R1:L:500:F",
+      "target_label": "Chámpa",
+      "anchor": "500 CE",
+      "frame_origin": "legacy_promotion_polity",
+      "qa_state": "validated",
+      "effective_frame_class": "polity",
+      "raw_source_type": "legacy_cliopatria",
+      "limitation": "Frozen source-native interval contains the anchor; identity retained.",
+      "neutral_refs": [],
+      "basis": "Explicit Core-v1 identity/frame recheck of frozen legacy target; prior historical outcome is not grandfathered.",
+      "subject_research_allowed": true
+    },
+    {
+      "legacy_ref": "COV2:1300:B",
+      "target_id": "R1:L:COV2:1300:B",
+      "target_label": "Chimu Empire",
+      "anchor": "1300 CE",
+      "frame_origin": "legacy_promotion_polity",
+      "qa_state": "validated",
+      "effective_frame_class": "polity",
+      "raw_source_type": "legacy_cliopatria",
+      "limitation": "Frozen source-native interval contains the anchor; identity retained.",
+      "neutral_refs": [],
+      "basis": "Explicit Core-v1 identity/frame recheck of frozen legacy target; prior historical outcome is not grandfathered.",
+      "subject_research_allowed": true
+    },
+    {
+      "legacy_ref": "1300:B",
+      "target_id": "R1:L:1300:B",
+      "target_label": "Cuzco",
+      "anchor": "1300 CE",
+      "frame_origin": "legacy_promotion_polity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "node_or_incipient_polity",
+      "raw_source_type": "legacy_cliopatria",
+      "limitation": "Cuzco around 1300 must not be treated as the later mature Inca imperial polity.",
+      "neutral_refs": [],
+      "basis": "Explicit Core-v1 identity/frame recheck of frozen legacy target; prior historical outcome is not grandfathered.",
+      "subject_research_allowed": true
+    },
+    {
+      "legacy_ref": "COV2:-500:C",
+      "target_id": "R1:L:COV2:-500:C",
+      "target_label": "Hadhramaut",
+      "anchor": "500 BCE",
+      "frame_origin": "legacy_promotion_polity",
+      "qa_state": "validated",
+      "effective_frame_class": "polity",
+      "raw_source_type": "legacy_cliopatria",
+      "limitation": "Frozen source-native interval contains the anchor; identity retained.",
+      "neutral_refs": [],
+      "basis": "Explicit Core-v1 identity/frame recheck of frozen legacy target; prior historical outcome is not grandfathered.",
+      "subject_research_allowed": true
+    },
+    {
+      "legacy_ref": "viking_900",
+      "target_id": "R1:L:viking_900",
+      "target_label": "Viking trade network",
+      "anchor": "900 CE",
+      "frame_origin": "legacy_promotion_nonpolity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "mobile_network",
+      "raw_source_type": "legacy_cliopatria",
+      "limitation": "Network is not one society or territorial jurisdiction.",
+      "neutral_refs": [
+        "https://www.britannica.com/topic/Viking-people"
+      ],
+      "basis": "Explicit Core-v1 identity/frame recheck of frozen legacy target; prior historical outcome is not grandfathered.",
+      "subject_research_allowed": true
+    },
+    {
+      "legacy_ref": "andaman_1800",
+      "target_id": "R1:L:andaman_1800",
+      "target_label": "Andaman Islands communities",
+      "anchor": "1800 CE",
+      "frame_origin": "legacy_promotion_nonpolity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "region_community",
+      "raw_source_type": "legacy_cliopatria",
+      "limitation": "Multiple distinct island peoples; no single indigenous polity.",
+      "neutral_refs": [
+        "https://www.britannica.com/place/Andaman-Islands"
+      ],
+      "basis": "Explicit Core-v1 identity/frame recheck of frozen legacy target; prior historical outcome is not grandfathered.",
+      "subject_research_allowed": true
+    },
+    {
+      "legacy_ref": "cahokia_1200",
+      "target_id": "R1:L:cahokia_1200",
+      "target_label": "Cahokia",
+      "anchor": "1200 CE",
+      "frame_origin": "legacy_promotion_nonpolity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "node_site",
+      "raw_source_type": "legacy_cliopatria",
+      "limitation": "Archaeological urban/site frame; no automatic territorial polity extent.",
+      "neutral_refs": [
+        "https://whc.unesco.org/en/list/198"
+      ],
+      "basis": "Explicit Core-v1 identity/frame recheck of frozen legacy target; prior historical outcome is not grandfathered.",
+      "subject_research_allowed": true
+    },
+    {
+      "legacy_ref": "al_azhar_1100",
+      "target_id": "R1:L:al_azhar_1100",
+      "target_label": "al-Azhar Mosque/university",
+      "anchor": "1100 CE",
+      "frame_origin": "legacy_promotion_nonpolity",
+      "qa_state": "validated_with_frame_limitation",
+      "effective_frame_class": "institution_estate",
+      "raw_source_type": "legacy_cliopatria",
+      "limitation": "Institutional point/locus inside Cairo; city/imperial context is not institutional practice.",
+      "neutral_refs": [
+        "https://www.britannica.com/topic/al-Azhar-University"
+      ],
+      "basis": "Explicit Core-v1 identity/frame recheck of frozen legacy target; prior historical outcome is not grandfathered.",
+      "subject_research_allowed": true
+    }
+  ]
+}
