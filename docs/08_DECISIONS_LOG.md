@@ -597,3 +597,52 @@ The outer `CLAIM.valid_years` range remains useful for candidate retrieval. It i
 - introduce probabilistic time surfaces — parked under D-058; the evidence does not justify probability distributions.
 
 **Consequences:** M2 validators must reject positive asserted intervals for terminus modes, while preserving open outer query bounds. The correction remains disposable prototype work; no production schema, canonical v0.6.1 release or public preview is changed.
+
+
+## D-062 — After M2, preserve the evidence core and simplify the product/operations boundary
+**Date:** 2026-09-23  
+**Status:** accepted project-direction decision from HC-003; no new horizon authorized
+
+**Decision:** The Historical Slavery Atlas continues, but the default project identity is narrowed to an **auditable global/deep-time evidence corpus + comparison method + thin atlas/query surface**.
+
+The current full application/platform footprint is not the contribution and does not receive automatic further investment.
+
+Preserve as the durable core:
+- claim-specific source/version/evidence provenance;
+- post-M1 semantic separations and adversarial fixtures;
+- raw/reviewed/published/canonical state boundaries;
+- historical geography resolution and selected-year logic;
+- PostgreSQL/PostGIS where it materially supports research integrity and query behavior;
+- reproducible release artifacts and reconstruction;
+- a minimal map/query/evidence surface when it demonstrates comparative value.
+
+Treat as contingent/derived:
+- the current MapLibre/API public preview;
+- always-on cloud operations;
+- richer application UI;
+- production migration of experimental M2 structures.
+
+**Evidence:**
+- M1/M2 repeatedly found real semantic/integrity defects and justify the research-method core.
+- A bounded Silla/Hittite challenge found parity on core fact discovery using ordinary targeted research + a strong general-purpose model; the plausible Atlas advantage is durable comparative semantics rather than discovery itself.
+- External precedent review found generic DH research-platform functionality already well served by nodegoat and adjacent standards/projects.
+- The current public preview is non-canonical and has no demonstrated user-critical availability requirement.
+- The project can remove operational machinery without losing its strongest research contribution.
+
+**Alternatives considered:**
+- continue full-platform expansion by default — rejected until user/research value is demonstrated;
+- redirect into a generic digital-history platform — rejected because strong precedents already cover that category and no cross-domain need is evidenced;
+- stop immediately — rejected because the domain-specific corpus/method and adversarial evidence have not yet been tested against the strongest baseline in the form most likely to preserve their value;
+- collapse immediately to methodology-only — parked as the explicit fallback if the thin atlas/query layer fails a value-discrimination pilot.
+
+**Consequences:**
+- v0.6.1 remains canonical;
+- the current preview remains a frozen/non-canonical demonstration;
+- M2 production migration remains parked;
+- broad H2 evidence expansion is no longer the automatic next horizon;
+- production-like preview operations are reduced;
+- future generic platform features require a demonstrated need not met by existing tools;
+- the project execution queue may remain intentionally idle;
+- a bounded value-discrimination pilot is the only currently justified candidate next experiment, but HC-003 does not authorize starting it;
+- if corpus/method value survives but the thin atlas does not, the project should shrink to methodology/corpus;
+- if neither materially outperforms the strongest baseline, further Atlas expansion should stop.
