@@ -486,3 +486,21 @@ COMMENT ON TABLE atlas.claim_inference_extent IS
 'M2 disposable prototype: reviewed spatial extent of a claim; a broader/different extent requires explicit reviewed basis and rationale.';
 COMMENT ON TABLE atlas.practice_facet_assertion IS
 'M2 disposable prototype: simultaneous typed practice concepts; this does not establish a final exhaustive controlled vocabulary.';
+
+-- D-051 defense in depth: PostgreSQL grants EXECUTE on new functions to
+-- PUBLIC by default in some execution paths. The disposable prototype must not
+-- weaken the existing internal-schema boundary merely because it adds helpers.
+REVOKE ALL PRIVILEGES ON
+    atlas.claim_asserted_interval,
+    atlas.practice_facet_assertion,
+    atlas.claim_evidence_locus,
+    atlas.claim_inference_extent
+FROM PUBLIC;
+
+REVOKE EXECUTE ON FUNCTION atlas.validate_asserted_interval_row() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION atlas.validate_claim_temporal_semantics(uuid) FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION atlas.check_claim_temporal_semantics() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION atlas.post_m1_claim_active_at(uuid, integer) FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION atlas.validate_claim_spatial_scope(uuid) FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION atlas.check_claim_spatial_scope() FROM PUBLIC;
+
