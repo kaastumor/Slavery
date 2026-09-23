@@ -1249,3 +1249,28 @@ It does **not** currently support continuing to grow a full-stack historical app
 
 The next responsible move is not more implementation. It is to leave execution idle until the value-discrimination pilot is explicitly authorized.
 
+
+
+---
+
+## Repository reconciliation executed
+
+The final direction has been reconciled into current project owners on this review branch:
+
+- `docs/23_PROJECT_CHARTER.md` — working identity is corpus + comparison method + thin atlas; H2 becomes a candidate value-discrimination pilot rather than automatic bulk expansion;
+- `docs/25_PROJECT_HEALTH.md` — assumptions/risks/value evidence updated; HC-003 records CONTINUE + SIMPLIFY;
+- `docs/08_DECISIONS_LOG.md` — D-062 records the direction and its consequences;
+- `BACKLOG.md` — reduced from historical execution narrative to a short **IDLE** queue with one non-authorized candidate experiment and explicit kill rule;
+- `README.md` / `docs/01_PROJECT_STATUS.md` — current identity/state updated;
+- `docs/11_SYSTEM_ARCHITECTURE.md` — 15-minute monitor/self-heal removed from target operations architecture;
+- #43 and #26 — visibly marked PARKED/trigger-bound rather than appearing as active next work.
+
+The review deliberately leaves:
+- no new AUTO runway;
+- no production M2 migration;
+- no H2 research batch;
+- no frontend/product project;
+- no new project-management system.
+
+The exact final review branch must pass foundation CI and relevant path-specific gates before #123 is closed.
+
