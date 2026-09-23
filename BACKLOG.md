@@ -1,6 +1,6 @@
 # Historical Slavery Atlas — Backlog
 
-**Updated:** 2026-09-22  
+**Updated:** 2026-09-23  
 **Role:** canonical execution queue; standing assumptions/risks live in `docs/25_PROJECT_HEALTH.md`  
 **Canonical historical data release:** `v0.6.1` (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical)
@@ -48,13 +48,13 @@ The working product stack remains in service. M1 exists because the integrated a
 
 **Execution order for the autonomous worker:**
 
-1. **NOW — #101 AUTO READY — Build adversarial methodology fixtures**
-2. **NEXT — #102 AUTO READY — Prototype practice and coverage semantic split** (after #101)
-3. **NEXT — #103 AUTO READY — Prototype temporal and spatial inference semantics** (after #101)
-4. **NEXT — #104 AUTO READY — Pin and profile the complete Cliopatria baseline**
-5. **GATE — #105 AUTO READY — M1 integrated adversarial gate** — integrated attack completed with **REVISE**; #112 is the required correction before this gate can close.
-6. **NOW — #112 AUTO READY — M1 correct semantic axes and legacy map boundary**
-7. **GATE — #106 AUTO READY — M1 Project Health Check and reconciliation** (only after #105 and #112 are both complete)
+1. **DONE — #101 — Build adversarial methodology fixtures**
+2. **DONE — #102 — Prototype practice and coverage semantic split**
+3. **DONE — #103 — Prototype temporal and spatial inference semantics**
+4. **DONE — #104 — Pin and profile the complete Cliopatria baseline**
+5. **DONE — #112 — Correct semantic axes and legacy map boundary**
+6. **DONE — #105 — M1 integrated adversarial gate** — first disposition REVISE; survived after #112 correction.
+7. **NOW — #106 AUTO READY — M1 Project Health Check and reconciliation**
 
 Rules for M1:
 
