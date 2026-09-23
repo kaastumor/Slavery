@@ -52,6 +52,10 @@ M1 completed with one deliberate revise/correct/re-attack cycle. The integrated 
 
 Parent: **#116 — Integrate hardened semantics with complete geography backbone**
 
+Current integrated evidence:
+- #117 / D-058: post-M1 semantics are now the canonical **target** model, with draft-0.11 explicitly not yet live implementation.
+- #118 / D-059: Cliopatria v0.2.0 calendar and POLITY/RELATION/composite rules are resolved sufficiently for raw integration; source-native year zero and hierarchy remain preserved.
+
 **Execution order / eligibility:**
 
 1. **DONE — #117 — Canonicalize M1 target semantics for M2**
