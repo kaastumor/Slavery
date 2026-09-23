@@ -25,8 +25,12 @@ class MvpAvailabilityGuardrailTests(unittest.TestCase):
         self.assertIn("published-release-snapshot-", DEPLOY)
         self.assertIn("Verify deployed static snapshot", DEPLOY)
 
-    def test_monitor_runs_every_fifteen_minutes(self):
-        self.assertIn('cron: "*/15 * * * *"', WORKFLOW)
+    def test_monitor_uses_low_cadence_for_noncanonical_preview(self):
+        self.assertIn('cron: "17 6 * * 1"', WORKFLOW)
+        self.assertNotIn('cron: "*/15 * * * *"', WORKFLOW)
+
+    def test_automatic_project_self_heal_is_retired(self):
+        self.assertFalse((ROOT / ".github" / "workflows" / "mvp-self-heal.yml").exists())
 
     def test_monitor_checks_api_and_site(self):
         self.assertIn("check_mvp_health.py", WORKFLOW)
