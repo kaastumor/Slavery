@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE R1 — Core Contract, target frame and 34-row subject queue frozen; first C1 research tranche is next**
+**Execution state:** **ACTIVE R1 / CHECKPOINT — tranche 01 survived after material correction; next tranche not yet authorized**
 
 ## Direction after H2
 
@@ -298,6 +298,62 @@ Held without replacement:
 The programme deliberately preserves source-native target labels/types while adding an R1 effective frame where needed. No raw source classification was silently rewritten.
 
 Decision: D-075.
+
+## R1.4 calibration tranche 01 — completed
+
+Issue #163 is the first real subject-research tranche under Core Contract v1.
+
+The tranche was deliberately a 10-row stress/calibration set spanning:
+- new and legacy rows;
+- polity and non-polity frames;
+- validated and frame-limited targets;
+- BCE and CE anchors.
+
+It is not representative of historical prevalence or expected release yield.
+
+### Final result
+
+- 10/10 rows internally adversarially replayed;
+- 2/2 earned C2 packets completed;
+- 3 classified/bounded-supported;
+- 7 inconclusive for the exact frozen target/year/frame claim;
+- 0 final disputed rows.
+
+### Adversarial value
+
+Replay found four material overreach risks after the initial synthesis:
+- Teotihuacan — temporal projection to 500 CE;
+- Shaolin — target/context evidence join;
+- Inuit — external enslavement becoming internal/circumpolar practice plus temporal projection;
+- Cahokia — status overstatement plus projection of earlier Mound 72 evidence to 1200.
+
+All were corrected before the final tranche artifact.
+
+C2 also resolved:
+- Portuguese Colonies by refusing one aggregate territorial-practice state;
+- Cahokia by downgrading preliminary `disputed` to `inconclusive` slave status.
+
+### Interpretation
+
+Core Contract v1 **survives after material correction**.
+
+The live research confirms that temporal applicability, inference extent, dimension separation and selective C2 are doing substantive correctness work rather than merely increasing documentation.
+
+The 50% R1 C1 adversarial-replay floor is therefore retained.
+
+### Boundary
+
+#163 does not authorize tranche 02 automatically.
+
+R1 remains active under #159, but the next tranche requires a deliberate checkpoint choice.
+
+v0.6.1 remains canonical and unchanged.
+
+Durable artifacts:
+- `programmes/r1/c1_tranche_01_final.json`
+- `programmes/r1/12_C1_TRANCHE_01_ADVERSARIAL_REPLAY.md`
+
+Decision: D-076.
 
 ## Remaining bounded project-system debt
 
