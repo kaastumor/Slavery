@@ -62,9 +62,9 @@ Current integrated evidence:
 1. **DONE — #117 — Canonicalize M1 target semantics for M2**
 2. **DONE — #118 — Resolve Cliopatria calendar and relation semantics**
 3. **DONE — #119 — Ingest complete pinned Cliopatria corpus into raw staging** (full-corpus disposable PostGIS load + exact retry passed; no production apply)
-4. **NOW — #120 AUTO READY — Prototype post-M1 claim semantics in disposable PostGIS** (dependency #117 satisfied)
-5. **NEXT — #121 AUTO READY — Build complete Cliopatria selected-year resolver prototype** (#119 dependency now satisfied; follows #120 in M2 execution order)
-6. **GATE — #122 AUTO READY — M2 integrated adversarial gate** (depends on #117–#121)
+4. **DONE — #120 — Prototype post-M1 claim semantics in disposable PostGIS** (additive legacy-compatible relational prototype; no production apply)
+5. **DONE — #121 — Build complete Cliopatria selected-year resolver prototype** (full pinned corpus + synthetic adversary passed; no publication/promotion)
+6. **NOW — #122 — M2 integrated adversarial gate** (#117–#121 complete)
 7. **GATE — #123 AUTO READY — M2 Project Health Check and reconciliation** (depends on #122)
 
 M2 rules:
