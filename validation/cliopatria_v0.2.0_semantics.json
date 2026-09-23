@@ -1,0 +1,180 @@
+{
+  "evidence_class": "deterministic_observation_plus_bounded_atlas_interpretation",
+  "source": {
+    "repository": "Seshat-Global-History-Databank/cliopatria",
+    "release": "v0.2.0-duplicate",
+    "commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+    "path": "cliopatria.geojson.zip",
+    "git_blob_sha1": "cefab0f4b622e2e7fb3daf68d4f461f83991204c",
+    "sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370"
+  },
+  "upstream_contract": {
+    "interval_bounds": "inclusive",
+    "year_labels": {
+      "negative": "BCE",
+      "positive": "CE",
+      "zero": "not explicitly defined by upstream prose"
+    },
+    "selected_year_filter": "FromYear <= selected_year <= ToYear",
+    "hierarchy": {
+      "member_of": "composite entries the row contributes to",
+      "components": "member entities contributing to a composite",
+      "composite_geometry": "duplicates member geometries",
+      "upstream_top_level_display": "MemberOf empty",
+      "upstream_leaf_component_display": "Components empty"
+    },
+    "relation_release_note": "v0.2.0 RELATION rows represent a subset of Seshat-based supra-polity relations such as personal unions, vassalages, alliances and allegiances"
+  },
+  "original_map_boundary_observation": {
+    "last_bce_image_near_boundary": "original_map_images/B105-14.PNG",
+    "first_ce_image_near_boundary": "original_map_images/C001-1.PNG",
+    "explicit_year_zero_image_observed": false
+  },
+  "exact_corpus_observations": {
+    "feature_count": 13765,
+    "type_counts": {
+      "POLITY": 13380,
+      "RELATION": 385
+    },
+    "same_name_interval_adjacency": {
+      "integer_contiguous": 11705,
+      "gap_more_than_one_integer": 427,
+      "inclusive_overlap_or_parallel": 0
+    },
+    "hierarchy_counts": {
+      "rows_with_member_of": 2656,
+      "rows_with_components": 1722,
+      "rows_with_both": 80,
+      "top_level_rows_member_of_empty": 11109,
+      "leaf_rows_components_empty": 12043,
+      "relation_rows_with_member_of": 0,
+      "relation_rows_with_components": 385,
+      "relation_rows_with_both": 0,
+      "relation_name_parenthesized_count": 385
+    },
+    "member_of_arity_counts": {
+      "1": 2570,
+      "2": 86
+    },
+    "component_arity_counts": {
+      "1": 459,
+      "2": 584,
+      "3": 216,
+      "4": 113,
+      "5": 77,
+      "6": 31,
+      "7": 23,
+      "8": 30,
+      "9": 20,
+      "10": 6,
+      "11": 13,
+      "12": 10,
+      "13": 14,
+      "14": 13,
+      "15": 16,
+      "16": 22,
+      "17": 28,
+      "18": 37,
+      "19": 9,
+      "20": 1
+    },
+    "zero_endpoint_rows": [
+      {
+        "name": "Yuezhi",
+        "from_year": -50,
+        "to_year": 0,
+        "next_from_year": 1
+      },
+      {
+        "name": "Parthian Empire",
+        "from_year": -36,
+        "to_year": 0,
+        "next_from_year": 1
+      },
+      {
+        "name": "Indo-Greeks",
+        "from_year": -31,
+        "to_year": 0,
+        "next_from_year": 1
+      },
+      {
+        "name": "Indo-Scythians",
+        "from_year": -27,
+        "to_year": 0,
+        "next_from_year": 1
+      },
+      {
+        "name": "Judea",
+        "from_year": -19,
+        "to_year": 0,
+        "next_from_year": 1
+      },
+      {
+        "name": "Roman Empire",
+        "from_year": -14,
+        "to_year": 0,
+        "next_from_year": 1
+      }
+    ],
+    "nested_composite_example": {
+      "name": "(Kingdom of the Franks)",
+      "type": "POLITY",
+      "member_of": "(Merovingian Empire)",
+      "components": "Kingdom of the Franks",
+      "observed_from_year": 462,
+      "observed_to_year": 489
+    },
+    "relation_example": {
+      "name": "(Allegiance of Ayyubid Sultanate to Abbasid Caliphate)",
+      "type": "RELATION",
+      "components": "Ayyubid Sultanate;Abbasid Caliphate",
+      "member_of": "",
+      "observed_from_year": 1202,
+      "observed_to_year": 1205
+    }
+  },
+  "atlas_policy": {
+    "preserve_source_native_years": true,
+    "source_zero_has_direct_atlas_historical_year": false,
+    "selected_atlas_year_to_source_year": {
+      "rule": "atlas_year <= 0 ? atlas_year - 1 : atlas_year",
+      "examples": [
+        {
+          "atlas_year": -13,
+          "label": "14 BCE",
+          "source_year": -14
+        },
+        {
+          "atlas_year": -1,
+          "label": "2 BCE",
+          "source_year": -2
+        },
+        {
+          "atlas_year": 0,
+          "label": "1 BCE",
+          "source_year": -1
+        },
+        {
+          "atlas_year": 1,
+          "label": "1 CE",
+          "source_year": 1
+        },
+        {
+          "atlas_year": 5,
+          "label": "5 CE",
+          "source_year": 5
+        }
+      ]
+    },
+    "source_zero_interpretation": "preserve as source-native bridge slot; do not assign an independent historical-year meaning",
+    "interval_gaps": "preserve; never interpolate automatically",
+    "raw_hierarchy_fields": "preserve exact MemberOf and Components strings and parse semicolon-delimited lists separately",
+    "relation_rows": "retain as relationship/composite records; do not coerce to POLITY or default territorial polity geometry",
+    "default_polity_baseline": {
+      "candidate_type": "POLITY",
+      "duplicate_suppression": "suppress a POLITY component only when its active parent composite resolves to Type=POLITY; membership in Type=RELATION does not suppress the constituent polity",
+      "nested_polity_composites": "resolve recursively to the highest active POLITY composite for the source baseline",
+      "unresolved_parent": "do not guess; preserve the child candidate and flag hierarchy resolution unresolved"
+    }
+  }
+}
