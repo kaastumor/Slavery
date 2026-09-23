@@ -774,3 +774,148 @@ The remaining plausible contribution is domain-specific:
 This makes **domain corpus + methodology + discriminating queries** more central and makes generic platform/UI expansion less defensible.
 
 **Checkpoint:** external practice strengthens the case for a narrower identity and removes multiple possible future feature families from scope.
+
+
+---
+
+## Chunk 7 — Competing project identities
+
+No identity receives sunk-cost preference.
+
+### Identity A — Incumbent: integrated Historical Slavery Atlas platform
+
+**Definition:** a full end-to-end research/database/release/API/web system whose primary public form is an interactive global time-aware atlas.
+
+**Evidence for:**
+- complete research → reviewed publication → public map path works;
+- temporal/spatial/provenance problems genuinely benefit from integrated queries;
+- selected-year geography and source lineage have strong correctness controls;
+- map can expose geographic comparison in a way prose alone cannot.
+
+**Evidence against:**
+- actual user/research value of the full application has not been benchmarked;
+- current preview is still legacy semantics and small;
+- generic research database/time-map/publication capabilities overlap heavily with nodegoat and other DH platforms;
+- 29 migrations / 12 workflows / deployment/monitoring/release machinery are substantial relative to demonstrated public use;
+- the map has repeatedly exerted pressure toward false precision/ordinal rhetoric.
+
+**Maintenance cost:** high.  
+**Research potential:** high.  
+**Uniqueness:** medium-low as a platform; potentially high only in domain semantics/corpus.  
+**Falsifiability:** user-task comparison possible, but not yet performed.  
+**Current standing:** plausible but not justified as the default identity.
+
+### Identity B — Smaller: auditable evidence corpus + thin atlas
+
+**Definition:** the project is primarily a curated, versioned global/deep-time evidence corpus and comparison methodology. A thin map/timeline/evidence inspector is one derived query surface, not a continuously operated product platform.
+
+Core artifacts:
+
+- domain methodology and vocabulary;
+- claim/source/version provenance;
+- difficult-case fixtures and negative controls;
+- reviewed global research corpus;
+- historical geography resolution rules and selected-year query logic;
+- reproducible data releases;
+- minimal static or low-operations atlas view/download/query tooling.
+
+**Evidence for:**
+- preserves nearly every strong M1/M2 contribution;
+- directly reflects the charter's strongest surviving thesis;
+- avoids competing with nodegoat as a generic workbench;
+- makes the public map subordinate to evidence instead of allowing map rhetoric to drive ontology;
+- can keep PostgreSQL/PostGIS as research tooling without requiring heavy public operations;
+- easier to preserve/deposit as scholarly data.
+
+**Evidence against:**
+- may provide less immediate public “wow” than a fully dynamic application;
+- must prove that a thin derived atlas still adds useful geographic reasoning rather than merely decorating a dataset.
+
+**Maintenance cost:** medium-low.  
+**Research potential:** high.  
+**Uniqueness:** medium-high if the corpus/method genuinely covers global deep-time comparison.  
+**Falsifiability:** strong; compare thin atlas/corpus tasks against baseline.  
+**Current standing:** strongest fit to accumulated evidence.
+
+### Identity C — Adjacent: Historical Slavery Evidence Method / benchmark corpus
+
+**Definition:** the most valuable artifact is the methodology, adversarial fixture corpus, evaluation protocol and curated reference cases. The “atlas” becomes secondary or optional.
+
+Potential outputs:
+
+- claim/evidence modeling conventions;
+- benchmark cases for false equivalence, false temporal/spatial precision, contradictory evidence and abstention;
+- source/provenance/release protocol;
+- reusable test/evaluation corpus for digital-history systems and AI-assisted historical synthesis.
+
+**Evidence for:**
+- adversarial/methodological work is the strongest demonstrated contribution;
+- M1/M2 generated real semantic discoveries;
+- low operational burden;
+- can be published/deposited independently of a web product;
+- value is highly inspectable and falsifiable.
+
+**Evidence against:**
+- risks abandoning the original global-atlas research ambition before testing whether the map/corpus combination adds value;
+- methodology without sustained real research data may become sterile;
+- existing standards/peer projects already cover parts of provenance and cultural-heritage modeling.
+
+**Maintenance cost:** low.  
+**Research potential:** medium-high, but shifts toward methods.  
+**Uniqueness:** medium; strongest in the slavery/coercion-specific adversarial cases rather than generic provenance.  
+**Falsifiability:** strong through new orthogonal historical cases.  
+**Current standing:** credible fallback/adjacent identity, but not yet clearly superior to B.
+
+### Identity D — Negative control: generic digital-history evidence platform
+
+**Definition:** generalize the architecture beyond slavery/coercion into a reusable humanities research platform.
+
+**Evidence for:** technical architecture could be generalized.
+
+**Evidence against:**
+- nodegoat already provides generic humanities data modeling, source links, spatial/temporal visualisation, API and publication;
+- CIDOC CRM/Linked Art/PROV already supply broad semantic standards;
+- no project evidence demonstrates a cross-domain need;
+- this would turn implementation generality into a new product thesis.
+
+**Maintenance cost:** very high.  
+**Research potential:** broad but speculative.  
+**Uniqueness:** low.  
+**Falsifiability:** vague without a new project.  
+**Current standing:** **REJECT**.
+
+### Comparative result
+
+| Criterion | A — full platform | B — corpus + thin atlas | C — method/benchmark | D — generic platform |
+| --- | --- | --- | --- | --- |
+| Fits strongest value evidence | medium | **high** | high | low |
+| Beats external baseline | weak/unproven | **plausible, domain-specific** | plausible | poor |
+| Maintenance burden | high | **medium-low** | low | very high |
+| Preserves research ambition | high | **high** | medium | diffuse |
+| Distinctiveness | integration-heavy | **domain corpus/method** | method cases | low |
+| Falsifiability | medium | **high** | high | low |
+| User/research need proven | no | not yet, testable cheaply | partial scholarly need | no |
+
+### Plausible survivors
+
+**B and C survive.**
+
+A is not rejected as an eventual delivery form, but it loses default status: the project has not earned the right to maintain/expand a full application platform merely because one exists.
+
+D is rejected.
+
+### Experiment that distinguishes B from C (and can re-earn A)
+
+Choose a small set of real, difficult cross-place/time historical questions.
+
+Run them through:
+
+1. strongest external/simple baseline (literature + structured notes/table + QGIS/nodegoat/general model as appropriate);
+2. the domain corpus/method with no custom atlas interaction;
+3. the **smallest thin atlas/query view** needed to expose place/time/evidence differences.
+
+If the thin atlas repeatedly improves correct, inspectable cross-place/time reasoning, Identity B is justified and a richer A may later be earned.
+
+If the corpus/method produces the same practical value without the map/product layer, Identity C should dominate.
+
+**Checkpoint:** Identity B is the best current hypothesis; C remains a serious competitor. Full-platform A must re-earn its cost through user/research evidence rather than momentum.
