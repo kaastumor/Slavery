@@ -1,0 +1,50 @@
+{
+  "cell_id": "REQUIRED",
+  "frame": "polity | non_polity_challenge",
+  "anchor_year": null,
+  "target_label": "",
+  "source_sample": {
+    "source_name": null,
+    "source_row_ordinal": null,
+    "source_from_year": null,
+    "source_to_year": null,
+    "sampling_sector": null
+  },
+  "coverage_outcome": "bounded_supported | researched_inconclusive | materially_disputed | insufficient_access",
+  "strongest_bounded_proposition": "",
+  "strongest_unsupported_proposition": "",
+  "territorial_practice_summary": "",
+  "legal_state_summary": "",
+  "external_network_summary": "",
+  "terminology_category_qualification": "",
+  "temporal_scope_precision": "",
+  "evidence_locus": "",
+  "inference_extent": "",
+  "evidence_classes": [],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "direct | adjacent | none | inaccessible",
+    "palgrave": "direct | adjacent | none | inaccessible",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "",
+  "sources": [
+    {
+      "title": "",
+      "author": "",
+      "year": null,
+      "url_or_identifier": "",
+      "source_role": "specialist_synthesis | specialist_article | primary_source | structured_dataset | other",
+      "direction": "supports | challenges | qualifies | context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [],
+  "research_notes": {
+    "global_synthesis_items_used": 0,
+    "specialist_secondary_items_used": 0,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

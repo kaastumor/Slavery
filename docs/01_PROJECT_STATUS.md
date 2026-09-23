@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **IDLE / PRESERVATION**
+**Execution state:** **BOUNDED VALUE EXPERIMENT SETUP — COV-001; Atlas expansion remains stopped**
 
 ## Direction after H2
 
@@ -69,6 +69,27 @@ A future Atlas-development evaluation requires genuinely new external evidence, 
 - an independent evaluation showing repeatable gain on the D-062/D-063 criteria.
 
 A trigger authorizes evaluation, not automatic platform expansion.
+
+## COV-001 coverage-value experiment
+
+The sponsor explicitly authorized setup of a new bounded experiment after H2.
+
+This does **not** reopen Atlas development. COV-001 tests whether a plain, systematically assembled place/time coverage corpus has value because it makes known evidence, uncertainty and research gaps inspectable across a global sample.
+
+Setup state:
+- issue #148 open;
+- protocol preregistered;
+- strongest external baseline recorded;
+- setup adversary returned **REVISE**;
+- revised protocol adopted;
+- deterministic Cliopatria sampler committed;
+- four fixed non-polity challenge contexts added;
+- experimental artifact constrained to plain CSV/JSON/Markdown;
+- historical slavery/coercion research has **not** started.
+
+The next boundary is deterministic sample freeze. No research may begin until `sample.json` is generated from the exact pinned Cliopatria asset and committed.
+
+D-063 remains fully in force for the Atlas product/platform boundary.
 
 ## Remaining bounded project-system debt
 

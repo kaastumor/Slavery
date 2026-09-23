@@ -676,3 +676,32 @@ Treat as contingent/derived:
 - such a trigger authorizes a new evaluation, not automatic platform expansion.
 
 **Durable experiment record:** `experiments/h2-value-discrimination/` and issue #146.
+
+
+## D-064 — COV-001 may test corpus coverage value without reopening Atlas expansion
+**Date:** 2026-09-23  
+**Status:** accepted bounded experiment authorization; no successor horizon authorized
+
+**Decision:** Authorize COV-001 / issue #148 as a bounded **coverage-value experiment** distinct from the Atlas product hypothesis rejected for active expansion by D-063.
+
+COV-001 may test whether a small, systematically assembled global place/time evidence corpus provides material value because it makes:
+- research coverage and gaps inspectable;
+- bounded propositions and abstentions reusable;
+- provenance recoverable;
+- cross-place/time coverage questions answerable without repeated reconstruction.
+
+This does **not** authorize:
+- H3 bulk/global evidence expansion;
+- production migration of M2 structures;
+- a new Atlas release;
+- frontend/map work;
+- database/API/service expansion;
+- automated bulk research.
+
+**Experimental form:** use a deterministic sample from the already pinned Cliopatria corpus plus four fixed non-polity challenge contexts. The experimental index must remain plain CSV/JSON/Markdown and must be compared against Cambridge/Palgrave, relevant specialist structured resources, ordinary specialist research and a plain ordinary matrix.
+
+**Reason:** H2 established that bespoke Atlas representation/UI did not earn continued development, but it did not test the separate possibility that accumulated global coverage itself is useful. Testing that narrower thesis with a small plain artifact does not contradict the D-063 stop rule.
+
+**Guardrail:** The deterministic sample must be frozen before slavery/coercion research. Missing/weak coverage never becomes historical absence. A positive result may authorize at most one further bounded corpus-scale test and cannot automatically revive the Atlas platform.
+
+**Durable setup:** `experiments/coverage-value/` and issue #148.

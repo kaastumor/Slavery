@@ -9,49 +9,57 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# IDLE / PRESERVATION — H2 stop rule triggered
+# ACTIVE — COV-001 coverage-value experiment setup (#148)
 
-H2 / issue #146 completed the value-discrimination pilot authorized after HC-003.
-
-Final disposition:
+H2 / D-063 still controls the product boundary:
 
 > **STOP ACTIVE ATLAS EXPANSION; PRESERVE METHOD/CORPUS/AUDIT ARTIFACTS**
 
-Durable result:
-- `experiments/h2-value-discrimination/09_FINAL_RESULT.md`
-- HC-004 in `docs/25_PROJECT_HEALTH.md`
-- D-063 in `docs/08_DECISIONS_LOG.md`
+COV-001 does **not** reverse that decision. It tests a different unresolved thesis:
 
-The pre-registered project-value threshold was not met:
-- Atlas corpus/method materially beat the strongest baseline in **1/3** cases;
-- the repaired thin query/visual arm materially beat the corpus/method in **0/3** cases.
+> Does a small, systematically assembled global historical coverage corpus provide value because knowledge, uncertainty and research gaps are preassembled across place/time?
 
-Do **not** manufacture a successor horizon to escape the result.
+## Current state
 
-## What is justified now
+**SETUP COMPLETE; HISTORICAL RESEARCH NOT STARTED.**
 
-Routine preservation and bounded maintenance only:
-- keep canonical/release artifacts reconstructible;
-- repair security, link/source rot, CI breakage or repository decay when it threatens preserved artifacts;
-- handle parked operational debt only when its existing trigger becomes real;
-- retain the H2 negative result and M1/M2 adversarial evidence.
+Durable setup:
+- `experiments/coverage-value/00_PROTOCOL_PREREGISTERED.md`
+- `experiments/coverage-value/01_BASELINE_LANDSCAPE.md`
+- `experiments/coverage-value/02_SETUP_ADVERSARY.md`
+- `experiments/coverage-value/03_PROTOCOL_REVISED.md`
+- `experiments/coverage-value/04_EXECUTION_PACKET.md`
+- `experiments/coverage-value/select_sample.py`
+- `experiments/coverage-value/coverage_row_template.json`
 
-A new Atlas-development experiment requires a **new external trigger** showing a concrete failure of the strongest simpler workflow. Internal desire to add more data/features is not such a trigger.
+The setup adversary returned **REVISE** and corrected:
+- polity-only sampling bias by adding four fixed non-polity challenge contexts;
+- index-shaped/task tautology by adding a plain ordinary-matrix baseline;
+- architecture creep by requiring plain CSV/JSON/Markdown only;
+- same-model contamination through preferred isolated evaluation runs;
+- global-handbook coverage coding and language/access limitations.
 
-## Explicitly not authorized
+## Only justified next action
 
-- H3 broad/global research expansion;
-- M2 production schema migration;
-- bulk Cliopatria source-row → atlas identity publication;
-- another frontend/map redesign;
-- PMTiles/vector-tile expansion;
-- search/vector/RAG/graph/ontology infrastructure;
-- new research platform/gazetteer/reconciliation services;
-- contributor/peer-review platform;
-- production-like monitoring/self-heal;
-- autonomous build/research runway.
+1. obtain the exact pinned Cliopatria asset;
+2. run `select_sample.py`;
+3. verify >=18/24 deterministic polity-year cells are valid;
+4. commit the generated `sample.json`;
+5. **only then** begin bounded research for the frozen cells plus NP-01..NP-04.
 
-If no new external trigger exists, **idle is the correct state**.
+If the sampler yields fewer than 18 valid cells, revise the sampling frame **before** any slavery/coercion research.
+
+## Still explicitly not authorized
+
+- H3 bulk/global research expansion;
+- canonical release changes;
+- M2 production migration;
+- Atlas frontend/map/product expansion;
+- new database/API/service infrastructure;
+- autonomous bulk-research workers;
+- treating missing evidence as historical absence.
+
+A positive COV-001 result could authorize at most one further bounded **corpus-scale** value test. It cannot restart the old Atlas roadmap.
 
 ---
 
