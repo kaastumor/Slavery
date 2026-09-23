@@ -50,11 +50,25 @@ The MVP is the smallest artifact that preserves the surviving value:
 
 ## Delivery order
 
-MVP execution is now tracked in the dedicated MVP parent/child issues created after R1.6 merge.
+Parent: **#174 — MVP v0.1**
 
-The worker must complete one atomic issue at a time, with WIP=1 and green CI before merge.
+Fixed serial MVP queue:
 
-After the technical MVP gate passes, transition to **feature discovery only**. Discovery issues produce evidence/dispositions, not production features.
+1. #175 — frontend reproducibility and build lock
+2. #176 — deterministic static candidate bundle
+3. #177 — explicit geometry representation manifest
+4. #178 — static candidate as default web data path
+5. #179 — research-state map / overview semantics
+6. #180 — compact evidence register / target detail
+7. #181 — temporal truth rendering guard
+8. #182 — technical MVP gate / release-candidate handoff
+
+The worker completes at most one atomic issue per run, WIP=1, with green CI before merge.
+
+After #182 records **TECHNICAL_MVP_CANDIDATE**, discovery parent #183 opens the evidence-only queue:
+#184 -> #185 -> #186 -> #187.
+
+Discovery issues produce dispositions, not production features.
 
 ---
 
@@ -87,12 +101,6 @@ Not represented as a new issue/queue:
 - current integration lacks the repository-admin capability needed for branch protection/bulk pruning.
 
 Handle when an admin-capable maintenance opportunity exists. Do not let it create a development horizon.
-
-## Frontend reproducibility
-
-A real `web/package-lock.json` is still absent.
-
-Generate and commit the genuine lockfile in a networked environment before the next substantive frontend change. Do not invent one offline and do not add package-management infrastructure merely for this.
 
 ---
 
