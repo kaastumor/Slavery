@@ -1,0 +1,383 @@
+{
+  "review_surface": {
+    "25": {
+      "F": {
+        "median_atoms": 14,
+        "total_atoms": 367
+      },
+      "R": {
+        "median_atoms": 9,
+        "total_atoms": 222
+      },
+      "M": {
+        "median_atoms": 5,
+        "total_atoms": 121
+      },
+      "R_vs_F_total_ratio": 0.6049046321525886,
+      "R_vs_F_median_ratio": 0.6428571428571429
+    },
+    "31": {
+      "F": {
+        "median_atoms": 14,
+        "total_atoms": 456
+      },
+      "R": {
+        "median_atoms": 9,
+        "total_atoms": 275
+      },
+      "M": {
+        "median_atoms": 5,
+        "total_atoms": 148
+      },
+      "R_vs_F_total_ratio": 0.6030701754385965,
+      "R_vs_F_median_ratio": 0.6428571428571429
+    },
+    "37": {
+      "F": {
+        "median_atoms": 15,
+        "total_atoms": 547
+      },
+      "R": {
+        "median_atoms": 9,
+        "total_atoms": 331
+      },
+      "M": {
+        "median_atoms": 5,
+        "total_atoms": 177
+      },
+      "R_vs_F_total_ratio": 0.6051188299817185,
+      "R_vs_F_median_ratio": 0.6
+    }
+  },
+  "reuse_scan_model": {
+    "25": {
+      "T1": {
+        "F_rows_inspected": 4,
+        "R_rows_inspected": 4,
+        "M_rows_inspected": 25,
+        "matching": 4
+      },
+      "T2": {
+        "F_rows_inspected": 9,
+        "R_rows_inspected": 9,
+        "M_rows_inspected": 25,
+        "matching": 9
+      },
+      "T3": {
+        "F_rows_inspected": 25,
+        "R_rows_inspected": 25,
+        "M_rows_inspected": 25,
+        "note": "F/R have explicit Cambridge/Palgrave fields; M requires source-level reconstruction."
+      },
+      "T4": {
+        "F_rows_inspected": 17,
+        "R_rows_inspected": 17,
+        "M_rows_inspected": 17,
+        "matching": 17
+      },
+      "T5": {
+        "F_rows_inspected": 25,
+        "R_rows_inspected": 25,
+        "M_rows_inspected": 25
+      },
+      "T6": {
+        "F_rows_inspected": 25,
+        "R_rows_inspected": 25,
+        "M_rows_inspected": 25,
+        "note": "All retain source URLs; F retains richer source role/direction metadata."
+      }
+    },
+    "31": {
+      "T1": {
+        "F_rows_inspected": 5,
+        "R_rows_inspected": 5,
+        "M_rows_inspected": 31,
+        "matching": 5
+      },
+      "T2": {
+        "F_rows_inspected": 11,
+        "R_rows_inspected": 11,
+        "M_rows_inspected": 31,
+        "matching": 11
+      },
+      "T3": {
+        "F_rows_inspected": 31,
+        "R_rows_inspected": 31,
+        "M_rows_inspected": 31,
+        "note": "F/R have explicit Cambridge/Palgrave fields; M requires source-level reconstruction."
+      },
+      "T4": {
+        "F_rows_inspected": 22,
+        "R_rows_inspected": 22,
+        "M_rows_inspected": 22,
+        "matching": 22
+      },
+      "T5": {
+        "F_rows_inspected": 31,
+        "R_rows_inspected": 31,
+        "M_rows_inspected": 31
+      },
+      "T6": {
+        "F_rows_inspected": 31,
+        "R_rows_inspected": 31,
+        "M_rows_inspected": 31,
+        "note": "All retain source URLs; F retains richer source role/direction metadata."
+      }
+    },
+    "37": {
+      "T1": {
+        "F_rows_inspected": 8,
+        "R_rows_inspected": 8,
+        "M_rows_inspected": 37,
+        "matching": 8
+      },
+      "T2": {
+        "F_rows_inspected": 14,
+        "R_rows_inspected": 14,
+        "M_rows_inspected": 37,
+        "matching": 14
+      },
+      "T3": {
+        "F_rows_inspected": 37,
+        "R_rows_inspected": 37,
+        "M_rows_inspected": 37,
+        "note": "F/R have explicit Cambridge/Palgrave fields; M requires source-level reconstruction."
+      },
+      "T4": {
+        "F_rows_inspected": 25,
+        "R_rows_inspected": 25,
+        "M_rows_inspected": 25,
+        "matching": 25
+      },
+      "T5": {
+        "F_rows_inspected": 37,
+        "R_rows_inspected": 37,
+        "M_rows_inspected": 37
+      },
+      "T6": {
+        "F_rows_inspected": 37,
+        "R_rows_inspected": 37,
+        "M_rows_inspected": 37,
+        "note": "All retain source URLs; F retains richer source role/direction metadata."
+      }
+    }
+  },
+  "information_loss_audit": [
+    {
+      "cell_id": "COV2:1800:F",
+      "target": "Kelantan",
+      "duplicated": [
+        "territorial_practice_summary",
+        "evidence_locus",
+        "inference_extent",
+        "temporal_scope_precision",
+        "terminology_category_qualification"
+      ],
+      "unused_or_unique": [
+        "evidence_classes",
+        "source role/direction metadata"
+      ],
+      "potentially_safety_critical": []
+    },
+    {
+      "cell_id": "COV2:-500:A",
+      "target": "Zapotec Civilization",
+      "duplicated": [
+        "territorial_practice_summary",
+        "evidence_locus",
+        "inference_extent",
+        "temporal_scope_precision",
+        "terminology_category_qualification"
+      ],
+      "unused_or_unique": [
+        "evidence_classes",
+        "source role/direction metadata"
+      ],
+      "potentially_safety_critical": []
+    },
+    {
+      "cell_id": "COV2:1300:B",
+      "target": "Chimu Empire",
+      "duplicated": [
+        "territorial_practice_summary",
+        "evidence_locus",
+        "inference_extent",
+        "temporal_scope_precision",
+        "terminology_category_qualification"
+      ],
+      "unused_or_unique": [
+        "evidence_classes",
+        "source role/direction metadata"
+      ],
+      "potentially_safety_critical": []
+    },
+    {
+      "cell_id": "COV2:1800:A",
+      "target": "New Netherland",
+      "duplicated": [
+        "territorial_practice_summary",
+        "evidence_locus",
+        "inference_extent",
+        "temporal_scope_precision"
+      ],
+      "unused_or_unique": [
+        "evidence_classes",
+        "source role/direction metadata"
+      ],
+      "potentially_safety_critical": []
+    },
+    {
+      "cell_id": "COV2:-500:C",
+      "target": "Hadhramaut",
+      "duplicated": [
+        "territorial_practice_summary",
+        "evidence_locus",
+        "inference_extent",
+        "temporal_scope_precision",
+        "terminology_category_qualification"
+      ],
+      "unused_or_unique": [
+        "evidence_classes",
+        "source role/direction metadata"
+      ],
+      "potentially_safety_critical": []
+    },
+    {
+      "cell_id": "COV2:1300:E",
+      "target": "Pandya Empire",
+      "duplicated": [
+        "territorial_practice_summary",
+        "evidence_locus",
+        "inference_extent",
+        "temporal_scope_precision",
+        "terminology_category_qualification"
+      ],
+      "unused_or_unique": [
+        "evidence_classes",
+        "source role/direction metadata"
+      ],
+      "potentially_safety_critical": []
+    },
+    {
+      "cell_id": "COV2:500:F",
+      "target": "Goguryeo",
+      "duplicated": [
+        "territorial_practice_summary",
+        "evidence_locus",
+        "inference_extent",
+        "temporal_scope_precision",
+        "terminology_category_qualification"
+      ],
+      "unused_or_unique": [
+        "evidence_classes",
+        "source role/direction metadata"
+      ],
+      "potentially_safety_critical": []
+    },
+    {
+      "cell_id": "COV2:1300:C",
+      "target": "Mamluk Sultanate",
+      "duplicated": [
+        "territorial_practice_summary",
+        "evidence_locus",
+        "inference_extent",
+        "temporal_scope_precision",
+        "terminology_category_qualification"
+      ],
+      "unused_or_unique": [
+        "evidence_classes",
+        "source role/direction metadata"
+      ],
+      "potentially_safety_critical": []
+    },
+    {
+      "cell_id": "COV2:1800:D",
+      "target": "Kingdom of Georgia",
+      "duplicated": [
+        "territorial_practice_summary",
+        "evidence_locus",
+        "inference_extent",
+        "temporal_scope_precision"
+      ],
+      "unused_or_unique": [
+        "evidence_classes",
+        "source role/direction metadata"
+      ],
+      "potentially_safety_critical": []
+    },
+    {
+      "cell_id": "COV2:500:E",
+      "target": "Protectorate of the Western Regions",
+      "duplicated": [
+        "territorial_practice_summary",
+        "evidence_locus",
+        "inference_extent",
+        "temporal_scope_precision"
+      ],
+      "unused_or_unique": [
+        "evidence_classes",
+        "source role/direction metadata"
+      ],
+      "potentially_safety_critical": []
+    },
+    {
+      "cell_id": "COV2:1800:C",
+      "target": "Merina Kingdom",
+      "duplicated": [
+        "territorial_practice_summary",
+        "evidence_locus",
+        "inference_extent",
+        "temporal_scope_precision",
+        "terminology_category_qualification"
+      ],
+      "unused_or_unique": [
+        "evidence_classes",
+        "source role/direction metadata"
+      ],
+      "potentially_safety_critical": []
+    },
+    {
+      "cell_id": "COV2:500:D",
+      "target": "Caucasian Albania",
+      "duplicated": [
+        "territorial_practice_summary",
+        "evidence_locus",
+        "inference_extent",
+        "temporal_scope_precision",
+        "terminology_category_qualification",
+        "contrary_limiting_evidence→unresolved_reason"
+      ],
+      "unused_or_unique": [
+        "evidence_classes",
+        "source role/direction metadata"
+      ],
+      "potentially_safety_critical": []
+    }
+  ],
+  "maintenance_selection": [
+    {
+      "id": "COV2:1300:C",
+      "digest": "00237da336fd05ddb0106eafdbb3e8fb98de4e83ea2baa7d253d9bab3906ef9c"
+    },
+    {
+      "id": "COV2:-500:A",
+      "digest": "00c123bd8b8d0684972496e8281a1ed8fb351e68105b0facaa22f97e7fdcc95b"
+    },
+    {
+      "id": "-500:E",
+      "digest": "163df51cebd178816ee818a7e2ccdbe9b8825820e32d8fed2a28f1cb1d11b8c0"
+    },
+    {
+      "id": "-500:A",
+      "digest": "1d0ac1e322d4058a7dd59354b11512018afbfee691cb9631d02c65ab75aedc5e"
+    },
+    {
+      "id": "1300:C",
+      "digest": "1e287874a0e749636cd93b3e8db902a9a5695414f17e587e39551bd411a4cbcf"
+    },
+    {
+      "id": "COV2:500:F",
+      "digest": "25fd06f33a01f1d730fc12358f7010c793a4c3952e1d2ade6f177cf92a14e958"
+    }
+  ]
+}
