@@ -952,3 +952,46 @@ Proceed to R1.6 release-level QC:
 - candidate research release only.
 
 No subject-research tranche follows automatically. No new software feature has met the friction threshold.
+
+
+### HC-014 — R1.6 release-level QC — 2026-09-24
+
+Decision: **PASS WITH EXPLICIT LIMITATIONS; CRYSTALLIZE TO MVP.**
+
+R1.6 audits the complete 19-row subject-research package at release level and finds no blocking internal-contract failure.
+
+The surviving core is smaller than the historical project:
+- immutable reviewed evidence rows;
+- explicit unresearched/held research state;
+- source-version/dependency reconstruction;
+- temporal/inference guards;
+- a neutral geographic navigation surface.
+
+That core is now strong enough to justify a small technical MVP, but not a return to broad platform building.
+
+#### What survives
+
+- C0/C1/selective-C2 release semantics;
+- bounded proposition + abstention;
+- selected-year/period/near-anchor distinction;
+- target/context and network/territorial separation;
+- source quality + source-family dependency;
+- immutable candidate inputs;
+- research coverage as a visible non-historical layer;
+- ordinary map/register as the Atlas form.
+
+#### What remains unresolved
+
+- concrete geometry materialization;
+- independent historical review;
+- uneven language/access coverage;
+- public-surface implementation;
+- final R1.8 publication/canonical decision.
+
+#### MVP consequence
+
+R1.7 should implement only the smallest read-only Atlas that makes this core inspectable.
+
+Feature discovery resumes **after** that MVP exists. New feature candidates must begin as baseline comparisons with kill rules; discovery evidence does not authorize implementation.
+
+No production migration or new service architecture is justified.
