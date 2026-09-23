@@ -316,7 +316,7 @@ AS $$
     JOIN staging.cliopatria_feature f
       ON f.dataset_key = c.dataset_key
      AND f.source_row_ordinal = c.resolved_source_row_ordinal
-    JOIN staging.cliopatria_dataset d USING (dataset_key)
+    JOIN staging.cliopatria_dataset d ON d.dataset_key = f.dataset_key
     CROSS JOIN params p
     ORDER BY f.name_raw, f.source_row_ordinal;
 $$;
