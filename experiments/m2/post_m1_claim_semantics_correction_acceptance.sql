@@ -87,13 +87,13 @@ INSERT INTO atlas.territorial_practice_claim(
     'unassessed','unassessed','unassessed','review_complete','inconclusive'
 );
 
--- Genuine open terminus after: 120 onward.
+-- Terminus-after constraint: 120 onward is a candidate query window only.
 INSERT INTO atlas.claim(
     claim_id,claim_kind_code,from_year,to_year,summary,
     semantic_model_version,temporal_applicability_mode
 ) VALUES (
     '13500000-0000-0000-0000-000000000013',
-    'territorial_practice',100,NULL,'terminus-after representability control',
+    'territorial_practice',120,NULL,'terminus-after non-positive query constraint',
     'post_m1_v2','terminus_after'
 );
 INSERT INTO atlas.territorial_practice_claim(
@@ -108,16 +108,15 @@ INSERT INTO atlas.territorial_practice_claim(
     'practice_or_status','single_bounded_attestation','specialist_synthesis','continuous_period',
     'unassessed','unassessed','unassessed','review_complete','classified'
 );
-INSERT INTO atlas.claim_asserted_interval(claim_id,from_year,to_year,interval_role)
-VALUES ('13500000-0000-0000-0000-000000000013',120,NULL,'asserted');
+-- No positive asserted interval: the terminus alone is not continuity.
 
--- Genuine open terminus before: through 80.
+-- Terminus-before constraint: through 80 is a candidate query window only.
 INSERT INTO atlas.claim(
     claim_id,claim_kind_code,from_year,to_year,summary,
     semantic_model_version,temporal_applicability_mode
 ) VALUES (
     '13500000-0000-0000-0000-000000000014',
-    'territorial_practice',NULL,100,'terminus-before representability control',
+    'territorial_practice',NULL,80,'terminus-before non-positive query constraint',
     'post_m1_v2','terminus_before'
 );
 INSERT INTO atlas.territorial_practice_claim(
@@ -132,10 +131,9 @@ INSERT INTO atlas.territorial_practice_claim(
     'practice_or_status','single_bounded_attestation','specialist_synthesis','continuous_period',
     'unassessed','unassessed','unassessed','review_complete','classified'
 );
-INSERT INTO atlas.claim_asserted_interval(claim_id,from_year,to_year,interval_role)
-VALUES ('13500000-0000-0000-0000-000000000014',NULL,80,'asserted');
+-- No positive asserted interval: the terminus alone is not continuity.
 
--- Force positive package validation explicitly before adversarial subtransactions.
+-- Force package validation explicitly before adversarial subtransactions.
 SELECT atlas.validate_post_m1_claim_integrity('13500000-0000-0000-0000-000000000011');
 SELECT atlas.validate_post_m1_claim_integrity('13500000-0000-0000-0000-000000000012');
 SELECT atlas.validate_post_m1_claim_integrity('13500000-0000-0000-0000-000000000013');
@@ -145,25 +143,35 @@ DO $$
 DECLARE
     blocked boolean;
 BEGIN
-    -- Open termini are real selected-year semantics, not just vocabulary labels.
+    -- D-061: open termini constrain retrieval but do not create positive truth.
+    IF NOT (
+        SELECT valid_years @> 10000
+        FROM atlas.claim
+        WHERE claim_id='13500000-0000-0000-0000-000000000013'
+    ) THEN
+        RAISE EXCEPTION 'terminus_after outer query window is not open-upper';
+    END IF;
     IF atlas.claim_applies_at_year(
-        '13500000-0000-0000-0000-000000000013',119
-    ) OR NOT atlas.claim_applies_at_year(
         '13500000-0000-0000-0000-000000000013',120
-    ) OR NOT atlas.claim_applies_at_year(
+    ) OR atlas.claim_applies_at_year(
         '13500000-0000-0000-0000-000000000013',10000
     ) THEN
-        RAISE EXCEPTION 'terminus_after selected-year behavior is wrong';
+        RAISE EXCEPTION 'terminus_after created indefinite positive applicability';
     END IF;
 
-    IF NOT atlas.claim_applies_at_year(
-        '13500000-0000-0000-0000-000000000014',-10000
-    ) OR NOT atlas.claim_applies_at_year(
-        '13500000-0000-0000-0000-000000000014',80
-    ) OR atlas.claim_applies_at_year(
-        '13500000-0000-0000-0000-000000000014',81
+    IF NOT (
+        SELECT valid_years @> -10000
+        FROM atlas.claim
+        WHERE claim_id='13500000-0000-0000-0000-000000000014'
     ) THEN
-        RAISE EXCEPTION 'terminus_before selected-year behavior is wrong';
+        RAISE EXCEPTION 'terminus_before outer query window is not open-lower';
+    END IF;
+    IF atlas.claim_applies_at_year(
+        '13500000-0000-0000-0000-000000000014',-10000
+    ) OR atlas.claim_applies_at_year(
+        '13500000-0000-0000-0000-000000000014',80
+    ) THEN
+        RAISE EXCEPTION 'terminus_before created indefinite positive applicability';
     END IF;
 
     -- 1. Legacy -> post-M1 retyping cannot bypass complete target dimensions.
@@ -229,6 +237,53 @@ BEGIN
     END;
     IF NOT blocked THEN
         RAISE EXCEPTION 'unknown applicability accepted a positive interval';
+    END IF;
+
+    -- 4a. Terminus constraints cannot receive positive asserted intervals.
+    blocked := false;
+    BEGIN
+        INSERT INTO atlas.claim_asserted_interval(
+            claim_id,from_year,to_year,interval_role
+        ) VALUES (
+            '13500000-0000-0000-0000-000000000013',120,120,'asserted'
+        );
+    EXCEPTION WHEN raise_exception THEN
+        blocked := true;
+    END;
+    IF NOT blocked THEN
+        RAISE EXCEPTION 'terminus_after accepted a positive asserted interval';
+    END IF;
+
+    blocked := false;
+    BEGIN
+        INSERT INTO atlas.claim_asserted_interval(
+            claim_id,from_year,to_year,interval_role
+        ) VALUES (
+            '13500000-0000-0000-0000-000000000014',80,80,'asserted'
+        );
+    EXCEPTION WHEN raise_exception THEN
+        blocked := true;
+    END;
+    IF NOT blocked THEN
+        RAISE EXCEPTION 'terminus_before accepted a positive asserted interval';
+    END IF;
+
+    -- 4b. Deferred parent validation blocks retyping a positive claim as a terminus.
+    blocked := false;
+    BEGIN
+        UPDATE atlas.claim
+        SET from_year=120,
+            to_year=NULL,
+            temporal_applicability_mode='terminus_after'
+        WHERE claim_id='13500000-0000-0000-0000-000000000011';
+
+        SET CONSTRAINTS post_m1_claim_integrity_from_claim IMMEDIATE;
+    EXCEPTION WHEN raise_exception THEN
+        blocked := true;
+    END;
+    SET CONSTRAINTS post_m1_claim_integrity_from_claim DEFERRED;
+    IF NOT blocked THEN
+        RAISE EXCEPTION 'deferred validation allowed terminus mode with positive intervals';
     END IF;
 
     -- 5. Positive mode without positive applicability is invalid.
