@@ -1,0 +1,109 @@
+{
+  "programme": "R1",
+  "tranche": "R1.4A",
+  "seed": "R1.4A|2026-09-23",
+  "frozen_before_subject_research": "2026-09-23",
+  "selection_rules": {
+    "new_polity": "For each frozen anchor band (2000 BCE, 500 BCE, 500 CE, 1300 CE, 1800 CE), choose the smallest SHA-256(seed|target_id); then choose the smallest remaining hash for a sixth row.",
+    "new_nonpolity": "Choose two smallest SHA-256(seed|target_id) subject to distinct effective frame classes.",
+    "legacy_polity": "Choose two smallest SHA-256(seed|target_id) subject to distinct frozen sampling sectors.",
+    "legacy_nonpolity": "Choose two smallest SHA-256(seed|target_id) subject to distinct effective frame classes."
+  },
+  "rows": [
+    {
+      "target_id": "R1:P:-2000:C:r1",
+      "target_label": "Middle Kingdom of Egypt",
+      "anchor": "2000 BCE",
+      "bucket": "new_polity",
+      "digest": "1e00426f6e517c7e5a0532589b078d84ae46cd06490cad9d8375ba5a123caf01"
+    },
+    {
+      "target_id": "R1:P:-500:F:r1",
+      "target_label": "Cai",
+      "anchor": "500 BCE",
+      "bucket": "new_polity",
+      "digest": "4fcc6074a01630dfa2c3491f5643237733db9ed1e01642024f860b0f24600235"
+    },
+    {
+      "target_id": "R1:P:500:A:r1",
+      "target_label": "Teotihuacan",
+      "anchor": "500 CE",
+      "bucket": "new_polity",
+      "digest": "5f0a178f24c93edd9cc349da0ef5072ddf18844960ba9fe94a3c5093f28c0e9d"
+    },
+    {
+      "target_id": "R1:P:1300:A:r1",
+      "target_label": "Later Mayan City-States",
+      "anchor": "1300 CE",
+      "bucket": "new_polity",
+      "digest": "973f0b9531140c403f27b2b83309768e222c813c9181f825500a86a835230007"
+    },
+    {
+      "target_id": "R1:P:1800:C:r1",
+      "target_label": "Ethiopian Empire",
+      "anchor": "1800 CE",
+      "bucket": "new_polity",
+      "digest": "73db2c13e3e91df9929a0252a5cad32ae28f47cecbcce6389f4f4a682dd0494c"
+    },
+    {
+      "target_id": "R1:P:500:F:r1",
+      "target_label": "Tamna",
+      "anchor": "500 CE",
+      "bucket": "new_polity_extra",
+      "digest": "6bed7a170c2bf42bdf944a808ef153ce6f3c5ee4597a4e30edbee744255d8147"
+    },
+    {
+      "target_id": "R1:N:nalanda_700",
+      "target_label": "Nalanda Mahavihara",
+      "anchor": "700 CE",
+      "bucket": "new_nonpolity",
+      "effective_frame_class": "institution_estate",
+      "digest": "1500be53a3de0aaa8b40f0156b0aff904a166429d030dfdcbc8940b0ba0bb86d"
+    },
+    {
+      "target_id": "R1:N:angkor_1200",
+      "target_label": "Angkor",
+      "anchor": "1200 CE",
+      "bucket": "new_nonpolity",
+      "effective_frame_class": "node_site",
+      "digest": "552ea0ae3948d9611fc39828641de008a714cc39412665e150848ad89d40a6ab"
+    },
+    {
+      "target_id": "R1:L:1300:B",
+      "legacy_ref": "1300:B",
+      "target_label": "Cuzco",
+      "anchor": "1300 CE",
+      "bucket": "legacy_polity",
+      "sampling_sector": "B",
+      "digest": "2222fabe3a0edd46df6f6512862da7cc1caf0deb64ede196eb85dc550b26a04d"
+    },
+    {
+      "target_id": "R1:L:-500:D",
+      "legacy_ref": "-500:D",
+      "target_label": "Carthage",
+      "anchor": "500 BCE",
+      "bucket": "legacy_polity",
+      "sampling_sector": "D",
+      "digest": "2ef01faa22da7977f72175651f29303acc0b9806e313542388594dd7bbb75c61"
+    },
+    {
+      "target_id": "R1:L:viking_900",
+      "legacy_ref": "viking_900",
+      "target_label": "Viking trade network",
+      "anchor": "900 CE",
+      "bucket": "legacy_nonpolity",
+      "effective_frame_class": "mobile_network",
+      "digest": "22b7d14f6bc7d3164d4db0ceda240ac1e2a8bc40cb00b5b875aa685dfe77f568"
+    },
+    {
+      "target_id": "R1:L:cahokia_1200",
+      "legacy_ref": "cahokia_1200",
+      "target_label": "Cahokia",
+      "anchor": "1200 CE",
+      "bucket": "legacy_nonpolity",
+      "effective_frame_class": "node_site",
+      "digest": "3ced9fc4232194c9d733eff7364ac0a34af0a93d92fbf0556e109621ad41195c"
+    }
+  ],
+  "replacement_allowed": false
+}
