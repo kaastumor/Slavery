@@ -192,4 +192,17 @@ This does not change D-063: the former Atlas application/platform remains stoppe
 
 COV-001 authorizes no automatic successor. At most one future bounded experiment may test whether corpus reuse/value scales faster than research, review and update cost.
 
+### COV-002 — scale/reuse economics (active bounded experiment)
+
+COV-001 established a narrow flat coverage-corpus value thesis but left scale economics unresolved.
+
+COV-002 / #151 is explicitly authorized to test only whether:
+- reuse value persists as the corpus grows from 25 to 37 researched rows;
+- a compact register can preserve the demonstrated value at lower review/update surface;
+- deterministic evidence updates remain local and auditable.
+
+It compares full rows, a compact register and a strong ordinary matrix. The 12-cell expansion sample must be frozen before historical research.
+
+This experiment does not reopen H3, product work or comprehensive ingestion and creates no automatic successor horizon.
+
 At every horizon boundary, review evidence for **and against** the thesis, compare the strongest baseline, consider whether the artifact can shrink, and explicitly choose **continue / simplify / redirect / stop** before creating the next horizon.
