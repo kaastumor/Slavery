@@ -18,16 +18,20 @@ Use signed astronomical integer years internally:
 
 The UI converts internal values to normal BCE/CE labels.
 
-Time-bounded records should retain:
+Time-bounded records should retain source-faithful/query-envelope bounds and uncertainty metadata, but those bounds are not automatically positive selected-year validity.
 
-- `from_year`
-- `to_year`
-- derived/queryable `valid_years` integer range
-- `temporal_precision`
-- `temporal_certainty` where needed
-- `date_text_original` where useful
+Target semantics distinguish:
 
-Do not convert a broad or uncertain period into false exactness.
+- `from_year` / `to_year` / `valid_years` as the outer query window or legacy compatibility bounds;
+- `temporal_applicability_mode` describing whether the assertion is continuous, a bounded occurrence, alternative dates, an open terminus, or unresolved;
+- one or more explicit asserted intervals/dates where positive applicability is known;
+- `temporal_precision`;
+- `temporal_certainty` where needed;
+- `date_text_original` where useful.
+
+Selected-year truth must evaluate applicability semantics, not merely membership in `valid_years`. Temporal precision does not itself imply continuity.
+
+Do not convert a broad or uncertain period into false exactness or false continuous presence.
 
 ## 3. Core identity entities
 
@@ -147,8 +151,9 @@ Suggested fields:
 - `claim_kind`
 - `from_year`
 - `to_year`
-- `valid_years`
+- `valid_years` — outer query window / legacy compatibility range, not sufficient selected-year truth
 - `date_text_original`
+- `temporal_applicability_mode`
 - `temporal_precision`
 - `temporal_certainty`
 - `spatial_precision`
@@ -161,20 +166,89 @@ Suggested fields:
 
 A claim may be supported, challenged or qualified by multiple sources.
 
+### CLAIM_ASSERTED_INTERVAL
+
+Zero or more positively asserted temporal intervals/dates for a claim.
+
+Suggested fields:
+
+- `claim_asserted_interval_id`
+- `claim_id`
+- `from_year`
+- `to_year`
+- `valid_years`
+- `interval_role` where needed, such as asserted applicability or an explicit alternative
+- `notes`
+
+The outer claim query window may contain gaps or mutually exclusive alternatives. A selected year is not positive merely because it lies inside the outer range.
+
+### CLAIM_EVIDENCE_LOCUS
+
+Many-to-many bridge for places where the underlying evidence/observation is anchored.
+
+Suggested fields:
+
+- `claim_id`
+- `spatial_entity_id`
+- `role_text` / notes where needed
+
+### CLAIM_INFERENCE_EXTENT
+
+Many-to-many bridge for places over which the reviewed historical assertion is justified.
+
+Suggested fields:
+
+- `claim_id`
+- `spatial_entity_id`
+- `generalization_basis`
+- `generalization_rationale`
+
+If inference extent is broader than the evidence locus, a reviewed basis and rationale are required. A containing or drawable geometry cannot create inference extent by itself.
+
 ### TERRITORIAL_PRACTICE_CLAIM
 
-Subtype of `CLAIM` about practice physically occurring in a spatial entity.
+Subtype of `CLAIM` about a territorial historical assertion concerning practice/status or a bounded event/process.
+
+Suggested fields:
 
 - `claim_id` PK/FK -> CLAIM
-- `spatial_entity_id`
-- `practice_type`
-- `practice_level` P0–P4, nullable until an explicit P-level assessment is made
-- `coverage_state`
-- `classification_status`
+- `spatial_entity_id` — legacy/headline target retained for compatibility; post-M1 spatial truth is also expressed through locus/extent bridges
+- `assertion_form` = practice_or_status / event_or_process
+- `attestation_pattern`
+- `interpretive_basis`
+- `occurrence_pattern`
+- `institutionalization`
+- `prevalence_scope`
+- `structural_significance`
+- `research_stage`
+- `classification_outcome`
+- `practice_type` — legacy/headline label, not the sole target taxonomy
+- `practice_level` P0–P4 — legacy compatibility only, nullable
+- `coverage_state` — legacy compatibility only
+- `classification_status` — legacy compatibility/free-text transition field
 
-P-level is interpreted from the evidence package and is never mechanically calculated from row counts.
+Rules:
 
-`practice_level = NULL` means no P-level assessment has yet been recorded for that claim. It is not equivalent to P0. P0 is an explicit assessment of unknown/no usable classification and still does not mean absence. This distinction allows disputed or reviewed evidence to be stored without inventing an intensity classification.
+- new dimensions are independently reviewed and may remain unassessed;
+- do not derive occurrence, institutionalization, prevalence or structural significance from one another;
+- do not derive new dimensions from legacy P0–P4;
+- do not derive P0 from `classification_outcome = inconclusive`;
+- a bounded event/process does not by itself establish enduring territorial practice;
+- legacy P-level and coverage values remain available only so historical releases can be reconstructed/interpreted.
+
+### PRACTICE_FACET_ASSERTION
+
+Zero or more typed analytical concepts attached to a territorial-practice claim.
+
+Suggested fields:
+
+- `practice_facet_assertion_id`
+- `claim_id`
+- `facet_dimension` = status / function / property_legal / transmission / process
+- `concept_code`
+- `notes`
+
+Facet concepts are simultaneous assertions, not mutually exclusive replacements for one another. The vocabulary remains evolving and lookup-backed; M1 does not establish an exhaustive ontology.
 
 ### LEGAL_EVENT
 
@@ -409,14 +483,16 @@ Suggested fields:
 - raw region label
 - raw period label
 - `from_year` / `to_year` / `valid_years`
+- `research_stage`
+- `coverage_outcome` where a project-level result is needed
 - legacy coverage code S / P / D / RI / —
-- normalized coverage state where applicable
+- legacy normalized coverage state where retained for migration/release compatibility
 - project-management coverage points where retained
 - release/batch identifier
 - review/publication state when exposed publicly
 - notes
 
-These fields may power a transparency/coverage layer but must never set P0–P4.
+Research stage is workflow progress. A historical claim's `classification_outcome` is a separate epistemic result and must not be inferred from research coverage metadata.
 
 ### RESEARCH_COVERAGE_SOURCE
 
