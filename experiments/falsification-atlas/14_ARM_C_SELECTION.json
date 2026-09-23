@@ -1,0 +1,66 @@
+{
+  "experiment": "COV-004",
+  "arm": "C",
+  "cutoff": "2015-12-31",
+  "contamination_guard": {
+    "note": "Several otherwise eligible candidates were queried for 2016–2026 literature during exploratory work before the deterministic selection was frozen. They are excluded from Arm C rather than reused.",
+    "excluded": [
+      "500:D Anglo-Saxon England",
+      "1800:C Bornu Empire",
+      "COV2:1800:C Merina Kingdom",
+      "COV2:500:D Caucasian Albania",
+      "COV3:1300:E:r5 Hanthawaddy",
+      "COV3:1300:E:r6 Myinsaing",
+      "COV3:-500:E:r3 Pañcāla"
+    ]
+  },
+  "clean_eligible_pool": [
+    "-500:C",
+    "-500:E",
+    "500:C",
+    "1300:D",
+    "1300:F",
+    "NP-03",
+    "COV2:1800:F",
+    "COV2:-500:C",
+    "COV3:-500:F:r3",
+    "COV3:-500:F:r4",
+    "COV3:-500:F:r5",
+    "COV3:-500:F:r6",
+    "COV3:-500:E:r4",
+    "COV3:-500:E:r5",
+    "COV3:-500:E:r6"
+  ],
+  "selected": [
+    {
+      "id": "-500:C",
+      "label": "Sabaeans",
+      "digest": "0738313d8a173bdd34c7e17f1229c743501ab46efd4136f65b367f4831ff16a5"
+    },
+    {
+      "id": "1300:F",
+      "label": "Chámpa",
+      "digest": "120a28e19f8ca2783157f3295a2e155dc5188fc4cb375063a0fde850b43fd83d"
+    },
+    {
+      "id": "500:C",
+      "label": "Alodia",
+      "digest": "219e871d283d148b293ca9059e63a9dae6361613563b13c78f2eb29323a0a22d"
+    },
+    {
+      "id": "COV3:-500:E:r6",
+      "label": "Janapada of Aśmaka",
+      "digest": "24a83811d981558b67e89049aca7c5689e94983e1ed64e2d98569a8da8f57e24"
+    },
+    {
+      "id": "COV3:-500:F:r6",
+      "label": "Cao",
+      "digest": "2b7abbd114a3e04d8a8ee55d13aa934cf9cebac9a9447b244ed6fdd45e80269b"
+    },
+    {
+      "id": "-500:E",
+      "label": "Janapada of Vatsa",
+      "digest": "395df01b3f5197dec32b55151de6e4b2468b9363cfc74d846c11b789d98699e8"
+    }
+  ]
+}
