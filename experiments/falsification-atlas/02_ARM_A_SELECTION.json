@@ -1,0 +1,52 @@
+{
+  "experiment": "COV-004",
+  "arm": "A",
+  "frozen_before_new_source_review": "2026-09-23",
+  "escalated_controls": [
+    {
+      "target_id": "COV3:-500:F:r4",
+      "target_label": "Zhu"
+    },
+    {
+      "target_id": "COV3:1300:E:r5",
+      "target_label": "Hanthawaddy Kingdom"
+    },
+    {
+      "target_id": "COV3:-500:E:r3",
+      "target_label": "Janapada of Pañcāla"
+    }
+  ],
+  "selected_non_escalated": [
+    {
+      "target_id": "COV3:1300:E:r3",
+      "target_label": "Kathmandu",
+      "digest": "0ba452b1184f344b9a28eb4454f8c999fd91d8c890070494764931f0f373ddf2"
+    },
+    {
+      "target_id": "COV3:-500:E:r4",
+      "target_label": "Janapada of Cedī",
+      "digest": "117491d2a62173f197b4ae5a018df21cbfffd57d97bb6d711f023166556b5f33"
+    },
+    {
+      "target_id": "COV3:-500:F:r5",
+      "target_label": "Lu",
+      "digest": "22d67b2db152a0a2bdee3df611905f7a35ad16dcdfdde2ad7b17ec5729295568"
+    },
+    {
+      "target_id": "COV3:-500:F:r3",
+      "target_label": "Yan",
+      "digest": "5d1201431d7d9f42df2932fc3e098ea0f2e8ac8e8d98407bcdba7049174ec34c"
+    },
+    {
+      "target_id": "COV3:1300:E:r4",
+      "target_label": "Chandela Kingdom",
+      "digest": "a454168e9c7c3f96cba015eb0546e90d2942dd762cda25f337f6f540f36d43bc"
+    },
+    {
+      "target_id": "COV3:-500:E:r6",
+      "target_label": "Janapada of Aśmaka",
+      "digest": "bf435b29adac49ed8e0b75d0090f4dbcca15fe0a094d0e9d463b40961e21c25d"
+    }
+  ],
+  "gate": "at most 1/6 non-escalated material false negatives; escalated controls assessed separately"
+}
