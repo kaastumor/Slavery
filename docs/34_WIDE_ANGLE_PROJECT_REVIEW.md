@@ -919,3 +919,57 @@ If the thin atlas repeatedly improves correct, inspectable cross-place/time reas
 If the corpus/method produces the same practical value without the map/product layer, Identity C should dominate.
 
 **Checkpoint:** Identity B is the best current hypothesis; C remains a serious competitor. Full-platform A must re-earn its cost through user/research evidence rather than momentum.
+
+
+### Bounded baseline challenge — Silla and Hittite
+
+To avoid leaving the strongest-baseline comparison entirely hypothetical, this review ran two existing methodology-driving cases through ordinary targeted web/literature discovery.
+
+#### Silla Village Register
+
+A simple targeted search readily recovers:
+
+- the National Institute of Korean History synthesis reporting 25 `nobi` among 462 persons in four villages;
+- specialist date disagreement, including a 695 CE argument and a separate 818/819 reconstruction.
+
+The difficult historical facts are therefore **not unique Atlas discoveries**.
+
+What the Atlas adds is structured restraint:
+
+- it records the date range as disagreement rather than 125 years of continuous truth;
+- it keeps the four-village evidence target narrower than all Unified Silla;
+- it preserves the conflicting date interpretations as qualifiers rather than choosing a false exact year;
+- unresolved geometry remains legitimate.
+
+#### Hittite central Anatolia
+
+A simple specialist search readily recovers:
+
+- the broader ancient-Near-East warning that slavery/dependency categories do not map cleanly onto one modern category;
+- Hittite legal evidence for potentially chattel slaves;
+- status flexibility in mixed-status marriage;
+- frequent use of slaves as herdsmen.
+
+Again, discovery of these facts does not require the Atlas.
+
+What the Atlas adds is a persistent comparative representation in which:
+
+- attestation pattern does not equal prevalence;
+- institutional features may be supported while prevalence/structural significance remain unassessed;
+- status/function/property/transmission facets coexist;
+- normative law is evidence without becoming a mechanical prevalence claim.
+
+#### Baseline result
+
+**PARITY on bounded fact discovery.**
+
+Ordinary targeted research + a strong general model can recover the core Silla/Hittite facts and major caveats quickly.
+
+**Plausible Atlas advantage on durable comparison semantics.**
+
+The project makes it harder to lose those caveats when the evidence is later queried across place/time, especially temporal truth, spatial generalization and orthogonal dimensions.
+
+This benchmark therefore **weakens the case for a large discovery/application platform** while strengthening the case for a domain corpus/method with a thin comparative query surface.
+
+It is still not a real external-user evaluation and must not be overstated.
+
