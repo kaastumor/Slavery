@@ -33,8 +33,10 @@ BEGIN
             'asserted intervals are post-M1 semantics and require claim semantic_model_version=post_m1_v2';
     END IF;
 
-    IF applicability_mode = 'unknown' THEN
-        RAISE EXCEPTION 'unknown applicability cannot carry a positive asserted interval';
+    IF applicability_mode IN ('unknown','terminus_after','terminus_before') THEN
+        RAISE EXCEPTION
+            'applicability mode % does not create positive asserted intervals',
+            applicability_mode;
     END IF;
 
     IF applicability_mode = 'alternative_dates' AND NEW.interval_role <> 'alternative' THEN
@@ -43,18 +45,8 @@ BEGIN
         RAISE EXCEPTION 'alternative interval role requires alternative_dates mode';
     END IF;
 
-    IF applicability_mode = 'terminus_after' THEN
-        IF NEW.from_year IS NULL OR NEW.to_year IS NOT NULL THEN
-            RAISE EXCEPTION 'terminus_after requires one asserted interval with lower bound and open upper bound';
-        END IF;
-    ELSIF applicability_mode = 'terminus_before' THEN
-        IF NEW.from_year IS NOT NULL OR NEW.to_year IS NULL THEN
-            RAISE EXCEPTION 'terminus_before requires one asserted interval with open lower bound and upper bound';
-        END IF;
-    ELSE
-        IF NEW.from_year IS NULL OR NEW.to_year IS NULL THEN
-            RAISE EXCEPTION 'applicability mode % requires bounded asserted intervals', applicability_mode;
-        END IF;
+    IF NEW.from_year IS NULL OR NEW.to_year IS NULL THEN
+        RAISE EXCEPTION 'positive applicability mode % requires bounded asserted intervals', applicability_mode;
     END IF;
 
     IF outer_from IS NOT NULL THEN
@@ -267,31 +259,21 @@ BEGIN
             END IF;
 
         WHEN 'terminus_after' THEN
-            IF interval_count <> 1 OR c.to_year IS NOT NULL THEN
+            IF interval_count <> 0
+               OR c.from_year IS NULL
+               OR c.to_year IS NOT NULL THEN
                 RAISE EXCEPTION
-                    'terminus_after claim % requires one open-upper interval and open outer upper bound',
+                    'terminus_after claim % requires an open-upper outer query window and zero positive asserted intervals',
                     p_claim_id;
-            END IF;
-            SELECT count(*) INTO invalid_count
-            FROM atlas.claim_asserted_interval i
-            WHERE i.claim_id=p_claim_id
-              AND (i.interval_role <> 'asserted' OR i.from_year IS NULL OR i.to_year IS NOT NULL);
-            IF invalid_count <> 0 THEN
-                RAISE EXCEPTION 'terminus_after interval shape invalid for claim %', p_claim_id;
             END IF;
 
         WHEN 'terminus_before' THEN
-            IF interval_count <> 1 OR c.from_year IS NOT NULL THEN
+            IF interval_count <> 0
+               OR c.from_year IS NOT NULL
+               OR c.to_year IS NULL THEN
                 RAISE EXCEPTION
-                    'terminus_before claim % requires one open-lower interval and open outer lower bound',
+                    'terminus_before claim % requires an open-lower outer query window and zero positive asserted intervals',
                     p_claim_id;
-            END IF;
-            SELECT count(*) INTO invalid_count
-            FROM atlas.claim_asserted_interval i
-            WHERE i.claim_id=p_claim_id
-              AND (i.interval_role <> 'asserted' OR i.from_year IS NOT NULL OR i.to_year IS NULL);
-            IF invalid_count <> 0 THEN
-                RAISE EXCEPTION 'terminus_before interval shape invalid for claim %', p_claim_id;
             END IF;
 
         ELSE
@@ -383,7 +365,7 @@ DEFERRABLE INITIALLY DEFERRED
 FOR EACH ROW EXECUTE FUNCTION atlas.check_post_m1_claim_integrity();
 
 COMMENT ON FUNCTION atlas.validate_post_m1_claim_integrity(uuid) IS
-'M2 #135 cross-table integrity for the post-M1 prototype. Validates semantic-model opt-in, complete territorial dimensions, temporal interval/mode/query-window coherence, open termini and reverse spatial locus/extent consistency.';
+'M2 #135/#140 cross-table integrity for the post-M1 prototype. Validates semantic-model opt-in, complete territorial dimensions, temporal interval/mode/query-window coherence, non-positive open termini and reverse spatial locus/extent consistency.';
 
 REVOKE EXECUTE ON FUNCTION atlas.require_post_m1_child_semantics() FROM PUBLIC;
 REVOKE EXECUTE ON FUNCTION atlas.validate_post_m1_claim_integrity(uuid) FROM PUBLIC;
