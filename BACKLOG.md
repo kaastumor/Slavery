@@ -9,62 +9,67 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE R1 / CHECKPOINT — Tranche 01 complete; no tranche 02 authorized by #163
+# ACTIVE R1 / MIDPOINT BOUNDARY — Tranche 02 complete; midpoint stop review next
 
 **Parent programme:** #159  
-**Completed tranche:** #163  
-**Decision:** D-076  
-**Current stage:** **R1.4 CALIBRATION CHECKPOINT**
+**Completed research tranches:** #163, #166  
+**Current stage:** **R1 MIDPOINT STOP REVIEW — no tranche 03 authorized**  
+**Decisions:** D-076, D-077
 
 R1 remains the first real research/release programme after COV-001→004.
 
-## Tranche 01 result
+## Research completed under Core Contract v1
 
-Frozen stress/calibration tranche:
-- 10 C1 rows;
+### Tranche 01 — stress/calibration
+- 10 frozen C1 rows;
 - 10/10 internally adversarially replayed;
-- 2/2 earned C2 packets completed.
+- 2/2 earned C2 packets completed;
+- final: 3 classified, 7 inconclusive;
+- replay found four material release-safety corrections.
 
-Final target-claim outcomes:
-- 3 classified / bounded-supported;
-- 7 inconclusive for the relevant frozen target/year/frame question;
-- 0 final `disputed` rows.
+### Tranche 02 — ordinary operational
+- 6 frozen C1 rows;
+- 6/6 internally adversarially replayed;
+- 1/1 earned C2 packet completed;
+- final: 1 classified, 5 inconclusive;
+- 0 semantic release corrections after fresh synthesis;
+- 2 source-dependency/provenance normalizations during replay;
+- no target substitution.
 
-Important:
-**these proportions are not representative prevalence, not an expected release yield, and not a quality score for the remaining 24 queue rows.**
+Combined researched C1 so far:
+- 16 rows total;
+- 4 classified / bounded-supported;
+- 12 inconclusive for the exact frozen target/year/frame question;
+- 0 final disputed;
+- 3 C2 packets completed.
 
-## Material corrections found by adversarial replay
+These proportions are **not prevalence, not an expected release yield, and not a progress score against the R1 ceiling**.
 
-The replay caught four meaningful overreach risks after an already cautious first synthesis:
+## Replay rule
 
-1. **Teotihuacan 500 CE** — earlier Moon Pyramid sacrifice evidence could not become selected-year 500 CE truth.
-2. **Shaolin 1000 CE** — earlier Shaolin estate evidence plus generic Buddhist-monastery slavery context could not be joined into a Shaolin-specific slavery claim.
-3. **Inuit Arctic 1800** — bounded eighteenth-century external enslavement could not become circumpolar/internal territorial practice or exact-1800 continuity.
-4. **Cahokia 1200 CE** — Mound 72 evidence is principally earlier than the anchor and slave status remains unestablished; C2 changed preliminary `disputed` to `inconclusive`.
+Core Contract v1 §19 is active at the stronger setting.
 
-The Portuguese colonial aggregate also completed C2 by explicitly **refusing one territorial-practice state** for a dispersed, heterogeneous jurisdiction aggregate.
+Tranche 01 produced material release-safety corrections in 4/10 replayed C1 rows, above the contract's 10% trigger. Therefore:
+- remaining R1 candidate C1 work receives **100% adversarial replay** unless a later explicit decision supersedes this;
+- 100% C2 replay remains required;
+- no source-count or row-count shortcut replaces review.
 
-## What this checkpoint supports
-
-- Core Contract v1 survives first real research use **after material correction**.
-- selected-year temporal review is necessary;
-- evidence-locus / inference-extent review is necessary;
-- context evidence must remain separate from target evidence;
-- external/network relations must remain separate from territorial practice;
-- selective C2 remains useful;
-- the R1 adversarial replay floor must not be weakened.
+This is execution of the frozen Core Contract, not a new historical classification rule.
 
 ## Current execution boundary
 
-**Do not start tranche 02 from #163.**
+**Do not start tranche 03.**
 
-#163 explicitly authorized only tranche 01 and stated that a next tranche does not follow automatically.
+R1 has reached its mandatory midpoint stop review after 16 researched C1 rows. The next action is to evaluate:
+- whether bounded claims are surviving adversarial review;
+- whether language/access gaps are dominating results;
+- whether source recovery/reconstruction is working;
+- whether the cross-history structure is genuinely useful;
+- whether research/review burden is proportionate;
+- whether the candidate release should stop smaller;
+- whether any repeated friction has earned a feature test.
 
-The parent R1 programme (#159) remains active, but the next research tranche must be deliberately authorized from this checkpoint after reviewing whether:
-- Core v1 is sufficiently stable to continue;
-- the next tranche should be more ordinary/operational rather than another stress set;
-- review burden remains proportionate;
-- no methodological correction is required first.
+A next research tranche requires a new explicit authorization from that midpoint review.
 
 ## Still unchanged
 
