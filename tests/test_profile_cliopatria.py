@@ -25,6 +25,11 @@ def fixture_bytes():
                 "properties": {"Name": "Composite", "Type": "POLITY, RELATION", "FromYear": 4, "ToYear": 2},
                 "geometry": None,
             },
+            {
+                "type": "Feature",
+                "properties": {"Name": "Zero", "Type": "POLITY", "FromYear": 0, "ToYear": 1},
+                "geometry": {"type": "Polygon", "coordinates": []},
+            },
         ],
     }
     buf = io.BytesIO()
@@ -39,15 +44,16 @@ class CliopatriaProfileTests(unittest.TestCase):
         data = fixture_bytes()
         features = load_features(data)
         p = profile(features)
-        self.assertEqual(p["feature_count"], 3)
-        self.assertEqual(p["type_counts"], {"POLITY": 1, "POLITY, RELATION": 1, "RELATION": 1})
+        self.assertEqual(p["feature_count"], 4)
+        self.assertEqual(p["type_counts"], {"POLITY": 2, "POLITY, RELATION": 1, "RELATION": 1})
         self.assertEqual(p["source_native_years"]["minimum"], -10)
         self.assertEqual(p["source_native_years"]["maximum"], 3)
         self.assertEqual(p["source_native_years"]["rows_crossing_numeric_zero"], 1)
         self.assertEqual(p["source_native_years"]["invalid_from_to_ranges"], 1)
+        self.assertEqual(p["source_native_years"]["rows_with_zero_endpoint"], 1)
         self.assertEqual(p["property_presence_counts"]["Extra"], 1)
-        self.assertEqual(p["property_presence_counts"]["Name"], 3)
-        self.assertEqual(p["property_presence_counts"]["Type"], 3)
+        self.assertEqual(p["property_presence_counts"]["Name"], 4)
+        self.assertEqual(p["property_presence_counts"]["Type"], 4)
 
     def test_git_blob_identity_is_content_sensitive(self):
         data = fixture_bytes()
