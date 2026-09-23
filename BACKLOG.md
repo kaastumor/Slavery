@@ -64,9 +64,10 @@ Current integrated evidence:
 3. **DONE — #119 — Ingest complete pinned Cliopatria corpus into raw staging** (full-corpus disposable PostGIS load + exact retry passed; no production apply)
 4. **DONE — #120 — Prototype post-M1 claim semantics in disposable PostGIS** (legacy compatibility + explicit target dimensions + temporal/spatial prototype passed; no production apply)
 5. **DONE — #121 — Build complete Cliopatria selected-year resolver prototype** (synthetic adversary + exact 13,765-feature full-corpus acceptance passed; no production apply)
-6. **NOW — #135 AUTO READY — Correct post-M1 cross-table integrity gaps** (#122 REVISE finding; smallest bounded correction)
-7. **GATE / REVISE — #122 — M2 integrated adversarial gate** (first attack found reverse-direction temporal/spatial integrity and open-terminus representation gaps; re-attack after #135)
-8. **GATE — #123 AUTO READY — M2 Project Health Check and reconciliation** (depends on successful #122 re-attack)
+6. **DONE — #135 — Correct post-M1 cross-table integrity gaps** (deferred cross-table validation, target-only opt-in and genuine open termini merged in PR #137)
+7. **NOW — #136 — Separate chosen geometry provenance and pin resolver drift** (remaining #122 corrective scope)
+8. **GATE / REVISE — #122 — M2 integrated adversarial gate** (re-attack after #136)
+9. **GATE — #123 AUTO READY — M2 Project Health Check and reconciliation** (depends on successful #122 re-attack)
 
 M2 rules:
 

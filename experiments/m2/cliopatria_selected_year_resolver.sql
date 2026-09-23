@@ -364,7 +364,8 @@ AS $$
     ORDER BY f.name_raw, f.source_row_ordinal;
 $$;
 
-CREATE OR REPLACE FUNCTION staging.m2_cliopatria_geometry_candidates(p_atlas_year integer)
+DROP FUNCTION IF EXISTS staging.m2_cliopatria_geometry_candidates(integer);
+CREATE FUNCTION staging.m2_cliopatria_geometry_candidates(p_atlas_year integer)
 RETURNS TABLE (
     atlas_year integer,
     cliopatria_source_year integer,
@@ -378,10 +379,12 @@ RETURNS TABLE (
     chosen_geometry_id uuid,
     chosen_accuracy_status atlas.geometry_accuracy,
     geom geometry,
-    source_version_id uuid,
-    source_asset_id uuid,
-    upstream_commit text,
-    asset_sha256 text,
+    baseline_source_version_id uuid,
+    baseline_source_asset_id uuid,
+    baseline_upstream_commit text,
+    baseline_asset_sha256 text,
+    chosen_geometry_source_version_id uuid,
+    chosen_geometry_source_native_id text,
     publication_state text
 )
 LANGUAGE sql
@@ -412,10 +415,12 @@ AS $$
         CASE WHEN ov.accepted_count = 1 THEN ov.geometry_id ELSE NULL END,
         CASE WHEN ov.accepted_count = 1 THEN ov.accuracy_status ELSE NULL END,
         CASE WHEN ov.accepted_count = 1 THEN ov.specialist_geom ELSE b.geom END,
-        b.source_version_id,
-        b.source_asset_id,
-        b.upstream_commit,
-        b.asset_sha256,
+        b.source_version_id AS baseline_source_version_id,
+        b.source_asset_id AS baseline_source_asset_id,
+        b.upstream_commit AS baseline_upstream_commit,
+        b.asset_sha256 AS baseline_asset_sha256,
+        CASE WHEN ov.accepted_count = 1 THEN ov.geometry_source_version_id ELSE NULL END,
+        CASE WHEN ov.accepted_count = 1 THEN ov.geometry_source_native_id ELSE NULL END,
         'prototype_unapproved'::text
     FROM baseline b
     LEFT JOIN staging.m2_cliopatria_entity_match em
@@ -426,7 +431,11 @@ AS $$
             count(*)::integer AS accepted_count,
             (array_agg(g.geometry_id ORDER BY g.geometry_id))[1] AS geometry_id,
             min(g.accuracy_status::text)::atlas.geometry_accuracy AS accuracy_status,
-            CASE WHEN count(*) = 1 THEN (array_agg(g.geom))[1] ELSE NULL END AS specialist_geom
+            CASE WHEN count(*) = 1 THEN (array_agg(g.geom ORDER BY g.geometry_id))[1] ELSE NULL END AS specialist_geom,
+            (array_agg(g.geometry_source_version_id ORDER BY g.geometry_id))[1]
+                AS geometry_source_version_id,
+            (array_agg(g.geometry_source_native_id ORDER BY g.geometry_id))[1]
+                AS geometry_source_native_id
         FROM staging.m2_geometry_precedence p
         JOIN atlas.geometry g ON g.geometry_id = p.geometry_id
         WHERE p.spatial_entity_id = em.spatial_entity_id

@@ -114,6 +114,25 @@ Complete pinned-corpus validation:
 
 The full harness first executes the #119 exact ingestion/reconciliation and exact retry/no-op, then applies the resolver and emits the selected-year diagnostic.
 
+## Integrated-gate correction (#136)
+
+The first #122 integrated attack found that the resolver result could choose an accepted specialist geometry while still exposing generically named provenance columns that described the Cliopatria baseline. The underlying lineage was still reachable through `chosen_geometry_id`, but the result shape made accidental source misattribution too easy.
+
+The corrected prototype makes the two lineages explicit:
+
+- `baseline_source_version_id`
+- `baseline_source_asset_id`
+- `baseline_upstream_commit`
+- `baseline_asset_sha256`
+- `chosen_geometry_source_version_id`
+- `chosen_geometry_source_native_id`
+
+The specialist acceptance fixture now uses a source/version distinct from the synthetic Cliopatria baseline and requires both lineages to be returned correctly. A quarantined candidate must expose no chosen-specialist provenance.
+
+The complete pinned-corpus harness also changed from an observational diagnostic to a fail-closed acceptance. The six selected-year count/composite observations in the table above, the Baekje 369 example, duplicate-key exclusion, RELATION exclusion from the default baseline, and raw/unapproved state are now assertions when `db-test-cliopatria-resolver-full.sh` is run against the exact pinned asset.
+
+This correction remains disposable M2 infrastructure. It does not approve any specialist source, publish any raw baseline geometry, or change production.
+
 ## Gate meaning
 
 Passing #121 means the project has a reproducible **raw selected-year global baseline resolver** with explicit source-calendar, hierarchy and D-055 precedence behavior.
