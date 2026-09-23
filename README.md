@@ -1,6 +1,6 @@
 # Historical Slavery Atlas
 
-Public development repository for the Historical Slavery Atlas: a global, time-aware evidence corpus and comparison method for slavery and related coerced-labour/dependency systems, with a thin atlas/query surface where that adds demonstrated value.
+Public repository preserving the Historical Slavery Atlas's global, time-aware historical-evidence methodology, research/release artifacts, adversarial fixtures and experimental atlas/query work for slavery and related coerced-labour/dependency systems.
 
 The repository is the canonical source of truth for project implementation, methodology and operating state. The immutable historical data baseline remains the external v0.6.1 workbook until a deliberately validated successor release is created.
 
@@ -21,14 +21,16 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 
 - canonical historical data release: `v0.6.1` (external immutable workbook);
 - public non-canonical preview: `mvp-preview-ancient-v2` (frozen legacy demonstration);
-- working normalized research store: PostgreSQL/PostGIS;
-- M1 and M2 implementation/adversarial gates: completed;
-- HC-003 wide-angle review: **CONTINUE + SIMPLIFY**;
-- working identity: **auditable evidence corpus + comparison method + thin atlas/query surface**;
-- execution state: **IDLE** — no new horizon is authorized;
-- M2 production migration, broad evidence expansion and richer application/platform work remain parked pending a future value-discrimination decision.
+- M1 and M2 methodology/integration gates: completed;
+- HC-003: **CONTINUE + SIMPLIFY**;
+- H2 / #146 value-discrimination pilot: completed;
+- HC-004 / D-063: **STOP ACTIVE ATLAS EXPANSION; PRESERVE METHOD/CORPUS/AUDIT ARTIFACTS**;
+- execution state: **IDLE / PRESERVATION**;
+- no H3/H4 research, production-migration, frontend/platform or infrastructure horizon is authorized.
 
-See `docs/34_WIDE_ANGLE_PROJECT_REVIEW.md` and D-062.
+The H2 pilot found a material corpus-method advantage in one of three cases, below the pre-registered two-case threshold; the repaired thin visual/query arm did not materially beat the corpus/method in any case.
+
+See `experiments/h2-value-discrimination/09_FINAL_RESULT.md`, HC-004 in `docs/25_PROJECT_HEALTH.md`, and D-063.
 
 ## Repository boundary
 
