@@ -76,6 +76,9 @@ jobs:
           grep -q '^0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4  Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx$' data/releases/v0.6.1/SHA256SUMS.txt
           test ! -f data/releases/v0.6.1/Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx
 
+      - name: M2 post-M1 claim semantics prototype
+        run: bash ./scripts/db-test-m2-claim-semantics.sh
+
       - name: Compose logs on failure
         if: failure()
         run: docker compose logs --no-color db
