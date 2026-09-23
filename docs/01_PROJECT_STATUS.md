@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE BOUNDED EXPERIMENT — COV-003 tiered systematic coverage; Atlas expansion remains stopped**
+**Execution state:** **IDLE / PRESERVATION — COV-003 tiered architecture survived narrowly; Atlas expansion remains stopped**
 
 ## Direction after H2
 
@@ -180,25 +180,64 @@ Direction correction: D-068.
 
 No new research horizon is authorized by this correction.
 
-## COV-003 tiered systematic coverage — active
+## COV-003 tiered systematic coverage — completed
 
-After ADV-001 narrowed the COV-002 stop, the sponsor explicitly authorized issue #155 to test the broader architecture that COV-002 did not evaluate.
+Result: **TIERED SURVIVE; STRONG SURVIVE rejected.**
 
-COV-003 separates:
-- **C0:** target/research-state coverage with no slavery inference;
-- **C1:** compact bounded evidence for a frozen research subset;
-- **C2:** selective deep evidence only when a frozen escalation rule earns it.
+COV-003 tested a workflow different from COV-002:
+- 24 C0 target/research-state registrations;
+- 12 frozen C1 researched targets;
+- 12 C0-only targets kept unresearched;
+- 6 deterministic identity/time probes;
+- 3 frozen C2 escalations;
+- source-centric shared packets;
+- immutable/as-of experiment release + update ledger;
+- coverage/bias and emergent-query audits.
 
-The deterministic sample is already frozen:
-- 24 C0 targets across 3 strata;
-- 12 C1 research targets;
-- 12 C0-only targets;
-- 6 identity-validation probes;
-- at most 3 C2 escalations.
+C1 outcomes:
+- 4 bounded-supported;
+- 8 researched-inconclusive.
 
-The experiment tests source-centric batch reuse, target-frame QA, selective depth, versioned/as-of maintenance, coverage-bias function and exploratory emergent corpus questions.
+C0 identity probes:
+- 4 valid at anchor;
+- 1 mismatch;
+- 1 ambiguous.
 
-Historical research is bounded to the frozen C1/C2/update protocol. No Atlas platform horizon or comprehensive-ingestion authorization exists.
+Batch/source reuse:
+- COV-002 expansion baseline reuse factor: 1.00;
+- COV-003 C1: 2.20;
+- 2/3 batches had shared specialist sources informing all four C1 cells;
+- but 12/12 C1 targets still required target-specific follow-up.
+
+Therefore the strong batch-economy gate failed.
+
+Selective C2:
+- Zhu — material temporal/category correction;
+- Hanthawaddy — material law/practice/status sharpening;
+- Pañcāla — no material gain.
+
+**2/3 — C2 selective-depth gate passes.**
+
+Versioned maintenance:
+- 3/3 deterministic new-source searches produced no genuinely new accepted source;
+- no positive update-cost claim is made;
+- an internal C2 correction did create a real four-row shared-source review dependency without rewriting the frozen release.
+
+Coverage/bias audit:
+- 0/12 C1 targets had direct Cambridge or Palgrave coverage;
+- systematic selection nevertheless produced four bounded-supported results and eight researched abstentions.
+
+Final interpretation:
+
+> **Breadth and depth can be separated. A target can belong to systematic coverage without receiving a deep slavery dossier.**
+
+The surviving future pattern is C0 -> C1 -> selective C2, with immutable releases, source-quality state and source-to-row review dependencies.
+
+Durable result: `experiments/coverage-tiered/13_FINAL_RESULT.md`  
+Health decision: HC-008  
+Direction decision: D-070
+
+No successor experiment, comprehensive-ingestion horizon or Atlas product horizon is authorized.
 
 ## Remaining bounded project-system debt
 
