@@ -1,0 +1,57 @@
+[
+  {
+    "target_id": "R1:P:-500:C:r1",
+    "target_label": "Kingdom of Kush",
+    "anchor": "500 BCE",
+    "origin": "new_systematic_polity",
+    "qa": "validated",
+    "frame": "polity",
+    "selection_reason": "first remaining validated new-polity row in the 500 BCE band after tranche 01"
+  },
+  {
+    "target_id": "R1:P:-500:F:r1",
+    "target_label": "Cai",
+    "anchor": "500 BCE",
+    "origin": "new_systematic_polity",
+    "qa": "validated",
+    "frame": "polity",
+    "selection_reason": "next remaining validated new-polity row by frozen queue order; adds East Asian coverage without frame pathology"
+  },
+  {
+    "target_id": "R1:P:500:D:r1",
+    "target_label": "Lazica",
+    "anchor": "500 CE",
+    "origin": "new_systematic_polity",
+    "qa": "validated",
+    "frame": "polity",
+    "selection_reason": "first remaining validated new-polity row in the 500 CE band after tranche 01"
+  },
+  {
+    "target_id": "R1:N:nalanda_700",
+    "target_label": "Nalanda Mahavihara",
+    "anchor": "700 CE",
+    "origin": "new_systematic_nonpolity",
+    "qa": "validated",
+    "frame": "institution_estate",
+    "selection_reason": "first remaining validated institutional non-polity row by frozen queue order"
+  },
+  {
+    "target_id": "R1:P:1300:C:r1",
+    "target_label": "Mali Empire",
+    "anchor": "1300 CE",
+    "origin": "new_systematic_polity",
+    "qa": "validated",
+    "frame": "polity",
+    "selection_reason": "first remaining validated new-polity row in the 1300 CE band after tranche 01"
+  },
+  {
+    "target_id": "R1:L:1800:A",
+    "legacy_ref": "1800:A",
+    "target_label": "United States of America",
+    "anchor": "1800 CE",
+    "origin": "legacy_promotion_polity",
+    "qa": "validated",
+    "frame": "polity",
+    "selection_reason": "first remaining validated legacy polity at the 1800 anchor; supplies the later historical band absent from validated new-polity rows"
+  }
+]
