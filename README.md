@@ -32,7 +32,10 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - COV-003 / #155: **completed — TIERED SURVIVE; STRONG SURVIVE rejected**;
 - COV-004 / #157: **completed — METHOD SURVIVE**;
 - D-072: preserve C0 -> C1 -> selective C2, versioned review, and an ordinary map/register Atlas surface; bespoke Atlas semantics remain unearned;
-- execution state: **IDLE / SPONSOR DECISION**; no comprehensive-ingestion, production-migration, bespoke frontend/platform or infrastructure horizon is authorized.
+- R1 / #159: **ACTIVE — Core Hardening + First Systematic Coverage Release**;
+- Core Contract v1 is frozen after adversarial review; R1 target-frame freeze is in progress;
+- v0.6.1 remains canonical; no R1 subject research starts before the exact target frame is frozen;
+- no production migration, bespoke frontend/platform or bulk automated research is authorized.
 
 The H2 pilot found a material corpus-method advantage in one of three cases, below the pre-registered two-case threshold; the repaired thin visual/query arm did not materially beat the corpus/method in any case.
 
