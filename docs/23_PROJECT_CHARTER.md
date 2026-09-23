@@ -230,4 +230,19 @@ The audit found:
 
 D-068 therefore narrows the stop to the tested row-by-row workflow. The project remains idle and no new expansion is authorized.
 
+### COV-003 — tiered systematic coverage architecture (active bounded experiment)
+
+ADV-001 / D-068 established that COV-002 stopped only the tested row-by-row workflow, not every possible systematic-coverage architecture.
+
+COV-003 / #155 is explicitly authorized to test one alternative:
+- broad C0 target/research-state registration without slavery inference;
+- compact C1 evidence only for a frozen research subset;
+- selective C2 depth only when a preregistered escalation rule earns it;
+- source-centric batch research;
+- versioned/as-of maintenance rather than continuous mutation.
+
+The experiment uses 24 new targets but researches only 12 at C1 and at most 3 at C2. Record count itself is not a success metric.
+
+No result automatically authorizes comprehensive ingestion or the former Atlas product.
+
 At every horizon boundary, review evidence for **and against** the thesis, compare the strongest baseline, consider whether the artifact can shrink, and explicitly choose **continue / simplify / redirect / stop** before creating the next horizon.
