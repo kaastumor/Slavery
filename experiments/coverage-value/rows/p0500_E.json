@@ -1,0 +1,63 @@
+{
+  "cell_id": "500:E",
+  "frame": "polity",
+  "anchor_year": 500,
+  "target_label": "Vakataka Kingdom",
+  "source_sample": {
+    "source_name": "Vakataka Kingdom",
+    "source_row_ordinal": 1906,
+    "source_from_year": 490,
+    "source_to_year": 545,
+    "sampling_sector": "E"
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "The Vakataka target is well documented politically and epigraphically, but this packet does not establish Vakataka-specific slavery at c. 500 CE.",
+  "strongest_unsupported_proposition": "Do not transfer slavery/dependency evidence from other South Asian regions into Vakataka territory.",
+  "territorial_practice_summary": "Target-specific slavery practice unresolved.",
+  "legal_state_summary": "",
+  "external_network_summary": "",
+  "terminology_category_qualification": "",
+  "temporal_scope_precision": "Bounded to cited evidence; sample interval is not itself slavery evidence.",
+  "evidence_locus": "Vakataka Kingdom",
+  "inference_extent": "No inference beyond stated target/evidence locus.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Inscriptions of the Vākāṭakas",
+      "author": "V. V. Mirashi",
+      "year": null,
+      "url_or_identifier": "https://zenodo.org/records/896823",
+      "source_role": "primary_source",
+      "direction": "context",
+      "locator": ""
+    },
+    {
+      "title": "Slavery and Dependency in Medieval South India",
+      "author": "Leslie C. Orr",
+      "year": 2021,
+      "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-and-dependency-in-medieval-south-india/3F339BF4D4E02BD8073D2F27FA0BE7EE",
+      "source_role": "specialist_synthesis",
+      "direction": "qualifies",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "No Vakataka-specific slavery claim established within source budget."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 1,
+    "primary_or_dataset_items_used": 1,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

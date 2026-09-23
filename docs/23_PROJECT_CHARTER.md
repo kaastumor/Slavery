@@ -173,16 +173,23 @@ Preservation is the resting state, not a new feature roadmap.
 
 Maintain reconstructibility, security and integrity of the existing artifacts when needed. Do not create public-product, contribution-platform or infrastructure work merely to keep the project active.
 
-### Post-H2 bounded value experiment — COV-001
+### Post-H2 bounded value experiment — COV-001 (completed)
 
-COV-001 / #148 is **not H3** and does not reopen Atlas expansion.
+COV-001 / #148 tested a distinct thesis without reopening Atlas expansion: whether a plain, systematically assembled global place/time coverage corpus has reusable value in its own right.
 
-It tests a distinct unresolved thesis: whether a small, systematically assembled global place/time coverage corpus has practical value because evidence, uncertainty and research gaps are preassembled and reusable.
+Result: **NARROW SURVIVE.**
 
-The artifact under test is deliberately plain CSV/JSON/Markdown. A positive result belongs first to the corpus concept, not to PostgreSQL, MapLibre, APIs or the previous Atlas application.
+After a deterministic sample, 25-cell research corpus, fixed queries, negative controls and a result adversary:
+- 4/6 global coverage tasks retained material value;
+- the gain came from explicit layer boundaries and research-coverage/gap state;
+- ordinary matrix presentation reached parity for simple overview;
+- specialist narrative remained superior for deep interpretation;
+- SlaveVoyages remained superior for voyage-level quantitative analysis.
 
-The setup must freeze a deterministic sample before historical research and includes non-polity challenge contexts plus plain-matrix and specialist negative controls.
+The surviving artifact is a **flat auditable coverage corpus**, not a new product architecture.
 
-A positive result may authorize at most one further bounded corpus-scale experiment. It cannot automatically authorize bulk global research or product development.
+This does not change D-063: the former Atlas application/platform remains stopped.
+
+COV-001 authorizes no automatic successor. At most one future bounded experiment may test whether corpus reuse/value scales faster than research, review and update cost.
 
 At every horizon boundary, review evidence for **and against** the thesis, compare the strongest baseline, consider whether the artifact can shrink, and explicitly choose **continue / simplify / redirect / stop** before creating the next horizon.

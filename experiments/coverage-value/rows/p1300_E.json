@@ -1,0 +1,54 @@
+{
+  "cell_id": "1300:E",
+  "frame": "polity",
+  "anchor_year": 1300,
+  "target_label": "Yadava Dynasty",
+  "source_sample": {
+    "source_name": "Yadava Dynasty",
+    "source_row_ordinal": 5804,
+    "source_from_year": 1260,
+    "source_to_year": 1313,
+    "sampling_sector": "E"
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "Medieval South India has evidence of slavery/dependency, but this packet does not establish it specifically for sampled Yadava/Devagiri.",
+  "strongest_unsupported_proposition": "Do not generalize Tamil-region inscriptional evidence to the Yadava polity because dates overlap.",
+  "territorial_practice_summary": "Yadava-specific practice unresolved.",
+  "legal_state_summary": "",
+  "external_network_summary": "",
+  "terminology_category_qualification": "Slavery/dependency intersected with caste, temple, household and agrarian relations.",
+  "temporal_scope_precision": "Bounded to cited evidence; sample interval is not itself slavery evidence.",
+  "evidence_locus": "Yadava Dynasty",
+  "inference_extent": "No inference beyond stated target/evidence locus.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Slavery and Dependency in Medieval South India",
+      "author": "Leslie C. Orr",
+      "year": 2021,
+      "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-and-dependency-in-medieval-south-india/3F339BF4D4E02BD8073D2F27FA0BE7EE",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "Direct Yadava/Devagiri evidence not established."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 1,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

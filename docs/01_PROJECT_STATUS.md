@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **BOUNDED VALUE EXPERIMENT SETUP — COV-001; Atlas expansion remains stopped**
+**Execution state:** **IDLE / PRESERVATION — COV-001 narrow corpus thesis survived; Atlas expansion remains stopped**
 
 ## Direction after H2
 
@@ -70,26 +70,44 @@ A future Atlas-development evaluation requires genuinely new external evidence, 
 
 A trigger authorizes evaluation, not automatic platform expansion.
 
-## COV-001 coverage-value experiment
+## COV-001 coverage-value experiment — completed
 
-The sponsor explicitly authorized setup of a new bounded experiment after H2.
+COV-001 / #148 tested whether a plain, systematically assembled place/time coverage corpus has value distinct from Atlas representation/UI.
 
-This does **not** reopen Atlas development. COV-001 tests whether a plain, systematically assembled place/time coverage corpus has value because it makes known evidence, uncertainty and research gaps inspectable across a global sample.
+Result: **NARROW SURVIVE.**
 
-Setup state:
-- issue #148 open;
-- protocol preregistered;
-- strongest external baseline recorded;
-- setup adversary returned **REVISE**;
-- revised protocol adopted;
-- deterministic Cliopatria sampler committed;
-- four fixed non-polity challenge contexts added;
-- experimental artifact constrained to plain CSV/JSON/Markdown;
-- historical slavery/coercion research has **not** started.
+Experiment:
+- deterministic sample frozen before historical research;
+- 21 valid polity-year targets + 3 preserved sampling gaps;
+- 4 fixed non-polity challenge contexts;
+- 25 researched cells;
+- plain JSON/CSV/Markdown only;
+- strong handbook + ordinary-matrix baseline;
+- specialist narrative and SlaveVoyages negative controls;
+- result adversary downgraded the preliminary 5/6 result to a robust 4/6.
 
-The next boundary is deterministic sample freeze. No research may begin until `sample.json` is generated from the exact pinned Cliopatria asset and committed.
+Research outcomes:
+- 8 bounded-supported;
+- 2 materially disputed;
+- 15 researched-inconclusive;
+- all four non-polity challenges remained inconclusive.
 
-D-063 remains fully in force for the Atlas product/platform boundary.
+Robust material query value appeared in:
+- law/practice separation;
+- network/territorial-inference separation;
+- explicit global-handbook coverage state;
+- explicit unresolved/gap state.
+
+The ordinary matrix remained sufficient for the basic overview. Deep specialist interpretation and specialized voyage research remained better in their own domains.
+
+Interpretation:
+**the coverage-corpus concept survives narrowly; the Atlas application does not reopen.**
+
+Durable result: `experiments/coverage-value/11_FINAL_RESULT.md`  
+Health decision: HC-005  
+Direction decision: D-065
+
+No successor experiment is authorized. The only candidate question is whether corpus reuse/value grows faster than research/review/update burden at materially larger scale.
 
 ## Remaining bounded project-system debt
 

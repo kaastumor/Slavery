@@ -1,0 +1,61 @@
+{
+  "cell_id": "1800:C",
+  "frame": "polity",
+  "anchor_year": 1800,
+  "target_label": "Bornu Empire",
+  "source_sample": {
+    "source_name": "Bornu Empire",
+    "source_row_ordinal": 8818,
+    "source_from_year": 1636,
+    "source_to_year": 1804,
+    "sampling_sector": "C"
+  },
+  "coverage_outcome": "bounded_supported",
+  "strongest_bounded_proposition": "Bornu was materially involved in slave raiding and trans-Saharan slave trading across the period leading into 1800.",
+  "strongest_unsupported_proposition": "Do not turn campaign/raid/trade intensity into numeric territorial prevalence inside Bornu.",
+  "territorial_practice_summary": "Enslavement/slaveholding supported in broader Bornu context; internal prevalence not quantified.",
+  "legal_state_summary": "",
+  "external_network_summary": "Bornu directly documented in slave raiding and trans-Saharan exchange.",
+  "terminology_category_qualification": "",
+  "temporal_scope_precision": "Sources span sixteenth–nineteenth centuries and encompass 1800.",
+  "evidence_locus": "Bornu / Lake Chad",
+  "inference_extent": "No extrapolation to neighboring peoples.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "direct",
+    "palgrave": "direct",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Slave-Raiding and Defensive Systems South of Lake Chad",
+      "author": "Thierno Mouctar Bah",
+      "year": 2004,
+      "url_or_identifier": "https://www.cambridge.org/core/books/fighting-the-slave-trade/slaveraiding-and-defensive-systems-south-of-lake-chad-from-the-sixteenth-to-the-nineteenth-century/3652F433D19407031C1CFFD5CF538DB2",
+      "source_role": "specialist_article",
+      "direction": "supports",
+      "locator": ""
+    },
+    {
+      "title": "The Cambridge World History of Slavery, Volume 3",
+      "author": "",
+      "year": null,
+      "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/893A3906E0372FFBBC596302859EDB9D",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 2,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "cell_id": "-500:F",
+  "frame": "polity",
+  "anchor_year": -500,
+  "target_label": "Qin",
+  "source_sample": {
+    "source_name": "Qin",
+    "source_row_ordinal": 154,
+    "source_from_year": -750,
+    "source_to_year": -451,
+    "sampling_sector": "F"
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "Later Qin evidence establishes coerced migration and statuses relevant to enslavement, but does not safely establish the sampled condition at c. 500 BCE.",
+  "strongest_unsupported_proposition": "Do not back-project fourth–third-century BCE Qin statutes or expansion practices to 500 BCE.",
+  "territorial_practice_summary": "Exact c.500 BCE practice unresolved.",
+  "legal_state_summary": "",
+  "external_network_summary": "Later expansion evidence is contextual only.",
+  "terminology_category_qualification": "",
+  "temporal_scope_precision": "Strongest evidence is later than the anchor.",
+  "evidence_locus": "Qin",
+  "inference_extent": "No inference beyond stated target/evidence locus.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "none",
+    "palgrave": "none",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Coerced Migration and Resettlement in the Qin Imperial Expansion",
+      "author": "",
+      "year": null,
+      "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-chinese-history/article/coerced-migration-and-resettlement-in-the-qin-imperial-expansion/D0DCCFB658519621610BE7A212E4A047",
+      "source_role": "specialist_article",
+      "direction": "context",
+      "locator": ""
+    },
+    {
+      "title": "Slavery in East Asia",
+      "author": "Don J. Wyatt",
+      "year": null,
+      "url_or_identifier": "https://assets.cambridge.org/97810090/01700/excerpt/9781009001700_excerpt.pdf",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "Temporal gap between anchor and strongest Qin evidence."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 2,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

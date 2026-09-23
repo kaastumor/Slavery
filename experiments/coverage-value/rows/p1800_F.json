@@ -1,0 +1,65 @@
+{
+  "cell_id": "1800:F",
+  "frame": "polity",
+  "anchor_year": 1800,
+  "target_label": "Portuguese Colonies",
+  "source_sample": {
+    "source_name": "Portuguese Colonies",
+    "source_row_ordinal": 10540,
+    "source_from_year": 1800,
+    "source_to_year": 1802,
+    "sampling_sector": "F"
+  },
+  "coverage_outcome": "materially_disputed",
+  "strongest_bounded_proposition": "Multiple Portuguese colonial settings had slavery/slave-trade institutions, but the aggregate sampled label 'Portuguese Colonies' cannot support one territorial-practice state at 1800.",
+  "strongest_unsupported_proposition": "Do not collapse Goa, African, Atlantic, Timorese or other Portuguese territories into one prevalence/practice condition.",
+  "territorial_practice_summary": "Slavery documented in multiple Portuguese imperial locations; one aggregate territorial-practice row is invalid.",
+  "legal_state_summary": "",
+  "external_network_summary": "Imperial slave-trade participation remains separate from each colony's practice.",
+  "terminology_category_qualification": "The target is a dispersed imperial grouping, not one society.",
+  "temporal_scope_precision": "Bounded to cited evidence; sample interval is not itself slavery evidence.",
+  "evidence_locus": "Multiple Portuguese colonies",
+  "inference_extent": "No single territorial-practice inference across aggregate label.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": [
+      "SlaveVoyages"
+    ]
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "‘Black’ and ‘golden’ Goa: slavery and empire",
+      "author": "Ines G. Županov",
+      "year": 2025,
+      "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/black-and-golden-goa-slavery-and-empire-sixteenth-to-eighteenth-centuries/5CBFFE02B67D62D025F3EB1734A4AE52",
+      "source_role": "specialist_article",
+      "direction": "supports",
+      "locator": ""
+    },
+    {
+      "title": "The Cambridge World History of Slavery, Volume 3",
+      "author": "",
+      "year": null,
+      "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/893A3906E0372FFBBC596302859EDB9D",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "Aggregate target must be decomposed for substantive territorial research."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 2,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

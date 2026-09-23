@@ -1,0 +1,72 @@
+{
+  "cell_id": "-500:C",
+  "frame": "polity",
+  "anchor_year": -500,
+  "target_label": "Sabaeans",
+  "source_sample": {
+    "source_name": "Sabaeans",
+    "source_row_ordinal": 256,
+    "source_from_year": -550,
+    "source_to_year": -451,
+    "sampling_sector": "C"
+  },
+  "coverage_outcome": "bounded_supported",
+  "strongest_bounded_proposition": "South Arabian/Sabaic epigraphy supports captivity and slave status, including proprietary purchase/sale relations in some first-millennium contexts.",
+  "strongest_unsupported_proposition": "Do not treat every ʿbd as proof of chattel slavery or infer prevalence from inscription counts.",
+  "territorial_practice_summary": "Slavery/enslavement is supported in the Sabaic/South Arabian evidence package; prevalence at 500 BCE is unassessed.",
+  "legal_state_summary": "",
+  "external_network_summary": "Captivity and movement are evidenced, but trade intensity is not a territorial-prevalence proxy.",
+  "terminology_category_qualification": "ʿbd can mean servant/subordinate; transactional and captive contexts are more diagnostic.",
+  "temporal_scope_precision": "First-millennium evidence supports a broad c.500 BCE context, not exact-date continuity.",
+  "evidence_locus": "Sabaic/South Arabian epigraphic corpus",
+  "inference_extent": "Sabaean/South Arabian context only.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": [
+      "DASI"
+    ]
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Slavery in First Millennium Arabia: Epigraphy and the Qurʾān",
+      "author": "Valentina A. Grasso",
+      "year": 2023,
+      "url_or_identifier": "https://doi.org/10.1515/mill-2023-0005",
+      "source_role": "specialist_article",
+      "direction": "supports",
+      "locator": ""
+    },
+    {
+      "title": "Slavery in the Ancient Near East",
+      "author": "Daniel C. Snell",
+      "year": 2011,
+      "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-in-the-ancient-near-east/E9871B0E91F592E905BFC90BA83796CC",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    },
+    {
+      "title": "DASI / Corpus of South Arabian Inscriptions",
+      "author": "CNR",
+      "year": null,
+      "url_or_identifier": "https://dasi.cnr.it/",
+      "source_role": "structured_dataset",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 2,
+    "primary_or_dataset_items_used": 1,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

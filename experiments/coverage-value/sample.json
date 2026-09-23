@@ -1,0 +1,438 @@
+{
+  "experiment": "COV-001",
+  "purpose": "neutral sampling only; not historical slavery or approved geography evidence",
+  "seed": "COV-001|ac73a560|cliopatria-ad28a691|2026-09-23",
+  "source_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+  "anchor_source_years": [
+    -500,
+    500,
+    1300,
+    1800
+  ],
+  "valid_cells": 21,
+  "sampling_gaps": 3,
+  "minimum_viable_valid_cells": 18,
+  "viable": true,
+  "cells": [
+    {
+      "cell_id": "-500:A",
+      "anchor_source_year": -500,
+      "sector": "A",
+      "candidate_count": 2,
+      "status": "selected",
+      "selection_digest": "09c8578caf1359d609a719329c51c2c4cd9464f1832c762fc5ca6a416cfafee5",
+      "source_row_ordinal": 204,
+      "source_name": "Olmec Civilization",
+      "source_type": "POLITY",
+      "source_from_year": -650,
+      "source_to_year": -367,
+      "source_seshat_id": "",
+      "source_wikidata": "Q135364",
+      "sampling_bbox_midpoint": [
+        -94.32323837280273,
+        18.189772605895996
+      ]
+    },
+    {
+      "cell_id": "-500:B",
+      "anchor_source_year": -500,
+      "sector": "B",
+      "candidate_count": 0,
+      "status": "sampling_gap"
+    },
+    {
+      "cell_id": "-500:C",
+      "anchor_source_year": -500,
+      "sector": "C",
+      "candidate_count": 3,
+      "status": "selected",
+      "selection_digest": "3549f8b86ecbc560741fa2a371ca064d0c28ef2de26a499f1e9752cf20ed3042",
+      "source_row_ordinal": 256,
+      "source_name": "Sabaeans",
+      "source_type": "POLITY",
+      "source_from_year": -550,
+      "source_to_year": -451,
+      "source_seshat_id": "ye_sabaean_commonwealth",
+      "source_wikidata": "Q940785",
+      "sampling_bbox_midpoint": [
+        44.473182678222656,
+        16.454001426696777
+      ]
+    },
+    {
+      "cell_id": "-500:D",
+      "anchor_source_year": -500,
+      "sector": "D",
+      "candidate_count": 9,
+      "status": "selected",
+      "selection_digest": "0c8620de8d44823d71661724fda4359bb209b55e0dc0bff2e695ce6d5c6c0dc5",
+      "source_row_ordinal": 290,
+      "source_name": "Carthage",
+      "source_type": "POLITY",
+      "source_from_year": -500,
+      "source_to_year": -481,
+      "source_seshat_id": "tn_carthage_emp",
+      "source_wikidata": "Q2429397",
+      "sampling_bbox_midpoint": [
+        5.510446548461914,
+        35.20285606384277
+      ]
+    },
+    {
+      "cell_id": "-500:E",
+      "anchor_source_year": -500,
+      "sector": "E",
+      "candidate_count": 13,
+      "status": "selected",
+      "selection_digest": "0d046eb3c278e7f5381bc9355fada8df793bc179118102de534251bffe90574c",
+      "source_row_ordinal": 248,
+      "source_name": "Janapada of Vatsa",
+      "source_type": "POLITY",
+      "source_from_year": -600,
+      "source_to_year": -481,
+      "source_seshat_id": "in_mahajanapada",
+      "source_wikidata": "Q1331184",
+      "sampling_bbox_midpoint": [
+        81.97978973388672,
+        25.74360752105713
+      ]
+    },
+    {
+      "cell_id": "-500:F",
+      "anchor_source_year": -500,
+      "sector": "F",
+      "candidate_count": 18,
+      "status": "selected",
+      "selection_digest": "10f1c41e6068056fbf87c2c359935bff4ac8e2148cda9eab8766fe784da36b97",
+      "source_row_ordinal": 154,
+      "source_name": "Qin",
+      "source_type": "POLITY",
+      "source_from_year": -750,
+      "source_to_year": -451,
+      "source_seshat_id": "",
+      "source_wikidata": "Q1471995",
+      "sampling_bbox_midpoint": [
+        110.05741119384766,
+        35.7419490814209
+      ]
+    },
+    {
+      "cell_id": "500:A",
+      "anchor_source_year": 500,
+      "sector": "A",
+      "candidate_count": 3,
+      "status": "selected",
+      "selection_digest": "0e50d1b0d31f79ab882105baed58468ebff28e5cd1c675adc0d4b05bf4d9ab3d",
+      "source_row_ordinal": 1411,
+      "source_name": "Mayan City-States",
+      "source_type": "POLITY",
+      "source_from_year": 299,
+      "source_to_year": 554,
+      "source_seshat_id": "gt_tikal_early_classic",
+      "source_wikidata": "Q28567",
+      "sampling_bbox_midpoint": [
+        -90.27732849121094,
+        17.61115264892578
+      ]
+    },
+    {
+      "cell_id": "500:B",
+      "anchor_source_year": 500,
+      "sector": "B",
+      "candidate_count": 0,
+      "status": "sampling_gap"
+    },
+    {
+      "cell_id": "500:C",
+      "anchor_source_year": 500,
+      "sector": "C",
+      "candidate_count": 5,
+      "status": "selected",
+      "selection_digest": "067630fd0fd060ae9b4b5cbe3c3b481ca7a29e23e6d8619cc1227a01df911edf",
+      "source_row_ordinal": 1467,
+      "source_name": "Alodia",
+      "source_type": "POLITY",
+      "source_from_year": 347,
+      "source_to_year": 601,
+      "source_seshat_id": "",
+      "source_wikidata": "Q449639",
+      "sampling_bbox_midpoint": [
+        33.57443618774414,
+        16.743296146392822
+      ]
+    },
+    {
+      "cell_id": "500:D",
+      "anchor_source_year": 500,
+      "sector": "D",
+      "candidate_count": 23,
+      "status": "selected",
+      "selection_digest": "11acc44b8ac30079c106fd309c902d235cdfdb23111f98892a5ceb92e8de0ac5",
+      "source_row_ordinal": 1902,
+      "source_name": "Anglo-Saxon England",
+      "source_type": "POLITY",
+      "source_from_year": 490,
+      "source_to_year": 522,
+      "source_seshat_id": "gb_anglo_saxon_1",
+      "source_wikidata": "Q784963",
+      "sampling_bbox_midpoint": [
+        -0.2407209873199465,
+        52.69663047790527
+      ]
+    },
+    {
+      "cell_id": "500:E",
+      "anchor_source_year": 500,
+      "sector": "E",
+      "candidate_count": 12,
+      "status": "selected",
+      "selection_digest": "10d2e3ba3c452e3895d81d5542e1c84e553ceff963c22a565777786bbcfad257",
+      "source_row_ordinal": 1906,
+      "source_name": "Vakataka Kingdom",
+      "source_type": "POLITY",
+      "source_from_year": 490,
+      "source_to_year": 545,
+      "source_seshat_id": "in_vakataka_k",
+      "source_wikidata": "Q1501306",
+      "sampling_bbox_midpoint": [
+        78.21727516514939,
+        19.95409481463776
+      ]
+    },
+    {
+      "cell_id": "500:F",
+      "anchor_source_year": 500,
+      "sector": "F",
+      "candidate_count": 11,
+      "status": "selected",
+      "selection_digest": "03b870ee26f1261aa40cd306a2061fba85f53696bd4c1c1d6d3c6e39817a55e2",
+      "source_row_ordinal": 1303,
+      "source_name": "Chámpa",
+      "source_type": "POLITY",
+      "source_from_year": 207,
+      "source_to_year": 545,
+      "source_seshat_id": "",
+      "source_wikidata": "Q216786",
+      "sampling_bbox_midpoint": [
+        108.01784896850586,
+        14.364652156829834
+      ]
+    },
+    {
+      "cell_id": "1300:A",
+      "anchor_source_year": 1300,
+      "sector": "A",
+      "candidate_count": 3,
+      "status": "selected",
+      "selection_digest": "a4ead262826681c9fde2719514c1a55e83ec6cea711982bbd5191b2e914f96cd",
+      "source_row_ordinal": 5218,
+      "source_name": "Texcoco",
+      "source_type": "POLITY",
+      "source_from_year": 1202,
+      "source_to_year": 1325,
+      "source_seshat_id": "",
+      "source_wikidata": "Q1178043",
+      "sampling_bbox_midpoint": [
+        -98.89376449584961,
+        19.121939659118652
+      ]
+    },
+    {
+      "cell_id": "1300:B",
+      "anchor_source_year": 1300,
+      "sector": "B",
+      "candidate_count": 2,
+      "status": "selected",
+      "selection_digest": "71c7c5617ed152b753e829cba82c6c95e2aa5da7d9526cee965919b82dcedc2f",
+      "source_row_ordinal": 5969,
+      "source_name": "Cuzco",
+      "source_type": "POLITY",
+      "source_from_year": 1294,
+      "source_to_year": 1401,
+      "source_seshat_id": "pe_cuzco_6",
+      "source_wikidata": "Q5582862",
+      "sampling_bbox_midpoint": [
+        -72.50313568115234,
+        -13.53616714477539
+      ]
+    },
+    {
+      "cell_id": "1300:C",
+      "anchor_source_year": 1300,
+      "sector": "C",
+      "candidate_count": 10,
+      "status": "selected",
+      "selection_digest": "26989cd22519a17098ee19db325a6de4ed6f207de393ae5f895d2730de46d114",
+      "source_row_ordinal": 5760,
+      "source_name": "Mahdids",
+      "source_type": "POLITY",
+      "source_from_year": 1260,
+      "source_to_year": 1474,
+      "source_seshat_id": "",
+      "source_wikidata": "Q1884830",
+      "sampling_bbox_midpoint": [
+        57.720069885253906,
+        23.81496238708496
+      ]
+    },
+    {
+      "cell_id": "1300:D",
+      "anchor_source_year": 1300,
+      "sector": "D",
+      "candidate_count": 97,
+      "status": "selected",
+      "selection_digest": "003d254bf4742f7cafb707aa3093d0979a069ad351ea7018b9731ff9051c5a15",
+      "source_row_ordinal": 5944,
+      "source_name": "Zayyanid dynasty",
+      "source_type": "POLITY",
+      "source_from_year": 1285,
+      "source_to_year": 1343,
+      "source_seshat_id": "dz_zayyanid_dyn;dz_tlemcen",
+      "source_wikidata": "Q307697",
+      "sampling_bbox_midpoint": [
+        1.2763012647628784,
+        35.194984436035156
+      ]
+    },
+    {
+      "cell_id": "1300:E",
+      "anchor_source_year": 1300,
+      "sector": "E",
+      "candidate_count": 17,
+      "status": "selected",
+      "selection_digest": "2e354dff6c14a0aa49379753afa49d2f410a18f9c16d1be5578047e47faf7ef7",
+      "source_row_ordinal": 5804,
+      "source_name": "Yadava Dynasty",
+      "source_type": "POLITY",
+      "source_from_year": 1260,
+      "source_to_year": 1313,
+      "source_seshat_id": "in_yadava_dyn",
+      "source_wikidata": "Q5790",
+      "sampling_bbox_midpoint": [
+        77.90016547572534,
+        18.50177815982859
+      ]
+    },
+    {
+      "cell_id": "1300:F",
+      "anchor_source_year": 1300,
+      "sector": "F",
+      "candidate_count": 15,
+      "status": "selected",
+      "selection_digest": "03e1f7dd216a3d3dab5e2def47bbf158ab539b1b21bd9b2277acf99661bbbcd8",
+      "source_row_ordinal": 5454,
+      "source_name": "Chámpa",
+      "source_type": "POLITY",
+      "source_from_year": 1220,
+      "source_to_year": 1313,
+      "source_seshat_id": "",
+      "source_wikidata": "Q216786",
+      "sampling_bbox_midpoint": [
+        108.0596809387207,
+        13.81820821762085
+      ]
+    },
+    {
+      "cell_id": "1800:A",
+      "anchor_source_year": 1800,
+      "sector": "A",
+      "candidate_count": 6,
+      "status": "selected",
+      "selection_digest": "00ba4a7e9fb034500d0224572a9215f245a14d6744163faa04d1650ba822c1f3",
+      "source_row_ordinal": 10524,
+      "source_name": "United States of America",
+      "source_type": "POLITY",
+      "source_from_year": 1800,
+      "source_to_year": 1802,
+      "source_seshat_id": "us_antebellum",
+      "source_wikidata": "Q30",
+      "sampling_bbox_midpoint": [
+        -78.93452072143555,
+        38.45900821685791
+      ]
+    },
+    {
+      "cell_id": "1800:B",
+      "anchor_source_year": 1800,
+      "sector": "B",
+      "candidate_count": 0,
+      "status": "sampling_gap"
+    },
+    {
+      "cell_id": "1800:C",
+      "anchor_source_year": 1800,
+      "sector": "C",
+      "candidate_count": 21,
+      "status": "selected",
+      "selection_digest": "0aa1f1dd4649e0fcae7cf08e50086c914d2c51f7ce277ba24dd046127d4cf997",
+      "source_row_ordinal": 8818,
+      "source_name": "Bornu Empire",
+      "source_type": "POLITY",
+      "source_from_year": 1636,
+      "source_to_year": 1804,
+      "source_seshat_id": "ni_bornu_emp",
+      "source_wikidata": "Q1139762",
+      "sampling_bbox_midpoint": [
+        14.254871845245361,
+        12.40387773513794
+      ]
+    },
+    {
+      "cell_id": "1800:D",
+      "anchor_source_year": 1800,
+      "sector": "D",
+      "candidate_count": 37,
+      "status": "selected",
+      "selection_digest": "032062e571abdde1f641f6c5c32378d4f90bc97a804f02a9ebb527f305487281",
+      "source_row_ordinal": 10551,
+      "source_name": "Kingdom of Great Britain",
+      "source_type": "POLITY",
+      "source_from_year": 1800,
+      "source_to_year": 1819,
+      "source_seshat_id": "gb_british_emp_1",
+      "source_wikidata": "Q23666",
+      "sampling_bbox_midpoint": [
+        2.0215554237365723,
+        48.306589126586914
+      ]
+    },
+    {
+      "cell_id": "1800:E",
+      "anchor_source_year": 1800,
+      "sector": "E",
+      "candidate_count": 18,
+      "status": "selected",
+      "selection_digest": "00d33d504a4b4131b75392d625973e4e8a3334b7a1097f09b47970c54915acb9",
+      "source_row_ordinal": 10417,
+      "source_name": "British Ceylon",
+      "source_type": "POLITY",
+      "source_from_year": 1796,
+      "source_to_year": 1813,
+      "source_seshat_id": "gb_british_emp_1",
+      "source_wikidata": "Q918153",
+      "sampling_bbox_midpoint": [
+        80.77330780029297,
+        7.678738117218018
+      ]
+    },
+    {
+      "cell_id": "1800:F",
+      "anchor_source_year": 1800,
+      "sector": "F",
+      "candidate_count": 39,
+      "status": "selected",
+      "selection_digest": "14ab510b222da2a664735e7b4dc303deed128941cb4cc083e403de8a0a6d71d7",
+      "source_row_ordinal": 10540,
+      "source_name": "Portuguese Colonies",
+      "source_type": "POLITY",
+      "source_from_year": 1800,
+      "source_to_year": 1802,
+      "source_seshat_id": "pt_portuguese_emp_2",
+      "source_wikidata": "Q200464",
+      "sampling_bbox_midpoint": [
+        100.06066513061523,
+        6.42510461807251
+      ]
+    }
+  ]
+}

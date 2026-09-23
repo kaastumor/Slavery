@@ -1,0 +1,61 @@
+{
+  "cell_id": "1300:D",
+  "frame": "polity",
+  "anchor_year": 1300,
+  "target_label": "Zayyanid dynasty",
+  "source_sample": {
+    "source_name": "Zayyanid dynasty",
+    "source_row_ordinal": 5944,
+    "source_from_year": 1285,
+    "source_to_year": 1343,
+    "sampling_sector": "D"
+  },
+  "coverage_outcome": "bounded_supported",
+  "strongest_bounded_proposition": "Sources support enslaved people and slave-trade connections in the Zayyanid/Tlemcen context, including Christian slaves linked to the Banū ʿAbd al-Wād.",
+  "strongest_unsupported_proposition": "Do not infer population share or realm-wide prevalence from Tlemcen/court/trade evidence.",
+  "territorial_practice_summary": "Slaveholding/slave labour supported in Tlemcen/Zayyanid context.",
+  "legal_state_summary": "",
+  "external_network_summary": "Tlemcen participated in trans-Saharan commerce including enslaved people.",
+  "terminology_category_qualification": "",
+  "temporal_scope_precision": "Medieval evidence compatible with 1300, not exact-year census evidence.",
+  "evidence_locus": "Tlemcen / Banū ʿAbd al-Wād context",
+  "inference_extent": "Broader realm prevalence unassessed.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Christian participation in Almohad armies and personal guards",
+      "author": "Eva Lapiedra Gutiérrez",
+      "year": 2010,
+      "url_or_identifier": "https://www.tandfonline.com/doi/abs/10.1080/17546559.2010.502667",
+      "source_role": "specialist_article",
+      "direction": "supports",
+      "locator": ""
+    },
+    {
+      "title": "Maqqari Company between Zayyanid Tlemcen and Western Sudan",
+      "author": "",
+      "year": null,
+      "url_or_identifier": "https://asjp.cerist.dz/en/downArticle/564/9/1/287705",
+      "source_role": "specialist_article",
+      "direction": "supports",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 2,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

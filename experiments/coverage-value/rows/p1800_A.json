@@ -1,0 +1,63 @@
+{
+  "cell_id": "1800:A",
+  "frame": "polity",
+  "anchor_year": 1800,
+  "target_label": "United States of America",
+  "source_sample": {
+    "source_name": "United States of America",
+    "source_row_ordinal": 10524,
+    "source_from_year": 1800,
+    "source_to_year": 1802,
+    "sampling_sector": "A"
+  },
+  "coverage_outcome": "bounded_supported",
+  "strongest_bounded_proposition": "Chattel slavery was legally institutionalized and practiced in substantial parts of the United States around 1800, with important regional legal differences.",
+  "strongest_unsupported_proposition": "Do not represent the entire United States as one homogeneous slavery-practice/legal-status condition.",
+  "territorial_practice_summary": "Enslaved labour and slaveholding directly supported in slaveholding regions.",
+  "legal_state_summary": "Slavery remained legally recognized in many states while northern gradual abolition trajectories differed.",
+  "external_network_summary": "Trade connections remain separate from local practice.",
+  "terminology_category_qualification": "",
+  "temporal_scope_precision": "Bounded to cited evidence; sample interval is not itself slavery evidence.",
+  "evidence_locus": "United States with required regional differentiation",
+  "inference_extent": "Subnational practice supported; national uniformity rejected.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "direct",
+    "structured_dataset_relevance": [
+      "SlaveVoyages"
+    ]
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Slavery in the US South",
+      "author": "Damian A. Pargas",
+      "year": 2023,
+      "url_or_identifier": "https://link.springer.com/chapter/10.1007/978-3-031-13260-5_25",
+      "source_role": "specialist_synthesis",
+      "direction": "supports",
+      "locator": ""
+    },
+    {
+      "title": "US Slavery and Its Aftermath, 1804–2000",
+      "author": "",
+      "year": null,
+      "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/us-slavery-and-its-aftermath-18042000/94710C48B95A01C59084C84839884623",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 2,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}
