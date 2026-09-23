@@ -1,0 +1,232 @@
+{
+  "sources": {
+    "CN-YATES-2001": {
+      "source_id": "CN-YATES-2001",
+      "title": "Slavery in Early China: A Socio-Cultural Approach",
+      "author": "Robin D. S. Yates",
+      "year": 2001,
+      "url": "https://doi.org/10.1163/156852301100402723",
+      "kind": "specialist_article",
+      "shared": true,
+      "material_functions": [
+        "period/category boundary",
+        "required abstention",
+        "regional slavery context"
+      ]
+    },
+    "CN-SCHEIDEL-2017": {
+      "source_id": "CN-SCHEIDEL-2017",
+      "title": "Slavery and Forced Labour in Early China and the Roman World",
+      "author": "Walter Scheidel",
+      "year": 2017,
+      "url": "https://doi.org/10.1017/9781108115865.007",
+      "kind": "specialist_chapter",
+      "shared": true,
+      "material_functions": [
+        "regional slavery/forced-labour context",
+        "comparative category caution"
+      ]
+    },
+    "IN-CHANANA-1960": {
+      "source_id": "IN-CHANANA-1960",
+      "title": "Slavery in Ancient India: As Depicted in Pali and Sanskrit Texts",
+      "author": "Dev Raj Chanana",
+      "year": 1960,
+      "url": "https://books.google.com/books/about/Slavery_in_Ancient_India.html?id=CHPaAAAAMAAJ",
+      "kind": "specialist_monograph",
+      "shared": true,
+      "material_functions": [
+        "period slavery context",
+        "oligarchy/monarchy distinction",
+        "Malla direct support",
+        "required abstention"
+      ]
+    },
+    "IN-KALB-2023": {
+      "source_id": "IN-KALB-2023",
+      "title": "Slavery in South Asia",
+      "author": "Emma Kalb",
+      "year": 2023,
+      "url": "https://doi.org/10.1007/978-3-031-13260-5_29",
+      "kind": "specialist_chapter",
+      "shared": true,
+      "material_functions": [
+        "Palgrave coverage judgment",
+        "terminology caution only; early-modern/colonial focus"
+      ]
+    },
+    "NP-BAJRACHARYA-MICHAELS": {
+      "source_id": "NP-BAJRACHARYA-MICHAELS",
+      "title": "Slavery and Unfree Labour in Nepal",
+      "author": "Manik Bajracharya and Axel Michaels",
+      "year": 2022,
+      "url": "https://heiup.uni-heidelberg.de/catalog/view/1003/1711/101349",
+      "kind": "specialist_edition",
+      "shared": false,
+      "material_functions": [
+        "Kathmandu/Nepal temporal evidence",
+        "terminology",
+        "required abstention"
+      ]
+    },
+    "IN-KALINJAR-1203": {
+      "source_id": "IN-KALINJAR-1203",
+      "title": "Kalinjar campaign enslavement evidence",
+      "author": "Hasan Nizami tradition; modern historical synthesis",
+      "year": null,
+      "url": "https://en.wikipedia.org/wiki/Qutb_ud-Din_Aibak",
+      "kind": "bounded_event_synthesis",
+      "shared": false,
+      "material_functions": [
+        "Chandela external captivity event",
+        "network/territorial warning"
+      ]
+    },
+    "MM-WARERU-1892": {
+      "source_id": "MM-WARERU-1892",
+      "title": "King Wagaru's Manu Dhammasattham: text, translation and notes",
+      "author": "Emanuel Forchhammer (trans.)",
+      "year": 1892,
+      "url": "https://www.burmalibrary.org/en/king-wagarus-manu-dhammasattham-text-translation-and-notes",
+      "kind": "primary_legal_text_translation",
+      "shared": false,
+      "material_functions": [
+        "Hanthawaddy/Martaban legal recognition of slavery",
+        "law/practice distinction"
+      ]
+    },
+    "MM-HUXLEY-1997": {
+      "source_id": "MM-HUXLEY-1997",
+      "title": "The Importance of the Dhammathats in Burmese Law and Culture",
+      "author": "Andrew Huxley",
+      "year": 1997,
+      "url": "https://www.burmalibrary.org/en/the-importance-of-the-dhammathats-in-burmese-law-and-culture",
+      "kind": "specialist_article",
+      "shared": false,
+      "material_functions": [
+        "Hanthawaddy legal-text interpretation",
+        "law/practice distinction"
+      ]
+    },
+    "MM-AYECHAN-2006": {
+      "source_id": "MM-AYECHAN-2006",
+      "title": "Burma: Shan Domination in the Ava Period",
+      "author": "Aye Chan",
+      "year": 2006,
+      "url": "https://thesiamsociety.org/wp-content/uploads/2006/03/JSS_094_0d_AyeChan_BurmaShanDominationInAvaPeriod.pdf",
+      "kind": "specialist_article",
+      "shared": false,
+      "material_functions": [
+        "Myinsaing-area slave villages",
+        "late Pagan/Myinsaing transition"
+      ]
+    },
+    "MM-THANTUN-1958": {
+      "source_id": "MM-THANTUN-1958",
+      "title": "Social life in Burma, AD 1044–1287",
+      "author": "Than Tun",
+      "year": 1958,
+      "url": "https://www.burmalibrary.org/en/social-life-in-burma-ad-1044-1287",
+      "kind": "specialist_article",
+      "shared": false,
+      "material_functions": [
+        "kywan category qualification",
+        "late Pagan context"
+      ]
+    }
+  },
+  "batches": [
+    {
+      "batch": "-500:F",
+      "accepted_shared_sources": [
+        {
+          "source_id": "CN-YATES-2001",
+          "title": "Slavery in Early China: A Socio-Cultural Approach",
+          "author": "Robin D. S. Yates",
+          "year": 2001,
+          "url": "https://doi.org/10.1163/156852301100402723",
+          "kind": "specialist_article",
+          "shared": true,
+          "material_functions": [
+            "period/category boundary",
+            "required abstention",
+            "regional slavery context"
+          ]
+        },
+        {
+          "source_id": "CN-SCHEIDEL-2017",
+          "title": "Slavery and Forced Labour in Early China and the Roman World",
+          "author": "Walter Scheidel",
+          "year": 2017,
+          "url": "https://doi.org/10.1017/9781108115865.007",
+          "kind": "specialist_chapter",
+          "shared": true,
+          "material_functions": [
+            "regional slavery/forced-labour context",
+            "comparative category caution"
+          ]
+        }
+      ],
+      "rejected_or_nonmaterial_candidates": [],
+      "material_cells": [
+        "COV3:-500:F:r3",
+        "COV3:-500:F:r4",
+        "COV3:-500:F:r5",
+        "COV3:-500:F:r6"
+      ],
+      "note": "Both accepted sources materially establish the Eastern-Zhou/early-China slavery and status-category context needed to justify target-specific abstention; neither proves territorial practice in any one sampled state."
+    },
+    {
+      "batch": "-500:E",
+      "accepted_shared_sources": [
+        {
+          "source_id": "IN-CHANANA-1960",
+          "title": "Slavery in Ancient India: As Depicted in Pali and Sanskrit Texts",
+          "author": "Dev Raj Chanana",
+          "year": 1960,
+          "url": "https://books.google.com/books/about/Slavery_in_Ancient_India.html?id=CHPaAAAAMAAJ",
+          "kind": "specialist_monograph",
+          "shared": true,
+          "material_functions": [
+            "period slavery context",
+            "oligarchy/monarchy distinction",
+            "Malla direct support",
+            "required abstention"
+          ]
+        },
+        {
+          "source_id": "IN-KALB-2023",
+          "title": "Slavery in South Asia",
+          "author": "Emma Kalb",
+          "year": 2023,
+          "url": "https://doi.org/10.1007/978-3-031-13260-5_29",
+          "kind": "specialist_chapter",
+          "shared": true,
+          "material_functions": [
+            "Palgrave coverage judgment",
+            "terminology caution only; early-modern/colonial focus"
+          ]
+        }
+      ],
+      "rejected_or_nonmaterial_candidates": [],
+      "material_cells": [
+        "COV3:-500:E:r3",
+        "COV3:-500:E:r4",
+        "COV3:-500:E:r5",
+        "COV3:-500:E:r6"
+      ],
+      "note": "Chanana materially informs all four ancient targets and directly discusses Malla; Kalb is temporally adjacent rather than direct but materially fixes the Palgrave coverage judgment and terminology caution."
+    },
+    {
+      "batch": "1300:E",
+      "accepted_shared_sources": [],
+      "rejected_or_nonmaterial_candidates": [
+        {
+          "title": "No single credible shared specialist source safely informed >=3 of the four heterogeneous Kathmandu/Chandela/Hanthawaddy/Myinsaing targets."
+        }
+      ],
+      "material_cells": [],
+      "note": "The coarse sector is historically heterogeneous; no generic regional source is counted merely to inflate reuse."
+    }
+  ]
+}

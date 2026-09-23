@@ -1,0 +1,60 @@
+{
+  "baseline": {
+    "row_count": 12,
+    "cell_source_links": 20,
+    "unique_sources": 20,
+    "source_reuse_factor": 1,
+    "median_sources_per_row": 2
+  },
+  "cov003": {
+    "row_count": 12,
+    "cell_source_links": 22,
+    "unique_sources": 10,
+    "source_reuse_factor": 2.2,
+    "target_specific_followup_searches": 12
+  },
+  "gate": {
+    "reuse_factor_ratio_vs_baseline": 2.2,
+    "criterion_1_reuse_factor_ge_1_35": true,
+    "criterion_2_batches_with_shared_source_informing_3of4": 2,
+    "criterion_2_pass": true,
+    "criterion_3_followups_le_9": false,
+    "strong_batch_economy_gate": "FAIL"
+  },
+  "batch_stats": [
+    {
+      "batch": "-500:F",
+      "shared_sources_informing_3plus": [
+        {
+          "source_id": "CN-YATES-2001",
+          "cells": 4
+        },
+        {
+          "source_id": "CN-SCHEIDEL-2017",
+          "cells": 4
+        }
+      ],
+      "c1_cells": 4
+    },
+    {
+      "batch": "1300:E",
+      "shared_sources_informing_3plus": [],
+      "c1_cells": 4
+    },
+    {
+      "batch": "-500:E",
+      "shared_sources_informing_3plus": [
+        {
+          "source_id": "IN-CHANANA-1960",
+          "cells": 4
+        },
+        {
+          "source_id": "IN-KALB-2023",
+          "cells": 4
+        }
+      ],
+      "c1_cells": 4
+    }
+  ],
+  "note": "All twelve C1 targets received a target-specific follow-up search. This is counted as 12/12 even when no target-specific source was accepted; the <=9/12 preregistered criterion therefore fails."
+}
