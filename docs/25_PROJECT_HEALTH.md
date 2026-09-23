@@ -36,14 +36,14 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 
 | ID | Assumption | Status | Strongest pressure / discriminating evidence |
 | --- | --- | --- | --- |
-| A-001 | Global comparison can be useful without implying equivalence | survives provisionally | M1/M2 preserve separable dimensions; the wide review found parity on bounded fact discovery, so a value-discrimination pilot must now test whether durable cross-place/time comparison adds practical value. |
+| A-001 | Global comparison can be useful without implying equivalence | not demonstrated at the H2 project-value threshold | H2 found one material corpus-method gain but not the required repeatable advantage across two cases. Preserve the comparison discipline; do not scale the Atlas on this assumption. |
 | A-002 | P0–P4 can remain the target universal public summary | rejected | M1 shows the scale mixes evidentiary configuration with different historical structures. Preserve it only as legacy compatibility until a post-M1 interface exists. |
 | A-003 | Cliopatria is the best open global deep-time fallback backbone | survives for raw infrastructure | Exact 13,765-feature ingestion and selected-year behavior survive M2. The resolver remains experimental Atlas truth; specialist overrides and reviewed source→atlas identity remain necessary. |
 | A-004 | PostgreSQL/PostGIS is justified over files/spreadsheets for the working research/integrity system | survives with boundary | Time/spatial joins, provenance, release reconstruction and integrity are demonstrated. This does not prove that the public product needs an always-on database/API platform. |
 | A-005 | MapLibre + current API/GeoJSON delivery is sufficient at current scale | survives / freeze | It is sufficient for the existing non-canonical demonstration. Do not expand serving/render infrastructure until the thin-atlas value hypothesis is demonstrated. |
 | A-006 | The project can responsibly cover the present as well as antiquity | unproven / blocked for sensitive person-level expansion | Living-person/sensitive-data policy remains insufficient; do not let H2 modern expansion outrun this. |
-| A-007 | A serial issue-driven autonomous worker can create value without roadmap drift | survives with constraint / idle | M1/M2 produced real corrections, but no next execution runway is authorized after HC-003. The worker must remain idle/disabled until a discriminating horizon is explicitly approved. |
-| A-008 | The full interactive Atlas platform is the best form for the demonstrated contribution | weakened / unproven | External precedents cover generic DH platform functions; bounded Silla/Hittite discovery reached parity with ordinary research. Corpus + methodology + thin atlas is now the preferred hypothesis. |
+| A-007 | A serial issue-driven autonomous worker can create value without roadmap drift | survives only as a bounded gate mechanism / idle | M1/M2/H2 produced useful corrections, but H2 triggered the stop rule. No autonomous execution runway is justified in preservation state. |
+| A-008 | The full interactive Atlas platform is the best form for the demonstrated contribution | rejected for active expansion | H2 did not show a repeatable material advantage for the corpus/method over a strong baseline, and the thin view did not materially beat the corpus in any case. Preserve existing artifacts; do not expand the platform. |
 
 ## Standing risk register
 
@@ -59,7 +59,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | R-008 | Branch/workflow/experiment accumulation increases cognitive load | medium / active | DVC and self-heal workflows were retired and duplicate main web build removed; ~100 historical remote branches still need admin-capable pruning. |
 | R-009 | Public preview is mistaken for canonical historical release | medium / controlled | explicit non-canonical release identity and immutable v0.6.1 baseline. |
 | R-010 | No repository license creates ambiguity if outside contribution/reuse begins | low / parked | Decide only when external contribution/distribution needs make it material. |
-| R-011 | Research/platform effort grows faster than demonstrated value over the strongest baseline | high / active | HC-003 found parity on bounded fact discovery and strong external platform precedents. No scale/production horizon before a value-discrimination pilot. |
+| R-011 | Research/platform effort grows faster than demonstrated value over the strongest baseline | controlled by stop decision | H2 failed the pre-registered value threshold. D-063 stops active Atlas expansion; reopening requires new external evidence rather than more internal build-out. |
 
 ## Value evidence
 
@@ -78,6 +78,7 @@ Record meaningful outcomes, including no-value results.
 | V-009 | Is a generic historical database/timeline/map/research platform a distinctive project contribution? | contradiction / remove scope | nodegoat and adjacent DH/cultural-heritage systems already provide generic modeling, sources, temporal/spatial views and publication | Do not generalize into a DH platform; narrow to slavery/coercion corpus + method. |
 | V-010 | Does the non-canonical unused preview justify 15-minute monitoring and automatic cloud restart? | no value / retire | Static fallback preserves the demonstration and no user-critical availability need is evidenced | Retire self-heal and reduce liveness to weekly. |
 | V-011 | Has the current full application/platform form earned its maintenance cost? | unproven / simplify | Strong correctness evidence exists, but no external user-task evidence shows the full product materially outperforms a simpler corpus/method + GIS/model workflow | Make corpus + thin atlas the working identity; full platform must re-earn expansion. |
+| V-012 | Does the corpus/method, then a minimal thin view, materially outperform the strongest competent baseline on difficult historical reasoning? | **PARITY / threshold failure** | Three preregistered cases: B materially improved A only for the Mexica category case; repaired C did not materially improve B in any case under the fixed rule | Trigger D-062 kill rule: stop active Atlas expansion; preserve methodology/corpus/audit artifacts. |
 
 ## Health-check history
 
@@ -300,3 +301,49 @@ A richer Atlas product earns no further application/infrastructure horizon unles
 If the corpus/method adds the value but the thin atlas does not, collapse to the methodology/corpus identity and stop application expansion.
 
 If neither adds material value, stop further Atlas expansion and preserve the methodology/corpus/audit artifacts as the final project result.
+
+
+### HC-004 — H2 value-discrimination boundary — 2026-09-23
+
+Decision: **STOP ACTIVE ATLAS EXPANSION; PRESERVE METHOD/CORPUS/AUDIT ARTIFACTS.**
+
+Durable experiment: `experiments/h2-value-discrimination/` / issue #146.  
+Direction decision: D-063.
+
+#### What H2 tested
+
+Three frozen evidence packets were evaluated through:
+1. a deliberately strong conventional baseline;
+2. the Atlas post-M1 corpus/method representation;
+3. the smallest dependency-free thin query/visual artifact.
+
+The setup adversary returned **REVISE** before research and replaced the original Andes case with a map-hostile Mexica category negative control. The result adversary later found and repaired an unfair provenance loss in the thin view before final evaluation.
+
+#### Result
+
+- Mexica: corpus/method materially improved claim-specific provenance/scope recovery; thin view did not add material value.
+- India 1843: the conventional baseline already preserved law/practice/jurisdiction boundaries; thin interaction made the legal/practice discontinuity more salient but did not meet the materiality threshold.
+- Genoese Black Sea: the conventional proposition/evidence/scope table already prevented network→territorial-prevalence inference; thin interaction made the 1475 Caffa boundary more salient but did not meet the materiality threshold.
+
+Project-level requirement was a repeatable material advantage in at least two independent cases.
+
+**Corpus/method over baseline: 1/3 material cases — FAIL.**  
+**Thin view over corpus/method: 0/3 material cases — FAIL.**
+
+#### Interpretation
+
+The methodology is worth preserving. The bespoke Atlas expansion thesis is not supported strongly enough to justify further active development.
+
+This is not a universal claim that maps, relational claims, PostGIS or structured provenance have no value. It is a decision that **this project has not earned another expansion horizon** against its own strongest-baseline rule.
+
+#### State after HC-004
+
+- v0.6.1 remains canonical and immutable;
+- current preview remains frozen/non-canonical;
+- H2 evidence remains experimental/non-canonical;
+- M2 production migration stays parked;
+- bulk research and product/platform growth stay parked;
+- no H3/H4 or AUTO runway exists;
+- repository moves to **IDLE / preservation**.
+
+A future development horizon requires new external evidence or a concrete simpler-baseline failure; internal desire to continue building is not a trigger.

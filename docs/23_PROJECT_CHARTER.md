@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Build a globally scoped, time-aware **historical evidence corpus and comparison method**, with a thin atlas/query surface where it demonstrably helps a reader inspect **what is claimed, where, when, on what evidence, with what uncertainty, and under which analytical layer** for slavery and related coerced-labour or dependency systems.
+Preserve the Historical Slavery Atlas's globally scoped, time-aware **historical evidence method, curated artifacts and audit trail** after H2 failed to demonstrate enough repeatable value to justify continued active Atlas expansion. Future development is trigger-bound rather than assumed.
 
 The project is an evidence-synthesis and data-curation system. It does not claim that one universal category can make all forms of coercion equivalent, and it does not replace specialist historical scholarship.
 
@@ -28,19 +28,20 @@ That contribution is only justified where it materially improves on the stronges
 
 ### Project / product form
 
-After HC-003, the working identity is **auditable evidence corpus + thin atlas**.
+HC-003 narrowed the hypothesis to **auditable evidence corpus + thin atlas**. H2 then tested that hypothesis and did not meet the pre-registered project-value threshold.
 
-The durable core is:
+The durable project result is therefore:
 
-- a curated claim/evidence corpus;
 - domain methodology and adversarial fixtures;
-- reviewed relational research state;
-- historical geography/query logic;
-- reconstructible release artifacts.
+- claim/source/version provenance conventions;
+- preserved corpus/research examples and immutable historical releases;
+- historical geography/query experiments and tested failure cases;
+- reproducible audit/release history;
+- the H2 baseline/corpus/thin-view comparison, including its negative result.
 
-A time-aware map/query/evidence inspector is a **derived inspection surface whose value must be demonstrated**, not the project identity by default.
+The current web/API preview and thin-view experiments are preserved demonstrations, not an active product roadmap.
 
-The current richer web/API preview is preserved as a non-canonical demonstration, not as an automatically expanding product roadmap.
+No active Atlas development horizon exists after HC-004 / D-063.
 
 ### Implementation architecture
 
@@ -144,24 +145,32 @@ M2 (#116) integrated only the semantics that survived M1, resolved Cliopatria ca
 
 Its integrated adversarial gate #122 passed only after corrective cycles. HC-003 then chose **CONTINUE + SIMPLIFY** and removed the full application platform from default status.
 
-### H2 — Value-discrimination pilot (candidate only; not authorized)
+### H2 — Value-discrimination pilot (completed)
 
-The only justified next experiment is a small comparison of three difficult historical questions across:
+H2 / #146 compared three difficult historical questions through:
+1. strongest competent ordinary research workflow;
+2. Atlas corpus/method without bespoke map interaction;
+3. smallest dependency-free thin query/visual artifact.
 
-1. strongest boring/external workflow;
-2. Atlas corpus/method without custom map interaction;
-3. the smallest thin atlas/query view.
+The setup was adversarially revised before research; the result was adversarially challenged and the thin view repaired before final evaluation.
 
-The pilot exists to decide whether the thin atlas adds practical value beyond the corpus/method, and whether either materially outperforms the strongest baseline.
+Result:
+- corpus/method materially improved the baseline in 1/3 cases;
+- thin view materially improved the corpus/method in 0/3 cases;
+- the pre-registered two-case threshold therefore failed.
 
-Completion of HC-003 does **not** authorize this horizon automatically.
+HC-004 / D-063 chose **STOP ACTIVE ATLAS EXPANSION; PRESERVE METHOD/CORPUS/AUDIT ARTIFACTS**.
 
-### H3 — Globally balanced evidence expansion (conditional candidate)
+### H3 — No active research-expansion horizon
 
-Resume broad research growth only if H2 demonstrates that the corpus/method has material comparative value. Continue prioritizing weak and underrepresented regions/periods before dense archive ingestion dominates.
+The former globally balanced evidence-expansion candidate is **not authorized**. More records are not a remedy for a failed value threshold.
 
-### H4 — Public research usefulness / preservation (conditional candidate)
+It may be reconsidered only after genuinely new external evidence identifies a repeated research/user need or simpler-baseline failure.
 
-Only if prior horizons justify it, improve public inspection, distribution, preservation and contribution workflows. A richer application platform must be re-earned rather than assumed.
+### H4 — Preservation, not a product horizon
+
+Preservation is the resting state, not a new feature roadmap.
+
+Maintain reconstructibility, security and integrity of the existing artifacts when needed. Do not create public-product, contribution-platform or infrastructure work merely to keep the project active.
 
 At every horizon boundary, review evidence for **and against** the thesis, compare the strongest baseline, consider whether the artifact can shrink, and explicitly choose **continue / simplify / redirect / stop** before creating the next horizon.

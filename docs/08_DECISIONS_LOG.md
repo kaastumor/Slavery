@@ -646,3 +646,33 @@ Treat as contingent/derived:
 - a bounded value-discrimination pilot is the only currently justified candidate next experiment, but HC-003 does not authorize starting it;
 - if corpus/method value survives but the thin atlas does not, the project should shrink to methodology/corpus;
 - if neither materially outperforms the strongest baseline, further Atlas expansion should stop.
+
+
+## D-063 — H2 value-discrimination does not earn another Atlas expansion horizon
+**Date:** 2026-09-23  
+**Status:** accepted project-direction decision from H2 / issue #146
+
+**Decision:** The H2 value-discrimination pilot did not meet the pre-registered threshold for a repeatable practical advantage over the strongest competent baseline. Active Historical Slavery Atlas expansion therefore stops. Preserve the methodology, adversarial fixtures, provenance conventions, existing corpus/release artifacts, historical-geography/query work, and audit trail; do not create a successor research/product/infrastructure horizon from project momentum alone.
+
+**Evidence:**
+- the setup was adversarially revised before research because the original case set gave the Atlas a home-field advantage;
+- three frozen evidence packets were compared through (A) a strong conventional research artifact, (B) the Atlas corpus/method representation, and (C) a repaired dependency-free thin query/visual artifact;
+- B showed a material advantage over A only in the Mexica category/terminology negative-control case, not in the India 1843 or Genoese Black Sea cases;
+- C made selected temporal/spatial inference errors more salient in the India and Genoese cases, but did not meet the two-probe/two-case material-advantage rule over B;
+- a result adversary repaired C's avoidable provenance loss before the final disposition, and the threshold still failed.
+
+**Interpretation:** This does not erase the value of M1/M2. Their strongest surviving contribution is methodological: claim-specific provenance, uncertainty/abstention, evidence-locus/inference-extent discipline, law/practice/participation separation, adversarial fixtures, and reproducible audit/release practices. The pilot shows that a competent ordinary notes/table/GIS/model workflow can carry most of those distinctions in the tested cases without requiring an actively expanding bespoke Atlas system.
+
+**Consequences:**
+- v0.6.1 remains the immutable canonical historical data release;
+- H2 experiment cases remain non-canonical experiment evidence;
+- no H3/H4 research/product horizon is authorized;
+- M2 production migration remains parked;
+- bulk/global evidence expansion remains parked;
+- richer frontend/platform, serving, search, ontology and infrastructure work remain parked;
+- the current preview remains a frozen non-canonical legacy demonstration;
+- the repository enters an **IDLE / preservation** state rather than a new development phase;
+- future Atlas development requires genuinely new external evidence: e.g. a real repeated user/research task or scale failure that the strongest simpler workflow cannot handle without losing provenance, uncertainty or correct cross-place/time reasoning;
+- such a trigger authorizes a new evaluation, not automatic platform expansion.
+
+**Durable experiment record:** `experiments/h2-value-discrimination/` and issue #146.

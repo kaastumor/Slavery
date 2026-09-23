@@ -7,59 +7,51 @@
 
 This file answers **what is justified to work on next**.
 
-Detailed completed-work history belongs in GitHub issues/PRs, the Decisions Log and durable gate/audit records. It is intentionally not repeated here.
-
 ---
 
-# IDLE — no new execution horizon is authorized
+# IDLE / PRESERVATION — H2 stop rule triggered
 
-HC-003 / issue #123 completed the M2 wide-angle review with:
+H2 / issue #146 completed the value-discrimination pilot authorized after HC-003.
 
-**CONTINUE + SIMPLIFY**
+Final disposition:
 
-Working identity:
+> **STOP ACTIVE ATLAS EXPANSION; PRESERVE METHOD/CORPUS/AUDIT ARTIFACTS**
 
-> **auditable historical slavery/coercion evidence corpus + comparison method + thin atlas/query surface**
+Durable result:
+- `experiments/h2-value-discrimination/09_FINAL_RESULT.md`
+- HC-004 in `docs/25_PROJECT_HEALTH.md`
+- D-063 in `docs/08_DECISIONS_LOG.md`
 
-Durable review:
-- `docs/34_WIDE_ANGLE_PROJECT_REVIEW.md`
+The pre-registered project-value threshold was not met:
+- Atlas corpus/method materially beat the strongest baseline in **1/3** cases;
+- the repaired thin query/visual arm materially beat the corpus/method in **0/3** cases.
 
-Direction decision:
-- D-062 in `docs/08_DECISIONS_LOG.md`
+Do **not** manufacture a successor horizon to escape the result.
 
-Completed horizons:
-- M1 methodology hardening — #100 / `docs/29_M1_INTEGRATED_ADVERSARIAL_GATE.md`
-- M2 semantic/geography integration — #116 / `docs/33_M2_INTEGRATED_ADVERSARIAL_GATE.md`
+## What is justified now
 
-The execution queue is deliberately idle. Do **not** manufacture an AUTO runway merely because the previous gate finished.
+Routine preservation and bounded maintenance only:
+- keep canonical/release artifacts reconstructible;
+- repair security, link/source rot, CI breakage or repository decay when it threatens preserved artifacts;
+- handle parked operational debt only when its existing trigger becomes real;
+- retain the H2 negative result and M1/M2 adversarial evidence.
 
-## Candidate next experiment — NOT AUTHORIZED
+A new Atlas-development experiment requires a **new external trigger** showing a concrete failure of the strongest simpler workflow. Internal desire to add more data/features is not such a trigger.
 
-**Value-discrimination pilot**
+## Explicitly not authorized
 
-Question:
+- H3 broad/global research expansion;
+- M2 production schema migration;
+- bulk Cliopatria source-row → atlas identity publication;
+- another frontend/map redesign;
+- PMTiles/vector-tile expansion;
+- search/vector/RAG/graph/ontology infrastructure;
+- new research platform/gazetteer/reconciliation services;
+- contributor/peer-review platform;
+- production-like monitoring/self-heal;
+- autonomous build/research runway.
 
-> Does the corpus/method, and then the smallest thin atlas/query view, materially improve difficult cross-place/time historical reasoning over the strongest boring/external workflow?
-
-Candidate design:
-- three independent difficult historical questions from different regions/periods;
-- at least one temporal/spatial ambiguity case;
-- at least one conflicting/qualified-evidence case;
-- compare:
-  1. specialist literature + structured notes/table + QGIS/nodegoat/general model as appropriate;
-  2. Atlas corpus/method without bespoke map interaction;
-  3. smallest thin atlas/query/evidence view;
-- record effort, provenance recovery, uncertainty/abstention preservation, cross-place/time comparison quality, overclaim and parity/no-value.
-
-Starting this pilot requires an explicit new authorization/horizon. HC-003 itself does not start it.
-
-## Kill rule
-
-A richer Atlas product earns no further application/infrastructure horizon unless at least two independent tasks from different historical contexts demonstrate a repeatable practical advantage over the strongest baseline in inspectable cross-place/time reasoning, provenance recovery or uncertainty preservation without increased overclaim.
-
-If the corpus/method provides the advantage but the thin atlas does not, shrink to the methodology/corpus identity and stop application expansion.
-
-If neither materially outperforms the strongest baseline, stop further Atlas expansion and preserve the methodology/corpus/audit artifacts as the result.
+If no new external trigger exists, **idle is the correct state**.
 
 ---
 
