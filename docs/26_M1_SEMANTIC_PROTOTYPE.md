@@ -1,69 +1,122 @@
 # M1 semantic split prototype
 
 **Gate:** #100  
-**Atomic task:** #102  
+**Original task:** #102  
+**Corrective task:** #112  
 **Status:** experimental; not canonical methodology or schema  
-**Baseline:** v0.6.1 and the current P0–P4 representation remain unchanged
+**Prototype:** v2 after integrated adversarial correction  
+**Baseline:** v0.6.1 and the current public preview remain unchanged
 
 ## Question
 
-What is the smallest model that avoids mixing evidentiary configuration, historical characterization, research workflow, epistemic outcome, event/process occurrence, and simultaneous practice facets?
+What is the smallest model that avoids mixing evidence configuration, historical occurrence/structure, workflow state, epistemic outcome, event/process occurrence, and simultaneous practice facets?
 
-## Smallest proposal
+## Correction from v1
 
-Do not replace the universal `CLAIM`, provenance model, territorial/external/legal layer separation, or current release. Add semantic dimensions *beside* the legacy fields in a future-compatible representation:
+The first prototype still overloaded two fields:
 
-1. **Evidence basis** — how the evidence package is configured, e.g. `isolated_attestation`, `recurrent_attestation`, `specialist_synthesis`, `mixed`.
-2. **Historical characterization** — what the reviewed synthesis says about historical structure, e.g. `unassessed`, `bounded_occurrence`, `recurrent`, `institutional`, `widespread_structurally_major`.
-3. **Research stage** — project workflow only: `not_researched`, `source_identified`, `under_review`, `review_complete`.
-4. **Classification outcome** — epistemic result only: `unassessed`, `classified`, `disputed`, `inconclusive`.
-5. **Assertion form** — whether the historical predicate is a `practice_or_status` or a bounded `event_or_process`. Event/process claims do not by themselves imply enduring territorial practice.
-6. **Practice facets** — zero or more typed concept assertions, each carrying a dimension (`status`, `function`, `property_legal`, `transmission`, `process`) and a concept code. A headline legacy practice type may remain for compatibility but is not the sole analytical vocabulary.
+- `evidence_basis` mixed attestation pattern with interpretive basis;
+- `historical_characterization` mixed occurrence, institutionalization, prevalence, and structural importance.
 
-This is deliberately additive. It can be represented in JSON/relational child rows without changing existing identifiers or deleting P0–P4.
+Those combinations fail because their values can be simultaneously true.
 
-## Compatibility with P0–P4
+The v2 prototype therefore keeps only orthogonal dimensions.
 
-P0–P4 remains a **legacy summary**, not a value to mechanically derive from the prototype dimensions.
+## Experimental dimensions
 
-- P1 often corresponds to an isolated evidence basis plus a bounded historical characterization, but no automatic mapping is valid.
-- P2 often corresponds to recurrent evidence and/or recurrent characterization, but evidence count alone remains insufficient.
-- P3/P4 chiefly express institutional/structural characterization and still require specialist synthesis.
-- P0 remains an explicit legacy reviewed no-usable-classification state; it is not absence and must not be inferred from `inconclusive`.
-- `NULL` remains no legacy P-level assessment.
+### Evidence package
 
-Migration, if later justified, should dual-read/dual-write explicit reviewed mappings and preserve the original P-level. No backfill may infer new dimensions from a P-level alone.
+- **attestation_pattern** — `unassessed`, `single_bounded_attestation`, `recurrent_attestation`, `multiple_independent_attestations`, `mixed_or_unclear`
+- **interpretive_basis** — `unassessed`, `primary_or_source_native`, `specialist_synthesis`, `mixed_primary_and_specialist`
 
-## Adversary and alternatives
+A specialist synthesis can therefore coexist with any attestation pattern. The atlas does not infer independence merely from source count.
 
-| Attack / simpler alternative | Disposition | Evidence / consequence |
-| --- | --- | --- |
-| Keep P0–P4 and improve legend wording | **reject** | M1-A01 shows one ordered field mixes evidence configuration with historical structure; sorting/filtering remains semantically ambiguous. |
-| Keep one `coverage_state` and treat disputed/inconclusive as terminal workflow stages | **reject** | M1-A02 requires `review_complete + disputed` and `review_complete + inconclusive` to coexist. |
-| Put secondary practice characteristics in notes | **reject** | Hittite status, property/pricing and function become non-queryable and force a false single-category choice (M1-A06). |
-| Create a large new subtype/table hierarchy for every concept now | **park** | The fixture only demonstrates need for separable facets, not a mature exhaustive taxonomy or SQL migration. |
-| Split evidence basis from historical characterization | **revise** | Required by M1-A01; the prototype makes both independently testable and leaves P-level untouched. |
-| Split research stage from classification outcome | **revise** | Required by M1-A02; orthogonal fields preserve simultaneous truths. |
-| Add assertion form for bounded event/process versus practice/status | **revise** | Baekje 369 demonstrates that a capture/distribution event is a different predicate from enduring territorial practice (M1-A05). |
-| Preserve claim-specific evidence directions | **survives** | Mauryan counterevidence already works; no parallel evidence architecture is needed. |
-| Preserve unresolved geometry behavior | **survives** | Late Classic Maya already avoids invented territorial certainty; #102 does not alter it. |
+### Historical characterization
 
-## Real-case discriminating examples
+- **occurrence_pattern** — `unassessed`, `bounded_occurrence`, `recurrent`, `continuous_period`
+- **institutionalization** — `unassessed`, `institutional_features_supported`
+- **prevalence_scope** — `unassessed`, `localized`, `broader`, `widespread`
+- **structural_significance** — `unassessed`, `structurally_major_supported`
+
+These are independent. A practice can be recurrent and institutional while prevalence remains unassessed; institutionalization does not mechanically imply widespread prevalence or structural importance.
+
+The values are intentionally sparse. M1 establishes the need for independent dimensions, not a mature exhaustive ontology.
+
+### Workflow and epistemic result
+
+- **research_stage** — `not_researched`, `source_identified`, `under_review`, `review_complete`
+- **classification_outcome** — `unassessed`, `classified`, `disputed`, `inconclusive`
+
+These remain separate because review completion and an inconclusive/disputed result can coexist.
+
+### Assertion and facets
+
+- **assertion_form** — `practice_or_status` or `event_or_process`
+- **practice facets** — zero or more typed concept assertions across `status`, `function`, `property_legal`, `transmission`, and `process`
+
+This preserves the successful #102 distinction between a bounded event such as Baekje 369 and an enduring practice/status claim, while allowing multiple characteristics such as the Hittite status/property/function evidence to coexist.
+
+## Legacy P0–P4 boundary
+
+P0–P4 is retained only as **legacy compatibility data** for existing releases and the current preview.
+
+It is not the target universal ordinal for new comparative semantics.
+
+Rules:
+
+- preserve existing P-level values;
+- never derive the new dimensions from P-level alone;
+- never derive P0 from `inconclusive`;
+- a legacy P0 is valid only when that P0 assessment itself was explicitly reviewed;
+- do not automatically derive a new P-level from the new dimensions;
+- future serving/UI integration must consume the new semantics before post-M1 data relies on them;
+- M1 does not mutate the public preview or canonical v0.6.1.
+
+The current public map can therefore remain reproducible as a legacy preview without defining the future ontology.
+
+## Real-case checks
 
 ### Baekje 369
 
-Prototype representation: `assertion_form=event_or_process`, evidence basis `isolated_attestation`, historical characterization `bounded_occurrence`, with process facets such as captive-taking/enslavement/distribution only where the reviewed evidence supports them. The legacy one-year P1 can remain unchanged. A query for enduring territorial practice can now exclude a pure event without reading notes.
+- attestation pattern: single bounded attestation
+- interpretive basis: mixed primary + specialist
+- occurrence pattern: bounded occurrence
+- assertion form: event/process
+- institutionalization, prevalence, structural significance: unassessed
+- legacy P1 preserved
+
+A large captive count does not become prevalence.
 
 ### Hittite central Anatolia
 
-Prototype representation can retain a headline slavery/enslavement label while separately recording supported facets for status/category, property/legal pricing, economic function such as herding, and status flexibility/transmission where evidenced. These are simultaneous characteristics rather than mutually exclusive replacements.
+- attestation pattern: recurrent attestation
+- interpretive basis: mixed primary + specialist
+- occurrence pattern: recurrent
+- institutional features: supported
+- prevalence: unassessed
+- structural significance: unassessed
+- legacy P2 preserved
 
-### Reviewed but disputed/inconclusive cases
+This is the discriminating example: recurrent + institutional are simultaneous truths, so they cannot be values in one enum.
 
-`research_stage=review_complete` can coexist with `classification_outcome=disputed` or `inconclusive`. This removes the workflow/outcome collision without changing provenance or publication state.
+### Reviewed inconclusive
+
+`research_stage=review_complete` + `classification_outcome=inconclusive` does not create P0.
+
+A separate synthetic fixture demonstrates that a legacy P0 may coexist only when it is explicitly reviewed as such.
+
+## Adversarial alternatives
+
+| Alternative | Disposition | Result |
+| --- | --- | --- |
+| Keep the v1 fields and only rename them | **reject** | Renaming cannot represent recurrent + institutional simultaneously or separate specialist synthesis from attestation pattern. |
+| Build a large final ontology now | **park** | M1 proves orthogonality needs, not exhaustive controlled vocabulary content. |
+| Replace the universal claim/provenance model | **reject** | Existing claim/evidence/release architecture survives. |
+| Keep P0–P4 as the future universal summary | **reject** | Integrated gate showed that ordinal map semantics overstate comparability. |
+| Preserve P0–P4 only for legacy compatibility | **survives** | Maintains release reproducibility without forcing future semantics into the old scale. |
 
 ## Decision
 
-**Revise experimentally.** The smallest additive six-dimension prototype discriminates the #101 failures without a schema migration or canonical-methodology change. The fixture/tests define invariants rather than claiming a final vocabulary. Exhaustive taxonomy design and SQL implementation are intentionally parked until the integrated M1 gate determines whether this model survives alongside #103 and #104.
+**Revise → survives at prototype level.**
 
-No historical case is reinterpreted or republished by this prototype. Canonical release v0.6.1 and the public preview remain unchanged.
+The v2 dimensions remove the integrated-gate overload without schema migration or new infrastructure. They remain experimental until #105 reruns the integrated attack and #106 completes the Project Health Check.

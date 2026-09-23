@@ -1,14 +1,20 @@
 {
-  "prototype_version": "m1-temporal-spatial-v1",
+  "prototype_version": "m1-temporal-spatial-v2",
   "status": "experimental_not_canonical",
   "legacy_release": "v0.6.1",
-  "time_modes": [
+  "applicability_modes": [
     "continuous_interval",
     "bounded_occurrence",
     "alternative_dates",
     "terminus_after",
     "terminus_before",
-    "approximate_period",
+    "unknown"
+  ],
+  "temporal_precision_values": [
+    "exact",
+    "approximate",
+    "broad_range",
+    "disputed_alternatives",
     "unknown"
   ],
   "generalization_bases": [
@@ -25,9 +31,10 @@
       "kind": "real",
       "source_case": "data/research/ancient_expansion_02/04_silla_village_register_slavery.json",
       "query_window": [695, 819],
-      "time_mode": "alternative_dates",
-      "asserted_intervals": [[695, 695], [815, 815], [819, 819]],
-      "positive_years": [695, 815, 819],
+      "applicability_mode": "alternative_dates",
+      "temporal_precision": "disputed_alternatives",
+      "asserted_intervals": [[695, 695], [755, 755], [815, 815], [818, 819]],
+      "positive_years": [695, 755, 815, 818, 819],
       "negative_probe_years": [700, 750, 800],
       "evidence_locus": "four uncertain village communities",
       "inference_extent": null,
@@ -38,18 +45,44 @@
       "id": "hittite-period-synthesis",
       "kind": "real",
       "source_case": "data/research/ancient_expansion_01/03_hittite_slavery.json",
-      "time_mode": "approximate_period",
+      "query_window": [-1399, -1199],
+      "applicability_mode": "continuous_interval",
+      "temporal_precision": "broad_range",
+      "asserted_intervals": [[-1399, -1199]],
+      "positive_probe_years": [-1399, -1300, -1199],
+      "negative_probe_years": [-1400, -1198],
       "bce_signed_years_required": true,
-      "rule": "period-level applicability requires reviewed synthesis; a broad uncertainty envelope alone is insufficient"
+      "rule": "continuity is asserted by reviewed period-level synthesis; broad precision alone does not create continuity"
     },
     {
-      "id": "synthetic-continuous",
+      "id": "synthetic-continuous-exact",
       "kind": "synthetic",
       "query_window": [-500, -450],
-      "time_mode": "continuous_interval",
+      "applicability_mode": "continuous_interval",
+      "temporal_precision": "exact",
       "asserted_intervals": [[-500, -450]],
       "positive_probe_years": [-500, -475, -450],
       "negative_probe_years": [-501, -449]
+    },
+    {
+      "id": "synthetic-continuous-approximate",
+      "kind": "synthetic",
+      "query_window": [-500, -450],
+      "applicability_mode": "continuous_interval",
+      "temporal_precision": "approximate",
+      "asserted_intervals": [[-500, -450]],
+      "positive_probe_years": [-500, -475, -450],
+      "negative_probe_years": [-501, -449]
+    },
+    {
+      "id": "synthetic-approximate-bounded-occurrence",
+      "kind": "synthetic",
+      "query_window": [-500, -450],
+      "applicability_mode": "bounded_occurrence",
+      "temporal_precision": "approximate",
+      "asserted_intervals": [[-476, -474]],
+      "positive_probe_years": [-476, -475, -474],
+      "negative_probe_years": [-500, -490, -460, -450]
     },
     {
       "id": "synthetic-local-to-polity-rejected",
@@ -73,6 +106,8 @@
   ],
   "invariants": [
     "query_window_is_not_positive_validity",
+    "applicability_mode_is_independent_from_temporal_precision",
+    "approximation_alone_does_not_assert_continuity",
     "alternative_dates_do_not_fill_intermediate_years",
     "continuous_interval_uses_asserted_interval",
     "open_terminus_does_not_imply_indefinite_continuity",
