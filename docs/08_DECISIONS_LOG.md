@@ -936,3 +936,63 @@ Even STRONG SURVIVE means only that the architecture deserves further bounded va
 - future testing requires explicit sponsor authorization and should address non-polity frames, coherent batching, independent review and a real positive update event.
 
 **Durable result:** `experiments/coverage-tiered/13_FINAL_RESULT.md`.
+
+
+## D-071 — Authorize COV-004 as the final architecture-falsification gate
+**Date:** 2026-09-23  
+**Status:** accepted bounded experiment authorization
+
+**Decision:** Authorize COV-004 / issue #157 to attack the COV-003 tiered method before any real systematic coverage programme is started.
+
+The sponsor explicitly required:
+- adversarial setup review before historical research;
+- do not abandon the Atlas concept prematurely.
+
+COV-004 therefore tests four independent arms:
+- C1/C2 escalation calibration;
+- non-polity target frames;
+- 2015→2016–2026 publication-time updates;
+- Atlas re-entry against a competent ordinary map/register baseline.
+
+No arm may compensate for failure of another, and no result automatically authorizes comprehensive ingestion or a production Atlas.
+
+**Durable setup:** `experiments/falsification-atlas/00_PROTOCOL_PREREGISTERED.md` and `01_SETUP_ADVERSARY.md`.
+
+
+## D-072 — COV-004 preserves the tiered method and a boring Atlas surface, not bespoke Atlas machinery
+**Date:** 2026-09-23  
+**Status:** accepted direction decision from COV-004 / issue #157
+
+**Decision:** Accept the formal COV-004 result **METHOD SURVIVE**.
+
+Preserve:
+1. C0 target/research-state coverage;
+2. C1 compact bounded research;
+3. selective C2 escalation;
+4. source-quality failure as an explicit escalation/review trigger;
+5. source-to-claim dependency tracking;
+6. immutable/as-of releases with explicit review/update state;
+7. ordinary map/GIS navigation over the evidence register.
+
+Do not reopen bespoke Atlas application/platform work.
+
+**Evidence:**
+- Arm A: 1/6 material false negatives among non-escalated C1 rows; 2/3 prior escalations remain useful; source-quality trigger added;
+- Arm B: all 12 non-polity targets represented without false territorialization and all 8 researched cases fit the claim model;
+- Arm C: 3/6 real post-2015 evidence events survived the immutable-release/update model;
+- Arm D: bespoke Atlas semantics produced 0/4 material gains over a strong conventional map + register with the same data/geometry; D5 reached parity and no misleading Atlas inference was introduced.
+
+**Interpretation:** The map is still useful, but as a navigation/inspection surface. The strongest boring baseline is itself a viable thin Historical Slavery Atlas. Custom interaction/serving infrastructure is not the research contribution.
+
+**Consequences:**
+- v0.6.1 remains canonical and immutable;
+- COV-004 remains experimental/non-canonical;
+- no global C1/C2 completion is authorized;
+- no automated mass research;
+- no production DB/API/frontend migration;
+- non-polity frame classes remain experimental rather than canonical ontology;
+- future public C1 requires stronger source-quality state and independent/multi-reviewer calibration;
+- no COV-005 architecture experiment is created automatically;
+- the next substantive horizon, if explicitly authorized, should be an actual lean research/release programme rather than another architecture prototype.
+
+**Durable result:** `experiments/falsification-atlas/27_FINAL_RESULT.md`.
