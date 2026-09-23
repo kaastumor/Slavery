@@ -7,7 +7,9 @@ def fixture_bytes():
       {'type':'Feature','properties':{'Name':'B','Type':'RELATION','FromYear':-2,'ToYear':3},'geometry':{'type':'MultiPolygon','coordinates':[]}},
       {'type':'Feature','properties':{'Name':'Composite','Type':'POLITY, RELATION','FromYear':4,'ToYear':2},'geometry':None}]}
     buf=io.BytesIO()
-    with zipfile.ZipFile(buf,'w') as z: z.writestr('cliopatria.geojson',json.dumps(obj))
+    with zipfile.ZipFile(buf,'w') as z:
+        z.writestr('cliopatria.geojson',json.dumps(obj))
+        z.writestr('__MACOSX/._cliopatria.geojson','finder metadata')
     return buf.getvalue()
 
 def test_profile_preserves_source_semantics():
