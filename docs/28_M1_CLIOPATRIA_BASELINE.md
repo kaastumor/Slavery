@@ -47,5 +47,26 @@ python tools/profile_cliopatria.py --output cliopatria-profile.json
 
 The generated profile is analytical output, not a source asset to commit. The 44 MB upstream zip is also not vendored. CI/unit fixtures are synthetic and public-safe.
 
+
+## Observed whole-corpus profile
+
+The exact pinned blob was executed in GitHub Actions on 2026-09-23 (probe run `35855860852`) after fixing two real-corpus defects found by the first probe: macOS archive metadata was being mistaken for a second data member, and property-presence accounting was accidentally accumulating values rather than counting keys.
+
+The accepted deterministic output is checked in at `validation/cliopatria_v0.2.0_profile.json`:
+
+- 13,765 features;
+- 1,633 distinct `Name` values;
+- 13,380 `POLITY` rows;
+- 385 `RELATION` rows;
+- 6,531 Polygon and 7,234 MultiPolygon geometries;
+- source-native year extent -3400 through 2024;
+- 1,106 rows with at least one negative year;
+- 39 rows spanning negative to positive years;
+- 6 rows with an explicit zero endpoint;
+- 0 rows where `FromYear > ToYear`;
+- every row contains the ten profiled property keys.
+
+The zero-boundary evidence is deliberately **not normalized** in M1. Upstream documentation says negative=BCE and positive=CE, but the observed corpus contains explicit zero endpoints; the atlas therefore needs a separate tested calendar-mapping decision before selected-year integration.
+
 ## Decision
 **Experiment.** Pin and profile the complete corpus as a raw fallback candidate, while preserving source-native semantics and the existing specialist-override hierarchy. Do not promote or normalize it during M1. Canonical release v0.6.1 and the public preview remain unchanged.
