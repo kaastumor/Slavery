@@ -48,7 +48,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | A-010 | The value of the flat coverage corpus compounds faster than review/update burden as it scales | current row-by-row workflow not demonstrated; broader systematic-coverage economics remain open | COV-002 found persistent reuse and strong static compression, but its maintenance gate does not discriminate the economics of tiered/versioned/batch-curated coverage. ADV-001 limits the stop to the tested workflow. |
 | A-011 | Tiering breadth, compact evidence and selective depth can make systematic coverage methodologically viable without default deep research for every target | survives with stronger QC | COV-004: escalation replay passed at 1/6 false negatives only after adding source-quality failure as a C2/review trigger; non-polity challenge and real update mechanics also survived. |
 | A-012 | A bespoke Atlas evidence inspector adds material value beyond a competent conventional map + tiered register | rejected at current scale | COV-004 Arm D: 0/4 material gains with identical frozen evidence/geometry; no misleading Atlas inferences. Ordinary map/register presentation remains valid. |
-| A-013 | A real bounded release programme can harden the surviving method better than further miniature architecture experiments | survives first live tranche with correction / R1 active | R1.4 tranche 01: 10/10 replayed; four material overreach risks caught and corrected; 2/2 earned C2 packets completed. | Continue only through deliberate tranche gates; do not weaken replay floor or generalize stress-set error rates. |
+| A-013 | A real bounded release programme can harden the surviving method better than further miniature architecture experiments | survives two live tranches / R1 midpoint active | Tranche 01 required four semantic corrections; ordinary tranche 02 required none after fresh synthesis but still exposed two dependency/provenance normalizations. All 16 researched C1 rows were replayed and 3 earned C2 packets completed. | Run the mandatory midpoint stop review before any tranche 03; 100% C1 replay remains active under Core v1 §19. |
 
 ## Standing risk register
 
@@ -775,3 +775,70 @@ No new schema or ontology is justified by this tranche.
 #163 ends at tranche 01.
 
 The next tranche is not automatically authorized. R1/#159 remains active, but continuation should deliberately choose a more ordinary operational tranche if it proceeds, so the project next tests repeatability/cost rather than stacking another stress sample.
+
+
+### HC-011 — R1.5 tranche 02 operational checkpoint — 2026-09-24
+
+Decision: **ORDINARY TRANCHE SURVIVES; 100% REPLAY REMAINS ACTIVE; ENTER MIDPOINT STOP REVIEW.**
+
+Durable tranche:
+- `programmes/r1/c1_tranche_02_final.json`;
+- `programmes/r1/15_C1_TRANCHE_02_ADVERSARIAL_REPLAY.md`;
+- issue #166.
+
+#### Why this is useful evidence
+
+Tranche 02 deliberately preferred ordinary `validated` frames rather than another stress-heavy cohort.
+
+Six frozen rows were researched and all six were adversarially replayed:
+- Kingdom of Kush 500 BCE;
+- Cai 500 BCE;
+- Lazica 500 CE;
+- Nālandā 700 CE;
+- Mali 1300 CE;
+- United States 1800 CE.
+
+Final outcomes:
+- 1 classified/bounded-supported;
+- 5 inconclusive for the exact frozen target/year/frame question;
+- 1 C2 packet completed;
+- 0 target substitutions.
+
+#### Replay result
+
+Unlike tranche 01, no row required a post-synthesis semantic release correction.
+
+Replay still found two provenance/dependency issues worth correcting:
+- Lazica — Procopius and modern discussion of Procopius cannot be counted as independent sixth-century attestations;
+- Nālandā — modern target discussions materially reuse the same Yijing-centered seventh-century evidentiary base for this question.
+
+The tranche therefore supports operational repeatability without showing that replay has become redundant.
+
+#### C2
+
+Mali 1300 earned C2 because Sākūra's status combines Arabic `mawlā`, later Mande servile terminology, reconstructed chronology and overlapping source traditions.
+
+C2 resolves to inconclusive:
+- preserve a possible servile/client origin as a historical status question;
+- do not publish an unqualified “former slave” fact;
+- do not infer a Mali-wide territorial-practice state;
+- do not project better-attested later-fourteenth-century slavery backward to 1300.
+
+#### Review setting
+
+Core Contract v1 §19 is applied at 100% C1 replay for remaining R1 candidate work because tranche 01 exceeded the contract's 10% material-error trigger.
+
+This is not a new ontology or source rule.
+
+#### What cannot be inferred
+
+- 1/6 classified is not prevalence;
+- 5/6 inconclusive is not absence;
+- 0 semantic corrections in six ordinary rows does not establish a general error rate;
+- source-recovery burden and language/access limits still vary sharply by historical context.
+
+#### Boundary
+
+Combined R1 subject research now covers 16 C1 rows across two bounded tranches.
+
+R1 therefore enters its mandatory midpoint stop review before any tranche 03. The review must decide whether to stop smaller, continue one bounded tranche, or change course. No new schema, ontology, platform feature or production migration is justified by tranche 02.
