@@ -67,7 +67,7 @@ Current data history:
 
 Current architecture state:
 
-- `schema_draft.yaml` draft-0.10 — target relational model for migration planning
+- `schema_draft.yaml` draft-0.11 — current target contract; M2 semantics/geography have survived disposable relational prototypes but are not yet production-migrated
 - canonical data remains v0.6.1 until migration reconciliation/QC succeeds
 
 ## Canonical-data rule
