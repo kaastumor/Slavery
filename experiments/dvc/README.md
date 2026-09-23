@@ -1,25 +1,34 @@
 # DVC bounded evaluation
 
-This experiment tests DVC as an **optional research-artifact convenience layer**.
+**Status: completed experiment; PARKED / not adopted.**
 
-It does not use canonical atlas data, write to PostgreSQL, or select a cloud provider.
+This experiment tested DVC as an optional research-artifact convenience layer. It used no canonical atlas data, did not write PostgreSQL and did not select a cloud provider.
 
-## Test
+## Executed result
 
-The dedicated GitHub Actions workflow:
+GitHub Actions run `tooling-dvc-evaluation` passed on 2026-09-19 using DVC 3.66.0.
 
-1. creates a synthetic deterministic binary artifact;
-2. initializes an isolated temporary Git/DVC repository;
-3. configures an isolated filesystem directory as a fake DVC remote;
-4. records the original SHA-256;
-5. runs `dvc add` and `dvc push`;
-6. removes the workspace file and local DVC cache;
-7. runs `dvc pull`;
-8. verifies the restored bytes with SHA-256.
+A deterministic 4 MiB synthetic file survived:
 
-This validates DVC's basic data-version workflow without changing the atlas repo into a DVC project.
+`add → push → local file deletion → local cache deletion → pull`
 
-## What this does not test
+with the exact same SHA-256.
+
+This proves basic technical viability only.
+
+## Project-value result
+
+The experiment did **not** demonstrate a current atlas problem that DVC solves materially better than the existing checksum manifest + immutable artifact/release approach.
+
+Current tooling triggers explicitly say that repository/Actions size, retention and reproducibility have not crossed the adoption threshold.
+
+Disposition: **PARK**.
+
+DVC is therefore not a required dependency, not part of the canonical release mechanism and not a persistent CI responsibility.
+
+The dedicated evaluation workflow was retired after the experiment. If the large-artifact trigger in `docs/22_TOOLING_EVALUATION_TRIGGERS.md` fires later, reopen the comparison as a new bounded experiment against the then-current simple baseline rather than silently reviving this workflow.
+
+## What the experiment did not test
 
 - S3/Azure/GCS authentication;
 - cloud version-aware remotes;
@@ -28,22 +37,4 @@ This validates DVC's basic data-version workflow without changing the atlas repo
 - DOI/repository deposit;
 - database release membership.
 
-## Decision criterion
-
-DVC should be adopted only if its researcher convenience materially outweighs:
-
-- another installed tool/dependency;
-- another metadata representation;
-- remote configuration/credentials;
-- the need to keep DVC metadata consistent with atlas release manifests.
-
-Even if adopted, the atlas release manifest remains the preservation/canonical identity layer.
-
-
-## Executed result
-
-GitHub Actions run `tooling-dvc-evaluation` passed on 2026-09-19 using DVC 3.66.0.
-
-A 4 MiB synthetic file survived add → push → local deletion/cache deletion → pull with the exact same SHA-256.
-
-This establishes DVC as technically viable for working-artifact synchronization. It does not by itself justify making DVC a mandatory atlas dependency.
+Those omissions are acceptable because adoption is not currently justified.
