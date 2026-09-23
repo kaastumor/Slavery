@@ -1,0 +1,1389 @@
+{
+  "programme": "R1",
+  "stage": "R1.6",
+  "issue": 172,
+  "source_relation_count": 45,
+  "unique_source_version_count": 45,
+  "independence_group_count": 37,
+  "rule": "Publication count is not independent support. independence_group is the release-level grouping key; source corrections propagate to every dependent target listed here.",
+  "source_versions": [
+    {
+      "source_version_ref": "Chin2005-SilkRoad-3-2",
+      "title": "Monuments in the Desert: A Note on Economic and Social Roots of the Development of Buddhism along the Silk Road",
+      "author": "Connie Chin",
+      "year": 2005,
+      "url": "https://edspace.american.edu/silkroadjournal/wp-content/uploads/sites/984/2017/09/srjournal_v3n2-December-2005.pdf",
+      "locators": [
+        "pp.9–11"
+      ],
+      "independence_groups": [
+        "chin-medieval-buddhist-economy"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:N:shaolin_1000",
+          "target_label": "Shaolin Monastery",
+          "role": "secondary_context",
+          "direction": "context",
+          "decisive": false,
+          "claim_fitness": "usable_with_limitation"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "DHARMA_INStfaSIIv04p0i0144@2a5b199",
+      "title": "Cēlam, Cukavaṉēśvara, pillar inscription, time of Sundara Pāṇḍya, year 26",
+      "author": "South Indian Inscriptions; digital edition Emmanuel Francis",
+      "year": 2026,
+      "url": "https://dharmalekha.info/texts/INStfaSIIv04p0i0144",
+      "locators": [
+        "DHARMA_INStfaSIIv04p0i0144; digital edition version 2a5b199"
+      ],
+      "independence_groups": [
+        "asi-sii-pandya-inscriptions"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:COV2:1300:E",
+          "target_label": "Pandya Empire",
+          "role": "primary_epigraphic_target_context",
+          "direction": "context",
+          "decisive": false,
+          "claim_fitness": "usable_with_limitation"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1002/ajpa.22282",
+      "title": "Odontometric determination of sex at Mound 72, Cahokia",
+      "author": "Andrew R. Thompson",
+      "year": 2013,
+      "url": "https://doi.org/10.1002/ajpa.22282",
+      "locators": [
+        "Am J Phys Anthropol 151(3):408–419"
+      ],
+      "independence_groups": [
+        "thompson-odontometric"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:cahokia_1200",
+          "target_label": "Cahokia",
+          "role": "specialist_bioarchaeology",
+          "direction": "qualifies_challenges",
+          "decisive": false,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1002/ajpa.22791",
+      "title": "New dental and isotope evidence of biological distance and place of origin for mass burial groups at Cahokia's Mound 72",
+      "author": "Andrew R. Thompson; Kristin M. Hedman; Philip A. Slater",
+      "year": 2015,
+      "url": "https://doi.org/10.1002/ajpa.22791",
+      "locators": [
+        "abstract/results"
+      ],
+      "independence_groups": [
+        "cahokia-mound72-isotopes"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:cahokia_1200",
+          "target_label": "Cahokia",
+          "role": "specialist_bioarchaeology",
+          "direction": "challenges_and_qualifies",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1017/9781139024723.012",
+      "title": "Slavery in Medieval Korea",
+      "author": "Seung B. Kye",
+      "year": 2021,
+      "url": "https://doi.org/10.1017/9781139024723.012",
+      "locators": [
+        "Cambridge World History of Slavery vol.2, chapter 12, pp.295–312"
+      ],
+      "independence_groups": [
+        "kye-medieval-korea-slavery"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:500:F:r1",
+          "target_label": "Tamna",
+          "role": "specialist_regional_slavery_synthesis",
+          "direction": "context_and_qualifies",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1017/9781139024723.013",
+      "title": "Slavery and Dependency in Medieval South India",
+      "author": "Leslie C. Orr",
+      "year": 2021,
+      "url": "https://doi.org/10.1017/9781139024723.013",
+      "locators": [
+        "Cambridge World History of Slavery vol.2, ch.13, pp.313–334; esp. pp.320–327 on atimai, thirteenth-century slave references and their Thanjavur concentration"
+      ],
+      "independence_groups": [
+        "orr-medieval-tamil-slavery"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:COV2:1300:E",
+          "target_label": "Pandya Empire",
+          "role": "specialist_regional_slavery_synthesis",
+          "direction": "supports_and_qualifies",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1017/S0002731600003929",
+      "title": "Paradigms Lost: Reconfiguring Cahokia’s Mound 72 Beaded Burial",
+      "author": "Thomas E. Emerson; Kristin M. Hedman; Eve A. Hargrave; Dawn E. Cobb; Andrew R. Thompson",
+      "year": 2016,
+      "url": "https://doi.org/10.1017/S0002731600003929",
+      "locators": [
+        "American Antiquity 81(3):405–425"
+      ],
+      "independence_groups": [
+        "emerson-mound72-reanalysis"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:cahokia_1200",
+          "target_label": "Cahokia",
+          "role": "specialist_mortuary_reanalysis",
+          "direction": "qualifies_challenges",
+          "decisive": false,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1017/S0009838800003682",
+      "title": "Procopius on the Economy of Lazica",
+      "author": "David Braund",
+      "year": 1991,
+      "url": "https://doi.org/10.1017/S0009838800003682",
+      "locators": [
+        "Classical Quarterly 41(1), pp.221–225"
+      ],
+      "independence_groups": [
+        "procopius-lazica-trade"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:500:D:r1",
+          "target_label": "Lazica",
+          "role": "specialist_article",
+          "direction": "supports_and_qualifies",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1017/S0009838800040519",
+      "title": "The Export of Slaves from Colchis",
+      "author": "D. C. Braund; G. R. Tsetskhladze",
+      "year": 1989,
+      "url": "https://doi.org/10.1017/S0009838800040519",
+      "locators": [
+        "Classical Quarterly 39(1), pp.114–125"
+      ],
+      "independence_groups": [
+        "colchis-multi-period-export-synthesis"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:500:D:r1",
+          "target_label": "Lazica",
+          "role": "specialist_long_run_synthesis",
+          "direction": "supports_and_qualifies",
+          "decisive": false,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1017/S002185370000428X",
+      "title": "The Thirteenth- and Fourteenth-Century Kings of Mali",
+      "author": "N. Levtzion",
+      "year": 1963,
+      "url": "https://doi.org/10.1017/S002185370000428X",
+      "locators": [
+        "Journal of African History 4(3), pp.341–353"
+      ],
+      "independence_groups": [
+        "ibn-khaldun-sakura-tradition"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:1300:C:r1",
+          "target_label": "Mali Empire",
+          "role": "specialist_chronological_synthesis",
+          "direction": "context",
+          "decisive": false,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1017/S0956536107000090",
+      "title": "The Human Skeletal Remains of the Moon Pyramid, Teotihuacan",
+      "author": "Michael W. Spence; Grégory Pereira",
+      "year": 2007,
+      "url": "https://doi.org/10.1017/S0956536107000090",
+      "locators": [
+        "Ancient Mesoamerica 18(1), pp.147–157"
+      ],
+      "independence_groups": [
+        "moon-pyramid-skeletal"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:500:A:r1",
+          "target_label": "Teotihuacan",
+          "role": "specialist_article",
+          "direction": "supports",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1017/S0956536107000119",
+      "title": "Residential Histories of the Human Sacrifices at the Moon Pyramid, Teotihuacan",
+      "author": "Christine D. White; T. Douglas Price; Fred J. Longstaffe",
+      "year": 2007,
+      "url": "https://doi.org/10.1017/S0956536107000119",
+      "locators": [
+        "abstract/results"
+      ],
+      "independence_groups": [
+        "moon-pyramid-isotopes"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:500:A:r1",
+          "target_label": "Teotihuacan",
+          "role": "specialist_article",
+          "direction": "supports",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1017/S1356186325000124",
+      "title": "‘Black’ and ‘golden’ Goa: slavery and empire (sixteenth to eighteenth centuries)",
+      "author": "Ines G. Županov",
+      "year": 2025,
+      "url": "https://doi.org/10.1017/S1356186325000124",
+      "locators": [
+        "Journal of the Royal Asiatic Society 35(3), pp.713–734"
+      ],
+      "independence_groups": [
+        "zupanov-goa"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:1800:F",
+          "target_label": "Portuguese Colonies",
+          "role": "specialist_constituent_article",
+          "direction": "supports",
+          "decisive": false,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1080/03057070.2016.1178000",
+      "title": "Mozambique Island, Cape Town and the Organisation of the Slave Trade in the South-West Indian Ocean, c.1797–1807",
+      "author": "Patrick Harries",
+      "year": 2016,
+      "url": "https://doi.org/10.1080/03057070.2016.1178000",
+      "locators": [
+        "Journal of Southern African Studies 42(3), pp.409–427"
+      ],
+      "independence_groups": [
+        "harries-mozambique"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:1800:F",
+          "target_label": "Portuguese Colonies",
+          "role": "specialist_constituent_article",
+          "direction": "supports",
+          "decisive": false,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1093/acrefore/9780190277734.013.870",
+      "title": "Slavery in Pharaonic and Hellenistic Egypt",
+      "author": "Antonio Loprieno",
+      "year": 2022,
+      "url": "https://doi.org/10.1093/acrefore/9780190277734.013.870",
+      "locators": [
+        "Middle Kingdom discussion/abstract"
+      ],
+      "independence_groups": [
+        "loprieno-2022"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:-2000:C:r1",
+          "target_label": "Middle Kingdom of Egypt",
+          "role": "specialist_synthesis",
+          "direction": "supports",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1093/oso/9780198769941.003.0014",
+      "title": "Punic Carthage",
+      "author": "David M. Lewis",
+      "year": 2018,
+      "url": "https://doi.org/10.1093/oso/9780198769941.003.0014",
+      "locators": [
+        "chapter 13, pp.259–266"
+      ],
+      "independence_groups": [
+        "lewis-punic-carthage"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:-500:D",
+          "target_label": "Carthage",
+          "role": "specialist_synthesis",
+          "direction": "supports",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1111/aae.12261",
+      "title": "Minaeans at Ḥimā: The Epigraphic Corpus and Its Historical, Linguistic and Cultural Implications",
+      "author": "Alessia Prioletta; Mounir Arbach",
+      "year": 2025,
+      "url": "https://doi.org/10.1111/aae.12261",
+      "locators": [
+        "abstract and corpus discussion"
+      ],
+      "independence_groups": [
+        "prioletta-arbach-hima"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:N:incense_m100",
+          "target_label": "Incense Route network",
+          "role": "specialist_article",
+          "direction": "context",
+          "decisive": false,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1163/156852301100402723",
+      "title": "Slavery in Early China: A Socio-Cultural Approach",
+      "author": "Robin D. S. Yates",
+      "year": 2001,
+      "url": "https://doi.org/10.1163/156852301100402723",
+      "locators": [
+        "Journal of East Asian Archaeology 3(1), pp.283–331; discussion of chenqie and late Spring-and-Autumn / early Warring-States change"
+      ],
+      "independence_groups": [
+        "yates-early-china"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:-500:F:r1",
+          "target_label": "Cai",
+          "role": "specialist_regional_synthesis",
+          "direction": "context_and_qualifies",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1163/9789004294011_008",
+      "title": "The Kingdom of Kush between the Withdrawal from Egypt and the End of the 'Napatan' Dynasty (from 656 to the mid-3rd cent. BC)",
+      "author": "László Török",
+      "year": 1997,
+      "url": "https://doi.org/10.1163/9789004294011_008",
+      "locators": [
+        "pp.342–408"
+      ],
+      "independence_groups": [
+        "torok-kush-handbook"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:-500:C:r1",
+          "target_label": "Kingdom of Kush",
+          "role": "specialist_period_context",
+          "direction": "context",
+          "decisive": false,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1179/009346983791504246",
+      "title": "Imperialist Expansion in Peruvian Prehistory: Chimu Administration of a Conquered Territory",
+      "author": "Richard W. Keatinge; Geoffrey W. Conrad",
+      "year": 1983,
+      "url": "https://doi.org/10.1179/009346983791504246",
+      "locators": [
+        "Journal of Field Archaeology 10(3), pp.255–283; abstract/model of state control and tribute/labor service"
+      ],
+      "independence_groups": [
+        "keatinge-conrad-chimu-political-economy"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:COV2:1300:B",
+          "target_label": "Chimu Empire",
+          "role": "specialist_archaeological_article",
+          "direction": "supports",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1515/9781400888160-008",
+      "title": "Mansā Mūsā and Global Mali",
+      "author": "Michael A. Gomez",
+      "year": 2018,
+      "url": "https://doi.org/10.1515/9781400888160-008",
+      "locators": [
+        "African Dominion, ch.6, esp. discussion of Sākūra around pp.98–99"
+      ],
+      "independence_groups": [
+        "ibn-khaldun-sakura-tradition"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:1300:C:r1",
+          "target_label": "Mali Empire",
+          "role": "specialist_synthesis",
+          "direction": "supports_and_qualifies",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.1515/mill-2023-0005",
+      "title": "Slavery in First Millennium Arabia: Epigraphy and the Qurʾān",
+      "author": "Valentina A. Grasso",
+      "year": 2023,
+      "url": "https://doi.org/10.1515/mill-2023-0005",
+      "locators": [
+        "article/abstract and epigraphic analysis"
+      ],
+      "independence_groups": [
+        "grasso-arabian-epigraphy"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:N:incense_m100",
+          "target_label": "Incense Route network",
+          "role": "specialist_article",
+          "direction": "supports_and_qualifies",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.20947/S0102-3098a0030",
+      "title": "Envisioning, counting and describing Portuguese colonial populations, 1776–1875: notes from research in progress",
+      "author": "Paulo Teodoro Matos",
+      "year": 2017,
+      "url": "https://doi.org/10.20947/S0102-3098a0030",
+      "locators": [
+        "Table 2, 1800 resident slave population shares by possession"
+      ],
+      "independence_groups": [
+        "matos-portuguese-colonial-populations"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:1800:F",
+          "target_label": "Portuguese Colonies",
+          "role": "specialist_demographic_synthesis",
+          "direction": "supports_and_qualifies",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.21313/hawaii/9780824831103.001.0001",
+      "title": "The Shaolin Monastery: History, Religion, and the Chinese Martial Arts",
+      "author": "Meir Shahar",
+      "year": 2008,
+      "url": "https://doi.org/10.21313/hawaii/9780824831103.001.0001",
+      "locators": [
+        "institutional/estate history"
+      ],
+      "independence_groups": [
+        "shahar-shaolin"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:N:shaolin_1000",
+          "target_label": "Shaolin Monastery",
+          "role": "specialist_monograph",
+          "direction": "supports",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.21490/jskh.2022.11.89.323",
+      "title": "Reexamination of the title of ancient Tamna",
+      "author": "Jang Chang-eun",
+      "year": 2022,
+      "url": "https://doi.org/10.21490/jskh.2022.11.89.323",
+      "locators": [
+        "Journal of Korean History 89, pp.323–356; abstract and chronology"
+      ],
+      "independence_groups": [
+        "jang-ancient-tamna"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:500:F:r1",
+          "target_label": "Tamna",
+          "role": "specialist_target_identity_chronology",
+          "direction": "context",
+          "decisive": false,
+          "claim_fitness": "usable_with_limitation"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.2307/3171932",
+      "title": "History, Oral Transmission and Structure in Ibn Khaldun's Chronology of Mali Rulers",
+      "author": "Ralph A. Austen; Jan Jansen",
+      "year": 1996,
+      "url": "https://doi.org/10.2307/3171932",
+      "locators": [
+        "History in Africa 23, pp.17–28; extract and notes on Sekure/servile oral tradition"
+      ],
+      "independence_groups": [
+        "ibn-khaldun-plus-mande-source-criticism"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:1300:C:r1",
+          "target_label": "Mali Empire",
+          "role": "specialist_source_criticism",
+          "direction": "qualifies",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.2307/3171998",
+      "title": "Searching for History in the Sunjata Epic: The Case of Fakoli",
+      "author": "David C. Conrad",
+      "year": 1992,
+      "url": "https://doi.org/10.2307/3171998",
+      "locators": [
+        "History in Africa 19, pp.147–200; discussion of Sakura/mawlā and servile-status alternatives"
+      ],
+      "independence_groups": [
+        "mande-sakura-status-traditions"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:1300:C:r1",
+          "target_label": "Mali Empire",
+          "role": "specialist_status_and_oral_history_analysis",
+          "direction": "qualifies",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.2307/40928608",
+      "title": "Trans-Indian Identity and the Inuit 'Other': Relations between the Chipewyan and Neighboring Aboriginal Communities in the Eighteenth Century",
+      "author": "Strother E. Roberts",
+      "year": 2010,
+      "url": "https://doi.org/10.2307/40928608",
+      "locators": [
+        "pp.611ff discussion of Inuit captives/slaves"
+      ],
+      "independence_groups": [
+        "roberts-hudson-bay"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:N:inuit_arctic_1800",
+          "target_label": "Inuit Arctic communities",
+          "role": "specialist_article",
+          "direction": "supports_and_qualifies",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.3389/frsc.2019.00006",
+      "title": "Cahokia: Urbanization, Metabolism, and Collapse",
+      "author": "William R. Iseminger et al. / Frontiers synthesis",
+      "year": 2019,
+      "url": "https://doi.org/10.3389/frsc.2019.00006",
+      "locators": [
+        "Mound 72 discussion"
+      ],
+      "independence_groups": [
+        "cahokia-metabolism-synthesis"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:cahokia_1200",
+          "target_label": "Cahokia",
+          "role": "specialist_synthesis",
+          "direction": "supports_slave_interpretation",
+          "decisive": true,
+          "claim_fitness": "usable_with_limitation"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.3390/rel17060746",
+      "title": "Non-Exhaustible Endowment for the Dharma: A Preliminary Study of the Support Mechanism at Nālandā Mahāvihāra",
+      "author": "Huiyuan Bian",
+      "year": 2026,
+      "url": "https://doi.org/10.3390/rel17060746",
+      "locators": [
+        "discussion of Yijing, tenancy/sharecropping and servants/slaves; Nālandā one-sixth share reconstruction"
+      ],
+      "independence_groups": [
+        "yijing-nalanda-institutional-record"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:N:nalanda_700",
+          "target_label": "Nalanda Mahavihara",
+          "role": "specialist_institutional_economic_synthesis",
+          "direction": "supports_and_qualifies",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.35221/tamla.2018..57.003",
+      "title": "The Historical Understanding of Research and Major Issue of Tamna in Ancient",
+      "author": "Jang Chang-eun",
+      "year": 2018,
+      "url": "https://doi.org/10.35221/tamla.2018..57.003",
+      "locators": [
+        "Tamla Culture 57, pp.87–121"
+      ],
+      "independence_groups": [
+        "jang-ancient-tamna"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:500:F:r1",
+          "target_label": "Tamna",
+          "role": "specialist_target_history",
+          "direction": "context",
+          "decisive": false,
+          "claim_fitness": "usable_with_limitation"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.5070/D68061376",
+      "title": "Gender as Frame of War in Ancient Nubia",
+      "author": "Uroš Matić",
+      "year": 2023,
+      "url": "https://doi.org/10.5070/D68061376",
+      "locators": [
+        "§2.1; Taharqa, Anlamani, Harsiyotef and Nastasen passages"
+      ],
+      "independence_groups": [
+        "matic-kush-war-captives"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:-500:C:r1",
+          "target_label": "Kingdom of Kush",
+          "role": "specialist_article_with_primary_text_analysis",
+          "direction": "supports_and_qualifies",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.5744/florida/9780813066141.003.0010",
+      "title": "Fisherman, Farmer, Rich Man, Poor Man, Weaver, Parcialidad Chief? Household Archaeology at Cerro la Virgen, a Chimú Town within the Hinterland of Chan Chan",
+      "author": "Brian R. Billman; Dana Bardolph; Jean Hudson; Jesús Briceño Rosario",
+      "year": 2020,
+      "url": "https://doi.org/10.5744/florida/9780813066141.003.0010",
+      "locators": [
+        "Maritime Communities of the Ancient Andes, ch.10, pp.267–300; discussion/conclusion on labor-tax models and household autonomy"
+      ],
+      "independence_groups": [
+        "billman-et-al-cerro-la-virgen"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:COV2:1300:B",
+          "target_label": "Chimu Empire",
+          "role": "specialist_household_archaeology_counterevidence",
+          "direction": "qualifies",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "doi:10.63489/acad.2025.35808",
+      "title": "Slavery in New France: Resistance and Enslavement of Southern Labrador Inuit",
+      "author": "Greg Mitchell; Amanda Crompton",
+      "year": 2026,
+      "url": "https://doi.org/10.63489/acad.2025.35808",
+      "locators": [
+        "article abstract and eighteenth-century cases"
+      ],
+      "independence_groups": [
+        "mitchell-crompton-labrador"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:N:inuit_arctic_1800",
+          "target_label": "Inuit Arctic communities",
+          "role": "specialist_article",
+          "direction": "supports",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "isbn:9780195099621",
+      "title": "Donors, Devotees, and Daughters of God: Temple Women in Medieval Tamilnadu",
+      "author": "Leslie C. Orr",
+      "year": 2000,
+      "url": "https://global.oup.com/academic/product/donors-devotees-and-daughters-of-god-9780195099621",
+      "locators": [
+        "terminological discussion of atiyar/atimai and temple women; notes around pp.52–57 and 216"
+      ],
+      "independence_groups": [
+        "orr-medieval-tamil-slavery"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:COV2:1300:E",
+          "target_label": "Pandya Empire",
+          "role": "specialist_epigraphic_terminology_context",
+          "direction": "supports_and_qualifies",
+          "decisive": false,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "isbn:9781498554923",
+      "title": "Buddhist Learning in South Asia: Education, Religion, and Culture at the Ancient Śrī Nālandā Mahāvihāra",
+      "author": "Pintu Kumar",
+      "year": 2018,
+      "url": "https://www.bloomsbury.com/us/buddhist-learning-in-south-asia-9781498554947/",
+      "locators": [
+        "chapters on monastic organization and life"
+      ],
+      "independence_groups": [
+        "yijing-nalanda-institutional-record"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:N:nalanda_700",
+          "target_label": "Nalanda Mahavihara",
+          "role": "specialist_monograph_context",
+          "direction": "context",
+          "decisive": false,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "JSTOR:jj.33382246",
+      "title": "Slavery and the Jews of Medieval Egypt: A History",
+      "author": "Craig Perry",
+      "year": 2026,
+      "url": "https://www.jstor.org/stable/jj.33382246",
+      "locators": [
+        "introductory Fatimid/Cairo discussion and slave-market chapters"
+      ],
+      "independence_groups": [
+        "perry-medieval-egypt"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:al_azhar_1100",
+          "target_label": "al-Azhar Mosque/university",
+          "role": "specialist_monograph",
+          "direction": "context_and_supports_cairo",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "LeoAfricanus-BrownPory-Hakluyt-1896",
+      "title": "Della descrittione dell'Africa / Description of Africa (Gao passage)",
+      "author": "al-Hasan al-Wazzan / Leo Africanus",
+      "year": 1550,
+      "url": "https://books.google.com/books?id=AC0pMm-hAPIC",
+      "locators": [
+        "Gao description"
+      ],
+      "independence_groups": [
+        "leo-africanus-gao"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:N:gao_1500",
+          "target_label": "Gao",
+          "role": "primary_or_near_primary_travel_account",
+          "direction": "supports",
+          "decisive": false,
+          "claim_fitness": "usable_with_limitation"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "Mackey-1987-Chimu-administration-provinces",
+      "title": "Chimu Administration in the Provinces",
+      "author": "Carol J. Mackey",
+      "year": 1987,
+      "url": "https://ehrafarchaeology.yale.edu/traditions/se75/documents/038",
+      "locators": [
+        "The Origins and Development of the Andean State, pp.121–129; eHRAF publication metadata/abstract"
+      ],
+      "independence_groups": [
+        "mackey-chimu-administration"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:COV2:1300:B",
+          "target_label": "Chimu Empire",
+          "role": "specialist_archaeological_synthesis",
+          "direction": "supports_and_qualifies",
+          "decisive": true,
+          "claim_fitness": "usable_with_limitation"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "Procopius-Wars-II.15.4-5-Dewing",
+      "title": "History of the Wars, Books I–II (Persian Wars II.15.4–5)",
+      "author": "Procopius of Caesarea; trans. H. B. Dewing",
+      "year": 1914,
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Procopius/Wars/2D*.html",
+      "locators": [
+        "Wars II.15.4–5"
+      ],
+      "independence_groups": [
+        "procopius-lazica-trade"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:P:500:D:r1",
+          "target_label": "Lazica",
+          "role": "primary_narrative",
+          "direction": "supports",
+          "decisive": true,
+          "claim_fitness": "usable_with_limitation"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "SII-v22-Pandya-corpus",
+      "title": "South Indian Inscriptions, Volume XXII — Pandya inscriptions",
+      "author": "Archaeological Survey of India",
+      "year": null,
+      "url": "https://www.whatisindia.com/inscriptions/south_indian_inscriptions/volume_22/part_2/maravarman_sundara_pandya_1.html",
+      "locators": [
+        "Pandya inscription index/records; targeted C2 check for contemporaneous polity records"
+      ],
+      "independence_groups": [
+        "asi-sii-pandya-inscriptions"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:COV2:1300:E",
+          "target_label": "Pandya Empire",
+          "role": "primary_epigraphic_corpus_target_fit_check",
+          "direction": "context_and_search_limit",
+          "decisive": false,
+          "claim_fitness": "usable_with_limitation"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "USCensus-1800-Questionnaire-Instructions",
+      "title": "1800 Census Questionnaires & Instructions",
+      "author": "United States Census Bureau",
+      "year": 1800,
+      "url": "https://www.census.gov/programs-surveys/decennial-census/technical-documentation/questionnaires.1800_Census.html",
+      "locators": [
+        "Index of Questions; Census Day/authorizing act"
+      ],
+      "independence_groups": [
+        "us-1800-census"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:1800:A",
+          "target_label": "United States of America",
+          "role": "primary_methodology_record",
+          "direction": "supports",
+          "decisive": false,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "USCensus-1801-Return-1800",
+      "title": "Return of the Whole Number of Persons within the Several Districts of the United States",
+      "author": "United States Census Office",
+      "year": 1801,
+      "url": "https://www.census.gov/library/publications/1801/dec/return.html",
+      "locators": [
+        "1800 district/territory tables; slave column"
+      ],
+      "independence_groups": [
+        "us-1800-census"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:1800:A",
+          "target_label": "United States of America",
+          "role": "primary_official_census_publication",
+          "direction": "supports",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "USCensus-America250-1800-summary-2026",
+      "title": "As America Turns 250 Years Old, the Census is Not Far Behind at 236",
+      "author": "United States Census Bureau",
+      "year": 2026,
+      "url": "https://www.census.gov/library/stories/2026/06/america-counts-250-years.html",
+      "locators": [
+        "1800 population summary"
+      ],
+      "independence_groups": [
+        "us-1800-census"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:L:1800:A",
+          "target_label": "United States of America",
+          "role": "official_modern_summary",
+          "direction": "supports",
+          "decisive": false,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    },
+    {
+      "source_version_ref": "Willis1985-Hunwick-Songhay",
+      "title": "Notes on Slavery in the Songhay Empire",
+      "author": "J. O. Hunwick",
+      "year": 1985,
+      "url": "https://www.taylorfrancis.com/books/edit/10.4324/9780203988176/slaves-slavery-muslim-africa-john-ralph-willis",
+      "locators": [
+        "pp.16–31; esp. discussion of Gao and 1498 Mossi campaign"
+      ],
+      "independence_groups": [
+        "hunwick-songhay-synthesis"
+      ],
+      "dependents": [
+        {
+          "target_id": "R1:N:gao_1500",
+          "target_label": "Gao",
+          "role": "specialist_synthesis",
+          "direction": "supports",
+          "decisive": true,
+          "claim_fitness": "production_grade"
+        }
+      ]
+    }
+  ],
+  "independence_groups": [
+    {
+      "independence_group": "asi-sii-pandya-inscriptions",
+      "source_version_refs": [
+        "DHARMA_INStfaSIIv04p0i0144@2a5b199",
+        "SII-v22-Pandya-corpus"
+      ],
+      "target_ids": [
+        "R1:L:COV2:1300:E"
+      ]
+    },
+    {
+      "independence_group": "billman-et-al-cerro-la-virgen",
+      "source_version_refs": [
+        "doi:10.5744/florida/9780813066141.003.0010"
+      ],
+      "target_ids": [
+        "R1:L:COV2:1300:B"
+      ]
+    },
+    {
+      "independence_group": "cahokia-metabolism-synthesis",
+      "source_version_refs": [
+        "doi:10.3389/frsc.2019.00006"
+      ],
+      "target_ids": [
+        "R1:L:cahokia_1200"
+      ]
+    },
+    {
+      "independence_group": "cahokia-mound72-isotopes",
+      "source_version_refs": [
+        "doi:10.1002/ajpa.22791"
+      ],
+      "target_ids": [
+        "R1:L:cahokia_1200"
+      ]
+    },
+    {
+      "independence_group": "chin-medieval-buddhist-economy",
+      "source_version_refs": [
+        "Chin2005-SilkRoad-3-2"
+      ],
+      "target_ids": [
+        "R1:N:shaolin_1000"
+      ]
+    },
+    {
+      "independence_group": "colchis-multi-period-export-synthesis",
+      "source_version_refs": [
+        "doi:10.1017/S0009838800040519"
+      ],
+      "target_ids": [
+        "R1:P:500:D:r1"
+      ]
+    },
+    {
+      "independence_group": "emerson-mound72-reanalysis",
+      "source_version_refs": [
+        "doi:10.1017/S0002731600003929"
+      ],
+      "target_ids": [
+        "R1:L:cahokia_1200"
+      ]
+    },
+    {
+      "independence_group": "grasso-arabian-epigraphy",
+      "source_version_refs": [
+        "doi:10.1515/mill-2023-0005"
+      ],
+      "target_ids": [
+        "R1:N:incense_m100"
+      ]
+    },
+    {
+      "independence_group": "harries-mozambique",
+      "source_version_refs": [
+        "doi:10.1080/03057070.2016.1178000"
+      ],
+      "target_ids": [
+        "R1:L:1800:F"
+      ]
+    },
+    {
+      "independence_group": "hunwick-songhay-synthesis",
+      "source_version_refs": [
+        "Willis1985-Hunwick-Songhay"
+      ],
+      "target_ids": [
+        "R1:N:gao_1500"
+      ]
+    },
+    {
+      "independence_group": "ibn-khaldun-plus-mande-source-criticism",
+      "source_version_refs": [
+        "doi:10.2307/3171932"
+      ],
+      "target_ids": [
+        "R1:P:1300:C:r1"
+      ]
+    },
+    {
+      "independence_group": "ibn-khaldun-sakura-tradition",
+      "source_version_refs": [
+        "doi:10.1017/S002185370000428X",
+        "doi:10.1515/9781400888160-008"
+      ],
+      "target_ids": [
+        "R1:P:1300:C:r1"
+      ]
+    },
+    {
+      "independence_group": "jang-ancient-tamna",
+      "source_version_refs": [
+        "doi:10.21490/jskh.2022.11.89.323",
+        "doi:10.35221/tamla.2018..57.003"
+      ],
+      "target_ids": [
+        "R1:P:500:F:r1"
+      ]
+    },
+    {
+      "independence_group": "keatinge-conrad-chimu-political-economy",
+      "source_version_refs": [
+        "doi:10.1179/009346983791504246"
+      ],
+      "target_ids": [
+        "R1:L:COV2:1300:B"
+      ]
+    },
+    {
+      "independence_group": "kye-medieval-korea-slavery",
+      "source_version_refs": [
+        "doi:10.1017/9781139024723.012"
+      ],
+      "target_ids": [
+        "R1:P:500:F:r1"
+      ]
+    },
+    {
+      "independence_group": "leo-africanus-gao",
+      "source_version_refs": [
+        "LeoAfricanus-BrownPory-Hakluyt-1896"
+      ],
+      "target_ids": [
+        "R1:N:gao_1500"
+      ]
+    },
+    {
+      "independence_group": "lewis-punic-carthage",
+      "source_version_refs": [
+        "doi:10.1093/oso/9780198769941.003.0014"
+      ],
+      "target_ids": [
+        "R1:L:-500:D"
+      ]
+    },
+    {
+      "independence_group": "loprieno-2022",
+      "source_version_refs": [
+        "doi:10.1093/acrefore/9780190277734.013.870"
+      ],
+      "target_ids": [
+        "R1:P:-2000:C:r1"
+      ]
+    },
+    {
+      "independence_group": "mackey-chimu-administration",
+      "source_version_refs": [
+        "Mackey-1987-Chimu-administration-provinces"
+      ],
+      "target_ids": [
+        "R1:L:COV2:1300:B"
+      ]
+    },
+    {
+      "independence_group": "mande-sakura-status-traditions",
+      "source_version_refs": [
+        "doi:10.2307/3171998"
+      ],
+      "target_ids": [
+        "R1:P:1300:C:r1"
+      ]
+    },
+    {
+      "independence_group": "matic-kush-war-captives",
+      "source_version_refs": [
+        "doi:10.5070/D68061376"
+      ],
+      "target_ids": [
+        "R1:P:-500:C:r1"
+      ]
+    },
+    {
+      "independence_group": "matos-portuguese-colonial-populations",
+      "source_version_refs": [
+        "doi:10.20947/S0102-3098a0030"
+      ],
+      "target_ids": [
+        "R1:L:1800:F"
+      ]
+    },
+    {
+      "independence_group": "mitchell-crompton-labrador",
+      "source_version_refs": [
+        "doi:10.63489/acad.2025.35808"
+      ],
+      "target_ids": [
+        "R1:N:inuit_arctic_1800"
+      ]
+    },
+    {
+      "independence_group": "moon-pyramid-isotopes",
+      "source_version_refs": [
+        "doi:10.1017/S0956536107000119"
+      ],
+      "target_ids": [
+        "R1:P:500:A:r1"
+      ]
+    },
+    {
+      "independence_group": "moon-pyramid-skeletal",
+      "source_version_refs": [
+        "doi:10.1017/S0956536107000090"
+      ],
+      "target_ids": [
+        "R1:P:500:A:r1"
+      ]
+    },
+    {
+      "independence_group": "orr-medieval-tamil-slavery",
+      "source_version_refs": [
+        "doi:10.1017/9781139024723.013",
+        "isbn:9780195099621"
+      ],
+      "target_ids": [
+        "R1:L:COV2:1300:E"
+      ]
+    },
+    {
+      "independence_group": "perry-medieval-egypt",
+      "source_version_refs": [
+        "JSTOR:jj.33382246"
+      ],
+      "target_ids": [
+        "R1:L:al_azhar_1100"
+      ]
+    },
+    {
+      "independence_group": "prioletta-arbach-hima",
+      "source_version_refs": [
+        "doi:10.1111/aae.12261"
+      ],
+      "target_ids": [
+        "R1:N:incense_m100"
+      ]
+    },
+    {
+      "independence_group": "procopius-lazica-trade",
+      "source_version_refs": [
+        "Procopius-Wars-II.15.4-5-Dewing",
+        "doi:10.1017/S0009838800003682"
+      ],
+      "target_ids": [
+        "R1:P:500:D:r1"
+      ]
+    },
+    {
+      "independence_group": "roberts-hudson-bay",
+      "source_version_refs": [
+        "doi:10.2307/40928608"
+      ],
+      "target_ids": [
+        "R1:N:inuit_arctic_1800"
+      ]
+    },
+    {
+      "independence_group": "shahar-shaolin",
+      "source_version_refs": [
+        "doi:10.21313/hawaii/9780824831103.001.0001"
+      ],
+      "target_ids": [
+        "R1:N:shaolin_1000"
+      ]
+    },
+    {
+      "independence_group": "thompson-odontometric",
+      "source_version_refs": [
+        "doi:10.1002/ajpa.22282"
+      ],
+      "target_ids": [
+        "R1:L:cahokia_1200"
+      ]
+    },
+    {
+      "independence_group": "torok-kush-handbook",
+      "source_version_refs": [
+        "doi:10.1163/9789004294011_008"
+      ],
+      "target_ids": [
+        "R1:P:-500:C:r1"
+      ]
+    },
+    {
+      "independence_group": "us-1800-census",
+      "source_version_refs": [
+        "USCensus-1800-Questionnaire-Instructions",
+        "USCensus-1801-Return-1800",
+        "USCensus-America250-1800-summary-2026"
+      ],
+      "target_ids": [
+        "R1:L:1800:A"
+      ]
+    },
+    {
+      "independence_group": "yates-early-china",
+      "source_version_refs": [
+        "doi:10.1163/156852301100402723"
+      ],
+      "target_ids": [
+        "R1:P:-500:F:r1"
+      ]
+    },
+    {
+      "independence_group": "yijing-nalanda-institutional-record",
+      "source_version_refs": [
+        "doi:10.3390/rel17060746",
+        "isbn:9781498554923"
+      ],
+      "target_ids": [
+        "R1:N:nalanda_700"
+      ]
+    },
+    {
+      "independence_group": "zupanov-goa",
+      "source_version_refs": [
+        "doi:10.1017/S1356186325000124"
+      ],
+      "target_ids": [
+        "R1:L:1800:F"
+      ]
+    }
+  ]
+}
