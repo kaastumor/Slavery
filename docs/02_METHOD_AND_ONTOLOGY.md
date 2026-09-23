@@ -264,7 +264,7 @@ A broad queryable interval is not the same thing as a historical assertion that 
 The target model keeps at least three temporal concepts distinct:
 
 1. **query window** — outer normalized bounds used to find candidate records efficiently;
-2. **applicability semantics** — what dates/intervals are positively asserted, for example a continuous interval, bounded occurrence, alternative dates, an open terminus, or unknown applicability;
+2. **temporal mode** — what dates/intervals are positively asserted (for example a continuous interval, bounded occurrence or alternative dates), or whether time is constrained only by a non-positive open terminus / remains unknown;
 3. **temporal precision/certainty** — whether the dating is exact, approximate, broad, disputed, or otherwise uncertain.
 
 Changing precision alone must not change selected-year truth.
@@ -276,6 +276,8 @@ Examples:
 - an approximately dated bounded occurrence remains bounded rather than filling the whole uncertainty envelope.
 
 Normalized integer ranges remain useful retrieval/indexing structures. A selected-year public state must evaluate applicability semantics rather than treating query-window membership as sufficient truth.
+
+An open terminus (`terminus_after` / `terminus_before`) constrains the candidate time window but does not by itself create positive selected-year applicability or indefinite continuity. Positive applicability requires separately reviewed support.
 
 Preserve source-faithful date text and uncertainty. Do not invent probability distributions merely because dates are uncertain.
 
