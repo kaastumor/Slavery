@@ -18,10 +18,11 @@
 14. Attach evidence at claim level.
 15. Assess source dependence and independence.
 16. Record temporal and spatial precision rather than inventing exactness.
-17. Assign coverage state.
-18. Assign P-level only when the interpreted evidence package supports an intensity assessment. A positive designation may still have `practice_level = NULL` if intensity remains unassessed.
-19. Resolve historical geometry independently from the slavery/coercion evidence.
-20. Run QC before publication/merge into canonical research data.
+17. Record research stage and classification outcome separately.
+18. Review the post-M1 territorial-practice dimensions independently where the evidence supports them: attestation pattern, interpretive basis, occurrence pattern, institutionalization, prevalence scope and structural significance. Leave unsupported dimensions unassessed rather than deriving them from one another.
+19. Do **not** assign a new P0–P4 level for post-M1 research. `practice_level` is legacy-release compatibility only; preserve an existing legacy value when migrating/reconstructing historical releases, but do not derive one from the new dimensions.
+20. Resolve historical geometry independently from the slavery/coercion evidence.
+21. Run QC before publication/merge into canonical research data.
 
 ### Research-role rule
 
@@ -61,7 +62,7 @@ Do not use disagreement between two source rows as an automatic reason to blank 
 10. Enrich nationality/political identity only through an independent `ACTOR_ATTRIBUTE_CLAIM`.
 11. Store residence, business base and corporate jurisdiction as distinct claims.
 12. Preserve import lineage through an ingest-run identifier where applicable.
-13. Never change territorial P-level directly because a voyage/network record exists.
+13. Never change territorial-practice characterization because a voyage/network record exists; never derive or assign a legacy P-level from network volume.
 
 ## D. Legal-event research
 
