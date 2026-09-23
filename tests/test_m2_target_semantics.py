@@ -47,16 +47,14 @@ class M2TargetSemanticsTests(unittest.TestCase):
         self.assertIn("CLAIM_EVIDENCE_LOCUS", self.model)
         self.assertIn("CLAIM_INFERENCE_EXTENT", self.model)
 
-    def test_schema_is_target_not_live_implementation_claim(self):
+    def test_schema_is_target_prototype_not_live_production_claim(self):
         self.assertIn("schema_version: draft-0.11", self.schema)
         self.assertIn(
-            "status: m2_target_semantics_canonicalized_not_yet_relationally_implemented",
+            "status: m2_target_semantics_canonicalized_and_disposable_prototype_validated_not_production_migrated",
             self.schema,
         )
-        self.assertIn(
-            "relational implementation and release migration remain M2 work",
-            self.decisions,
-        )
+        self.assertIn("canonical **target methodology/data model**", self.decisions)
+        self.assertIn("This does not mutate canonical historical release v0.6.1", self.decisions)
 
 
 if __name__ == "__main__":
