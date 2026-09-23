@@ -222,3 +222,125 @@ They did **not** perform a real external baseline/user-task comparison.
 That missing comparison should weigh heavily in the final direction.
 
 **Checkpoint:** the problem survives; the contribution survives only in a narrower corpus/methodology/integrated-query form; necessity of the current full product form remains unproven.
+
+
+---
+
+## Chunk 3 — Foundation and canonical ownership
+
+### What survives strongly
+
+The conceptual foundation is coherent and unusually explicit about ownership boundaries.
+
+#### Source / provenance ownership
+
+Distinct canonical concepts exist for:
+
+- conceptual `SOURCE`;
+- exact `SOURCE_VERSION`;
+- optional exact `SOURCE_ASSET`;
+- ingest run / raw source record;
+- bounded source assertions / atlas claims;
+- claim-source relationship and evidence direction;
+- reviewed publication/release membership.
+
+Source origin does not automatically determine authority. The source policy asks what proposition a source can support and uses specialist scholarship as interpretive context rather than a universal source-ranking scalar.
+
+#### Identity / role ownership
+
+The model separates:
+
+- actor identity from historical role;
+- source-native names from normalized identity;
+- source-native IDs from internal UUIDs;
+- spatial identity from historical political specialization;
+- spatial identity from geometry;
+- timeless identity from time-bounded jurisdiction/relations.
+
+This directly addresses demonstrated historical failure modes.
+
+#### Observation / interpretation ownership
+
+The project distinguishes:
+
+- source-native bounded evidence;
+- specialist interpretation;
+- atlas synthesis;
+- evidence direction (supports/challenges/qualifies/context);
+- research workflow state;
+- classification outcome;
+- publication state.
+
+Contrary evidence is preserved without mechanically turning every conflict into `disputed`.
+
+#### Time / space ownership
+
+M1/M2 produced evidence-driven separations:
+
+- outer query window vs positive selected-year applicability;
+- temporal precision vs applicability;
+- open terminus constraint vs indefinite continuity;
+- evidence locus vs inference extent;
+- historical source geometry vs cartographic render geometry;
+- raw Cliopatria baseline vs reviewed atlas spatial identity;
+- baseline geometry provenance vs chosen specialist provenance.
+
+These were not invented for diagram elegance; integrated adversaries found real failures when they were collapsed.
+
+#### Current state / historical state
+
+Canonical release v0.6.1, mutable working research state, non-canonical preview, release candidates and disposable M2 prototypes are explicitly different.
+
+Published/reconstructed release state is not inferred from whatever happens to be current in research tables.
+
+### Derived views
+
+The publish/API/map layers are derived consumers, not research-authoring authorities.
+
+Existing production publication views do not consume the M2 raw resolver by accident, and public clients do not have direct access to internal research schemas.
+
+This ownership boundary survives.
+
+### Generality test
+
+The universal CLAIM/provenance architecture has earned substantial generality:
+
+- territorial-practice assertions;
+- legal events;
+- actor attributes;
+- external participation;
+- voyage relationships;
+- competing/supporting/challenging evidence.
+
+M1 did **not** justify a universal final slavery ontology. The faceted practice vocabulary remains deliberately evolving, which is the correct boundary.
+
+The post-M1 dimensions were attacked with real Hittite, Baekje, Silla, Mauryan and Maya cases plus synthetic failures. That justifies a prototype abstraction, but not the claim that the vocabulary is globally final.
+
+### Foundation not yet demonstrated
+
+1. **Present-day/living-person coverage** remains unproven and privacy-blocked. Do not extend the current historical architecture into sensitive modern person-level data merely because the schema could hold it.
+
+2. **Post-M1 semantics are not yet proven across a globally representative research corpus at production scale.** M1/M2 establish structure and integrity, not final vocabulary completeness.
+
+3. **Broad Cliopatria source-row → atlas spatial-identity mapping remains intentionally unresolved.** Raw geography infrastructure is not reviewed map truth.
+
+These are boundaries, not reasons to redesign the foundation today.
+
+### Current-owner conflict discovered
+
+Two adopted current workflow documents still preserve pre-M1 operational instructions:
+
+- `docs/06_RESEARCH_WORKFLOW.md` step 18 says to assign a P-level when evidence supports an intensity assessment;
+- `docs/17_SOURCE_EVIDENCE_LIFECYCLE.md` Stage 11 presents P0–P4 as a current classification step.
+
+That conflicts with D-058/current methodology, where P0–P4 is **legacy release compatibility only** and new post-M1 claims should use independent reviewed dimensions.
+
+This is a concrete semantic failure and should be repaired in Chunk 8.
+
+### Architecture-vs-contribution pressure
+
+The semantic ownership model survives much better than the current product/operations footprint.
+
+There is no evidence here requiring an architecture reset. The harder question is whether all current serving/release/operations machinery is needed to deliver the demonstrated contribution.
+
+**Checkpoint:** conceptual foundation survives; no semantic redesign justified. Repair stale P-level research instructions. Keep M2 production migration parked until value/form review is complete.
