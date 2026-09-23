@@ -355,6 +355,79 @@ BEGIN
     END IF;
 END $$;
 
+-- Invalid inverse mutation: a valid post-M1 subtype cannot survive a parent downgrade.
+DO $
+DECLARE blocked boolean := false;
+BEGIN
+    BEGIN
+        UPDATE atlas.claim
+        SET semantic_model_version=NULL,
+            temporal_applicability_mode=NULL
+        WHERE claim_id='12000000-0000-0000-0000-000000000011'::uuid;
+
+        SET CONSTRAINTS claim_post_m1_parent_consistency IMMEDIATE;
+    EXCEPTION WHEN others THEN
+        IF SQLERRM LIKE 'legacy/null semantic model cannot retain post-M1 territorial dimensions%' THEN
+            blocked := true;
+        ELSE
+            RAISE;
+        END IF;
+    END;
+
+    IF NOT blocked THEN
+        RAISE EXCEPTION 'parent semantic downgrade bypassed post-M1 subtype invariants';
+    END IF;
+END $;
+SET CONSTRAINTS claim_post_m1_parent_consistency DEFERRED;
+
+-- Invalid inverse mutation: narrowing the outer window cannot strand asserted intervals.
+DO $
+DECLARE blocked boolean := false;
+BEGIN
+    BEGIN
+        UPDATE atlas.claim
+        SET from_year=700
+        WHERE claim_id='12000000-0000-0000-0000-000000000013'::uuid;
+
+        SET CONSTRAINTS claim_post_m1_parent_consistency IMMEDIATE;
+    EXCEPTION WHEN others THEN
+        IF SQLERRM LIKE 'claim % outer query window no longer contains all asserted intervals%' THEN
+            blocked := true;
+        ELSE
+            RAISE;
+        END IF;
+    END;
+
+    IF NOT blocked THEN
+        RAISE EXCEPTION 'parent range edit stranded an asserted interval outside its query window';
+    END IF;
+END $;
+SET CONSTRAINTS claim_post_m1_parent_consistency DEFERRED;
+
+-- Invalid inverse mutation: same_as_locus cannot survive deletion of its matching locus.
+DO $
+DECLARE blocked boolean := false;
+BEGIN
+    BEGIN
+        DELETE FROM atlas.claim_evidence_locus
+        WHERE claim_id='12000000-0000-0000-0000-000000000013'::uuid
+          AND spatial_entity_id='12000000-0000-0000-0000-000000000003'::uuid;
+
+        SET CONSTRAINTS claim_evidence_locus_inverse_consistency IMMEDIATE;
+    EXCEPTION WHEN others THEN
+        IF SQLERRM LIKE 'same_as_locus inference extent requires retained matching evidence locus%' THEN
+            blocked := true;
+        ELSE
+            RAISE;
+        END IF;
+    END;
+
+    IF NOT blocked THEN
+        RAISE EXCEPTION 'same_as_locus inference survived deletion of its evidence locus';
+    END IF;
+END $;
+SET CONSTRAINTS claim_evidence_locus_inverse_consistency DEFERRED;
+
 -- Existing publication views must not silently expose the prototype fields/tables.
 DO $$
 DECLARE n bigint;
