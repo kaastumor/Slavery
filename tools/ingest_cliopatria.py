@@ -144,6 +144,37 @@ def verify_expected_profile(features: list[dict], expected_profile_path: Path) -
         )
 
 
+def configure_postgis_search_path(conn) -> str:
+    """Put the actual PostGIS extension schema ahead of atlas table/composite names."""
+    from psycopg import sql
+
+    with conn.cursor() as cur:
+        cur.execute(
+            """
+            SELECT n.nspname
+            FROM pg_extension e
+            JOIN pg_namespace n ON n.oid=e.extnamespace
+            WHERE e.extname='postgis'
+            """
+        )
+        row = cur.fetchone()
+        if row is None:
+            raise RuntimeError("PostGIS extension is not installed")
+        postgis_schema = row[0]
+
+        ordered = []
+        for name in (postgis_schema, "pg_catalog", "public", "extensions", "staging", "raw", "atlas", "audit"):
+            if name not in ordered:
+                ordered.append(name)
+        cur.execute(
+            sql.SQL("SET search_path TO {}").format(
+                sql.SQL(", ").join(sql.Identifier(name) for name in ordered)
+            )
+        )
+    conn.commit()
+    return postgis_schema
+
+
 def prepare_schema(conn, schema_sql: Path) -> None:
     with conn.cursor() as cur:
         cur.execute(schema_sql.read_text(encoding="utf-8"))
@@ -495,6 +526,7 @@ def main() -> int:
 
     action = "inserted"
     with psycopg.connect(args.dsn, autocommit=False) as conn:
+        postgis_schema = configure_postgis_search_path(conn)
         prepare_schema(conn, args.schema_sql)
         existing = _existing_dataset(conn)
         if existing is not None:
@@ -525,6 +557,7 @@ def main() -> int:
             "size_bytes": len(data),
         },
         "database": counts,
+        "postgis_schema": postgis_schema,
         "promotion": "none; disposable raw/staging integration only",
     }
     rendered = json.dumps(report, indent=2, sort_keys=True) + "\n"
