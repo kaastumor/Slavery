@@ -49,13 +49,13 @@ Research coverage should explain why a claim is missing where possible: for exam
 
 A missing positive claim must never be rendered as a negative historical fact.
 
-### No claim versus P0
+### No claim versus legacy P0
 
 No territorial-practice claim means the atlas currently has no usable classification for that place/time.
 
-`P0` is stronger and should be used only when a reviewed territorial-practice assessment explicitly records that the evidence package does not currently support a usable P1–P4 classification.
+P0 remains meaningful only as a **legacy compatibility assessment** when an existing reviewed territorial-practice record explicitly says the old P0–P4 framework could not assign P1–P4. It is not the target post-M1 model and must not be inferred from a new inconclusive outcome.
 
-Do not manufacture P0 rows merely to fill the map.
+Do not manufacture P0 rows merely to fill the map, and do not backfill the new post-M1 dimensions from a legacy P-level alone.
 
 ## 4. How the atlas resolves conflicting evidence
 
@@ -105,49 +105,81 @@ Do not use `disputed` merely because:
 
 Those limitations should be preserved without erasing the best-supported designation.
 
-## 5. Practice intensity: P0–P4
+## 5. Territorial-practice semantics after M1
 
-### P0 — Unknown / no usable classification
-A reviewed assessment concludes that the evidence package does not currently support a usable P1–P4 territorial-practice classification. This does not mean absence.
+The target model does **not** reduce territorial practice to one universal ordinal intensity.
 
-### P1 — Isolated direct attestation
-At least one bounded, credible direct attestation exists, but the evidence package does not establish repetition, institutionalization, or broader structural significance.
+A reviewed territorial-practice claim may carry independent assessments of:
 
-### P2 — Recurrent / repeatedly evidenced practice
-The evidence package supports recurring practice beyond an isolated event. Multiple independent attestations can support P2, but raw document count is never sufficient by itself. Specialist synthesis may also establish recurrence from an evidence corpus.
+### Evidence package
 
-### P3 — Systemic / institutional
-Specialist interpretation and the underlying evidence strongly support an institutionalized, recurring, legally or socially structured practice extending beyond isolated incidents.
+- **attestation pattern** — whether the reviewed package is a single bounded attestation, recurrent attestation, multiple independent attestations, mixed/unclear, or still unassessed;
+- **interpretive basis** — whether the working interpretation rests principally on source-native/primary evidence, specialist synthesis, a mixed primary-and-specialist package, or remains unassessed.
 
-### P4 — Widespread / structurally major
-Specialist scholarship supports the practice as widespread, structurally important, or deeply embedded in the relevant political, economic or social system for the mapped period.
+These are different questions. A specialist synthesis may interpret one attestation, recurrent attestations, or many independent evidentiary bases. Source count does not establish independence.
 
-### Critical rule
-P-level is a synthesis of the historical evidence package and specialist interpretation. It is not calculated mechanically from number of records, surviving documents, voyages, captives, citations, database rows, or archive density.
+### Historical characterization
 
-### Unassigned P-level versus P0
-A database `NULL` practice level means that no P0–P4 assessment has yet been recorded for that claim. `P0` is different: it is an explicit reviewed assessment that no usable practice classification is currently available.
+Keep the following dimensions independent because they may be simultaneously true or independently unknown:
 
-A claim may have a positive historical designation while still having `practice_level = NULL` if the existence/classification of the practice is defensible but its intensity has not yet been assessed.
+- **occurrence pattern** — bounded occurrence, recurrent practice, continuous-period assertion, or unassessed;
+- **institutionalization** — whether institutional features are positively supported, or remain unassessed;
+- **prevalence scope** — localized, broader, widespread, or unassessed;
+- **structural significance** — whether structurally major significance is positively supported, or remains unassessed.
 
-## 6. Coverage state
+Do not infer one dimension mechanically from another. In particular:
 
-Use a separate research-process field:
+- recurrence does not prove institutionalization;
+- institutionalization does not prove widespread prevalence;
+- widespread prevalence does not by itself prove structural importance;
+- any of these may remain unassessed while another is positively supported.
 
-- `not_researched`
-- `source_identified`
-- `reviewed`
-- `classified`
-- `disputed`
-- `researched_inconclusive`
+### Assertion form
 
-Coverage state describes the state of the project's research, not historical prevalence.
+Distinguish a bounded **event/process** assertion from an enduring **practice/status** assertion.
 
-`researched_inconclusive` means the project actively looked and current evidence is insufficient for a defensible historical claim or classification. It is not absence.
+A capture, sale, transfer or enslavement event can be strong evidence without, by itself, establishing recurrent or polity-wide territorial practice.
 
-`disputed` should be reserved for a genuine unresolved historiographical or evidentiary dispute relevant to the classification. It should not be the default state for any source conflict.
+### Legacy P0–P4 compatibility
 
-The legacy broad audit labels S / P / D / RI can remain as high-level project-management summaries, but they must not replace row-level coverage state.
+P0–P4 is retained only to reproduce and interpret historical releases that already use it.
+
+- P0 = explicit reviewed legacy no-usable-P1–P4 classification; not absence.
+- P1–P4 retain their historical release meanings.
+- NULL = no legacy P-level assessment recorded.
+- no new post-M1 dimension may be inferred from P0–P4 alone;
+- no new P-level may be mechanically derived from the post-M1 dimensions;
+- the future public comparison model must not use P0–P4 as its universal target ordinal.
+
+Historical releases remain immutable. A future release may carry both legacy compatibility values and the new dimensions where each was explicitly reviewed.
+
+## 6. Research stage and classification outcome
+
+The old single coverage_state field mixed workflow progress with epistemic result. The target model keeps them separate.
+
+### Research stage
+
+Research stage describes project workflow only, for example:
+
+- not_researched
+- source_identified
+- under_review
+- review_complete
+
+### Classification outcome
+
+Classification outcome describes the result of synthesis, for example:
+
+- unassessed
+- classified
+- disputed
+- inconclusive
+
+These dimensions are orthogonal. A claim can be review_complete + disputed or review_complete + inconclusive.
+
+Inconclusive does not mean absence and does not mechanically create legacy P0.
+
+The legacy broad audit labels S / P / D / RI and legacy row-level coverage_state values may remain for historical release/migration compatibility, but they are not the target post-M1 analytical model and must not be used to infer historical prevalence.
 
 ## 7. Legal status
 
@@ -164,30 +196,25 @@ Legal recognition establishes that a category, rule or institution was recognize
 
 Legal abolition or prohibition does not prove that practice ended immediately.
 
-## 8. Practice type taxonomy
+## 8. Practice concepts are faceted, not one exclusive taxonomy
 
-Do not collapse the following into one field:
+The atlas must preserve historically meaningful distinctions without forcing unlike properties into one flat exclusive list.
 
-- slavery / enslavement
-- chattel/property slavery where specifically evidenced
-- hereditary slavery
-- debt bondage / debt servitude
-- forced labour
-- state forced labour
-- penal labour
-- corvée or compulsory public labour
-- serfdom / tied dependency
-- domestic servitude
-- military slavery
-- sexual slavery
-- captive-taking / captive incorporation
-- slave trading / sale / purchase
-- trafficking where historically appropriate
-- other slavery-like or servile dependency
+A territorial claim may therefore carry zero or more reviewed **practice facets**. Initial facet dimensions include:
 
-The taxonomy can grow, but additions require a definition and decision-log entry.
+- **status / condition** — e.g. an enslaved or servile status where specialist interpretation supports it;
+- **function / context** — e.g. domestic, military, agricultural, herding, sexual exploitation, or other evidenced function;
+- **property / legal powers** — e.g. sale, pricing, alienability, ownership-like legal treatment where specifically evidenced;
+- **transmission / exit** — e.g. hereditary transmission, status flexibility, manumission/exit conditions where supported;
+- **process** — e.g. captive-taking, enslavement, sale, transfer or trafficking processes.
 
-Historical terminology should not be mechanically translated into one of these categories. The atlas should follow the best-supported specialist interpretation and preserve terminological ambiguity where relevant.
+Legacy headline categories such as slavery/enslavement, debt bondage, forced labour, penal labour, corvée, serfdom, military slavery, domestic servitude, captive-taking and slave trading remain useful labels and migration values. They must not be treated as if they all describe the same ontological dimension.
+
+A bounded process such as capture or sale does not automatically establish an enduring status, institutionalization, recurrence or territorial prevalence.
+
+The controlled vocabulary should grow only when a real research case requires a defined concept. M1 establishes the **faceted structure**, not a final exhaustive ontology.
+
+Historical terminology should not be mechanically translated into an atlas facet. Preserve source-native terminology and follow the best-supported specialist interpretation, including ambiguity or disagreement.
 
 ## 9. Evidence is claim-specific
 
@@ -223,19 +250,32 @@ Use a generic spatial identity for the target, while preserving `POLITY` as a sp
 
 Do not enlarge a narrow evidence target merely because a convenient whole-polity geometry exists.
 
-## 12. Historical time includes precision and uncertainty
+For claim semantics, distinguish:
 
-A mapped/queryable interval is not the same thing as exact historical dating.
+- **evidence locus** — the place(s) where the underlying observation/source is anchored;
+- **inference extent** — the place(s) over which the reviewed historical assertion is actually justified.
 
-The data model must preserve whether evidence is:
+If inference extent is broader than the evidence locus, store a reviewed generalization basis and rationale. Geometry availability, spatial containment, or a convenient polity polygon is never by itself a generalization basis.
 
-- exactly dated
-- approximately dated
-- bounded to a broad period/century
-- open-ended before/after a terminus
-- disputed between alternative dates
-- otherwise uncertain
+## 12. Historical time separates applicability from precision
 
-A broad interval used to encode competing possible dates must not be interpreted as evidence continuously applying throughout that entire interval.
+A broad queryable interval is not the same thing as a historical assertion that a condition held continuously throughout that interval.
 
-The web application may use normalized integer ranges for filtering while still displaying the original historical precision to users.
+The target model keeps at least three temporal concepts distinct:
+
+1. **query window** — outer normalized bounds used to find candidate records efficiently;
+2. **applicability semantics** — what dates/intervals are positively asserted, for example a continuous interval, bounded occurrence, alternative dates, an open terminus, or unknown applicability;
+3. **temporal precision/certainty** — whether the dating is exact, approximate, broad, disputed, or otherwise uncertain.
+
+Changing precision alone must not change selected-year truth.
+
+Examples:
+
+- competing possible document dates may share one broad query window but must not create continuous presence between those alternatives;
+- a broad-period specialist synthesis may support continuous applicability across a period even though its boundary dates are imprecise;
+- an approximately dated bounded occurrence remains bounded rather than filling the whole uncertainty envelope.
+
+Normalized integer ranges remain useful retrieval/indexing structures. A selected-year public state must evaluate applicability semantics rather than treating query-window membership as sufficient truth.
+
+Preserve source-faithful date text and uncertainty. Do not invent probability distributions merely because dates are uncertain.
+
