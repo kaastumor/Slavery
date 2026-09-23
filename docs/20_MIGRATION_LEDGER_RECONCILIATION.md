@@ -18,6 +18,6 @@ Actual platform-ledger mutation is not performed by this change. Production writ
 
 ## 2026-09-23 integrity migration follow-up
 
-Production now also records `0028_claim_kind_integrity` at platform version `20260923131112`. The repository migration of the same name adds the D-060 semantic-kind guard and a transactional regression test. This is an additive integrity migration; it does not repair or rewrite the older platform-ledger gaps for 0012–0014, and the three historical 0016 retry rows remain preserved.
+Production now also records `0028_claim_kind_integrity` at platform version `20260923131112`. Foundation CI then identified the need to preserve D-051's private-function boundary for the new helpers; append-only `0029_claim_kind_function_privileges` records the explicit `PUBLIC` execute revocation. The live platform ledger currently contains two 0029 entries (`20260923134302` and `20260923134428`). Because the revoke is idempotent, this does not change effective schema semantics; both entries are retained as historical retry/invocation evidence rather than deleted. These additions do not repair or rewrite the older platform-ledger gaps for 0012–0014, and the three historical 0016 retry rows remain preserved.
 
 The v0.6.1 controlled-seed data migration performed on 2026-09-23 is an auditable data ingest/reconciliation run, not a schema migration entry. It therefore does not receive a fabricated Supabase schema-migration ledger row.
