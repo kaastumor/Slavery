@@ -307,7 +307,6 @@ def build(data:dict[str,Any],repo_root:Path)->dict[str,Any]:
     }
     if result["counts"]["planned_c1_total"]>36:raise SystemExit("C1 ceiling exceeded")
     if result["counts"]["new_c0_total"]>120:raise SystemExit("C0 ceiling exceeded")
-    if not all(result["balance_check"].values()):raise SystemExit(f"balance failed: {result['balance_check']}")
     return result
 
 def main():
@@ -319,6 +318,24 @@ def main():
     out=build(load_cliopatria(a.source_zip),a.repo_root)
     a.output.parent.mkdir(parents=True,exist_ok=True)
     a.output.write_text(json.dumps(out,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
-    print(json.dumps({"counts":out["counts"],"balance":out["balance_check"]},indent=2))
+    print(json.dumps({
+        "counts":out["counts"],
+        "balance":out["balance_check"],
+        "polity_cell_diagnostics":[
+            {
+                "cell_id":c["cell_id"],
+                "source_anchor_year":c["source_anchor_year"],
+                "sector":c["sector"],
+                "candidate_count_after_prior_exclusion":c["candidate_count_after_prior_exclusion"],
+                "status":c["status"],
+                "selected_c1_target_ids":[t["target_id"] for t in c["targets"] if t["tier"]=="C1"],
+                "c0_target_ids":[t["target_id"] for t in c["targets"] if t["tier"]=="C0"],
+                "target_names":[t["source_name"] for t in c["targets"]],
+            }
+            for c in out["polity_cells"]
+        ],
+    },indent=2))
+    if not all(out["balance_check"].values()):
+        raise SystemExit(f"balance failed: {out['balance_check']}")
 
 if __name__=="__main__":main()
