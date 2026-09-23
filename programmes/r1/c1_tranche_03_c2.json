@@ -1,0 +1,57 @@
+{
+  "programme": "R1",
+  "stage": "midpoint_closure_c1_tranche_03",
+  "issue": 170,
+  "status": "internal_c2_resolution_pending_full_tranche_adversarial_replay",
+  "review_date": "2026-09-24",
+  "packets": [
+    {
+      "target_id": "R1:L:COV2:1300:E",
+      "target_label": "Pandya Empire",
+      "anchor": "1300 CE",
+      "trigger": [
+        "spatial/generalization risk",
+        "legacy positive reversal requiring deeper target-fit review"
+      ],
+      "c2_disposition": "resolved_to_inconclusive_spatial_applicability",
+      "classification_outcome": "inconclusive",
+      "territorial_practice_release_state": "not_established_for_frozen_pandya_1300_frame_from_reviewed_packet",
+      "bounded_proposition": "Medieval Tamil South India around the thirteenth century contains secure inscriptional evidence of slave sale, temple/monastery slaveholding and hereditary unfree service. A deeper Pandya-specific check recovered substantial contemporary Pandya inscriptional corpora and polity attestations but did not recover a slavery/coercion record that safely synchronizes the decisive slave-status evidence to the frozen Pandya Empire frame at exactly 1300. The release therefore preserves the strong regional context but does not publish a Pandya-1300 territorial-practice claim.",
+      "required_abstention": "Do not use the Pandya Empire's political reach to absorb every contemporary Tamil slave inscription; do not treat absence of a recovered Pandya-specific slave record as historical absence; do not convert temple-centered archive density into empire-wide prevalence.",
+      "deeper_reasoning": [
+        "Orr's specialist synthesis is decisive that literal slavery/unfree statuses are securely documented in medieval Tamil inscriptions and rise substantially in the thirteenth century.",
+        "The same synthesis states that almost all twelfth–thirteenth-century slave inscriptions are concentrated in present-day Thanjavur district and warns about what the temple inscription corpus can and cannot reveal.",
+        "Targeted C2 searches for atimai/aṭimai/āl-vilai language under named contemporary Pandya rulers did recover direct Pandya-period epigraphic corpora, but not a slavery transaction securely tied to the frozen target/year.",
+        "Direct Pandya inscriptions demonstrate that the dynasty was recording grants, taxation, temple affairs and administration in relevant regions, but those records are not slavery evidence merely because they are contemporaneous.",
+        "A political-geography bridge from Thanjavur to the Pandya frame would still not synchronize the dates and governing authority of Orr's individual slave records without source-level checking.",
+        "Because the fresh claim is inconclusive rather than absence, failure to recover that synchronization does not require a new source search indefinitely; it is a bounded research-coverage limitation."
+      ],
+      "source_dependencies": [
+        {
+          "source_version_ref": "doi:10.1017/9781139024723.013",
+          "role": "specialist_slavery_synthesis_and_spatial_limitation",
+          "claim_fitness": "production_grade",
+          "direction": "supports_and_qualifies",
+          "independence_group": "orr-medieval-tamil-slavery"
+        },
+        {
+          "source_version_ref": "SII-v22-Pandya-corpus",
+          "role": "contemporary_pandya_epigraphic_target_check",
+          "claim_fitness": "usable_with_limitation",
+          "direction": "context_and_search_limit",
+          "independence_group": "asi-sii-pandya-inscriptions"
+        },
+        {
+          "source_version_ref": "DHARMA-SII-Pandya-digital-editions",
+          "role": "digital_epigraphic_target_check",
+          "claim_fitness": "usable_with_limitation",
+          "direction": "context_and_search_limit",
+          "independence_group": "asi-sii-pandya-inscriptions"
+        }
+      ],
+      "independence_note": "The Pandya inscription interfaces are editions/indexes of overlapping Archaeological Survey of India epigraphic material and are one source family for independence purposes. They are used to test target fit, not as independent negative attestations.",
+      "inference_rule": "Retain strong contemporary Tamil slavery context; publish Pandya 1300 as researched-inconclusive for target-specific territorial practice. Missing synchronization is not absence.",
+      "release_ready_after_internal_adversary": true
+    }
+  ]
+}
