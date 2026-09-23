@@ -3,7 +3,7 @@
 **Gate:** #100  
 **Atomic task:** #105  
 **Date:** 2026-09-23  
-**Status:** revise — one corrective task (#112) is required before the M1 Project Health Check
+**Status:** survives after correction — ready for the M1 Project Health Check
 
 ## Question
 
@@ -230,17 +230,58 @@ Could we introduce probabilistic spatiotemporal modeling?
 
 **Park.** M1 shows semantic ambiguity, not evidence for defensible probability distributions.
 
-## Gate decision
+## Corrective re-attack after #112
 
-**REVISE.**
+#112 revised the experimental prototypes rather than renaming the v1 fields.
 
-M1 has produced real value, but the integrated result does not yet satisfy the gate because three prototype axes remain semantically overloaded and legacy map semantics still need an explicit compatibility boundary.
+### Re-attack A — can recurrence and institutionalization coexist?
+**Disposition: survives**
 
-Corrective issue: **#112 — M1 correct semantic axes and legacy map boundary**.
+Yes. v2 represents occurrence pattern, institutionalization, prevalence scope, and structural significance independently. The Hittite fixture is recurrent and institutionally supported while prevalence and structural significance remain unassessed. No ordinal inference is required.
 
-After #112:
-1. rerun/update this integrated adversarial result;
-2. close #105 only when the corrected prototype resolves these findings without new unjustified complexity;
-3. then #106 may run the Project Health Check and choose continue / redirect / stop.
+### Re-attack B — can specialist synthesis coexist with different attestation patterns?
+**Disposition: survives**
 
-No new strategic horizon is authorized by this document.
+Yes. Attestation pattern and interpretive basis are independent. The model can represent specialist synthesis over a single bounded attestation, recurrent attestations, multiple independent attestations, or mixed/unclear evidence without using one field for both concepts.
+
+### Re-attack C — can approximation change selected-year truth?
+**Disposition: survives**
+
+No. v2 removes `approximate_period` from applicability modes. Temporal precision is independent metadata. The tests demonstrate that exact and approximate precision yield the same truth behavior when applicability is otherwise identical, while an approximate bounded occurrence does not fill its outer query window.
+
+### Re-attack D — does legacy P0–P4 still define the future comparative ontology?
+**Disposition: survives with boundary**
+
+No. v2 explicitly marks P0–P4 as compatibility-only legacy data, forbids derivation of new dimensions from the legacy level, rejects P0 inference from inconclusive outcomes, and requires future serving integration before post-M1 semantics depend on the new model.
+
+The current preview is intentionally unchanged and therefore remains a reproducible legacy preview rather than the target post-M1 interface.
+
+### Re-attack E — did the correction add unjustified complexity?
+**Disposition: survives**
+
+The correction adds fields/fixture dimensions only; it does not add a database migration, service, framework, probabilistic model, graph store, or new release path. The universal claim/provenance/release architecture remains intact.
+
+## Final gate decision
+
+**SURVIVES AFTER CORRECTION.**
+
+The integrated M1 result now satisfies the methodological-hardening gate at prototype level:
+
+- the original false-equivalence/false-precision attacks are representable and machine-tested;
+- the revised semantic dimensions are orthogonal enough for the tested real/synthetic cases;
+- temporal applicability is separate from precision;
+- evidence locus is separate from inference extent;
+- complete Cliopatria is pinned/profiled without silent calendar normalization;
+- P0–P4 is bounded to legacy compatibility rather than retained as the target universal ordinal.
+
+Important unresolved experiments remain, but they are not hidden gate failures:
+
+- Cliopatria source-year zero/calendar mapping;
+- selected-year entity/RELATION/composite resolution from the complete corpus;
+- serving/UI migration from legacy P-level/range semantics to the post-M1 model;
+- mature controlled vocabularies for the new facets/dimensions;
+- modern/living-person sensitive-data policy.
+
+These belong in the next horizon only if #106 concludes that continuing is still justified.
+
+No new strategic horizon is authorized by this document. #106 must now run the Project Health Check and explicitly choose continue / redirect / stop.
