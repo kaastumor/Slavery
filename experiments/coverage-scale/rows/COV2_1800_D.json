@@ -1,0 +1,55 @@
+{
+  "cell_id": "COV2:1800:D",
+  "frame": "polity_rank2",
+  "anchor_year": 1800,
+  "target_label": "Kingdom of Georgia",
+  "source_sample": {
+    "source_name": "Kingdom of Georgia",
+    "source_row_ordinal": 10516,
+    "source_from_year": 1800,
+    "source_to_year": 1802,
+    "sampling_sector": "D",
+    "selection_rank": 2
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "The sampled target is chronologically invalid: the linked medieval Kingdom of Georgia ended centuries before 1800.",
+  "strongest_unsupported_proposition": "Do not substitute Kartli-Kakheti, Russian Georgia or another successor polity and attach its slavery/serfdom history to the sampled row.",
+  "territorial_practice_summary": "No practice claim because target identity/time fails.",
+  "legal_state_summary": "",
+  "external_network_summary": "",
+  "terminology_category_qualification": "",
+  "temporal_scope_precision": "Wikidata gives the Kingdom of Georgia inception 1008 and dissolution 1466, incompatible with the sampled 1800 interval.",
+  "evidence_locus": "Invalid sampled target at 1800",
+  "inference_extent": "None until upstream identity/time correction.",
+  "evidence_classes": [
+    "reference-data identity check"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "none",
+    "palgrave": "none",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Kingdom of Georgia (Q154667)",
+      "author": "Wikidata",
+      "year": null,
+      "url_or_identifier": "https://www.wikidata.org/wiki/Q154667",
+      "source_role": "structured_dataset",
+      "direction": "challenges",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "Cliopatria 1800–1802 row conflicts with linked medieval polity identity."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 0,
+    "primary_or_dataset_items_used": 1,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

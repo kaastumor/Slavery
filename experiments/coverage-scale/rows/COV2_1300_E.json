@@ -1,0 +1,53 @@
+{
+  "cell_id": "COV2:1300:E",
+  "frame": "polity_rank2",
+  "anchor_year": 1300,
+  "target_label": "Pandya Empire",
+  "source_sample": {
+    "source_name": "Pandya Empire",
+    "source_row_ordinal": 5770,
+    "source_from_year": 1260,
+    "source_to_year": 1313,
+    "sampling_sector": "E",
+    "selection_rank": 2
+  },
+  "coverage_outcome": "bounded_supported",
+  "strongest_bounded_proposition": "Specialist synthesis supports slavery and dependency in medieval Tamil South India, including likely extensive enslaved agricultural labour from the thirteenth century onward; this is temporally and regionally relevant to the Pandya-period target.",
+  "strongest_unsupported_proposition": "Do not infer a uniform slavery regime or prevalence across the entire Pandya polity from Tamil inscriptional evidence.",
+  "territorial_practice_summary": "Slavery/dependency and enslaved agricultural labour are supported in the Tamil-region context around the 13th century.",
+  "legal_state_summary": "The evidence is primarily inscriptional/social rather than a single polity-wide legal code.",
+  "external_network_summary": "",
+  "terminology_category_qualification": "Slavery operated inside a wider dependency/caste/temple/agrarian hierarchy; categories were heterogeneous.",
+  "temporal_scope_precision": "The Cambridge synthesis directly covers South India 500–1500 and identifies thirteenth-century onward agricultural slavery.",
+  "evidence_locus": "Tamil South India under the broad Pandya-period context",
+  "inference_extent": "Regional bounded claim; no empire-wide prevalence estimate.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "direct",
+    "palgrave": "direct",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Slavery and Dependency in Medieval South India",
+      "author": "Leslie C. Orr",
+      "year": 2021,
+      "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-and-dependency-in-medieval-south-india/3F339BF4D4E02BD8073D2F27FA0BE7EE",
+      "source_role": "specialist_synthesis",
+      "direction": "supports",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 1,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

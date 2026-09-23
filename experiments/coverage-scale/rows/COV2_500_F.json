@@ -1,0 +1,53 @@
+{
+  "cell_id": "COV2:500:F",
+  "frame": "polity_rank2",
+  "anchor_year": 500,
+  "target_label": "Goguryeo",
+  "source_sample": {
+    "source_name": "Goguryeo",
+    "source_row_ordinal": 1905,
+    "source_from_year": 490,
+    "source_to_year": 522,
+    "sampling_sector": "F",
+    "selection_rank": 2
+  },
+  "coverage_outcome": "bounded_supported",
+  "strongest_bounded_proposition": "Korean historical synthesis identifies nobi as the lowest status group in Goguryeo, with war captivity, punishment/family liability and debt among pathways into the status.",
+  "strongest_unsupported_proposition": "Do not assume later Goryeo/Joseon nobi law, prevalence or property rules applied unchanged to Goguryeo c.500.",
+  "territorial_practice_summary": "A recognized unfree/nobi status is supported in Goguryeo.",
+  "legal_state_summary": "Historical records cited in the Korean national history synthesis describe criminal/family enslavement and debt-related pathways.",
+  "external_network_summary": "War captivity is one documented source of nobi.",
+  "terminology_category_qualification": "Nobi is historically specific; later debates over Korean slavery cannot be projected unchanged backward.",
+  "temporal_scope_precision": "The synthesis concerns Goguryeo's Three Kingdoms social structure and is directly relevant to the 500 CE target.",
+  "evidence_locus": "Goguryeo",
+  "inference_extent": "Status existence/pathways; no prevalence estimate.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "direct",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+  "sources": [
+    {
+      "title": "New History of Korea — Goguryeo social structure: Nobi",
+      "author": "National Institute of Korean History",
+      "year": null,
+      "url_or_identifier": "https://db.history.go.kr/diachronic/level.do?levelId=nh_005_0050_0040_0010_0050",
+      "source_role": "specialist_synthesis",
+      "direction": "supports",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 1,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

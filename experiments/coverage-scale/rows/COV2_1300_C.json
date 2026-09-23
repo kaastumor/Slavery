@@ -1,0 +1,71 @@
+{
+  "cell_id": "COV2:1300:C",
+  "frame": "polity_rank2",
+  "anchor_year": 1300,
+  "target_label": "Mamluk Sultanate",
+  "source_sample": {
+    "source_name": "Mamluk Sultanate",
+    "source_row_ordinal": 6047,
+    "source_from_year": 1294,
+    "source_to_year": 1343,
+    "sampling_sector": "C",
+    "selection_rank": 2
+  },
+  "coverage_outcome": "bounded_supported",
+  "strongest_bounded_proposition": "Slavery was structurally embedded in the Mamluk Sultanate around 1300: military slaves formed the ruling military-political elite while domestic and labour slavery also existed in Egypt and Syria.",
+  "strongest_unsupported_proposition": "Do not equate elite mamluk military status with every enslaved person's experience or infer one prevalence rate across Egypt and Syria.",
+  "territorial_practice_summary": "Military, domestic and labour slavery are directly supported.",
+  "legal_state_summary": "Islamic legal/manumission frameworks structured slavery but did not make all statuses equivalent.",
+  "external_network_summary": "The sultanate depended on imported enslaved people for military and domestic markets.",
+  "terminology_category_qualification": "Mamluk can describe a particular military-slave trajectory; most enslaved people were not elite mamluks.",
+  "temporal_scope_precision": "Sources directly cover the Mamluk Sultanate 1250–1517 and therefore the 1300 anchor.",
+  "evidence_locus": "Mamluk Egypt and Syria",
+  "inference_extent": "Institutional occurrence and multiple forms; no one prevalence score.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "direct",
+    "palgrave": "direct",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Slavery in the Mamluk Sultanate",
+      "author": "Stephan Conermann",
+      "year": 2021,
+      "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-in-the-mamluk-sultanate/BB8E3CF15101D2338B67518033C44D47",
+      "source_role": "specialist_synthesis",
+      "direction": "supports",
+      "locator": ""
+    },
+    {
+      "title": "Slavery in Egypt under the Mamluks",
+      "author": "Adam Ali",
+      "year": 2023,
+      "url_or_identifier": "https://academic.oup.com/edited-volume/61663/chapter-abstract/553453305",
+      "source_role": "specialist_synthesis",
+      "direction": "supports",
+      "locator": ""
+    },
+    {
+      "title": "Domestic slavery in Syria and Egypt, 1200–1500",
+      "author": "Jan Hinrich Hagedorn",
+      "year": 2019,
+      "url_or_identifier": "https://research-repository.st-andrews.ac.uk/handle/10023/18438",
+      "source_role": "specialist_synthesis",
+      "direction": "supports",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 3,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

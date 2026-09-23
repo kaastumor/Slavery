@@ -1,0 +1,66 @@
+{
+  "cell_id": "COV2:-500:C",
+  "frame": "polity_rank2",
+  "anchor_year": -500,
+  "target_label": "Hadhramaut",
+  "source_sample": {
+    "source_name": "Hadhramaut",
+    "source_row_ordinal": 189,
+    "source_from_year": -700,
+    "source_to_year": -351,
+    "sampling_sector": "C",
+    "selection_rank": 2
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "Ancient South Arabian epigraphy demonstrates subordinate, captive and enslaved statuses, including later Hadhramitic attestations, but the packet does not securely establish Hadhramaut slavery at c.500 BCE.",
+  "strongest_unsupported_proposition": "Do not move second-/third-century CE Hadhramitic status evidence backward seven centuries.",
+  "territorial_practice_summary": "Ancient South Arabian slavery/subordination is a valid regional context; target-specific 500 BCE practice remains unresolved.",
+  "legal_state_summary": "",
+  "external_network_summary": "",
+  "terminology_category_qualification": "ʿbd, ʾdm, captive and servant terms require contextual reading.",
+  "temporal_scope_precision": "The directly cited Hadhramitic status inscription is late second–third century CE, much later than the anchor.",
+  "evidence_locus": "Hadhramaut",
+  "inference_extent": "No inference beyond the stated target/evidence locus.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": [
+      "DASI"
+    ]
+  },
+  "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Slavery in First Millennium Arabia: Epigraphy and the Qurʾān",
+      "author": "Valentina A. Grasso",
+      "year": 2023,
+      "url_or_identifier": "https://doi.org/10.1515/mill-2023-0005",
+      "source_role": "specialist_article",
+      "direction": "qualifies",
+      "locator": ""
+    },
+    {
+      "title": "Three new inscriptions from Hadhramaut",
+      "author": "H. St. J. B. Philby",
+      "year": 1945,
+      "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/three-new-inscriptions-from-hadhramaut/746101FC71559623D61E09B70A36E079",
+      "source_role": "specialist_article",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "Temporal gap between anchor and direct Hadhramitic status evidence."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 2,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

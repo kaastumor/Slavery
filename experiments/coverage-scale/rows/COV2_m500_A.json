@@ -1,0 +1,55 @@
+{
+  "cell_id": "COV2:-500:A",
+  "frame": "polity_rank2",
+  "anchor_year": -500,
+  "target_label": "Zapotec Civilization",
+  "source_sample": {
+    "source_name": "Zapotec Civilization",
+    "source_row_ordinal": 294,
+    "source_from_year": -500,
+    "source_to_year": -292,
+    "sampling_sector": "A",
+    "selection_rank": 2
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "Monte Albán's early Zapotec state shows warfare, conquest and captive/sacrifice imagery around 500 BCE, but the packet does not establish an enslaved labour status or slavery institution.",
+  "strongest_unsupported_proposition": "Do not turn war captives, ritual killing, hierarchy or public construction labour into slavery without status evidence.",
+  "territorial_practice_summary": "No target-specific slavery practice is established at c.500 BCE.",
+  "legal_state_summary": "",
+  "external_network_summary": "Conquest/captive evidence exists but does not by itself establish slave trading or territorial slaveholding.",
+  "terminology_category_qualification": "Captive, sacrificed person, corvée/public labourer and slave are not interchangeable categories.",
+  "temporal_scope_precision": "The archaeological context directly covers Early Monte Albán around 500–300 BCE.",
+  "evidence_locus": "Zapotec Civilization",
+  "inference_extent": "No inference beyond the stated target/evidence locus.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Origins of the State — Oaxaca Archaeology",
+      "author": "University of Michigan Oaxaca Archaeology Project",
+      "year": null,
+      "url_or_identifier": "https://sites.lsa.umich.edu/oaxaca-archaeology/origins-of-the-state/",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "No slavery-status evidence found within the bounded packet."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 1,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}
