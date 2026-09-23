@@ -973,3 +973,279 @@ This benchmark therefore **weakens the case for a large discovery/application pl
 
 It is still not a real external-user evaluation and must not be overstated.
 
+
+
+---
+
+## Chunk 8 — Shrinkage and project-system repairs
+
+The review applies subtraction where evidence is already sufficient. It does not wait for a future backlog item when the safe fix is clear.
+
+### Repairs made in this review
+
+1. **Active research workflow no longer assigns new P0–P4 values.**
+   - `docs/06_RESEARCH_WORKFLOW.md` now instructs post-M1 independent dimensions.
+   - `docs/17_SOURCE_EVIDENCE_LIFECYCLE.md` now treats P0–P4 as legacy-release compatibility only.
+   - This closes a real current-owner contradiction with D-058.
+
+2. **Automatic preview self-heal is retired.**
+   - `.github/workflows/mvp-self-heal.yml` is removed.
+   - The non-canonical preview no longer has authority to restart the Supabase project automatically after a monitor failure.
+   - Static fallback remains the availability safety net.
+
+3. **Live preview monitoring is reduced from every 15 minutes to weekly.**
+   - The site is a non-canonical demonstration with no demonstrated user-critical availability requirement.
+   - Monitoring still detects long-lived breakage without simulating a production SRE obligation.
+
+4. **Production geometry promotion is now explicit/manual.**
+   - The workflow is `workflow_dispatch` only.
+   - Exact-artifact/provenance/availability gates remain.
+   - This reduces external mutation risk while GitHub environment protection remains unavailable under #43.
+
+5. **Duplicate main web build is removed.**
+   - `web-mvp.yml` remains a PR build gate.
+   - `deploy-pages.yml` owns main web build/deployment.
+
+6. **Lightweight sanitation is strengthened.**
+   - PFX/P12 key containers are rejected;
+   - machine-local user paths are rejected;
+   - unexpectedly large tracked files above 5 MB fail closed;
+   - regression tests cover those cases.
+
+### Repairs deliberately not faked
+
+#### npm lockfile
+
+The repository has no historical `web/package-lock.json`. The current environment cannot safely resolve npm registry metadata to create the real transitive lock state.
+
+The acceptance criterion is therefore **not weakened** by inventing a lockfile.
+
+Until a genuine lockfile is generated in a networked development/CI boundary:
+
+- existing workflows retain their current `npm install --package-lock-only` → `npm ci` behavior;
+- frontend builds are direct-version pinned but not fully transitive-reproducible;
+- any future substantive web work should generate/commit the real lockfile before expanding the frontend.
+
+This is a bounded reproducibility debt, not justification for new package-management infrastructure.
+
+#### Remote branch pruning / branch protection
+
+The review can verify:
+
+- ~100 visible remote branches;
+- `main.protected=false`;
+- no visible rulesets.
+
+The connected GitHub integration lacks the repository-administration capability needed to establish branch protection or bulk-delete remote branches.
+
+The criterion remains at the correct execution boundary rather than being replaced with a proxy.
+
+### What can shrink conceptually
+
+The demonstrated contribution does **not** require:
+
+- an always-on application operations posture;
+- automatic cloud self-healing;
+- a generic collaborative research UI;
+- a generic temporal GIS platform;
+- a custom gazetteer/reconciliation system;
+- a graph/ontology platform;
+- a search engine/vector store;
+- continuous feature expansion of the public web client;
+- a production migration of every successful prototype.
+
+The valuable artifact can plausibly be:
+
+> methodology + reviewed corpus + adversarial/evaluation fixtures + reproducible releases + selected-year historical geography logic + a thin map/query/evidence-inspector view.
+
+PostgreSQL/PostGIS may remain the research/integrity engine behind that artifact. It need not define the public product identity.
+
+### Operational state to freeze
+
+Until a discriminating value experiment justifies more:
+
+- keep v0.6.1 canonical;
+- keep the current preview explicitly legacy/non-canonical;
+- keep M2 PostGIS semantics/resolver prototypes experimental;
+- do not production-migrate M2;
+- do not bulk-map all Cliopatria rows to atlas identities;
+- do not resume broad H2 evidence expansion merely to grow coverage;
+- do not add new serving infrastructure.
+
+### Backlog/governance shrinkage
+
+After this review is accepted, the live backlog should stop carrying pages of completed execution narratives.
+
+Historical detail already exists in:
+
+- issues/PRs;
+- Decisions Log;
+- M1/M2 gate records;
+- this wide-angle review.
+
+The canonical queue should become a short status/trigger document and may remain intentionally idle.
+
+**Checkpoint:** the project can materially shrink without losing its strongest demonstrated contribution. The repairs reduce mutation/operations burden while preserving research correctness.
+
+---
+
+## Chunk 9 — Final direction
+
+# Primary direction: **CONTINUE + SIMPLIFY**
+
+The project should continue, but **not in its previous default full-platform trajectory**.
+
+The real problem survives. The project has produced genuine methodological discoveries and a coherent evidence/provenance foundation. Stopping now would discard a distinctive domain corpus/method before its comparative value has been properly tested.
+
+However, continuing the incumbent full application/platform identity is not justified.
+
+The strongest evidence supports **Identity B: auditable evidence corpus + thin atlas**, with Identity C (method/benchmark corpus) retained as the explicit fallback if the map/query layer fails to demonstrate additional value.
+
+### What survived
+
+- the global/deep-time evidence problem;
+- claim-specific evidence and provenance;
+- source/version/raw lineage;
+- separation of law, practice, external participation, research coverage and geometry;
+- unknown/abstention/disagreement preservation;
+- post-M1 structural distinctions at experimental maturity;
+- historical time and spatial inference discipline;
+- complete pinned Cliopatria as raw geography infrastructure;
+- specialist geometry precedence with explicit provenance;
+- PostgreSQL/PostGIS as a justified research/integrity tool;
+- exact release reconstruction and immutable release discipline;
+- adversarial fixtures and revise/correct/re-attack practice;
+- a map/query surface as a plausible derived inspection tool.
+
+### What changed
+
+- the **full interactive application platform loses default status**;
+- public operations become lightweight rather than production-like;
+- the map is explicitly subordinate to the corpus/method rather than the project's source of distinctiveness;
+- broad evidence expansion is no longer the automatic next horizon;
+- M2 production migration is not the next step;
+- generic platform features are removed from the implied future scope.
+
+### What was falsified or materially weakened
+
+- P0–P4 as one universal target comparative scale — falsified;
+- the idea that better labels alone rescue overloaded semantics — falsified;
+- component-green as evidence of conceptual correctness — falsified;
+- generic tooling/platform expansion as value — rejected unless triggered;
+- factual discovery itself as Atlas distinctiveness — weakened by the Silla/Hittite baseline challenge;
+- “historical database + timeline + map + sources” as a unique product category — weakened by nodegoat and adjacent precedents;
+- always-on preview operations as necessary — not supported.
+
+### What was removed / frozen
+
+Removed:
+- automatic Supabase self-heal;
+- duplicate main web build;
+- automatic push-triggered production geometry promotion.
+
+Reduced:
+- preview availability monitoring to weekly.
+
+Corrected:
+- active P-level research instructions;
+- sanitation gaps.
+
+Frozen/parked:
+- v0.6.1 as canonical;
+- legacy current preview;
+- M2 production migration;
+- bulk Cliopatria identity/publication;
+- broad H2 research expansion;
+- new platform/infrastructure work.
+
+### Largest remaining risk
+
+The largest risk is now **value, not implementation**:
+
+> the project could spend enormous effort building a globally balanced, meticulously curated corpus and atlas whose practical research/user benefit is not materially greater than a competent combination of specialist scholarship, structured notes/tables, QGIS/nodegoat and a strong general-purpose model.
+
+That risk must be attacked before scale.
+
+### Current competing identities
+
+1. **B — corpus + thin atlas:** preferred hypothesis.
+2. **C — methodology/benchmark corpus:** credible fallback if the visual/query layer adds no distinct value.
+3. **A — full platform:** may be re-earned only through demonstrated user/research value.
+4. **D — generic digital-history platform:** rejected.
+
+### Should the artifact shrink?
+
+**Yes.**
+
+Shrink now at the operational/product boundary while preserving the research/integrity core.
+
+Do not delete proven research, provenance, fixtures, release history or M2 experiments. Shrink mutation authority, always-on operations, live backlog/history and future platform scope.
+
+### Candidate next discriminating experiment
+
+No new horizon is authorized by this review.
+
+The only next experiment currently worth considering is a **bounded value-discrimination pilot**:
+
+Select **three independent difficult historical questions from different regions/periods**, including at least one with temporal/spatial ambiguity and one with conflicting/qualified evidence.
+
+For each task compare:
+
+A. strongest boring/external workflow  
+   (specialist literature + structured notes/table + QGIS/nodegoat/general model as appropriate);
+
+B. Atlas corpus/method without a bespoke map interaction;
+
+C. the **smallest thin atlas/query/evidence view** needed for the same task.
+
+Record:
+
+- research effort/time;
+- provenance recoverability;
+- preservation of uncertainty/abstention;
+- cross-place/time comparison quality;
+- false generalization/overclaim;
+- insight uniquely enabled by B or C;
+- parity/no-value findings.
+
+Do not build a new interface for the pilot unless the existing minimal view cannot answer the discriminating question.
+
+### Explicit kill rule
+
+A richer Atlas product does **not** earn another application/infrastructure horizon unless the pilot demonstrates, on at least two independent tasks from different contexts, a repeatable practical advantage that the strongest baseline does not provide at comparable effort — specifically better inspectable cross-place/time reasoning, provenance recovery or uncertainty preservation without increased overclaim.
+
+If the **corpus/method** provides the gain but the thin map/query layer does not, collapse to **Identity C** and stop application expansion.
+
+If neither the corpus/method nor thin atlas demonstrates a material advantage over the strongest baseline, **STOP** further Atlas expansion and preserve the methodology/corpus/audit artifacts as the project result.
+
+### What should NOT be built next
+
+Do not next build:
+
+- M2 production schema migration;
+- broad H2 research batches;
+- another frontend redesign;
+- vector tiles/PMTiles;
+- a search service;
+- a graph database;
+- a vector store/RAG layer;
+- a generic ontology platform;
+- a generic DH research UI;
+- a custom gazetteer/reconciliation service;
+- RDF/CIDOC/PROV infrastructure without an actual consumer;
+- a contributor/peer-review platform;
+- new monitoring/self-healing infrastructure;
+- a new automation runway.
+
+### Final question
+
+**Is this still the project we should be building?**
+
+**Yes — but the project we should build is smaller than the one the repository had begun to imply.**
+
+The evidence supports continuing the **historical slavery/coercion evidence corpus + comparison method**, with a thin atlas as a hypothesis to test.
+
+It does **not** currently support continuing to grow a full-stack historical application platform by default.
+
+The next responsible move is not more implementation. It is to leave execution idle until the value-discrimination pilot is explicitly authorized.
+
