@@ -1,5 +1,11 @@
 # Hourly autonomous worker runbook
 
+> **Current active horizon:** MVP v0.1 / #174.  
+> **Current fixed serial queue:** #175 -> #176 -> #177 -> #178 -> #179 -> #180 -> #181 -> #182.  
+> **Discovery gate:** #184 -> #185 -> #186 -> #187 only after #182 records **TECHNICAL_MVP_CANDIDATE**.  
+> **WIP limit:** exactly one issue per run.
+
+
 This file is the canonical execution contract for the scheduled Historical Slavery Atlas worker.
 
 ## Source of truth
@@ -13,21 +19,25 @@ Read:
 2. repository-root `BACKLOG.md`
 3. `docs/24_WAY_OF_WORKING.md`
 4. `docs/25_PROJECT_HEALTH.md`
-5. this runbook
-6. the active parent gate issue
-7. open PRs and open `AUTO READY —` issues
-8. current `main` CI status
-9. only the canonical methodology/architecture documents needed for the chosen task.
+5. `docs/mvp/v0.1-plan.md`
+6. `docs/mvp/delivery-discovery-cadence.md`
+7. this runbook
+8. the active parent gate issue
+9. open PRs and open `AUTO READY —` issues
+10. current `main` CI status
+11. only the canonical methodology/architecture documents needed for the chosen task.
 
 Repository decisions newer than an AUTO issue override that issue.
 
 ## Serial selection order
 
 1. **Resume first:** if an unfinished `auto/*` PR exists from an earlier worker run, resume/repair/finish it. Do not claim another task.
-2. Otherwise identify the highest-priority open issue whose title begins `AUTO READY —`.
-3. The issue is eligible only when every explicit dependency in its body is closed as completed.
-4. Choose exactly one eligible issue.
-5. If none is eligible, do not manufacture work. End the run without changing the project.
+2. During MVP delivery, use the fixed priority order **#175 -> #176 -> #177 -> #178 -> #179 -> #180 -> #181 -> #182**.
+3. An issue is eligible only when its title begins `AUTO READY —` and every explicit dependency in its body is closed as completed.
+4. Do not enter discovery #184–#187 unless #182 has explicitly recorded `TECHNICAL_MVP_CANDIDATE`.
+5. After that gate, discovery priority is **#184 -> #185 -> #186 -> #187**.
+6. Choose exactly one eligible issue.
+7. If none is eligible, do not manufacture work. End the run without changing the project.
 
 Blocked and parked work is not eligible.
 
@@ -150,3 +160,33 @@ Report only:
 - next eligible AUTO issue, if one exists.
 
 Progress is evidence gained or capability improved—not commits, issues or lines changed.
+
+
+## MVP-specific boundaries
+
+While #174 is active:
+
+- preserve R1 subject-research stop at 19 C1 rows;
+- use the existing Vite + TypeScript + MapLibre application;
+- prefer a generated static/read-only candidate bundle over live backend coupling;
+- do not add a backend, database migration, auth, framework replacement, graph/vector/search service or new historical ontology;
+- do not derive new P0–P4/intensity values;
+- neutral world land remains visible;
+- unresearched / held / inconclusive / unresolved geometry never means absence;
+- temporal rendering must obey the R1.6 temporal annotation artifact;
+- review labels must not imply independent review;
+- v0.6.1 remains canonical until R1.8 explicitly decides otherwise.
+
+Issue #182 is a **technical** gate only. It may record TECHNICAL_MVP_CANDIDATE or HOLD_REWORK. It must not fake sponsor usability acceptance or canonical publication.
+
+## Discovery-specific boundaries
+
+For #184–#187:
+
+- do not implement a production feature;
+- state the user/research task and strongest boring baseline first;
+- define a kill rule before prototyping;
+- use external precedent to remove scope as readily as add it;
+- prefer paper/mock/manual experiments over code;
+- end with exactly one disposition: ADOPT_FOR_EXPERIMENT / REVISE / REJECT / PARK;
+- an ADOPT_FOR_EXPERIMENT result still requires a later separately authorized delivery issue.
