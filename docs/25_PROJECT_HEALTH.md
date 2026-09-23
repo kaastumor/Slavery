@@ -44,6 +44,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | A-006 | The project can responsibly cover the present as well as antiquity | unproven / blocked for sensitive person-level expansion | Living-person/sensitive-data policy remains insufficient; do not let H2 modern expansion outrun this. |
 | A-007 | A serial issue-driven autonomous worker can create value without roadmap drift | survives only as a bounded gate mechanism / idle | M1/M2/H2 produced useful corrections, but H2 triggered the stop rule. No autonomous execution runway is justified in preservation state. |
 | A-008 | The full interactive Atlas platform is the best form for the demonstrated contribution | rejected for active expansion | H2 did not show a repeatable material advantage for the corpus/method over a strong baseline, and the thin view did not materially beat the corpus in any case. Preserve existing artifacts; do not expand the platform. |
+| A-009 | A systematically assembled global historical coverage corpus may have value distinct from Atlas representation/UI | active experiment / unresolved | H2 did not test coverage accumulation, gap visibility or research compression. COV-001/#148 now tests this with a deterministic global sample, non-polity challenges and plain-table baselines. |
 
 ## Standing risk register
 
@@ -79,6 +80,7 @@ Record meaningful outcomes, including no-value results.
 | V-010 | Does the non-canonical unused preview justify 15-minute monitoring and automatic cloud restart? | no value / retire | Static fallback preserves the demonstration and no user-critical availability need is evidenced | Retire self-heal and reduce liveness to weekly. |
 | V-011 | Has the current full application/platform form earned its maintenance cost? | unproven / simplify | Strong correctness evidence exists, but no external user-task evidence shows the full product materially outperforms a simpler corpus/method + GIS/model workflow | Make corpus + thin atlas the working identity; full platform must re-earn expansion. |
 | V-012 | Does the corpus/method, then a minimal thin view, materially outperform the strongest competent baseline on difficult historical reasoning? | **PARITY / threshold failure** | Three preregistered cases: B materially improved A only for the Mexica category case; repaired C did not materially improve B in any case under the fixed rule | Trigger D-062 kill rule: stop active Atlas expansion; preserve methodology/corpus/audit artifacts. |
+| V-013 | Does preassembled global coverage itself create value beyond narrative handbooks + ordinary research/matrices? | **ACTIVE / untested** | Cambridge and Palgrave already provide strong global synthesis; Enslaved.org and SlaveVoyages provide deep structured coverage in narrower domains. COV-001 tests whether explicit place/time coverage, gaps and provenance add something distinct. | Do not infer value from tabular form alone; freeze sample before research and compare against plain-matrix and specialist baselines. |
 
 ## Health-check history
 
