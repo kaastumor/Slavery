@@ -15,3 +15,8 @@ Start with:
 7. the methodology/architecture documents relevant to the selected task.
 
 GitHub `main` is the implementation source of truth. Do not restore a second task queue to this file.
+
+
+## Current gate snapshot
+
+As of 2026-09-23, M2 (#116) is active. #117 and #118 are complete; repository-root `BACKLOG.md` currently places #119 first. Re-check GitHub before acting because this snapshot is deliberately subordinate to live repository state.
