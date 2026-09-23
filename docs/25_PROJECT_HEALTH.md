@@ -995,3 +995,28 @@ R1.7 should implement only the smallest read-only Atlas that makes this core ins
 Feature discovery resumes **after** that MVP exists. New feature candidates must begin as baseline comparisons with kill rules; discovery evidence does not authorize implementation.
 
 No production migration or new service architecture is justified.
+
+
+### HC-015 — MVP crystallization and delivery/discovery split — 2026-09-24
+
+Decision: **DELIVER THE SMALL CORE; KEEP FEATURE CURIOSITY IN DISCOVERY.**
+
+D-080 gives the project a bounded product form after R1.6:
+
+> immutable R1 candidate package + neutral world map + explicit geometry/research states + compact evidence register.
+
+The delivery plan deliberately reuses the existing Vite/TypeScript/MapLibre frontend and adds no new backend/service by default.
+
+Operational controls:
+- WIP=1;
+- fixed serial MVP queue #175–#182;
+- explicit dependencies;
+- Definition of Ready / Definition of Done;
+- short-lived PRs and green CI;
+- technical MVP gate before discovery;
+- discovery #184–#187 produces evidence/dispositions only.
+
+This setup is not new feature-value evidence. It is project-control evidence intended to stop the small core from regrowing into the discarded platform.
+
+Kill/shrink rule:
+if the MVP requires backend/platform expansion, invented geometry precision or loss of the R1 evidence contract, shrink/hold rather than rebuilding the old architecture.
