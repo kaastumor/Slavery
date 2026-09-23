@@ -68,7 +68,7 @@ Current integrated evidence:
 7. **DONE — #136 — Separate chosen geometry provenance** (distinct baseline vs chosen-specialist lineage merged in PR #139; exact full corpus passed)
 8. **DONE — #140 — Restore non-positive open-terminus semantics** (D-061; terminus constraints no longer imply indefinite positive truth; merged PR #141)
 9. **DONE — #122 — M2 integrated adversarial gate** (survived after two revise/correct/re-attack cycles; see docs/33_M2_INTEGRATED_ADVERSARIAL_GATE.md)
-10. **NOW — #123 — M2 Project Health Check and reconciliation** (must choose continue / redirect / stop before any new gate or broad runway)
+10. **NOW — #123 — M2 Project Health Check and reconciliation** (must choose continue / simplify / redirect / stop before any new gate or broad runway)
 
 M2 rules:
 
@@ -77,7 +77,7 @@ M2 rules:
 - raw Cliopatria ingestion is infrastructure, not geometry approval;
 - no automatic P0–P4 conversion;
 - no production apply until disposable/local integration survives;
-- #123 must explicitly choose continue / redirect / stop before the next gate exists.
+- #123 must explicitly choose continue / simplify / redirect / stop before the next gate exists.
 
 Blocked #43 and #26 remain documented but are not eligible autonomous work while their external/admin blockers remain.
 
