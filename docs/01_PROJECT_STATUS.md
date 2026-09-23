@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE BOUNDED EXPERIMENT — COV-002 scale/reuse economics; Atlas expansion remains stopped**
+**Execution state:** **IDLE / PRESERVATION — COV-002 stopped further automatic corpus scaling; Atlas expansion remains stopped**
 
 ## Direction after H2
 
@@ -109,22 +109,44 @@ Direction decision: D-065
 
 No successor experiment is authorized. The only candidate question is whether corpus reuse/value grows faster than research/review/update burden at materially larger scale.
 
-## COV-002 scale/reuse economics — active
+## COV-002 scale/reuse economics — completed
 
-The sponsor explicitly authorized the one further bounded corpus-scale experiment permitted by D-065.
+Result: **STOP FURTHER AUTOMATIC SCALING; PRESERVE COMPACT COVERAGE-REGISTER PATTERN.**
 
-Question:
+COV-002:
+- added 12 deterministic rank-2 targets to the 25 COV-001 rows;
+- froze 37 researched rows total;
+- found 4 supported and 8 inconclusive expansion rows;
+- exposed three additional upstream target/time failures before slavery classification;
+- compared full rows, compact register and strongest ordinary matrix;
+- tested reuse at N=25, 31 and 37;
+- ran an information-loss audit;
+- ran six deterministic evidence-maintenance shocks;
+- ran specialist, specialized-data and single-cell negative controls;
+- adversarially reviewed the result.
 
-> Does coverage-corpus value grow faster than research, review and update burden as the corpus grows?
+At N=37:
+- 3/4 cross-cell reuse mechanisms materially beat M;
+- R matched F on all six fixed tasks;
+- R static review surface was ~60.5% of F;
+- no safety-critical F→R loss appeared in the expansion audit.
 
-The setup adversary has completed. The experiment now compares:
-- full coverage rows;
-- a compact value-preserving register;
-- a strong ordinary matrix.
+However, the maintenance-economy gate failed:
+- 3/6 searches produced material row updates;
+- each material update touched the same number of local review atoms in R and F;
+- 3/6 no-change searches were neutral, not savings wins.
 
-The sample must be frozen before historical research. The next permitted action is only the deterministic 12-cell expansion freeze.
+F also did not earn its extra routine complexity over R.
 
-No Atlas application/product horizon is reopened.
+Interpretation:
+- the compact register is the preferred **resting pattern** for concrete future comparative tasks;
+- there is no evidence strong enough to justify systematic global scaling as a standing research program.
+
+Durable result: `experiments/coverage-scale/13_FINAL_RESULT.md`  
+Health decision: HC-006  
+Direction decision: D-067
+
+No successor experiment or corpus-growth horizon is authorized.
 
 ## Remaining bounded project-system debt
 
