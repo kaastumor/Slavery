@@ -1,0 +1,72 @@
+{
+  "cell_id": "-500:E",
+  "frame": "polity",
+  "anchor_year": -500,
+  "target_label": "Janapada of Vatsa",
+  "source_sample": {
+    "source_name": "Janapada of Vatsa",
+    "source_row_ordinal": 248,
+    "source_from_year": -600,
+    "source_to_year": -481,
+    "sampling_sector": "E"
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "Ancient South Asian scholarship establishes slavery/dependency as a relevant field, but not a Vatsa-specific slavery practice at c. 500 BCE.",
+  "strongest_unsupported_proposition": "Do not map broad dāsa, Śūdra, servitude, or later South Asian slavery evidence directly onto Vatsa.",
+  "territorial_practice_summary": "Target-specific territorial practice unresolved.",
+  "legal_state_summary": "",
+  "external_network_summary": "",
+  "terminology_category_qualification": "dāsa/dāsī and Śūdra require contextual interpretation.",
+  "temporal_scope_precision": "Bounded to cited evidence; sample interval is not itself slavery evidence.",
+  "evidence_locus": "Janapada of Vatsa",
+  "inference_extent": "No inference beyond stated target/evidence locus.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "none",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Slavery in Ancient India",
+      "author": "Dev Raj Chanana",
+      "year": 1960,
+      "url_or_identifier": "https://books.google.com/books/about/Slavery_in_Ancient_India.html?id=CHPaAAAAMAAJ",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    },
+    {
+      "title": "Position of the Sudras in Ancient India to 500 A.D.",
+      "author": "R. S. Sharma",
+      "year": null,
+      "url_or_identifier": "https://soas-repository.worktribe.com/output/398799",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    },
+    {
+      "title": "Slavery in South Asia",
+      "author": "Emma Kalb",
+      "year": 2023,
+      "url_or_identifier": "https://link.springer.com/chapter/10.1007/978-3-031-13260-5_29",
+      "source_role": "specialist_synthesis",
+      "direction": "qualifies",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "No Vatsa-specific c.500 BCE slavery evidence located within source budget."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 3,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

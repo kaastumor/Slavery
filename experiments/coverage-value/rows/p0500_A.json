@@ -1,0 +1,61 @@
+{
+  "cell_id": "500:A",
+  "frame": "polity",
+  "anchor_year": 500,
+  "target_label": "Mayan City-States",
+  "source_sample": {
+    "source_name": "Mayan City-States",
+    "source_row_ordinal": 1411,
+    "source_from_year": 299,
+    "source_to_year": 554,
+    "sampling_sector": "A"
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "Precontact Mesoamerica included enslavement, but this packet does not establish slavery for the sampled Maya city-state target at c. 500 CE.",
+  "strongest_unsupported_proposition": "Do not convert captive imagery, warfare, sacrifice, or general Mesoamerican enslavement into an anchor-year Maya slavery claim.",
+  "territorial_practice_summary": "Target-specific anchor-year practice unresolved.",
+  "legal_state_summary": "",
+  "external_network_summary": "",
+  "terminology_category_qualification": "Captivity, sacrifice, dependency and slavery remain distinct.",
+  "temporal_scope_precision": "Strong Maya captive evidence consulted is later than 500.",
+  "evidence_locus": "Mayan City-States",
+  "inference_extent": "No inference beyond stated target/evidence locus.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Slavery in Precontact America",
+      "author": "Camilla Townsend",
+      "year": 2021,
+      "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-in-precontact-america/090D3E244D8E3F465822F387EFED7122",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    },
+    {
+      "title": "Warfare, Sacrifice, and the Captive Body in Late Classic Maya Sculpture",
+      "author": "Caitlin Earley",
+      "year": null,
+      "url_or_identifier": "https://www.cambridge.org/core/journals/ancient-mesoamerica/article/abs/warfare-sacrifice-and-the-captive-body-in-late-classic-maya-sculpture/DF088F2979788BFF06B34A8CDDDEB1E0",
+      "source_role": "specialist_article",
+      "direction": "qualifies",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 2,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

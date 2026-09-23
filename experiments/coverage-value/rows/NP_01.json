@@ -1,0 +1,54 @@
+{
+  "cell_id": "NP-01",
+  "frame": "non_polity_challenge",
+  "anchor_year": 1800,
+  "target_label": "Central Australian interior, c. 1800 CE",
+  "source_sample": {
+    "source_name": null,
+    "source_row_ordinal": null,
+    "source_from_year": null,
+    "source_to_year": null,
+    "sampling_sector": null
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "The bounded packet did not establish a slavery institution for a specific Central Australian society at c.1800.",
+  "strongest_unsupported_proposition": "Do not infer slavery from warfare, captivity, kinship asymmetry, or later colonial forced labour elsewhere in Australia.",
+  "territorial_practice_summary": "Target-specific anchor-period slavery practice not established.",
+  "legal_state_summary": "",
+  "external_network_summary": "",
+  "terminology_category_qualification": "Captivity, dependency and slavery are not equated automatically.",
+  "temporal_scope_precision": "Broad challenge context; later ethnographic/contact evidence is not silently back-projected.",
+  "evidence_locus": "Central Australian interior, c. 1800 CE",
+  "inference_extent": "Broad research context only; not one polity or society.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "none",
+    "palgrave": "none",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible scholarship only; oral histories and Indigenous knowledge systems are not captured by this bounded web packet.",
+  "sources": [
+    {
+      "title": "Conflict and Territoriality in Aboriginal Australia",
+      "author": "",
+      "year": null,
+      "url_or_identifier": "https://researchportalplus.anu.edu.au/en/publications/conflict-and-territoriality-in-aboriginal-australia-evidence-from/",
+      "source_role": "specialist_article",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "Target society and exact 1800 evidence remain unresolved."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 1,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

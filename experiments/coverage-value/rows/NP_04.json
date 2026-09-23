@@ -1,0 +1,63 @@
+{
+  "cell_id": "NP-04",
+  "frame": "non_polity_challenge",
+  "anchor_year": 1300,
+  "target_label": "Upper / western Amazonia, c. 1300 CE",
+  "source_sample": {
+    "source_name": null,
+    "source_row_ordinal": null,
+    "source_from_year": null,
+    "source_to_year": null,
+    "sampling_sector": null
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "Later/contact Amazonian scholarship documents captive incorporation and slavery-like relations in some contexts, but not this broad region at c.1300.",
+  "strongest_unsupported_proposition": "Do not back-project post-contact/ethnographic relations or treat Amazonia as one society.",
+  "territorial_practice_summary": "Target-specific anchor-period slavery practice not established.",
+  "legal_state_summary": "",
+  "external_network_summary": "",
+  "terminology_category_qualification": "Captivity, dependency and slavery are not equated automatically.",
+  "temporal_scope_precision": "Broad challenge context; later ethnographic/contact evidence is not silently back-projected.",
+  "evidence_locus": "Upper / western Amazonia, c. 1300 CE",
+  "inference_extent": "Broad research context only; not one polity or society.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "Retrospective ethnography/post-contact sources dominate; archaeological/Indigenous-language evidence underrepresented.",
+  "sources": [
+    {
+      "title": "First Contacts, Slavery and Kinship in North-Eastern Amazonia",
+      "author": "Vanessa Grotti and Marc Brightman",
+      "year": 2016,
+      "url_or_identifier": "https://www.ncbi.nlm.nih.gov/books/NBK436748/",
+      "source_role": "specialist_article",
+      "direction": "context",
+      "locator": ""
+    },
+    {
+      "title": "Ownership and Nurture",
+      "author": "Marc Brightman, Carlos Fausto and Vanessa Grotti",
+      "year": 2016,
+      "url_or_identifier": "https://www.ncbi.nlm.nih.gov/books/NBK436749",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "No direct precontact c.1300 evidence for broad challenge region."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 2,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

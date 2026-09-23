@@ -1,0 +1,61 @@
+{
+  "cell_id": "500:D",
+  "frame": "polity",
+  "anchor_year": 500,
+  "target_label": "Anglo-Saxon England",
+  "source_sample": {
+    "source_name": "Anglo-Saxon England",
+    "source_row_ordinal": 1902,
+    "source_from_year": 490,
+    "source_to_year": 522,
+    "sampling_sector": "D"
+  },
+  "coverage_outcome": "bounded_supported",
+  "strongest_bounded_proposition": "Early Anglo-Saxon England is defensibly characterized as slaveholding in the broad period around 500 CE, though direct legal evidence begins later.",
+  "strongest_unsupported_proposition": "Do not assign exact 500 CE prevalence or make Æthelberht's later law code contemporaneous.",
+  "territorial_practice_summary": "Slaveholding is supported for early Anglo-Saxon society in broad-period synthesis.",
+  "legal_state_summary": "Earliest English law code mentioning slaves dates 597–616.",
+  "external_network_summary": "",
+  "terminology_category_qualification": "",
+  "temporal_scope_precision": "Broad c.500 context supported; exact-date legal attestation is not.",
+  "evidence_locus": "Anglo-Saxon England",
+  "inference_extent": "No inference beyond stated target/evidence locus.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "direct",
+    "palgrave": "none",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Slavery in Northern Europe and the British Isles, 500–1420",
+      "author": "David Wyatt",
+      "year": 2021,
+      "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-in-northern-europe-scandinavia-and-iceland-and-the-british-isles-5001420/347106F469610788587F075F82E54FA1",
+      "source_role": "specialist_synthesis",
+      "direction": "supports",
+      "locator": ""
+    },
+    {
+      "title": "Slave raiding and slave trading in early England",
+      "author": "David Pelteret",
+      "year": 2008,
+      "url_or_identifier": "https://www.cambridge.org/core/journals/anglo-saxon-england/article/abs/slave-raiding-and-slave-trading-in-early-england/3D4A07DB0DC30D939D13941B8F752360",
+      "source_role": "specialist_article",
+      "direction": "supports",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 2,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

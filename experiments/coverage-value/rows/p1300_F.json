@@ -1,0 +1,61 @@
+{
+  "cell_id": "1300:F",
+  "frame": "polity",
+  "anchor_year": 1300,
+  "target_label": "Chámpa",
+  "source_sample": {
+    "source_name": "Chámpa",
+    "source_row_ordinal": 5454,
+    "source_from_year": 1220,
+    "source_to_year": 1313,
+    "sampling_sector": "F"
+  },
+  "coverage_outcome": "bounded_supported",
+  "strongest_bounded_proposition": "Early-thirteenth-century descriptions of Champa report people being bought and made slaves, supporting a bounded slavery/slave-market claim near 1300.",
+  "strongest_unsupported_proposition": "Do not infer territorial prevalence across all Champa from market/transaction evidence.",
+  "territorial_practice_summary": "Slave purchasing/enslavement supported near the anchor period.",
+  "legal_state_summary": "",
+  "external_network_summary": "Commercial evidence does not quantify local prevalence.",
+  "terminology_category_qualification": "",
+  "temporal_scope_precision": "Direct account is early thirteenth century; broad c.1300 relevance only.",
+  "evidence_locus": "Champa commercial context",
+  "inference_extent": "No empire-wide prevalence estimate.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "none",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Money, Markets, and Trade in Early Southeast Asia",
+      "author": "Robert S. Wicks",
+      "year": 1992,
+      "url_or_identifier": "https://www.jstor.org/stable/10.7591/j.ctv1nhjzp",
+      "source_role": "specialist_synthesis",
+      "direction": "supports",
+      "locator": ""
+    },
+    {
+      "title": "Slavery in East Asia",
+      "author": "Don J. Wyatt",
+      "year": null,
+      "url_or_identifier": "https://assets.cambridge.org/97810090/01700/excerpt/9781009001700_excerpt.pdf",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 2,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

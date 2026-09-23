@@ -1,0 +1,63 @@
+{
+  "cell_id": "500:C",
+  "frame": "polity",
+  "anchor_year": 500,
+  "target_label": "Alodia",
+  "source_sample": {
+    "source_name": "Alodia",
+    "source_row_ordinal": 1467,
+    "source_from_year": 347,
+    "source_to_year": 601,
+    "sampling_sector": "C"
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "A later sixth-/early-seventh-century source supports sale of an Alodian slave girl, but not slavery in Alodia at exactly 500 CE.",
+  "strongest_unsupported_proposition": "Do not move later Alodian slave-sale evidence backward or infer continuous trade.",
+  "territorial_practice_summary": "Exact 500 CE practice unresolved.",
+  "legal_state_summary": "",
+  "external_network_summary": "Later regional slave-trade evidence is too late for anchor proof.",
+  "terminology_category_qualification": "",
+  "temporal_scope_precision": "Target-specific evidence postdates anchor.",
+  "evidence_locus": "Alodia",
+  "inference_extent": "No inference beyond stated target/evidence locus.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "A sale of an Alodian slave girl",
+      "author": "Richard Holton Pierce",
+      "year": 1995,
+      "url_or_identifier": "https://www.researchgate.net/publication/216645651_A_sale_of_an_Alodian_slave_girl_A_reexamination_of_papyrus_Strassburg_Inv_1404",
+      "source_role": "specialist_article",
+      "direction": "context",
+      "locator": ""
+    },
+    {
+      "title": "Slavery and the Slave Trade in the Western Indian Ocean World",
+      "author": "Craig Perry",
+      "year": 2021,
+      "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-and-the-slave-trade-in-the-western-indian-ocean-world/238C56DA8DC84C6AA51E4A0D6F9E5F33",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "Target-specific source dates postdate anchor."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 2,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

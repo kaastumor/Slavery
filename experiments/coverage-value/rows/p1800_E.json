@@ -1,0 +1,52 @@
+{
+  "cell_id": "1800:E",
+  "frame": "polity",
+  "anchor_year": 1800,
+  "target_label": "British Ceylon",
+  "source_sample": {
+    "source_name": "British Ceylon",
+    "source_row_ordinal": 10417,
+    "source_from_year": 1796,
+    "source_to_year": 1813,
+    "sampling_sector": "E"
+  },
+  "coverage_outcome": "bounded_supported",
+  "strongest_bounded_proposition": "Slavery is directly documented in Jaffna under Dutch and early British rule around 1800; abolition measures developed only afterward.",
+  "strongest_unsupported_proposition": "Do not generalize Jaffna evidence to all British Ceylon or treat British acquisition as immediate emancipation.",
+  "territorial_practice_summary": "Slavery and legally constituted slave statuses documented in Jaffna.",
+  "legal_state_summary": "British rule inherited locally codified slavery; abolition measures began from 1806.",
+  "external_network_summary": "",
+  "terminology_category_qualification": "",
+  "temporal_scope_precision": "Study spans late eighteenth/early nineteenth century.",
+  "evidence_locus": "Jaffna, northern Sri Lanka",
+  "inference_extent": "Subregional claim only; island-wide prevalence unassessed.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "The Ambivalence of Freedom: Slaves in Jaffna",
+      "author": "Nira Wickramasinghe and Alicia Schrikker",
+      "year": 2019,
+      "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/ambivalence-of-freedom-slaves-in-jaffna-sri-lanka-in-the-eighteenth-and-nineteenth-centuries/0DA019FA2028635360498C72E37FDE21",
+      "source_role": "specialist_article",
+      "direction": "supports",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 1,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

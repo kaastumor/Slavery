@@ -1,0 +1,65 @@
+{
+  "cell_id": "1300:C",
+  "frame": "polity",
+  "anchor_year": 1300,
+  "target_label": "Mahdids",
+  "source_sample": {
+    "source_name": "Mahdids",
+    "source_row_ordinal": 5760,
+    "source_from_year": 1260,
+    "source_to_year": 1474,
+    "sampling_sector": "C"
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "The sampled target is internally inconsistent: Cliopatria labels Mahdids active 1260–1474 while its supplied Wikidata identity describes a Yemeni dynasty of 1159–1174.",
+  "strongest_unsupported_proposition": "Do not substitute another polity or research a slavery claim against an unresolved identity.",
+  "territorial_practice_summary": "No territorial-practice claim because target identity/time is unresolved.",
+  "legal_state_summary": "",
+  "external_network_summary": "",
+  "terminology_category_qualification": "",
+  "temporal_scope_precision": "Source-row interval conflicts with linked identity chronology.",
+  "evidence_locus": "Unresolved sampled geography/identity.",
+  "inference_extent": "None until entity resolution.",
+  "evidence_classes": [
+    "deterministic source observation",
+    "reference-data identity check",
+    "specialist synthesis"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Mahdids (Q1884830)",
+      "author": "Wikidata",
+      "year": null,
+      "url_or_identifier": "https://www.wikidata.org/wiki/Q1884830",
+      "source_role": "structured_dataset",
+      "direction": "challenges",
+      "locator": ""
+    },
+    {
+      "title": "Slavery and the Slave Trade in the Western Indian Ocean World",
+      "author": "Craig Perry",
+      "year": 2021,
+      "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-and-the-slave-trade-in-the-western-indian-ocean-world/238C56DA8DC84C6AA51E4A0D6F9E5F33",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "Requires reviewed geography/entity resolution outside COV-001."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 1,
+    "primary_or_dataset_items_used": 1,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

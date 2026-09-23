@@ -1,0 +1,61 @@
+{
+  "cell_id": "1300:B",
+  "frame": "polity",
+  "anchor_year": 1300,
+  "target_label": "Cuzco",
+  "source_sample": {
+    "source_name": "Cuzco",
+    "source_row_ordinal": 5969,
+    "source_from_year": 1294,
+    "source_to_year": 1401,
+    "sampling_sector": "B"
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "Cuzco around 1300 is pre-imperial/Killke; this packet does not establish later Inca coerced-labour/dependent statuses in the sampled form.",
+  "strongest_unsupported_proposition": "Do not back-project imperial mit'a, yanakuna, or other later institutions.",
+  "territorial_practice_summary": "Target-specific c.1300 practice unresolved.",
+  "legal_state_summary": "",
+  "external_network_summary": "",
+  "terminology_category_qualification": "State labour obligations and dependent statuses are not automatically slavery.",
+  "temporal_scope_precision": "Anchor predates later imperial expansion.",
+  "evidence_locus": "Cuzco",
+  "inference_extent": "No inference beyond stated target/evidence locus.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Ancient Cuzco: Heartland of the Inca",
+      "author": "Brian S. Bauer",
+      "year": null,
+      "url_or_identifier": "https://www.jstor.org/stable/10.7560/702431",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    },
+    {
+      "title": "Slavery in Precontact America",
+      "author": "Camilla Townsend",
+      "year": 2021,
+      "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-in-precontact-america/090D3E244D8E3F465822F387EFED7122",
+      "source_role": "specialist_synthesis",
+      "direction": "qualifies",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 2,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}
