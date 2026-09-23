@@ -38,7 +38,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | --- | --- | --- | --- |
 | A-001 | Global comparison can be useful without implying equivalence | survives provisionally | M1 shows separable dimensions can represent Hittite, Baekje, Silla and contested cases without one universal ordinal; real user-value comparison remains for a later horizon. |
 | A-002 | P0–P4 can remain the target universal public summary | rejected | M1 shows the scale mixes evidentiary configuration with different historical structures. Preserve it only as legacy compatibility until a post-M1 interface exists. |
-| A-003 | Cliopatria is the best open global deep-time fallback backbone | survives / integrate | The complete pinned corpus is reproducibly profiled at 13,765 features; specialist overrides remain necessary and calendar/RELATION semantics must be resolved in M2. |
+| A-003 | Cliopatria is the best open global deep-time fallback backbone | survives / integrate | The complete pinned corpus is reproducibly profiled at 13,765 features; D-059 now defines calendar and POLITY/RELATION/composite semantics, while specialist overrides remain necessary. Raw/staging ingestion and selected-year resolver behavior remain M2 tests. |
 | A-004 | PostgreSQL/PostGIS is justified over files/spreadsheets for the working system | survives | Time/spatial joins, release reconstruction, provenance, publication and the coming full-corpus geometry resolver require relational/spatial behavior already exercised. |
 | A-005 | MapLibre + current API/GeoJSON delivery is sufficient at current scale | survives | Performance triggers in `docs/21_PERFORMANCE_STRATEGY.md` are not met; do not add tile infrastructure yet. |
 | A-006 | The project can responsibly cover the present as well as antiquity | unproven / blocked for sensitive person-level expansion | Living-person/sensitive-data policy remains insufficient; do not let H2 modern expansion outrun this. |
@@ -162,3 +162,16 @@ Short runway:
 Blocked operational work #43 and #26 remains blocked and does not displace M2.
 
 Next mandatory health check: #123 after #122.
+
+
+### M2 progress delta — 2026-09-23
+
+This is a state reconciliation, not a horizon health check.
+
+- **#117 / D-058 complete:** the M1 v2 structure is now the canonical **target** methodology/data model. It is not yet the live relational implementation. P0–P4 and legacy coverage fields remain historical-release compatibility only.
+- **#118 / D-059 complete:** pinned Cliopatria v0.2.0 source intervals are inclusive; atlas BCE selected-year lookup uses the documented source translation; source integer 0 stays preserved and receives no invented independent historical label; POLITY/RELATION/composite hierarchy is preserved and type-aware.
+- **Next discriminating test:** #119 must prove that all 13,765 pinned Cliopatria features can be ingested reproducibly into raw/staging PostGIS without flattening hierarchy, rewriting source-native years, conflating source identity with atlas spatial identity, or exposing raw rows to publication.
+- **No gate promotion:** bulk historical research remains paused until M2 #122 and #123.
+- **Operational blockers unchanged:** #43 and #26 remain blocked and do not displace M2.
+
+No new assumption is promoted by this note beyond D-058/D-059. The next mandatory Project Health Check remains #123.
