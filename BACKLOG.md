@@ -61,6 +61,11 @@ COV-002 therefore does **not** justify:
 
 Post-COV-002 adversarial audit ADV-001/#153 found that this stop must **not** be generalized into a finding that systematic comprehensive coverage itself is uneconomic or worthless. COV-002 did not test tiered, versioned, batch-curated coverage economics.
 
+Durable correction:
+- `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.md`
+- HC-007 in `docs/25_PROJECT_HEALTH.md`
+- D-068 in `docs/08_DECISIONS_LOG.md`
+
 ## Current execution state
 
 **IDLE / PRESERVATION.**
