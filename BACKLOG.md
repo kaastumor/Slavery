@@ -55,14 +55,15 @@ Parent: **#116 — Integrate hardened semantics with complete geography backbone
 Current integrated evidence:
 - #117 / D-058: post-M1 semantics are now the canonical **target** model, with draft-0.11 explicitly not yet live implementation.
 - #118 / D-059: Cliopatria v0.2.0 calendar and POLITY/RELATION/composite rules are resolved sufficiently for raw integration; source-native year zero and hierarchy remain preserved.
+- #119: the complete pinned 13,765-feature Cliopatria corpus now survives a clean disposable PostGIS raw/staging load plus exact retry/no-op. Source-native years, POLITY/RELATION, hierarchy fields, full raw payloads and geometry remain distinct from atlas identities and publication.
 
 **Execution order / eligibility:**
 
 1. **DONE — #117 — Canonicalize M1 target semantics for M2**
 2. **DONE — #118 — Resolve Cliopatria calendar and relation semantics**
-3. **NOW — #119 AUTO READY — Ingest complete pinned Cliopatria corpus into raw staging** (dependencies satisfied; preserve source-native years/hierarchy)
-4. **NEXT — #120 AUTO READY — Prototype post-M1 claim semantics in disposable PostGIS** (dependency #117 satisfied)
-5. **NEXT — #121 AUTO READY — Build complete Cliopatria selected-year resolver prototype** (dependency #118 satisfied; waits for #119)
+3. **DONE — #119 — Ingest complete pinned Cliopatria corpus into raw staging** (full-corpus disposable PostGIS load + exact retry passed; no production apply)
+4. **NOW — #120 AUTO READY — Prototype post-M1 claim semantics in disposable PostGIS** (dependency #117 satisfied)
+5. **NEXT — #121 AUTO READY — Build complete Cliopatria selected-year resolver prototype** (#119 dependency now satisfied; follows #120 in M2 execution order)
 6. **GATE — #122 AUTO READY — M2 integrated adversarial gate** (depends on #117–#121)
 7. **GATE — #123 AUTO READY — M2 Project Health Check and reconciliation** (depends on #122)
 
