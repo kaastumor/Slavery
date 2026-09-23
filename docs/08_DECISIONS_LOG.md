@@ -996,3 +996,88 @@ Do not reopen bespoke Atlas application/platform work.
 - the next substantive horizon, if explicitly authorized, should be an actual lean research/release programme rather than another architecture prototype.
 
 **Durable result:** `experiments/falsification-atlas/27_FINAL_RESULT.md`.
+
+
+## D-073 — Authorize R1 and freeze Core Contract v1 as the first real release-method profile
+**Date:** 2026-09-23  
+**Status:** accepted programme decision from explicit sponsor authorization / issue #159
+
+**Decision:** Graduate the Historical Slavery Atlas from the COV architecture-experiment sequence into **R1 — Core Hardening + First Systematic Coverage Release**.
+
+R1 is a real research/release programme, not COV-005.
+
+Freeze `programmes/r1/03_CORE_CONTRACT_V1.md` as the binding R1 release-method profile.
+
+Core Contract v1:
+- consolidates existing methodology, source policy, geography rules, release/version rules and demonstrated COV failure modes;
+- does not replace the PostgreSQL/PostGIS target data model;
+- does not change canonical v0.6.1;
+- introduces C0/C1/C2 only as research/release tiers;
+- introduces claim-fitness/source-quality state as a release-review control;
+- requires source-quality failure to trigger deeper review where it makes a positive proposition unsafe;
+- requires language/access limitations and research coverage confidence to remain separate from historical classification;
+- requires at least 50% C1 adversarial replay for the R1 candidate release, 100% C2 replay, and 100% replay for single-decisive-source or limited-source positive claims;
+- preserves immutable/as-of release history and source-to-claim dependencies;
+- keeps the default Atlas surface deliberately simple.
+
+**R1 ceilings, not quotas:**
+- at most 120 C0 targets;
+- at most 36 C1 researched targets;
+- at most 12 C2 deep packets.
+
+**Scope correction from setup adversary:**
+- R1 is pre-1900 by default;
+- contemporary person-level forced-labour data are outside R1;
+- no progress metric may use percentage of row ceiling;
+- candidate research release and independently/publicly reviewed release remain distinct;
+- no new backend/platform work follows from programme authorization.
+
+**Hard sequence:** no new R1 historical subject research before the exact R1.2 target frame and C1 selection are frozen.
+
+**Durable programme setup:**
+- `programmes/r1/00_PROGRAMME_CHARTER.md`
+- `programmes/r1/01_SETUP_ADVERSARY.md`
+- `programmes/r1/03_CORE_CONTRACT_V1.md`
+- `programmes/r1/04_CORE_CONTRACT_ADVERSARY.md`
+- `programmes/r1/core_contract_fixtures.json`
+
+A successful R1 does not automatically authorize R2.
+
+
+## D-074 — Freeze the R1 target frame before subject research
+**Date:** 2026-09-23  
+**Status:** accepted R1 release-frame decision
+
+**Decision:** Freeze `programmes/r1/target_frame.json` as the exact R1 target frame before any new R1 slavery/coercion subject research.
+
+**Frame:**
+- 41 new polity C0 targets from the exact pinned Cliopatria source;
+- 24 new non-polity C0 targets from the previously frozen neutral COV-004 candidate universe;
+- 65 new C0 registrations total;
+- 16 new polity C1 research targets;
+- 8 new non-polity C1 research targets;
+- 24 genuinely new C1 targets total;
+- 12 deterministic legacy C1 rows selected for Core Contract v1 re-review;
+- 36 planned C1 rows total.
+
+These are frozen members, not completion quotas. Rows may fail identity/time review, remain inconclusive/disputed, or be held from release.
+
+**Source controls:**
+- Cliopatria commit `ad28a691b7c07c1fca89d0e0636d324667d2a258`;
+- asset SHA-256 `d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370`;
+- previously sampled COV-001/002/003 source rows excluded from the new polity lane;
+- no target selected using slavery/coercion evidence.
+
+**Calendar correction:** negative Cliopatria source years remain source-native. R1 separately records Atlas astronomical internal years: source `-500` = 500 BCE = Atlas internal `-499`.
+
+**Sector-B gap:** no eligible unused new Cliopatria polity candidate exists in sector B at the frozen R1 polity anchors after prior sampled rows are excluded. The gap remains explicit; no substitute is manufactured. The full planned C1 frame still covers all six neutral polity sectors through deterministic legacy re-review (including Chimú/Cuzco in sector B), while Yaghan/Tierra del Fuego independently appears in the new non-polity C1 cohort.
+
+**Balance gates passed:**
+- all five frozen polity anchor bands represented;
+- all six neutral polity sampling sectors represented across the complete planned C1 release;
+- at least three target-frame classes represented;
+- no polity sampling sector exceeds 25% of planned C1 membership.
+
+**Consequence:** R1 subject research may now begin only against this frozen frame. No post-evidence target substitution is allowed.
+
+**Durable artifact:** `programmes/r1/05_TARGET_FRAME_FREEZE.md`.

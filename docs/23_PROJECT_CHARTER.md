@@ -290,4 +290,25 @@ rather than:
 
 COV-004 closes the architecture-experiment sequence. Any next horizon should be a real research/release programme or preservation, not COV-005 by default.
 
+### R1 — first real systematic coverage release programme (active)
+
+After COV-004, the sponsor explicitly authorized the project to graduate from architecture experiments into a real bounded research/release programme.
+
+R1's project form is:
+
+> **hardened tiered evidence core + systematic sample release + boring Atlas/map surface**
+
+R1 does not reactivate the former full-platform roadmap.
+
+Binding constraints:
+- Core Contract v1 is empirical and fixture-backed;
+- C0/C1/C2 are research/release tiers, not historical intensity;
+- release ceilings are not quotas;
+- candidate release is distinct from independent/public review;
+- new features must emerge from repeated real research/release friction;
+- no successor release is automatic.
+
+Decision: D-073.  
+Programme: `programmes/r1/`.
+
 At every horizon boundary, review evidence for **and against** the thesis, compare the strongest baseline, consider whether the artifact can shrink, and explicitly choose **continue / simplify / redirect / stop** before creating the next horizon.

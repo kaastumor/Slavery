@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **IDLE / SPONSOR DECISION — COV-004 method survived; boring map/register Atlas retained; bespoke Atlas expansion remains stopped**
+**Execution state:** **ACTIVE R1 — Core Contract and target frame frozen; C0/identity QA is next; no new R1 subject research has started yet**
 
 ## Direction after H2
 
@@ -238,6 +238,42 @@ Health decision: HC-008
 Direction decision: D-070
 
 No successor experiment, comprehensive-ingestion horizon or Atlas product horizon is authorized.
+
+## R1 — Core Hardening + First Systematic Coverage Release — active
+
+Explicitly authorized after COV-004.
+
+R1 is not another architecture experiment.
+
+Current programme:
+1. Core Contract v1 — **frozen after adversarial review**;
+2. target-frame freeze — **completed**;
+3. C0 construction / identity QA — **next**;
+4. C1 research;
+5. selective C2;
+6. release-level QC and adversarial replay;
+7. immutable candidate release + simple Atlas surface;
+8. explicit release/no-release decision.
+
+Core Contract v1 is a release-method profile layered on the existing canonical methodology/data architecture. It does not change v0.6.1 or production schema.
+
+R1 ceilings are maximums, not targets:
+- 120 C0;
+- 36 C1;
+- 12 C2.
+
+Setup adversary tightened R1 to:
+- pre-1900 by default;
+- 50% C1 adversarial replay minimum;
+- explicit language/access/coverage limits;
+- independent-review status kept separate from internal review;
+- no new backend/platform work;
+- mandatory midpoint stop review.
+
+Historical subject research is now gated only by C0 construction and identity/time QA for the planned C1 targets; the R1.2 target frame is frozen and immutable.
+
+Durable decision: D-073.  
+Programme files: `programmes/r1/`.
 
 ## Remaining bounded project-system debt
 
