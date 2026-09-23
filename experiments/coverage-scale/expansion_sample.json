@@ -1,0 +1,239 @@
+{
+  "experiment": "COV-002",
+  "purpose": "rank-2 scale cohort; neutral to slavery evidence",
+  "source_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+  "valid_rank2_strata": 21,
+  "requested_cells": 12,
+  "selected_cells": 12,
+  "viable": true,
+  "cells": [
+    {
+      "cell_id": "1800:F",
+      "anchor_source_year": 1800,
+      "sector": "F",
+      "candidate_count": 39,
+      "selection_rank": 2,
+      "selection_digest": "19851961fedee5796cfe86cf03585a7c21bba9c42dd58ebc77e50654b034e288",
+      "source_row_ordinal": 9951,
+      "source_name": "Kelantan",
+      "source_type": "POLITY",
+      "source_from_year": 1762,
+      "source_to_year": 1889,
+      "source_seshat_id": "",
+      "source_wikidata": "Q185944",
+      "sampling_bbox_midpoint": [
+        102.01150131225586,
+        5.557246923446655
+      ]
+    },
+    {
+      "cell_id": "-500:A",
+      "anchor_source_year": -500,
+      "sector": "A",
+      "candidate_count": 2,
+      "selection_rank": 2,
+      "selection_digest": "a8566741abf0cb533c2caf5f5559d149a0fce76f27524de19d00c05f832583ec",
+      "source_row_ordinal": 294,
+      "source_name": "Zapotec Civilization",
+      "source_type": "POLITY",
+      "source_from_year": -500,
+      "source_to_year": -292,
+      "source_seshat_id": "mx_monte_alban_1_early",
+      "source_wikidata": "Q844750",
+      "sampling_bbox_midpoint": [
+        -96.83843994140625,
+        17.225457191467285
+      ]
+    },
+    {
+      "cell_id": "1300:B",
+      "anchor_source_year": 1300,
+      "sector": "B",
+      "candidate_count": 2,
+      "selection_rank": 2,
+      "selection_digest": "9b823006ad0b05882f206faf6ee772bcdd6ae9474ddb0e0296ed00295084d92a",
+      "source_row_ordinal": 5245,
+      "source_name": "Chimu Empire",
+      "source_type": "POLITY",
+      "source_from_year": 1202,
+      "source_to_year": 1343,
+      "source_seshat_id": "",
+      "source_wikidata": "Q581741",
+      "sampling_bbox_midpoint": [
+        -79.3335075378418,
+        -7.685999870300293
+      ]
+    },
+    {
+      "cell_id": "1800:A",
+      "anchor_source_year": 1800,
+      "sector": "A",
+      "candidate_count": 6,
+      "selection_rank": 2,
+      "selection_digest": "1a501d83000f6ae4dc1bbe02714488e822220d1b509f65bff9255016bb446826",
+      "source_row_ordinal": 10522,
+      "source_name": "New Netherland",
+      "source_type": "POLITY",
+      "source_from_year": 1800,
+      "source_to_year": 1802,
+      "source_seshat_id": "",
+      "source_wikidata": "Q382593",
+      "sampling_bbox_midpoint": [
+        -63.04144477844238,
+        18.125486373901367
+      ]
+    },
+    {
+      "cell_id": "-500:C",
+      "anchor_source_year": -500,
+      "sector": "C",
+      "candidate_count": 3,
+      "selection_rank": 2,
+      "selection_digest": "79a41add258f4df3e86d1e41982b0301acbf63eaae2a424e8920d71373600772",
+      "source_row_ordinal": 189,
+      "source_name": "Hadhramaut",
+      "source_type": "POLITY",
+      "source_from_year": -700,
+      "source_to_year": -351,
+      "source_seshat_id": "",
+      "source_wikidata": "Q1517159",
+      "sampling_bbox_midpoint": [
+        49.05049133300781,
+        15.682547092437744
+      ]
+    },
+    {
+      "cell_id": "1300:E",
+      "anchor_source_year": 1300,
+      "sector": "E",
+      "candidate_count": 17,
+      "selection_rank": 2,
+      "selection_digest": "43e4baac6939bda4d4ab857e30c59167dfea4a0b5ef6f1359b9ee72996b12903",
+      "source_row_ordinal": 5770,
+      "source_name": "Pandya Empire",
+      "source_type": "POLITY",
+      "source_from_year": 1260,
+      "source_to_year": 1313,
+      "source_seshat_id": "in_pandya_emp_3",
+      "source_wikidata": "Q844910",
+      "sampling_bbox_midpoint": [
+        77.59747308309382,
+        10.899768120309316
+      ]
+    },
+    {
+      "cell_id": "500:F",
+      "anchor_source_year": 500,
+      "sector": "F",
+      "candidate_count": 11,
+      "selection_rank": 2,
+      "selection_digest": "044a97b6cadd98eeb0c25bee4f25e0d3c7faf759a702f21a9fe7abb005be25bd",
+      "source_row_ordinal": 1905,
+      "source_name": "Goguryeo",
+      "source_type": "POLITY",
+      "source_from_year": 490,
+      "source_to_year": 522,
+      "source_seshat_id": "kr_goguryeo_k",
+      "source_wikidata": "Q28370",
+      "sampling_bbox_midpoint": [
+        126.8167610168457,
+        40.953956604003906
+      ]
+    },
+    {
+      "cell_id": "1300:C",
+      "anchor_source_year": 1300,
+      "sector": "C",
+      "candidate_count": 10,
+      "selection_rank": 2,
+      "selection_digest": "401ec1fd25e986c408bb706d4b36b0c12a569fc19ae1b7aec3d0d0febd79f7dd",
+      "source_row_ordinal": 6047,
+      "source_name": "Mamluk Sultanate",
+      "source_type": "POLITY",
+      "source_from_year": 1294,
+      "source_to_year": 1343,
+      "source_seshat_id": "eg_mamluk_sultanate_1",
+      "source_wikidata": "Q282428",
+      "sampling_bbox_midpoint": [
+        31.671360969543457,
+        27.255906105041504
+      ]
+    },
+    {
+      "cell_id": "1800:D",
+      "anchor_source_year": 1800,
+      "sector": "D",
+      "candidate_count": 37,
+      "selection_rank": 2,
+      "selection_digest": "05ef823ab5eced4acfc3ae7a872d23ea4109d0b804692ed568aac895fb2a8fca",
+      "source_row_ordinal": 10516,
+      "source_name": "Kingdom of Georgia",
+      "source_type": "POLITY",
+      "source_from_year": 1800,
+      "source_to_year": 1802,
+      "source_seshat_id": "",
+      "source_wikidata": "Q154667",
+      "sampling_bbox_midpoint": [
+        45.04649353027344,
+        41.653106689453125
+      ]
+    },
+    {
+      "cell_id": "500:E",
+      "anchor_source_year": 500,
+      "sector": "E",
+      "candidate_count": 12,
+      "selection_rank": 2,
+      "selection_digest": "17a250054771428c186ca82d3d6a7caffab9f6c1d8694b595cf55d4e3ab7a4e4",
+      "source_row_ordinal": 1868,
+      "source_name": "Protectorate of the Western Regions",
+      "source_type": "POLITY",
+      "source_from_year": 476,
+      "source_to_year": 554,
+      "source_seshat_id": "",
+      "source_wikidata": "Q911440",
+      "sampling_bbox_midpoint": [
+        84.96598434448242,
+        39.68337059020996
+      ]
+    },
+    {
+      "cell_id": "1800:C",
+      "anchor_source_year": 1800,
+      "sector": "C",
+      "candidate_count": 21,
+      "selection_rank": 2,
+      "selection_digest": "3626f05225ed6c4b62fedbb71e265f22bbb4e49af3833cc162e570641f24fb63",
+      "source_row_ordinal": 10405,
+      "source_name": "Merina Kingdom",
+      "source_type": "POLITY",
+      "source_from_year": 1796,
+      "source_to_year": 1802,
+      "source_seshat_id": "",
+      "source_wikidata": "Q1071439",
+      "sampling_bbox_midpoint": [
+        46.703317642211914,
+        -19.450623512268066
+      ]
+    },
+    {
+      "cell_id": "500:D",
+      "anchor_source_year": 500,
+      "sector": "D",
+      "candidate_count": 23,
+      "selection_rank": 2,
+      "selection_digest": "1580693e16a6398de8f0361274e3160acbeb1ec5cef58481df2312ca278f5ad5",
+      "source_row_ordinal": 1934,
+      "source_name": "Caucasian Albania",
+      "source_type": "POLITY",
+      "source_from_year": 500,
+      "source_to_year": 509,
+      "source_seshat_id": "",
+      "source_wikidata": "Q177076",
+      "sampling_bbox_midpoint": [
+        47.24885559082031,
+        40.71364212036133
+      ]
+    }
+  ]
+}
