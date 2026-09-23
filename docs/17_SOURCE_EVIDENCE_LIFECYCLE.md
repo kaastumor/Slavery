@@ -318,19 +318,26 @@ It should not independently attempt to settle major philological, archaeological
 
 ---
 
-## Stage 11 — classification / P-level where appropriate
+## Stage 11 — post-M1 territorial-practice characterization
 
-Only territorial-practice claims may receive P0–P4.
+For new post-M1 territorial-practice research, review the independent dimensions supported by the evidence package:
 
-- P0 = explicit reviewed assessment that no usable P1–P4 classification is currently available; never absence;
-- P1 = isolated direct attestation;
-- P2 = recurrent/repeatedly evidenced practice;
-- P3 = systemic/institutional practice strongly supported;
-- P4 = widespread or structurally major practice supported by scholarship.
+- attestation pattern;
+- interpretive basis;
+- assertion form;
+- occurrence pattern;
+- institutionalization;
+- prevalence scope;
+- structural significance;
+- practice facets;
+- research stage;
+- classification outcome.
 
-A positive historical designation may remain with **NULL practice_level** when intensity has not yet been assessed.
+Unsupported dimensions remain unassessed. Do not infer recurrence from source count, institutionalization from recurrence, prevalence from institutionalization, or structural significance from prevalence.
 
-Never derive the level mechanically from:
+**P0–P4 is legacy-release compatibility only.** Preserve an existing reviewed legacy value when reconstructing/migrating a historical release, but do not assign a new P-level as the target classification and do not derive post-M1 dimensions from a legacy P-level.
+
+Never derive historical characterization mechanically from:
 
 - document counts;
 - voyage counts;
