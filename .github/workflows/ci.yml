@@ -36,6 +36,9 @@ jobs:
       - name: Schema smoke test
         run: ./scripts/db-test-schema.sh
 
+      - name: Claim-kind integrity
+        run: docker compose exec -T db sh -lc 'psql -v ON_ERROR_STOP=1 -U "$POSTGRES_USER" -d "$POSTGRES_DB" -f /workspace/db/tests/009_claim_kind_integrity.sql'
+
       - name: Python tests
         run: ./scripts/test-python.sh
 
