@@ -23,13 +23,15 @@ Time-bounded records should retain source-faithful/query-envelope bounds and unc
 Target semantics distinguish:
 
 - `from_year` / `to_year` / `valid_years` as the outer query window or legacy compatibility bounds;
-- `temporal_applicability_mode` describing whether the assertion is continuous, a bounded occurrence, alternative dates, an open terminus, or unresolved;
+- `temporal_applicability_mode` describing whether the assertion has positive applicability (continuous interval, bounded occurrence, alternative dates), carries only an open terminus constraint, or remains unresolved;
 - one or more explicit asserted intervals/dates where positive applicability is known;
 - `temporal_precision`;
 - `temporal_certainty` where needed;
 - `date_text_original` where useful.
 
 Selected-year truth must evaluate applicability semantics, not merely membership in `valid_years`. Temporal precision does not itself imply continuity.
+
+For `terminus_after` and `terminus_before`, the open outer query range is retrieval metadata rather than a positive asserted interval. A terminus alone must not make arbitrary later/earlier years historically true.
 
 Do not convert a broad or uncertain period into false exactness or false continuous presence.
 
