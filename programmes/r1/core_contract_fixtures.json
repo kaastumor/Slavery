@@ -1,0 +1,150 @@
+{
+  "contract_version": "1.0-r1",
+  "purpose": "Empirical failure/success fixtures that justify Core Contract v1. No fixture alone defines a universal ontology.",
+  "fixtures": [
+    {
+      "id": "FX-SILLA-TIME",
+      "witness": "Silla Village Register",
+      "risk": "alternative/broad dates become continuous selected-year truth",
+      "invariants": [
+        "query_window != positive_applicability",
+        "precision_change_does_not_change_truth"
+      ]
+    },
+    {
+      "id": "FX-BAEKJE-EVENT",
+      "witness": "Baekje 369",
+      "risk": "bounded capture/enslavement event becomes enduring territorial practice",
+      "invariants": [
+        "event_process != enduring_practice",
+        "bounded_event_does_not_set_prevalence"
+      ]
+    },
+    {
+      "id": "FX-HITTITE-FACETS",
+      "witness": "Hittite central Anatolia",
+      "risk": "status/function/property/transmission collapse to one code",
+      "invariants": [
+        "practice_facets_are_orthogonal"
+      ]
+    },
+    {
+      "id": "FX-MAURYAN-DISAGREE",
+      "witness": "Mauryan Empire",
+      "risk": "any contradiction automatically becomes disputed or erased",
+      "invariants": [
+        "evidence_direction_preserved",
+        "working_synthesis_allowed",
+        "disputed_requires_material_unresolved_historiography"
+      ]
+    },
+    {
+      "id": "FX-MAYA-GEOMETRY",
+      "witness": "Late Classic Maya",
+      "risk": "missing geometry forces polity proxy",
+      "invariants": [
+        "unresolved_geometry_allowed",
+        "geometry_does_not_authorize_inference"
+      ]
+    },
+    {
+      "id": "FX-CHANDELA-SOURCE",
+      "witness": "Chandela 1203 proposition",
+      "risk": "cautious row hides decisive weak source",
+      "invariants": [
+        "positive_claim_requires_claim_fit_source",
+        "weak_decisive_source_triggers_review_or_c2"
+      ]
+    },
+    {
+      "id": "FX-ZHU-TEMPORAL",
+      "witness": "Zhu -500",
+      "risk": "later Qin / earlier Zhou material sounds contemporaneous with target",
+      "invariants": [
+        "source_period != target_applicability",
+        "temporal_mismatch_requires_abstention_or_c2"
+      ]
+    },
+    {
+      "id": "FX-TARGET-ID",
+      "witness": "Mahdids/New Netherland/Georgia/Western Regions",
+      "risk": "subject research attaches to invalid target/year identity",
+      "invariants": [
+        "identity_time_validation_precedes_positive_claim",
+        "invalid_target_not_silently_replaced"
+      ]
+    },
+    {
+      "id": "FX-KILWA-LOCUS",
+      "witness": "Kilwa 1400",
+      "risk": "site/network evidence fills wider coast",
+      "invariants": [
+        "evidence_locus_separate_from_inference_extent",
+        "site_not_territory"
+      ]
+    },
+    {
+      "id": "FX-SILK-VIKING-NETWORK",
+      "witness": "Silk Road / Viking networks",
+      "risk": "network participation becomes territorial practice",
+      "invariants": [
+        "network_claim_separate_from_territorial_practice",
+        "route_not_polygon"
+      ]
+    },
+    {
+      "id": "FX-SAMOA-RETRO",
+      "witness": "Samoa 1700",
+      "risk": "later ethnography back-projected unchanged",
+      "invariants": [
+        "retrospective_source_temporal_limit_explicit",
+        "inconclusive_not_absence"
+      ]
+    },
+    {
+      "id": "FX-ANDAMAN-EXTERNAL",
+      "witness": "Andaman 1800",
+      "risk": "external colonial captivity becomes indigenous internal slavery",
+      "invariants": [
+        "external_participation_or_coercion_separate_from_internal_practice"
+      ]
+    },
+    {
+      "id": "FX-CLUNY-TERM",
+      "witness": "Cluny 1100",
+      "risk": "servus/ancilla normalized automatically to chattel slavery or serfdom",
+      "invariants": [
+        "source_native_term_preserved",
+        "category_translation_requires_specialist_interpretation"
+      ]
+    },
+    {
+      "id": "FX-CAHOKIA-STATUS",
+      "witness": "Cahokia 1200",
+      "risk": "sacrifice/captive interpretation becomes slave status",
+      "invariants": [
+        "coercive_event_does_not_mechanically_set_status",
+        "material_disagreement_preserved"
+      ]
+    },
+    {
+      "id": "FX-C0-ABSENCE",
+      "witness": "COV C0 rows",
+      "risk": "registered/unresearched becomes no-slavery map state",
+      "invariants": [
+        "c0_no_historical_claim",
+        "blank_or_unresearched_not_absence"
+      ]
+    },
+    {
+      "id": "FX-SABAEA-SUPERSEDE",
+      "witness": "Sabaeans 2015→2023",
+      "risk": "later scholarship silently rewrites old release",
+      "invariants": [
+        "release_immutable",
+        "later_evidence_creates_new_review_state",
+        "query_bound_to_release"
+      ]
+    }
+  ]
+}
