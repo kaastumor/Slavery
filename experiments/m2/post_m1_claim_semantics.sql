@@ -302,7 +302,130 @@ $$;
 COMMENT ON FUNCTION atlas.claim_applies_at_year(uuid, integer) IS
 'Experimental M2 selected-year truth predicate. It intentionally ignores the outer claim.valid_years envelope and returns true only for explicit asserted intervals.';
 
+CREATE OR REPLACE FUNCTION atlas.validate_post_m1_claim_parent_state()
+RETURNS trigger
+LANGUAGE plpgsql
+SET search_path = ''
+AS $
+BEGIN
+    IF NEW.semantic_model_version IS NULL THEN
+        IF EXISTS (
+            SELECT 1
+            FROM atlas.territorial_practice_claim t
+            WHERE t.claim_id = NEW.claim_id
+              AND (
+                  t.assertion_form IS NOT NULL
+                  OR t.attestation_pattern IS NOT NULL
+                  OR t.interpretive_basis IS NOT NULL
+                  OR t.occurrence_pattern IS NOT NULL
+                  OR t.institutionalization IS NOT NULL
+                  OR t.prevalence_scope IS NOT NULL
+                  OR t.structural_significance IS NOT NULL
+                  OR t.research_stage IS NOT NULL
+                  OR t.classification_outcome IS NOT NULL
+              )
+        ) THEN
+            RAISE EXCEPTION
+                'legacy/null semantic model cannot retain post-M1 territorial dimensions for claim %',
+                NEW.claim_id;
+        END IF;
+
+        IF EXISTS (
+            SELECT 1
+            FROM atlas.claim_asserted_interval i
+            WHERE i.claim_id = NEW.claim_id
+        ) THEN
+            RAISE EXCEPTION
+                'legacy/null semantic model cannot retain post-M1 asserted intervals for claim %',
+                NEW.claim_id;
+        END IF;
+    ELSIF NEW.semantic_model_version = 'post_m1_v2' THEN
+        IF EXISTS (
+            SELECT 1
+            FROM atlas.territorial_practice_claim t
+            WHERE t.claim_id = NEW.claim_id
+              AND (
+                  t.assertion_form IS NULL
+                  OR t.attestation_pattern IS NULL
+                  OR t.interpretive_basis IS NULL
+                  OR t.occurrence_pattern IS NULL
+                  OR t.institutionalization IS NULL
+                  OR t.prevalence_scope IS NULL
+                  OR t.structural_significance IS NULL
+                  OR t.research_stage IS NULL
+                  OR t.classification_outcome IS NULL
+              )
+        ) THEN
+            RAISE EXCEPTION
+                'post-M1 parent claim % has an incomplete territorial semantic subtype',
+                NEW.claim_id;
+        END IF;
+
+        IF EXISTS (
+            SELECT 1
+            FROM atlas.claim_asserted_interval i
+            WHERE i.claim_id = NEW.claim_id
+              AND (
+                  (NEW.from_year IS NOT NULL AND i.from_year < NEW.from_year)
+                  OR
+                  (NEW.to_year IS NOT NULL AND i.to_year > NEW.to_year)
+              )
+        ) THEN
+            RAISE EXCEPTION
+                'claim % outer query window no longer contains all asserted intervals',
+                NEW.claim_id;
+        END IF;
+    END IF;
+
+    RETURN NULL;
+END;
+$;
+
+DROP TRIGGER IF EXISTS claim_post_m1_parent_consistency ON atlas.claim;
+CREATE CONSTRAINT TRIGGER claim_post_m1_parent_consistency
+AFTER INSERT OR UPDATE ON atlas.claim
+DEFERRABLE INITIALLY DEFERRED
+FOR EACH ROW EXECUTE FUNCTION atlas.validate_post_m1_claim_parent_state();
+
+CREATE OR REPLACE FUNCTION atlas.validate_evidence_locus_dependents()
+RETURNS trigger
+LANGUAGE plpgsql
+SET search_path = ''
+AS $
+BEGIN
+    IF EXISTS (
+        SELECT 1
+        FROM atlas.claim_inference_extent e
+        WHERE e.claim_id = OLD.claim_id
+          AND e.spatial_entity_id = OLD.spatial_entity_id
+          AND e.generalization_basis = 'same_as_locus'
+    )
+    AND NOT EXISTS (
+        SELECT 1
+        FROM atlas.claim_evidence_locus l
+        WHERE l.claim_id = OLD.claim_id
+          AND l.spatial_entity_id = OLD.spatial_entity_id
+    ) THEN
+        RAISE EXCEPTION
+            'same_as_locus inference extent requires retained matching evidence locus for claim % spatial entity %',
+            OLD.claim_id,
+            OLD.spatial_entity_id;
+    END IF;
+
+    RETURN NULL;
+END;
+$;
+
+DROP TRIGGER IF EXISTS claim_evidence_locus_inverse_consistency
+    ON atlas.claim_evidence_locus;
+CREATE CONSTRAINT TRIGGER claim_evidence_locus_inverse_consistency
+AFTER DELETE OR UPDATE ON atlas.claim_evidence_locus
+DEFERRABLE INITIALLY DEFERRED
+FOR EACH ROW EXECUTE FUNCTION atlas.validate_evidence_locus_dependents();
+
 REVOKE EXECUTE ON FUNCTION atlas.enforce_post_m1_territorial_semantics() FROM PUBLIC;
 REVOKE EXECUTE ON FUNCTION atlas.enforce_asserted_interval_within_query_window() FROM PUBLIC;
 REVOKE EXECUTE ON FUNCTION atlas.enforce_same_as_locus_inference() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION atlas.validate_post_m1_claim_parent_state() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION atlas.validate_evidence_locus_dependents() FROM PUBLIC;
 REVOKE EXECUTE ON FUNCTION atlas.claim_applies_at_year(uuid, integer) FROM PUBLIC;
