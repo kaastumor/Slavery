@@ -1,0 +1,64 @@
+{
+  "cell_id": "COV2:1800:F",
+  "frame": "polity_rank2",
+  "anchor_year": 1800,
+  "target_label": "Kelantan",
+  "source_sample": {
+    "source_name": "Kelantan",
+    "source_row_ordinal": 9951,
+    "source_from_year": 1762,
+    "source_to_year": 1889,
+    "sampling_sector": "F",
+    "selection_rank": 2
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "Later nineteenth-century evidence documents debt-bondage/debt-slavery in Kelantan and comparable Malay states, but the bounded packet does not securely establish the same system at exactly 1800.",
+  "strongest_unsupported_proposition": "Do not back-project late nineteenth-/early twentieth-century Kelantan descriptions into 1800 or equate all debt bondage with chattel slavery.",
+  "territorial_practice_summary": "Kelantan debt bondage is well documented later in the nineteenth century; exact 1800 applicability remains unresolved.",
+  "legal_state_summary": "",
+  "external_network_summary": "",
+  "terminology_category_qualification": "Debt-bondage, debt-slavery, debtor-servantship and domestic slavery overlap in historical descriptions but are not analytically identical.",
+  "temporal_scope_precision": "Target-specific documentary descriptions are later than 1800; broader Southeast Asian scholarship establishes debt as a major route into bondage from 1400–1800.",
+  "evidence_locus": "Kelantan",
+  "inference_extent": "No inference beyond the stated target/evidence locus.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Following the Debt: Credit and Debt in Southeast Asian Legal Theory and Practice, 1400–1800",
+      "author": "Anthony Reid",
+      "year": null,
+      "url_or_identifier": "https://www.cambridge.org/core/books/abs/credit-and-debt-in-indonesia-8601930/following-the-debt-credit-and-debt-in-southeast-asian-legal-theory-and-practice-14001800/4B66415CB01DD030DFB780A181DD28D5",
+      "source_role": "specialist_synthesis",
+      "direction": "context",
+      "locator": ""
+    },
+    {
+      "title": "Slavery and Slave Trade: Red Sea, Arabia and Persian Gulf — Kelantan and Trengganu investigation",
+      "author": "Sir George Maxwell investigation",
+      "year": 1930,
+      "url_or_identifier": "https://www.qdl.qa/archive/81055/vdc_100080220223.0x0000a9",
+      "source_role": "primary_source",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "Exact anchor-year Kelantan evidence not established."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 1,
+    "primary_or_dataset_items_used": 1,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

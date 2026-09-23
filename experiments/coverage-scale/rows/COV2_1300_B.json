@@ -1,0 +1,64 @@
+{
+  "cell_id": "COV2:1300:B",
+  "frame": "polity_rank2",
+  "anchor_year": 1300,
+  "target_label": "Chimu Empire",
+  "source_sample": {
+    "source_name": "Chimu Empire",
+    "source_row_ordinal": 5245,
+    "source_from_year": 1202,
+    "source_to_year": 1343,
+    "sampling_sector": "B",
+    "selection_rank": 2
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "Chimú state organisation used labour taxation/corvée and captive sacrifice, but the bounded packet does not establish slavery as the correct category for those relations around 1300.",
+  "strongest_unsupported_proposition": "Do not reclassify state labour taxation, attached craft production or sacrificed captives as slavery.",
+  "territorial_practice_summary": "State-administered labour obligations and attached production are supported; slavery is not established.",
+  "legal_state_summary": "",
+  "external_network_summary": "Captive-taking/sacrifice evidence does not establish slave trade.",
+  "terminology_category_qualification": "Corvée, attached specialist labour, captivity and slavery must remain separate.",
+  "temporal_scope_precision": "Chimú evidence directly concerns the relevant late pre-Hispanic period.",
+  "evidence_locus": "Chimu Empire",
+  "inference_extent": "No inference beyond the stated target/evidence locus.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "adjacent",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Chimu — eHRAF Archaeology summary",
+      "author": "Yale Human Relations Area Files",
+      "year": null,
+      "url_or_identifier": "https://ehrafarchaeology.yale.edu/traditions/se75/summary",
+      "source_role": "specialist_synthesis",
+      "direction": "qualifies",
+      "locator": ""
+    },
+    {
+      "title": "Human sacrifice by the Chimú State: evidence and interpretation",
+      "author": "John Verano",
+      "year": 2025,
+      "url_or_identifier": "https://revistas.cultura.gob.pe/index.php/arqueologicas/article/view/634",
+      "source_role": "specialist_article",
+      "direction": "context",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "No bounded slavery-status claim established."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 2,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

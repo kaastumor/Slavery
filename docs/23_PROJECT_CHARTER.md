@@ -192,4 +192,26 @@ This does not change D-063: the former Atlas application/platform remains stoppe
 
 COV-001 authorizes no automatic successor. At most one future bounded experiment may test whether corpus reuse/value scales faster than research, review and update cost.
 
+### COV-002 — scale/reuse economics (completed)
+
+COV-002 / #151 tested whether the COV-001 coverage-corpus value compounds faster than its research/review/update burden.
+
+Result: **STOP FURTHER AUTOMATIC SCALING.**
+
+The experiment grew the frozen research corpus from 25 to 37 rows and compared:
+- full detailed coverage rows;
+- a compact coverage register;
+- a strong ordinary matrix.
+
+The compact register preserved the full row's fixed-task behavior and reduced static review surface to about 60.5%, while law/practice, network/territorial and handbook-coverage reuse advantages persisted at N=37.
+
+However, the preregistered maintenance-economy gate failed: the three material evidence updates required the same number of local review edits in compact and full forms. The full row also failed to earn its additional routine complexity.
+
+The durable lesson is:
+- use the compact coverage-register pattern when a concrete comparative task needs it;
+- preserve existing full evidence artifacts for audit/research;
+- do not pursue systematic world-scale corpus growth for completeness alone.
+
+No successor experiment or corpus-expansion horizon exists after COV-002.
+
 At every horizon boundary, review evidence for **and against** the thesis, compare the strongest baseline, consider whether the artifact can shrink, and explicitly choose **continue / simplify / redirect / stop** before creating the next horizon.

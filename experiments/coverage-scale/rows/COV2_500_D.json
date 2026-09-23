@@ -1,0 +1,55 @@
+{
+  "cell_id": "COV2:500:D",
+  "frame": "polity_rank2",
+  "anchor_year": 500,
+  "target_label": "Caucasian Albania",
+  "source_sample": {
+    "source_name": "Caucasian Albania",
+    "source_row_ordinal": 1934,
+    "source_from_year": 500,
+    "source_to_year": 509,
+    "sampling_sector": "D",
+    "selection_rank": 2
+  },
+  "coverage_outcome": "researched_inconclusive",
+  "strongest_bounded_proposition": "Sources confirm servile/slave categories in the wider ancient Caucasus and much earlier temple slaves in Albania, but the bounded packet does not establish a significant slavery institution in Caucasian Albania at c.500 CE.",
+  "strongest_unsupported_proposition": "Do not infer fifth-century Albanian slavery from ancient Strabo-era temple slaves or from later Caucasian slave-export histories.",
+  "territorial_practice_summary": "Exact fifth-century territorial practice remains unresolved.",
+  "legal_state_summary": "",
+  "external_network_summary": "",
+  "terminology_category_qualification": "Servile, dependent, temple-slave and later exported-captive categories span different periods and institutions.",
+  "temporal_scope_precision": "The strongest direct Albania slavery reference is ancient and not contemporaneous with 500 CE.",
+  "evidence_locus": "Caucasian Albania / wider Caucasus",
+  "inference_extent": "No fifth-century prevalence or structural-significance claim.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "A classic specialist synthesis explicitly cautions that slavery does not appear to have flourished on an extensive scale in Caucasia.",
+  "global_baseline": {
+    "cambridge": "none",
+    "palgrave": "adjacent",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Introduction to Christian Caucasian History: The Formative Centuries (IVth–VIIIth)",
+      "author": "Cyril Toumanoff",
+      "year": 1963,
+      "url_or_identifier": "https://www.cambridge.org/core/journals/traditio/article/abs/introduction-to-christian-caucasian-history-the-formative-centuries-ivthviiith/CAAD5EAF6637E45134BB9CF78CDBFA4E",
+      "source_role": "specialist_article",
+      "direction": "qualifies",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [
+    "No direct c.500 slavery-status evidence established."
+  ],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 1,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

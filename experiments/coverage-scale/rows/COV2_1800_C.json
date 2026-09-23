@@ -1,0 +1,71 @@
+{
+  "cell_id": "COV2:1800:C",
+  "frame": "polity_rank2",
+  "anchor_year": 1800,
+  "target_label": "Merina Kingdom",
+  "source_sample": {
+    "source_name": "Merina Kingdom",
+    "source_row_ordinal": 10405,
+    "source_from_year": 1796,
+    "source_to_year": 1802,
+    "sampling_sector": "C",
+    "selection_rank": 2
+  },
+  "coverage_outcome": "bounded_supported",
+  "strongest_bounded_proposition": "Slavery and slave export were materially present in the Merina/Imerina political economy around 1800, but specialist scholarship rejects treating slavery alone as the later imperial economy's single organising labour principle.",
+  "strongest_unsupported_proposition": "Do not flatten slavery and fanompoana into one coerced-labour category or infer that all Merina production depended on slaves.",
+  "territorial_practice_summary": "Slaveholding and slave labour are supported around 1800; later fanompoana formed a distinct crown-labour institution.",
+  "legal_state_summary": "Crown/state labour obligations and slavery must remain separate.",
+  "external_network_summary": "Slave exports were economically important around 1800 and later restricted by British-Merina agreements.",
+  "terminology_category_qualification": "Slavery and fanompoana are distinct although both involve coercive dependency.",
+  "temporal_scope_precision": "Sources directly cover Imerina from 1775/1790 through the nineteenth century and the 1800 anchor.",
+  "evidence_locus": "Imerina / nascent Merina state",
+  "inference_extent": "Bounded Merina claim; no island-wide prevalence inference.",
+  "evidence_classes": [
+    "specialist scholarship"
+  ],
+  "contrary_limiting_evidence": "",
+  "global_baseline": {
+    "cambridge": "direct",
+    "palgrave": "direct",
+    "structured_dataset_relevance": []
+  },
+  "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+  "sources": [
+    {
+      "title": "Slavery and Fanompoana: the Structure of Forced Labour in Imerina, 1790–1861",
+      "author": "Gwyn Campbell",
+      "year": 1988,
+      "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/slavery-and-fanompoana-the-structure-of-forced-labour-in-imerina-madagascar-179018611/87DF59AEF981939AF860D864DA5D3F3A",
+      "source_role": "specialist_article",
+      "direction": "supports",
+      "locator": ""
+    },
+    {
+      "title": "Sacred Acquisition: Andrianampoinimerina at Ambohimanga, 1777–1790",
+      "author": "Gerald M. Berg",
+      "year": 1988,
+      "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/sacred-acquisition-andrianampoinimerina-at-ambohimanga-17771790/EBA65FD0322C0EA8D5B77EBE801598F8",
+      "source_role": "specialist_article",
+      "direction": "context",
+      "locator": ""
+    },
+    {
+      "title": "An Economic History of Imperial Madagascar, 1750–1895",
+      "author": "Gwyn Campbell",
+      "year": 2005,
+      "url_or_identifier": "https://assets.cambridge.org/052183/9351/excerpt/0521839351_excerpt.htm",
+      "source_role": "specialist_synthesis",
+      "direction": "supports",
+      "locator": ""
+    }
+  ],
+  "unresolved_issues": [],
+  "research_notes": {
+    "global_synthesis_items_used": 1,
+    "specialist_secondary_items_used": 3,
+    "primary_or_dataset_items_used": 0,
+    "source_budget_exceeded": false,
+    "source_budget_reason": ""
+  }
+}

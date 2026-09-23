@@ -737,3 +737,74 @@ This does **not** authorize:
 - that next experiment is **not authorized by this decision**.
 
 **Durable result:** `experiments/coverage-value/11_FINAL_RESULT.md`.
+
+
+## D-066 — Authorize one bounded COV-002 scale/reuse economics experiment
+**Date:** 2026-09-23  
+**Status:** accepted bounded experiment authorization; no successor horizon authorized
+
+**Decision:** Authorize COV-002 / issue #151 as the single further corpus-scale experiment permitted by D-065.
+
+COV-002 tests whether the value of the flat coverage corpus grows faster than:
+- bounded historical research effort;
+- review surface;
+- maintenance/update burden;
+- repeated cross-cell reconstruction.
+
+It also tests whether the full COV-001 row should shrink into a compact coverage register.
+
+**Experimental form:**
+- add 12 deterministic rank-2 polity-year cells from the same pinned Cliopatria frame;
+- compare N=25, 31 and 37;
+- compare full rows, compact register and strongest ordinary matrix;
+- run a field-loss audit;
+- run six deterministic bounded evidence updates;
+- preserve specialist and specialized-data negative controls.
+
+**Guardrails:**
+- sample must be frozen before historical research;
+- flat files only;
+- no canonical data release change;
+- no Atlas product/platform/database horizon;
+- no automatic successor;
+- no literal-completeness claim;
+- no absence inference from inconclusive/missing evidence.
+
+**Possible dispositions:** STOP / preservation, REDIRECT to compact register, or NARROW SUSTAIN of the full row.
+
+A positive result still does not authorize comprehensive global ingestion.
+
+
+## D-067 — COV-002 stops automatic corpus scaling; preserve compact register as a task-driven pattern
+**Date:** 2026-09-23  
+**Status:** accepted project-direction decision from COV-002 / issue #151
+
+**Decision:** Do not continue systematic/global coverage-corpus expansion from project momentum alone.
+
+Preserve the compact coverage-register pattern demonstrated by COV-002 for externally justified comparative tasks, but return the project to IDLE / preservation.
+
+**Evidence:**
+- COV-002 expanded from 25 to 37 researched rows through a deterministic rank-2 cohort;
+- at N=37, law/practice, network/territorial and global-handbook coverage tasks retained material reuse advantage over a strong ordinary matrix;
+- the compact register matched the full detailed row on all six fixed tasks;
+- the compact register used ~60.5% of the full row's static review surface;
+- the full row did not materially outperform the compact register on two independent correctness/provenance/uncertainty tasks;
+- six deterministic maintenance shocks produced three material updates and three no-change searches;
+- every material update touched the same number of local review atoms in compact and full forms;
+- therefore the preregistered maintenance-economy threshold failed;
+- three of twelve expansion targets also exposed upstream polity identity/time defects before historical slavery research, adding target-validation cost to scale.
+
+**Interpretation:** Cross-cell coverage value is real, but COV-002 did not demonstrate that systematic corpus maintenance becomes economically better as the corpus grows. Static compression is not enough to justify a standing global-ingestion program.
+
+**Consequences:**
+- D-063 remains fully in force for Atlas product/platform work;
+- v0.6.1 remains canonical and unchanged;
+- COV-001/COV-002 remain experimental/non-canonical;
+- no further internally generated scale experiment is authorized;
+- no H3 bulk/global research horizon is authorized;
+- no production migration or comprehensive ingestion is authorized;
+- where a real comparative task needs a coverage artifact, prefer the compact register fields demonstrated by COV-002;
+- preserve full F-style rows where already created as audit/research material, but do not require that richer shape for every future target absent a concrete consumer;
+- future substantive expansion requires a new external use case, user/consumer, funded research question or other concrete trigger whose value justifies research/review/update cost.
+
+**Durable result:** `experiments/coverage-scale/13_FINAL_RESULT.md`.

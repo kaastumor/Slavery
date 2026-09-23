@@ -45,6 +45,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | A-007 | A serial issue-driven autonomous worker can create value without roadmap drift | survives only as a bounded gate mechanism / idle | M1/M2/H2 produced useful corrections, but H2 triggered the stop rule. No autonomous execution runway is justified in preservation state. |
 | A-008 | The full interactive Atlas platform is the best form for the demonstrated contribution | rejected for active expansion | H2 did not show a repeatable material advantage for the corpus/method over a strong baseline, and the thin view did not materially beat the corpus in any case. Preserve existing artifacts; do not expand the platform. |
 | A-009 | A systematically assembled global historical coverage corpus may have value distinct from Atlas representation/UI | survives narrowly / scale economics unresolved | COV-001 found robust material value on 4/6 cross-cell tasks after adversarial downgrade, while specialist narrative and SlaveVoyages remained superior in their domains. The value lives in a flat coverage corpus, not Atlas infrastructure. |
+| A-010 | The value of the flat coverage corpus compounds faster than review/update burden as it scales | not demonstrated strongly enough for systematic scaling | COV-002 found persistent cross-cell reuse and strong static compression, but the preregistered maintenance-economy gate failed. Preserve the compact register pattern; do not start comprehensive expansion. |
 
 ## Standing risk register
 
@@ -81,6 +82,7 @@ Record meaningful outcomes, including no-value results.
 | V-011 | Has the current full application/platform form earned its maintenance cost? | unproven / simplify | Strong correctness evidence exists, but no external user-task evidence shows the full product materially outperforms a simpler corpus/method + GIS/model workflow | Make corpus + thin atlas the working identity; full platform must re-earn expansion. |
 | V-012 | Does the corpus/method, then a minimal thin view, materially outperform the strongest competent baseline on difficult historical reasoning? | **PARITY / threshold failure** | Three preregistered cases: B materially improved A only for the Mexica category case; repaired C did not materially improve B in any case under the fixed rule | Trigger D-062 kill rule: stop active Atlas expansion; preserve methodology/corpus/audit artifacts. |
 | V-013 | Does preassembled global coverage itself create value beyond narrative handbooks + ordinary research/matrices? | **NARROW VALUE / survives** | COV-001: 4/6 fixed cross-cell tasks retained material value after result adversary; basic overview reached matrix parity; terminology advantage was downgraded; specialist narrative and SlaveVoyages won the negative controls. | Preserve the flat coverage-corpus thesis; do not reopen Atlas product expansion. Next uncertainty is reuse/maintenance economics at larger scale. |
+| V-014 | Does corpus reuse value grow faster than research/review/update burden, and can a compact register preserve the gain? | **MIXED / STOP SCALE** | COV-002: reuse survives at N=37 and compact R is ~60.5% of F's static review surface, but 0 material maintenance shocks met the <=70% R/F update threshold; F also did not earn its extra complexity. | Return to preservation; use compact register only for concrete externally justified tasks. |
 
 ## Health-check history
 
@@ -408,3 +410,84 @@ The project remains **IDLE / preservation** after COV-001. A future bounded scal
 Does corpus reuse/value grow faster than research, review and update burden at materially larger scale?
 
 Any future experiment must test that directly rather than maximizing record count.
+
+
+### HC-006 — COV-002 scale/reuse boundary — 2026-09-23
+
+Decision: **STOP FURTHER AUTOMATIC SCALING; PRESERVE COMPACT COVERAGE-REGISTER PATTERN.**
+
+Durable experiment: `experiments/coverage-scale/` / issue #151.  
+Direction decision: D-067.
+
+#### Expansion
+
+- 12 deterministic rank-2 polity-year targets frozen before slavery/coercion research;
+- combined corpus size increased from 25 to 37 researched rows;
+- expansion outcomes: 4 bounded-supported, 8 researched-inconclusive;
+- three expansion targets failed at identity/time validation before slavery classification:
+  - New Netherland at 1800;
+  - medieval Kingdom of Georgia at 1800;
+  - Western Regions protectorate at 500 CE.
+
+No successor polity was silently substituted.
+
+#### Reuse result
+
+At N=37:
+- T1 law/practice — F/R materially better than M;
+- T2 network/territorial inference — F/R materially better than M;
+- T3 global-handbook coverage — F/R materially better than M;
+- T4 unresolved research — parity with stronger M;
+- T5 overview — parity;
+- T6 decisive source recovery — practical parity; F retains richer source-role metadata.
+
+R matched F on all six fixed tasks.
+
+The 3/4 cross-cell scaling threshold therefore passed.
+
+#### Static review-surface result
+
+At N=37:
+- F total review atoms: 547;
+- R total: 331;
+- R/F: 60.5%;
+- F median: 15;
+- R median: 9;
+- median R/F: 60.0%.
+
+Static <=70% compactness threshold passed.
+
+The 12-row information-loss audit found no safety-critical omitted field under the fixed tasks.
+
+#### Maintenance result
+
+Six deterministic update rows were frozen before search.
+
+- 3 searches produced genuine new/contextual specialist evidence;
+- 3 produced no acceptable new source;
+- every material update touched 2 F atoms and 2 R atoms;
+- 0/0 no-change rows were treated as neutral.
+
+Required: R <=70% of F update surface in >=4/6 rows.
+
+Observed: **0 qualifying material rows — FAIL.**
+
+No widespread stale/contradictory outputs appeared, but lower evidence-maintenance cost was not demonstrated.
+
+#### Negative controls
+
+- specialist Alodia source interpretation > F/R/M;
+- SlaveVoyages > F/R/M for voyage-level quantitative research;
+- ordinary matrix M remained competitive for single-cell New Guinea Highlands reading.
+
+All controls pass.
+
+#### Interpretation
+
+The project has learned enough to stop generating its own growth justification.
+
+A compact coverage register is useful for real comparative work, but systematic global expansion has not earned its maintenance burden.
+
+The project returns to **IDLE / preservation**.
+
+Future expansion requires a concrete external use case, consumer or research question that pays for the curation burden. “Completeness” alone is not sufficient.

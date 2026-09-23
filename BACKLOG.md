@@ -9,69 +9,74 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# IDLE / PRESERVATION — COV-001 completed with NARROW SURVIVE
+# IDLE / PRESERVATION — COV-002 completed with STOP
 
-COV-001 / issue #148 tested a distinct post-H2 thesis:
+COV-002 / issue #151 tested the final internally justified corpus-scale question:
 
-> Does a systematically assembled global historical coverage corpus create reusable value even when the bespoke Atlas product does not?
+> Does coverage-corpus value grow faster than research, review and update burden as the corpus becomes materially larger?
 
-Final result:
+Final disposition:
 
-> **NARROW SURVIVE — COVERAGE CORPUS VALUE EXISTS; ATLAS PRODUCT EXPANSION REMAINS STOPPED**
+> **STOP FURTHER AUTOMATIC SCALING; PRESERVE THE COMPACT COVERAGE-REGISTER PATTERN**
 
 Durable result:
-- `experiments/coverage-value/11_FINAL_RESULT.md`
-- HC-005 in `docs/25_PROJECT_HEALTH.md`
-- D-065 in `docs/08_DECISIONS_LOG.md`
+- `experiments/coverage-scale/13_FINAL_RESULT.md`
+- HC-006 in `docs/25_PROJECT_HEALTH.md`
+- D-067 in `docs/08_DECISIONS_LOG.md`
 
-After adversarial downgrade, **4/6** fixed global tasks showed material value:
-- law vs practice;
-- network/participation vs territorial inference;
-- global-handbook coverage visibility;
-- unresolved/gap visibility.
+## What survived
 
-The basic overview reached parity with a competent ordinary matrix, and the terminology query was not counted because one ordinary spreadsheet column could reproduce most of that gain.
+At N=37:
+- compact/full coverage forms retained material reuse value over the strongest ordinary matrix on 3/4 cross-cell tasks;
+- the compact register matched the full row on all six fixed tasks;
+- compact static review surface was ~60.5% of the full row.
 
-Both negative controls behaved correctly:
-- specialist narrative beat the index on deep Champa historiography;
-- SlaveVoyages beat the index on voyage-level/quantitative work.
+This means a **small coverage register** remains useful when a concrete comparative research task needs:
+- research state;
+- bounded conclusion;
+- required abstention;
+- law/practice separation;
+- network/territorial warning;
+- global-handbook coverage;
+- unresolved reason;
+- source links;
+- access/language warning.
 
-## What survives
+## Why scaling stops
 
-A small, auditable, explicitly incomplete **coverage corpus** may be worth further investigation as a flat table/JSON/CSV:
-- what can be said for a place/time target;
-- what cannot be said;
-- why research remains inconclusive/disputed;
-- law/practice/network distinctions;
-- source/provenance;
-- whether global syntheses directly cover the target.
+The preregistered maintenance-economy gate failed.
 
-This is not authorization for the old Atlas application.
+Six deterministic update shocks:
+- 3 produced genuine new/contextual specialist evidence;
+- 3 produced no acceptable new source.
+
+In every material update, the compact register and full row required the same number of local review edits. The 0/0 rows were treated as neutral rather than fake savings.
+
+The full row also failed to earn its extra complexity over the compact register.
+
+COV-002 therefore does **not** justify:
+- comprehensive global ingestion;
+- another autonomous scale experiment;
+- routine production of full detailed coverage rows across world history.
 
 ## Current execution state
 
-**IDLE.**
+**IDLE / PRESERVATION.**
 
-COV-001 permits at most one future bounded **corpus-scale economics/reuse experiment**, but no such experiment is currently authorized.
+Future corpus expansion now requires an **external concrete use case** whose value justifies research/review/update burden.
 
-The unresolved question is:
-
-> Does corpus value grow faster than research/review/update cost at materially larger scale?
-
-Do not answer that by simply researching more cells.
+Internal desire for completeness, more records, a prettier map, or another experiment is not a trigger.
 
 ## Still explicitly not authorized
 
-- H3 bulk/global evidence expansion;
+- H3 bulk/global research;
+- comprehensive slavery ingestion;
 - canonical release changes;
 - M2 production migration;
 - Atlas frontend/map/product expansion;
-- new database/API/service infrastructure;
+- new DB/API/search/vector/RAG/graph infrastructure;
 - autonomous bulk-research workers;
-- search/vector/RAG/graph/ontology infrastructure;
 - claims of literal historical completeness.
-
-If a further scale test is authorized, it must test reuse/maintenance economics and strongest-baseline parity, not record-count growth.
 
 ---
 

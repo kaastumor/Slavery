@@ -1,0 +1,438 @@
+[
+  {
+    "cell_id": "-500:A",
+    "target_label": "Olmec Civilization",
+    "anchor_year": -500,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "The bounded packet does not establish slavery or an enslaved status in the sampled Olmec target at c. 500 BCE.",
+    "caveat": "Do not infer slavery from hierarchy, monumental labour, warfare, or slavery elsewhere in precontact America. No target-specific c.500 BCE slavery evidence found within the source ladder. Cambridge's precontact synthesis distinguishes state labour obligations from slavery and cannot be projected automatically to Olmec society.",
+    "citations": [
+      "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-in-precontact-america/090D3E244D8E3F465822F387EFED7122",
+      "https://academic.oup.com/edited-volume/61667"
+    ]
+  },
+  {
+    "cell_id": "-500:C",
+    "target_label": "Sabaeans",
+    "anchor_year": -500,
+    "research_status": "bounded_supported",
+    "concise_conclusion": "South Arabian/Sabaic epigraphy supports captivity and slave status, including proprietary purchase/sale relations in some first-millennium contexts.",
+    "caveat": "Do not treat every ʿbd as proof of chattel slavery or infer prevalence from inscription counts.",
+    "citations": [
+      "https://doi.org/10.1515/mill-2023-0005",
+      "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-in-the-ancient-near-east/E9871B0E91F592E905BFC90BA83796CC",
+      "https://dasi.cnr.it/"
+    ]
+  },
+  {
+    "cell_id": "-500:D",
+    "target_label": "Carthage",
+    "anchor_year": -500,
+    "research_status": "bounded_supported",
+    "concise_conclusion": "Specialist scholarship supports slavery as an important institution in Punic Carthage, including slave labour in the agricultural hinterland and aristocratic slaveholding.",
+    "caveat": "Do not infer a numeric population share or universal slave-labour regime.",
+    "citations": [
+      "https://academic.oup.com/book/25688/chapter-abstract/193166994"
+    ]
+  },
+  {
+    "cell_id": "-500:E",
+    "target_label": "Janapada of Vatsa",
+    "anchor_year": -500,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Ancient South Asian scholarship establishes slavery/dependency as a relevant field, but not a Vatsa-specific slavery practice at c. 500 BCE.",
+    "caveat": "Do not map broad dāsa, Śūdra, servitude, or later South Asian slavery evidence directly onto Vatsa. No Vatsa-specific c.500 BCE slavery evidence located within source budget.",
+    "citations": [
+      "https://books.google.com/books/about/Slavery_in_Ancient_India.html?id=CHPaAAAAMAAJ",
+      "https://soas-repository.worktribe.com/output/398799",
+      "https://link.springer.com/chapter/10.1007/978-3-031-13260-5_29"
+    ]
+  },
+  {
+    "cell_id": "-500:F",
+    "target_label": "Qin",
+    "anchor_year": -500,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Later Qin evidence establishes coerced migration and statuses relevant to enslavement, but does not safely establish the sampled condition at c. 500 BCE.",
+    "caveat": "Do not back-project fourth–third-century BCE Qin statutes or expansion practices to 500 BCE. Temporal gap between anchor and strongest Qin evidence.",
+    "citations": [
+      "https://www.cambridge.org/core/journals/journal-of-chinese-history/article/coerced-migration-and-resettlement-in-the-qin-imperial-expansion/D0DCCFB658519621610BE7A212E4A047",
+      "https://assets.cambridge.org/97810090/01700/excerpt/9781009001700_excerpt.pdf"
+    ]
+  },
+  {
+    "cell_id": "500:A",
+    "target_label": "Mayan City-States",
+    "anchor_year": 500,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Precontact Mesoamerica included enslavement, but this packet does not establish slavery for the sampled Maya city-state target at c. 500 CE.",
+    "caveat": "Do not convert captive imagery, warfare, sacrifice, or general Mesoamerican enslavement into an anchor-year Maya slavery claim.",
+    "citations": [
+      "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-in-precontact-america/090D3E244D8E3F465822F387EFED7122",
+      "https://www.cambridge.org/core/journals/ancient-mesoamerica/article/abs/warfare-sacrifice-and-the-captive-body-in-late-classic-maya-sculpture/DF088F2979788BFF06B34A8CDDDEB1E0"
+    ]
+  },
+  {
+    "cell_id": "500:C",
+    "target_label": "Alodia",
+    "anchor_year": 500,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "A later sixth-/early-seventh-century source supports sale of an Alodian slave girl, but not slavery in Alodia at exactly 500 CE.",
+    "caveat": "Do not move later Alodian slave-sale evidence backward or infer continuous trade. Target-specific source dates postdate anchor.",
+    "citations": [
+      "https://www.researchgate.net/publication/216645651_A_sale_of_an_Alodian_slave_girl_A_reexamination_of_papyrus_Strassburg_Inv_1404",
+      "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-and-the-slave-trade-in-the-western-indian-ocean-world/238C56DA8DC84C6AA51E4A0D6F9E5F33"
+    ]
+  },
+  {
+    "cell_id": "500:D",
+    "target_label": "Anglo-Saxon England",
+    "anchor_year": 500,
+    "research_status": "bounded_supported",
+    "concise_conclusion": "Early Anglo-Saxon England is defensibly characterized as slaveholding in the broad period around 500 CE, though direct legal evidence begins later.",
+    "caveat": "Do not assign exact 500 CE prevalence or make Æthelberht's later law code contemporaneous.",
+    "citations": [
+      "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-in-northern-europe-scandinavia-and-iceland-and-the-british-isles-5001420/347106F469610788587F075F82E54FA1",
+      "https://www.cambridge.org/core/journals/anglo-saxon-england/article/abs/slave-raiding-and-slave-trading-in-early-england/3D4A07DB0DC30D939D13941B8F752360"
+    ]
+  },
+  {
+    "cell_id": "500:E",
+    "target_label": "Vakataka Kingdom",
+    "anchor_year": 500,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "The Vakataka target is well documented politically and epigraphically, but this packet does not establish Vakataka-specific slavery at c. 500 CE.",
+    "caveat": "Do not transfer slavery/dependency evidence from other South Asian regions into Vakataka territory. No Vakataka-specific slavery claim established within source budget.",
+    "citations": [
+      "https://zenodo.org/records/896823",
+      "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-and-dependency-in-medieval-south-india/3F339BF4D4E02BD8073D2F27FA0BE7EE"
+    ]
+  },
+  {
+    "cell_id": "500:F",
+    "target_label": "Chámpa",
+    "anchor_year": 500,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Later medieval evidence supports slavery in Champa, but not a comparable condition at c. 500 CE.",
+    "caveat": "Do not back-project thirteenth-century markets or later Vietnamese-Cham captivity to 500 CE. Direct slavery evidence is too late for 500 CE.",
+    "citations": [
+      "https://assets.cambridge.org/97810090/01700/excerpt/9781009001700_excerpt.pdf"
+    ]
+  },
+  {
+    "cell_id": "1300:A",
+    "target_label": "Texcoco",
+    "anchor_year": 1300,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Texcoco is contextualized for the thirteenth century, but this packet does not establish a Texcoco-specific slavery institution at c. 1300.",
+    "caveat": "Do not back-project later Nahua/Aztec tlacotli institutions to Texcoco 1300.",
+    "citations": [
+      "https://www.jstor.org/stable/j.ctt6wrrdm",
+      "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-in-precontact-america/090D3E244D8E3F465822F387EFED7122"
+    ]
+  },
+  {
+    "cell_id": "1300:B",
+    "target_label": "Cuzco",
+    "anchor_year": 1300,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Cuzco around 1300 is pre-imperial/Killke; this packet does not establish later Inca coerced-labour/dependent statuses in the sampled form.",
+    "caveat": "Do not back-project imperial mit'a, yanakuna, or other later institutions.",
+    "citations": [
+      "https://www.jstor.org/stable/10.7560/702431",
+      "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-in-precontact-america/090D3E244D8E3F465822F387EFED7122"
+    ]
+  },
+  {
+    "cell_id": "1300:C",
+    "target_label": "Mahdids",
+    "anchor_year": 1300,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "The sampled target is internally inconsistent: Cliopatria labels Mahdids active 1260–1474 while its supplied Wikidata identity describes a Yemeni dynasty of 1159–1174.",
+    "caveat": "Do not substitute another polity or research a slavery claim against an unresolved identity. Requires reviewed geography/entity resolution outside COV-001.",
+    "citations": [
+      "https://www.wikidata.org/wiki/Q1884830",
+      "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-and-the-slave-trade-in-the-western-indian-ocean-world/238C56DA8DC84C6AA51E4A0D6F9E5F33"
+    ]
+  },
+  {
+    "cell_id": "1300:D",
+    "target_label": "Zayyanid dynasty",
+    "anchor_year": 1300,
+    "research_status": "bounded_supported",
+    "concise_conclusion": "Sources support enslaved people and slave-trade connections in the Zayyanid/Tlemcen context, including Christian slaves linked to the Banū ʿAbd al-Wād.",
+    "caveat": "Do not infer population share or realm-wide prevalence from Tlemcen/court/trade evidence.",
+    "citations": [
+      "https://www.tandfonline.com/doi/abs/10.1080/17546559.2010.502667",
+      "https://asjp.cerist.dz/en/downArticle/564/9/1/287705"
+    ]
+  },
+  {
+    "cell_id": "1300:E",
+    "target_label": "Yadava Dynasty",
+    "anchor_year": 1300,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Medieval South India has evidence of slavery/dependency, but this packet does not establish it specifically for sampled Yadava/Devagiri.",
+    "caveat": "Do not generalize Tamil-region inscriptional evidence to the Yadava polity because dates overlap. Direct Yadava/Devagiri evidence not established.",
+    "citations": [
+      "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-and-dependency-in-medieval-south-india/3F339BF4D4E02BD8073D2F27FA0BE7EE"
+    ]
+  },
+  {
+    "cell_id": "1300:F",
+    "target_label": "Chámpa",
+    "anchor_year": 1300,
+    "research_status": "bounded_supported",
+    "concise_conclusion": "Early-thirteenth-century descriptions of Champa report people being bought and made slaves, supporting a bounded slavery/slave-market claim near 1300.",
+    "caveat": "Do not infer territorial prevalence across all Champa from market/transaction evidence.",
+    "citations": [
+      "https://www.jstor.org/stable/10.7591/j.ctv1nhjzp",
+      "https://assets.cambridge.org/97810090/01700/excerpt/9781009001700_excerpt.pdf"
+    ]
+  },
+  {
+    "cell_id": "1800:A",
+    "target_label": "United States of America",
+    "anchor_year": 1800,
+    "research_status": "bounded_supported",
+    "concise_conclusion": "Chattel slavery was legally institutionalized and practiced in substantial parts of the United States around 1800, with important regional legal differences.",
+    "caveat": "Do not represent the entire United States as one homogeneous slavery-practice/legal-status condition.",
+    "citations": [
+      "https://link.springer.com/chapter/10.1007/978-3-031-13260-5_25",
+      "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/us-slavery-and-its-aftermath-18042000/94710C48B95A01C59084C84839884623"
+    ]
+  },
+  {
+    "cell_id": "1800:C",
+    "target_label": "Bornu Empire",
+    "anchor_year": 1800,
+    "research_status": "bounded_supported",
+    "concise_conclusion": "Bornu was materially involved in slave raiding and trans-Saharan slave trading across the period leading into 1800.",
+    "caveat": "Do not turn campaign/raid/trade intensity into numeric territorial prevalence inside Bornu.",
+    "citations": [
+      "https://www.cambridge.org/core/books/fighting-the-slave-trade/slaveraiding-and-defensive-systems-south-of-lake-chad-from-the-sixteenth-to-the-nineteenth-century/3652F433D19407031C1CFFD5CF538DB2",
+      "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/893A3906E0372FFBBC596302859EDB9D"
+    ]
+  },
+  {
+    "cell_id": "1800:D",
+    "target_label": "Kingdom of Great Britain",
+    "anchor_year": 1800,
+    "research_status": "materially_disputed",
+    "concise_conclusion": "At 1800, metropolitan Britain cannot be summarized as simply slave-society-present or slavery-abolished: metropolitan slavery had largely receded while imperial/Atlantic participation remained extensive.",
+    "caveat": "Do not infer metropolitan practice from colonial plantation slavery/trade participation or treat Somerset 1772 as simple nationwide abolition.",
+    "citations": [
+      "https://www.cambridge.org/core/journals/law-and-history-review/article/taken-not-given-the-end-of-slavery-in-britain/8F3B5EFD98BDCBA96F8A3B371D854D56",
+      "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/893A3906E0372FFBBC596302859EDB9D"
+    ]
+  },
+  {
+    "cell_id": "1800:E",
+    "target_label": "British Ceylon",
+    "anchor_year": 1800,
+    "research_status": "bounded_supported",
+    "concise_conclusion": "Slavery is directly documented in Jaffna under Dutch and early British rule around 1800; abolition measures developed only afterward.",
+    "caveat": "Do not generalize Jaffna evidence to all British Ceylon or treat British acquisition as immediate emancipation.",
+    "citations": [
+      "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/ambivalence-of-freedom-slaves-in-jaffna-sri-lanka-in-the-eighteenth-and-nineteenth-centuries/0DA019FA2028635360498C72E37FDE21"
+    ]
+  },
+  {
+    "cell_id": "1800:F",
+    "target_label": "Portuguese Colonies",
+    "anchor_year": 1800,
+    "research_status": "materially_disputed",
+    "concise_conclusion": "Multiple Portuguese colonial settings had slavery/slave-trade institutions, but the aggregate sampled label 'Portuguese Colonies' cannot support one territorial-practice state at 1800.",
+    "caveat": "Do not collapse Goa, African, Atlantic, Timorese or other Portuguese territories into one prevalence/practice condition. Aggregate target must be decomposed for substantive territorial research.",
+    "citations": [
+      "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/black-and-golden-goa-slavery-and-empire-sixteenth-to-eighteenth-centuries/5CBFFE02B67D62D025F3EB1734A4AE52",
+      "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/893A3906E0372FFBBC596302859EDB9D"
+    ]
+  },
+  {
+    "cell_id": "NP-01",
+    "target_label": "Central Australian interior, c. 1800 CE",
+    "anchor_year": 1800,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "The bounded packet did not establish a slavery institution for a specific Central Australian society at c.1800.",
+    "caveat": "Do not infer slavery from warfare, captivity, kinship asymmetry, or later colonial forced labour elsewhere in Australia. Target society and exact 1800 evidence remain unresolved.",
+    "citations": [
+      "https://researchportalplus.anu.edu.au/en/publications/conflict-and-territoriality-in-aboriginal-australia-evidence-from/"
+    ]
+  },
+  {
+    "cell_id": "NP-02",
+    "target_label": "New Guinea Highlands, c. 1800 CE",
+    "anchor_year": 1800,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Later ethnography documents warfare/captivity dynamics, but the packet does not establish slavery at c.1800.",
+    "caveat": "Do not back-project twentieth-century ethnography or equate captive incorporation with slavery. No direct c.1800 target-specific slavery evidence found.",
+    "citations": [
+      "https://www.cambridge.org/core/books/abs/evolution-of-highland-papua-new-guinea-societies/warfare/C765ABB8BAB6D7F6C8BA608B59305B26"
+    ]
+  },
+  {
+    "cell_id": "NP-03",
+    "target_label": "North American Great Plains, c. 1300 CE",
+    "anchor_year": 1300,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Precontact North America included captivity/slavery in some societies, but the packet does not establish it for a Great Plains society at c.1300.",
+    "caveat": "Do not project continent-wide or later-contact Plains practices onto the broad challenge region. No c.1300 target-specific practice established.",
+    "citations": [
+      "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-in-indigenous-north-america/F711F11F7DD3F8952EDC3FF1F90A0D3A",
+      "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-in-precontact-america/090D3E244D8E3F465822F387EFED7122"
+    ]
+  },
+  {
+    "cell_id": "NP-04",
+    "target_label": "Upper / western Amazonia, c. 1300 CE",
+    "anchor_year": 1300,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Later/contact Amazonian scholarship documents captive incorporation and slavery-like relations in some contexts, but not this broad region at c.1300.",
+    "caveat": "Do not back-project post-contact/ethnographic relations or treat Amazonia as one society. No direct precontact c.1300 evidence for broad challenge region.",
+    "citations": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK436748/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK436749"
+    ]
+  },
+  {
+    "cell_id": "COV2:1800:F",
+    "target_label": "Kelantan",
+    "anchor_year": 1800,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Later nineteenth-century evidence documents debt-bondage/debt-slavery in Kelantan and comparable Malay states, but the bounded packet does not securely establish the same system at exactly 1800.",
+    "caveat": "Do not back-project late nineteenth-/early twentieth-century Kelantan descriptions into 1800 or equate all debt bondage with chattel slavery. Exact anchor-year Kelantan evidence not established.",
+    "citations": [
+      "https://www.cambridge.org/core/books/abs/credit-and-debt-in-indonesia-8601930/following-the-debt-credit-and-debt-in-southeast-asian-legal-theory-and-practice-14001800/4B66415CB01DD030DFB780A181DD28D5",
+      "https://www.qdl.qa/archive/81055/vdc_100080220223.0x0000a9"
+    ]
+  },
+  {
+    "cell_id": "COV2:-500:A",
+    "target_label": "Zapotec Civilization",
+    "anchor_year": -500,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Monte Albán's early Zapotec state shows warfare, conquest and captive/sacrifice imagery around 500 BCE, but the packet does not establish an enslaved labour status or slavery institution.",
+    "caveat": "Do not turn war captives, ritual killing, hierarchy or public construction labour into slavery without status evidence. No slavery-status evidence found within the bounded packet.",
+    "citations": [
+      "https://sites.lsa.umich.edu/oaxaca-archaeology/origins-of-the-state/"
+    ]
+  },
+  {
+    "cell_id": "COV2:1300:B",
+    "target_label": "Chimu Empire",
+    "anchor_year": 1300,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Chimú state organisation used labour taxation/corvée and captive sacrifice, but the bounded packet does not establish slavery as the correct category for those relations around 1300.",
+    "caveat": "Do not reclassify state labour taxation, attached craft production or sacrificed captives as slavery. No bounded slavery-status claim established.",
+    "citations": [
+      "https://ehrafarchaeology.yale.edu/traditions/se75/summary",
+      "https://revistas.cultura.gob.pe/index.php/arqueologicas/article/view/634"
+    ]
+  },
+  {
+    "cell_id": "COV2:1800:A",
+    "target_label": "New Netherland",
+    "anchor_year": 1800,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "The sampled target is chronologically invalid: New Netherland is a seventeenth-century Dutch colony and did not exist in 1800.",
+    "caveat": "Do not substitute New York, the Dutch Republic, or another successor territory and then attach an 1800 slavery claim to the sampled row. Cliopatria row interval 1800–1802 conflicts with linked historical identity.",
+    "citations": [
+      "https://www.wikidata.org/wiki/Q382593"
+    ]
+  },
+  {
+    "cell_id": "COV2:-500:C",
+    "target_label": "Hadhramaut",
+    "anchor_year": -500,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Ancient South Arabian epigraphy demonstrates subordinate, captive and enslaved statuses, including later Hadhramitic attestations, but the packet does not securely establish Hadhramaut slavery at c.500 BCE.",
+    "caveat": "Do not move second-/third-century CE Hadhramitic status evidence backward seven centuries. Temporal gap between anchor and direct Hadhramitic status evidence.",
+    "citations": [
+      "https://doi.org/10.1515/mill-2023-0005",
+      "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/three-new-inscriptions-from-hadhramaut/746101FC71559623D61E09B70A36E079"
+    ]
+  },
+  {
+    "cell_id": "COV2:1300:E",
+    "target_label": "Pandya Empire",
+    "anchor_year": 1300,
+    "research_status": "bounded_supported",
+    "concise_conclusion": "Specialist synthesis supports slavery and dependency in medieval Tamil South India, including likely extensive enslaved agricultural labour from the thirteenth century onward; this is temporally and regionally relevant to the Pandya-period target.",
+    "caveat": "Do not infer a uniform slavery regime or prevalence across the entire Pandya polity from Tamil inscriptional evidence.",
+    "citations": [
+      "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-and-dependency-in-medieval-south-india/3F339BF4D4E02BD8073D2F27FA0BE7EE"
+    ]
+  },
+  {
+    "cell_id": "COV2:500:F",
+    "target_label": "Goguryeo",
+    "anchor_year": 500,
+    "research_status": "bounded_supported",
+    "concise_conclusion": "Korean historical synthesis identifies nobi as the lowest status group in Goguryeo, with war captivity, punishment/family liability and debt among pathways into the status.",
+    "caveat": "Do not assume later Goryeo/Joseon nobi law, prevalence or property rules applied unchanged to Goguryeo c.500.",
+    "citations": [
+      "https://db.history.go.kr/diachronic/level.do?levelId=nh_005_0050_0040_0010_0050"
+    ]
+  },
+  {
+    "cell_id": "COV2:1300:C",
+    "target_label": "Mamluk Sultanate",
+    "anchor_year": 1300,
+    "research_status": "bounded_supported",
+    "concise_conclusion": "Slavery was structurally embedded in the Mamluk Sultanate around 1300: military slaves formed the ruling military-political elite while domestic and labour slavery also existed in Egypt and Syria.",
+    "caveat": "Do not equate elite mamluk military status with every enslaved person's experience or infer one prevalence rate across Egypt and Syria.",
+    "citations": [
+      "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-in-the-mamluk-sultanate/BB8E3CF15101D2338B67518033C44D47",
+      "https://academic.oup.com/edited-volume/61663/chapter-abstract/553453305",
+      "https://research-repository.st-andrews.ac.uk/handle/10023/18438"
+    ]
+  },
+  {
+    "cell_id": "COV2:1800:D",
+    "target_label": "Kingdom of Georgia",
+    "anchor_year": 1800,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "The sampled target is chronologically invalid: the linked medieval Kingdom of Georgia ended centuries before 1800.",
+    "caveat": "Do not substitute Kartli-Kakheti, Russian Georgia or another successor polity and attach its slavery/serfdom history to the sampled row. Cliopatria 1800–1802 row conflicts with linked medieval polity identity.",
+    "citations": [
+      "https://www.wikidata.org/wiki/Q154667"
+    ]
+  },
+  {
+    "cell_id": "COV2:500:E",
+    "target_label": "Protectorate of the Western Regions",
+    "anchor_year": 500,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "The sampled target is temporally unsafe: the Western Regions protectorate is a Han/post-Han administrative institution whose accepted chronology does not extend to 500 CE.",
+    "caveat": "Do not substitute a later Tarim Basin polity or treat a broad 'Western Regions' geographic label as continuity of the protectorate. Sampled 476–554 interval conflicts with the linked institution's chronology.",
+    "citations": [
+      "https://www.wikidata.org/wiki/Q911440",
+      "https://en.wikipedia.org/wiki/Protectorate_of_the_Western_Regions"
+    ]
+  },
+  {
+    "cell_id": "COV2:1800:C",
+    "target_label": "Merina Kingdom",
+    "anchor_year": 1800,
+    "research_status": "bounded_supported",
+    "concise_conclusion": "Slavery and slave export were materially present in the Merina/Imerina political economy around 1800, but specialist scholarship rejects treating slavery alone as the later imperial economy's single organising labour principle.",
+    "caveat": "Do not flatten slavery and fanompoana into one coerced-labour category or infer that all Merina production depended on slaves.",
+    "citations": [
+      "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/slavery-and-fanompoana-the-structure-of-forced-labour-in-imerina-madagascar-179018611/87DF59AEF981939AF860D864DA5D3F3A",
+      "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/sacred-acquisition-andrianampoinimerina-at-ambohimanga-17771790/EBA65FD0322C0EA8D5B77EBE801598F8",
+      "https://assets.cambridge.org/052183/9351/excerpt/0521839351_excerpt.htm"
+    ]
+  },
+  {
+    "cell_id": "COV2:500:D",
+    "target_label": "Caucasian Albania",
+    "anchor_year": 500,
+    "research_status": "researched_inconclusive",
+    "concise_conclusion": "Sources confirm servile/slave categories in the wider ancient Caucasus and much earlier temple slaves in Albania, but the bounded packet does not establish a significant slavery institution in Caucasian Albania at c.500 CE.",
+    "caveat": "Do not infer fifth-century Albanian slavery from ancient Strabo-era temple slaves or from later Caucasian slave-export histories. No direct c.500 slavery-status evidence established. A classic specialist synthesis explicitly cautions that slavery does not appear to have flourished on an extensive scale in Caucasia.",
+    "citations": [
+      "https://www.cambridge.org/core/journals/traditio/article/abs/introduction-to-christian-caucasian-history-the-formative-centuries-ivthviiith/CAAD5EAF6637E45134BB9CF78CDBFA4E"
+    ]
+  }
+]

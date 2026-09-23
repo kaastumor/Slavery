@@ -1,0 +1,2280 @@
+[
+  {
+    "cell_id": "-500:A",
+    "frame": "polity",
+    "anchor_year": -500,
+    "target_label": "Olmec Civilization",
+    "source_sample": {
+      "source_name": "Olmec Civilization",
+      "source_row_ordinal": 204,
+      "source_from_year": -650,
+      "source_to_year": -367,
+      "sampling_sector": "A"
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "The bounded packet does not establish slavery or an enslaved status in the sampled Olmec target at c. 500 BCE.",
+    "strongest_unsupported_proposition": "Do not infer slavery from hierarchy, monumental labour, warfare, or slavery elsewhere in precontact America.",
+    "territorial_practice_summary": "No target-specific slavery practice established.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "Generic coerced-labour analogies are insufficient.",
+    "temporal_scope_precision": "Bounded to cited evidence; sample interval is not itself slavery evidence.",
+    "evidence_locus": "Olmec Civilization",
+    "inference_extent": "No inference beyond stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "Cambridge's precontact synthesis distinguishes state labour obligations from slavery and cannot be projected automatically to Olmec society.",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Slavery in Precontact America",
+        "author": "Camilla Townsend",
+        "year": 2021,
+        "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-in-precontact-america/090D3E244D8E3F465822F387EFED7122",
+        "source_role": "specialist_synthesis",
+        "direction": "qualifies",
+        "locator": ""
+      },
+      {
+        "title": "The Oxford Handbook of the Olmecs",
+        "author": "",
+        "year": null,
+        "url_or_identifier": "https://academic.oup.com/edited-volume/61667",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "No target-specific c.500 BCE slavery evidence found within the source ladder."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "-500:C",
+    "frame": "polity",
+    "anchor_year": -500,
+    "target_label": "Sabaeans",
+    "source_sample": {
+      "source_name": "Sabaeans",
+      "source_row_ordinal": 256,
+      "source_from_year": -550,
+      "source_to_year": -451,
+      "sampling_sector": "C"
+    },
+    "coverage_outcome": "bounded_supported",
+    "strongest_bounded_proposition": "South Arabian/Sabaic epigraphy supports captivity and slave status, including proprietary purchase/sale relations in some first-millennium contexts.",
+    "strongest_unsupported_proposition": "Do not treat every ʿbd as proof of chattel slavery or infer prevalence from inscription counts.",
+    "territorial_practice_summary": "Slavery/enslavement is supported in the Sabaic/South Arabian evidence package; prevalence at 500 BCE is unassessed.",
+    "legal_state_summary": "",
+    "external_network_summary": "Captivity and movement are evidenced, but trade intensity is not a territorial-prevalence proxy.",
+    "terminology_category_qualification": "ʿbd can mean servant/subordinate; transactional and captive contexts are more diagnostic.",
+    "temporal_scope_precision": "First-millennium evidence supports a broad c.500 BCE context, not exact-date continuity.",
+    "evidence_locus": "Sabaic/South Arabian epigraphic corpus",
+    "inference_extent": "Sabaean/South Arabian context only.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": [
+        "DASI"
+      ]
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Slavery in First Millennium Arabia: Epigraphy and the Qurʾān",
+        "author": "Valentina A. Grasso",
+        "year": 2023,
+        "url_or_identifier": "https://doi.org/10.1515/mill-2023-0005",
+        "source_role": "specialist_article",
+        "direction": "supports",
+        "locator": ""
+      },
+      {
+        "title": "Slavery in the Ancient Near East",
+        "author": "Daniel C. Snell",
+        "year": 2011,
+        "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-in-the-ancient-near-east/E9871B0E91F592E905BFC90BA83796CC",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      },
+      {
+        "title": "DASI / Corpus of South Arabian Inscriptions",
+        "author": "CNR",
+        "year": null,
+        "url_or_identifier": "https://dasi.cnr.it/",
+        "source_role": "structured_dataset",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 1,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "-500:D",
+    "frame": "polity",
+    "anchor_year": -500,
+    "target_label": "Carthage",
+    "source_sample": {
+      "source_name": "Carthage",
+      "source_row_ordinal": 290,
+      "source_from_year": -500,
+      "source_to_year": -481,
+      "sampling_sector": "D"
+    },
+    "coverage_outcome": "bounded_supported",
+    "strongest_bounded_proposition": "Specialist scholarship supports slavery as an important institution in Punic Carthage, including slave labour in the agricultural hinterland and aristocratic slaveholding.",
+    "strongest_unsupported_proposition": "Do not infer a numeric population share or universal slave-labour regime.",
+    "territorial_practice_summary": "Slaveholding and slave labour are supported for Punic Carthage and its agricultural hinterland.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "The specialist synthesis directly covers the relevant Punic centuries.",
+    "evidence_locus": "Carthage and its agricultural hinterland",
+    "inference_extent": "Quantitative prevalence remains unassessed.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Punic Carthage",
+        "author": "David M. Lewis",
+        "year": 2018,
+        "url_or_identifier": "https://academic.oup.com/book/25688/chapter-abstract/193166994",
+        "source_role": "specialist_synthesis",
+        "direction": "supports",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 1,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "-500:E",
+    "frame": "polity",
+    "anchor_year": -500,
+    "target_label": "Janapada of Vatsa",
+    "source_sample": {
+      "source_name": "Janapada of Vatsa",
+      "source_row_ordinal": 248,
+      "source_from_year": -600,
+      "source_to_year": -481,
+      "sampling_sector": "E"
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Ancient South Asian scholarship establishes slavery/dependency as a relevant field, but not a Vatsa-specific slavery practice at c. 500 BCE.",
+    "strongest_unsupported_proposition": "Do not map broad dāsa, Śūdra, servitude, or later South Asian slavery evidence directly onto Vatsa.",
+    "territorial_practice_summary": "Target-specific territorial practice unresolved.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "dāsa/dāsī and Śūdra require contextual interpretation.",
+    "temporal_scope_precision": "Bounded to cited evidence; sample interval is not itself slavery evidence.",
+    "evidence_locus": "Janapada of Vatsa",
+    "inference_extent": "No inference beyond stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "none",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Slavery in Ancient India",
+        "author": "Dev Raj Chanana",
+        "year": 1960,
+        "url_or_identifier": "https://books.google.com/books/about/Slavery_in_Ancient_India.html?id=CHPaAAAAMAAJ",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      },
+      {
+        "title": "Position of the Sudras in Ancient India to 500 A.D.",
+        "author": "R. S. Sharma",
+        "year": null,
+        "url_or_identifier": "https://soas-repository.worktribe.com/output/398799",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      },
+      {
+        "title": "Slavery in South Asia",
+        "author": "Emma Kalb",
+        "year": 2023,
+        "url_or_identifier": "https://link.springer.com/chapter/10.1007/978-3-031-13260-5_29",
+        "source_role": "specialist_synthesis",
+        "direction": "qualifies",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "No Vatsa-specific c.500 BCE slavery evidence located within source budget."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 3,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "-500:F",
+    "frame": "polity",
+    "anchor_year": -500,
+    "target_label": "Qin",
+    "source_sample": {
+      "source_name": "Qin",
+      "source_row_ordinal": 154,
+      "source_from_year": -750,
+      "source_to_year": -451,
+      "sampling_sector": "F"
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Later Qin evidence establishes coerced migration and statuses relevant to enslavement, but does not safely establish the sampled condition at c. 500 BCE.",
+    "strongest_unsupported_proposition": "Do not back-project fourth–third-century BCE Qin statutes or expansion practices to 500 BCE.",
+    "territorial_practice_summary": "Exact c.500 BCE practice unresolved.",
+    "legal_state_summary": "",
+    "external_network_summary": "Later expansion evidence is contextual only.",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "Strongest evidence is later than the anchor.",
+    "evidence_locus": "Qin",
+    "inference_extent": "No inference beyond stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "none",
+      "palgrave": "none",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Coerced Migration and Resettlement in the Qin Imperial Expansion",
+        "author": "",
+        "year": null,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-chinese-history/article/coerced-migration-and-resettlement-in-the-qin-imperial-expansion/D0DCCFB658519621610BE7A212E4A047",
+        "source_role": "specialist_article",
+        "direction": "context",
+        "locator": ""
+      },
+      {
+        "title": "Slavery in East Asia",
+        "author": "Don J. Wyatt",
+        "year": null,
+        "url_or_identifier": "https://assets.cambridge.org/97810090/01700/excerpt/9781009001700_excerpt.pdf",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "Temporal gap between anchor and strongest Qin evidence."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "500:A",
+    "frame": "polity",
+    "anchor_year": 500,
+    "target_label": "Mayan City-States",
+    "source_sample": {
+      "source_name": "Mayan City-States",
+      "source_row_ordinal": 1411,
+      "source_from_year": 299,
+      "source_to_year": 554,
+      "sampling_sector": "A"
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Precontact Mesoamerica included enslavement, but this packet does not establish slavery for the sampled Maya city-state target at c. 500 CE.",
+    "strongest_unsupported_proposition": "Do not convert captive imagery, warfare, sacrifice, or general Mesoamerican enslavement into an anchor-year Maya slavery claim.",
+    "territorial_practice_summary": "Target-specific anchor-year practice unresolved.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "Captivity, sacrifice, dependency and slavery remain distinct.",
+    "temporal_scope_precision": "Strong Maya captive evidence consulted is later than 500.",
+    "evidence_locus": "Mayan City-States",
+    "inference_extent": "No inference beyond stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Slavery in Precontact America",
+        "author": "Camilla Townsend",
+        "year": 2021,
+        "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-in-precontact-america/090D3E244D8E3F465822F387EFED7122",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      },
+      {
+        "title": "Warfare, Sacrifice, and the Captive Body in Late Classic Maya Sculpture",
+        "author": "Caitlin Earley",
+        "year": null,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/ancient-mesoamerica/article/abs/warfare-sacrifice-and-the-captive-body-in-late-classic-maya-sculpture/DF088F2979788BFF06B34A8CDDDEB1E0",
+        "source_role": "specialist_article",
+        "direction": "qualifies",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "500:C",
+    "frame": "polity",
+    "anchor_year": 500,
+    "target_label": "Alodia",
+    "source_sample": {
+      "source_name": "Alodia",
+      "source_row_ordinal": 1467,
+      "source_from_year": 347,
+      "source_to_year": 601,
+      "sampling_sector": "C"
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "A later sixth-/early-seventh-century source supports sale of an Alodian slave girl, but not slavery in Alodia at exactly 500 CE.",
+    "strongest_unsupported_proposition": "Do not move later Alodian slave-sale evidence backward or infer continuous trade.",
+    "territorial_practice_summary": "Exact 500 CE practice unresolved.",
+    "legal_state_summary": "",
+    "external_network_summary": "Later regional slave-trade evidence is too late for anchor proof.",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "Target-specific evidence postdates anchor.",
+    "evidence_locus": "Alodia",
+    "inference_extent": "No inference beyond stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "A sale of an Alodian slave girl",
+        "author": "Richard Holton Pierce",
+        "year": 1995,
+        "url_or_identifier": "https://www.researchgate.net/publication/216645651_A_sale_of_an_Alodian_slave_girl_A_reexamination_of_papyrus_Strassburg_Inv_1404",
+        "source_role": "specialist_article",
+        "direction": "context",
+        "locator": ""
+      },
+      {
+        "title": "Slavery and the Slave Trade in the Western Indian Ocean World",
+        "author": "Craig Perry",
+        "year": 2021,
+        "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-and-the-slave-trade-in-the-western-indian-ocean-world/238C56DA8DC84C6AA51E4A0D6F9E5F33",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "Target-specific source dates postdate anchor."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "500:D",
+    "frame": "polity",
+    "anchor_year": 500,
+    "target_label": "Anglo-Saxon England",
+    "source_sample": {
+      "source_name": "Anglo-Saxon England",
+      "source_row_ordinal": 1902,
+      "source_from_year": 490,
+      "source_to_year": 522,
+      "sampling_sector": "D"
+    },
+    "coverage_outcome": "bounded_supported",
+    "strongest_bounded_proposition": "Early Anglo-Saxon England is defensibly characterized as slaveholding in the broad period around 500 CE, though direct legal evidence begins later.",
+    "strongest_unsupported_proposition": "Do not assign exact 500 CE prevalence or make Æthelberht's later law code contemporaneous.",
+    "territorial_practice_summary": "Slaveholding is supported for early Anglo-Saxon society in broad-period synthesis.",
+    "legal_state_summary": "Earliest English law code mentioning slaves dates 597–616.",
+    "external_network_summary": "",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "Broad c.500 context supported; exact-date legal attestation is not.",
+    "evidence_locus": "Anglo-Saxon England",
+    "inference_extent": "No inference beyond stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "direct",
+      "palgrave": "none",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Slavery in Northern Europe and the British Isles, 500–1420",
+        "author": "David Wyatt",
+        "year": 2021,
+        "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-in-northern-europe-scandinavia-and-iceland-and-the-british-isles-5001420/347106F469610788587F075F82E54FA1",
+        "source_role": "specialist_synthesis",
+        "direction": "supports",
+        "locator": ""
+      },
+      {
+        "title": "Slave raiding and slave trading in early England",
+        "author": "David Pelteret",
+        "year": 2008,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/anglo-saxon-england/article/abs/slave-raiding-and-slave-trading-in-early-england/3D4A07DB0DC30D939D13941B8F752360",
+        "source_role": "specialist_article",
+        "direction": "supports",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "500:E",
+    "frame": "polity",
+    "anchor_year": 500,
+    "target_label": "Vakataka Kingdom",
+    "source_sample": {
+      "source_name": "Vakataka Kingdom",
+      "source_row_ordinal": 1906,
+      "source_from_year": 490,
+      "source_to_year": 545,
+      "sampling_sector": "E"
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "The Vakataka target is well documented politically and epigraphically, but this packet does not establish Vakataka-specific slavery at c. 500 CE.",
+    "strongest_unsupported_proposition": "Do not transfer slavery/dependency evidence from other South Asian regions into Vakataka territory.",
+    "territorial_practice_summary": "Target-specific slavery practice unresolved.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "Bounded to cited evidence; sample interval is not itself slavery evidence.",
+    "evidence_locus": "Vakataka Kingdom",
+    "inference_extent": "No inference beyond stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Inscriptions of the Vākāṭakas",
+        "author": "V. V. Mirashi",
+        "year": null,
+        "url_or_identifier": "https://zenodo.org/records/896823",
+        "source_role": "primary_source",
+        "direction": "context",
+        "locator": ""
+      },
+      {
+        "title": "Slavery and Dependency in Medieval South India",
+        "author": "Leslie C. Orr",
+        "year": 2021,
+        "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-and-dependency-in-medieval-south-india/3F339BF4D4E02BD8073D2F27FA0BE7EE",
+        "source_role": "specialist_synthesis",
+        "direction": "qualifies",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "No Vakataka-specific slavery claim established within source budget."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 1,
+      "primary_or_dataset_items_used": 1,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "500:F",
+    "frame": "polity",
+    "anchor_year": 500,
+    "target_label": "Chámpa",
+    "source_sample": {
+      "source_name": "Chámpa",
+      "source_row_ordinal": 1303,
+      "source_from_year": 207,
+      "source_to_year": 545,
+      "sampling_sector": "F"
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Later medieval evidence supports slavery in Champa, but not a comparable condition at c. 500 CE.",
+    "strongest_unsupported_proposition": "Do not back-project thirteenth-century markets or later Vietnamese-Cham captivity to 500 CE.",
+    "territorial_practice_summary": "Exact 500 CE practice unresolved.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "Direct Champa slavery evidence consulted is centuries later.",
+    "evidence_locus": "Chámpa",
+    "inference_extent": "No inference beyond stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "none",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Slavery in East Asia",
+        "author": "Don J. Wyatt",
+        "year": null,
+        "url_or_identifier": "https://assets.cambridge.org/97810090/01700/excerpt/9781009001700_excerpt.pdf",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "Direct slavery evidence is too late for 500 CE."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 1,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "1300:A",
+    "frame": "polity",
+    "anchor_year": 1300,
+    "target_label": "Texcoco",
+    "source_sample": {
+      "source_name": "Texcoco",
+      "source_row_ordinal": 5218,
+      "source_from_year": 1202,
+      "source_to_year": 1325,
+      "sampling_sector": "A"
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Texcoco is contextualized for the thirteenth century, but this packet does not establish a Texcoco-specific slavery institution at c. 1300.",
+    "strongest_unsupported_proposition": "Do not back-project later Nahua/Aztec tlacotli institutions to Texcoco 1300.",
+    "territorial_practice_summary": "Target-specific c.1300 practice unresolved.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "Later Nahua status vocabulary cannot be assumed unchanged.",
+    "temporal_scope_precision": "Bounded to cited evidence; sample interval is not itself slavery evidence.",
+    "evidence_locus": "Texcoco",
+    "inference_extent": "No inference beyond stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Texcoco: Prehispanic and Colonial Perspectives",
+        "author": "",
+        "year": null,
+        "url_or_identifier": "https://www.jstor.org/stable/j.ctt6wrrdm",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      },
+      {
+        "title": "Slavery in Precontact America",
+        "author": "Camilla Townsend",
+        "year": 2021,
+        "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-in-precontact-america/090D3E244D8E3F465822F387EFED7122",
+        "source_role": "specialist_synthesis",
+        "direction": "qualifies",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "1300:B",
+    "frame": "polity",
+    "anchor_year": 1300,
+    "target_label": "Cuzco",
+    "source_sample": {
+      "source_name": "Cuzco",
+      "source_row_ordinal": 5969,
+      "source_from_year": 1294,
+      "source_to_year": 1401,
+      "sampling_sector": "B"
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Cuzco around 1300 is pre-imperial/Killke; this packet does not establish later Inca coerced-labour/dependent statuses in the sampled form.",
+    "strongest_unsupported_proposition": "Do not back-project imperial mit'a, yanakuna, or other later institutions.",
+    "territorial_practice_summary": "Target-specific c.1300 practice unresolved.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "State labour obligations and dependent statuses are not automatically slavery.",
+    "temporal_scope_precision": "Anchor predates later imperial expansion.",
+    "evidence_locus": "Cuzco",
+    "inference_extent": "No inference beyond stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Ancient Cuzco: Heartland of the Inca",
+        "author": "Brian S. Bauer",
+        "year": null,
+        "url_or_identifier": "https://www.jstor.org/stable/10.7560/702431",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      },
+      {
+        "title": "Slavery in Precontact America",
+        "author": "Camilla Townsend",
+        "year": 2021,
+        "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-in-precontact-america/090D3E244D8E3F465822F387EFED7122",
+        "source_role": "specialist_synthesis",
+        "direction": "qualifies",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "1300:C",
+    "frame": "polity",
+    "anchor_year": 1300,
+    "target_label": "Mahdids",
+    "source_sample": {
+      "source_name": "Mahdids",
+      "source_row_ordinal": 5760,
+      "source_from_year": 1260,
+      "source_to_year": 1474,
+      "sampling_sector": "C"
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "The sampled target is internally inconsistent: Cliopatria labels Mahdids active 1260–1474 while its supplied Wikidata identity describes a Yemeni dynasty of 1159–1174.",
+    "strongest_unsupported_proposition": "Do not substitute another polity or research a slavery claim against an unresolved identity.",
+    "territorial_practice_summary": "No territorial-practice claim because target identity/time is unresolved.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "Source-row interval conflicts with linked identity chronology.",
+    "evidence_locus": "Unresolved sampled geography/identity.",
+    "inference_extent": "None until entity resolution.",
+    "evidence_classes": [
+      "deterministic source observation",
+      "reference-data identity check",
+      "specialist synthesis"
+    ],
+    "contrary_limiting_evidence": "Independent specialist scholarship documents slavery and slave trading in medieval Yemen across the eleventh–fifteenth centuries, especially Najahid and Rasulid contexts; this is regional context only and does not repair the sampled Mahdids identity/date mismatch.",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Mahdids (Q1884830)",
+        "author": "Wikidata",
+        "year": null,
+        "url_or_identifier": "https://www.wikidata.org/wiki/Q1884830",
+        "source_role": "structured_dataset",
+        "direction": "challenges",
+        "locator": ""
+      },
+      {
+        "title": "Slavery and the Slave Trade in the Western Indian Ocean World",
+        "author": "Craig Perry",
+        "year": 2021,
+        "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-and-the-slave-trade-in-the-western-indian-ocean-world/238C56DA8DC84C6AA51E4A0D6F9E5F33",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      },
+      {
+        "title": "Slavery in Medieval Arabia",
+        "author": "Magdalena Moorthy Kloss",
+        "year": 2023,
+        "url_or_identifier": "https://doi.org/10.1007/978-3-031-13260-5_8",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "Requires reviewed geography/entity resolution outside COV-001."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 1,
+      "primary_or_dataset_items_used": 1,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "1300:D",
+    "frame": "polity",
+    "anchor_year": 1300,
+    "target_label": "Zayyanid dynasty",
+    "source_sample": {
+      "source_name": "Zayyanid dynasty",
+      "source_row_ordinal": 5944,
+      "source_from_year": 1285,
+      "source_to_year": 1343,
+      "sampling_sector": "D"
+    },
+    "coverage_outcome": "bounded_supported",
+    "strongest_bounded_proposition": "Sources support enslaved people and slave-trade connections in the Zayyanid/Tlemcen context, including Christian slaves linked to the Banū ʿAbd al-Wād.",
+    "strongest_unsupported_proposition": "Do not infer population share or realm-wide prevalence from Tlemcen/court/trade evidence.",
+    "territorial_practice_summary": "Slaveholding/slave labour supported in Tlemcen/Zayyanid context.",
+    "legal_state_summary": "",
+    "external_network_summary": "Tlemcen participated in trans-Saharan commerce including enslaved people.",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "Medieval evidence compatible with 1300, not exact-year census evidence.",
+    "evidence_locus": "Tlemcen / Banū ʿAbd al-Wād context",
+    "inference_extent": "Broader realm prevalence unassessed.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Christian participation in Almohad armies and personal guards",
+        "author": "Eva Lapiedra Gutiérrez",
+        "year": 2010,
+        "url_or_identifier": "https://www.tandfonline.com/doi/abs/10.1080/17546559.2010.502667",
+        "source_role": "specialist_article",
+        "direction": "supports",
+        "locator": ""
+      },
+      {
+        "title": "Maqqari Company between Zayyanid Tlemcen and Western Sudan",
+        "author": "",
+        "year": null,
+        "url_or_identifier": "https://asjp.cerist.dz/en/downArticle/564/9/1/287705",
+        "source_role": "specialist_article",
+        "direction": "supports",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "1300:E",
+    "frame": "polity",
+    "anchor_year": 1300,
+    "target_label": "Yadava Dynasty",
+    "source_sample": {
+      "source_name": "Yadava Dynasty",
+      "source_row_ordinal": 5804,
+      "source_from_year": 1260,
+      "source_to_year": 1313,
+      "sampling_sector": "E"
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Medieval South India has evidence of slavery/dependency, but this packet does not establish it specifically for sampled Yadava/Devagiri.",
+    "strongest_unsupported_proposition": "Do not generalize Tamil-region inscriptional evidence to the Yadava polity because dates overlap.",
+    "territorial_practice_summary": "Yadava-specific practice unresolved.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "Slavery/dependency intersected with caste, temple, household and agrarian relations.",
+    "temporal_scope_precision": "Bounded to cited evidence; sample interval is not itself slavery evidence.",
+    "evidence_locus": "Yadava Dynasty",
+    "inference_extent": "No inference beyond stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Slavery and Dependency in Medieval South India",
+        "author": "Leslie C. Orr",
+        "year": 2021,
+        "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-and-dependency-in-medieval-south-india/3F339BF4D4E02BD8073D2F27FA0BE7EE",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "Direct Yadava/Devagiri evidence not established."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 1,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "1300:F",
+    "frame": "polity",
+    "anchor_year": 1300,
+    "target_label": "Chámpa",
+    "source_sample": {
+      "source_name": "Chámpa",
+      "source_row_ordinal": 5454,
+      "source_from_year": 1220,
+      "source_to_year": 1313,
+      "sampling_sector": "F"
+    },
+    "coverage_outcome": "bounded_supported",
+    "strongest_bounded_proposition": "Early-thirteenth-century descriptions of Champa report people being bought and made slaves, supporting a bounded slavery/slave-market claim near 1300.",
+    "strongest_unsupported_proposition": "Do not infer territorial prevalence across all Champa from market/transaction evidence.",
+    "territorial_practice_summary": "Slave purchasing/enslavement supported near the anchor period.",
+    "legal_state_summary": "",
+    "external_network_summary": "Commercial evidence does not quantify local prevalence.",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "Direct account is early thirteenth century; broad c.1300 relevance only.",
+    "evidence_locus": "Champa commercial context",
+    "inference_extent": "No empire-wide prevalence estimate.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "none",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Money, Markets, and Trade in Early Southeast Asia",
+        "author": "Robert S. Wicks",
+        "year": 1992,
+        "url_or_identifier": "https://www.jstor.org/stable/10.7591/j.ctv1nhjzp",
+        "source_role": "specialist_synthesis",
+        "direction": "supports",
+        "locator": ""
+      },
+      {
+        "title": "Slavery in East Asia",
+        "author": "Don J. Wyatt",
+        "year": null,
+        "url_or_identifier": "https://assets.cambridge.org/97810090/01700/excerpt/9781009001700_excerpt.pdf",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "1800:A",
+    "frame": "polity",
+    "anchor_year": 1800,
+    "target_label": "United States of America",
+    "source_sample": {
+      "source_name": "United States of America",
+      "source_row_ordinal": 10524,
+      "source_from_year": 1800,
+      "source_to_year": 1802,
+      "sampling_sector": "A"
+    },
+    "coverage_outcome": "bounded_supported",
+    "strongest_bounded_proposition": "Chattel slavery was legally institutionalized and practiced in substantial parts of the United States around 1800, with important regional legal differences.",
+    "strongest_unsupported_proposition": "Do not represent the entire United States as one homogeneous slavery-practice/legal-status condition.",
+    "territorial_practice_summary": "Enslaved labour and slaveholding directly supported in slaveholding regions.",
+    "legal_state_summary": "Slavery remained legally recognized in many states while northern gradual abolition trajectories differed.",
+    "external_network_summary": "Trade connections remain separate from local practice.",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "Bounded to cited evidence; sample interval is not itself slavery evidence.",
+    "evidence_locus": "United States with required regional differentiation",
+    "inference_extent": "Subnational practice supported; national uniformity rejected.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "direct",
+      "structured_dataset_relevance": [
+        "SlaveVoyages"
+      ]
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Slavery in the US South",
+        "author": "Damian A. Pargas",
+        "year": 2023,
+        "url_or_identifier": "https://link.springer.com/chapter/10.1007/978-3-031-13260-5_25",
+        "source_role": "specialist_synthesis",
+        "direction": "supports",
+        "locator": ""
+      },
+      {
+        "title": "US Slavery and Its Aftermath, 1804–2000",
+        "author": "",
+        "year": null,
+        "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/us-slavery-and-its-aftermath-18042000/94710C48B95A01C59084C84839884623",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "1800:C",
+    "frame": "polity",
+    "anchor_year": 1800,
+    "target_label": "Bornu Empire",
+    "source_sample": {
+      "source_name": "Bornu Empire",
+      "source_row_ordinal": 8818,
+      "source_from_year": 1636,
+      "source_to_year": 1804,
+      "sampling_sector": "C"
+    },
+    "coverage_outcome": "bounded_supported",
+    "strongest_bounded_proposition": "Bornu was materially involved in slave raiding and trans-Saharan slave trading across the period leading into 1800.",
+    "strongest_unsupported_proposition": "Do not turn campaign/raid/trade intensity into numeric territorial prevalence inside Bornu.",
+    "territorial_practice_summary": "Enslavement/slaveholding supported in broader Bornu context; internal prevalence not quantified.",
+    "legal_state_summary": "",
+    "external_network_summary": "Bornu directly documented in slave raiding and trans-Saharan exchange.",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "Sources span sixteenth–nineteenth centuries and encompass 1800.",
+    "evidence_locus": "Bornu / Lake Chad",
+    "inference_extent": "No extrapolation to neighboring peoples.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "direct",
+      "palgrave": "direct",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Slave-Raiding and Defensive Systems South of Lake Chad",
+        "author": "Thierno Mouctar Bah",
+        "year": 2004,
+        "url_or_identifier": "https://www.cambridge.org/core/books/fighting-the-slave-trade/slaveraiding-and-defensive-systems-south-of-lake-chad-from-the-sixteenth-to-the-nineteenth-century/3652F433D19407031C1CFFD5CF538DB2",
+        "source_role": "specialist_article",
+        "direction": "supports",
+        "locator": ""
+      },
+      {
+        "title": "The Cambridge World History of Slavery, Volume 3",
+        "author": "",
+        "year": null,
+        "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/893A3906E0372FFBBC596302859EDB9D",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "1800:D",
+    "frame": "polity",
+    "anchor_year": 1800,
+    "target_label": "Kingdom of Great Britain",
+    "source_sample": {
+      "source_name": "Kingdom of Great Britain",
+      "source_row_ordinal": 10551,
+      "source_from_year": 1800,
+      "source_to_year": 1819,
+      "sampling_sector": "D"
+    },
+    "coverage_outcome": "materially_disputed",
+    "strongest_bounded_proposition": "At 1800, metropolitan Britain cannot be summarized as simply slave-society-present or slavery-abolished: metropolitan slavery had largely receded while imperial/Atlantic participation remained extensive.",
+    "strongest_unsupported_proposition": "Do not infer metropolitan practice from colonial plantation slavery/trade participation or treat Somerset 1772 as simple nationwide abolition.",
+    "territorial_practice_summary": "Metropolitan slaveholding had become rare/weak by late eighteenth century.",
+    "legal_state_summary": "Somerset and related cases had narrower effects than a simple abolition label.",
+    "external_network_summary": "British imperial/Atlantic slavery participation remained major.",
+    "terminology_category_qualification": "Sample label risks conflating metropole and empire.",
+    "temporal_scope_precision": "Bounded to cited evidence; sample interval is not itself slavery evidence.",
+    "evidence_locus": "British Isles versus imperial/Atlantic network",
+    "inference_extent": "Separate metropolitan practice from colonial/external participation.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "direct",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": [
+        "SlaveVoyages"
+      ]
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Taken Not Given: The End of Slavery in Britain",
+        "author": "Simon P. Newman",
+        "year": 2025,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/law-and-history-review/article/taken-not-given-the-end-of-slavery-in-britain/8F3B5EFD98BDCBA96F8A3B371D854D56",
+        "source_role": "specialist_article",
+        "direction": "supports",
+        "locator": ""
+      },
+      {
+        "title": "The Cambridge World History of Slavery, Volume 3",
+        "author": "",
+        "year": null,
+        "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/893A3906E0372FFBBC596302859EDB9D",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "1800:E",
+    "frame": "polity",
+    "anchor_year": 1800,
+    "target_label": "British Ceylon",
+    "source_sample": {
+      "source_name": "British Ceylon",
+      "source_row_ordinal": 10417,
+      "source_from_year": 1796,
+      "source_to_year": 1813,
+      "sampling_sector": "E"
+    },
+    "coverage_outcome": "bounded_supported",
+    "strongest_bounded_proposition": "Slavery is directly documented in Jaffna under Dutch and early British rule around 1800; abolition measures developed only afterward.",
+    "strongest_unsupported_proposition": "Do not generalize Jaffna evidence to all British Ceylon or treat British acquisition as immediate emancipation.",
+    "territorial_practice_summary": "Slavery and legally constituted slave statuses documented in Jaffna.",
+    "legal_state_summary": "British rule inherited locally codified slavery; abolition measures began from 1806.",
+    "external_network_summary": "",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "Study spans late eighteenth/early nineteenth century.",
+    "evidence_locus": "Jaffna, northern Sri Lanka",
+    "inference_extent": "Subregional claim only; island-wide prevalence unassessed.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "The Ambivalence of Freedom: Slaves in Jaffna",
+        "author": "Nira Wickramasinghe and Alicia Schrikker",
+        "year": 2019,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/ambivalence-of-freedom-slaves-in-jaffna-sri-lanka-in-the-eighteenth-and-nineteenth-centuries/0DA019FA2028635360498C72E37FDE21",
+        "source_role": "specialist_article",
+        "direction": "supports",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 1,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "1800:F",
+    "frame": "polity",
+    "anchor_year": 1800,
+    "target_label": "Portuguese Colonies",
+    "source_sample": {
+      "source_name": "Portuguese Colonies",
+      "source_row_ordinal": 10540,
+      "source_from_year": 1800,
+      "source_to_year": 1802,
+      "sampling_sector": "F"
+    },
+    "coverage_outcome": "materially_disputed",
+    "strongest_bounded_proposition": "Multiple Portuguese colonial settings had slavery/slave-trade institutions, but the aggregate sampled label 'Portuguese Colonies' cannot support one territorial-practice state at 1800.",
+    "strongest_unsupported_proposition": "Do not collapse Goa, African, Atlantic, Timorese or other Portuguese territories into one prevalence/practice condition.",
+    "territorial_practice_summary": "Slavery documented in multiple Portuguese imperial locations; one aggregate territorial-practice row is invalid.",
+    "legal_state_summary": "",
+    "external_network_summary": "Imperial slave-trade participation remains separate from each colony's practice.",
+    "terminology_category_qualification": "The target is a dispersed imperial grouping, not one society.",
+    "temporal_scope_precision": "Bounded to cited evidence; sample interval is not itself slavery evidence.",
+    "evidence_locus": "Multiple Portuguese colonies",
+    "inference_extent": "No single territorial-practice inference across aggregate label.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": [
+        "SlaveVoyages"
+      ]
+    },
+    "language_access_limitations": "English-accessible packet only; non-English/non-digitized scholarship not exhaustively searched.",
+    "sources": [
+      {
+        "title": "‘Black’ and ‘golden’ Goa: slavery and empire",
+        "author": "Ines G. Županov",
+        "year": 2025,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/black-and-golden-goa-slavery-and-empire-sixteenth-to-eighteenth-centuries/5CBFFE02B67D62D025F3EB1734A4AE52",
+        "source_role": "specialist_article",
+        "direction": "supports",
+        "locator": ""
+      },
+      {
+        "title": "The Cambridge World History of Slavery, Volume 3",
+        "author": "",
+        "year": null,
+        "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/893A3906E0372FFBBC596302859EDB9D",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "Aggregate target must be decomposed for substantive territorial research."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "NP-01",
+    "frame": "non_polity_challenge",
+    "anchor_year": 1800,
+    "target_label": "Central Australian interior, c. 1800 CE",
+    "source_sample": {
+      "source_name": null,
+      "source_row_ordinal": null,
+      "source_from_year": null,
+      "source_to_year": null,
+      "sampling_sector": null
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "The bounded packet did not establish a slavery institution for a specific Central Australian society at c.1800.",
+    "strongest_unsupported_proposition": "Do not infer slavery from warfare, captivity, kinship asymmetry, or later colonial forced labour elsewhere in Australia.",
+    "territorial_practice_summary": "Target-specific anchor-period slavery practice not established.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "Captivity, dependency and slavery are not equated automatically.",
+    "temporal_scope_precision": "Broad challenge context; later ethnographic/contact evidence is not silently back-projected.",
+    "evidence_locus": "Central Australian interior, c. 1800 CE",
+    "inference_extent": "Broad research context only; not one polity or society.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "none",
+      "palgrave": "none",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible scholarship only; oral histories and Indigenous knowledge systems are not captured by this bounded web packet.",
+    "sources": [
+      {
+        "title": "Conflict and Territoriality in Aboriginal Australia",
+        "author": "",
+        "year": null,
+        "url_or_identifier": "https://researchportalplus.anu.edu.au/en/publications/conflict-and-territoriality-in-aboriginal-australia-evidence-from/",
+        "source_role": "specialist_article",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "Target society and exact 1800 evidence remain unresolved."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 1,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "NP-02",
+    "frame": "non_polity_challenge",
+    "anchor_year": 1800,
+    "target_label": "New Guinea Highlands, c. 1800 CE",
+    "source_sample": {
+      "source_name": null,
+      "source_row_ordinal": null,
+      "source_from_year": null,
+      "source_to_year": null,
+      "sampling_sector": null
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Later ethnography documents warfare/captivity dynamics, but the packet does not establish slavery at c.1800.",
+    "strongest_unsupported_proposition": "Do not back-project twentieth-century ethnography or equate captive incorporation with slavery.",
+    "territorial_practice_summary": "Target-specific anchor-period slavery practice not established.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "Captivity, dependency and slavery are not equated automatically.",
+    "temporal_scope_precision": "Broad challenge context; later ethnographic/contact evidence is not silently back-projected.",
+    "evidence_locus": "New Guinea Highlands, c. 1800 CE",
+    "inference_extent": "Broad research context only; not one polity or society.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "none",
+      "palgrave": "none",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "Heavy dependence on later ethnography; oral/local-language evidence underrepresented.",
+    "sources": [
+      {
+        "title": "Warfare (The Evolution of Highland Papua New Guinea Societies)",
+        "author": "D. K. Feil",
+        "year": null,
+        "url_or_identifier": "https://www.cambridge.org/core/books/abs/evolution-of-highland-papua-new-guinea-societies/warfare/C765ABB8BAB6D7F6C8BA608B59305B26",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "No direct c.1800 target-specific slavery evidence found."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 1,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "NP-03",
+    "frame": "non_polity_challenge",
+    "anchor_year": 1300,
+    "target_label": "North American Great Plains, c. 1300 CE",
+    "source_sample": {
+      "source_name": null,
+      "source_row_ordinal": null,
+      "source_from_year": null,
+      "source_to_year": null,
+      "sampling_sector": null
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Precontact North America included captivity/slavery in some societies, but the packet does not establish it for a Great Plains society at c.1300.",
+    "strongest_unsupported_proposition": "Do not project continent-wide or later-contact Plains practices onto the broad challenge region.",
+    "territorial_practice_summary": "Target-specific anchor-period slavery practice not established.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "Captivity, dependency and slavery are not equated automatically.",
+    "temporal_scope_precision": "Broad challenge context; later ethnographic/contact evidence is not silently back-projected.",
+    "evidence_locus": "North American Great Plains, c. 1300 CE",
+    "inference_extent": "Broad research context only; not one polity or society.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "direct",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "Archaeological/ethnohistorical evidence uneven; later written sources cannot be assumed unchanged.",
+    "sources": [
+      {
+        "title": "Slavery in Indigenous North America",
+        "author": "Leland Donald",
+        "year": 2011,
+        "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-in-indigenous-north-america/F711F11F7DD3F8952EDC3FF1F90A0D3A",
+        "source_role": "specialist_synthesis",
+        "direction": "qualifies",
+        "locator": ""
+      },
+      {
+        "title": "Slavery in Precontact America",
+        "author": "Camilla Townsend",
+        "year": 2021,
+        "url_or_identifier": "https://www.cambridge.org/core/books/cambridge-world-history-of-slavery/slavery-in-precontact-america/090D3E244D8E3F465822F387EFED7122",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "No c.1300 target-specific practice established."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "NP-04",
+    "frame": "non_polity_challenge",
+    "anchor_year": 1300,
+    "target_label": "Upper / western Amazonia, c. 1300 CE",
+    "source_sample": {
+      "source_name": null,
+      "source_row_ordinal": null,
+      "source_from_year": null,
+      "source_to_year": null,
+      "sampling_sector": null
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Later/contact Amazonian scholarship documents captive incorporation and slavery-like relations in some contexts, but not this broad region at c.1300.",
+    "strongest_unsupported_proposition": "Do not back-project post-contact/ethnographic relations or treat Amazonia as one society.",
+    "territorial_practice_summary": "Target-specific anchor-period slavery practice not established.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "Captivity, dependency and slavery are not equated automatically.",
+    "temporal_scope_precision": "Broad challenge context; later ethnographic/contact evidence is not silently back-projected.",
+    "evidence_locus": "Upper / western Amazonia, c. 1300 CE",
+    "inference_extent": "Broad research context only; not one polity or society.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "Retrospective ethnography/post-contact sources dominate; archaeological/Indigenous-language evidence underrepresented.",
+    "sources": [
+      {
+        "title": "First Contacts, Slavery and Kinship in North-Eastern Amazonia",
+        "author": "Vanessa Grotti and Marc Brightman",
+        "year": 2016,
+        "url_or_identifier": "https://www.ncbi.nlm.nih.gov/books/NBK436748/",
+        "source_role": "specialist_article",
+        "direction": "context",
+        "locator": ""
+      },
+      {
+        "title": "Ownership and Nurture",
+        "author": "Marc Brightman, Carlos Fausto and Vanessa Grotti",
+        "year": 2016,
+        "url_or_identifier": "https://www.ncbi.nlm.nih.gov/books/NBK436749",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "No direct precontact c.1300 evidence for broad challenge region."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "COV2:1800:F",
+    "frame": "polity_rank2",
+    "anchor_year": 1800,
+    "target_label": "Kelantan",
+    "source_sample": {
+      "source_name": "Kelantan",
+      "source_row_ordinal": 9951,
+      "source_from_year": 1762,
+      "source_to_year": 1889,
+      "sampling_sector": "F",
+      "selection_rank": 2
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Later nineteenth-century evidence documents debt-bondage/debt-slavery in Kelantan and comparable Malay states, but the bounded packet does not securely establish the same system at exactly 1800.",
+    "strongest_unsupported_proposition": "Do not back-project late nineteenth-/early twentieth-century Kelantan descriptions into 1800 or equate all debt bondage with chattel slavery.",
+    "territorial_practice_summary": "Kelantan debt bondage is well documented later in the nineteenth century; exact 1800 applicability remains unresolved.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "Debt-bondage, debt-slavery, debtor-servantship and domestic slavery overlap in historical descriptions but are not analytically identical.",
+    "temporal_scope_precision": "Target-specific documentary descriptions are later than 1800; broader Southeast Asian scholarship establishes debt as a major route into bondage from 1400–1800.",
+    "evidence_locus": "Kelantan",
+    "inference_extent": "No inference beyond the stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Following the Debt: Credit and Debt in Southeast Asian Legal Theory and Practice, 1400–1800",
+        "author": "Anthony Reid",
+        "year": null,
+        "url_or_identifier": "https://www.cambridge.org/core/books/abs/credit-and-debt-in-indonesia-8601930/following-the-debt-credit-and-debt-in-southeast-asian-legal-theory-and-practice-14001800/4B66415CB01DD030DFB780A181DD28D5",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      },
+      {
+        "title": "Slavery and Slave Trade: Red Sea, Arabia and Persian Gulf — Kelantan and Trengganu investigation",
+        "author": "Sir George Maxwell investigation",
+        "year": 1930,
+        "url_or_identifier": "https://www.qdl.qa/archive/81055/vdc_100080220223.0x0000a9",
+        "source_role": "primary_source",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "Exact anchor-year Kelantan evidence not established."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 1,
+      "primary_or_dataset_items_used": 1,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "COV2:-500:A",
+    "frame": "polity_rank2",
+    "anchor_year": -500,
+    "target_label": "Zapotec Civilization",
+    "source_sample": {
+      "source_name": "Zapotec Civilization",
+      "source_row_ordinal": 294,
+      "source_from_year": -500,
+      "source_to_year": -292,
+      "sampling_sector": "A",
+      "selection_rank": 2
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Monte Albán's early Zapotec state shows warfare, conquest and captive/sacrifice imagery around 500 BCE, but the packet does not establish an enslaved labour status or slavery institution.",
+    "strongest_unsupported_proposition": "Do not turn war captives, ritual killing, hierarchy or public construction labour into slavery without status evidence.",
+    "territorial_practice_summary": "No target-specific slavery practice is established at c.500 BCE.",
+    "legal_state_summary": "",
+    "external_network_summary": "Conquest/captive evidence exists but does not by itself establish slave trading or territorial slaveholding.",
+    "terminology_category_qualification": "Captive, sacrificed person, corvée/public labourer and slave are not interchangeable categories.",
+    "temporal_scope_precision": "The archaeological context directly covers Early Monte Albán around 500–300 BCE.",
+    "evidence_locus": "Zapotec Civilization",
+    "inference_extent": "No inference beyond the stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Origins of the State — Oaxaca Archaeology",
+        "author": "University of Michigan Oaxaca Archaeology Project",
+        "year": null,
+        "url_or_identifier": "https://sites.lsa.umich.edu/oaxaca-archaeology/origins-of-the-state/",
+        "source_role": "specialist_synthesis",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "No slavery-status evidence found within the bounded packet."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 1,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "COV2:1300:B",
+    "frame": "polity_rank2",
+    "anchor_year": 1300,
+    "target_label": "Chimu Empire",
+    "source_sample": {
+      "source_name": "Chimu Empire",
+      "source_row_ordinal": 5245,
+      "source_from_year": 1202,
+      "source_to_year": 1343,
+      "sampling_sector": "B",
+      "selection_rank": 2
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Chimú state organisation used labour taxation/corvée and captive sacrifice, but the bounded packet does not establish slavery as the correct category for those relations around 1300.",
+    "strongest_unsupported_proposition": "Do not reclassify state labour taxation, attached craft production or sacrificed captives as slavery.",
+    "territorial_practice_summary": "State-administered labour obligations and attached production are supported; slavery is not established.",
+    "legal_state_summary": "",
+    "external_network_summary": "Captive-taking/sacrifice evidence does not establish slave trade.",
+    "terminology_category_qualification": "Corvée, attached specialist labour, captivity and slavery must remain separate.",
+    "temporal_scope_precision": "Chimú evidence directly concerns the relevant late pre-Hispanic period.",
+    "evidence_locus": "Chimu Empire",
+    "inference_extent": "No inference beyond the stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Chimu — eHRAF Archaeology summary",
+        "author": "Yale Human Relations Area Files",
+        "year": null,
+        "url_or_identifier": "https://ehrafarchaeology.yale.edu/traditions/se75/summary",
+        "source_role": "specialist_synthesis",
+        "direction": "qualifies",
+        "locator": ""
+      },
+      {
+        "title": "Human sacrifice by the Chimú State: evidence and interpretation",
+        "author": "John Verano",
+        "year": 2025,
+        "url_or_identifier": "https://revistas.cultura.gob.pe/index.php/arqueologicas/article/view/634",
+        "source_role": "specialist_article",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "No bounded slavery-status claim established."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "COV2:1800:A",
+    "frame": "polity_rank2",
+    "anchor_year": 1800,
+    "target_label": "New Netherland",
+    "source_sample": {
+      "source_name": "New Netherland",
+      "source_row_ordinal": 10522,
+      "source_from_year": 1800,
+      "source_to_year": 1802,
+      "sampling_sector": "A",
+      "selection_rank": 2
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "The sampled target is chronologically invalid: New Netherland is a seventeenth-century Dutch colony and did not exist in 1800.",
+    "strongest_unsupported_proposition": "Do not substitute New York, the Dutch Republic, or another successor territory and then attach an 1800 slavery claim to the sampled row.",
+    "territorial_practice_summary": "No practice claim: target identity/time fails before historical classification.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "Wikidata describes New Netherland as founded in the seventeenth century and dissolved by 1667; this conflicts with the sampled 1800 interval.",
+    "evidence_locus": "Invalid sampled target at 1800",
+    "inference_extent": "None until upstream identity/time is corrected.",
+    "evidence_classes": [
+      "reference-data identity check"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "none",
+      "palgrave": "none",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "sources": [
+      {
+        "title": "New Netherland (Q382593)",
+        "author": "Wikidata",
+        "year": null,
+        "url_or_identifier": "https://www.wikidata.org/wiki/Q382593",
+        "source_role": "structured_dataset",
+        "direction": "challenges",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "Cliopatria row interval 1800–1802 conflicts with linked historical identity."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 0,
+      "primary_or_dataset_items_used": 1,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "COV2:-500:C",
+    "frame": "polity_rank2",
+    "anchor_year": -500,
+    "target_label": "Hadhramaut",
+    "source_sample": {
+      "source_name": "Hadhramaut",
+      "source_row_ordinal": 189,
+      "source_from_year": -700,
+      "source_to_year": -351,
+      "sampling_sector": "C",
+      "selection_rank": 2
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Ancient South Arabian epigraphy demonstrates subordinate, captive and enslaved statuses, including later Hadhramitic attestations, but the packet does not securely establish Hadhramaut slavery at c.500 BCE.",
+    "strongest_unsupported_proposition": "Do not move second-/third-century CE Hadhramitic status evidence backward seven centuries.",
+    "territorial_practice_summary": "Ancient South Arabian slavery/subordination is a valid regional context; target-specific 500 BCE practice remains unresolved.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "ʿbd, ʾdm, captive and servant terms require contextual reading.",
+    "temporal_scope_precision": "The directly cited Hadhramitic status inscription is late second–third century CE, much later than the anchor.",
+    "evidence_locus": "Hadhramaut",
+    "inference_extent": "No inference beyond the stated target/evidence locus.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "adjacent",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": [
+        "DASI"
+      ]
+    },
+    "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Slavery in First Millennium Arabia: Epigraphy and the Qurʾān",
+        "author": "Valentina A. Grasso",
+        "year": 2023,
+        "url_or_identifier": "https://doi.org/10.1515/mill-2023-0005",
+        "source_role": "specialist_article",
+        "direction": "qualifies",
+        "locator": ""
+      },
+      {
+        "title": "Three new inscriptions from Hadhramaut",
+        "author": "H. St. J. B. Philby",
+        "year": 1945,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/three-new-inscriptions-from-hadhramaut/746101FC71559623D61E09B70A36E079",
+        "source_role": "specialist_article",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "Temporal gap between anchor and direct Hadhramitic status evidence."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 2,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "COV2:1300:E",
+    "frame": "polity_rank2",
+    "anchor_year": 1300,
+    "target_label": "Pandya Empire",
+    "source_sample": {
+      "source_name": "Pandya Empire",
+      "source_row_ordinal": 5770,
+      "source_from_year": 1260,
+      "source_to_year": 1313,
+      "sampling_sector": "E",
+      "selection_rank": 2
+    },
+    "coverage_outcome": "bounded_supported",
+    "strongest_bounded_proposition": "Specialist synthesis supports slavery and dependency in medieval Tamil South India, including likely extensive enslaved agricultural labour from the thirteenth century onward; this is temporally and regionally relevant to the Pandya-period target.",
+    "strongest_unsupported_proposition": "Do not infer a uniform slavery regime or prevalence across the entire Pandya polity from Tamil inscriptional evidence.",
+    "territorial_practice_summary": "Slavery/dependency and enslaved agricultural labour are supported in the Tamil-region context around the 13th century.",
+    "legal_state_summary": "The evidence is primarily inscriptional/social rather than a single polity-wide legal code.",
+    "external_network_summary": "",
+    "terminology_category_qualification": "Slavery operated inside a wider dependency/caste/temple/agrarian hierarchy; categories were heterogeneous.",
+    "temporal_scope_precision": "The Cambridge synthesis directly covers South India 500–1500 and identifies thirteenth-century onward agricultural slavery.",
+    "evidence_locus": "Tamil South India under the broad Pandya-period context",
+    "inference_extent": "Regional bounded claim; no empire-wide prevalence estimate.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "direct",
+      "palgrave": "direct",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Slavery and Dependency in Medieval South India",
+        "author": "Leslie C. Orr",
+        "year": 2021,
+        "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-and-dependency-in-medieval-south-india/3F339BF4D4E02BD8073D2F27FA0BE7EE",
+        "source_role": "specialist_synthesis",
+        "direction": "supports",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 1,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "COV2:500:F",
+    "frame": "polity_rank2",
+    "anchor_year": 500,
+    "target_label": "Goguryeo",
+    "source_sample": {
+      "source_name": "Goguryeo",
+      "source_row_ordinal": 1905,
+      "source_from_year": 490,
+      "source_to_year": 522,
+      "sampling_sector": "F",
+      "selection_rank": 2
+    },
+    "coverage_outcome": "bounded_supported",
+    "strongest_bounded_proposition": "Korean historical synthesis identifies nobi as the lowest status group in Goguryeo, with war captivity, punishment/family liability and debt among pathways into the status.",
+    "strongest_unsupported_proposition": "Do not assume later Goryeo/Joseon nobi law, prevalence or property rules applied unchanged to Goguryeo c.500.",
+    "territorial_practice_summary": "A recognized unfree/nobi status is supported in Goguryeo.",
+    "legal_state_summary": "Historical records cited in the Korean national history synthesis describe criminal/family enslavement and debt-related pathways.",
+    "external_network_summary": "War captivity is one documented source of nobi.",
+    "terminology_category_qualification": "Nobi is historically specific; later debates over Korean slavery cannot be projected unchanged backward.",
+    "temporal_scope_precision": "The synthesis concerns Goguryeo's Three Kingdoms social structure and is directly relevant to the 500 CE target.",
+    "evidence_locus": "Goguryeo",
+    "inference_extent": "Status existence/pathways; no prevalence estimate.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "direct",
+      "palgrave": "direct",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "sources": [
+      {
+        "title": "New History of Korea — Goguryeo social structure: Nobi",
+        "author": "National Institute of Korean History",
+        "year": null,
+        "url_or_identifier": "https://db.history.go.kr/diachronic/level.do?levelId=nh_005_0050_0040_0010_0050",
+        "source_role": "specialist_synthesis",
+        "direction": "supports",
+        "locator": ""
+      },
+      {
+        "title": "Slavery in Chosŏn Korea",
+        "author": "Sun Joo Kim",
+        "year": 2023,
+        "url_or_identifier": "https://doi.org/10.1007/978-3-031-13260-5_18",
+        "source_role": "specialist_synthesis",
+        "direction": "supports",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 1,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "COV2:1300:C",
+    "frame": "polity_rank2",
+    "anchor_year": 1300,
+    "target_label": "Mamluk Sultanate",
+    "source_sample": {
+      "source_name": "Mamluk Sultanate",
+      "source_row_ordinal": 6047,
+      "source_from_year": 1294,
+      "source_to_year": 1343,
+      "sampling_sector": "C",
+      "selection_rank": 2
+    },
+    "coverage_outcome": "bounded_supported",
+    "strongest_bounded_proposition": "Slavery was structurally embedded in the Mamluk Sultanate around 1300: military slaves formed the ruling military-political elite while domestic and labour slavery also existed in Egypt and Syria.",
+    "strongest_unsupported_proposition": "Do not equate elite mamluk military status with every enslaved person's experience or infer one prevalence rate across Egypt and Syria.",
+    "territorial_practice_summary": "Military, domestic and labour slavery are directly supported.",
+    "legal_state_summary": "Islamic legal/manumission frameworks structured slavery but did not make all statuses equivalent.",
+    "external_network_summary": "The sultanate depended on imported enslaved people for military and domestic markets.",
+    "terminology_category_qualification": "Mamluk can describe a particular military-slave trajectory; most enslaved people were not elite mamluks. Koby Yosef further shows that mamlūk in Mamluk-era sources can mean slave or servant/subordinate and cautions against treating manumitted mamlūks as retaining a proud slave-status identity.",
+    "temporal_scope_precision": "Sources directly cover the Mamluk Sultanate 1250–1517 and therefore the 1300 anchor.",
+    "evidence_locus": "Mamluk Egypt and Syria",
+    "inference_extent": "Institutional occurrence and multiple forms; no one prevalence score.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "direct",
+      "palgrave": "direct",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Slavery in the Mamluk Sultanate",
+        "author": "Stephan Conermann",
+        "year": 2021,
+        "url_or_identifier": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-in-the-mamluk-sultanate/BB8E3CF15101D2338B67518033C44D47",
+        "source_role": "specialist_synthesis",
+        "direction": "supports",
+        "locator": ""
+      },
+      {
+        "title": "Slavery in Egypt under the Mamluks",
+        "author": "Adam Ali",
+        "year": 2023,
+        "url_or_identifier": "https://academic.oup.com/edited-volume/61663/chapter-abstract/553453305",
+        "source_role": "specialist_synthesis",
+        "direction": "supports",
+        "locator": ""
+      },
+      {
+        "title": "Domestic slavery in Syria and Egypt, 1200–1500",
+        "author": "Jan Hinrich Hagedorn",
+        "year": 2019,
+        "url_or_identifier": "https://research-repository.st-andrews.ac.uk/handle/10023/18438",
+        "source_role": "specialist_synthesis",
+        "direction": "supports",
+        "locator": ""
+      },
+      {
+        "title": "The term mamlūk and slave status during the Mamluk Sultanate",
+        "author": "Koby Yosef",
+        "year": 2013,
+        "url_or_identifier": "https://doi.org/10.3989/alqantara.2013.001",
+        "source_role": "specialist_article",
+        "direction": "qualifies",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 3,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "COV2:1800:D",
+    "frame": "polity_rank2",
+    "anchor_year": 1800,
+    "target_label": "Kingdom of Georgia",
+    "source_sample": {
+      "source_name": "Kingdom of Georgia",
+      "source_row_ordinal": 10516,
+      "source_from_year": 1800,
+      "source_to_year": 1802,
+      "sampling_sector": "D",
+      "selection_rank": 2
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "The sampled target is chronologically invalid: the linked medieval Kingdom of Georgia ended centuries before 1800.",
+    "strongest_unsupported_proposition": "Do not substitute Kartli-Kakheti, Russian Georgia or another successor polity and attach its slavery/serfdom history to the sampled row.",
+    "territorial_practice_summary": "No practice claim because target identity/time fails.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "Wikidata gives the Kingdom of Georgia inception 1008 and dissolution 1466, incompatible with the sampled 1800 interval.",
+    "evidence_locus": "Invalid sampled target at 1800",
+    "inference_extent": "None until upstream identity/time correction.",
+    "evidence_classes": [
+      "reference-data identity check"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "none",
+      "palgrave": "none",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Kingdom of Georgia (Q154667)",
+        "author": "Wikidata",
+        "year": null,
+        "url_or_identifier": "https://www.wikidata.org/wiki/Q154667",
+        "source_role": "structured_dataset",
+        "direction": "challenges",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "Cliopatria 1800–1802 row conflicts with linked medieval polity identity."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 0,
+      "primary_or_dataset_items_used": 1,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "COV2:500:E",
+    "frame": "polity_rank2",
+    "anchor_year": 500,
+    "target_label": "Protectorate of the Western Regions",
+    "source_sample": {
+      "source_name": "Protectorate of the Western Regions",
+      "source_row_ordinal": 1868,
+      "source_from_year": 476,
+      "source_to_year": 554,
+      "sampling_sector": "E",
+      "selection_rank": 2
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "The sampled target is temporally unsafe: the Western Regions protectorate is a Han/post-Han administrative institution whose accepted chronology does not extend to 500 CE.",
+    "strongest_unsupported_proposition": "Do not substitute a later Tarim Basin polity or treat a broad 'Western Regions' geographic label as continuity of the protectorate.",
+    "territorial_practice_summary": "No practice claim because target identity/time is unsafe.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "",
+    "temporal_scope_precision": "Reference sources place the institution before 500 CE; even broad successor-administration chronologies end by 439.",
+    "evidence_locus": "Invalid/unsafe sampled political target at 500",
+    "inference_extent": "None until upstream temporal identity is reviewed.",
+    "evidence_classes": [
+      "reference-data identity check"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "none",
+      "palgrave": "none",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Protectorate of the Western Regions (Q911440)",
+        "author": "Wikidata",
+        "year": null,
+        "url_or_identifier": "https://www.wikidata.org/wiki/Q911440",
+        "source_role": "structured_dataset",
+        "direction": "challenges",
+        "locator": ""
+      },
+      {
+        "title": "Protectorate of the Western Regions",
+        "author": "Reference chronology",
+        "year": null,
+        "url_or_identifier": "https://en.wikipedia.org/wiki/Protectorate_of_the_Western_Regions",
+        "source_role": "other",
+        "direction": "context",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "Sampled 476–554 interval conflicts with the linked institution's chronology."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 0,
+      "primary_or_dataset_items_used": 1,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "COV2:1800:C",
+    "frame": "polity_rank2",
+    "anchor_year": 1800,
+    "target_label": "Merina Kingdom",
+    "source_sample": {
+      "source_name": "Merina Kingdom",
+      "source_row_ordinal": 10405,
+      "source_from_year": 1796,
+      "source_to_year": 1802,
+      "sampling_sector": "C",
+      "selection_rank": 2
+    },
+    "coverage_outcome": "bounded_supported",
+    "strongest_bounded_proposition": "Slavery and slave export were materially present in the Merina/Imerina political economy around 1800, but specialist scholarship rejects treating slavery alone as the later imperial economy's single organising labour principle.",
+    "strongest_unsupported_proposition": "Do not flatten slavery and fanompoana into one coerced-labour category or infer that all Merina production depended on slaves.",
+    "territorial_practice_summary": "Slaveholding and slave labour are supported around 1800; later fanompoana formed a distinct crown-labour institution.",
+    "legal_state_summary": "Crown/state labour obligations and slavery must remain separate.",
+    "external_network_summary": "Slave exports were economically important around 1800 and later restricted by British-Merina agreements.",
+    "terminology_category_qualification": "Slavery and fanompoana are distinct although both involve coercive dependency.",
+    "temporal_scope_precision": "Sources directly cover Imerina from 1775/1790 through the nineteenth century and the 1800 anchor.",
+    "evidence_locus": "Imerina / nascent Merina state",
+    "inference_extent": "Bounded Merina claim; no island-wide prevalence inference.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "",
+    "global_baseline": {
+      "cambridge": "direct",
+      "palgrave": "direct",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Slavery and Fanompoana: the Structure of Forced Labour in Imerina, 1790–1861",
+        "author": "Gwyn Campbell",
+        "year": 1988,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/slavery-and-fanompoana-the-structure-of-forced-labour-in-imerina-madagascar-179018611/87DF59AEF981939AF860D864DA5D3F3A",
+        "source_role": "specialist_article",
+        "direction": "supports",
+        "locator": ""
+      },
+      {
+        "title": "Sacred Acquisition: Andrianampoinimerina at Ambohimanga, 1777–1790",
+        "author": "Gerald M. Berg",
+        "year": 1988,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/sacred-acquisition-andrianampoinimerina-at-ambohimanga-17771790/EBA65FD0322C0EA8D5B77EBE801598F8",
+        "source_role": "specialist_article",
+        "direction": "context",
+        "locator": ""
+      },
+      {
+        "title": "An Economic History of Imperial Madagascar, 1750–1895",
+        "author": "Gwyn Campbell",
+        "year": 2005,
+        "url_or_identifier": "https://assets.cambridge.org/052183/9351/excerpt/0521839351_excerpt.htm",
+        "source_role": "specialist_synthesis",
+        "direction": "supports",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 3,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  },
+  {
+    "cell_id": "COV2:500:D",
+    "frame": "polity_rank2",
+    "anchor_year": 500,
+    "target_label": "Caucasian Albania",
+    "source_sample": {
+      "source_name": "Caucasian Albania",
+      "source_row_ordinal": 1934,
+      "source_from_year": 500,
+      "source_to_year": 509,
+      "sampling_sector": "D",
+      "selection_rank": 2
+    },
+    "coverage_outcome": "researched_inconclusive",
+    "strongest_bounded_proposition": "Sources confirm servile/slave categories in the wider ancient Caucasus and much earlier temple slaves in Albania, but the bounded packet does not establish a significant slavery institution in Caucasian Albania at c.500 CE.",
+    "strongest_unsupported_proposition": "Do not infer fifth-century Albanian slavery from ancient Strabo-era temple slaves or from later Caucasian slave-export histories.",
+    "territorial_practice_summary": "Exact fifth-century territorial practice remains unresolved.",
+    "legal_state_summary": "",
+    "external_network_summary": "",
+    "terminology_category_qualification": "Servile, dependent, temple-slave and later exported-captive categories span different periods and institutions.",
+    "temporal_scope_precision": "The strongest direct Albania slavery reference is ancient and not contemporaneous with 500 CE.",
+    "evidence_locus": "Caucasian Albania / wider Caucasus",
+    "inference_extent": "No fifth-century prevalence or structural-significance claim.",
+    "evidence_classes": [
+      "specialist scholarship"
+    ],
+    "contrary_limiting_evidence": "A classic specialist synthesis explicitly cautions that slavery does not appear to have flourished on an extensive scale in Caucasia.",
+    "global_baseline": {
+      "cambridge": "none",
+      "palgrave": "adjacent",
+      "structured_dataset_relevance": []
+    },
+    "language_access_limitations": "English-accessible research packet only; non-English and non-digitized scholarship was not exhaustively searched.",
+    "sources": [
+      {
+        "title": "Introduction to Christian Caucasian History: The Formative Centuries (IVth–VIIIth)",
+        "author": "Cyril Toumanoff",
+        "year": 1963,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/traditio/article/abs/introduction-to-christian-caucasian-history-the-formative-centuries-ivthviiith/CAAD5EAF6637E45134BB9CF78CDBFA4E",
+        "source_role": "specialist_article",
+        "direction": "qualifies",
+        "locator": ""
+      }
+    ],
+    "unresolved_issues": [
+      "No direct c.500 slavery-status evidence established."
+    ],
+    "research_notes": {
+      "global_synthesis_items_used": 1,
+      "specialist_secondary_items_used": 1,
+      "primary_or_dataset_items_used": 0,
+      "source_budget_exceeded": false,
+      "source_budget_reason": ""
+    }
+  }
+]

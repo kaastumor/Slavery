@@ -1,0 +1,119 @@
+{
+  "experiment": "COV-002",
+  "updates": [
+    {
+      "cell_id": "COV2:1300:C",
+      "target": "Mamluk Sultanate",
+      "search_result": "source_found",
+      "source": {
+        "title": "The term mamlūk and slave status during the Mamluk Sultanate",
+        "author": "Koby Yosef",
+        "year": 2013,
+        "url": "https://doi.org/10.3989/alqantara.2013.001"
+      },
+      "direction": "qualifies",
+      "finding": "The term mamlūk in Mamluk sources can mean slave or servant/subordinate; Yosef challenges the assumption that manumitted mamlūks remained proud of or identified through former slave status. This qualifies terminology but does not challenge the row's broader evidence for slavery in the Sultanate.",
+      "outcome_change": "none",
+      "touched": {
+        "F": 2,
+        "R": 2,
+        "M": 2
+      },
+      "stale_tasks": [
+        "T6 source recovery"
+      ]
+    },
+    {
+      "cell_id": "COV2:-500:A",
+      "target": "Zapotec Civilization",
+      "search_result": "no_source_found",
+      "finding": "The bounded update search did not surface a credible genuinely new specialist source establishing slavery/unfree status for the c.500 BCE target. Non-specialist summaries were rejected.",
+      "outcome_change": "none",
+      "touched": {
+        "F": 0,
+        "R": 0,
+        "M": 0
+      },
+      "stale_tasks": []
+    },
+    {
+      "cell_id": "-500:E",
+      "target": "Janapada of Vatsa",
+      "search_result": "no_source_found",
+      "finding": "The bounded update search did not surface a credible genuinely new Vatsa-specific specialist slavery/dependency source for c.500 BCE.",
+      "outcome_change": "none",
+      "touched": {
+        "F": 0,
+        "R": 0,
+        "M": 0
+      },
+      "stale_tasks": []
+    },
+    {
+      "cell_id": "-500:A",
+      "target": "Olmec Civilization",
+      "search_result": "no_source_found",
+      "finding": "The bounded update search surfaced general material but no credible genuinely new specialist source establishing an Olmec slavery status/institution at c.500 BCE.",
+      "outcome_change": "none",
+      "touched": {
+        "F": 0,
+        "R": 0,
+        "M": 0
+      },
+      "stale_tasks": []
+    },
+    {
+      "cell_id": "1300:C",
+      "target": "Mahdids",
+      "search_result": "source_found_context_only",
+      "source": {
+        "title": "Slavery in Medieval Arabia",
+        "author": "Magdalena Moorthy Kloss",
+        "year": 2023,
+        "url": "https://doi.org/10.1007/978-3-031-13260-5_8"
+      },
+      "direction": "context",
+      "finding": "Medieval Yemen from the eleventh to fifteenth centuries has direct evidence of slavery and slave trading, especially Najahid and Rasulid contexts. This strengthens regional context but does not repair the sampled Mahdids identity/date mismatch, so no slavery claim is attached to the invalid target.",
+      "outcome_change": "none",
+      "touched": {
+        "F": 2,
+        "R": 2,
+        "M": 2
+      },
+      "stale_tasks": [
+        "T6 source recovery"
+      ]
+    },
+    {
+      "cell_id": "COV2:500:F",
+      "target": "Goguryeo",
+      "search_result": "source_found",
+      "source": {
+        "title": "Slavery in Chosŏn Korea",
+        "author": "Sun Joo Kim",
+        "year": 2023,
+        "url": "https://doi.org/10.1007/978-3-031-13260-5_18"
+      },
+      "direction": "supports",
+      "finding": "The Palgrave chapter directly notes historical-source evidence for Koguryŏ penal enslavement, debt slavery, and enslavement of conquered people or prisoners of war. It independently corroborates the row and changes Palgrave coverage from adjacent to direct.",
+      "outcome_change": "none",
+      "touched": {
+        "F": 2,
+        "R": 2,
+        "M": 1
+      },
+      "stale_tasks": [
+        "T3 handbook coverage",
+        "T6 source recovery"
+      ]
+    }
+  ],
+  "maintenance_gate": {
+    "changed_rows": 3,
+    "neutral_no_change_rows": 3,
+    "rows_where_R_touches_le_70pct_F": 0,
+    "required_rows": 4,
+    "result": "FAIL",
+    "rationale": "All three material updates touched the same number of review atoms in R as F. The three 0/0 no-change searches are neutral and are not counted as savings wins."
+  }
+}
