@@ -24,11 +24,13 @@ Repository migrations currently run through `0027_release_artifact_immutability.
 
 ## Current gate
 
-**M1 — methodology hardening, issue #100.**
+**M2 — semantic integration + complete geography backbone, issue #116.**
 
-The 2026-09-22 adversarial review found that the next major risk is semantic rather than infrastructural: the atlas must prove it can scale without turning evidence configuration into prevalence, uncertain dates into continuous duration, local evidence into polity-wide claims, events into statuses, or historically unlike systems into a misleading single ordinal comparison.
+M1 completed after an explicit REVISE → corrective #112 → re-attack cycle. The accepted experimental target no longer treats P0–P4 as the future universal comparative ordinal and separates evidence pattern, interpretive basis, occurrence/institution/prevalence/structural significance, workflow/outcome, temporal applicability/precision and evidence locus/inference extent.
 
-The short autonomous runway is #101–#106. #105 is the integrated gate adversary; #106 is the mandatory Project Health Check.
+M2 must now prove those semantics in the real relational/query architecture while moving from polity-by-polity Cliopatria use to the complete pinned corpus as raw geography infrastructure. The current canonical v0.6.1 release and public preview remain unchanged during this gate.
+
+The short autonomous runway is #117–#123. #122 is the integrated adversarial gate; #123 is the mandatory Project Health Check.
 
 ## Existing blockers
 
