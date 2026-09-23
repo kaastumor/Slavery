@@ -1,6 +1,6 @@
 # Historical Slavery Atlas — Backlog
 
-**Updated:** 2026-09-23  
+**Updated:** 2026-09-24  
 **Role:** canonical execution queue only; assumptions/risks/value evidence live in `docs/25_PROJECT_HEALTH.md`  
 **Canonical historical data release:** `v0.6.1` (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)
@@ -9,57 +9,72 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE R1 — Core Hardening + First Systematic Coverage Release
+# ACTIVE R1 / CHECKPOINT — Tranche 01 complete; no tranche 02 authorized by #163
 
-**Issue:** #159  
-**Decision:** D-073  
-**Current stage:** **R1.4 — first bounded C1 research tranche; subject queue frozen at 34 rows**
+**Parent programme:** #159  
+**Completed tranche:** #163  
+**Decision:** D-076  
+**Current stage:** **R1.4 CALIBRATION CHECKPOINT**
 
-R1 is the first real research/release programme after COV-001→004.
+R1 remains the first real research/release programme after COV-001→004.
 
-## Completed inside R1
+## Tranche 01 result
 
-- programme charter frozen;
-- setup adversary: **PROCEED** after tightening;
-- Core Contract v1 frozen;
-- Core Contract adversary: **SURVIVES AFTER SMALL CORRECTIONS**;
-- dependency-free release-row validator + regression tests added.
+Frozen stress/calibration tranche:
+- 10 C1 rows;
+- 10/10 internally adversarially replayed;
+- 2/2 earned C2 packets completed.
 
-## Current task
+Final target-claim outcomes:
+- 3 classified / bounded-supported;
+- 7 inconclusive for the relevant frozen target/year/frame question;
+- 0 final `disputed` rows.
 
-Run the first bounded C1 research tranche from the frozen 34-row subject queue.
+Important:
+**these proportions are not representative prevalence, not an expected release yield, and not a quality score for the remaining 24 queue rows.**
 
-R1.3 is complete:
-- 65-row release-facing C0 register materialized;
-- all 36 planned C1 rows received neutral identity/time/frame QA;
-- 34 rows are research-ready;
-- French Louisiana 1800 and Duchy of Bavaria 1800 are held without replacement.
+## Material corrections found by adversarial replay
 
-Frozen controls:
-- D-074 target frame;
-- D-075 subject-research queue;
-- Core Contract v1;
-- no target substitution.
+The replay caught four meaningful overreach risks after an already cautious first synthesis:
 
-## R1 ceilings — not quotas
+1. **Teotihuacan 500 CE** — earlier Moon Pyramid sacrifice evidence could not become selected-year 500 CE truth.
+2. **Shaolin 1000 CE** — earlier Shaolin estate evidence plus generic Buddhist-monastery slavery context could not be joined into a Shaolin-specific slavery claim.
+3. **Inuit Arctic 1800** — bounded eighteenth-century external enslavement could not become circumpolar/internal territorial practice or exact-1800 continuity.
+4. **Cahokia 1200 CE** — Mound 72 evidence is principally earlier than the anchor and slave status remains unestablished; C2 changed preliminary `disputed` to `inconclusive`.
 
-- MAX 120 C0;
-- MAX 36 C1;
-- MAX 12 C2.
+The Portuguese colonial aggregate also completed C2 by explicitly **refusing one territorial-practice state** for a dispersed, heterogeneous jurisdiction aggregate.
 
-Release may stop smaller.
+## What this checkpoint supports
 
-## Hard rules
+- Core Contract v1 survives first real research use **after material correction**.
+- selected-year temporal review is necessary;
+- evidence-locus / inference-extent review is necessary;
+- context evidence must remain separate from target evidence;
+- external/network relations must remain separate from territorial practice;
+- selective C2 remains useful;
+- the R1 adversarial replay floor must not be weakened.
 
-- v0.6.1 remains canonical until an explicit release decision;
-- candidate research release != independently reviewed/public release;
-- at least 50% of C1 gets adversarial replay;
-- all C2 gets adversarial replay;
-- no bulk automated research;
+## Current execution boundary
+
+**Do not start tranche 02 from #163.**
+
+#163 explicitly authorized only tranche 01 and stated that a next tranche does not follow automatically.
+
+The parent R1 programme (#159) remains active, but the next research tranche must be deliberately authorized from this checkpoint after reviewing whether:
+- Core v1 is sufficiently stable to continue;
+- the next tranche should be more ordinary/operational rather than another stress set;
+- review burden remains proportionate;
+- no methodological correction is required first.
+
+## Still unchanged
+
+- frozen R1 subject queue remains 34 rows;
+- French Louisiana 1800 and Duchy of Bavaria 1800 remain held without replacement;
+- no target substitution;
+- v0.6.1 remains canonical;
+- no production migration;
 - no bespoke Atlas/platform work;
-- features arise only from real R1 friction tickets;
-- C0 never means absence;
-- source/language/access limits remain visible.
+- no bulk automated research.
 
 ---
 
