@@ -112,6 +112,21 @@ A discovery run should leave durable evidence, a fixture/regression, a hypothesi
 
 Discovery does not automatically authorize implementation.
 
+## Precedents and pilots
+
+External research should be subtractive, not a backlog generator.
+
+For a strong precedent choose one explicit disposition:
+
+- **reuse** — use the existing solution;
+- **benchmark** — make it part of the stronger baseline;
+- **learn from** — borrow the useful method/control;
+- **remove from scope** — stop rebuilding what is already adequately solved.
+
+Before creating a permanent service, generic engine, new datastore or automation, ask whether the important uncertainty can be exposed with a manual comparison, fixture, spreadsheet, notebook, prompt or small script.
+
+A manual experiment may justify one technical experiment. A prototype may justify one next horizon. Nothing automatically justifies a platform.
+
 ## Reproducibility contract
 
 Once a run produces meaningful analytical/research output, it should be possible to identify, as applicable:
