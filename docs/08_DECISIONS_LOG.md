@@ -1157,3 +1157,40 @@ Do not infer a methodology success rate from the tranche.
 **Durable artifacts:**
 - `programmes/r1/c1_tranche_01_final.json`
 - `programmes/r1/12_C1_TRANCHE_01_ADVERSARIAL_REPLAY.md`
+
+
+## D-077 — Accept R1.5 tranche 02; apply Core v1 §19 full-replay trigger and enter midpoint review
+**Date:** 2026-09-24  
+**Status:** accepted R1 programme checkpoint decision
+
+**Decision:** Accept the final internally adversarially reviewed R1.5 ordinary operational tranche 02 and move R1 to its mandatory midpoint stop review.
+
+Apply the already-frozen Core Contract v1 §19 trigger conservatively: tranche 01 produced material release-safety corrections in 4/10 replayed C1 rows, above the 10% threshold. Remaining R1 candidate C1 work therefore receives **100% adversarial replay** unless a later explicit decision supersedes this.
+
+This is execution of Core Contract v1, not a new historical classification rule or ontology change.
+
+**Evidence:**
+- 6 frozen tranche-02 rows researched;
+- 6/6 internally adversarially replayed;
+- 1/1 earned C2 packet completed;
+- final outcome: 1 classified, 5 inconclusive, 0 disputed;
+- no target substitution;
+- no post-synthesis semantic release correction;
+- replay still corrected two source-dependency/provenance groupings (Lazica and Nālandā);
+- Mali C2 resolved Sākūra's status to an explicit possible servile/client-origin question rather than a secure slave-status or territorial-practice claim.
+
+**Decision consequences:**
+- Core Contract v1 remains frozen;
+- 100% C1 replay is the active R1 setting under §19;
+- 100% C2 replay remains required;
+- no schema/ontology/intensity-scale change;
+- no new Atlas/platform feature is earned by this tranche;
+- no target substitution;
+- v0.6.1 remains canonical;
+- tranche 03 is not authorized automatically;
+- the next R1 action is the mandatory midpoint stop review after 16 researched C1 rows.
+
+**Durable artifacts:**
+- `programmes/r1/c1_tranche_02_final.json`;
+- `programmes/r1/15_C1_TRANCHE_02_ADVERSARIAL_REPLAY.md`;
+- `tests/test_r1_c1_tranche02.py`.
