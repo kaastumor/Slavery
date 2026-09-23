@@ -544,3 +544,30 @@ Accepted specialist geometry still takes precedence over this baseline under D-0
 **Evidence:** pinned commit `ad28a691b7c07c1fca89d0e0636d324667d2a258`; exact source blob SHA-1 `cefab0f4b622e2e7fb3daf68d4f461f83991204c`; SHA-256 `d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370`; upstream README and `notebooks/map_functions.py`; exact-corpus diagnostic recorded in `validation/cliopatria_v0.2.0_semantics.json`; Bennett et al. (2025), DOI 10.1038/s41597-025-04516-9.
 
 **Consequences:** #119 must preserve the raw source timeline/hierarchy and #121 must implement this type-aware selected-year resolution. No raw source row becomes reviewed/published atlas geometry merely through ingestion.
+
+## D-060 — Claim kind is immutable and enforced at semantic subtype boundaries
+**Date:** 2026-09-23  
+**Status:** implemented integrity rule; no canonical historical release change
+
+**Decision:** `CLAIM.claim_kind_code` is immutable after claim creation, and every specialized claim/claimable relationship table must enforce that its referenced `claim_id` has the matching semantic claim kind.
+
+The enforced live mappings are:
+
+- `TERRITORIAL_PRACTICE_CLAIM` → `territorial_practice`
+- `LEGAL_EVENT` → `legal_event`
+- `ACTOR_ATTRIBUTE_CLAIM` → `actor_attribute`
+- `EXTERNAL_PARTICIPATION_CLAIM` → `external_participation`
+- evidence-bearing `SPATIAL_RELATION` → `spatial_relation`
+- `VOYAGE_OWNER` → `voyage_owner`
+- `VOYAGE_FINANCE` → `voyage_finance`
+- `VOYAGE_STOP` → `voyage_stop`
+
+Changing the semantic kind of an existing claim requires a new/superseding claim rather than an in-place kind mutation. Nullable relationship `claim_id` fields remain nullable where the existing schema deliberately permits an unresolved/unclaimed relationship; when a claim ID is present its kind must match.
+
+This is a relational-integrity rule for the universal CLAIM architecture. It does **not** promote legacy P0–P4 or legacy `coverage_state` back into the post-M1 target ontology, does not derive one post-M1 dimension from another, and does not change canonical v0.6.1 historical meaning.
+
+**Evidence:** Before the production guard was installed, all 42 then-existing territorial-practice subtype rows were checked and had zero kind mismatches. Migration `0028_claim_kind_integrity` was applied to the connected PostgreSQL/PostGIS database on 2026-09-23; deliberate wrong-kind subtype insertion and claim-kind mutation were both rejected, and the repository regression test exercises both negative controls transactionally.
+
+**Reason:** A foreign key from a specialized table to `CLAIM` proves identity existence but not semantic compatibility. Without an additional guard, a `LEGAL_EVENT` could legally reference an `actor_attribute` claim ID, or an established claim could be mutated into another kind underneath existing subtype rows while all ordinary foreign keys remain valid. That failure mode would corrupt claim-specific provenance and make subtype meaning depend on application discipline rather than enforceable database integrity.
+
+**Consequences:** migration `0028_claim_kind_integrity.sql` and its regression test are part of the append-only database foundation. New specialized claim types must define and test their claim-kind boundary. Existing release/data semantics remain unchanged; M2 post-M1 semantic integration still proceeds under D-058 rather than being inferred from this guard.
