@@ -16,16 +16,18 @@ A place such as a port must not carry one timeless political owner. Historical c
 
 ## Historical boundary backbone
 
-Global fallback baseline: Cliopatria / Seshat Global History Databank historical political polygons, using valid date ranges and source identifiers where available.
+Global fallback baseline: the complete pinned Cliopatria / Seshat Global History Databank corpus, preserved source-native and resolved for the selected year under D-059.
 
 Cliopatria is not automatically preferred over a stronger specialist geometry. Under D-055, a specialist geometry can take precedence for a bounded entity/year only after explicit source, semantic, temporal, licensing and geometry review.
+
+Raw Cliopatria availability is not geometry approval. POLITY and RELATION rows remain distinct, hierarchy/composition is preserved, and source gaps are not automatically interpolated.
 
 ## Geometry resolver hierarchy
 
 For a selected year:
 
 1. Explicitly accepted specialist historical geometry with exact/defensible temporal fit for the target
-2. Exact Cliopatria polygon valid for that year as the open global baseline
+2. Resolved Cliopatria POLITY geometry valid for that selected year under D-059 as the open global baseline; RELATION composites are not default polity geometries
 3. Nearest other defensible historical geometry, marked `approximate_historical`
 4. Modern geographic proxy, marked `modern_proxy`
 5. No political polygon; retain neutral world land only and mark geometry unresolved
@@ -73,7 +75,30 @@ A claim and a geometry must overlap in time to be joined.
 
 Do not attach a historical claim to a later nation-state solely because the modern location falls within it.
 
-Internally, temporal joins should use the project historical-year convention defined in `04_DATA_MODEL.md` and `11_SYSTEM_ARCHITECTURE.md`.
+Internally, temporal joins use the project astronomical historical-year convention defined in `04_DATA_MODEL.md` and `11_SYSTEM_ARCHITECTURE.md`.
+
+### Cliopatria source-year translation
+
+Pinned Cliopatria records use inclusive source-native integer ranges, with negative integers labelled BCE and positive integers labelled CE. The source corpus also contains six rows ending at source integer 0, while upstream prose does not assign 0 a historical BCE/CE label.
+
+For a selected atlas year `y`:
+
+- if `y <= 0`, query Cliopatria source year `y - 1`;
+- if `y >= 1`, query Cliopatria source year `y`.
+
+Thus atlas internal 0 (1 BCE) queries source -1, while atlas 1 (1 CE) queries source 1. Source integer 0 is preserved raw but has no independent atlas historical-year equivalent.
+
+Do not normalize away source zero during ingestion, and do not shift positive CE years.
+
+### Cliopatria composite hierarchy
+
+Preserve `MemberOf` and `Components` raw strings and parsed semicolon-delimited lists.
+
+The default atlas polity baseline treats `Type=POLITY` as polity candidates. A constituent polity is suppressed only when its active parent composite is itself `Type=POLITY`; membership in a `Type=RELATION` composite does not suppress the constituent polity. Nested POLITY composites are resolved recursively. Unresolved parent identity/type fails open to the constituent candidate plus an explicit unresolved flag rather than guessed suppression.
+
+`RELATION` rows remain relationship/composite records and may support a separate optional relationship layer; they are not default polity geometries.
+
+Pinned-corpus details and evidence are in `30_M2_CLIOPATRIA_SEMANTICS.md` and `validation/cliopatria_v0.2.0_semantics.json`.
 
 ## Visual separation
 
@@ -81,7 +106,7 @@ Conceptual layers:
 
 - neutral land base
 - historical polity/other geometry
-- territorial practice fill P0–P4
+- territorial-practice representation from the reviewed post-M1 dimensions; the current legacy preview may still display P0–P4 for release compatibility
 - legal status overlay
 - research coverage / uncertainty overlay
 - participation networks: voyages, ports, actors, companies, finance
