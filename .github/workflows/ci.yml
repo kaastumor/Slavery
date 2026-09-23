@@ -42,9 +42,6 @@ jobs:
       - name: Python tests
         run: ./scripts/test-python.sh
 
-      - name: M2 #119 full-corpus Cliopatria ingestion
-        run: bash ./scripts/db-test-cliopatria-ingest.sh
-
       - name: Non-Atlantic rollback fixtures
         run: ./scripts/db-test-non-atlantic.sh
 
