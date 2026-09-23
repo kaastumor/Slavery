@@ -9,49 +9,78 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE R1 / MIDPOINT DECISION — one final three-row C1 closure tranche authorized
+# ACTIVE R1 / RELEASE QC — subject research stopped at 19 C1 rows
 
 **Parent programme:** #159
-**Midpoint review:** #168
-**Decision:** D-078
-**Current stage:** **R1 midpoint closure — freeze final 3-row subject tranche before research**
+**Completed closing tranche:** #170
+**Decisions:** D-078, D-079
+**Current stage:** **R1.6 — release-level QC and candidate-release assembly**
 
-Midpoint disposition: **CONTINUE ONCE**, then stop subject expansion and enter release QC unless a new stop condition appears.
+The midpoint-authorized final three-row subject tranche is complete.
 
-## Why exactly three rows
+## Frozen subject-research result
 
-After tranches 01–02, 16 C1 rows are researched. The researched polity subset covers sectors A/C/D/F but not B/E.
+Across all R1 C1 tranches:
+- **19** researched C1 rows;
+- **5** classified / bounded-supported;
+- **14** inconclusive for the exact frozen target/year/frame question;
+- **0** final disputed;
+- **4** completed C2 packets;
+- **19/19** internally adversarially replayed;
+- **0** target substitutions.
 
-Stopping now would require a narrower non-systematic scope. Adding only B+E would leave sector C above the 25% polity-sector balance ceiling.
+These counts are not prevalence and are not completion percentages against the 36-row ceiling.
 
-The minimum neutral closure from the already frozen queue is:
-- Tamna — 500 CE — sector F — first remaining validated new-polity row by queue order;
-- Pandya Empire — 1300 CE — sector E — validated legacy promotion;
-- Chimu Empire — 1300 CE — sector B — validated legacy promotion.
+The remaining frozen queue rows stay unresearched/planned research-state information. They do not imply historical absence.
 
-Projected researched polity balance after those rows:
-A2 / B1 / C3 / D2 / E1 / F3 — maximum share **25%**.
+## Final closure tranche
 
-Selection is based only on frozen target/QA/balance metadata, not subject evidence.
+- Tamna 500 CE — inconclusive; peninsula-wide Korean slavery is context, not Tamna evidence.
+- Pandya Empire 1300 CE — inconclusive after C2; strong contemporary Tamil slavery evidence did not safely reproduce target-polity synchronization.
+- Chimu Empire 1300 CE — bounded-supported for state labor service/corvée only; not chattel slavery or universal household coercion.
 
-## Hard rules for the closing tranche
+Legacy state was not sticky:
+- Pandya legacy positive did not survive Core-v1 rereview;
+- Chimú legacy inconclusive became a narrower positive corvée/labor-service claim.
 
-- freeze exact membership before subject research;
-- no substitution;
-- Core Contract v1 unchanged;
-- 100% C1 adversarial replay under §19;
-- 100% C2 replay;
-- no schema/ontology/intensity change;
-- no feature/platform work;
-- v0.6.1 unchanged.
+## Balance state
 
-## After the closing tranche
+Researched polity sectors after the closing tranche:
+- A: 2
+- B: 1
+- C: 3
+- D: 2
+- E: 1
+- F: 3
 
-Do **not** open another subject-research tranche merely because queue rows remain.
+12 researched polity rows; maximum sector share = **25%**.
 
-Move to R1.6 release-level QC, source-dependency/geometry/reconstructibility checks and candidate-release assembly unless the closing tranche creates a hold/rework condition.
+The midpoint balance gap is therefore closed without expanding toward the 36-row ceiling.
 
-R1 subject research should therefore stop at **19 C1 rows maximum**, not the 36-row ceiling.
+## Subject-research stop
+
+**Do not start another C1 subject-research tranche.**
+
+R1.6 should now:
+- verify the 19-row candidate package against Core Contract v1;
+- audit exact source/version recoverability and dependency groups;
+- audit language/access and coverage-state declarations;
+- verify all C2 packets are resolved and replayed;
+- verify selected-year / target / dimension guards globally;
+- verify frozen target-frame and balance invariants;
+- run geometry/Atlas-release checks without letting geometry create historical truth;
+- assemble candidate release manifest/changelog/QC/unresolved issues;
+- keep candidate research release separate from independently reviewed/public/canonical release.
+
+No new subject research is justified merely to fill remaining queue rows.
+
+## Still unchanged
+
+- v0.6.1 remains canonical;
+- no production migration;
+- no schema/ontology/intensity-scale change;
+- no bespoke Atlas/platform feature is earned;
+- no target substitution.
 
 ---
 
