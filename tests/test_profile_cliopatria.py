@@ -95,6 +95,9 @@ class CliopatriaProfileTests(unittest.TestCase):
         self.assertEqual(d["membership"]["rows_with_member_of"], 3)
         self.assertEqual(d["membership"]["relation_rows_with_components"], 1)
         self.assertEqual(d["relation_name_parenthesized_count"], 1)
+        self.assertEqual(d["member_of_arity_counts"], {1: 3})
+        self.assertEqual(d["component_arity_counts"], {2: 1})
+        self.assertEqual(d["nested_composite_samples"], [])
 
     def test_semantic_diagnostics_surface_interval_overlap_and_gap(self):
         d = semantic_diagnostics(semantic_features())
