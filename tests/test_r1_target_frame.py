@@ -47,8 +47,9 @@ class R1FrameTests(unittest.TestCase):
                 for x in items[:2]:prev.append({"id":x[0],"tier":"C1"})
             (root/"experiments/falsification-atlas/07_NONPOLITY_SELECTION.json").write_text(json.dumps(prev))
             full=[]
-            for i in range(8):full.append({"cell_id":f"P{i}","target_label":f"P{i}","anchor_year":500,"coverage_outcome":"bounded_supported"})
-            for i in range(8):full.append({"cell_id":f"I{i}","target_label":f"I{i}","anchor_year":500,"coverage_outcome":"researched_inconclusive"})
+            sectors=list("ABCDEF")
+            for i in range(8):full.append({"cell_id":f"P{i}","target_label":f"P{i}","anchor_year":500,"coverage_outcome":"bounded_supported","source_sample":{"sampling_sector":sectors[i%6]}})
+            for i in range(8):full.append({"cell_id":f"I{i}","target_label":f"I{i}","anchor_year":500,"coverage_outcome":"researched_inconclusive","source_sample":{"sampling_sector":sectors[(i+2)%6]}})
             (root/"experiments/coverage-scale/full_37.json").write_text(json.dumps(full))
             np=[{"target_id":f"N{i}","target_label":f"N{i}","anchor_year":1000,"coverage_outcome":"bounded_supported"} for i in range(8)]
             (root/"experiments/falsification-atlas/11_ARM_B_C1.json").write_text(json.dumps({"rows":np}))
