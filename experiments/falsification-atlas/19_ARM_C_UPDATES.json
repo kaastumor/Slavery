@@ -1,0 +1,110 @@
+{
+  "experiment": "COV-004",
+  "arm": "C",
+  "cutoff": "2015-12-31",
+  "events": [
+    {
+      "id": "-500:C",
+      "label": "Sabaeans",
+      "later_source_found": true,
+      "update_class": "changes_evidence_strength_and_qualifies",
+      "source": {
+        "title": "Slavery in First Millennium Arabia: Epigraphy and the Qurʾān",
+        "author": "Valentina A. Grasso",
+        "year": 2023,
+        "url": "https://doi.org/10.1515/mill-2023-0005"
+      },
+      "old_state": "researched_inconclusive",
+      "new_state": "bounded_supported",
+      "update": "Post-2015 epigraphic synthesis directly engages pre-Islamic South Arabian inscriptions. It cautions that ʿbd can be ambiguous, while evidence of captives and people bought/sold as personal property establishes enslavement in first-millennium South Arabia. For the atlas row this is sufficient to move from generic regional plausibility to a bounded Sabaean/South-Arabian support state, without any prevalence claim.",
+      "affected_queries": [
+        "practice/evidence state",
+        "terminology/category caution",
+        "source recovery"
+      ],
+      "review_scope": [
+        "-500:C"
+      ]
+    },
+    {
+      "id": "1300:F",
+      "label": "Chámpa",
+      "later_source_found": true,
+      "update_class": "corroborates_and_qualifies",
+      "source": {
+        "title": "Slavery in East Asia",
+        "author": "Don J. Wyatt",
+        "year": 2022,
+        "url": "https://doi.org/10.1017/9781009007009"
+      },
+      "old_state": "bounded_supported",
+      "new_state": "bounded_supported",
+      "update": "Later synthesis independently places Chams within medieval East-Asian captivity/enslavement histories and stresses the unevenness of early evidence. It corroborates the slavery/captivity context but does not expand the 1300 territorial-prevalence claim.",
+      "affected_queries": [
+        "source recovery",
+        "category/temporal caution"
+      ],
+      "review_scope": [
+        "1300:F"
+      ]
+    },
+    {
+      "id": "500:C",
+      "label": "Alodia",
+      "later_source_found": false,
+      "update_class": "no_later_source_accepted",
+      "old_state": "researched_inconclusive",
+      "new_state": "researched_inconclusive",
+      "update": "Bounded 2016–2026 search did not produce a credible genuinely new target-specific source sufficient to alter the frozen 2015 state.",
+      "affected_queries": [],
+      "review_scope": []
+    },
+    {
+      "id": "COV3:-500:E:r6",
+      "label": "Janapada of Aśmaka",
+      "later_source_found": false,
+      "update_class": "no_later_source_accepted",
+      "old_state": "researched_inconclusive",
+      "new_state": "researched_inconclusive",
+      "update": "No credible genuinely new Aśmaka-specific 2016–2026 slavery/dependency source was accepted within the bounded search.",
+      "affected_queries": [],
+      "review_scope": []
+    },
+    {
+      "id": "COV3:-500:F:r6",
+      "label": "Cao",
+      "later_source_found": true,
+      "update_class": "corroborates_and_qualifies",
+      "source": {
+        "title": "Slavery and Forced Labour in Early China and the Roman World",
+        "author": "Walter Scheidel",
+        "year": 2017,
+        "url": "https://doi.org/10.1017/9781108115865.007"
+      },
+      "old_state": "researched_inconclusive",
+      "new_state": "researched_inconclusive",
+      "update": "Later comparative scholarship strengthens the broader early-China slavery/forced-labour context but remains non-Cao-specific and does not overcome the target-level abstention.",
+      "affected_queries": [
+        "source recovery",
+        "regional context"
+      ],
+      "review_scope": [
+        "COV3:-500:F:r6"
+      ]
+    },
+    {
+      "id": "-500:E",
+      "label": "Janapada of Vatsa",
+      "later_source_found": false,
+      "update_class": "no_later_source_accepted",
+      "old_state": "researched_inconclusive",
+      "new_state": "researched_inconclusive",
+      "update": "No credible genuinely new Vatsa-specific 2016–2026 slavery/dependency source was accepted within the bounded target search.",
+      "affected_queries": [],
+      "review_scope": []
+    }
+  ],
+  "real_later_evidence_events": 3,
+  "gate_minimum": 2,
+  "gate_result": "PASS"
+}
