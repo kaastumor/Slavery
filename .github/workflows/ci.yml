@@ -79,6 +79,9 @@ jobs:
       - name: M2 post-M1 claim semantics prototype
         run: bash ./scripts/db-test-m2-claim-semantics.sh
 
+      - name: M2 Cliopatria selected-year resolver
+        run: bash ./scripts/db-test-cliopatria-resolver.sh
+
       - name: Compose logs on failure
         if: failure()
         run: docker compose logs --no-color db
