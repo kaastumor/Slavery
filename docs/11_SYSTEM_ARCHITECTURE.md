@@ -394,29 +394,23 @@ Operational rules:
 - before a production schema/render change, verify the current public API and site are healthy;
 - after the change, verify HTTP availability, payload sanity and latency before treating the change as complete;
 - the frontend aborts an API load after 12 seconds and exposes a retry action rather than showing an infinite loading state;
-- GitHub Actions runs an external public health check every 15 minutes, validating API HTTP status, latency, release metadata, non-empty place data, cartography metadata and GitHub Pages availability;
+- GitHub Actions runs a **weekly** external public health check for the non-canonical preview, validating API HTTP status, latency, release metadata, non-empty place data, cartography metadata and GitHub Pages availability;
 - monitor failures create/update a GitHub incident issue and successful recovery closes it automatically.
 
-A future publication hardening step should additionally materialize each immutable published release as a static API snapshot/fallback so a transient database outage cannot make an already-published historical release unavailable.
+D-052 already materializes the published preview as a deployment-bound static API snapshot/fallback, so a transient database outage does not erase the already-published demonstration.
 
-## Automatic recovery
+## Recovery and availability posture
 
-The 15-minute external monitor is paired with a guarded self-heal workflow.
+HC-003 / D-062 retires automatic Supabase project restart.
 
-When the monitor fails, the self-heal workflow:
+The current public preview is non-canonical and has no demonstrated user-critical availability requirement. Availability therefore uses:
 
-1. probes the public API independently;
-2. waits 120 seconds and confirms the failure;
-3. only classifies timeouts, HTTP 5xx responses, or severe latency as restart candidates;
-4. verifies the Supabase project control-plane state is `ACTIVE_HEALTHY`;
-5. enforces a two-hour restart cooldown using the open incident issue;
-6. calls the Supabase Management API project-restart endpoint;
-7. polls the public API for up to ten minutes;
-8. records success or escalation in the incident.
+1. weekly liveness monitoring;
+2. the checksummed static fallback for already-published preview state;
+3. explicit/manual investigation for persistent live API or database failure;
+4. no automatic cloud-project restart from GitHub Actions.
 
-It does not restart for HTTP 4xx responses, malformed release payloads, or other application/data defects where a project restart is unlikely to be corrective.
-
-The restart credential is a dedicated scoped Supabase Management API token stored as the GitHub Actions secret `SUPABASE_MANAGEMENT_TOKEN`. Do not place it in source, workflow literals, repository variables, or public logs.
+A future user-critical service may reintroduce stronger recovery automation only after the service-level need and credential/protection boundary are demonstrated.
 
 ## Pipeline separation and artifact promotion
 
@@ -430,12 +424,12 @@ Implementation rules:
 - releases compose reviewed claims and approved geometry rather than regenerating them;
 - staging verifies the same immutable release/render artifacts intended for production;
 - production receives only bounded migrations and approved artifacts/materializations;
-- availability monitoring and self-healing stay independent from build/research workflows;
+- availability monitoring stays independent from build/research workflows;
 - repeated deterministic pipeline logic should live in scripts or reusable workflows rather than duplicated top-level workflow files.
 
-The target GitHub workflow surface is intentionally small: foundation CI, research-case CI, geometry build/QC, release/promotion, availability monitoring and self-heal. Experimental cartography workflows may coexist temporarily while #27 is being resolved, but they are not the long-term workflow topology.
+The target GitHub workflow surface is intentionally small: foundation CI, research-case CI, bounded geometry build/review/promotion, release validation/deployment, web validation/deployment and low-cadence availability monitoring. Completed experiments and recovery machinery without a current need should be retired rather than retained.
 
-GitHub `staging` and `production` deployment environments should become the credential/protection boundaries for promotion jobs. A workflow run passing CI is not itself sufficient to mark historical research as reviewed or geometry as visually accepted.
+GitHub protected deployment environments remain the preferred credential/protection boundary if a future approved production-mutation horizon requires them. Until then, production geometry promotion is explicit/manual and #43 remains parked. A workflow run passing CI is not itself sufficient to mark historical research as reviewed or geometry as visually accepted.
 
 
 ## Client Data API security boundary
