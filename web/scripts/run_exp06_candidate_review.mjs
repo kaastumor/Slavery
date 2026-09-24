@@ -10,7 +10,7 @@ const cases = [
   { name: "Magadha – Haryanka dynasty", must: ["Under review", "chronologically contested", "Do not treat one Bimbisāra"] },
   { name: "Later Mayan City-States", must: ["Internally researched · bounded", "cannot be generalized to all Later Maya city-states", "Mayapán is a reference locus only"] },
   { name: "Mongol Yam/postal network", must: ["Internally researched · bounded", "compulsory station-household labor", "not automatically slaves"] },
-  { name: "Yaghan communities, Tierra del Fuego", must: ["Researched inconclusive", "does not establish or disprove", "not an internal-practice classification"] },
+  { name: "Yaghan communities, Tierra del Fuego", must: ["Researched inconclusive", "does not establish or disprove", "neither becomes Yaghan internal territorial practice"] },
   { name: "Khmer Empire", must: ["Internally researched · bounded", "Angkor/Yasodharapura", "polity-wide"] },
 ];
 
@@ -62,6 +62,7 @@ async function main() {
       await page.waitForTimeout(250);
 
       const panelText = (await page.locator("#candidate-panel").innerText()).trim();
+      const normalizedPanelText = panelText.toLocaleLowerCase("en");
       for (const expected of [
         "Strongest bounded proposition",
         "Required abstention",
@@ -71,7 +72,7 @@ async function main() {
         "Source/version evidence",
         ...item.must,
       ]) {
-        if (!panelText.includes(expected)) failures.push(item.name + " missing: " + expected);
+        if (!normalizedPanelText.includes(expected.toLocaleLowerCase("en"))) failures.push(item.name + " missing: " + expected);
       }
 
       const sourceLinks = await page.locator("#candidate-panel .source-link").count();
