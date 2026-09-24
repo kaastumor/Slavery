@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 32415)
-Total output lines: 1704
-
 # Decisions Log
 
 This file records durable methodological choices. Add a dated entry whenever a future change affects ontology, classification, geography, attribution or source policy.
@@ -295,7 +292,618 @@ Existing explicitly approved/published render artifacts, including the visually 
 
 **Reason:** Representative testing found 10 km to be the least-distorting tested tolerance overall, while larger tolerances did not produce monotonic improvement. Baekje also demonstrates that changing tolerance does not rescue every source geometry: it remains a material outlier across the tested matrix. A conservative fixed baseline plus quarantine/fallback is more reproducible than selecting whichever tolerance happens to make an individual geometry look acceptable.
 
-## D-050 — Promote external render geometry only …12415 tokens truncated…tion/inference metadata.
+## D-050 — Promote external render geometry only from an immutable acceptance registry
+**Date:** 2026-09-20  
+**Decision:** Promotion of externally generated render geometry is a separate, explicit step from candidate generation. A promotion must consume the **exact immutable artifact that passed automated QC and visual review**; production must not recompute the geometry.
+
+Each promotion batch is represented by a checked-in acceptance registry that records:
+
+- geometry-build run/artifact identity and Git SHA;
+- artifact-manifest and candidate/QC file SHA-256 values;
+- canonical land-fabric identity/checksum and render parameters;
+- the browser-review run used for cartographic acceptance;
+- per-geometry automated-QC state;
+- per-geometry cartographic visual disposition;
+- per-geometry semantic-scope disposition;
+- the requested action: `promote`, `quarantine`, or `preserve_existing_live`.
+
+The promotion tool must verify all recorded checksums before it can produce a database-ready plan. `promote` is allowed only when automated QC passed, cartographic review is accepted, semantic scope is explicitly accepted, the source geometry exists in reviewed state, the active land fabric matches, and the target render-cache slot is not already occupied unexpectedly. Quarantined candidates are never inserted. Existing explicitly accepted live renders are preserved unless a later registry deliberately supersedes them.
+
+The registry, together with the immutable build artifact and Git history, is the provenance record for the promoted derived geometry. The database render cache is a serving materialization, not the sole provenance store. This avoids adding premature per-row provenance columns while the broader release/provenance model under #43/#4 is still being designed.
+
+**Reason:** issue #27 needs a safe route from reviewed CI geometry to production without violating D-046's build-once/promote-unchanged rule. A versioned acceptance registry makes the human cartographic and semantic decisions explicit, prevents a green CI run from becoming an implicit publication decision, and allows the serving cache to remain replaceable/reconstructible from immutable inputs.
+
+
+
+## D-051 — Internal research schemas are not a client Data API
+**Date:** 2026-09-20  
+**Decision:** The `atlas`, `audit`, `cartography` and `publish` PostgreSQL schemas are internal database boundaries, not direct browser/client Data API surfaces. Anonymous and authenticated client roles must not receive schema `USAGE` or table mutation/read privileges on those schemas merely to serve the public atlas. The current public browser consumes reviewed/released data through the `atlas-data` Edge Function, which queries the publication boundary server-side. If direct PostgREST access is introduced later, it must use a deliberately exposed API schema or other explicitly reviewed surface with least-privilege grants and RLS/policies appropriate to that public contract.
+
+RLS-disabled tables in an internal schema are therefore not, by themselves, evidence that those tables are publicly reachable. Security review must evaluate both PostgREST exposure and PostgreSQL grants. Defense in depth still requires explicit revokes/default-privilege controls so future migrations cannot accidentally make internal schemas client-accessible.
+
+**Reason:** Supabase's Data API security model has two gates: schema/object grants determine whether client roles can reach an object, and RLS controls which rows they may access once reachable. Production verification on 2026-09-20 found `anon` and `authenticated` have no `USAGE` on `atlas`, `audit`, `cartography` or `publish`, and no SELECT/INSERT/UPDATE/DELETE privileges across the 54 checked internal tables/views. The authoritative Supabase security advisor did not report an RLS-disabled-table exposure finding; its only current security lint was a mutable `search_path` on `atlas.make_year_range`. Keeping the public contract behind the Edge Function preserves the project's reviewed/published boundary and reduces accidental draft-data exposure.
+
+
+## D-052 — Every public deployment carries a checksummed static release snapshot fallback
+**Date:** 2026-09-20  
+**Decision:** Until the full staging/build-once release pipeline in #43/#4 is complete, every successful public web deployment must materialize the exact currently published `atlas-data` API payload as a checksummed static snapshot inside the same GitHub Pages deployment artifact. The browser remains API-first, but if the live API is unavailable, times out, or returns an unusable response, it may load that deployment-bound snapshot and must label the session as a static fallback.
+
+The snapshot build must:
+- fail closed if the current published API payload is unavailable or structurally invalid;
+- canonicalize the JSON payload before hashing/writing;
+- record release version, schema version, source Git revision, counts and SHA-256 in a snapshot manifest;
+- upload the snapshot as a retained CI artifact as well as embedding it in the Pages deployment;
+- never change the canonical historical data release or publish draft/unreviewed data;
+- never allow a failed snapshot build to replace the last known-good Pages deployment.
+
+This is an availability/recovery materialization, not yet the final release-promotion architecture. Future #43/#4 work must move snapshot creation earlier so the immutable release artifact is built once from approved release inputs and promoted unchanged through staging and production, rather than deriving the fallback from an already-live API.
+
+**Reason:** the public preview currently depends on a live database-backed Edge Function. A transient database/API outage should not make an already-published atlas state disappear. Embedding a validated static copy in the web deployment provides an immediate recoverable state while preserving the stronger build-once/promote-many target as a separate remaining requirement.
+
+
+## D-053 — Public serving uses an explicit release-channel pointer, not “latest published”
+**Date:** 2026-09-20  
+**Decision:** Public serving must select the active non-canonical preview through an explicit release-channel pointer rather than implicitly choosing the most recently created published manifest.
+
+The initial channel is `public_mvp_preview`. A channel row points to one existing published `audit.release_manifest.release_version`. Promotion and rollback are atomic pointer moves between already-published releases; they do not mutate historical release manifests, claim membership, geometry membership, or canonical data.
+
+Channel updates must:
+- verify the target release exists and is `published`;
+- verify the target release manifest `purpose` matches the channel;
+- support compare-and-set against an expected current release so concurrent/stale promotion attempts fail safely;
+- preserve the previous release as an immutable rollback target;
+- run public health verification after a production pointer move.
+
+The `atlas-data` Edge Function must resolve the public preview through this pointer. Absence or invalidity of the pointer is a serving error, not permission to silently fall back to “latest published”.
+
+This release-channel pointer is a serving/promotion control, not full exact historical release membership. Issue #4 still governs reconstructible release-object membership and immutable release bundles.
+
+**Reason:** selecting `order by created_at desc limit 1` makes publication order an implicit deployment mechanism. A newly published manifest can silently become public, and rollback requires changing release state. An explicit pointer makes promotion intentional, auditable, reversible, and separable from immutable release contents while preserving D-046’s staged promotion model.
+
+## D-054 — Published releases use typed membership plus an immutable full-state bundle
+**Date:** 2026-09-20  
+**Decision:** Exact release reconstruction uses a hybrid model.
+
+1. Typed `audit.release_*` membership tables record which claims, actors, spatial entities, geometries, voyages, coverage assessments and source versions belong to a release.
+2. New captured-at-release membership rows carry an object SHA-256 for the exact serialized object state used to build the release.
+3. A release also carries one or more checksummed immutable artifacts; the preservation-grade full-state bundle is the authority for reconstructing historical row values after canonical rows change.
+4. Membership and artifact digests use canonical UTF-8 JSON: keys sorted, compact separators, JSON null preserved, identifiers normalized as strings, and arrays explicitly sorted where their semantics are set-like. Geometry state is represented in the bundle by SRID plus hexadecimal EWKB rather than by a presentation-oriented GeoJSON serialization.
+5. `captured_at_release` means the object digest was produced from the immutable bundle before publication. `legacy_membership_backfill` means only historical membership could be reconstructed from an older manifest; it must not be presented as proof of exact historical row bytes.
+6. Once a release is `published`, its typed membership is immutable. A revised release gets a new release version; it does not mutate the old membership.
+7. Current serving may use the explicit D-053 release channel plus typed membership. A future exact historical-release API must serve the immutable bundle (or data verified byte-equivalent to it), not mutable current publish views.
+8. Future release promotion must build and test the bundle/membership first, then apply that exact artifact to production without recomputing membership.
+
+Existing `mvp-preview-ancient-v1` and `mvp-preview-ancient-v2` are backfilled from their stored manifest ID arrays with `legacy_membership_backfill` status. They remain useful historical membership records, but the project does not claim exact pre-existing row-state reconstruction for them unless a contemporaneous preserved bundle is independently available.
+
+**Reason:** Typed membership alone answers “which IDs belonged to release X” but cannot reconstruct a historical row after that row is edited. An export bundle alone preserves bytes but lacks relational integrity/queryability. The hybrid model provides both while keeping legacy evidence limits explicit and supports D-046 build-once/promote-unchanged semantics.
+
+
+## D-055 — Historical geometry precedence is case-specific; accepted specialist geometry may supersede the global baseline
+**Date:** 2026-09-20  
+**Decision:** The atlas separates a **global fallback baseline** from **case-specific source precedence**.
+
+For a target spatial entity and year/interval, the resolver order is:
+
+1. an exact or period-matched specialist historical geometry that has been explicitly accepted for that bounded case;
+2. the exact Cliopatria polygon valid for the target year as the open global baseline;
+3. another defensible historical geometry, clearly marked `approximate_historical`;
+4. a defensible modern geographic proxy, clearly marked `modern_proxy`;
+5. unresolved geometry, with neutral world land still visible.
+
+This supersedes D-010 only in the ordering of the first two choices. The rest of the five-step fallback principle remains unchanged.
+
+“Specialist” is not a permanent label applied to an entire dataset. Precedence belongs to a specific source version, feature/geometry, target identity and temporal interval. Before a specialist candidate can replace the baseline it must pass a bounded review covering:
+
+- identity and semantic scope: the geometry represents the same historical target the atlas intends to map;
+- temporal fit and uncertainty: the source is valid for the target year/interval without unsupported interpolation;
+- source provenance: exact source version, native identifier, relevant citations/lineage and raw values are retained;
+- redistribution/license compatibility for the intended published use;
+- geometric validity and topology;
+- explicit source-vs-source comparison showing a defensible improvement for the bounded case;
+- historical/semantic review plus the normal cartographic QC/visual acceptance required for any promoted render artifact.
+
+Greater vertex count, apparent smoothness, archive density, popularity, newer publication date or broader temporal resolution do not establish precedence by themselves.
+
+Each canonical `GEOMETRY` record has one historical geometry source lineage. Do not silently splice coordinates from multiple historical source families into a record attributed to only one source. If a genuinely composite historical geometry is ever necessary, it must be registered as a new derived source/version with all contributing sources, transformation methodology, uncertainty and license compatibility preserved explicitly.
+
+Natural Earth coastline/land-fabric operations are not historical-source mixing: they remain a render-only physical-topology transformation under D-037/D-038/D-044 and do not alter or replace the historical source record.
+
+Accepted/live geometry is not retroactively replaced merely because a new candidate source exists. Replacement requires a new bounded acceptance decision; quarantine/fallback is a valid result.
+
+**Current source-family guidance:** Cliopatria remains the global deep-time baseline. AWMC may generate preferred candidates for its explicit Greco-Roman snapshots. CHGIS V6 and CShapes 2.0 are strong internal comparators but currently have public-redistribution constraints under the atlas distribution model. OpenHistoricalMap is feature/version-specific supplementary evidence rather than a globally preferred family. Confoederatio Atlas/Naissance remains an experimental comparator until feature/keyframe provenance is strong enough for claim-specific review. These examples are guidance from the current source survey, not hard-coded permanent routing rules.
+
+**Reason:** The previous D-010 wording placed an exact Cliopatria polygon before a better specialist geometry, which made specialist replacement logically unreachable whenever Cliopatria had coverage. The completed source survey also shows why a simple region-to-dataset lookup is unsafe: specialist datasets differ in date coverage, entity semantics, licensing, feature-level provenance and temporal uncertainty. Case-specific precedence preserves a stable global fallback while allowing demonstrably better historical geometry without silently trading reproducibility for visual detail.
+
+
+## D-056 — Repository operating model is canonical; autonomous work is issue-driven and gate-bound
+**Date:** 2026-09-22  
+**Decision:** GitHub repository `kaastumor/Slavery` is the canonical source for current project implementation and operating state. The repository-root `BACKLOG.md` remains the single execution queue; GitHub issues hold durable task evidence; this Decisions Log remains the durable decision record. A small operating layer defines the charter, way of working, assumptions/risks/value/health state, and the scheduled-worker runbook.
+
+Scheduled autonomous work is serial. It resumes an unfinished `auto/*` PR before selecting new work, otherwise chooses exactly one highest-priority eligible `AUTO READY —` issue. It may not skip gates or create a next gate merely because the current queue is empty. Gate-boundary adversarial and Project Health Check issues are dependency-gated.
+
+**Alternatives considered:** a separate project board/roadmap/risk system; a free-running worker that interprets the backlog broadly; keeping operational behavior only inside the scheduled-task prompt.
+
+**Reason:** the repository already has adequate backlog, decision, QC and issue structures. Duplicating them would create drift. Versioning the worker contract beside the project makes automation behavior auditable and lets newer repository decisions override stale scheduled prompts.
+
+**Consequences:** governance should remain deliberately small and may be deleted/simplified when it stops preventing real failure. Green CI is necessary but not evidence that an idea or analysis is correct.
+
+## D-057 — M1 methodology hardening precedes the next large-scale evidence expansion
+**Date:** 2026-09-22  
+**Decision:** After the working cartography/release/UI foundation and the 2026-09-22 adversarial review, the next substantive gate is M1 (#100): pressure-test the semantics that can create false equivalence or false temporal/spatial precision before another large-scale evidence expansion.
+
+M1 does not invalidate the canonical v0.6.1 release or the working public preview. Current P0–P4 remains backward-compatible until a replacement/compatibility model survives the gate. The gate must use both synthetic adversarial fixtures and real atlas cases. The complete Cliopatria baseline may be profiled as raw geography infrastructure, but raw ingestion does not promote geometry or historical claims.
+
+The gate ends with an integrated adversarial review followed by a Project Health Check that explicitly chooses continue, redirect or stop.
+
+**Alternatives considered:** immediately resume broad research ingestion; immediately replace P0–P4; freeze the working project for a wholesale ontology rewrite.
+
+**Reason:** the current stack already demonstrates real operational value. The strongest unresolved risk is analytical overclaiming at scale, so the smallest useful next step is discriminating semantic tests rather than more infrastructure or more records.
+
+
+## D-058 — Post-M1 territorial-practice semantics become the canonical target model
+**Date:** 2026-09-23  
+**Status:** accepted target semantics; relational implementation and release migration remain M2 work
+
+**Decision:** The corrected M1 v2 semantic structure is promoted from experiment to the canonical **target methodology/data model** for new integration work. This does not mutate canonical historical release v0.6.1, the current public preview, or the live PostgreSQL schema.
+
+The target model keeps the existing universal CLAIM/provenance/release architecture and introduces only the separations demonstrated necessary by M1:
+
+1. **Evidence package**
+   - attestation pattern is separate from interpretive basis;
+   - source/document count does not prove independence.
+
+2. **Historical characterization**
+   - occurrence pattern, institutionalization, prevalence scope and structural significance are independent dimensions;
+   - one dimension must not be mechanically inferred from another.
+
+3. **Research/epistemic state**
+   - research stage is workflow progress;
+   - classification outcome is the result of synthesis;
+   - review_complete may coexist with disputed or inconclusive.
+
+4. **Assertion form and practice concepts**
+   - bounded event/process assertions are distinct from enduring practice/status assertions;
+   - practice concepts are faceted and may coexist across status, function, property/legal, transmission and process dimensions;
+   - M1 does not establish an exhaustive final controlled vocabulary.
+
+5. **Time**
+   - outer query/legacy bounds are not sufficient selected-year truth;
+   - applicability semantics are separate from temporal precision/certainty;
+   - approximation or broad dating does not itself imply continuity.
+
+6. **Space**
+   - evidence locus is separate from reviewed inference extent;
+   - a broader inference extent requires an explicit reviewed basis/rationale;
+   - geometry availability or containment cannot create historical generalization.
+
+7. **Legacy compatibility**
+   - P0–P4 and legacy coverage_state remain available to reproduce and interpret historical releases;
+   - they are not the target universal comparative ontology;
+   - no post-M1 dimension may be backfilled from legacy P-level alone;
+   - no new P-level may be mechanically derived from the post-M1 dimensions;
+   - inconclusive does not imply P0.
+
+**Alternatives considered:**
+- keep P0–P4/coverage_state as the primary model and improve wording only — rejected by M1 because wording cannot fix query truth or simultaneous categories;
+- replace the entire claim/provenance architecture — rejected because it survived the adversarial gate;
+- immediately implement a large final ontology/schema — rejected as premature; only the proven structural separations are promoted;
+- probabilistic temporal/spatial modeling — parked; the evidence does not justify probability distributions.
+
+**Consequences:** docs/02_METHOD_AND_ONTOLOGY.md, docs/04_DATA_MODEL.md and docs/schema_draft.yaml define the post-M1 target. The schema draft advances to draft-0.11 and remains a target contract, not proof of live implementation. M2 must test the relational form in disposable PostGIS before any production apply or new canonical historical release. Existing v0.6.1/P-level semantics remain immutable historical release meaning.
+
+
+## D-059 — Cliopatria source-time and composite semantics are preserved before atlas resolution
+**Date:** 2026-09-23  
+**Status:** accepted source-normalization/resolver rule for pinned Cliopatria v0.2.0; implementation remains M2 work
+
+**Decision:** The complete pinned Cliopatria corpus is a raw global geography baseline, but its source timeline and composite hierarchy are not flattened into atlas polity geometry.
+
+### Time
+
+Upstream defines `FromYear` / `ToYear` as inclusive, negative integers as BCE and positive integers as CE. The exact pinned corpus contains six POLITY rows ending at source integer `0`, each followed by the same polity beginning at `1`. The pinned original-map sequence near the era boundary jumps from `B105-14.PNG` to `C001-1.PNG`; upstream prose does not assign source `0` a historical BCE/CE label.
+
+Atlas selected-year lookup therefore translates its astronomical internal year `y` to the Cliopatria source query year as:
+
+- `y <= 0` → `y - 1`
+- `y >= 1` → `y`
+
+This maps atlas 1 BCE (0) to source -1 and atlas 1 CE (1) to source 1. Source integer 0 is preserved exactly in raw data but receives no independent atlas historical-year meaning and is never selected directly by a historical-year query.
+
+This is an atlas normalization rule derived from upstream's explicit BCE/CE labels plus the observed boundary structure; it is not a claim that Cliopatria itself explicitly defines year zero as a particular historical year.
+
+Source-native ranges remain intact in raw/staging storage. Same-name gaps remain gaps and are not automatically interpolated.
+
+### Composite hierarchy and RELATION
+
+Cliopatria `MemberOf` and `Components` are preserved raw and may additionally be parsed as semicolon-delimited lists. The pinned corpus contains nested composites and multiple memberships; the hierarchy must not be reduced to one parent.
+
+`RELATION` remains a distinct source type. v0.2.0 introduced it for a subset of Seshat-based supra-polity relations such as personal unions, vassalages, alliances and allegiances. RELATION composite geometry duplicates component geometry and must not be coerced into a normal atlas POLITY.
+
+For the default atlas Cliopatria polity baseline:
+
+1. select source rows active under the translated source year;
+2. treat active `Type=POLITY` rows as polity candidates;
+3. resolve active `MemberOf` parent composites;
+4. suppress a constituent POLITY only when an active parent composite resolves to `Type=POLITY`;
+5. membership in `Type=RELATION` does not suppress the constituent polity;
+6. nested POLITY composites resolve recursively to the highest active POLITY composite;
+7. RELATION rows remain separate relationship/composite evidence or an optional relation layer;
+8. unresolved parent identity/type is flagged rather than guessed.
+
+Accepted specialist geometry still takes precedence over this baseline under D-055.
+
+**Alternatives considered:**
+- map source integer 0 directly to atlas astronomical 0 — rejected because upstream explicitly labels negative magnitudes as BCE and this would create an off-by-one BCE interpretation;
+- shift all source years by one — rejected because positive CE labels are already direct;
+- rewrite raw source years during ingestion — rejected because it destroys source-native lineage and obscures the special zero;
+- use Cliopatria's top-level display rule unchanged — rejected for the atlas default because RELATION composites can replace constituent polities and imply a stronger political unity than the source type warrants;
+- drop all composites — rejected because POLITY composites are legitimate source representations and nested composites occur in the corpus;
+- flatten hierarchy to one parent — rejected because the pinned corpus contains rows with multiple memberships and nested composites;
+- interpolate gaps between same-name rows — rejected because upstream explicitly documents temporary incorporation/gaps and the pinned corpus contains hundreds of gaps.
+
+**Evidence:** pinned commit `ad28a691b7c07c1fca89d0e0636d324667d2a258`; exact source blob SHA-1 `cefab0f4b622e2e7fb3daf68d4f461f83991204c`; SHA-256 `d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370`; upstream README and `notebooks/map_functions.py`; exact-corpus diagnostic recorded in `validation/cliopatria_v0.2.0_semantics.json`; Bennett et al. (2025), DOI 10.1038/s41597-025-04516-9.
+
+**Consequences:** #119 must preserve the raw source timeline/hierarchy and #121 must implement this type-aware selected-year resolution. No raw source row becomes reviewed/published atlas geometry merely through ingestion.
+
+## D-060 — Claim kind is structural and must match typed claim relations
+**Date:** 2026-09-23  
+**Status:** accepted integrity rule for the existing live claim architecture; does not replace D-058 target semantics
+
+**Decision:** A universal `atlas.claim` row and any typed subtype or claim-bearing relationship row must agree on the claim's semantic kind. The database must reject a typed row when its `claim_id` points to a claim with a different `claim_kind_code`.
+
+For the current live architecture this applies to:
+- territorial-practice claims;
+- legal events;
+- actor-attribute claims;
+- external/network-participation claims;
+- spatial relations carrying claims;
+- voyage-owner, voyage-finance and voyage-stop claim relations.
+
+Once a claim exists, `claim_kind_code` is immutable. A correction that changes the semantic kind must create/supersede with a new claim rather than retyping an existing claim underneath already-linked subtype, provenance or release-history rows.
+
+This rule is semantic integrity only. It does not infer claim kind from source density, geography, P0–P4, actor attributes or other evidence. It does not promote the legacy P0–P4 model, and it does not pre-empt the post-M1 relational implementation still required under D-058/M2.
+
+**Evidence:** Before production hardening, all 42 existing live territorial-practice subtype rows were checked against their universal claims and had zero kind mismatches. Migration `0028_claim_kind_integrity` was then applied to production with negative controls proving that a wrong-kind legal-event insert and a claim-kind mutation are rejected. The v0.6.1 reconciliation and non-Atlantic acceptance suites continued to pass after the change.
+
+**Reason:** The universal claim table is intentionally shared across heterogeneous historical assertion types. Without an explicit compatibility guard, a foreign key proves only that a claim exists, not that a typed row preserves the claim's stated semantics. Silent retyping would make claim-specific provenance and release history internally contradictory.
+
+**Consequences:** Migrations `0028_claim_kind_integrity.sql` and `0029_claim_kind_function_privileges.sql`, plus the rollback-only regression test, are part of the canonical schema history. The follow-up 0029 explicitly revokes PostgreSQL's default PUBLIC EXECUTE grant on the new guard functions so D-051 remains true for future schema-exposure changes. Future typed claim relations must either use the same structural guard or provide an equivalent integrity mechanism. Any later M2 schema replacement must preserve this invariant even if claim-kind vocabulary or subtype tables evolve.
+
+
+
+## D-061 — Open termini constrain candidate time; they do not create indefinite positive applicability
+**Date:** 2026-09-23  
+**Status:** accepted M2 clarification of D-058 / M1 temporal semantics
+
+**Decision:** `terminus_after` and `terminus_before` are temporal **constraints on an uncertain historical date/window**, not assertions that a condition held continuously from the bound to infinity.
+
+This restores the surviving M1 invariant `open_terminus_does_not_imply_indefinite_continuity`.
+
+For the post-M1 prototype:
+
+- `terminus_after` requires an open-upper outer query window: `from_year IS NOT NULL`, `to_year IS NULL`;
+- `terminus_before` requires an open-lower outer query window: `from_year IS NULL`, `to_year IS NOT NULL`;
+- neither mode creates a positive `claim_asserted_interval` merely from the terminus;
+- selected-year truth therefore remains false from the terminus alone;
+- if evidence separately supports positive applicability, represent that support explicitly with the appropriate claim/applicability semantics rather than treating the terminus as continuity.
+
+The outer `CLAIM.valid_years` range remains useful for candidate retrieval. It is not sufficient positive historical truth.
+
+**Reason:** #135 made open termini structurally representable, but its first implementation encoded them as half-infinite asserted intervals and thereby made `terminus_after` true arbitrarily far into the future and `terminus_before` true arbitrarily far into the past. That contradicted M1's accepted temporal invariant and silently changed methodology during an integrity correction.
+
+**Alternatives considered:**
+- retain half-infinite asserted intervals — rejected because a terminus post/ante quem constrains an unknown date and does not itself prove indefinite continuity;
+- remove terminus modes entirely — rejected because the distinction remains useful for source-faithful temporal uncertainty and candidate retrieval;
+- introduce probabilistic time surfaces — parked under D-058; the evidence does not justify probability distributions.
+
+**Consequences:** M2 validators must reject positive asserted intervals for terminus modes, while preserving open outer query bounds. The correction remains disposable prototype work; no production schema, canonical v0.6.1 release or public preview is changed.
+
+
+## D-062 — After M2, preserve the evidence core and simplify the product/operations boundary
+**Date:** 2026-09-23  
+**Status:** accepted project-direction decision from HC-003; no new horizon authorized
+
+**Decision:** The Historical Slavery Atlas continues, but the default project identity is narrowed to an **auditable global/deep-time evidence corpus + comparison method + thin atlas/query surface**.
+
+The current full application/platform footprint is not the contribution and does not receive automatic further investment.
+
+Preserve as the durable core:
+- claim-specific source/version/evidence provenance;
+- post-M1 semantic separations and adversarial fixtures;
+- raw/reviewed/published/canonical state boundaries;
+- historical geography resolution and selected-year logic;
+- PostgreSQL/PostGIS where it materially supports research integrity and query behavior;
+- reproducible release artifacts and reconstruction;
+- a minimal map/query/evidence surface when it demonstrates comparative value.
+
+Treat as contingent/derived:
+- the current MapLibre/API public preview;
+- always-on cloud operations;
+- richer application UI;
+- production migration of experimental M2 structures.
+
+**Evidence:**
+- M1/M2 repeatedly found real semantic/integrity defects and justify the research-method core.
+- A bounded Silla/Hittite challenge found parity on core fact discovery using ordinary targeted research + a strong general-purpose model; the plausible Atlas advantage is durable comparative semantics rather than discovery itself.
+- External precedent review found generic DH research-platform functionality already well served by nodegoat and adjacent standards/projects.
+- The current public preview is non-canonical and has no demonstrated user-critical availability requirement.
+- The project can remove operational machinery without losing its strongest research contribution.
+
+**Alternatives considered:**
+- continue full-platform expansion by default — rejected until user/research value is demonstrated;
+- redirect into a generic digital-history platform — rejected because strong precedents already cover that category and no cross-domain need is evidenced;
+- stop immediately — rejected because the domain-specific corpus/method and adversarial evidence have not yet been tested against the strongest baseline in the form most likely to preserve their value;
+- collapse immediately to methodology-only — parked as the explicit fallback if the thin atlas/query layer fails a value-discrimination pilot.
+
+**Consequences:**
+- v0.6.1 remains canonical;
+- the current preview remains a frozen/non-canonical demonstration;
+- M2 production migration remains parked;
+- broad H2 evidence expansion is no longer the automatic next horizon;
+- production-like preview operations are reduced;
+- future generic platform features require a demonstrated need not met by existing tools;
+- the project execution queue may remain intentionally idle;
+- a bounded value-discrimination pilot is the only currently justified candidate next experiment, but HC-003 does not authorize starting it;
+- if corpus/method value survives but the thin atlas does not, the project should shrink to methodology/corpus;
+- if neither materially outperforms the strongest baseline, further Atlas expansion should stop.
+
+
+## D-063 — H2 value-discrimination does not earn another Atlas expansion horizon
+**Date:** 2026-09-23  
+**Status:** accepted project-direction decision from H2 / issue #146
+
+**Decision:** The H2 value-discrimination pilot did not meet the pre-registered threshold for a repeatable practical advantage over the strongest competent baseline. Active Historical Slavery Atlas expansion therefore stops. Preserve the methodology, adversarial fixtures, provenance conventions, existing corpus/release artifacts, historical-geography/query work, and audit trail; do not create a successor research/product/infrastructure horizon from project momentum alone.
+
+**Evidence:**
+- the setup was adversarially revised before research because the original case set gave the Atlas a home-field advantage;
+- three frozen evidence packets were compared through (A) a strong conventional research artifact, (B) the Atlas corpus/method representation, and (C) a repaired dependency-free thin query/visual artifact;
+- B showed a material advantage over A only in the Mexica category/terminology negative-control case, not in the India 1843 or Genoese Black Sea cases;
+- C made selected temporal/spatial inference errors more salient in the India and Genoese cases, but did not meet the two-probe/two-case material-advantage rule over B;
+- a result adversary repaired C's avoidable provenance loss before the final disposition, and the threshold still failed.
+
+**Interpretation:** This does not erase the value of M1/M2. Their strongest surviving contribution is methodological: claim-specific provenance, uncertainty/abstention, evidence-locus/inference-extent discipline, law/practice/participation separation, adversarial fixtures, and reproducible audit/release practices. The pilot shows that a competent ordinary notes/table/GIS/model workflow can carry most of those distinctions in the tested cases without requiring an actively expanding bespoke Atlas system.
+
+**Consequences:**
+- v0.6.1 remains the immutable canonical historical data release;
+- H2 experiment cases remain non-canonical experiment evidence;
+- no H3/H4 research/product horizon is authorized;
+- M2 production migration remains parked;
+- bulk/global evidence expansion remains parked;
+- richer frontend/platform, serving, search, ontology and infrastructure work remain parked;
+- the current preview remains a frozen non-canonical legacy demonstration;
+- the repository enters an **IDLE / preservation** state rather than a new development phase;
+- future Atlas development requires genuinely new external evidence: e.g. a real repeated user/research task or scale failure that the strongest simpler workflow cannot handle without losing provenance, uncertainty or correct cross-place/time reasoning;
+- such a trigger authorizes a new evaluation, not automatic platform expansion.
+
+**Durable experiment record:** `experiments/h2-value-discrimination/` and issue #146.
+
+
+## D-064 — COV-001 may test corpus coverage value without reopening Atlas expansion
+**Date:** 2026-09-23  
+**Status:** accepted bounded experiment authorization; no successor horizon authorized
+
+**Decision:** Authorize COV-001 / issue #148 as a bounded **coverage-value experiment** distinct from the Atlas product hypothesis rejected for active expansion by D-063.
+
+COV-001 may test whether a small, systematically assembled global place/time evidence corpus provides material value because it makes:
+- research coverage and gaps inspectable;
+- bounded propositions and abstentions reusable;
+- provenance recoverable;
+- cross-place/time coverage questions answerable without repeated reconstruction.
+
+This does **not** authorize:
+- H3 bulk/global evidence expansion;
+- production migration of M2 structures;
+- a new Atlas release;
+- frontend/map work;
+- database/API/service expansion;
+- automated bulk research.
+
+**Experimental form:** use a deterministic sample from the already pinned Cliopatria corpus plus four fixed non-polity challenge contexts. The experimental index must remain plain CSV/JSON/Markdown and must be compared against Cambridge/Palgrave, relevant specialist structured resources, ordinary specialist research and a plain ordinary matrix.
+
+**Reason:** H2 established that bespoke Atlas representation/UI did not earn continued development, but it did not test the separate possibility that accumulated global coverage itself is useful. Testing that narrower thesis with a small plain artifact does not contradict the D-063 stop rule.
+
+**Guardrail:** The deterministic sample must be frozen before slavery/coercion research. Missing/weak coverage never becomes historical absence. A positive result may authorize at most one further bounded corpus-scale test and cannot automatically revive the Atlas platform.
+
+**Durable setup:** `experiments/coverage-value/` and issue #148.
+
+
+## D-065 — COV-001 validates only a narrow flat coverage-corpus thesis
+**Date:** 2026-09-23  
+**Status:** accepted project-direction decision from COV-001 / issue #148
+
+**Decision:** COV-001 survives narrowly. Preserve the hypothesis that an explicitly incomplete, auditable global place/time **coverage corpus** can create reusable research value. Do not reinterpret this as a reversal of D-063 or as evidence for renewed Atlas application/platform expansion.
+
+**Evidence:**
+- deterministic sampling was frozen before historical research;
+- 21 polity-year cells plus four non-polity challenge contexts were researched under a bounded source ladder;
+- the frozen corpus contained 8 bounded-supported, 2 materially disputed and 15 researched-inconclusive rows;
+- a strong ordinary matrix reached parity for simple overview;
+- after result-adversary downgrade, 4/6 fixed tasks retained material value: law/practice separation, network/territorial-inference separation, global-handbook coverage visibility and unresolved/gap visibility;
+- terminology/category query value was not counted because an ordinary spreadsheet could reproduce most of it cheaply;
+- specialist narrative beat the index on deep Champa historiography;
+- SlaveVoyages beat the index on voyage-level/quantitative capability;
+- all four non-polity challenge cells remained inconclusive, limiting any claim to comprehensive global coverage.
+
+**Interpretation:** The surviving value is accumulation and reuse of explicit coverage state, provenance, inference boundaries and abstentions across many targets. It does not depend on the former Atlas stack. A flat table/JSON/CSV is sufficient for the demonstrated contribution.
+
+**Consequences:**
+- D-063 remains fully in force for product/platform work;
+- v0.6.1 remains canonical;
+- COV-001 rows remain experimental/non-canonical;
+- no H3 bulk research is authorized;
+- no database/API/frontend/infrastructure horizon is authorized;
+- no claim of literal historical completeness is authorized;
+- one future bounded corpus-scale experiment may be considered only to test reuse/value versus research-review-update cost at materially larger scale;
+- that next experiment is **not authorized by this decision**.
+
+**Durable result:** `experiments/coverage-value/11_FINAL_RESULT.md`.
+
+
+## D-066 — Authorize one bounded COV-002 scale/reuse economics experiment
+**Date:** 2026-09-23  
+**Status:** accepted bounded experiment authorization; no successor horizon authorized
+
+**Decision:** Authorize COV-002 / issue #151 as the single further corpus-scale experiment permitted by D-065.
+
+COV-002 tests whether the value of the flat coverage corpus grows faster than:
+- bounded historical research effort;
+- review surface;
+- maintenance/update burden;
+- repeated cross-cell reconstruction.
+
+It also tests whether the full COV-001 row should shrink into a compact coverage register.
+
+**Experimental form:**
+- add 12 deterministic rank-2 polity-year cells from the same pinned Cliopatria frame;
+- compare N=25, 31 and 37;
+- compare full rows, compact register and strongest ordinary matrix;
+- run a field-loss audit;
+- run six deterministic bounded evidence updates;
+- preserve specialist and specialized-data negative controls.
+
+**Guardrails:**
+- sample must be frozen before historical research;
+- flat files only;
+- no canonical data release change;
+- no Atlas product/platform/database horizon;
+- no automatic successor;
+- no literal-completeness claim;
+- no absence inference from inconclusive/missing evidence.
+
+**Possible dispositions:** STOP / preservation, REDIRECT to compact register, or NARROW SUSTAIN of the full row.
+
+A positive result still does not authorize comprehensive global ingestion.
+
+
+## D-067 — COV-002 stops automatic corpus scaling; preserve compact register as a task-driven pattern
+**Date:** 2026-09-23  
+**Status:** accepted project-direction decision from COV-002 / issue #151
+
+**Decision:** Do not continue systematic/global coverage-corpus expansion from project momentum alone.
+
+Preserve the compact coverage-register pattern demonstrated by COV-002 for externally justified comparative tasks, but return the project to IDLE / preservation.
+
+**Evidence:**
+- COV-002 expanded from 25 to 37 researched rows through a deterministic rank-2 cohort;
+- at N=37, law/practice, network/territorial and global-handbook coverage tasks retained material reuse advantage over a strong ordinary matrix;
+- the compact register matched the full detailed row on all six fixed tasks;
+- the compact register used ~60.5% of the full row's static review surface;
+- the full row did not materially outperform the compact register on two independent correctness/provenance/uncertainty tasks;
+- six deterministic maintenance shocks produced three material updates and three no-change searches;
+- every material update touched the same number of local review atoms in compact and full forms;
+- therefore the preregistered maintenance-economy threshold failed;
+- three of twelve expansion targets also exposed upstream polity identity/time defects before historical slavery research, adding target-validation cost to scale.
+
+**Interpretation:** Cross-cell coverage value is real, but COV-002 did not demonstrate that systematic corpus maintenance becomes economically better as the corpus grows. Static compression is not enough to justify a standing global-ingestion program.
+
+**Consequences:**
+- D-063 remains fully in force for Atlas product/platform work;
+- v0.6.1 remains canonical and unchanged;
+- COV-001/COV-002 remain experimental/non-canonical;
+- no further internally generated scale experiment is authorized;
+- no H3 bulk/global research horizon is authorized;
+- no production migration or comprehensive ingestion is authorized;
+- where a real comparative task needs a coverage artifact, prefer the compact register fields demonstrated by COV-002;
+- preserve full F-style rows where already created as audit/research material, but do not require that richer shape for every future target absent a concrete consumer;
+- future substantive expansion requires a new external use case, user/consumer, funded research question or other concrete trigger whose value justifies research/review/update cost.
+
+**Durable result:** `experiments/coverage-scale/13_FINAL_RESULT.md`.
+
+
+## D-068 — COV-002 stops the tested row-by-row workflow, not the systematic-coverage thesis
+**Date:** 2026-09-23  
+**Status:** accepted correction after ADV-001 / issue #153
+
+**Decision:** Narrow D-067's interpretation.
+
+COV-002 remains a valid reason **not to automatically continue its tested row-by-row corpus-expansion workflow** and not to make full F-style rows the default global representation.
+
+COV-002 is **not** evidence sufficient to reject the broader possibility of a tiered, versioned, batch-curated systematic global coverage register.
+
+**Reasons:**
+- the COV-002 revised protocol explicitly scoped itself to artifact form and reuse economics, not world-history representativeness;
+- 25→37 rows does not establish a long-run scale curve;
+- the maintenance gate required compact R to beat F in at least 4/6 shocks, but three shocks produced no change and were later treated as neutral 0/0 cases, making the threshold impossible to satisfy under that treatment;
+- the atom model counted a rich F source object and a bare R source link as one item each, so the 2-vs-2 maintenance result is sensitive to representation granularity;
+- total historical research cost, batch source reuse, distributed review, periodic/versioned maintenance and emergent reference-corpus value were not measured;
+- systematic coverage can itself reduce selection/demand bias, while an external-use-case-only trigger may preferentially attract already visible and well-funded histories;
+- target-frame error discovery is both a scaling cost and a data-quality benefit.
+
+**What still survives from D-067:**
+- v0.6.1 remains canonical;
+- COV-001/COV-002 remain non-canonical experiments;
+- no Atlas product/platform revival;
+- no automatic bulk/global research;
+- compact coverage-register fields are preferred over routine F-style rows for demonstrated cross-cell tasks;
+- record count/completeness is not itself a success metric.
+
+**Correct future trigger rule:** Future substantive expansion requires explicit authorization plus a concrete value hypothesis and bounded cost model. An external consumer is one valid trigger, but a preregistered methodological objective such as bias-resistant systematic coverage may also be valid.
+
+**Not authorized by this correction:** any new historical research cohort, comprehensive ingestion, production migration, or successor experiment.
+
+**Durable audit:** `experiments/coverage-scale/14_COMPLETENESS_INFERENCE_ADVERSARY.md`.
+
+
+## D-069 — Authorize one bounded COV-003 tiered systematic-coverage architecture test
+**Date:** 2026-09-23  
+**Status:** accepted bounded experiment authorization; no successor horizon authorized
+
+**Decision:** Authorize COV-003 / issue #155 after ADV-001 / D-068.
+
+COV-003 tests a workflow that COV-002 did not:
+- C0 target/research-state registration without slavery inference;
+- C1 compact bounded evidence for a preregistered subset;
+- C2 selective deep evidence only under a frozen escalation rule;
+- source-centric batch research;
+- immutable/as-of experiment releases with explicit review-state updates.
+
+**Frozen scale:**
+- 3 deterministic Cliopatria strata;
+- 24 new targets at C0;
+- 12 fixed C1 research targets;
+- 12 fixed C0-only targets;
+- 6 identity-validation probes;
+- at most 3 C2 escalations;
+- 3 later deterministic update searches.
+
+**Guardrails:**
+- v0.6.1 remains canonical;
+- unresearched and identity-unreviewed are never historical absence;
+- C0 may not imply a slavery conclusion;
+- C0-only targets cannot be promoted after evidence inspection;
+- shared-source reuse counts only when materially informative;
+- no product/database/API/UI horizon;
+- no comprehensive-ingestion authorization;
+- no autonomous successor.
+
+**Possible dispositions:** FAIL / STOP, TIERED SURVIVE, or STRONG SURVIVE.
+
+Even STRONG SURVIVE means only that the architecture deserves further bounded validation; it does not authorize a complete global corpus.
+
+**Durable setup:** `experiments/coverage-tiered/`.
+
+
+## D-070 — COV-003 validates tiered systematic coverage, not comprehensive ingestion
+**Date:** 2026-09-23  
+**Status:** accepted direction decision from COV-003 / issue #155
+
+**Decision:** Preserve a tiered systematic-coverage architecture as the best-supported research form after COV-003:
+
+1. **C0 — target/research-state register**
+   - broad registration;
+   - no slavery conclusion required;
+   - explicit identity/research status;
+   - unresearched is never absence.
+
+2. **C1 — compact bounded coverage**
+   - used when subject research is actually performed;
+   - bounded conclusion + abstention;
+   - law/practice and network/territorial boundaries;
+   - handbook coverage, unresolved reason and source references.
+
+3. **C2 — selective deep evidence**
+   - only under explicit ambiguity/risk triggers;
+   - richer temporal/category/source-direction/inference metadata.
 
 4. **immutable/as-of releases + review ledger**
    - do not silently rewrite historical experiment states.
