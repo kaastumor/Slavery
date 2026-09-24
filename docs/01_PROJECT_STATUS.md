@@ -13,8 +13,9 @@ Active:
 1. **#232 / EXP-08 — cross-frame historical evidence tranche.** The four-target
    sample is frozen and merged. Great Zimbabwe — 1400 is researched-inconclusive for slavery/status.
    Māori communities in Aotearoa — 1700 is bounded-supported for pre-contact
-   war-captive unfreedom, with exact iwi/hapū distribution unresolved. Research
-   Nobatia — 500 CE next.
+   war-captive unfreedom. Nobatia — 500 CE is bounded-supported for royal retainer
+   sacrifice with slave status unresolved. Qi — 500 BCE remains frozen/unstarted.
+   EXP-08 is paused after Nobatia while WIP switches to project-discovery research.
    Discovery execution: `docs/discovery/DISCOVERY_EXECUTION.md`.
 
 Recently completed:

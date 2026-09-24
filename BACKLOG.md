@@ -13,7 +13,7 @@ This file answers **what is justified to work on next**.
 # EXP-08 CROSS-FRAME HISTORICAL EVIDENCE — ACTIVE
 
 **Issue:** #232  
-**Current stage:** SUBJECT RESEARCH — 2 / 4 FROZEN CASES COMPLETE  
+**Current stage:** SUBJECT RESEARCH — 3 / 4 FROZEN CASES COMPLETE / PAUSE AFTER NOBATIA  
 **Subject slavery/coercion research:** **IN PROGRESS**
 
 EXP-07 closed with seven QUALIFIED_C1_READY rows and one hold. The post-qualification
@@ -40,9 +40,17 @@ Māori communities in Aotearoa — 1700 is now **bounded-supported for pre-conta
 war-captive unfreedom/slavery-category relations**, with exact 1700 distribution,
 prevalence and local status rules across iwi/hapū explicitly unresolved.
 
-**Current exact action:** research **Nobatia — 500 CE** under the frozen polity frame.
-Preserve the approximate fifth-century formation boundary and do not project later
-sixth-century Christian-state evidence backward into an exact 500 claim.
+Nobatia — 500 CE is now **bounded-supported for royal human/retainer sacrifice near
+the anchor**, while slave status of the victims, polity-wide slaveholding prevalence and
+external slave-trade participation remain unresolved.
+
+Per sponsor priority, stop slavery-evidence expansion after this case. **Qi — 500 BCE
+remains frozen and unstarted**; EXP-08 is paused rather than closed.
+
+**Current exact action after this checkpoint merges:** switch WIP to a bounded
+project-discovery research run focused on adjacent methods, comparable projects and
+decision-relevant opportunities for the Atlas/evidence corpus. Do not resume Qi until
+that discovery horizon is reconciled or the sponsor explicitly redirects back.
 
 ## Discovery execution
 
