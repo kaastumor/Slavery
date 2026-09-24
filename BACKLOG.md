@@ -10,32 +10,28 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# DISC-06 INFERENCE-CHAIN STRESS TEST — FREEZE GATE
+# DISC-06 INFERENCE-CHAIN STRESS TEST — RESULT READY
 
 **Issue:** #240  
-**Primary gate:** method / representation discovery  
-**Current stage:** PROTOCOL + SIX-CASE REGRESSION SAMPLE FROZEN  
-**Historical subject research:** **PAUSED / PROHIBITED IN THIS EXPERIMENT**
+**Disposition:** **REJECT DURABLE EXTENSION**  
+**Historical subject research:** **PAUSED**
 
-DISC-05 is complete and closed. It selected one bounded question: whether explicit
-premise → reasoning → conclusion provenance materially improves the portable evidence
-core over the current packet.
+The six-case regression found **0 distinct failure mechanisms** where the minimal
+inference ledger added material information unavailable from the current portable
+packet. It improved scanability only.
 
-Frozen exposed regression cases:
-- Teotihuacan — 500 CE;
-- Shaolin — 1000 CE;
-- Inuit frame — 1800 CE;
-- Cahokia — 1200 CE;
-- Lazica — 500 CE;
-- Nālandā Mahāvihāra — 700 CE.
+A genuinely stronger formal model would require assertion/factoid objects inside
+sources, adding a new durable abstraction and review surface. D-092 first refusal says
+that complexity is not earned by this result.
 
-The experimental ledger is intentionally tiny: inference ID, target, conclusion,
-premise references, one reasoning-rule label, result and review state. No RDF/graph
-database/schema migration.
+Do not add an inference table, CRMinf/RDF layer, factoid model, knowledge graph or graph
+database. CRMinf/FPO remain conceptual references and disposable inference notes remain
+available during difficult reviews.
 
-**Current exact action:** merge the DISC-06 freeze if CI is green. Only then construct
-the ledger and compare it against the existing portable packet using the preregistered
-threshold.
+**Current exact action:** merge the DISC-06 result if CI is green, close #240, then
+freeze the next selected discovery question: a **research-coverage / evidence-gap
+audit** testing whether a non-visual registry matrix reveals selection blind spots that
+the current registry + manual balancing misses.
 
 EXP-08 remains open/paused after 3/4. **Qi — 500 BCE remains frozen/unstarted.**
 

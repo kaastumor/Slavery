@@ -34,8 +34,8 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - EXP-08 is paused after 3/4 frozen cases; **Qi — 500 BCE remains frozen/unstarted**;
 - DISC-05 external adjacency scan is complete;
 - active horizon: **#240 / DISC-06 inference-chain stress test**;
-- six already-reviewed correction cases are frozen as exposed regression material;
-- next: merge the freeze, then compare the current portable packet with a minimal inference ledger under the preregistered threshold;
+- DISC-06 tested a minimal inference ledger on six already-reviewed correction cases and **rejected it as a durable extension**: scanability improved, but material new reconstructibility did not;
+- next: freeze a non-visual research-coverage/evidence-gap audit to test whether current manual horizon selection misses material coverage concentrations;
 - no historical subject-case expansion or production feature work is active;
 - no production migration, new public release or platform expansion authorized.
 

@@ -1,27 +1,25 @@
 # DISC-06 checkpoint
 
 **Issue:** #240  
-**State:** protocol/sample frozen; prototype execution not started  
-**Historical subject research:** prohibited  
+**State:** execution complete / result ready  
+**Disposition:** **REJECT DURABLE EXTENSION**  
+**Historical subject research:** none  
 **EXP-08:** paused; Qi — 500 BCE frozen/unstarted
 
-Frozen regression sample:
-1. Teotihuacan — temporal leakage
-2. Shaolin — target/context join
-3. Inuit frame — dimension + time/extent leakage
-4. Cahokia — status + temporal leakage
-5. Lazica — time + dependency + network/territorial leakage
-6. Nālandā — target/context + dependency
+Artifacts:
+- `02_INFERENCE_LEDGER.csv`
+- `03_COMPARISON.md`
+- `04_ADVERSARY.md`
+- `RESULT.md`
 
-Pre-execution ID reconciliation completed against the canonical R1 final artifacts:
-- Inuit frame → `R1:N:inuit_arctic_1800`;
-- Cahokia → `R1:L:cahokia_1200`;
-- Lazica → `R1:P:500:D:r1`.
+Result:
+- 15 inference relations across six exposed regression cases;
+- 0 distinct failure mechanisms with material ledger-only information;
+- 6/6 gained only scan/readability convenience;
+- Nālandā/Cahokia show that genuine extra semantics would require a new
+  assertion/factoid layer, which is not earned.
 
-Labels, anchors, mechanisms, sample membership and thresholds are unchanged.
+The current portable packet survives.
 
-Compare the current portable packet with only the minimal inference ledger defined in
-`00_PROTOCOL.md`.
-
-Do not add fields, change the success threshold, adopt CRMinf/RDF, or start any new
-historical research before the freeze PR merges.
+Next after merge/close: freeze one research-coverage/evidence-gap audit from DISC-05.
+No historical subject research; Qi remains frozen/unstarted.
