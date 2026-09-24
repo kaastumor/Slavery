@@ -15,10 +15,11 @@ untouched QA-ready C1 row is Grand Duchy of Lithuania — 1300 CE.
 EXP-03 used six heterogeneous cases under experiment-local IDs and does not consume
 any of the eight C0 rows frozen below.
 
-Choosing Lithuania solely because it is the last ready row would make execution
-convenience determine the next historical horizon. Instead, this experiment follows
-the backlog rule: when the best next direction lies in C0, qualify identity/anchor
-first and keep qualification separate from subject research.
+Choosing Lithuania solely because it is the last ready row would let execution
+convenience and C1 readiness determine the next historical horizon, bypassing the
+specific C0-qualification question. Instead, this experiment follows the backlog rule:
+when the best next direction lies in C0, qualify identity/anchor first and keep
+qualification separate from subject research.
 
 ## 2. Discriminating question
 
