@@ -1,0 +1,262 @@
+{
+  "profile": "data-package",
+  "name": "historical-slavery-atlas-exp06-candidate-v1",
+  "title": "Historical Slavery Atlas EXP-06 Candidate v1 — interoperability benchmark",
+  "description": "Disposable standards-only benchmark descriptor. It does not replace the Atlas manifest and carries no canonical promotion.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/kaastumor/Slavery",
+  "sources": [
+    {
+      "title": "Historical Slavery Atlas EXP-06 source research",
+      "path": "https://github.com/kaastumor/Slavery/commit/16906affed159722cf940e6723401c7ab4e5d9f4"
+    }
+  ],
+  "resources": [
+    {
+      "profile": "tabular-data-resource",
+      "name": "portable-targets",
+      "path": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/targets_extended.csv",
+      "title": "EXP-06 portable targets",
+      "description": "Frozen portable target rows.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "hash": "sha256:2993bf86f2e6904fd36611a020c3796c8de921d8654e9459150603bef54f1978",
+      "schema": {
+        "fields": [
+          {
+            "name": "target_id",
+            "type": "string"
+          },
+          {
+            "name": "target_label",
+            "type": "string"
+          },
+          {
+            "name": "anchor",
+            "type": "string"
+          },
+          {
+            "name": "research_outcome",
+            "type": "string"
+          },
+          {
+            "name": "effective_frame_class",
+            "type": "string"
+          },
+          {
+            "name": "bounded_proposition",
+            "type": "string"
+          },
+          {
+            "name": "required_abstention",
+            "type": "string"
+          },
+          {
+            "name": "evidence_locus",
+            "type": "string"
+          },
+          {
+            "name": "inference_extent",
+            "type": "string"
+          },
+          {
+            "name": "temporal_state",
+            "type": "string"
+          },
+          {
+            "name": "law_practice_note",
+            "type": "string"
+          },
+          {
+            "name": "network_territorial_note",
+            "type": "string"
+          },
+          {
+            "name": "historical_terms",
+            "type": "string"
+          },
+          {
+            "name": "category_mapping_status",
+            "type": "string"
+          },
+          {
+            "name": "category_mapping_note",
+            "type": "string"
+          },
+          {
+            "name": "language_access_limitations",
+            "type": "string"
+          },
+          {
+            "name": "coverage_confidence",
+            "type": "string"
+          },
+          {
+            "name": "geometry_resolved_form",
+            "type": "string"
+          },
+          {
+            "name": "geometry_claim_role",
+            "type": "string"
+          },
+          {
+            "name": "geometry_unresolved_note",
+            "type": "string"
+          },
+          {
+            "name": "research_stage",
+            "type": "string"
+          }
+        ],
+        "primaryKey": "target_id"
+      }
+    },
+    {
+      "profile": "tabular-data-resource",
+      "name": "portable-source-relations",
+      "path": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/source_relations.csv",
+      "title": "EXP-06 portable source relations",
+      "description": "Frozen claim/source relations.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "hash": "sha256:97c0b7a3458817d379055c4d9afaad936e201261f325830e7832129eceac45db",
+      "schema": {
+        "fields": [
+          {
+            "name": "target_id",
+            "type": "string"
+          },
+          {
+            "name": "source_id",
+            "type": "string"
+          },
+          {
+            "name": "source_version_ref",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "url",
+            "type": "string"
+          },
+          {
+            "name": "locator",
+            "type": "string"
+          },
+          {
+            "name": "source_classification",
+            "type": "string"
+          },
+          {
+            "name": "evidence_role",
+            "type": "string"
+          },
+          {
+            "name": "claim_fitness",
+            "type": "string"
+          },
+          {
+            "name": "independence_group",
+            "type": "string"
+          },
+          {
+            "name": "direction",
+            "type": "string"
+          },
+          {
+            "name": "decisive",
+            "type": "string"
+          },
+          {
+            "name": "access_limitation",
+            "type": "string"
+          },
+          {
+            "name": "accessed_at",
+            "type": "string"
+          },
+          {
+            "name": "asset_sha256",
+            "type": "string"
+          },
+          {
+            "name": "dependency_note",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "target_id",
+          "source_id"
+        ]
+      }
+    },
+    {
+      "name": "candidate-readme",
+      "path": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/README.md",
+      "title": "Candidate README",
+      "description": "Human-readable candidate identity and boundary.",
+      "format": "md",
+      "mediatype": "text/markdown",
+      "hash": "sha256:885343060efb91e1d673aee2ffe37f56284e60dbace2386e3cd05f2bdbcada8e"
+    },
+    {
+      "name": "qc-summary",
+      "path": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/QC_SUMMARY.md",
+      "title": "QC summary",
+      "description": "Candidate QC and semantic guards.",
+      "format": "md",
+      "mediatype": "text/markdown",
+      "hash": "sha256:9823ccb9eab8555ea176ec08882664e7d052a9a5e3053a0e666458175a1b82d8"
+    },
+    {
+      "name": "unresolved-issues",
+      "path": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/UNRESOLVED_ISSUES.md",
+      "title": "Unresolved issues",
+      "description": "Material candidate limitations.",
+      "format": "md",
+      "mediatype": "text/markdown",
+      "hash": "sha256:ab88bfe394a1bdb9e166698b9fff8411573e39124dba506c994f1d83d3077cd3"
+    },
+    {
+      "name": "review-decision",
+      "path": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/REVIEW_DECISION.md",
+      "title": "Review decision",
+      "description": "Human-readable release-gate disposition.",
+      "format": "md",
+      "mediatype": "text/markdown",
+      "hash": "sha256:43b24ff2c6f75a74f736e4f07b8ff770a70948ca0259c149d7d743a67981c2c0"
+    },
+    {
+      "name": "research-result",
+      "path": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/RESULT.md",
+      "title": "EXP-06 research result",
+      "description": "Research result linked by the Atlas package.",
+      "format": "md",
+      "mediatype": "text/markdown",
+      "hash": "sha256:e0687e1bdc57a87a7df6078ba4f7884aa8da451da7f666d0c2f6d4facd0049e7"
+    },
+    {
+      "name": "research-checkpoint",
+      "path": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/CHECKPOINT.md",
+      "title": "EXP-06 checkpoint",
+      "description": "Research checkpoint linked by the Atlas package.",
+      "format": "md",
+      "mediatype": "text/markdown",
+      "hash": "sha256:ffd37fc3d30d651eb5a9332a9e0cfc263a7ba3b677ef7624eecc178bf3e8d21e"
+    },
+    {
+      "name": "browser-candidate-bundle",
+      "path": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/web/public/data/exp06-candidate.json",
+      "title": "Browser candidate bundle",
+      "description": "Generated browser-facing non-canonical candidate data.",
+      "format": "json",
+      "mediatype": "application/json",
+      "hash": "sha256:9e484c8f9fd9d207099b69f58ac68363771a30daf07984cd234982dec904f523"
+    }
+  ]
+}

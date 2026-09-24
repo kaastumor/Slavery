@@ -10,30 +10,39 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# DISC-08 PORTABLE PACKAGE INTEROPERABILITY — FREEZE GATE
+# DISC-08 PORTABLE PACKAGE INTEROPERABILITY — RESULT READY
 
 **Issue:** #250  
 **Primary gate:** method / release-interchange discovery  
-**Current stage:** SUBJECT + SPECS + DISCRIMINATOR FROZEN  
-**Historical subject research:** **PAUSED / PROHIBITED**
+**Current stage:** BENCHMARK COMPLETE / MERGE GATE  
+**Disposition:** **NARROW REUSE**  
+**Historical subject research:** **PAUSED / NONE PERFORMED**
 
-Frozen subject: **EXP-06 Candidate v1** (`exp06-candidate-v1`), preserving its exact
-candidate manifest, Git blobs and SHA-256 identities.
+DISC-08 compared the exact frozen `exp06-candidate-v1` package against:
+- Frictionless Data Package / Data Resource / Tabular Data Resource v1;
+- RO-Crate 1.3 as the preregistered conditional richer comparator.
 
-First/simple baseline:
-- Frictionless Data Package v1;
-- Data Resource v1;
-- Tabular Data Resource v1.
+Result:
+- Frictionless adds material **generic CSV/resource interoperability** and Table Schema
+  value;
+- it does not replace Atlas release-effect/review/artifact-role semantics;
+- full current package reconstruction requires commit-pinned remote URLs because v1
+  forbids parent local paths;
+- RO-Crate models research-object/provenance structure better but still requires
+  Atlas/domain semantics for the decisive release-safety contract;
+- no mandatory standards layer is justified.
 
-Conditional richer comparator:
-- RO-Crate 1.3 only if Frictionless fails specifically on research-object/provenance
-  structure and the richer comparison could change the final standards decision.
+**Durable direction:** keep the Atlas manifest authoritative. Permit an optional
+**generated Frictionless adapter** for concrete interoperability/validation needs. Do
+not make Frictionless or RO-Crate mandatory.
 
-The candidate may not be moved, copied, rewritten or normalized for compatibility.
+**Next discovery candidate:** freeze one bounded **historical place/time interchange
+benchmark** from DISC-05. Test WHG Linked Places Format + PeriodO against one site, one
+changing polity and one fuzzy/community-or-network target. The question is reuse/
+interchange fit only; neither standard may become the owner of historical truth.
 
-**Current exact action:** merge the DISC-08 freeze if CI is green. Only then construct
-the disposable Frictionless descriptor and run the preregistered interoperability /
-validation comparison.
+**Current exact action:** merge DISC-08 if CI is green, close #250, then freeze that
+place/time interchange benchmark before execution.
 
 EXP-08 remains open/paused after 3/4. **Qi — 500 BCE remains frozen/unstarted.**
 

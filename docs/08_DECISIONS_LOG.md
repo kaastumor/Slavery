@@ -1805,3 +1805,58 @@ version-aware rather than rewriting frozen release state.
 new research tranche, schema/ontology change, geometry change or canonical/public
 release follows.
 
+## D-095 — Keep the Atlas manifest authoritative; permit narrow Frictionless reuse
+**Date:** 2026-09-25  
+**Status:** accepted narrow release/interchange decision
+
+**Evidence:** DISC-08 / #250.
+
+**Decision:** Do **not** replace the Atlas candidate/release manifest with Frictionless
+Data Package or RO-Crate.
+
+Frictionless Data Package v1 earns a narrow interoperability role:
+- generic resource enumeration;
+- standard SHA-256 resource hashes;
+- Tabular Data Resource/Table Schema declarations for the two portable CSVs.
+
+That is a real external interchange/validation capability and may be exposed through a
+**generated optional adapter** when a concrete export/consumer workflow benefits from
+it.
+
+The Atlas custom manifest remains authoritative for package/release safety semantics,
+including:
+- canonical-release effect;
+- R1 review-state effect;
+- P-level effect;
+- geometry-promotion effect;
+- database/API effect;
+- Atlas artifact roles;
+- review-gate disposition.
+
+Frictionless permits custom metadata, but Atlas-specific extensions remain Atlas
+semantics rather than generic interoperability and therefore do not justify replacing
+the manifest.
+
+The current package spans files outside its candidate directory. Frictionless v1
+forbids parent local resource paths, so complete representation requires commit-pinned
+remote URLs unless files are moved/copied. DISC-08 does not authorize relocation.
+
+RO-Crate 1.3 was conditionally inspected because Frictionless's package-level weakness
+was research-object/provenance structure. RO-Crate models Dataset/File/provenance
+relationships more naturally, but the safety-critical release meanings still require
+Atlas/domain semantics. A mandatory JSON-LD/RO-Crate layer therefore adds complexity
+without replacing the existing contract.
+
+**Allowed future use:** generate a Frictionless descriptor/schema sidecar for a real
+consumer, archive, validator or export need and validate it with that consumer's tool.
+
+**Reopen stronger standards adoption only if**:
+1. an external repository/consumer requires it;
+2. generic validation repeatedly catches defects the current builders/tests miss;
+3. cross-tool package exchange becomes a demonstrated workflow; or
+4. a standard/domain profile replaces rather than duplicates material Atlas safety
+   semantics.
+
+**No effect:** no historical conclusion, candidate content, schema/ontology, canonical
+v0.6.1, public release or production dependency changes.
+
