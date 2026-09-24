@@ -1664,3 +1664,17 @@ When geometry states are mixed, do not hoist one package-level geometry state ac
 **Complexity rule:** Do not respond by creating a universal taxonomy engine. Start with transparent term + mapping status/note and free-text claim-fitness semantics; normalize further only if repeated evidence warrants it.
 
 **Canonical effect:** none. v0.6.1 remains canonical; no database/schema migration or public release is authorized by this decision.
+
+## D-090 — Scope Actions to relevant verification
+**Date:** 2026-09-24
+**Status:** accepted operational decision; sponsor requested cost reduction
+
+All PRs retain sanitation and Python regression checks. PostGIS is skipped only for
+diffs consisting entirely of known documentation/research text paths; unknown paths,
+code, SQL, workflow and dependency changes fail closed to the full gate. Manual
+dispatch always runs the full gate. Remove duplicate foundation-on-main-push and
+preview-health-on-every-push; preserve weekly/manual preview monitoring. Superseded
+PR runs cancel automatically. Main changes continue through reviewed PRs.
+
+Relevant verification is not waived. Green checks remain implementation evidence,
+not historical review. No ontology, canonical data or public-release effect.

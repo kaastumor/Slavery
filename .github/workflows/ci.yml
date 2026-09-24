@@ -1,15 +1,52 @@
 name: foundation-ci
 
 on:
-  push:
-    branches: [main]
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: foundation-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      database: ${{ steps.scope.outputs.database }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Repository sanitation
+        run: python tools/sanitize_repo.py
+      - name: Python tests
+        run: python -m unittest discover -s tests -v
+      - name: Select database checks conservatively
+        id: scope
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            echo "database=true" >> "$GITHUB_OUTPUT"
+          else
+            git diff --name-only -z "$BASE_SHA...$HEAD_SHA" > /tmp/changed-paths
+            python tools/ci_scope.py /tmp/changed-paths >> "$GITHUB_OUTPUT"
+          fi
+
   foundation:
+    needs: checks
+    if: needs.checks.outputs.database == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
@@ -38,9 +75,6 @@ jobs:
 
       - name: Claim-kind integrity
         run: docker compose exec -T db sh -lc 'psql -v ON_ERROR_STOP=1 -U "$POSTGRES_USER" -d "$POSTGRES_DB" -f /workspace/db/tests/009_claim_kind_integrity.sql'
-
-      - name: Python tests
-        run: ./scripts/test-python.sh
 
       - name: Non-Atlantic rollback fixtures
         run: ./scripts/db-test-non-atlantic.sh

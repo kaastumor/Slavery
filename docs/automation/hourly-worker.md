@@ -1,6 +1,6 @@
 # Autonomous evidence worker runbook
 
-> **Current active horizon:** #211 / EXP-03 heterogeneous evidence stress test  
+> **Current active horizon:** #213 / EXP-04 blind frontier tranche
 > **WIP limit:** exactly one active issue/experiment at a time.  
 > **Operating decision:** D-088 / HC-024.
 
@@ -126,3 +126,12 @@ Report:
 - selected next experiment when the current one closed.
 
 Progress is evidence gained or a justified reduction in uncertainty—not commits, issues, record count or elapsed time.
+
+## Actions cost discipline — 2026-09-24
+
+Run focused tests and sanitation locally; batch one coherent checkpoint per PR.
+Known documentation/research text changes receive lightweight PR checks; database,
+code, workflow and unknown paths retain full PostGIS validation. Manual foundation
+dispatch runs all checks. Do not duplicate successful PR validation after merge,
+trigger unrelated workflows, or rerun unchanged passing jobs. Weekly/manual preview
+monitoring remains. A partial research checkpoint does not close the active issue.
