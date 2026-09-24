@@ -1,192 +1,128 @@
-# Hourly autonomous worker runbook
+# Autonomous evidence worker runbook
 
-> **Current active horizon:** MVP v0.1 / #174.  
-> **Current fixed serial queue:** #175 -> #176 -> #177 -> #178 -> #179 -> #180 -> #181 -> #182.  
-> **Discovery gate:** #184 -> #185 -> #186 -> #187 only after #182 records **TECHNICAL_MVP_CANDIDATE**.  
-> **WIP limit:** exactly one issue per run.
+> **Current active horizon:** #211 / EXP-03 heterogeneous evidence stress test  
+> **WIP limit:** exactly one active issue/experiment at a time.  
+> **Operating decision:** D-088 / HC-024.
 
-
-This file is the canonical execution contract for the scheduled Historical Slavery Atlas worker.
+This file is the canonical execution contract for scheduled/autonomous Historical Slavery Atlas work.
 
 ## Source of truth
 
 Repository: `kaastumor/Slavery`
 
-At the start of every run inspect current GitHub state. Do not rely on chat memory or an older handoff.
+At every run inspect current `main`, root `BACKLOG.md`, open PRs/issues and CI before relying on chat memory or an older handoff.
 
 Read:
 1. `docs/23_PROJECT_CHARTER.md`
-2. repository-root `BACKLOG.md`
+2. root `BACKLOG.md`
 3. `docs/24_WAY_OF_WORKING.md`
 4. `docs/25_PROJECT_HEALTH.md`
-5. `docs/mvp/v0.1-plan.md`
-6. `docs/mvp/delivery-discovery-cadence.md`
-7. this runbook
-8. the active parent gate issue
-9. open PRs and open `AUTO READY —` issues
-10. current `main` CI status
-11. only the canonical methodology/architecture documents needed for the chosen task.
+5. this runbook
+6. the active issue/protocol
+7. only the methodology/source/data/geography documents needed for the chosen task.
 
-Repository decisions newer than an AUTO issue override that issue.
+## Core scheduling rule
 
-## Serial selection order
+**Do not optimize for returning to idle.**
 
-1. **Resume first:** if an unfinished `auto/*` PR exists from an earlier worker run, resume/repair/finish it. Do not claim another task.
-2. During MVP delivery, use the fixed priority order **#175 -> #176 -> #177 -> #178 -> #179 -> #180 -> #181 -> #182**.
-3. An issue is eligible only when its title begins `AUTO READY —` and every explicit dependency in its body is closed as completed.
-4. Do not enter discovery #184–#187 unless #182 has explicitly recorded `TECHNICAL_MVP_CANDIDATE`.
-5. After that gate, discovery priority is **#184 -> #185 -> #186 -> #187**.
-6. Choose exactly one eligible issue.
-7. If none is eligible, do not manufacture work. End the run without changing the project.
+Elapsed time is not treated as the scarce resource. Optimize for:
+1. evidence quality;
+2. focus;
+3. bounded project complexity;
+4. expected information gain.
 
-Blocked and parked work is not eligible.
+When the current bounded horizon completes:
+- reconcile its evidence;
+- identify the most decision-relevant unresolved uncertainty;
+- compare plausible next experiments;
+- create/preregister exactly one bounded successor;
+- continue.
 
-## Branching
+A no-work run is justified only when:
+- useful work is blocked by missing evidence/permissions/capability;
+- continuing would violate project constraints;
+- or no bounded experiment can materially change belief.
 
-Use a short-lived branch named `auto/<issue-number>-<short-name>` from current `main`.
+An empty issue queue by itself is **not** a reason to idle.
 
-One issue normally produces one coherent PR.
+## Selection order
 
-## Required work loop
+1. Resume an unfinished project PR/branch for the active WIP item.
+2. Otherwise continue the current active issue.
+3. If that issue is complete, perform the evidence reconciliation and select the next highest-information bounded experiment.
+4. Prefer real historical/source research over meta-work when both resolve the uncertainty.
+5. Do not select parked operational debt unless it blocks the active evidence horizon.
 
-For the selected issue follow:
+## Required experiment contract
 
-**Question → smallest proposal → adversary → experiment/implementation → evidence → decision → sanitation → reconciliation**
-
-For each material adversarial finding use exactly one disposition:
-
-**survives / revise / reject / park / experiment**
-
-Attack the strongest credible version of the proposal. Test simpler alternatives. Green CI is necessary, not evidence that the idea itself is useful.
-
-## Scope restrictions
-
-The worker may:
-- implement/test a bounded issue;
-- research within that issue;
-- add fixtures;
-- repair CI caused by its work;
-- update evidence and the issue;
-- merge the completed atomic PR.
-
-The worker may not silently:
-- change the project north star;
-- skip a gate;
-- enter the next strategic horizon;
-- promote an experimental method into canonical methodology;
-- weaken privacy/provenance/QC;
-- introduce major infrastructure;
-- redefine success criteria;
-- broaden scope because time remains.
-
-When one of those becomes necessary, document the evidence/blocker and stop.
-
-## Privacy and repository boundary
-
-This repository is public.
-
-Never commit:
-- secrets, credentials, private keys or access tokens;
-- the external canonical workbook binary;
-- copyrighted/restricted source assets that are not redistribution-safe;
-- private/unpublished personal source material;
-- living-person sensitive data without an explicit reviewed policy;
-- derived passages, embeddings, annotations, logs or model output that reveal restricted/private source content;
-- machine-specific local paths.
-
-CI fixtures must be synthetic or explicitly public-safe.
-
-External model/provider use with restricted/private material requires an explicit approved policy; do not infer permission.
-
-## Reproducibility
-
-For meaningful analytical/research output, preserve the applicable source/data version, checksum, Git revision, tool/model/config version, parameters, methodology/schema version and output identity using existing manifests/audit structures.
-
-## Tests and sanitation
-
-Before opening/merging the PR:
-- run the relevant focused tests;
-- run the repository sanitation check;
-- run the normal project verification required by the issue;
-- add/update regression fixtures where behavior can regress.
-
-Do not weaken a test/QC threshold merely to get green CI.
-
-## PR and merge
-
-Open a PR describing:
+Every new horizon records before execution:
 - question;
-- smallest proposal;
-- adversarial attack;
-- evidence;
-- disposition/decision;
-- tests/sanitation;
-- unresolved items.
+- why it matters;
+- strongest credible alternative/baseline;
+- frozen sample or selection rule when applicable;
+- evidence contract;
+- falsifier;
+- complexity boundary;
+- canonical-effect boundary.
 
-Inspect CI and fix failures.
+Stopping/rejecting/simplifying/parking are valid results, not scheduling defaults.
 
-Squash-merge only when:
-- issue acceptance criteria are satisfied;
-- CI is green;
-- no newer repository decision invalidates the issue.
+## Work loop
 
-Then close the AUTO issue and update the parent gate/backlog/decision record only when project state actually changed.
+**Question → smallest discriminating proposal → adversarial attack → research/experiment → evidence → decision → regression/fixture where warranted → sanitation → project-state reconciliation → next-question selection**
 
-## Gate boundaries
+Green CI is necessary for repository integrity. It is not historical/editorial approval.
 
-Gate adversary and Project Health Check AUTO issues are dependency-gated.
+## Historical constraints
 
-The worker must not create or enter a new gate because the old issue list is empty. The health task must explicitly choose **continue / simplify / redirect / stop**. If continuing, it may establish only a short justified runway after the health evidence supports that choice.
+Never:
+- infer absence from unknown/inconclusive/missing evidence;
+- infer actor nationality/political identity from flag, port, residence, surname, business base or company jurisdiction;
+- infer territorial practice from external/network participation;
+- treat law as practice;
+- use source/document/voyage counts as prevalence;
+- manufacture temporal or spatial precision;
+- let geometry prove a slavery/coercion claim;
+- expose draft research as canonical/public by default.
 
-## Blockers
+Use specialist scholarship for interpretation/prevalence/structure and primary/source-native evidence for bounded facts where appropriate. Preserve contrary evidence and source dependency.
 
-If work requires:
-- sponsor judgment;
-- paid resource approval;
-- unavailable private data;
-- credentials/permissions;
-- an unapproved project-level decision;
+## Complexity boundary
 
-record the blocker on the issue and stop that run. Do not substitute unrelated future-gate work.
+The worker may create small scripts, fixtures, research packets and experiment artifacts when they directly answer the active question.
+
+Do not create a new service, framework, datastore, generic platform, major schema migration or production/public release merely because work is available.
+
+## External/sensitive boundary
+
+External participant recruitment/review remains deferred unless explicitly reopened by sponsor.
+
+Living-person/sensitive modern data remains separately policy-gated.
+
+## Branch/PR discipline
+
+Use a short-lived branch from current `main`. One active WIP issue normally produces one coherent PR.
+
+Before merge:
+- run relevant focused tests;
+- run sanitation;
+- require normal CI green;
+- preserve provenance/reproducibility metadata;
+- record unresolved items honestly.
+
+After merge:
+- close/reconcile the issue;
+- immediately apply the continuation rule rather than defaulting to idle.
 
 ## End-of-run report
 
-Report only:
-- what issue was worked;
-- what materially changed;
-- evidence/tests;
-- disposition/decision;
-- blocker if any;
-- next eligible AUTO issue, if one exists.
+Report:
+- active issue;
+- evidence gained;
+- material changes;
+- tests/CI;
+- disposition;
+- blockers;
+- selected next experiment when the current one closed.
 
-Progress is evidence gained or capability improved—not commits, issues or lines changed.
-
-
-## MVP-specific boundaries
-
-While #174 is active:
-
-- preserve R1 subject-research stop at 19 C1 rows;
-- use the existing Vite + TypeScript + MapLibre application;
-- prefer a generated static/read-only candidate bundle over live backend coupling;
-- do not add a backend, database migration, auth, framework replacement, graph/vector/search service or new historical ontology;
-- do not derive new P0–P4/intensity values;
-- neutral world land remains visible;
-- unresearched / held / inconclusive / unresolved geometry never means absence;
-- temporal rendering must obey the R1.6 temporal annotation artifact;
-- review labels must not imply independent review;
-- v0.6.1 remains canonical until R1.8 explicitly decides otherwise.
-
-Issue #182 is a **technical** gate only. It may record TECHNICAL_MVP_CANDIDATE or HOLD_REWORK. It must not fake sponsor usability acceptance or canonical publication.
-
-## Discovery-specific boundaries
-
-For #184–#187:
-
-- do not implement a production feature;
-- state the user/research task and strongest boring baseline first;
-- define a kill rule before prototyping;
-- use external precedent to remove scope as readily as add it;
-- prefer paper/mock/manual experiments over code;
-- end with exactly one disposition: ADOPT_FOR_EXPERIMENT / REVISE / REJECT / PARK;
-- an ADOPT_FOR_EXPERIMENT result still requires a later separately authorized delivery issue.
+Progress is evidence gained or a justified reduction in uncertainty—not commits, issues, record count or elapsed time.
