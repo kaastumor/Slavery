@@ -36,9 +36,9 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - DISC-06 is complete and rejected a durable inference-ledger extension;
 - DISC-07 is complete and closed; it survives narrowly and is recorded as D-094;
 - future cross-chronology structural-coverage claims require a joint chronology × broad-frame-family QA check; sparse cells remain non-absence/non-quota states;
-- active horizon: **#250 / DISC-08 portable-package interoperability benchmark**, result ready;
-- disposition: **NARROW REUSE** — keep the Atlas manifest authoritative; permit optional generated Frictionless table/resource adapters for concrete interoperability needs; RO-Crate is not a default layer;
-- next after merge: freeze a bounded WHG Linked Places Format + PeriodO place/time interchange benchmark;
+- DISC-08 is complete/closed with **NARROW REUSE** and D-095;
+- active horizon: **#253 / DISC-09 historical place/time interchange benchmark**;
+- Great Zimbabwe 1400, Kokand 1800 and Māori communities 1700 plus LPF/PeriodO baselines are frozen before adapter construction;
 - no historical subject-case expansion or production feature work is active;
 - no production migration, new public release or platform expansion authorized.
 

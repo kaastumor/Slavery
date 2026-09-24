@@ -10,39 +10,28 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# DISC-08 PORTABLE PACKAGE INTEROPERABILITY — RESULT READY
+# DISC-09 HISTORICAL PLACE/TIME INTERCHANGE — FREEZE GATE
 
-**Issue:** #250  
-**Primary gate:** method / release-interchange discovery  
-**Current stage:** BENCHMARK COMPLETE / MERGE GATE  
-**Disposition:** **NARROW REUSE**  
-**Historical subject research:** **PAUSED / NONE PERFORMED**
+**Issue:** #253  
+**Primary gate:** method / spatial-temporal interchange discovery  
+**Current stage:** THREE-TARGET SAMPLE + STANDARDS + THRESHOLD FROZEN  
+**Historical subject research:** **PAUSED / PROHIBITED**
 
-DISC-08 compared the exact frozen `exp06-candidate-v1` package against:
-- Frictionless Data Package / Data Resource / Tabular Data Resource v1;
-- RO-Crate 1.3 as the preregistered conditional richer comparator.
+DISC-08 is complete and closed with **NARROW REUSE** / D-095.
 
-Result:
-- Frictionless adds material **generic CSV/resource interoperability** and Table Schema
-  value;
-- it does not replace Atlas release-effect/review/artifact-role semantics;
-- full current package reconstruction requires commit-pinned remote URLs because v1
-  forbids parent local paths;
-- RO-Crate models research-object/provenance structure better but still requires
-  Atlas/domain semantics for the decisive release-safety contract;
-- no mandatory standards layer is justified.
+Frozen DISC-09 targets:
+- Great Zimbabwe — 1400 — site/node;
+- Khanate of Kokand — 1800 — changing polity;
+- Māori communities in Aotearoa — 1700 — retrospective multi-community frame.
 
-**Durable direction:** keep the Atlas manifest authoritative. Permit an optional
-**generated Frictionless adapter** for concrete interoperability/validation needs. Do
-not make Frictionless or RO-Crate mandatory.
+External baselines:
+- LinkedPasts LPF v1.3 normative repository reference;
+- current WHG documentation version labels retained separately rather than normalized;
+- PeriodO source-defined-period model.
 
-**Next discovery candidate:** freeze one bounded **historical place/time interchange
-benchmark** from DISC-05. Test WHG Linked Places Format + PeriodO against one site, one
-changing polity and one fuzzy/community-or-network target. The question is reuse/
-interchange fit only; neither standard may become the owner of historical truth.
-
-**Current exact action:** merge DISC-08 if CI is green, close #250, then freeze that
-place/time interchange benchmark before execution.
+**Current exact action:** merge the DISC-09 freeze if CI is green. Only then construct
+and score disposable adapters. No WHG/PeriodO submission, geometry promotion or target
+mutation.
 
 EXP-08 remains open/paused after 3/4. **Qi — 500 BCE remains frozen/unstarted.**
 

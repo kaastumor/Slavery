@@ -1,0 +1,57 @@
+{
+  "experiment": "DISC-09",
+  "issue": 253,
+  "stage": "sample_standards_discriminator_frozen_before_adapter_construction",
+  "frozen_on": "2026-09-25",
+  "base_commit": "4d05c2f5ccea3719823ae0bd8fb83443dfd2fcee",
+  "historical_subject_research_allowed": false,
+  "adapter_construction_started": false,
+  "sample_sources": {
+    "exp07_qualification_blob": "8dbde6731aa5b59272b7288f6887045dbf1f3a15",
+    "exp08_targets_blob": "819106bf82231d710fb8d6693a9b252ba81a2795"
+  },
+  "targets": [
+    {
+      "target_id": "R1:N:great_zimbabwe_1400",
+      "label": "Great Zimbabwe",
+      "anchor": "1400",
+      "frame": "node_site",
+      "pressure": "site identity without state-extent projection"
+    },
+    {
+      "target_id": "R1:P:1800:E:r1",
+      "label": "Khanate of Kokand",
+      "anchor": "1800",
+      "frame": "polity",
+      "pressure": "changing polity extent; later apogee excluded"
+    },
+    {
+      "target_id": "R1:N:maori_1700",
+      "label": "Māori communities in Aotearoa",
+      "anchor": "1700",
+      "frame": "region_community",
+      "pressure": "retrospective umbrella over distinct iwi/hapu; no single polity/place"
+    }
+  ],
+  "standards": {
+    "lpf": {
+      "normative_reference": "https://github.com/LinkedPasts/linked-places-format",
+      "normative_label": "LPF v1.3 (repository README, 24 June 2024)",
+      "whg_upload_doc": "https://docs.whgazetteer.org/content/guides/uploading.html",
+      "whg_upload_doc_label": "LPF v1.2.2",
+      "whg_api_doc": "https://docs.whgazetteer.org/content/technical/apis.html",
+      "whg_api_doc_label": "LPF v1.1 output",
+      "accessed_on": "2026-09-25"
+    },
+    "periodo": {
+      "reference": "https://perio.do/technical-overview/",
+      "model": "source-defined historical period definitions with textual + structured temporal/spatial coverage",
+      "accessed_on": "2026-09-25"
+    }
+  },
+  "discriminator": {
+    "reuse": "material generic interchange/reconciliation gain while Atlas safety remains authoritative",
+    "narrow_reuse": "useful only for a bounded subset such as identifiable places or genuine source-defined periods",
+    "reject_default": "forces target reification, time flattening, spatial overclaim, or parallel semantic ownership"
+  }
+}
