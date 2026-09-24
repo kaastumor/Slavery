@@ -10,31 +10,29 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# EXP-07 C0 QUALIFICATION — RESULT READY
+# EXP-08 CROSS-FRAME HISTORICAL EVIDENCE — FREEZE GATE
 
-**Issue:** #229  
-**Current stage:** QUALIFICATION COMPLETE / MERGE GATE  
+**Issue:** #232  
+**Current stage:** SAMPLE / PROTOCOL FROZEN BEFORE SUBJECT RESEARCH  
 **Subject slavery/coercion research:** **NOT STARTED**
 
-EXP-07 completed identity/anchor/frame qualification without subject-evidence research.
+EXP-07 closed with seven QUALIFIED_C1_READY rows and one hold. The post-qualification
+selection compared those seven plus deferred Grand Duchy of Lithuania by expected
+methodological information gain using only frame, chronology, geography and prior
+experiment coverage.
 
-Result:
-- 7 QUALIFIED_C1_READY;
-- 1 HOLD_IDENTITY_OR_TIME: **Kalabhra Dynasty — 500 CE**;
-- 0 rejected;
-- 0 qualification-inconclusive.
+Frozen EXP-08 sample:
+- Great Zimbabwe — 1400;
+- Māori communities in Aotearoa — 1700;
+- Nobatia — 500 CE;
+- Qi — 500 BCE.
 
-The hold is substantive: current source-critical scholarship contests the unitary
-multi-century Kalabhra dynastic/interregnum frame strongly enough that the frozen
-500 CE polity object should not enter subject research without a dedicated
-identity/chronology reconstruction.
+The tranche deliberately spans a node/site, a region/community and two widely
+separated polity/source environments. It avoids selecting all available rows and avoids
+repeating mobile-network/community mechanisms already exercised heavily in EXP-04/06.
 
-No R1 registry state has been mutated.
-
-**Current exact action:** merge the bounded qualification result if CI is green, close
-#229, then compare the seven qualified rows plus deferred **Grand Duchy of Lithuania —
-1300 CE** by expected information gain. Freeze exactly one subject-research horizon
-before any slavery/coercion research begins.
+**Current exact action:** merge the preregistered freeze if CI is green. Only then may
+bounded subject research begin under #232.
 
 ## Discovery execution
 

@@ -1,0 +1,53 @@
+{
+  "experiment": "EXP-08",
+  "issue": 232,
+  "stage": "sample_frozen_before_subject_research",
+  "frozen_on": "2026-09-24",
+  "base_commit": "4e7eb14c27dc47336e0a84c9c590e90155a79590",
+  "canonical_release": "v0.6.1",
+  "subject_research_started": false,
+  "selection_basis": [
+    "EXP-07 qualification outcome",
+    "target frame",
+    "chronology",
+    "geographic balance",
+    "prior EXP-03/04/06 mechanism coverage",
+    "expected methodological information gain"
+  ],
+  "excluded_subject_evidence": true,
+  "targets": [
+    {
+      "target_id": "R1:N:great_zimbabwe_1400",
+      "target_label": "Great Zimbabwe",
+      "anchor": "1400",
+      "frame": "node_site"
+    },
+    {
+      "target_id": "R1:N:maori_1700",
+      "target_label": "Māori communities in Aotearoa",
+      "anchor": "1700",
+      "frame": "region_community"
+    },
+    {
+      "target_id": "R1:P:500:C:r1",
+      "target_label": "Nobatia",
+      "anchor": "500 CE",
+      "frame": "polity"
+    },
+    {
+      "target_id": "R1:P:-500:F:r2",
+      "target_label": "Qi",
+      "anchor": "500 BCE",
+      "frame": "polity"
+    }
+  ],
+  "deferred": [
+    "R1:N:swahili_1400",
+    "R1:N:ifugao_1700",
+    "R1:P:1800:E:r1",
+    "R1:P:1300:D:r1"
+  ],
+  "held": [
+    "R1:P:500:E:r1"
+  ]
+}
