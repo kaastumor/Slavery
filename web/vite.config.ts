@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         atlas: fileURLToPath(new URL("./index.html", import.meta.url)),
         researchPreview: fileURLToPath(new URL("./research-preview.html", import.meta.url)),
+        exp06Candidate: fileURLToPath(new URL("./exp06-candidate.html", import.meta.url)),
       },
     },
   },

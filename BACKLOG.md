@@ -9,38 +9,42 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# EXP-06 CLOSURE CANDIDATE — balanced evidence growth
+# EXP-06 RELEASE GATE — PUBLISH_CANDIDATE
 
-**Active issue:** #225
-**Current stage:** CLOSURE CANDIDATE — one coherent PR / scoped CI
+**Issue:** #227  
+**Current stage:** FINAL MERGE + STATIC DEPLOYMENT VERIFICATION
 
-All six frozen targets are researched and serialized in the portable package.
+EXP-06 candidate v1 passed its bounded publish/hold/rework gate after one concrete
+responsive-layout repair.
 
-Observed:
-- 6 target rows / 36 source-relation rows;
-- 4 internally researched outcomes, including one researched-inconclusive;
-- 2 under-review outcomes where exact target identity/chronology remains unresolved;
-- no schema/ontology extension required;
-- no P-level, geometry promotion, R1 reviewed-state or canonical-release mutation.
+Disposition: **PUBLISH_CANDIDATE**.
 
-Key results:
-- Chámpa: evidence exists, but the 500 CE polity frame is ambiguous;
-- Magadha: slavery context is supported more strongly than exact Haryanka chronology;
-- Mayapán: positive member-locus without aggregate-wide generalization;
-- Mongol Yam: positive compulsory service without slave-status collapse;
-- Yaghan: internal uncertainty preserved alongside external/intergroup coercion;
-- Khmer 1300: independent 1296–1297 capital-core slavery evidence; no empire-wide fill.
+Reviewed candidate evidence:
+- historical source commit `16906affed159722cf940e6723401c7ab4e5d9f4`;
+- successful browser run `36054132409`;
+- browser job `107816768565`;
+- browser artifact `10831472682`;
+- zero page errors / zero semantic failures after rework.
 
-Protocol: `experiments/exp06-balanced-evidence/00_PROTOCOL.md`
-Result: `experiments/exp06-balanced-evidence/RESULT.md`
-Checkpoint: `experiments/exp06-balanced-evidence/CHECKPOINT.md`
+Candidate semantics:
+- 3 bounded internal;
+- 1 researched inconclusive;
+- 2 under review;
+- 0 independently reviewed;
+- no P-levels;
+- no historical practice polygons;
+- canonical v0.6.1 unchanged.
 
-**Next after #225 merges/closes:** select one new bounded historical evidence horizon
-from the remaining frozen/QA-ready queue by expected information gain. Do not insert
-another application/product horizon unless a changed task meets EXP-05's reopening
-conditions.
+The candidate package includes manifest/checksums, QC, unresolved issues, exact
+portable CSVs and `REVIEW_DECISION.md`.
 
-Canonical v0.6.1 remains unchanged.
+**Next exact action:** merge PR #228 if ordinary checks remain green, verify Pages
+deployment of `exp06-candidate.html`, close #227, then select the next bounded
+historical evidence horizon by expected information gain.
+
+Do not insert another application/product horizon. Candidate publication itself does
+not authorize canonical promotion or new feature work.
+
 
 ## Discovery execution
 
@@ -85,7 +89,7 @@ Do **not** use elapsed research time alone as a stop criterion.
 
 # PARKED / trigger-bound operational debt
 
-These are not eligible while #225 is active unless they block the historical tranche.
+These are not eligible while #227 is active unless they block the candidate gate.
 
 ## #43 — protected staging / release-promotion administration
 
@@ -107,7 +111,7 @@ Handle when it materially blocks evidence work; do not turn administration into 
 
 # Explicitly NOT the current horizon
 
-Do not let evidence growth become platform drift. #225 does **not** authorize:
+Do not let candidate review become platform drift. #227 does **not** authorize:
 
 - M2 production schema migration;
 - frontend redesign;

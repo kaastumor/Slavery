@@ -6,7 +6,9 @@ on:
       - "web/**"
       - "programmes/r1/**"
       - "experiments/exp04-blind-frontier/**"
+      - "experiments/exp06-balanced-evidence/**"
       - "tools/build_exp04_research_preview.py"
+      - "tools/build_exp06_candidate.py"
       - "tests/test_r1_mvp*.py"
       - ".github/workflows/web-mvp.yml"
 
@@ -30,6 +32,11 @@ jobs:
         run: |
           python tools/build_exp04_research_preview.py --check
           sha256sum web/public/data/exp04-research-preview.json
+
+      - name: Verify EXP-06 candidate package
+        run: |
+          python tools/build_exp06_candidate.py --check
+          sha256sum web/public/data/exp06-candidate.json
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
