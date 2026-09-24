@@ -9,60 +9,45 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# EXP-05 CLOSURE CANDIDATE — thin-view discrimination
+# ACTIVE HISTORICAL HORIZON — EXP-06 balanced evidence growth
 
-**Active issue:** #223  
-**Current stage:** CLOSURE CANDIDATE — final PR cleanup/checks
+**Active issue:** #225  
+**Current stage:** RESEARCH — WIP 1
 
-#221 / the EXP-04 Research Preview is live and received sponsor first-look browser
-acceptance. That acceptance is lightweight usability evidence, not external demand or
-independent historical validation.
+EXP-05 (#223, merged #224) established an internal workflow result:
+the portable target/source package materially improved 3/3 frozen comparative tasks
+over long-form case packets, while the current thin Atlas added no material task
+advantage over that package. The live preview remains a safe maintenance view; richer
+application work is trigger-bound.
 
-The current decision-relevant uncertainty is whether the **thin Atlas view materially
-improves difficult comparative work** over:
-- A: ordinary case packets + source notes;
-- B: the portable evidence package without the map;
-- C: the live map + table preview.
+The current horizon returns to **real historical evidence growth** using six targets
+already frozen and QA-ready in the R1 registry. Their R1 release states remain
+unchanged.
 
-Frozen protocol: `experiments/exp05-thin-view-value/00_PROTOCOL.md`.
+Frozen EXP-06 sample:
+- Chámpa — 500 CE;
+- Magadha – Haryanka dynasty — 500 BCE;
+- Later Mayan City-States — 1300 CE;
+- Mongol Yam/postal network — 1300 CE;
+- Yaghan communities, Tierra del Fuego — 1800 CE;
+- Khmer Empire — 1300 CE.
 
-Three tasks are preregistered:
-1. temporal + spatial truth;
-2. external/network versus territorial practice;
-3. category + dependency negative control.
+Protocol: `experiments/exp06-balanced-evidence/00_PROTOCOL.md`.
 
-All three lanes are complete. The live browser run completed with zero page errors and
-preserved the non-canonical / under-review / navigation-only geometry boundaries.
+Selection purpose:
+- globally balanced/non-Atlantic evidence growth;
+- polity + aggregate + network + community frames;
+- one deliberate node→polity scope-transfer attack (Angkor 1200 → Khmer Empire 1300);
+- no new target invention or R1 reviewed-state mutation.
 
-Observed:
-- B materially improves 3/3 tasks over A through lower comparison/provenance burden;
-- C materially improves 0/3 tasks over B under the frozen rule;
-- C remains a safe/readable inspection adapter with no observed historical overclaim.
+Success means six honest bounded research states, including under-review states where
+decisive evidence remains unavailable. Missing evidence never becomes absence.
 
+**Current exact action:** research **Chámpa — 500 CE**, then continue sequentially
+through the frozen sample. Batch the tranche to minimize Actions cost.
 
-Result:
-> **portable package earns the comparative workflow value; thin Atlas remains a
-> maintenance/trigger-bound view.**
-
-Do not infer poor usability or map uselessness. Sponsor first-look feedback was
-positive; EXP-05 tested the stricter question of material task advantage.
-
-**Next after #223 merges/closes:** select one bounded **historical evidence-growth**
-successor by expected information gain. Prefer globally underrepresented
-non-Atlantic/non-Western targets and reuse the portable package; no new product
-horizon should intervene.
-
-
-Canonical v0.6.1 remains unchanged. No historical research tranche, schema/API/database
-change, geometry programme or frontend change is authorized by #223.
-
-## Sponsor-visible state
-
-The EXP-04 preview remains live at
-`https://kaastumor.github.io/Slavery/research-preview.html`.
-
-#223 may inspect that existing view, but it must not modify the interface before all
-frozen lane-C tasks are captured.
+Canonical v0.6.1 remains unchanged. No schema/API/database, geometry programme,
+P-level assignment or frontend horizon is authorized.
 
 
 ## Discovery execution
@@ -108,7 +93,7 @@ Do **not** use elapsed research time alone as a stop criterion.
 
 # PARKED / trigger-bound operational debt
 
-These are not eligible while #223 is active unless they block the value experiment.
+These are not eligible while #225 is active unless they block the historical tranche.
 
 ## #43 — protected staging / release-promotion administration
 
@@ -130,7 +115,7 @@ Handle when it materially blocks evidence work; do not turn administration into 
 
 # Explicitly NOT the current horizon
 
-Do not let the value test become platform drift. #223 does **not** authorize:
+Do not let evidence growth become platform drift. #225 does **not** authorize:
 
 - M2 production schema migration;
 - frontend redesign;
