@@ -1585,3 +1585,35 @@ record failures in the active checkpoint and revise only demonstrated friction.
 No new discovery experiment, schema, publication, service or scheduling cadence is
 created. Historical core/corpus remains supported internally; external adoption is
 still unproven. Resume #213's source reconciliation.
+
+
+## HC-027 — EXP-04 blind frontier portability result — 2026-09-24
+
+**Decision:** **PORTABLE CONTRACT SURVIVES EXP-04; MOVE TO THIN RESEARCH PREVIEW.**
+
+Eight ex-ante frozen frontier cases were researched across radically different frames,
+source traditions and evidence densities. Five reached internally researched bounded
+outcomes; Indus, Hadhramaut and Cuzco remain under review with explicit reopening
+conditions. Under-review was preserved as uncertainty, not turned into absence.
+
+The D-089 portable contract survived aggregate/civilization/network/community/node/
+fragmented-sovereignty frames; temporal transitions; law/practice and
+network/territorial splits; source dependency; access blockers; and disputed
+historical-category mappings. No repeated material distinction required another field
+extension.
+
+The strongest pressure point was Andaman, where external colonial captivity is
+supported while indigenous internal practice remains unassessed in the same target.
+The current proposition/scope/abstention fields preserve the distinction. This does not
+prove that future machine-query requirements will never justify dimension-level fields.
+
+Historical review remains internal: **0 independently reviewed EXP-04 targets**.
+No canonical release, P-level, schema migration, geometry promotion or public
+publication follows.
+
+Next project-value pressure moves to presentation: test whether an ordinary
+non-canonical map + table can expose the portable package without turning unresolved
+states, temporal uncertainty, network evidence or node references into stronger
+historical claims. Reuse the existing presentation path; no platform expansion.
+
+Health disposition: **CONTINUE — EXP-04 RESEARCH PREVIEW.**

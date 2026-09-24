@@ -9,10 +9,10 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE EVIDENCE HORIZON — EXP-04 blind frontier tranche
+# EXP-04 CLOSURE CANDIDATE — blind frontier tranche
 
 **Active issue:** #213
-**Current stage:** ACTIVE RESEARCH / DISCOVERY — WIP 1
+**Current stage:** CLOSURE CANDIDATE — awaiting one batched PR/CI
 
 EXP-03 (#211, merged #212) completed with CORE REQUIRES EXTENSION; D-089 accepted
 historical terminology/category mapping and source role/claim fitness in the portable contract.
@@ -21,39 +21,49 @@ EXP-04 tests that contract on the eight previously registered targets frozen in 
 Protocol and pinned selection: `experiments/exp04-blind-frontier/00_PROTOCOL.md`
 and `sample.json`.
 
-Current checkpoint: **Sumerian City-States internally researched; Indus and
-Hadhramaut under review; five cases not started**. Sumer supports a bounded near-anchor
-institution claim. Hadhramaut is deliberately not classified from regional South Arabian
-evidence or archive silence: its polity frame is supported, while target-specific
-near-anchor slavery evidence remains unresolved behind recorded corpus-access triggers.
-No canonical P-level or territorial designation was created.
+Current checkpoint: **all eight frozen cases researched; five internally
+researched bounded outcomes and three under-review/unassessed historical cases**.
 
-Indus and Hadhramaut reopening conditions are recorded in their packets; do not retry
-unchanged access.
+Method/representation result: **SUCCESS — PORTABLE CONTRACT SURVIVES EXP-04**.
+The integrated dependency/category/access audit and adversarial pass found no repeated
+material distinction that requires another D-089 field extension. This remains an
+internal method result, not independent historical validation.
 
-**Next:** continue the same frozen experiment with **Cuzco — 1300 CE**. Preserve
-regional-versus-territorial scope, historical category mapping and non-absence research
-states. Do not turn individual target outcomes into a tranche-wide conclusion. See
-`CHECKPOINT.md`.
+Historical cases still under review:
+- Indus — direct Laursen–Steinkeller pp.83–84 recovery trigger retained;
+- Hadhramaut — target-specific searchable Hadramitic corpus/social-structure recovery
+  trigger retained;
+- Cuzco — target-specific c.1200–1350 labor/status evidence trigger retained.
+
+Do not retry unchanged access or reinterpret under-review as absence.
+
+**Next after this closure candidate merges and #213 closes:** activate the already
+queued **non-canonical EXP-04 Research Preview** as WIP 1. No additional research
+tranche should intervene unless closure review finds a material defect.
 
 Project form: portable reviewed evidence core + replaceable Atlas/map/table/API views.
 Canonical v0.6.1, frozen R1 registry and public preview remain unchanged.
 
 ## Sponsor-visible milestone after EXP-04
 
-After the frozen eight-case tranche closes and its integrated adversarial/reconciliation
-gate is complete, the next planned milestone is a **non-canonical EXP-04 Research
-Preview** rather than another invisible research-only tranche.
+The next planned horizon is a **non-canonical EXP-04 Research Preview**: a thin
+ordinary **map + table** over the experimental portable package.
 
-The preview should use the existing replaceable presentation path and expose the
-reviewed/experimental package as an ordinary **map + table**, including research state,
-temporal precision, evidence locus versus inference extent, category notes and unresolved
-geometry. Under-review and unresolved targets must remain visibly unresolved; the view
-must not convert them into absence or a stronger territorial claim.
+Required behavior:
+- show research state and temporal precision;
+- separate evidence locus from inference extent;
+- expose category/mapping notes;
+- keep Indus, Hadhramaut and Cuzco visibly under review;
+- represent Andaman external colonial coercion separately from unassessed indigenous
+  internal practice;
+- use neutral land and only defensible point/route/reference geometry;
+- never infer practice extent or intensity from target labels, geometry or source
+  counts.
 
-This is a queued successor boundary, **not current WIP** and not authorization to build
-or publish before EXP-04 closes. Scope should remain thin: reuse the existing web/map
-capability where possible, no platform redesign, and no automatic canonical release.
+Reuse the existing web/map path where possible. No platform redesign, production
+migration or automatic canonical/public release.
+
+This becomes current WIP only after #213 closes.
 
 ## Discovery execution
 
