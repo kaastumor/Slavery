@@ -5,16 +5,16 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-24  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE DISCOVERY HORIZON — #245 / DISC-07 cross-dimensional coverage audit; WIP 1**
+**Execution state:** **ACTIVE DISCOVERY HORIZON — #245 / DISC-07 result ready; WIP 1**
 
 ## Current execution order
 
 Active:
-1. **#245 / DISC-07 — cross-dimensional coverage audit.** The full 77-target R1.6
-   registry and success/failure threshold are frozen before matrix generation. The test
-   asks whether chronology × frame × neutral polity sector × research/QA interactions
-   reveal a material selection blind spot not explicit in current marginal balance
-   checks. No historical subject research is allowed.
+1. **#245 / DISC-07 — cross-dimensional coverage audit.** Result:
+   **SURVIVES NARROWLY**. Marginal chronology/frame balance hides a material interaction
+   concentration, so future broad target-frame claims require a joint chronology ×
+   broad-frame-family QA check. No cell-filling quota or absence inference follows.
+   Next candidate is a portable-package standards benchmark.
    EXP-08 remains open/paused after 3/4; Qi — 500 BCE is frozen/unstarted.
    Discovery execution: `docs/discovery/DISCOVERY_EXECUTION.md`.
 

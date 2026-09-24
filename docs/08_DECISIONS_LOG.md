@@ -1760,3 +1760,48 @@ counterevidence, boundary conditions and abstention.
 schema, ontology content, R1 reviewed states, public release and CI cadence remain
 unchanged.
 
+## D-094 — Future target-frame balance claims require a joint coverage check
+**Date:** 2026-09-24  
+**Status:** accepted narrow methodology decision
+
+**Evidence:** DISC-07 / #245.
+
+**Decision:** Marginal target-frame balance checks do not establish joint balance.
+
+When a future programme claims broad **cross-chronology structural coverage**, its
+pre-research target-frame QA must inspect at least:
+- chronology × broad selection-frame family; and
+- polity chronology × the programme's neutral sampling sector where such sectors exist.
+
+The check is diagnostic, not a quota.
+
+**Reason:** R1's frozen target frame correctly passed separate gates for anchor-band
+representation, frame diversity and polity-sector balance. DISC-07 showed that those
+margins still permit strong interaction concentration: the earliest anchors are almost
+entirely represented through polity/civilization-type frames, while recurring sites,
+networks, institutions and community frames are concentrated in other periods.
+
+Because frame class changes permitted inference, that concentration materially
+qualifies a claim of cross-chronology structural diversity.
+
+**Use broad selection-frame families for balance QA.** The more specific
+`effective_frame_class` remains useful for historical interpretation but contains
+case-specific/singleton labels and must not be naively counted as independent coverage
+families.
+
+**Non-absence rule:** an empty or sparse matrix cell means only target-frame /
+research-design sparsity. It never means slavery/coercion was absent, rare, unimportant
+or poorly evidenced historically.
+
+**No fill rule:** do not automatically fill empty cells. A gap may arise from the
+candidate universe, frame validity, access constraints or deliberate design. Any new
+selection remains separately frozen before subject research.
+
+**Version rule:** immutable release research state and later experimental research
+state remain separate. A live coverage overlay, if ever useful, must be derived and
+version-aware rather than rewriting frozen release state.
+
+**No retroactive effect:** R1.6 and its registry remain frozen; no target substitution,
+new research tranche, schema/ontology change, geometry change or canonical/public
+release follows.
+

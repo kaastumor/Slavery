@@ -10,27 +10,35 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# DISC-07 CROSS-DIMENSIONAL COVERAGE AUDIT — FREEZE GATE
+# DISC-07 CROSS-DIMENSIONAL COVERAGE AUDIT — RESULT READY
 
 **Issue:** #245  
 **Primary gate:** method / research-design discovery  
-**Current stage:** 77-TARGET UNIVERSE + THRESHOLD FROZEN  
-**Historical subject research:** **PAUSED / PROHIBITED**
+**Disposition:** **SURVIVES NARROWLY**  
+**Historical subject research:** **NONE**
 
-DISC-06 is complete and rejected a durable inference-ledger extension.
+The 77-target R1.6 registry was audited with three non-visual cross-tabs.
 
-DISC-07 tests whether current marginal balance gates hide a **joint coverage
-concentration** across chronology, frame class, neutral polity sector and research/QA
-state.
+Material result:
+- anchor-band coverage and frame diversity both pass separately;
+- their **interaction is concentrated**, especially in early chronology;
+- current marginal gates do not explicitly state that limitation.
 
-Frozen universe:
-- all 77 R1.6 registry targets;
-- exact registry blob `cec379246221d166db3830845566311077596862`;
-- no substitutions or reclassification after seeing the matrices.
+Future target-frame programmes that claim cross-chronology structural diversity should
+therefore add a chronology × **broad selection-frame family** QA check before subject
+research.
 
-**Current exact action:** merge the DISC-07 freeze if CI is green. Only then generate
-the three non-visual matrices and score them against the preregistered
-SURVIVES/NARROW/REJECT discriminator.
+Boundaries:
+- sparse cells are research-design states, never historical absence;
+- do not fill cells by quota;
+- polity sector-B gaps were already known and are not a new finding;
+- `effective_frame_class` is too granular for naïve balance counting;
+- immutable R1.6 research state is not a live post-R1 dashboard.
+
+**Current exact action:** merge DISC-07 if CI is green, close #245, then freeze the next
+discovery candidate: benchmark the existing portable candidate package against
+**Frictionless Data Package** first, with RO-Crate only as a richer comparator if it
+adds material reconstructibility/interoperability.
 
 EXP-08 remains open/paused after 3/4. **Qi — 500 BCE remains frozen/unstarted.**
 
