@@ -1,0 +1,127 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.3/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.3"
+      },
+      "about": {
+        "@id": "https://github.com/kaastumor/Slavery/tree/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate"
+      }
+    },
+    {
+      "@id": "https://github.com/kaastumor/Slavery/tree/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate",
+      "@type": "Dataset",
+      "name": "Historical Slavery Atlas EXP-06 Candidate v1",
+      "description": "Detached benchmark description of the frozen non-canonical EXP-06 research candidate. Atlas-specific release-effect guards remain authoritative in the existing manifest/review artifacts.",
+      "version": "1.0.0",
+      "datePublished": "2026-09-24",
+      "isBasedOn": {
+        "@id": "https://github.com/kaastumor/Slavery/commit/16906affed159722cf940e6723401c7ab4e5d9f4"
+      },
+      "hasPart": [
+        {
+          "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/targets_extended.csv"
+        },
+        {
+          "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/source_relations.csv"
+        },
+        {
+          "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/README.md"
+        },
+        {
+          "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/QC_SUMMARY.md"
+        },
+        {
+          "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/UNRESOLVED_ISSUES.md"
+        },
+        {
+          "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/REVIEW_DECISION.md"
+        },
+        {
+          "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/RESULT.md"
+        },
+        {
+          "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/CHECKPOINT.md"
+        },
+        {
+          "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/web/public/data/exp06-candidate.json"
+        }
+      ]
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/targets_extended.csv",
+      "@type": "File",
+      "name": "EXP-06 portable targets",
+      "description": "Frozen portable target rows.",
+      "encodingFormat": "text/csv",
+      "sha256": "2993bf86f2e6904fd36611a020c3796c8de921d8654e9459150603bef54f1978"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/source_relations.csv",
+      "@type": "File",
+      "name": "EXP-06 portable source relations",
+      "description": "Frozen claim/source relations.",
+      "encodingFormat": "text/csv",
+      "sha256": "97c0b7a3458817d379055c4d9afaad936e201261f325830e7832129eceac45db"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/README.md",
+      "@type": "File",
+      "name": "Candidate README",
+      "description": "Human-readable candidate identity and boundary.",
+      "encodingFormat": "text/markdown",
+      "sha256": "885343060efb91e1d673aee2ffe37f56284e60dbace2386e3cd05f2bdbcada8e"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/QC_SUMMARY.md",
+      "@type": "File",
+      "name": "QC summary",
+      "description": "Candidate QC and semantic guards.",
+      "encodingFormat": "text/markdown",
+      "sha256": "9823ccb9eab8555ea176ec08882664e7d052a9a5e3053a0e666458175a1b82d8"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/UNRESOLVED_ISSUES.md",
+      "@type": "File",
+      "name": "Unresolved issues",
+      "description": "Material candidate limitations.",
+      "encodingFormat": "text/markdown",
+      "sha256": "ab88bfe394a1bdb9e166698b9fff8411573e39124dba506c994f1d83d3077cd3"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/candidate/REVIEW_DECISION.md",
+      "@type": "File",
+      "name": "Review decision",
+      "description": "Human-readable release-gate disposition.",
+      "encodingFormat": "text/markdown",
+      "sha256": "43b24ff2c6f75a74f736e4f07b8ff770a70948ca0259c149d7d743a67981c2c0"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/RESULT.md",
+      "@type": "File",
+      "name": "EXP-06 research result",
+      "description": "Research result linked by the Atlas package.",
+      "encodingFormat": "text/markdown",
+      "sha256": "e0687e1bdc57a87a7df6078ba4f7884aa8da451da7f666d0c2f6d4facd0049e7"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/experiments/exp06-balanced-evidence/CHECKPOINT.md",
+      "@type": "File",
+      "name": "EXP-06 checkpoint",
+      "description": "Research checkpoint linked by the Atlas package.",
+      "encodingFormat": "text/markdown",
+      "sha256": "ffd37fc3d30d651eb5a9332a9e0cfc263a7ba3b677ef7624eecc178bf3e8d21e"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/kaastumor/Slavery/d567f25dfcb0efeda2eed8f4be7d5cc0a921a960/web/public/data/exp06-candidate.json",
+      "@type": "File",
+      "name": "Browser candidate bundle",
+      "description": "Generated browser-facing non-canonical candidate data.",
+      "encodingFormat": "application/json",
+      "sha256": "9e484c8f9fd9d207099b69f58ac68363771a30daf07984cd234982dec904f523"
+    }
+  ]
+}

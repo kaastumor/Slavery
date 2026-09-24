@@ -36,8 +36,9 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - DISC-06 is complete and rejected a durable inference-ledger extension;
 - DISC-07 is complete and closed; it survives narrowly and is recorded as D-094;
 - future cross-chronology structural-coverage claims require a joint chronology × broad-frame-family QA check; sparse cells remain non-absence/non-quota states;
-- active horizon: **#250 / DISC-08 portable-package interoperability benchmark**;
-- `exp06-candidate-v1`, Frictionless v1 and the success threshold are frozen before descriptor construction; RO-Crate 1.3 is conditional only;
+- active horizon: **#250 / DISC-08 portable-package interoperability benchmark**, result ready;
+- disposition: **NARROW REUSE** — keep the Atlas manifest authoritative; permit optional generated Frictionless table/resource adapters for concrete interoperability needs; RO-Crate is not a default layer;
+- next after merge: freeze a bounded WHG Linked Places Format + PeriodO place/time interchange benchmark;
 - no historical subject-case expansion or production feature work is active;
 - no production migration, new public release or platform expansion authorized.
 
