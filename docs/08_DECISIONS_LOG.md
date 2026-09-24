@@ -1440,3 +1440,36 @@ The #200 external expert audit protocol is frozen and may remain prepared, but p
 - no R2 or feature-delivery queue is authorized.
 
 **Durable gate:** `docs/mvp/r1.8-sponsor-review.md`.
+
+
+## D-084 — Defer external involvement and use internal subtractive discovery
+**Date:** 2026-09-24  
+**Status:** accepted sequencing decision
+
+**Decision:** Do not involve external participants at this stage.
+
+Preserve #200 and its protocol, but defer all recruitment/contact/participant execution until the sponsor explicitly reopens external involvement.
+
+Use the internal runway only for questions that can be answered honestly without external-user evidence.
+
+**Red-team result:**
+- model/sponsor review cannot substitute for external validation;
+- internal work must not claim demand, adoption, preference or product-market value;
+- the highest-value internal-only uncertainty is now subtractive: determine the minimum evidence packet that preserves R1 safety/reconstructibility and whether the core survives in boring portable formats;
+- EXP-02 (#205) is therefore prepared but waits for the R1.8 artifact freeze.
+
+**R1.8 finding:** the internal release adversary discovered a stale committed MVP candidate file. CI regenerated the artifact before checking freshness, so a stale committed artifact could pass.
+
+**Consequences:**
+- #203 enters bounded REWORK;
+- refresh the committed candidate artifact;
+- CI must check freshness before regeneration;
+- add committed-byte reconstruction regression;
+- no historical data/ontology/geometry/feature expansion;
+- #205 may execute only after #203 freezes R1;
+- #200 is deferred, not falsified;
+- v0.6.1 remains canonical.
+
+**Durable artifacts:**
+- `docs/mvp/r1.8-internal-adversary.md`
+- `docs/discovery/EXP_02_MINIMUM_SUFFICIENT_PACKET.md`
