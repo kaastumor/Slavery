@@ -49,3 +49,25 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+@media (max-width: 820px) {
+  body { overflow: auto; }
+  html, body, #app { min-height: 100%; height: auto; }
+
+  .preview-workspace {
+    height: auto;
+    min-height: calc(100vh - 98px);
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(420px, 55vh) auto;
+  }
+
+  .preview-panel {
+    min-height: 45vh;
+    border-left: 0;
+    border-top: 1px solid #cfd1cb;
+  }
+
+  .preview-panel .panel-header {
+    position: static;
+  }
+}
