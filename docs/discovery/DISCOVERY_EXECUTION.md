@@ -94,6 +94,16 @@ experiment → consequence**. Apply material fixes and re-attack them before clo
 A second pass by the same assistant is internal critique, not independent review.
 No agent panel, model change, new framework or infrastructure is required by default.
 
+### Selective reasoning escalation
+
+Keep routine execution on the current model. During project analysis, wide-lens reviews or
+red teaming, if a difficult and decision-consequential question would materially benefit
+from deeper reasoning, proactively recommend a focused **GPT-6 Astra at medium reasoning**
+pass. Briefly state what makes the question unusually consequential or difficult and provide
+a bounded task or handover prompt aimed at that question. Use this selectively: do not
+escalate routine retrieval, clerical updates, straightforward execution or tasks whose
+remaining uncertainty is primarily source access rather than reasoning depth.
+
 Search can stop for a bounded question when remaining leads would not change its
 permitted conclusion, with that rationale recorded. Repeated dependent hits are not
 independent corroboration. Inaccessible decisive evidence means **blocked or under
