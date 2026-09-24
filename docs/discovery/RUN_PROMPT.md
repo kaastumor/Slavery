@@ -20,9 +20,10 @@ Continue the Historical Slavery Atlas in kaastumor/Slavery.
 
 3. Identify the gate: historical evidence, method/representation, or product/workflow
    value. Keep their verdicts separate. For an existing protocol, use its acceptance
-   criteria. When choosing a successor, compare plausible alternatives, including a
-   negative test and the strongest simple baseline, then select one by information
-   gain and preregister the smallest discriminating experiment. Before creating a new
+   criteria. At a boundary, first compare the next **mode**: discovery, execution,
+   consolidation, review/release, maintenance, or no justified work. If discovery wins,
+   compare plausible experiments including a negative test and strongest simple baseline,
+   then preregister the smallest discriminating test. Before creating a new
    category/field/class, state the consequential causal/information distinction, try
    existing project and established external concepts first, and define a negative
    boundary case. Prefer reuse/merge/reject over abstraction growth.
@@ -46,16 +47,17 @@ Continue the Historical Slavery Atlas in kaastumor/Slavery.
 
 7. Leave a durable checkpoint with evidence links, actual state, unfinished work,
    next exact action and relevant checks. If freshness matters, do not call already
-   inspected cases blind/fresh. Reconcile README/status/backlog/checkpoint pointers
-   when active state changes. Local verification first; one coherent PR; existing
-   scoped CI only. Merge when relevant checks and project rules permit.
+   inspected cases blind/fresh. Reconcile `BACKLOG.md` (priority/mode) and the active
+   checkpoint (within-item progress); update README/status only for material milestones.
+   Local verification first; one coherent PR; existing scoped CI only. Merge when relevant checks and project rules permit.
    A checkpoint is not a completed issue, historical review, or publication approval.
    Keep canonical releases intact. No new service/schema/production feature or
    participant outreach without the applicable authorization.
 
 8. Finish with evidence gained, disposition, limits, and next action. Continue
    autonomously within scope. Ask only for genuinely unavailable decisions/access;
-   explain the blocker. Do not optimize toward idle or produce activity for its own sake.
+   explain the blocker. Choose the most justified mode; neither idle nor another
+   experiment is a default. Do not produce activity for its own sake.
 ```
 
 For adversarial replay, add only:

@@ -10,39 +10,42 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# DISC-08 PORTABLE PACKAGE INTEROPERABILITY — RESULT READY
+# CONSTITUTIONAL COMPRESSION / MODE TRANSITION — RESULT READY
 
-**Issue:** #250  
-**Primary gate:** method / release-interchange discovery  
-**Current stage:** BENCHMARK COMPLETE / MERGE GATE  
-**Disposition:** **NARROW REUSE**  
+**Issue:** #255
+**Mode:** governance maintenance → consolidation handoff
+**Current stage:** MINIMAL AMENDMENT READY FOR MERGE
 **Historical subject research:** **PAUSED / NONE PERFORMED**
 
-DISC-08 compared the exact frozen `exp06-candidate-v1` package against:
-- Frictionless Data Package / Data Resource / Tabular Data Resource v1;
-- RO-Crate 1.3 as the preregistered conditional richer comparator.
+The Astra constitutional audit found that the project's historical safeguards remain
+load-bearing, but experiment-only continuation created a structural bias toward serial
+meta-discovery.
 
-Result:
-- Frictionless adds material **generic CSV/resource interoperability** and Table Schema
-  value;
-- it does not replace Atlas release-effect/review/artifact-role semantics;
-- full current package reconstruction requires commit-pinned remote URLs because v1
-  forbids parent local paths;
-- RO-Crate models research-object/provenance structure better but still requires
-  Atlas/domain semantics for the decisive release-safety contract;
-- no mandatory standards layer is justified.
+D-096 therefore changes **scheduling**, not historical methodology:
+- WIP = one active priority, not one mandatory experiment;
+- boundary modes are discovery / execution / consolidation / review-release / maintenance;
+- accepted methods may become operational within scope;
+- cross-batch reconciliation is required before sustained scaling/release;
+- review capacity constrains new intake;
+- BACKLOG owns current priority/mode; active checkpoint owns within-item progress;
+- whole-project complexity includes rules, metadata, standards, automation,
+  documentation and review burden.
 
-**Durable direction:** keep the Atlas manifest authoritative. Permit an optional
-**generated Frictionless adapter** for concrete interoperability/validation needs. Do
-not make Frictionless or RO-Crate mandatory.
+DISC-09 / #253 and PR #254 are parked without a negative methodological verdict.
+Duplicate DISC-08 issue #248 is closed.
 
-**Next discovery candidate:** freeze one bounded **historical place/time interchange
-benchmark** from DISC-05. Test WHG Linked Places Format + PeriodO against one site, one
-changing polity and one fuzzy/community-or-network target. The question is reuse/
-interchange fit only; neither standard may become the owner of historical truth.
+**Next mode after merge: CONSOLIDATION.**
 
-**Current exact action:** merge DISC-08 if CI is green, close #250, then freeze that
-place/time interchange benchmark before execution.
+Open one bounded consolidation item to reconcile post-R1 / EXP-04 / EXP-06 / EXP-07 /
+EXP-08 artifacts into a cumulative **non-canonical research inventory**, checking:
+- duplicate/overlapping target identities;
+- claim revisions/supersession;
+- source identity and independence-group overlap;
+- current review state and publication ceiling;
+- unresolved issues;
+- review/reconciliation capacity before any new intake.
+
+Do **not** turn that reconciliation into canonical v0.6.1 mutation or automatic release.
 
 EXP-08 remains open/paused after 3/4. **Qi — 500 BCE remains frozen/unstarted.**
 

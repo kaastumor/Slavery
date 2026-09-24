@@ -23,23 +23,34 @@ A useful historical problem does not prove a bespoke product is needed. A useful
 does not prove a richer application is needed. A working implementation does not earn
 continued expansion by existing.
 
-## Active-continuity policy
+## Continuation and mode selection
 
-The project is proactive by default.
+The project is proactive, but **activity is not a scheduling requirement**.
 
-After a bounded horizon completes, do not optimize toward idle. Reconcile the evidence and choose the next bounded research/discovery question with the highest expected information gain.
+After a bounded item completes, reconcile the evidence and choose the next justified
+**mode of work**, not automatically the next experiment:
 
-Resource priority:
-1. evidence quality;
-2. focus / question discipline;
-3. project complexity;
-4. execution convenience.
+1. **discovery** — resolve a material uncertainty about method, representation or value;
+2. **execution** — apply an accepted method within its demonstrated scope;
+3. **consolidation** — reconcile overlapping batches, claims, sources and review state;
+4. **review/release** — assemble and gate a coherent candidate;
+5. **maintenance** — preserve, correct or reopen released/settled work on explicit triggers.
 
-Elapsed time or researcher labour alone is not treated as the scarce resource and is not, by itself, a stop rule.
+Choose by contribution to the project goal, evidence quality, focus, review capacity and
+complexity. Elapsed time alone is not a stop rule, but neither is unused time a reason to
+invent work.
 
-Keep WIP at 1. A successor still needs a question, strongest alternative, falsifier, evidence contract and complexity boundary. Prefer real historical/source research over meta-work when both can resolve the uncertainty.
+Keep WIP at **one active priority across workers**. WIP=1 limits concurrency; it does not
+require a continuous chain of experiments.
 
-Stop/reject/simplify/park remain legitimate experiment dispositions. A **no-work** state is justified only when useful evidence work is genuinely blocked, would violate project constraints, or no bounded experiment can materially change belief.
+A method may become **operational within a declared scope** when it supports that task,
+its known failure modes have controls, and no unresolved method question blocks ordinary
+use. Routine execution then uses the method without re-testing its strategic value.
+Reopen only for a demonstrated failure, changed task, consequential scale pressure,
+changed evidence or concrete interoperability/publication need.
+
+A no-work state is legitimate when discovery, execution, consolidation, review/release
+and maintenance are all either complete, unjustified or genuinely blocked.
 
 ## Canonical ownership
 
@@ -47,7 +58,8 @@ For every consequential fact, identify one canonical owner.
 
 Current project ownership is deliberately small:
 
-- execution queue: repository-root `BACKLOG.md`;
+- **current priority + mode:** repository-root `BACKLOG.md`;
+- **within-item unfinished work:** the active protocol/checkpoint;
 - durable task evidence: GitHub issues and pull requests;
 - accepted methodology/architecture decisions: `08_DECISIONS_LOG.md`;
 - assumptions, material risks, value evidence and health decisions: `25_PROJECT_HEALTH.md`;
@@ -55,6 +67,13 @@ Current project ownership is deliberately small:
 - source observations: source/version/raw lineage;
 - reviewed atlas interpretation: reviewed claim/evidence structures;
 - presentation: derived map/API/publication layers.
+
+`README.md` and `01_PROJECT_STATUS.md` are summaries/pointers. They must not own the
+next action or compete with `BACKLOG.md`.
+
+When an accepted amendment changes an operative rule, record **what it supersedes, where
+it applies and its release effect**. Newer prose does not silently override a frozen
+programme/release contract.
 
 Derived layers may reference canonical truth but must not silently become competing truth stores.
 
@@ -64,7 +83,9 @@ For bounded delivery horizons use a lean Kanban-style flow:
 
 `READY -> IN PROGRESS -> PR/REVIEW -> DONE`
 
-Default WIP is **1 active experiment across workers**. Do not start a second work item while the first has an open branch/PR or unresolved repository-caused CI failure.
+Default WIP is **1 active priority across workers**. The item may be discovery, execution,
+consolidation, review/release or maintenance. Do not start a second work item while the
+first has an open branch/PR or unresolved repository-caused CI failure.
 
 ### Definition of Ready
 
@@ -87,7 +108,8 @@ A delivery item is done when:
 - PR is merged;
 - issue is closed;
 - canonical project state is reconciled only when evidence actually changed it;
-- when active state changes, README/current-status/backlog/checkpoint pointers agree before merge.
+- `BACKLOG.md` and the active checkpoint agree before merge when priority/progress changed;
+- summary files are updated only for a material milestone and link back to the canonical owner rather than duplicating the exact next action.
 
 A discovery item is done when the bounded question has durable evidence and one explicit disposition. Discovery completion does not imply production implementation.
 
@@ -129,15 +151,31 @@ Keep epistemically different things explicit:
 
 Never silently promote one evidence class into another.
 
-## Complexity and strongest-baseline rule
+## Complexity budget and strongest-baseline rule
 
-Use the smallest architecture that answers the current question.
+Use the smallest project form that answers the current question.
 
-A new dependency, service, database, queue, vector store, framework or provider needs a concrete failure of the strongest simpler baseline recorded in the relevant issue/decision. Prefer standard/existing repository capabilities first.
+A permanent addition must prevent a demonstrated failure or serve a concrete task better
+than the existing arrangement. This applies to more than software:
 
-The baseline must be competent: specialist literature + notes, ordinary tables/GIS, ordinary search, a strong general-purpose model, and small scripts/notebooks are legitimate competitors.
+- **methodology/rules:** routine cases inherit accepted controls; new mandatory steps need a demonstrated failure;
+- **metadata/schema:** every maintained field owns a distinct information responsibility; derive duplicated information where possible;
+- **standards/adapters:** optional adapters stay optional until a real workflow earns their maintenance;
+- **automation:** each persistent workflow owns one distinct responsibility;
+- **documentation:** one mutable owner per fact; summaries point to it;
+- **review:** new intake must remain within actual reconciliation/review capacity.
 
-If the simpler workflow performs materially as well, record **parity** rather than manufacturing a project advantage.
+A new dependency, service, database, queue, vector store, framework or provider still
+needs a concrete failure of the strongest simpler baseline recorded in the relevant
+issue/decision. Prefer standard/existing repository capabilities first.
+
+The baseline must be competent: specialist literature + notes, ordinary tables/GIS,
+ordinary search, a strong general-purpose model, and small scripts/notebooks are
+legitimate competitors.
+
+If the simpler workflow performs materially as well, record **parity** rather than
+manufacturing a project advantage. Correctness-critical complexity may still be added;
+record why it earns the maintenance cost and what would retire it.
 
 ## Abstraction first refusal and compression
 
@@ -187,11 +225,14 @@ Where relevant use this maturity ladder:
 
 - **idea** — plausible but not relied upon;
 - **experimental** — implemented enough to attack;
+- **operational_for_scope** — accepted for a declared routine task; use it without re-proving method value unless a reopening trigger occurs;
 - **validated_for_view** — safe for bounded analytical/public display with limitations visible;
 - **validated_for_automation** — repeated evidence supports unattended use within the stated scope and failure behaviour;
 - **retired** — disproven, superseded or no longer worth maintaining.
 
-A useful method may remain permanently experimental or view-only.
+A useful method may remain permanently experimental or view-only. An
+`operational_for_scope` method is not universally validated; its scope and reopening
+triggers remain explicit.
 
 ## Discovery lane
 
@@ -288,15 +329,26 @@ Record decisions and deltas, not meeting transcripts.
 
 ## Reconciliation boundary
 
-After a coherent research batch, stop adding cases long enough to reconcile it:
+After a coherent batch, stop adding cases long enough to reconcile it:
 1. synthesize the result, including negative/null findings;
-2. reconcile corpus/taxonomy/abstractions only where earned;
-3. update backlog and current-state pointers;
-4. update assumptions/value evidence only when project-level belief changed;
-5. select the next WIP when continuity requires it;
-6. run one relevant sanitation/CI cycle and merge before continuing from fresh main.
+2. reconcile overlapping target identities, claim revisions, source identities /
+   dependency groups and review states;
+3. reconcile corpus/taxonomy/abstractions only where earned;
+4. update the canonical backlog/checkpoint owners;
+5. assess whether available review/reconciliation capacity can support further intake;
+6. choose the next **mode** under D-096;
+7. run one relevant sanitation/CI cycle and merge before continuing from fresh main.
 
-This prevents both merge-shaped idle and indefinitely growing research branches.
+**Cross-batch reconciliation is required before sustained scaling or release.**
+Experiment-local artifacts may remain useful without automatically becoming one
+cumulative current corpus. Promotion requires an explicit reconciled candidate and
+publication tier.
+
+If review/reconciliation debt is growing faster than it can be closed, finish that work
+before admitting more targets. Internal candidates may remain useful but do not become a
+substitute for deferred review.
+
+This prevents both merge-shaped idle and indefinitely growing research/discovery chains.
 
 ## Capability-bound acceptance
 

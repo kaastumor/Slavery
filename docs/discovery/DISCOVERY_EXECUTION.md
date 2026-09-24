@@ -1,6 +1,6 @@
 # Discovery execution — v4
 
-Status: active under D-091 and D-092. Applies to interactive and scheduled discovery.
+Status: active under D-091, D-092 and D-096. Applies when **discovery is the selected mode** for interactive or scheduled work.
 This is the execution guide; `DISCOVERY_STANDARD_V2.md` retains the value-analysis
 reference. `BACKLOG.md` alone owns the active queue. Historical protocols retain
 their original conditions and results; they do not schedule today's work.
@@ -54,10 +54,15 @@ or an interesting tool is not a transfer argument. Novelty and competitor overla
 are descriptors, not verdicts. Existing solutions may be reused, combined, or serve
 as baselines; a common capability can still earn its place through meaningful value.
 
-Choose one next experiment by decision importance, uncertainty, discriminatory
-power, access feasibility and added complexity. Explain the tradeoff in a paragraph;
-do not invent numerical information-gain scores. No viable experiment is a legitimate
-finding with its blocker/reopening condition; do not manufacture work to avoid it.
+At a horizon boundary, **first compare modes** under D-096: discovery, execution,
+consolidation, review/release, maintenance, or no justified work. Discovery wins only
+when a material decision remains uncertain and an experiment can change it.
+
+If discovery is selected, choose one experiment by decision importance, uncertainty,
+discriminatory power, access feasibility and added complexity. Explain the tradeoff in a
+paragraph; do not invent numerical information-gain scores. No viable experiment is a
+legitimate finding with its blocker/reopening condition; do not manufacture work to
+avoid it.
 
 When a proposed result would create a new category, field, class or durable abstraction,
 apply **first refusal** before testing or implementation: name the causal/information
@@ -149,12 +154,14 @@ Adjacent lead or reopening trigger, only if material:
 Update the backlog's next action only when it changes. Use the decision log for
 accepted durable changes and Project Health for changed risks/value evidence.
 Do not build parallel ledgers. A research chunk can merge while its issue stays open.
-Close only after its acceptance conditions hold. Then select one bounded successor
-under D-088; do not turn experiment completion into either automatic idle or scope growth.
+Close only after its acceptance conditions hold. Then return to the D-096 boundary and
+select the next justified **mode**, not automatically a successor experiment.
 
-Before merge, reconcile any current-state pointer affected by the work: README,
-subordinate status snapshot, backlog and active checkpoint must not point at superseded
-WIP. Historical snapshots may stay historical if explicitly labelled as such.
+Before merge, reconcile the canonical mutable owners affected by the work:
+`BACKLOG.md` for priority/mode and the active checkpoint for within-item progress.
+README/status snapshots update only at material milestones and must point to those
+owners rather than duplicate the exact next action. Historical snapshots may stay
+historical if explicitly labelled as such.
 
 Batch a coherent PR after local verification; use existing scoped CI. No dispatch
 or rerun just to record progress. At consequential direction changes, or after several

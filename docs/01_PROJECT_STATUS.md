@@ -1,22 +1,21 @@
 # Current Project Status
 
-For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issues/PRs and current CI override this snapshot.
+For current priority and mode, use repository-root `BACKLOG.md`. This file is a durable
+state snapshot only and does **not** schedule work. GitHub `main`, open issues/PRs and
+current CI override this snapshot.
 
 **Status date:** 2026-09-25  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE DISCOVERY HORIZON — #250 / DISC-08 result ready; WIP 1**
+**Execution state:** **MODE TRANSITION — D-096; consolidation is next after merge**
 
-## Current execution order
+## Current durable state
 
-Active:
-1. **#250 / DISC-08 — portable-package interoperability benchmark.** Result:
-   **NARROW REUSE**. Frictionless adds a useful standards-level resource/CSV schema
-   adapter but does not replace the Atlas manifest; RO-Crate improves research-object
-   provenance representation but is not justified as a mandatory layer. After merge,
-   freeze a bounded WHG Linked Places Format + PeriodO interchange benchmark.
-   EXP-08 remains open/paused after 3/4; Qi — 500 BCE is frozen/unstarted.
-   Discovery execution: `docs/discovery/DISCOVERY_EXECUTION.md`.
+- historical safeguards/methodology remain unchanged;
+- D-096 changes only continuation/governance: choose the next mode, not automatically another experiment;
+- DISC-09 is parked without a negative result;
+- next mode is cross-batch consolidation; exact current action is owned by `BACKLOG.md`;
+- EXP-08 remains open/paused after 3/4; Qi — 500 BCE remains frozen/unstarted.
 
 Recently completed:
 1. #229 / EXP-07 — **PASS WITH ONE HOLD**; 7 QUALIFIED_C1_READY, Kalabhra 500 CE held.
