@@ -10,10 +10,11 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 ## Current execution order
 
 Active:
-1. **#240 / DISC-06 — inference-chain stress test.** Six already-reviewed correction
-   cases are frozen as exposed regression material. The experiment compares the current
-   portable packet with a minimal CRMinf/FPO-inspired inference ledger using a
-   preregistered success/failure threshold. No new historical research is allowed.
+1. **#240 / DISC-06 — inference-chain stress test.** Execution is complete:
+   **REJECT DURABLE EXTENSION**. The minimal ledger improved scanability but added no
+   material reconstructibility/revision-impact information across the six tested
+   correction mechanisms. A richer result would require an unearned assertion/factoid
+   layer. Next discovery candidate is the coverage/evidence-gap audit.
    EXP-08 remains open/paused after 3/4; Qi — 500 BCE is frozen/unstarted.
    Discovery execution: `docs/discovery/DISCOVERY_EXECUTION.md`.
 
