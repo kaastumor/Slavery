@@ -93,7 +93,7 @@ function renderCandidate(candidate: CandidateBundle): void {
 
 async function boot(): Promise<void> {
   try {
-    const [candidate] = await Promise.all([loadCandidate(), new Promise<void>((resolve) => map.once("load", resolve))]);
+    const [candidate] = await Promise.all([loadCandidate(), new Promise<void>((resolve) => map.once("load", () => resolve()))]);
     map.addSource("neutral-land", { type: "geojson", data: LAND_URL });
     map.addLayer({ id: "neutral-land-fill", type: "fill", source: "neutral-land", paint: { "fill-color": "#eee8dc", "fill-opacity": 1 } });
     map.addLayer({ id: "neutral-land-line", type: "line", source: "neutral-land", paint: { "line-color": "#777e78", "line-width": 0.75 } });
