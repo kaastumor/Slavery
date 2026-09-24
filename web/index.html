@@ -14,7 +14,7 @@
     <div id="app">
       <header class="appbar">
         <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><div class="eyebrow">Historical evidence atlas</div><h1>Historical Slavery Atlas</h1></div></div>
-        <div class="timeline"><div class="timeline-topline"><label class="timeline-label" for="year">Year</label><output id="year-label" for="year" aria-live="polite">Loading…</output></div><input id="year" type="range" step="1" aria-label="Historical year" aria-describedby="timeline-help" /><div id="timeline-range" class="timeline-range"></div><span id="timeline-help" class="visually-hidden">Use the arrow keys to change the historical year. The evidence list updates for the selected year.</span></div>
+        <div class="timeline"><div class="timeline-topline"><label class="timeline-label" for="year">Frozen anchor</label><output id="year-label" for="year" aria-live="polite">Loading…</output></div><input id="year" type="range" step="1" aria-label="Frozen research anchor" aria-describedby="timeline-help" /><div id="timeline-range" class="timeline-range"></div><span id="timeline-help" class="visually-hidden">Use the arrow keys to move between discrete frozen research anchors. An anchor does not imply exact-year historical evidence; each reviewed record shows its temporal support precision.</span></div>
         <div class="app-status"><div id="release-badge" class="release-badge">Loading candidate…</div><div id="status" class="status" role="status">Loading evidence…</div></div>
       </header>
       <main class="workspace">
@@ -36,19 +36,6 @@
         <aside id="panel" class="panel" aria-label="R1 candidate evidence" aria-live="polite" tabindex="-1"><div class="panel-loading">Loading R1 candidate…</div></aside>
       </main>
     </div>
-    <script>
-      (() => {
-        const slider = document.querySelector("#year"); const yearLabel = document.querySelector("#year-label");
-        if (!(slider instanceof HTMLInputElement) || !(yearLabel instanceof HTMLOutputElement)) return;
-        let initialized = false;
-        const requestedYear = () => { const raw = new URL(window.location.href).searchParams.get("year"); if (raw === null || !/^-?\d+$/.test(raw)) return null; return Number(raw); };
-        const applyUrlYear = () => { const year = requestedYear(); if (year === null) return; const min = Number(slider.min); const max = Number(slider.max); if (!Number.isFinite(min) || !Number.isFinite(max) || min >= max) return; const bounded = Math.min(max, Math.max(min, year)); if (Number(slider.value) !== bounded) { slider.value = String(bounded); slider.dispatchEvent(new Event("input", { bubbles: true })); } };
-        const initializeFromUrl = () => { if (initialized || yearLabel.textContent === "Loading…") return; initialized = true; applyUrlYear(); };
-        new MutationObserver(initializeFromUrl).observe(yearLabel, { childList: true, characterData: true, subtree: true });
-        slider.addEventListener("input", () => { if (!initialized) return; const url = new URL(window.location.href); url.searchParams.set("year", slider.value); window.history.replaceState({ ...window.history.state, atlasYear: Number(slider.value) }, "", url); });
-        window.addEventListener("popstate", applyUrlYear); initializeFromUrl();
-      })();
-    </script>
     <script type="module" src="/src/mvp.ts"></script>
   </body>
 </html>
