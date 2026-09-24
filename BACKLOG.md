@@ -14,8 +14,8 @@ This file answers **what is justified to work on next**.
 **Parent programme:** #159  
 **MVP parent:** #174  
 **Technical gate:** #182  
-**Decision:** D-081  
-**Current stage:** **R1.8 — sponsor usability + publish / hold / rework decision**
+**Decisions:** D-081, D-083  
+**Current stage:** **R1.8 — sponsor release/no-release gate (#203) ACTIVE**
 
 R1.7 has produced the intended small technical MVP candidate:
 
@@ -52,34 +52,40 @@ v0.6.1 remains canonical.
 - sponsor/browser usability acceptance is still required;
 - current public preview remains the legacy non-canonical demonstration until an explicit release decision.
 
-## Next release action
+## Next release action — #203 only
 
 Do **not** expand the MVP before review.
 
-Next release sequence:
-1. sponsor/browser usability review of the technical candidate;
-2. record concrete defects only;
-3. make explicit R1.8 **PUBLISH / HOLD / REWORK** decision;
-4. canonical/public promotion remains separate from technical MVP completion.
+Active sequence:
+1. run the sponsor usability/release review in `docs/mvp/r1.8-sponsor-review.md`;
+2. record concrete release-blocking defects only;
+3. choose exactly one R1.8 disposition:
+   - **PUBLISH_CANDIDATE**;
+   - **HOLD_NO_RELEASE**;
+   - **REWORK**;
+4. if PUBLISH_CANDIDATE or HOLD_NO_RELEASE: close #159;
+5. if REWORK: keep #159 open, fix only gate defects, rerun #203.
 
-## Discovery lane — external value test active
+Canonical/public promotion remains separate. v0.6.1 remains canonical.
+
+## Discovery lane — protocol frozen, execution sequenced after R1.8
 
 Parent: #183.  
 Method: D-082 / `docs/discovery/DISCOVERY_STANDARD_V2.md`.
 
-Completed:
+Completed/parked:
 - #184 richer timeline — **REJECT NOW**;
 - #198 corrected wide-lens reassessment — **COMPLETE**;
 - #185 search/filter — **PARK**;
 - #186 dependency visualization — **PARK the visualization; audit problem retained**;
 - #187 dedicated comparison view — **PARK**.
 
-Active:
-- **#200 — EXP-01 external expert audit crossover — RUN EXPERIMENT / participant execution blocked on real external reviewers.**
+Prepared:
+- **#200 — EXP-01 external expert audit crossover — protocol frozen; participant execution waits on #203.**
+
+Recruitment feasibility may proceed in parallel, but no participant case task should run against a potentially superseded R1 packet.
 
 The experiment asks whether the structured Atlas evidence packet improves safety-critical claim review and provenance reconstruction over a competent ordinary source-note/table baseline.
-
-Protocol can be prepared autonomously. Execution may not substitute model/sponsor self-evaluation for external behaviour.
 
 No production feature implementation is authorized.
 
