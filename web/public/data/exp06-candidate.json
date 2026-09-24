@@ -17,7 +17,7 @@
     "visual_intensity_from_source_counts": false
   },
   "non_absence_rule": "Under-review, researched-inconclusive, unresolved, missing or genre-limited evidence is never rendered as historical absence.",
-  "publication_state": "candidate_noncanonical_pending_gate",
+  "publication_state": "published_candidate_noncanonical",
   "review_scope": "internal_research_only_not_independent_historical_review",
   "schema": "historical-slavery-atlas.exp06-candidate.v1",
   "source_historical_commit": "16906affed159722cf940e6723401c7ab4e5d9f4",
