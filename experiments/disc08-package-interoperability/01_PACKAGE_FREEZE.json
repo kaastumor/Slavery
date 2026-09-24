@@ -1,0 +1,104 @@
+{
+  "experiment": "DISC-08",
+  "issue": 250,
+  "stage": "package_and_discriminator_frozen_before_descriptor_construction",
+  "frozen_on": "2026-09-25",
+  "base_commit": "d567f25dfcb0efeda2eed8f4be7d5cc0a921a960",
+  "historical_subject_research_allowed": false,
+  "descriptor_construction_started": false,
+  "subject": {
+    "candidate_id": "exp06-candidate-v1",
+    "root": "experiments/exp06-balanced-evidence/candidate",
+    "canonical_historical_release": "v0.6.1",
+    "status": "noncanonical_publish_candidate_approved",
+    "source_historical_commit": "16906affed159722cf940e6723401c7ab4e5d9f4",
+    "candidate_directory_git_blobs": {
+      "README.md": "7706deeb81ecf75f1d2c93b712f18629e5f97891",
+      "manifest.json": "12c0c760657e70f63ffa2b08a50a135515559b2d",
+      "QC_SUMMARY.md": "00ae99ad4dc19ebe2f86060f2b0c48529a2a203d",
+      "REVIEW_DECISION.md": "e09c74f31d44394d1bb629a0acba7d25f8f50dc3",
+      "UNRESOLVED_ISSUES.md": "0138db0d16f7fbb8a1b3bec1c960769d0021a403",
+      "targets_extended.csv": "4190a7a23744375e47d945aa3007ada2c7f230c4",
+      "source_relations.csv": "776604b1d39f7a135081a3d7841e289847b18246"
+    },
+    "linked_artifact_git_blobs": {
+      "../RESULT.md": "e9e4cb8bfa16b5f96ff3e7ed3eb85ce261a515b9",
+      "../CHECKPOINT.md": "1ab0a5723aad9c6c650b5a4fc3c339cb641fc43c",
+      "../../../web/public/data/exp06-candidate.json": "704455921ee4decccf77ff685d84432688e6a382"
+    },
+    "manifest_sha256_artifacts": [
+      {
+        "path": "README.md",
+        "sha256": "885343060efb91e1d673aee2ffe37f56284e60dbace2386e3cd05f2bdbcada8e",
+        "role": "candidate_readme"
+      },
+      {
+        "path": "QC_SUMMARY.md",
+        "sha256": "9823ccb9eab8555ea176ec08882664e7d052a9a5e3053a0e666458175a1b82d8",
+        "role": "qc_summary"
+      },
+      {
+        "path": "UNRESOLVED_ISSUES.md",
+        "sha256": "ab88bfe394a1bdb9e166698b9fff8411573e39124dba506c994f1d83d3077cd3",
+        "role": "unresolved_issues"
+      },
+      {
+        "path": "REVIEW_DECISION.md",
+        "sha256": "43b24ff2c6f75a74f736e4f07b8ff770a70948ca0259c149d7d743a67981c2c0",
+        "role": "release_gate_decision"
+      },
+      {
+        "path": "targets_extended.csv",
+        "sha256": "2993bf86f2e6904fd36611a020c3796c8de921d8654e9459150603bef54f1978",
+        "role": "portable_targets"
+      },
+      {
+        "path": "source_relations.csv",
+        "sha256": "97c0b7a3458817d379055c4d9afaad936e201261f325830e7832129eceac45db",
+        "role": "portable_source_relations"
+      },
+      {
+        "path": "../RESULT.md",
+        "sha256": "e0687e1bdc57a87a7df6078ba4f7884aa8da451da7f666d0c2f6d4facd0049e7",
+        "role": "research_result"
+      },
+      {
+        "path": "../CHECKPOINT.md",
+        "sha256": "ffd37fc3d30d651eb5a9332a9e0cfc263a7ba3b677ef7624eecc178bf3e8d21e",
+        "role": "research_checkpoint"
+      },
+      {
+        "path": "../../../web/public/data/exp06-candidate.json",
+        "sha256": "9e484c8f9fd9d207099b69f58ac68363771a30daf07984cd234982dec904f523",
+        "role": "browser_candidate_bundle"
+      }
+    ]
+  },
+  "standards": {
+    "frictionless": {
+      "data_package_version": "1",
+      "data_resource_version": "1",
+      "tabular_data_resource_version": "1",
+      "urls": [
+        "https://specs.frictionlessdata.io/data-package/",
+        "https://specs.frictionlessdata.io/data-resource/",
+        "https://specs.frictionlessdata.io/tabular-data-resource/"
+      ],
+      "accessed_on": "2026-09-25"
+    },
+    "ro_crate": {
+      "version": "1.3",
+      "status": "Recommendation / current long-term release at freeze time",
+      "published": "2026-06-22",
+      "permalink": "https://w3id.org/ro/crate/1.3",
+      "accessed_on": "2026-09-25",
+      "execution": "conditional_only"
+    }
+  },
+  "discriminator": {
+    "adopt_reuse": "material generic validation/interoperability gain with all safety-critical semantics preserved at less or comparable custom maintenance",
+    "narrow_reuse": "material tabular-boundary gain only; package-level manifest not replaced",
+    "reject_default": "duplication, semantic loss, or custom extensions erase interoperability gain",
+    "ro_crate_authorized": "only if Frictionless fails specifically on research-object/provenance structure and RO-Crate could change the final standards decision"
+  }
+}

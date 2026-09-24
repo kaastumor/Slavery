@@ -65,7 +65,7 @@ A missing claim must never be rendered as a historical negative.
 - R1 completed with **HOLD_NO_RELEASE**; its repaired candidate remains a frozen internal reference rather than a public/canonical promotion.
 - EXP-02 showed that the frozen R1 safety/reconstructibility contract survives in a portable package manifest + flat target/source tables + optional Markdown packets.
 - That portable form is an architectural/release-boundary result, **not** a canonical schema migration.
-- Current execution state is **project discovery**. DISC-07 / #245 is complete and closed with a narrow surviving rule: future broad target-frame claims require a joint chronology × broad-frame-family QA check because marginal coverage gates can hide interaction concentration. The next bounded discovery question is a portable-package interoperability benchmark using Frictionless Data Package as the simplest baseline. EXP-08 remains paused after 3/4 and Qi — 500 BCE remains frozen/unstarted. Preservation/idle is no longer the default successor state; after each bounded horizon the project selects the next highest-information research/discovery question while keeping WIP=1, evidence quality high and complexity bounded.
+- Current execution state is **project discovery** under #250 / DISC-08. The exact EXP-06 non-canonical candidate package, Frictionless v1 baseline and fixed discriminator are frozen before descriptor construction; RO-Crate 1.3 is authorized only as a conditional richer comparator. EXP-08 remains paused after 3/4 and Qi — 500 BCE remains frozen/unstarted. Preservation/idle is no longer the default successor state; after each bounded horizon the project selects the next highest-information research/discovery question while keeping WIP=1, evidence quality high and complexity bounded.
 
 ## Active-continuity rule
 
@@ -73,7 +73,7 @@ Elapsed time is not treated as the scarce resource. The scarce resources are evi
 
 A completed horizon should not automatically return the project to idle. Unless genuinely blocked, select one next bounded experiment by expected information gain, preregister it, and continue. Stopping/simplifying/rejecting remain valid evidence outcomes, not default scheduling policy.
 
-Current active experiment: **none executing yet; next action is to freeze the portable-package interoperability benchmark**.
+Current active experiment: **#250 / DISC-08 portable-package interoperability benchmark**.
 
 ## Non-negotiable principles
 
