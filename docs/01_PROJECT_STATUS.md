@@ -5,12 +5,15 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-24  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE EVIDENCE HORIZON — #211 / EXP-03 heterogeneous evidence stress test; WIP 1**
+**Execution state:** **ACTIVE EVIDENCE HORIZON — #213 / EXP-04 blind frontier research tranche; WIP 1**
 
 ## Current execution order
 
 Active:
-1. **#211 / EXP-03 — heterogeneous evidence stress test.**
+1. **#213 / EXP-04 — blind frontier research tranche.**
+
+Most recent completed evidence horizon:
+- #211 / EXP-03 — **CORE REQUIRES EXTENSION**; merged via #212. D-089 adds historical-term/category mapping and source-role/claim-fitness to the portable experimental contract.
 
 Completed:
 1. R1 — **HOLD_NO_RELEASE**.
