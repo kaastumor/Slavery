@@ -5,6 +5,7 @@ on:
     paths:
       - "web/**"
       - "programmes/r1/**"
+      - "tests/test_r1_mvp*.py"
       - ".github/workflows/web-mvp.yml"
 
 jobs:
