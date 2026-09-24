@@ -213,7 +213,7 @@ Neutral land remains neutral.
 
 English-language scholarship was reviewed. Sumerian transliterations and available
 English translations/editions were inspected, but no independent Assyriological
-translation was performed. Neumann's full chapter PDF and Adams's full HTML article
+translation was performed. Relevant pages of Neumann's chapter PDF and Adams's full HTML article
 were read. Molina's indexed full-text edition and CDLI bibliographic record were
 read. Pottorf's peer-reviewed repository abstract was read; its PDF download was
 rate-limited in-session. Bartash's peer-reviewed article abstract was read. Lafont's
