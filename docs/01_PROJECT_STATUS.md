@@ -5,16 +5,15 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-24  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE EVIDENCE HORIZON — #232 / EXP-08 cross-frame historical evidence tranche; WIP 1**
+**Execution state:** **ACTIVE DISCOVERY HORIZON — #240 / DISC-06 inference-chain stress test; WIP 1**
 
 ## Current execution order
 
 Active:
-1. **#238 / DISC-05 — external adjacency scan.** External research compared argument/
-   inference provenance, research-object packaging, historical place/time interchange,
-   evidence-gap/uncertainty practice, source annotations and living-review maintenance.
-   The strongest successor is a bounded inference-chain stress test using already
-   researched correction cases.
+1. **#240 / DISC-06 — inference-chain stress test.** Six already-reviewed correction
+   cases are frozen as exposed regression material. The experiment compares the current
+   portable packet with a minimal CRMinf/FPO-inspired inference ledger using a
+   preregistered success/failure threshold. No new historical research is allowed.
    EXP-08 remains open/paused after 3/4; Qi — 500 BCE is frozen/unstarted.
    Discovery execution: `docs/discovery/DISCOVERY_EXECUTION.md`.
 
