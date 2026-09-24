@@ -9,66 +9,70 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE R1.7 / MVP — crystallize the surviving core
+# ACTIVE R1.8 / POST-MVP — technical candidate ready; release decision pending
 
-**Parent programme:** #159
-**R1.6 QC:** #172
-**Decision:** D-080
-**Current stage:** **R1.7 — MVP v0.1 candidate release + boring Atlas surface**
+**Parent programme:** #159  
+**MVP parent:** #174  
+**Technical gate:** #182  
+**Decision:** D-081  
+**Current stage:** **R1.8 — sponsor usability + publish / hold / rework decision**
 
-R1.6 passes with explicit unresolved limitations.
+R1.7 has produced the intended small technical MVP candidate:
 
-The project is no longer expanding historical subject research.
+> **deterministic R1 candidate package + neutral world map + explicit geometry/research states + compact evidence register + discrete temporal guards**
 
-The MVP is the smallest artifact that preserves the surviving value:
+## Technical MVP state
 
-> **immutable R1 candidate package + neutral world map + explicit geometry/research states + compact evidence register**
-
-## Frozen evidence core
-
-- 77 frozen targets;
+- 77 frozen targets preserved;
 - 19 reviewed C1;
-- 15 planned-C1 but intentionally unresearched;
+- 5 bounded-supported;
+- 14 inconclusive;
+- 15 planned/unresearched C1;
 - 2 held;
 - 41 C0-only;
 - 45 source relations;
 - 37 independence groups;
-- v0.6.1 remains canonical until R1.8.
+- no live evidence API required;
+- no production database/backend migration;
+- no new historical subject research;
+- no P-level/intensity derivation.
 
-## MVP rules
+Technical disposition: **TECHNICAL_MVP_CANDIDATE**.
 
-- read-only/static by default;
-- no production database migration;
-- no new backend/service/search stack;
-- no target substitution or new subject research;
-- neutral world land always visible;
-- geometry may remain unresolved;
-- unresearched/inconclusive/held != absence;
-- review state and language/access limitations visible;
-- temporal display uses R1.6 render guards;
-- compact evidence register is the primary truth surface; map is navigation.
+Durable gate: `docs/mvp/v0.1-release-check.md`.
 
-## Delivery order
+v0.6.1 remains canonical.
 
-Parent: **#174 — MVP v0.1**
+## Explicit limitations before R1.8
 
-Fixed serial MVP queue:
+- all 77 target geometries remain unresolved rather than guessed;
+- neutral Natural Earth land is still a runtime external static asset;
+- no independent historical review;
+- language/access coverage varies by row;
+- sponsor/browser usability acceptance is still required;
+- current public preview remains the legacy non-canonical demonstration until an explicit release decision.
 
-1. #175 — frontend reproducibility and build lock
-2. #176 — deterministic static candidate bundle
-3. #177 — explicit geometry representation manifest
-4. #178 — static candidate as default web data path
-5. #179 — research-state map / overview semantics
-6. #180 — compact evidence register / target detail
-7. #181 — temporal truth rendering guard
-8. #182 — technical MVP gate / release-candidate handoff
+## Next release action
 
-The worker completes at most one atomic issue per run, WIP=1, with green CI before merge.
+Do **not** expand the MVP before review.
 
-After #182 records **TECHNICAL_MVP_CANDIDATE**, discovery parent #183 opens the evidence-only queue:
-#184 -> #185 -> #186 -> #187.
+Next release sequence:
+1. sponsor/browser usability review of the technical candidate;
+2. record concrete defects only;
+3. make explicit R1.8 **PUBLISH / HOLD / REWORK** decision;
+4. canonical/public promotion remains separate from technical MVP completion.
 
-Discovery issues produce dispositions, not production features.
+## Discovery lane now eligible
+
+Parent: #183.
+
+Evidence-only order:
+1. #184 — timeline interaction vs discrete-anchor baseline;
+2. #185 — search/filter value;
+3. #186 — source-dependency visualization value;
+4. #187 — cross-case comparison value.
+
+Discovery does not authorize production implementation. A later delivery issue is required for any feature that actually beats the boring MVP baseline.
 
 ---
 
