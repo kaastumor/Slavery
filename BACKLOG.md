@@ -62,19 +62,22 @@ Next release sequence:
 3. make explicit R1.8 **PUBLISH / HOLD / REWORK** decision;
 4. canonical/public promotion remains separate from technical MVP completion.
 
-## Discovery lane now eligible
+## Discovery lane — value-before-novelty reset active
 
-Parent: #183.
+Parent: #183.  
+Method correction: D-082 / #198.
 
-Evidence-only order:
-1. #184 — timeline interaction vs discrete-anchor baseline — **REJECTED**;
-2. #185 — search/filter value — **NEXT**;
-3. #186 — source-dependency visualization value;
-4. #187 — cross-case comparison value.
+Current order:
+1. #198 — corrected wide-lens / alternative-landscape / value reassessment — **ACTIVE**;
+2. #185 — search/filter — **BLOCKED pending #198**;
+3. #186 — source-dependency visualization — **BLOCKED pending #198**;
+4. #187 — cross-case comparison — **BLOCKED pending #198**.
 
-DISC-01 found no material advantage for richer/continuous timeline interaction. The current discrete-anchor + temporal-precision baseline survives. Cross-anchor comparison friction is preserved for #187 rather than used to justify a timeline.
+#184 richer timeline is complete: **REJECT NOW** under current evidence. Its conclusion remains valid because the rejection rests on relative task value and false-precision risk, not on competitor overlap.
 
-Discovery does not authorize production implementation. A later delivery issue is required for any feature that actually beats the boring MVP baseline.
+The reset reconstructs jobs and realistic alternatives before deciding whether the remaining feature ideas deserve experiments.
+
+Discovery does not authorize production implementation. Desk research cannot promote a feature.
 
 ---
 
