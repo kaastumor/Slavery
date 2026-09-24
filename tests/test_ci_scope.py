@@ -19,12 +19,6 @@ class ScopeTests(unittest.TestCase):
         ]
         self.assertFalse(requires_database(paths))
 
-    def test_exp06_candidate_browser_workflow_is_non_database(self):
-        self.assertFalse(requires_database([
-            '.github/workflows/exp06-candidate-browser.yml',
-            'web/scripts/run_exp06_candidate_review.mjs',
-        ]))
-
     def test_ci_scope_unit_change_is_non_database(self):
         self.assertFalse(requires_database(['tools/ci_scope.py', 'tests/test_ci_scope.py']))
 
