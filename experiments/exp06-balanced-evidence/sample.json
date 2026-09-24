@@ -1,0 +1,50 @@
+{
+  "experiment_id": "EXP-06",
+  "frozen_at": "2026-09-24",
+  "canonical_effect": "none",
+  "selection_rule": "already frozen R1 planned_c1_unresearched_ready targets not covered by EXP-04; globally balanced evidence growth; no substitution after subject research begins",
+  "targets": [
+    {
+      "order": 1,
+      "target_id": "R1:L:500:F",
+      "target_label": "Chámpa",
+      "anchor": "500 CE",
+      "frozen_frame": "polity"
+    },
+    {
+      "order": 2,
+      "target_id": "R1:P:-500:E:r1",
+      "target_label": "Magadha – Haryanka dynasty",
+      "anchor": "500 BCE",
+      "frozen_frame": "dynastic_polity"
+    },
+    {
+      "order": 3,
+      "target_id": "R1:P:1300:A:r1",
+      "target_label": "Later Mayan City-States",
+      "anchor": "1300 CE",
+      "frozen_frame": "polity_aggregate"
+    },
+    {
+      "order": 4,
+      "target_id": "R1:N:mongol_yam_1300",
+      "target_label": "Mongol Yam/postal network",
+      "anchor": "1300 CE",
+      "frozen_frame": "mobile_network"
+    },
+    {
+      "order": 5,
+      "target_id": "R1:N:yaghan_1800",
+      "target_label": "Yaghan communities, Tierra del Fuego",
+      "anchor": "1800 CE",
+      "frozen_frame": "region_community"
+    },
+    {
+      "order": 6,
+      "target_id": "R1:P:1300:F:r1",
+      "target_label": "Khmer Empire",
+      "anchor": "1300 CE",
+      "frozen_frame": "polity"
+    }
+  ]
+}
