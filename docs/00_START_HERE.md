@@ -65,7 +65,15 @@ A missing claim must never be rendered as a historical negative.
 - R1 completed with **HOLD_NO_RELEASE**; its repaired candidate remains a frozen internal reference rather than a public/canonical promotion.
 - EXP-02 showed that the frozen R1 safety/reconstructibility contract survives in a portable package manifest + flat target/source tables + optional Markdown packets.
 - That portable form is an architectural/release-boundary result, **not** a canonical schema migration.
-- Current execution state is preservation/idle: no R2, feature queue, geometry-completion programme or external-user experiment is authorized automatically.
+- Current execution state is **active evidence research** under #211 / EXP-03. Preservation/idle is no longer the default successor state; after each bounded horizon the project selects the next highest-information research/discovery question while keeping WIP=1, evidence quality high and complexity bounded.
+
+## Active-continuity rule
+
+Elapsed time is not treated as the scarce resource. The scarce resources are evidence quality, focus and project complexity.
+
+A completed horizon should not automatically return the project to idle. Unless genuinely blocked, select one next bounded experiment by expected information gain, preregister it, and continue. Stopping/simplifying/rejecting remain valid evidence outcomes, not default scheduling policy.
+
+Current active experiment: **#211 / EXP-03 heterogeneous evidence stress test**.
 
 ## Non-negotiable principles
 
