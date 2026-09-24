@@ -5,6 +5,8 @@ on:
     paths:
       - "web/**"
       - "programmes/r1/**"
+      - "experiments/exp04-blind-frontier/**"
+      - "tools/build_exp04_research_preview.py"
       - "tests/test_r1_mvp*.py"
       - ".github/workflows/web-mvp.yml"
 
@@ -23,6 +25,11 @@ jobs:
           sha256sum web/public/data/r1-mvp-candidate.json > /tmp/candidate.sha256
           python programmes/r1/build_mvp_candidate_bundle.py
           sha256sum --check /tmp/candidate.sha256
+
+      - name: Verify EXP-04 research preview bundle
+        run: |
+          python tools/build_exp04_research_preview.py --check
+          sha256sum web/public/data/exp04-research-preview.json
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
