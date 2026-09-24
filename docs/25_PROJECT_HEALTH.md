@@ -1075,3 +1075,57 @@ Open the post-MVP discovery lane for evidence-only experiments.
 In parallel, require sponsor usability review before R1.8 makes an explicit **PUBLISH / HOLD / REWORK** decision.
 
 A discovery result does not authorize production implementation.
+
+
+### HC-017 — DISC-01 richer timeline vs discrete-anchor baseline — 2026-09-24
+
+Disposition: **REJECT.**
+
+The first post-MVP discovery run tested whether a richer timeline materially improves temporal interpretation over the technical MVP's discrete frozen anchors plus per-record precision labels.
+
+#### Evidence
+
+The frozen candidate has:
+- 77 targets across 17 discrete research anchors;
+- 19 reviewed C1 rows across 11 anchors;
+- only 1 exact cross-section;
+- 3 period-level positives;
+- 1 near-anchor positive;
+- 13 reviewed selected-year-unknown rows;
+- 1 aggregate with no single territorial selected-year state.
+
+The release does not contain reviewed continuous validity intervals for most claims.
+
+External precedent review reinforces the mismatch:
+- TimelineJS is strongest for short chronological narratives and visible spans require start/end dates;
+- kepler.gl playback assumes timestamped observations and rolling time windows;
+- digital-humanities uncertainty research warns that visually objective displays can hide historical uncertainty.
+
+#### Baseline comparison
+
+Task A — triage reviewed rows at one anchor:
+the existing register already exposes exact / unknown / aggregate temporal state inline. A richer timeline adds no material information or operation reduction.
+
+Task B — compare temporal precision across several anchors:
+a one-screen overview can reduce navigation, but the useful part is cross-case comparison. A simple table exposes the same distinction without invented intervals or timeline machinery.
+
+#### Adversarial result
+
+- period bars would require unsupported start/end inference;
+- point-only timeline marks collapse toward the current anchor/badge baseline;
+- playback suggests continuity/density that the sparse R1 frame does not possess;
+- the only surviving friction belongs more naturally to #187 cross-case comparison.
+
+#### Consequence
+
+Do not create a production timeline delivery issue.
+
+Keep:
+- discrete frozen anchors;
+- temporal precision states;
+- per-record temporal display rules;
+- source-native BCE vs Atlas-internal-year separation.
+
+New evidence could reopen this only if reviewed validity intervals become explicit data or users repeatedly fail a temporal task that discrete anchors plus ordinary comparison cannot solve.
+
+Durable discovery: `docs/discovery/DISC_01_TIMELINE.md`.

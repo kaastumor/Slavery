@@ -67,10 +67,12 @@ Next release sequence:
 Parent: #183.
 
 Evidence-only order:
-1. #184 — timeline interaction vs discrete-anchor baseline;
-2. #185 — search/filter value;
+1. #184 — timeline interaction vs discrete-anchor baseline — **REJECTED**;
+2. #185 — search/filter value — **NEXT**;
 3. #186 — source-dependency visualization value;
 4. #187 — cross-case comparison value.
+
+DISC-01 found no material advantage for richer/continuous timeline interaction. The current discrete-anchor + temporal-precision baseline survives. Cross-anchor comparison friction is preserved for #187 rather than used to justify a timeline.
 
 Discovery does not authorize production implementation. A later delivery issue is required for any feature that actually beats the boring MVP baseline.
 
