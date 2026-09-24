@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 20062)
+Total output lines: 1587
+
 # Historical Slavery Atlas — Project Health
 
 This file holds the **live assumptions register, standing material risks, value evidence and gate-health decisions**. It is not a second backlog.
@@ -535,9 +538,7 @@ The preregistered maintenance requirement was R <=70% of F update surface in >=4
 
 Three shocks yielded no acceptable new source and were later treated as neutral 0/0 rather than savings wins.
 
-Under that interpretation, at most three rows could qualify, so the 4/6 gate became impossible to pass.
-
-Further, each rich F source object and each bare R source link counted as one source/citation atom, making the observed 2-vs-2 updates sensitive to atom granularity.
+Unde…62 tokens truncated… atom granularity.
 
 This does not prove R has favorable long-run maintenance economics. It does mean the maintenance FAIL cannot settle the broader completeness thesis.
 
@@ -1561,3 +1562,27 @@ check. No tranche verdict or contract-extension decision is made from this check
 Actions cost: D-090 narrows expensive runs while preserving relevant checks. No
 measured monetary-saving claim; the removed duplicate and unrelated triggers are
 directly inspectable. Continue #213, WIP 1; canonical/public boundaries unchanged.
+
+## HC-026 — Discovery execution repair — 2026-09-24
+
+**Disposition: CONTINUE + SIMPLIFY execution; retain EXP-04.**
+
+Repository audit found stale #198 scheduling in discovery cadence, candidate status
+on the established v2 guide, and #211 in the subordinate status snapshot. The worker
+also loaded broad historical operating context on every continuation. These are
+current instruction failures; no unseen cross-project review was treated as authority.
+
+D-091 replaces the stale routing, separates historical/method/product gates, provides
+a compact continuation prompt and applies it to the existing Indus checkpoint.
+Value-before-novelty remains; competitor overlap is neither rejection nor validation.
+Adjacency exploration is mechanism-based and does not automatically create delivery work.
+
+The guide passed internal scenario replay including access failure, historical/product
+gate confusion, weak baselines and self-review claims. This is process QA, not proof
+of 5.6 reliability. Evaluate subsequent real continuations for duplicate work, lost
+limitations, incorrect gate promotion and ability to resume the exact next action;
+record failures in the active checkpoint and revise only demonstrated friction.
+
+No new discovery experiment, schema, publication, service or scheduling cadence is
+created. Historical core/corpus remains supported internally; external adoption is
+still unproven. Resume #213's source reconciliation.

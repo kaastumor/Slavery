@@ -1,8 +1,12 @@
 # Discovery Standard v2 — value before novelty
 
-**Applies to:** post-MVP discovery under #183  
-**Introduced by:** #198  
-**Status:** candidate until #198 merges
+**Applies to:** product/workflow value analysis (reference)
+**Introduced by:** #198
+**Status:** retained reference; execution routing superseded by D-091
+
+Use `DISCOVERY_EXECUTION.md` for current work and `RUN_PROMPT.md` for session
+continuation. This value-analysis frame does not impose adoption tests on historical
+evidence research. Its former issue numbers do not schedule work.
 
 ## Principle
 

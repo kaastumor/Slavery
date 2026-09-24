@@ -4,13 +4,14 @@
 
 The canonical project repository is **`kaastumor/Slavery`**. Inspect current `main`, `BACKLOG.md`, open issues/PRs and current CI before relying on chat summaries, remembered context or an older handoff.
 
-Read the project operating layer first:
+For continuation, read repository-root `BACKLOG.md`, the active protocol/checkpoint,
+and `discovery/DISCOVERY_EXECUTION.md`. On first entry also read the charter and
+these project instructions. Read `24_WAY_OF_WORKING.md` for a consequential process
+choice; consult the relevant Project Health entries and decisions when their evidence
+could change the decision. Do not reread the entire archive every run.
 
-1. `23_PROJECT_CHARTER.md`
-2. repository-root `BACKLOG.md`
-3. `24_WAY_OF_WORKING.md`
-4. `25_PROJECT_HEALTH.md`
-5. `automation/hourly-worker.md` when doing scheduled autonomous work
+For a reusable session prompt use `discovery/RUN_PROMPT.md`. Scheduled work also
+uses `automation/hourly-worker.md`. The model setting does not alter evidence gates.
 
 Before data/schema/methodology changes, also read the relevant canonical method/source/data/geography/decision/architecture documents.
 

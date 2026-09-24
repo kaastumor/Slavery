@@ -1,112 +1,26 @@
-# MVP Delivery + Discovery Cadence
+# Delivery and discovery routing
 
-## Why this exists
+Current queue: repository-root `BACKLOG.md`. This file schedules no issue.
+R1 delivery and the #198 reset are historical work; they are not the active runway.
 
-The project has moved from broad exploration to a small validated research/release core.
+Discovery execution: `docs/discovery/DISCOVERY_EXECUTION.md`.
+Reusable session prompt: `docs/discovery/RUN_PROMPT.md`.
+Product-value reference: `docs/discovery/DISCOVERY_STANDARD_V2.md`.
 
-Delivery and discovery remain separate so curiosity cannot silently become product scope.
+Evidence research, method/representation testing and product/workflow value discovery
+have different completion gates. Use the execution guide to choose the right one.
+Keep WIP 1; a completed internal experiment does not establish external adoption.
 
-The technical MVP delivery queue #175–#182 is complete. The active uncertainty is now **external relative value**, not whether more features can be built.
+Delivery implements a separately justified bounded change with explicit acceptance
+criteria, relevant verification and a short-lived PR. A feature candidate has no
+entitlement to delivery because it appeared in an earlier queue or a competitor lacks it.
+An experiment may use a small prototype where needed to discriminate its hypothesis;
+that prototype is not automatically production work.
 
-## Lane A — Delivery
+Promotion requires evidence appropriate to the claimed value, a delivery issue,
+charter-compatible scope, and applicable methodology/release approvals. Preserve
+technical, historical, usability and publication gates as separate decisions.
 
-Purpose: implement only work already earned by stronger evidence.
-
-Rules:
-- WIP 1;
-- atomic GitHub issue;
-- explicit dependency;
-- short-lived branch;
-- PR + green CI;
-- no scope expansion;
-- acceptance evidence required;
-- one worker run completes at most one issue.
-
-There is currently no new product-delivery queue.
-
-R1.8 publication / hold / rework remains a separate release decision after sponsor/browser review.
-
-## Lane B — Discovery
-
-Purpose: reduce uncertainty about **user/job/alternative/relative value**, not accumulate feature ideas.
-
-Canonical method:
-- `docs/discovery/DISCOVERY_STANDARD_V2.md`.
-
-Governing principle:
-
-> **EXISTING ≠ USELESS. DIFFERENT ≠ VALUABLE. NOVEL ≠ DEMANDED. COMPETITION ≠ VALIDATION. EVIDENCE DECIDES.**
-
-Required sequence:
-1. identify user + circumstance + job/progress;
-2. identify the real current alternative, including manual work/non-consumption;
-3. separate novelty from strategic relevance;
-4. formulate relative advantage against that alternative;
-5. distinguish difference / importance / behavioural consequence;
-6. include switching/adoption friction where relevant;
-7. inspect system-level complementarity with the core;
-8. label material evidence OBSERVED / SUPPORTED INFERENCE / HYPOTHESIS / UNKNOWN;
-9. red-team the opportunity;
-10. predeclare the smallest falsifiable experiment.
-
-Rules:
-- no production implementation;
-- baseline first;
-- competitor research establishes alternatives, not automatic rejection or validation;
-- commercial/pricing analysis only when a credible customer/economic model exists;
-- one bounded uncertainty per experiment;
-- prefer behavioural evidence;
-- desk research alone cannot create PROMOTION CANDIDATE;
-- result must reduce uncertainty.
-
-## Current discovery reset
-
-#184 richer timeline is complete and rejected on relative-value / false-precision grounds.
-
-#198 is now the active wide-lens reassessment.
-
-Until #198 closes:
-- #185 search/filter is blocked;
-- #186 source-dependency visualization is blocked;
-- #187 cross-case comparison view is blocked.
-
-The reassessment may keep/rewrite, park or reject those ideas. Existing issue count creates no entitlement to run them.
-
-## Decision states
-
-- REJECT NOW
-- PARK
-- DISCOVERY CANDIDATE
-- RUN EXPERIMENT
-- PROMOTION CANDIDATE
-
-Older discovery terminology remains historical evidence:
-- REJECT ≈ REJECT NOW;
-- PARK = PARK;
-- REVISE ≈ DISCOVERY CANDIDATE;
-- ADOPT_FOR_EXPERIMENT ≈ RUN EXPERIMENT.
-
-## Change control
-
-Even PROMOTION CANDIDATE does **not** directly authorize production implementation.
-
-To move from discovery to delivery:
-1. stronger evidence must identify a concrete baseline failure or meaningful user advantage;
-2. a new bounded delivery issue must be created;
-3. acceptance criteria must state how the change beats the baseline;
-4. project scope/risk must remain compatible with the charter;
-5. if methodology/ontology changes, Decisions Log update is required before canonical adoption.
-
-## Reporting
-
-Discovery completion report:
-- user/job tested;
-- strongest real alternative;
-- evidence labels;
-- critical unknown;
-- red-team result;
-- experiment/disposition;
-- what was removed from scope;
-- next highest-information uncertainty, if any.
-
-Discovery optimizes information gain, not throughput.
+Canonical release and current public preview remain governed by their existing
+release process. Historical experiment constraints remain attached to their records;
+current scheduling follows the backlog and later accepted decisions.

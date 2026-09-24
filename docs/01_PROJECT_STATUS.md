@@ -5,14 +5,17 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-24  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE EVIDENCE HORIZON — #211 / EXP-03 heterogeneous evidence stress test; WIP 1**
+**Execution state:** **ACTIVE EVIDENCE HORIZON — #213 / EXP-04 blind frontier tranche; WIP 1**
 
 ## Current execution order
 
 Active:
-1. **#211 / EXP-03 — heterogeneous evidence stress test.**
+1. **#213 / EXP-04 — blind frontier tranche.** Indus under review; seven unstarted.
+   Resume the source/status reconciliation in the experiment checkpoint.
+   Discovery execution: `docs/discovery/DISCOVERY_EXECUTION.md`.
 
 Completed:
+1. #211 / EXP-03 — **CORE REQUIRES EXTENSION**, accepted as D-089.
 1. R1 — **HOLD_NO_RELEASE**.
 2. #205 / EXP-02 — **PORTABLE CORE SURVIVES + SIMPLIFY CANDIDATE**.
 3. #209 — project-form reassessment — **SIMPLIFY + PRESERVE ATLAS AS VIEW**.
@@ -34,6 +37,10 @@ Execution policy:
 
 Deferred:
 - #200 external expert audit; no recruitment/contact/participant execution.
+
+The sections below preserve earlier state snapshots and decisions. They are not
+current queue instructions; use `BACKLOG.md` and the active protocol/checkpoint
+above for scheduling.
 
 ## Project form after EXP-02
 

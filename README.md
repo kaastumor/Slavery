@@ -15,6 +15,8 @@ Read in this order:
 5. `docs/00_START_HERE.md` — historical methodology entry point
 6. `docs/08_DECISIONS_LOG.md` — durable methodology/architecture decisions
 
+For discovery execution use `docs/discovery/DISCOVERY_EXECUTION.md`; the reusable
+5.6-compatible continuation prompt is `docs/discovery/RUN_PROMPT.md`.
 For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonical runbook.
 
 ## Current state

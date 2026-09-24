@@ -49,7 +49,7 @@ For bounded delivery horizons use a lean Kanban-style flow:
 
 `READY -> IN PROGRESS -> PR/REVIEW -> DONE`
 
-Default WIP is **1 per autonomous worker**. Do not start a second work item while the first has an open branch/PR or unresolved repository-caused CI failure.
+Default WIP is **1 active experiment across workers**. Do not start a second work item while the first has an open branch/PR or unresolved repository-caused CI failure.
 
 ### Definition of Ready
 
@@ -154,6 +154,11 @@ Where relevant use this maturity ladder:
 A useful method may remain permanently experimental or view-only.
 
 ## Discovery lane
+
+Use `discovery/DISCOVERY_EXECUTION.md` for execution and gate selection, and
+`discovery/RUN_PROMPT.md` for continuation. The modes below are search options,
+not a mandatory checklist. Historical evidence, method testing and product value
+require distinct conclusions; no automatic transfer of acceptance between them.
 
 Directed execution is not the only legitimate work. At appropriate boundaries use discovery deliberately:
 
