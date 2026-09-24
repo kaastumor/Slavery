@@ -1282,3 +1282,41 @@ Then run #205.
 Stop and re-evaluate again after #205.
 
 No automatic successor.
+
+
+### HC-021 — R1 final gate: HOLD_NO_RELEASE — 2026-09-24
+
+Decision: **R1 COMPLETE; HOLD THE CANDIDATE WITHOUT PUBLIC PROMOTION.**
+
+The stale committed-candidate defect found by HC-020 was repaired and permanently guarded.
+
+The final R1 artifact is internally coherent and reconstructible.
+
+#### Why the programme closes
+
+R1 achieved its bounded objectives:
+- froze Core Contract v1 behavior;
+- produced systematic C0/C1/selective-C2 research;
+- internally replayed all 19 reviewed C1 rows;
+- passed release QC with explicit limitations;
+- materialized a deterministic static candidate;
+- preserved research/temporal/geometry uncertainty;
+- added stale-artifact regression protection.
+
+#### Why it does not publish
+
+Publication would currently add little evidence while:
+- all 77 historical target geometries are unresolved;
+- independent historical review has not occurred;
+- external involvement is explicitly deferred;
+- the current project question is now internal simplification/portability rather than public adoption.
+
+#### Next boundary
+
+#205 / EXP-02 becomes active against the frozen R1 candidate.
+
+It tests the minimum sufficient evidence packet and boring portable representations.
+
+It cannot establish external value.
+
+No automatic successor follows EXP-02.
