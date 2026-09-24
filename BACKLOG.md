@@ -10,47 +10,39 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# EXP-08 CROSS-FRAME HISTORICAL EVIDENCE — ACTIVE
+# DISC-05 EXTERNAL ADJACENCY SCAN — RESULT READY
 
-**Issue:** #232  
-**Current stage:** SUBJECT RESEARCH — 3 / 4 FROZEN CASES COMPLETE / PAUSE AFTER NOBATIA  
-**Subject slavery/coercion research:** **IN PROGRESS**
+**Issue:** #238  
+**Primary gate:** method / representation discovery  
+**Current stage:** EXTERNAL SCAN COMPLETE / MERGE GATE  
+**Historical subject research:** **PAUSED**
 
-EXP-07 closed with seven QUALIFIED_C1_READY rows and one hold. The post-qualification
-selection compared those seven plus deferred Grand Duchy of Lithuania by expected
-methodological information gain using only frame, chronology, geography and prior
-experiment coverage.
+EXP-08 remains open/paused after 3 of 4 frozen cases. **Qi — 500 BCE remains frozen
+and unstarted**.
 
-Frozen EXP-08 sample:
-- Great Zimbabwe — 1400;
-- Māori communities in Aotearoa — 1700;
-- Nobatia — 500 CE;
-- Qi — 500 BCE.
+DISC-05 compared external precedents against the project's strongest current baseline
+without reopening the old feature queue.
 
-The tranche deliberately spans a node/site, a region/community and two widely
-separated polity/source environments. It avoids selecting all available rows and avoids
-repeating mobile-network/community mechanisms already exercised heavily in EXP-04/06.
+Highest-value findings:
+- **CRMinf + factoid prosopography:** explicit premise → reasoning → conclusion
+  provenance is a credible missing-or-redundant question for the current evidence core;
+- **Evidence/Gap Maps + Seshat:** useful benchmark for research-coverage auditing, with
+  inferred-absence conventions explicitly rejected;
+- **Frictionless Data Package + RO-Crate:** credible standards to benchmark against the
+  custom portable evidence package;
+- **WHG Linked Places + PeriodO:** useful historical place/time interchange precedents;
+- **W3C Web Annotation:** parked until locator-recovery pain is demonstrated;
+- **living-review methods:** support trigger-based claim maintenance rather than blanket
+  recurring literature surveillance.
 
-Great Zimbabwe — 1400 is now **researched-inconclusive for slavery/enslavement and
-Great-Zimbabwe-specific slave-trade participation**, while hierarchy, tribute/extraction,
-dependency/reciprocity and organized collective labor are supported. Connected coastal
-slavery remains contextual and directional only.
+**Selected successor:** one bounded **inference-chain stress test** using existing
+researched cases with known adversarial corrections. Compare the current packet against
+a minimal CRMinf/FPO-inspired inference ledger. A negative result should reject the
+extra abstraction.
 
-Māori communities in Aotearoa — 1700 is now **bounded-supported for pre-contact
-war-captive unfreedom/slavery-category relations**, with exact 1700 distribution,
-prevalence and local status rules across iwi/hapū explicitly unresolved.
-
-Nobatia — 500 CE is now **bounded-supported for royal human/retainer sacrifice near
-the anchor**, while slave status of the victims, polity-wide slaveholding prevalence and
-external slave-trade participation remain unresolved.
-
-Per sponsor priority, stop slavery-evidence expansion after this case. **Qi — 500 BCE
-remains frozen and unstarted**; EXP-08 is paused rather than closed.
-
-**Current exact action after this checkpoint merges:** switch WIP to a bounded
-project-discovery research run focused on adjacent methods, comparable projects and
-decision-relevant opportunities for the Atlas/evidence corpus. Do not resume Qi until
-that discovery horizon is reconciled or the sponsor explicitly redirects back.
+**Current exact action:** merge the DISC-05 scan if CI is green, close #238, then freeze
+the single inference-chain stress test before execution. No slavery-case research and
+no production implementation.
 
 ## Discovery execution
 
