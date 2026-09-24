@@ -411,6 +411,32 @@ h1 {
   text-align: left;
 }
 
+.register-section {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #dedfd9;
+}
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 13px;
+}
+.detail-text {
+  margin: 5px 0 0;
+  color: #4f544d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.abstention-card {
+  background: #faf5ec;
+  border-color: #ddc8a3;
+}
+.nonabsence-note {
+  margin-top: 13px;
+  text-align: left;
+}
+
 .place-list {
   display: grid;
   gap: 8px;
