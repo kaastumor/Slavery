@@ -5,22 +5,22 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-24  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **R1 COMPLETE — HOLD_NO_RELEASE; EXP-02 minimum sufficient evidence packet active; external involvement deferred**
+**Execution state:** **R1 COMPLETE — HOLD_NO_RELEASE; EXP-02 COMPLETE; internal core is portable; no successor authorized**
 
 ## Current execution order
 
-1. **#205 — EXP-02 minimum sufficient evidence packet**
-   - active;
-   - internal-only structural/portability experiment;
-   - frozen input: R1 candidate at `a6987d3f14369c6ea2d7b2b3db74ac65faa8ec57`.
+There is no active delivery or discovery successor.
 
-2. **#200 — external expert audit**
-   - deferred by sponsor;
-   - no recruitment/contact/participant execution.
+Completed:
+1. R1 — **HOLD_NO_RELEASE**.
+2. #205 / EXP-02 — **PORTABLE CORE SURVIVES + SIMPLIFY CANDIDATE**.
 
-3. No R2, feature queue, geometry expansion or new subject-research horizon is authorized.
+Deferred:
+- #200 external expert audit; no recruitment/contact/participant execution.
 
-R1 / #159 is complete with **HOLD_NO_RELEASE**. v0.6.1 remains canonical.
+Do not open R2, a geometry programme, a feature queue or another internal experiment automatically.
+
+The next action is a project-form reassessment from the new evidence.
 
 ## Direction after H2
 

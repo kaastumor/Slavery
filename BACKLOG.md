@@ -14,8 +14,8 @@ This file answers **what is justified to work on next**.
 **Parent programme:** #159  
 **MVP parent:** #174  
 **Technical gate:** #182  
-**Decisions:** D-081, D-083, D-084, D-085  
-**Current stage:** **R1 COMPLETE — HOLD_NO_RELEASE; EXP-02 (#205) is the active internal experiment**
+**Decisions:** D-081, D-083, D-084, D-085, D-086, D-086  
+**Current stage:** **R1 COMPLETE — HOLD_NO_RELEASE; EXP-02 COMPLETE; no automatic successor authorized**
 
 R1.7 has produced the intended small technical MVP candidate:
 
@@ -80,11 +80,23 @@ Completed/parked:
 - #200 external expert audit — **DEFERRED BY SPONSOR**; protocol preserved, no recruitment/contact.
 
 Prepared next internal experiment:
-- **#205 — EXP-02 minimum sufficient evidence packet — ACTIVE against frozen R1 artifact `a6987d3f...`.**
+- **#205 — EXP-02 minimum sufficient evidence packet — COMPLETE: PORTABLE CORE SURVIVES + SIMPLIFY CANDIDATE.**
 
 EXP-02 is subtractive only. It tests field necessity, invariant preservation and portability into boring Markdown/table forms. It does **not** claim user demand or adoption.
 
 No production feature implementation is authorized.
+
+### EXP-02 result
+
+The frozen R1 evidence contract survives in:
+- a package manifest;
+- one flat target table;
+- one flat source-relation table;
+- optional human-readable Markdown packets.
+
+This is an internal structural result only. It does not establish user value.
+
+No successor is authorized. Re-evaluate project form before opening another experiment or delivery horizon.
 
 
 ---

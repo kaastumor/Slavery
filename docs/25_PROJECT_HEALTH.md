@@ -1320,3 +1320,65 @@ It tests the minimum sufficient evidence packet and boring portable representati
 It cannot establish external value.
 
 No automatic successor follows EXP-02.
+
+
+### HC-022 — EXP-02 portable-core result — 2026-09-24
+
+Decision: **PORTABLE CORE SURVIVES + SIMPLIFY CANDIDATE.**
+
+EXP-02 attacked the current R1 packet by removing application-shaped structure while preserving fixed safety/reconstructibility invariants.
+
+#### Main result
+
+The surviving core fits in:
+- one package manifest;
+- one flat target table;
+- one flat source-relation table.
+
+A human-readable Markdown packet also preserves the reviewed-claim distinctions.
+
+The table+manifest representation is about 19% of the current uncompressed candidate JSON size; compact experiment JSON is about 35%.
+
+Size is supporting evidence only, not the decision criterion.
+
+#### Structurally necessary
+
+Preserve:
+- proposition versus abstention;
+- evidence locus versus inference extent;
+- temporal precision independent of selected anchor;
+- law/practice and network/territorial distinctions where present;
+- exact source/version/locator;
+- source-family dependency;
+- language/access limitation;
+- coverage confidence;
+- non-absence research states.
+
+#### Safe simplification in frozen R1
+
+- row-level review state is uniform and can be hoisted;
+- target geometry state is uniformly unresolved and can be a package default with zero overrides;
+- Atlas internal astronomical year is application machinery when explicit source anchor + temporal display rule survive;
+- detailed unresolved-geometry provenance is not required by the minimum evidence packet.
+
+These are frozen-set findings, not canonical deletions.
+
+#### Strong evidence points
+
+At the 1800 anchor, reviewed rows simultaneously have exact-cross-section, selected-year-unknown and aggregate/no-single-territorial-state.
+
+At 1300, reviewed rows include both period-level support and selected-year unknown.
+
+Therefore anchor position cannot replace temporal evidence state.
+
+The 45 source relations reduce to 37 independence groups, including seven groups with repeated relations, so source-family dependency remains materially non-redundant.
+
+#### Project consequence
+
+The internally demonstrated contribution is portable.
+
+This weakens any claim that bespoke application structure is necessary to preserve the core.
+
+It does not decide whether anyone outside the project values the core.
+
+No automatic successor is authorized.
