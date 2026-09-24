@@ -17,18 +17,24 @@ def load(name: str):
 
 def collect_frame_targets(frame: dict) -> dict[str, dict]:
     found: dict[str, dict] = {}
+
     def walk(value):
         if isinstance(value, dict):
             tid = value.get("target_id")
-            if tid:
+            if tid and tid not in found:
                 found[tid] = value
             for child in value.values():
                 walk(child)
         elif isinstance(value, list):
             for child in value:
                 walk(child)
+
     walk(frame)
     return found
+
+
+def interval_contains(start, end, anchor) -> bool:
+    return bool(start is not None and end is not None and anchor is not None and start <= anchor <= end)
 
 
 def build() -> dict:
@@ -41,7 +47,8 @@ def build() -> dict:
     rows = []
     for target in registry["targets"]:
         tid = target["target_id"]
-        source = c0.get(tid, {}).get("source_native")
+        c0_row = c0.get(tid, {})
+        source = c0_row.get("source_native")
         frame_row = frame.get(tid, {})
         requirement = target["geometry_requirement"]
 
@@ -59,27 +66,28 @@ def build() -> dict:
         }
         if source:
             row["source_provenance"] = {
-                "dataset": source["dataset"],
-                "version_commit": source["commit"],
-                "dataset_sha256": source["sha256"],
-                "native_row_ordinal": source["row_ordinal"],
-                "native_name": source["name"],
-                "native_type": source["type"],
-                "native_from_year": source["from_year"],
-                "native_to_year": source["to_year"],
+                "dataset": source.get("dataset", ""),
+                "version_commit": source.get("commit", ""),
+                "dataset_sha256": source.get("sha256", ""),
+                "native_row_ordinal": source.get("row_ordinal"),
+                "native_name": source.get("name", ""),
+                "native_type": source.get("type", ""),
+                "native_from_year": source.get("from_year"),
+                "native_to_year": source.get("to_year"),
                 "seshat_id": source.get("seshat_id", ""),
                 "wikidata": source.get("wikidata", ""),
             }
-            anchor = c0[tid]["temporal_frame"]["source_anchor_year"]
+            anchor = c0_row.get("temporal_frame", {}).get("source_anchor_year")
             row["temporal_fit"] = {
                 "source_anchor_year": anchor,
-                "within_native_interval": source["from_year"] <= anchor <= source["to_year"],
+                "within_native_interval": interval_contains(source.get("from_year"), source.get("to_year"), anchor),
             }
         elif frame_row:
+            has_cliopatria_row = frame_row.get("source_row_ordinal") is not None
             row["source_provenance"] = {
-                "dataset": "Cliopatria" if frame_row.get("source_row_ordinal") is not None else "repository_frozen_frame",
-                "version_commit": source_meta.get("cliopatria_commit", "") if frame_row.get("source_row_ordinal") is not None else "",
-                "dataset_sha256": source_meta.get("cliopatria_sha256", "") if frame_row.get("source_row_ordinal") is not None else "",
+                "dataset": "Cliopatria" if has_cliopatria_row else "repository_frozen_frame",
+                "version_commit": source_meta.get("cliopatria_commit", "") if has_cliopatria_row else "",
+                "dataset_sha256": source_meta.get("cliopatria_sha256", "") if has_cliopatria_row else "",
                 "native_row_ordinal": frame_row.get("source_row_ordinal"),
                 "native_name": frame_row.get("source_name", ""),
                 "native_from_year": frame_row.get("source_from_year"),
@@ -88,10 +96,10 @@ def build() -> dict:
                 "wikidata": frame_row.get("source_wikidata", ""),
             }
             if frame_row.get("source_anchor_year") is not None:
-                start, end = frame_row.get("source_from_year"), frame_row.get("source_to_year")
+                anchor = frame_row["source_anchor_year"]
                 row["temporal_fit"] = {
-                    "source_anchor_year": frame_row["source_anchor_year"],
-                    "within_native_interval": bool(start is not None and end is not None and start <= frame_row["source_anchor_year"] <= end),
+                    "source_anchor_year": anchor,
+                    "within_native_interval": interval_contains(frame_row.get("source_from_year"), frame_row.get("source_to_year"), anchor),
                 }
         rows.append(row)
 
