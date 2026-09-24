@@ -1,0 +1,40 @@
+{
+  "review": "post-r1-cumulative-internal",
+  "issue": 259,
+  "mode": "review_release",
+  "base_commit": "7448a94a38fdb5c4380b3adf91bcedbf7ac84dd5",
+  "membership_count": 17,
+  "target_ids": [
+    "R1:P:-2000:E:r1",
+    "R1:P:-2000:D:r1",
+    "R1:L:COV2:-500:C",
+    "R1:L:1300:B",
+    "R1:L:viking_900",
+    "R1:L:andaman_1800",
+    "R1:N:angkor_1200",
+    "R1:P:1800:C:r1",
+    "R1:L:500:F",
+    "R1:P:-500:E:r1",
+    "R1:P:1300:A:r1",
+    "R1:N:mongol_yam_1300",
+    "R1:N:yaghan_1800",
+    "R1:P:1300:F:r1",
+    "R1:N:great_zimbabwe_1400",
+    "R1:N:maori_1700",
+    "R1:P:500:C:r1"
+  ],
+  "source_research_allowed": false,
+  "target_substitution_allowed": false,
+  "independent_review_claim_allowed": false,
+  "canonical_release": "v0.6.1_unchanged",
+  "input_blobs": {
+    "consolidation_inventory": "e7dd665ffc1da7d275cb9ca86250f063cfac0a88",
+    "source_reconciliation": "e149067e90572f4e73522ab3e66bb892f6dd78af",
+    "exp04_targets": "bf623c6b32825ceeb789453701cf988c49ee658e",
+    "exp04_sources": "42a594dec6d0663e6233fad1bc8844bc4fef05ea",
+    "exp06_targets": "4190a7a23744375e47d945aa3007ada2c7f230c4",
+    "exp06_sources": "776604b1d39f7a135081a3d7841e289847b18246",
+    "exp08_targets": "819106bf82231d710fb8d6693a9b252ba81a2795",
+    "exp08_sources": "5f666ea3a7ebee05cd667e5fcab7d80e2e071a43"
+  }
+}

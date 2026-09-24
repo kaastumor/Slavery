@@ -7,7 +7,7 @@ current CI override this snapshot.
 **Status date:** 2026-09-25  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **CONSOLIDATION RESULT READY — review/release is the next mode after merge**
+**Execution state:** **REVIEW/RELEASE FREEZE GATE — #259 / 17 post-R1 rows**
 
 ## Current durable state
 
@@ -15,7 +15,9 @@ current CI override this snapshot.
 - D-096 changes only continuation/governance: choose the next mode, not automatically another experiment;
 - DISC-09 remains parked without a negative result;
 - cross-batch consolidation now covers 41 unique targets across R1 and EXP-04/06/07/08;
-- consolidation disposition is **REVIEW_RELEASE_CANDIDATE**; exact current action is owned by `BACKLOG.md`;
+- consolidation disposition is **REVIEW_RELEASE_CANDIDATE**;
+- #259 freezes exactly 17 post-R1 subject-research rows for existing-evidence internal replay;
+- exact current action is owned by `BACKLOG.md`;
 - EXP-08 remains open/paused after 3/4; Qi — 500 BCE remains frozen/unstarted.
 
 Recently completed:
