@@ -1679,6 +1679,12 @@ PR runs cancel automatically. Main changes continue through reviewed PRs.
 Relevant verification is not waived. Green checks remain implementation evidence,
 not historical review. No ontology, canonical data or public-release effect.
 
+**Cost follow-up — 2026-09-24:** the Geometry Promotion Gate no longer runs merely
+because `docs/08_DECISIONS_LOG.md` changed. Decision-log edits do not mutate the
+immutable promotion registry or geometry artifact. The gate remains automatic for its
+promotion config, promotion tool, promotion tests and its own workflow, with manual
+dispatch retained.
+
 ## D-091 — Compact discovery execution with distinct evidence gates
 **Date:** 2026-09-24
 **Status:** accepted operating decision; sponsor requested implementation and 5.6-ready discovery
