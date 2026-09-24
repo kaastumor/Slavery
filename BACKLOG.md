@@ -10,28 +10,27 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# DISC-06 INFERENCE-CHAIN STRESS TEST — RESULT READY
+# DISC-07 CROSS-DIMENSIONAL COVERAGE AUDIT — FREEZE GATE
 
-**Issue:** #240  
-**Disposition:** **REJECT DURABLE EXTENSION**  
-**Historical subject research:** **PAUSED**
+**Issue:** #245  
+**Primary gate:** method / research-design discovery  
+**Current stage:** 77-TARGET UNIVERSE + THRESHOLD FROZEN  
+**Historical subject research:** **PAUSED / PROHIBITED**
 
-The six-case regression found **0 distinct failure mechanisms** where the minimal
-inference ledger added material information unavailable from the current portable
-packet. It improved scanability only.
+DISC-06 is complete and rejected a durable inference-ledger extension.
 
-A genuinely stronger formal model would require assertion/factoid objects inside
-sources, adding a new durable abstraction and review surface. D-092 first refusal says
-that complexity is not earned by this result.
+DISC-07 tests whether current marginal balance gates hide a **joint coverage
+concentration** across chronology, frame class, neutral polity sector and research/QA
+state.
 
-Do not add an inference table, CRMinf/RDF layer, factoid model, knowledge graph or graph
-database. CRMinf/FPO remain conceptual references and disposable inference notes remain
-available during difficult reviews.
+Frozen universe:
+- all 77 R1.6 registry targets;
+- exact registry blob `cec379246221d166db3830845566311077596862`;
+- no substitutions or reclassification after seeing the matrices.
 
-**Current exact action:** merge the DISC-06 result if CI is green, close #240, then
-freeze the next selected discovery question: a **research-coverage / evidence-gap
-audit** testing whether a non-visual registry matrix reveals selection blind spots that
-the current registry + manual balancing misses.
+**Current exact action:** merge the DISC-07 freeze if CI is green. Only then generate
+the three non-visual matrices and score them against the preregistered
+SURVIVES/NARROW/REJECT discriminator.
 
 EXP-08 remains open/paused after 3/4. **Qi — 500 BCE remains frozen/unstarted.**
 
