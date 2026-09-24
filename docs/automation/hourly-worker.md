@@ -1,7 +1,7 @@
 # Autonomous evidence worker
 
 Repository: `kaastumor/Slavery`. Active issue and next action: root `BACKLOG.md`.
-WIP: one active experiment across workers. Operating rules: D-088, D-090, D-091.
+WIP: one active experiment across workers. Operating rules: D-088, D-090, D-091, D-092.
 
 ## Entry and execution
 
@@ -13,6 +13,8 @@ WIP: one active experiment across workers. Operating rules: D-088, D-090, D-091.
 3. Execute the next discriminating action under the appropriate evidence gate.
    `docs/discovery/RUN_PROMPT.md` is the shared continuation prompt. Use existing
    experiment contracts; do not create duplicate forms just to satisfy this guide.
+   New permanent abstractions require existing-class/external-baseline first refusal
+   and a meaningful negative boundary before adoption.
 4. Preserve an honest checkpoint, reconcile the next action, and batch a coherent PR.
    A partial packet can merge while the active issue remains open. Close an issue
    only when its own acceptance criteria are met.
@@ -37,7 +39,8 @@ pass before merge. Known documentation/research text changes use lightweight che
 code, SQL, workflow, dependency and unknown paths retain the database gate. Use normal
 scoped CI; do not dispatch unrelated workflows or rerun unchanged passing jobs.
 Weekly/manual preview monitoring remains. Do not alter scheduler cadence/model merely
-because this runbook changes.
+because this runbook changes. When active state changes, reconcile README/status,
+BACKLOG and active checkpoint in the same coherent batch before merge.
 
 ## End-of-run report
 

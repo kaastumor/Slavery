@@ -22,7 +22,10 @@ Continue the Historical Slavery Atlas in kaastumor/Slavery.
    value. Keep their verdicts separate. For an existing protocol, use its acceptance
    criteria. When choosing a successor, compare plausible alternatives, including a
    negative test and the strongest simple baseline, then select one by information
-   gain and preregister the smallest discriminating experiment.
+   gain and preregister the smallest discriminating experiment. Before creating a new
+   category/field/class, state the consequential causal/information distinction, try
+   existing project and established external concepts first, and define a negative
+   boundary case. Prefer reuse/merge/reject over abstraction growth.
 
 4. Protect claim/source/version/dependency and time/place boundaries. Unknown is
    not absence; law is not practice; network participation is not territorial practice;
@@ -42,8 +45,10 @@ Continue the Historical Slavery Atlas in kaastumor/Slavery.
    a concrete access/reopening condition; never manufacture a conclusion to finish.
 
 7. Leave a durable checkpoint with evidence links, actual state, unfinished work,
-   next exact action and relevant checks. Local verification first; one coherent PR;
-   existing scoped CI only. Merge when relevant checks and project rules permit.
+   next exact action and relevant checks. If freshness matters, do not call already
+   inspected cases blind/fresh. Reconcile README/status/backlog/checkpoint pointers
+   when active state changes. Local verification first; one coherent PR; existing
+   scoped CI only. Merge when relevant checks and project rules permit.
    A checkpoint is not a completed issue, historical review, or publication approval.
    Keep canonical releases intact. No new service/schema/production feature or
    participant outreach without the applicable authorization.

@@ -10,10 +10,10 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# EXP-08 CROSS-FRAME HISTORICAL EVIDENCE — FREEZE GATE
+# EXP-08 CROSS-FRAME HISTORICAL EVIDENCE — ACTIVE
 
 **Issue:** #232  
-**Current stage:** SAMPLE / PROTOCOL FROZEN BEFORE SUBJECT RESEARCH  
+**Current stage:** FROZEN SAMPLE MERGED / SUBJECT RESEARCH READY  
 **Subject slavery/coercion research:** **NOT STARTED**
 
 EXP-07 closed with seven QUALIFIED_C1_READY rows and one hold. The post-qualification
@@ -31,14 +31,16 @@ The tranche deliberately spans a node/site, a region/community and two widely
 separated polity/source environments. It avoids selecting all available rows and avoids
 repeating mobile-network/community mechanisms already exercised heavily in EXP-04/06.
 
-**Current exact action:** merge the preregistered freeze if CI is green. Only then may
-bounded subject research begin under #232.
+**Current exact action:** begin bounded subject research under #232 with **Great
+Zimbabwe — 1400**, preserving the frozen site/node frame and the EXP-08 evidence
+contract. Continue the remaining frozen cases sequentially; do not replace targets or
+expand the tranche mid-run.
 
 ## Discovery execution
 
 Use `docs/discovery/DISCOVERY_EXECUTION.md` and `docs/discovery/RUN_PROMPT.md`.
-The sponsor-requested D-091 process repair changes execution guidance, not EXP-04's
-frozen sample, historical conclusions or acceptance criteria. Resume #213 after it.
+D-091/D-092 govern execution discipline; neither changes EXP-08's frozen sample,
+historical acceptance criteria or release boundary.
 
 ## Actions budget
 

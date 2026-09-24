@@ -7,7 +7,6 @@ on:
       - "tools/promote_geometry_artifact.py"
       - "tests/test_geometry_promotion.py"
       - ".github/workflows/geometry-promotion-ci.yml"
-      - "docs/08_DECISIONS_LOG.md"
   workflow_dispatch:
 
 permissions:

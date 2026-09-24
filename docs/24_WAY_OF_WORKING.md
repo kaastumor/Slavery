@@ -8,6 +8,21 @@ For consequential work use:
 
 Do not substitute activity for progress. Green CI proves implementation behaviour; it does not prove historical usefulness, architectural correctness or project value.
 
+## Evidence before project identity
+
+Start from the phenomenon and the decision-relevant research question, not from protecting
+the current Atlas, corpus, taxonomy or implementation.
+
+Keep these questions separate:
+1. what historical/research problem actually exists?
+2. what contribution does this project make beyond competent existing practice?
+3. what is the smallest project form that preserves that contribution?
+4. what implementation, if any, is needed to support that form?
+
+A useful historical problem does not prove a bespoke product is needed. A useful corpus
+does not prove a richer application is needed. A working implementation does not earn
+continued expansion by existing.
+
 ## Active-continuity policy
 
 The project is proactive by default.
@@ -71,7 +86,8 @@ A delivery item is done when:
 - provenance/reproducibility metadata is preserved where material;
 - PR is merged;
 - issue is closed;
-- canonical project state is reconciled only when evidence actually changed it.
+- canonical project state is reconciled only when evidence actually changed it;
+- when active state changes, README/current-status/backlog/checkpoint pointers agree before merge.
 
 A discovery item is done when the bounded question has durable evidence and one explicit disposition. Discovery completion does not imply production implementation.
 
@@ -123,6 +139,25 @@ The baseline must be competent: specialist literature + notes, ordinary tables/G
 
 If the simpler workflow performs materially as well, record **parity** rather than manufacturing a project advantage.
 
+## Abstraction first refusal and compression
+
+Before adding a new ontology category, evidence field, mechanism, research-state class,
+workflow class or permanent project abstraction:
+
+1. state the causal/information distinction that would be lost without it;
+2. test whether an existing project abstraction can own it without semantic distortion;
+3. test the strongest established external concept or ordinary scholarly/research practice;
+4. identify a meaningful negative/boundary control that looks similar but should not qualify;
+5. prefer **reuse / broaden / merge / reject** over adding a new class when the distinction is not consequential.
+
+Different geography, period, source type, cardinality or presentation does not by itself
+justify a new abstraction.
+
+At meaningful synthesis boundaries, run a compression pass when neighbouring classes
+start to overlap, singleton classes accumulate, or distinctions increasingly depend on
+subtle wording. Preserve the evidence even when labels merge or retire. The goal is the
+minimum coherent abstraction set that preserves demonstrated distinctions.
+
 ## Experiments
 
 A non-trivial active experiment records:
@@ -134,6 +169,11 @@ A non-trivial active experiment records:
 - success signal;
 - failure signal;
 - state: **idea / active / survives / revise / reject / park**.
+
+When freshness matters, also record prior exposure. A case or trap inspected during
+development is exposed and must not later be described as fresh/blind evaluation
+material. Use genuinely unseen cases for tests whose inference depends on freshness;
+exposed cases remain valid regression/supporting evidence.
 
 If an active experiment survives two Project Health Checks without new evidence, it must be accepted, rejected, parked, or given one concrete next discriminating test.
 
@@ -245,6 +285,18 @@ Then explicitly choose **continue / simplify / redirect / stop**.
 If continuing, define one discriminating next horizon/experiment and a kill rule. Under D-088, completion of a horizon triggers **selection** of the next high-information bounded experiment; it does not authorize arbitrary implementation or scope expansion.
 
 Record decisions and deltas, not meeting transcripts.
+
+## Reconciliation boundary
+
+After a coherent research batch, stop adding cases long enough to reconcile it:
+1. synthesize the result, including negative/null findings;
+2. reconcile corpus/taxonomy/abstractions only where earned;
+3. update backlog and current-state pointers;
+4. update assumptions/value evidence only when project-level belief changed;
+5. select the next WIP when continuity requires it;
+6. run one relevant sanitation/CI cycle and merge before continuing from fresh main.
+
+This prevents both merge-shaped idle and indefinitely growing research branches.
 
 ## Capability-bound acceptance
 
