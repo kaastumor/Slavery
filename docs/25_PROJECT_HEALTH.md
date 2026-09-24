@@ -1382,3 +1382,68 @@ This weakens any claim that bespoke application structure is necessary to preser
 It does not decide whether anyone outside the project values the core.
 
 No automatic successor is authorized.
+
+
+### HC-023 — Project-form reassessment after EXP-02 — 2026-09-24
+
+Decision: **SIMPLIFY + PRESERVE ATLAS AS VIEW.**
+
+EXP-02 changed the architectural evidence but did not justify abandoning the Atlas identity.
+
+#### Candidate forms attacked
+
+**Continue application-centered form — rejected.**
+
+H2, COV-004 and EXP-02 all weaken the claim that bespoke application structure is necessary for the demonstrated contribution.
+
+**Redirect away from Atlas entirely — rejected.**
+
+Historical geography remains a real analytical dimension, the north star still includes place/time inspection, and the strongest boring baseline itself includes ordinary map/GIS navigation.
+
+**Stop the project entirely — too strong.**
+
+The application/platform thesis has repeatedly weakened, but the evidence method itself survived COV-003, COV-004, R1 and EXP-02.
+
+**Portable evidence core + replaceable Atlas views — survives.**
+
+This is the smallest form consistent with the evidence.
+
+#### What now owns truth
+
+Historical meaning should be owned upstream of presentation by reviewed evidence/release state.
+
+The preferred boundary is:
+
+> reviewed research state → immutable portable evidence package → replaceable presentation adapters
+
+PostgreSQL/PostGIS remains useful research/curation infrastructure.
+
+A map, table, Markdown packet, notebook, API or web application may present the package, but no view may silently strengthen a claim.
+
+#### Important red-team limits
+
+EXP-02 is based on:
+- 77 frozen targets;
+- 19 reviewed C1 rows;
+- 45 source relations;
+- uniformly unresolved geometry.
+
+Therefore:
+- hoisted geometry state is a frozen-release simplification, not a universal model rule;
+- omitted source enrichment may matter in future releases;
+- flat tables may become insufficient at larger scale;
+- external usefulness remains untested.
+
+No canonical schema migration follows from this health decision.
+
+#### Current execution state
+
+**PRESERVATION / IDLE.**
+
+No automatic successor is authorized.
+
+This is deliberate, not project abandonment.
+
+Reopen only when a concrete research/release, mixed-geometry, scale, navigation/comparison, systematic-coverage or sponsor-authorized external-value trigger appears.
+
+Durable reassessment: `docs/26_PROJECT_FORM_AFTER_EXP02.md`.
