@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d211f" />
+    <meta name="description" content="EXP-06 non-canonical candidate review for the Historical Slavery Atlas." />
+    <title>Historical Slavery Atlas — EXP-06 Candidate</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#candidate-panel">Skip map and go to evidence register</a>
+    <div id="app">
+      <header class="appbar preview-appbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <div class="eyebrow">Release gate candidate</div>
+            <h1>EXP-06 Candidate v1</h1>
+          </div>
+        </div>
+        <div class="preview-boundary">
+          <strong>Non-canonical candidate</strong>
+          <span>Internal research only · v0.6.1 remains canonical · no P-levels or practice polygons</span>
+        </div>
+        <div class="app-status">
+          <div id="release-badge" class="release-badge preview">Loading candidate…</div>
+          <div id="status" class="status" role="status">Loading frozen candidate…</div>
+        </div>
+      </header>
+
+      <main class="workspace preview-workspace">
+        <section class="map-shell" aria-label="EXP-06 navigation map">
+          <div id="map" aria-label="Navigation-only world map for EXP-06 candidate targets. Historical claims are in the evidence register."></div>
+          <div class="map-toolbar" aria-label="Map view controls">
+            <button id="fit-references" type="button">All references</button>
+            <button id="fit-world" type="button">World</button>
+          </div>
+          <details class="legend" open>
+            <summary>Candidate legend</summary>
+            <div class="legend-body">
+              <div class="legend-section-title">Research state · never historical intensity</div>
+              <div class="state-legend">
+                <div class="state-legend-row"><span class="candidate-dot bounded"></span><span>Internally researched · bounded</span></div>
+                <div class="state-legend-row"><span class="candidate-dot inconclusive"></span><span>Researched inconclusive</span></div>
+                <div class="state-legend-row"><span class="candidate-dot review"></span><span>Under review</span></div>
+              </div>
+              <div class="legend-note">
+                Fixed-size markers are navigation/context references only. They are not
+                historical territory, practice extent, jurisdiction, prevalence or evidence weight.
+              </div>
+            </div>
+          </details>
+        </section>
+
+        <aside id="candidate-panel" class="panel preview-panel" aria-label="EXP-06 evidence register" tabindex="-1">
+          <div class="panel-loading">Loading EXP-06 candidate…</div>
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="/src/exp06-candidate.ts"></script>
+  </body>
+</html>
