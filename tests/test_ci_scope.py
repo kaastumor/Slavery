@@ -14,6 +14,7 @@ class ScopeTests(unittest.TestCase):
             'web/package-lock.json',
             'web/vite.config.ts',
             'tools/build_exp04_research_preview.py',
+            'tools/build_exp06_candidate.py',
             '.github/workflows/web-mvp.yml',
         ]
         self.assertFalse(requires_database(paths))
