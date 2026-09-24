@@ -19,6 +19,7 @@ SAFE_FILES = {
     'CHANGELOG.md',
     '.github/workflows/web-mvp.yml',
     '.github/workflows/deploy-pages.yml',
+    '.github/workflows/exp06-candidate-browser.yml',
     'tools/build_exp04_research_preview.py',
     'tools/build_exp06_candidate.py',
     'tools/ci_scope.py',
