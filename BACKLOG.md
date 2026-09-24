@@ -12,7 +12,7 @@ This file answers **what is justified to work on next**.
 # ACTIVE PRESENTATION HORIZON — EXP-04 Research Preview
 
 **Active issue:** #221  
-**Current stage:** IMPLEMENTATION / PRESENTATION TEST — WIP 1
+**Current stage:** LIVE PREVIEW / BROWSER REVIEW — WIP 1
 
 EXP-04 (#213, merged #220) completed its eight-case method/representation test with
 **SUCCESS — PORTABLE CONTRACT SURVIVES EXP-04**. Five targets are
@@ -38,10 +38,14 @@ Implementation boundary:
 The preview must keep Indus, Hadhramaut and Cuzco visibly under review and must preserve
 Andaman's external-colonial-positive / indigenous-internal-unassessed split.
 
-**Next:** finish deterministic bundle/build checks, run one scoped PR CI cycle, deploy
-through the existing GitHub Pages path, then inspect the live preview for misleading
-compression. Any visual failure is a presentation/representation finding, not permission
-to strengthen the historical rows.
+Implementation is merged in #222 and the GitHub Pages deployment completed successfully.
+
+**Live preview:** `https://kaastumor.github.io/Slavery/research-preview.html`
+
+**Next:** inspect the rendered page in a normal browser for misleading compression,
+layout/accessibility problems, or any visual implication of historical extent/intensity.
+Any visual failure is a presentation/representation finding, not permission to
+strengthen the historical rows. Keep #221 open until that browser review is accepted.
 
 Project form remains: portable reviewed evidence core + replaceable Atlas/map/table/API
 views. No production API/database mutation, schema migration or platform expansion is
@@ -49,7 +53,7 @@ authorized by #221.
 
 ## Sponsor-visible milestone
 
-The current WIP **is** the sponsor-visible milestone: a non-canonical EXP-04
+The current WIP **is now live** as the sponsor-visible milestone: a non-canonical EXP-04
 **map + table** research preview.
 
 Acceptance:
