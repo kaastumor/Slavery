@@ -9,41 +9,41 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE RELEASE GATE — EXP-06 non-canonical candidate
+# EXP-06 RELEASE GATE — PUBLISH_CANDIDATE
 
-**Active issue:** #227  
-**Current stage:** CANDIDATE PACKAGE + BROWSER REVIEW — WIP 1
+**Issue:** #227  
+**Current stage:** FINAL MERGE + STATIC DEPLOYMENT VERIFICATION
 
-EXP-06 is complete and merged. Before another historical tranche begins, package the
-six-case evidence output as an exact **non-canonical candidate** and return exactly one:
+EXP-06 candidate v1 passed its bounded publish/hold/rework gate after one concrete
+responsive-layout repair.
 
-- **PUBLISH_CANDIDATE**
-- **HOLD_NO_RELEASE**
-- **REWORK**
+Disposition: **PUBLISH_CANDIDATE**.
 
-Canonical historical release **v0.6.1 remains unchanged**.
+Reviewed candidate evidence:
+- historical source commit `16906affed159722cf940e6723401c7ab4e5d9f4`;
+- successful browser run `36054132409`;
+- browser job `107816768565`;
+- browser artifact `10831472682`;
+- zero page errors / zero semantic failures after rework.
 
-Candidate boundary:
-- exact frozen EXP-06 target/source rows;
-- manifest/checksums;
-- QC summary;
-- unresolved-issues list;
-- thin human-facing map + evidence register;
-- navigation/reference geometry only;
-- explicit 3 bounded / 1 researched-inconclusive / 2 under-review states;
-- 0 independent historical reviews.
+Candidate semantics:
+- 3 bounded internal;
+- 1 researched inconclusive;
+- 2 under review;
+- 0 independently reviewed;
+- no P-levels;
+- no historical practice polygons;
+- canonical v0.6.1 unchanged.
 
-Review must use the actual candidate artifact. Under-review and inconclusive must never
-render as absence. Chámpa/Magadha frame/chronology limits, Yaghan internal uncertainty,
-Mayapán aggregate limits, Mongol coerced-service/slavery separation and Khmer
-capital/core-vs-polity extent must remain visible.
+The candidate package includes manifest/checksums, QC, unresolved issues, exact
+portable CSVs and `REVIEW_DECISION.md`.
 
-No new subject research, P-level, practice polygon, schema/API/database work, feature
-discovery or next research tranche is authorized while #227 is active.
+**Next exact action:** merge PR #228 if ordinary checks remain green, verify Pages
+deployment of `exp06-candidate.html`, close #227, then select the next bounded
+historical evidence horizon by expected information gain.
 
-**Next exact action:** run the bounded browser review on the exact candidate, inspect
-the browser evidence, and record PUBLISH_CANDIDATE / HOLD_NO_RELEASE / REWORK. If
-REWORK, fix only concrete release-blocking defects and rerun the gate.
+Do not insert another application/product horizon. Candidate publication itself does
+not authorize canonical promotion or new feature work.
 
 
 ## Discovery execution
