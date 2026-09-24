@@ -8,6 +8,24 @@ For consequential work use:
 
 Do not substitute activity for progress. Green CI proves implementation behaviour; it does not prove historical usefulness, architectural correctness or project value.
 
+## Active-continuity policy
+
+The project is proactive by default.
+
+After a bounded horizon completes, do not optimize toward idle. Reconcile the evidence and choose the next bounded research/discovery question with the highest expected information gain.
+
+Resource priority:
+1. evidence quality;
+2. focus / question discipline;
+3. project complexity;
+4. execution convenience.
+
+Elapsed time or researcher labour alone is not treated as the scarce resource and is not, by itself, a stop rule.
+
+Keep WIP at 1. A successor still needs a question, strongest alternative, falsifier, evidence contract and complexity boundary. Prefer real historical/source research over meta-work when both can resolve the uncertainty.
+
+Stop/reject/simplify/park remain legitimate experiment dispositions. A **no-work** state is justified only when useful evidence work is genuinely blocked, would violate project constraints, or no bounded experiment can materially change belief.
+
 ## Canonical ownership
 
 For every consequential fact, identify one canonical owner.
@@ -219,7 +237,7 @@ A health check must ask:
 
 Then explicitly choose **continue / simplify / redirect / stop**.
 
-If continuing, define one discriminating next horizon/experiment and a kill rule. Completion of a horizon does not itself authorize the next horizon.
+If continuing, define one discriminating next horizon/experiment and a kill rule. Under D-088, completion of a horizon triggers **selection** of the next high-information bounded experiment; it does not authorize arbitrary implementation or scope expansion.
 
 Record decisions and deltas, not meeting transcripts.
 
