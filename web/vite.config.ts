@@ -1,4 +1,4 @@
-import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 
 export default defineConfig({
@@ -6,8 +6,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        atlas: resolve(__dirname, "index.html"),
-        researchPreview: resolve(__dirname, "research-preview.html"),
+        atlas: fileURLToPath(new URL("./index.html", import.meta.url)),
+        researchPreview: fileURLToPath(new URL("./research-preview.html", import.meta.url)),
       },
     },
   },
