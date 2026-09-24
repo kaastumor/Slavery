@@ -28,30 +28,45 @@ That contribution is only justified where it materially improves on the stronges
 
 ### Project / product form
 
-HC-003 narrowed the hypothesis to **auditable evidence corpus + thin atlas**. H2 then tested that hypothesis and did not meet the pre-registered project-value threshold.
+The best-supported project form after R1 and EXP-02 is:
 
-The durable project result is therefore:
+> **portable reviewed evidence core + replaceable Atlas/map/table views**
 
+The project remains the **Historical Slavery Atlas**. “Atlas” describes a geographic/time-aware inspection and publication mode; it does not require the historical evidence model to be owned by a bespoke web application.
+
+The durable project contribution currently lies in:
 - domain methodology and adversarial fixtures;
-- claim/source/version provenance conventions;
+- bounded proposition / abstention discipline;
+- claim/source/version provenance;
+- temporal/spatial inference guards;
+- source-family dependency;
+- research-state / non-absence semantics;
 - preserved corpus/research examples and immutable historical releases;
-- historical geography/query experiments and tested failure cases;
-- reproducible audit/release history;
-- the H2 baseline/corpus/thin-view comparison, including its negative result.
+- reproducible audit/release history.
 
 The legacy web/API preview and thin-view experiments remain preserved demonstrations rather than the product roadmap.
 
-HC-004 / D-063 stopped the former broad Atlas expansion. COV-003/COV-004 subsequently preserved the tiered evidence core, and D-073 authorized R1 as a bounded real release programme. D-080 now narrows that programme further to MVP v0.1: an immutable candidate package, ordinary map and compact evidence register. This does not reopen the discarded full-platform roadmap.
+H2 and COV-004 weakened bespoke-interface advantage. R1 preserved the tiered evidence/release method. EXP-02 then showed that the frozen R1 safety/reconstructibility contract survives in a package manifest + flat target/source tables + optional Markdown packets.
+
+That result changes the default architecture boundary, not the canonical historical schema.
 
 ### Implementation architecture
 
-PostgreSQL/PostGIS, MapLibre, GitHub Actions, Supabase/API serving, JSON/GeoJSON and the current web stack are implementation choices. They remain contingent.
+PostgreSQL/PostGIS remains valid research/curation infrastructure for relational integrity, imports, provenance, geometry, review state and release reconstruction.
 
-No implementation technology defines the project’s contribution. If a materially smaller artifact preserves the demonstrated contribution, shrinking is a valid outcome.
+MapLibre, APIs, JSON/GeoJSON, static tables and the current web stack are replaceable presentation/serving choices.
+
+The preferred boundary is now:
+
+> **reviewed research state → immutable portable evidence package → one or more presentation adapters**
+
+No implementation technology defines the project’s contribution. A map, API or web application must consume the evidence contract rather than silently become its owner.
+
+EXP-02 does not authorize schema migration, database deletion, or a CSV-first rewrite.
 
 ## Current central question
 
-Can the atlas make historically diverse evidence genuinely more inspectable and comparable than a conventional map, spreadsheet, source catalogue, or ordinary narrative synthesis **without manufacturing false precision, false absence, false equivalence, or false territorial generalization**?
+Can a portable, auditable historical evidence core support useful place/time inspection and comparison—through maps or other views—better than the strongest ordinary workflow **without manufacturing false precision, false absence, false equivalence, or false territorial generalization**?
 
 ## North star
 
@@ -63,7 +78,7 @@ A user should be able to select a place/time and understand the strongest defens
 - research coverage;
 - historical geometry.
 
-The map is a navigation and comparison surface over the evidence system. It is not itself the source of historical truth.
+The map is one navigation and comparison surface over the evidence system. It is not itself the source of historical truth, and no presentation adapter may strengthen the underlying evidence claim.
 
 ## Strongest boring baseline
 
