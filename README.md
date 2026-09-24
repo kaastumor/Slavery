@@ -31,10 +31,11 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - R1 closure: **HOLD_NO_RELEASE**; no automatic publication;
 - EXP-02: portable evidence packet survived; EXP-03 added terminology/mapping and source-role/claim-fitness requirements (D-089);
 - EXP-04 and EXP-06 historical tranches are complete; EXP-07 identity/anchor qualification closed with 7 ready + 1 hold;
-- active horizon: **#232 / EXP-08 cross-frame historical evidence tranche**, four frozen targets;
-- EXP-08 has 3/4 frozen cases completed: Great Zimbabwe researched-inconclusive for slavery/status; Māori 1700 bounded-supported for pre-contact war-captive unfreedom; Nobatia 500 bounded-supported for royal retainer sacrifice with slave status unresolved;
-- **Qi — 500 BCE remains frozen/unstarted**; EXP-08 is paused after Nobatia by sponsor priority;
-- next: a bounded **project-discovery research run** on adjacent methods, comparable projects and evidence-corpus opportunities;
+- EXP-08 is paused after 3/4 frozen cases; **Qi — 500 BCE remains frozen/unstarted**;
+- active horizon: **#238 / DISC-05 external adjacency scan**;
+- DISC-05 found the strongest next question in explicit inference provenance, benchmarked against CRMinf/factoid prosopography;
+- next: after DISC-05 merge, freeze a bounded inference-chain stress test using existing corrected cases;
+- no historical subject-case expansion or production feature work is active;
 - no production migration, new public release or platform expansion authorized.
 
 See `BACKLOG.md`, `experiments/exp08-cross-frame-evidence/CHECKPOINT.md`, and `docs/08_DECISIONS_LOG.md`.

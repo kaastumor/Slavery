@@ -10,12 +10,12 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 ## Current execution order
 
 Active:
-1. **#232 / EXP-08 — cross-frame historical evidence tranche.** The four-target
-   sample is frozen and merged. Great Zimbabwe — 1400 is researched-inconclusive for slavery/status.
-   Māori communities in Aotearoa — 1700 is bounded-supported for pre-contact
-   war-captive unfreedom. Nobatia — 500 CE is bounded-supported for royal retainer
-   sacrifice with slave status unresolved. Qi — 500 BCE remains frozen/unstarted.
-   EXP-08 is paused after Nobatia while WIP switches to project-discovery research.
+1. **#238 / DISC-05 — external adjacency scan.** External research compared argument/
+   inference provenance, research-object packaging, historical place/time interchange,
+   evidence-gap/uncertainty practice, source annotations and living-review maintenance.
+   The strongest successor is a bounded inference-chain stress test using already
+   researched correction cases.
+   EXP-08 remains open/paused after 3/4; Qi — 500 BCE is frozen/unstarted.
    Discovery execution: `docs/discovery/DISCOVERY_EXECUTION.md`.
 
 Recently completed:
