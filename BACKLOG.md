@@ -10,45 +10,32 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CROSS-BATCH RESEARCH CONSOLIDATION — RESULT READY
+# POST-R1 CUMULATIVE INTERNAL REVIEW — FREEZE GATE
 
-**Issue:** #257  
-**Mode:** consolidation  
-**Current stage:** RECONCILIATION COMPLETE / MERGE GATE  
-**Disposition:** **REVIEW_RELEASE_CANDIDATE**  
-**Historical subject research:** **NONE PERFORMED**
+**Issue:** #259  
+**Mode:** review / release  
+**Current stage:** 17-ROW MEMBERSHIP + INPUTS FROZEN  
+**Historical/source research:** **PROHIBITED**
 
-R1 + EXP-04 + EXP-06 + EXP-07 + completed EXP-08 state are now reconciled into a
-single **non-canonical research inventory**.
+Frozen membership:
+- EXP-04: 8 subject-research rows;
+- EXP-06: 6 subject-research rows;
+- EXP-08: 3 completed subject-research rows;
+- total: **17**.
 
-Key facts:
-- 41 unique targets;
-- 19 R1 rows internally adversarially reviewed;
-- 12 post-R1 rows researched internally;
-- 5 post-R1 rows remain under review;
-- 3 qualification-ready targets remain unresearched;
-- Kalabhra remains on identity/time hold;
-- Qi remains frozen/unstarted;
-- 0 independent historical reviews.
+Excluded:
+- 19 already-reviewed R1 rows;
+- EXP-07 qualification-only rows;
+- Kalabhra hold;
+- Qi — 500 BCE frozen/unstarted.
 
-Across 173 inspected source relations, one exact cross-experiment dependency overlap
-was found: Lustig & Lustig 2013 / `angkor-personnel-corpus`, shared by Angkor 1200
-and Khmer Empire 1300. The claims remain separately scoped but are not independent
-evidence streams.
+Review uses existing repository evidence only. A row that cannot be defended from its
+current packet is held/narrowed; it does not trigger fresh research.
 
-No R1 reviewed target ID conflicts with later subject experiments. EXP-07 → EXP-08
-target overlaps are deliberate qualification-to-research progressions, not competing
-claims.
+**Current exact action:** merge the freeze if CI is green, then replay all 17 rows and
+produce one cumulative non-canonical candidate/HOLD/rework decision.
 
-**Next mode after merge: REVIEW / RELEASE.**
-
-Freeze the 17 post-R1 subject-research target IDs as one cumulative internal review
-tranche. Review existing evidence only; do **not** admit new targets or resume Qi.
-Goal: one cumulative non-canonical review candidate or explicit HOLD decision.
-
-Do not canonicalize or publish automatically. v0.6.1 remains canonical.
-
-EXP-08 stays paused after 3/4.
+v0.6.1 remains canonical. No publication follows automatically.
 
 ## Discovery execution
 
