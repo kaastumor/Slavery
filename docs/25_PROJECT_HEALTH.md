@@ -1129,3 +1129,51 @@ Keep:
 New evidence could reopen this only if reviewed validity intervals become explicit data or users repeatedly fail a temporal task that discrete anchors plus ordinary comparison cannot solve.
 
 Durable discovery: `docs/discovery/DISC_01_TIMELINE.md`.
+
+
+### HC-018 — Discovery reset: novelty/competition inference correction — 2026-09-24
+
+Decision: **RE-RUN WIDE-LENS VALUE DISCOVERY BEFORE MORE FEATURE-FIRST EXPERIMENTS.**
+
+The prior wide-angle review remains useful evidence, but its competitor/novelty logic needs a narrower correction.
+
+#### What survives from the old review
+
+- full-platform expansion is not justified by current value evidence;
+- generic DH platform expansion has no demonstrated cross-domain user need;
+- ordinary map/register baselines are strong;
+- the method/corpus contains stronger demonstrated value than bespoke interface complexity;
+- maintenance/operations burden matters;
+- real user/value evidence remains the central uncertainty.
+
+Those conclusions were supported by more than competitor overlap.
+
+#### What needs correction
+
+- overlap with nodegoat/standards cannot itself invalidate an opportunity;
+- “not unique” and “not valuable” must be separated;
+- a feature queue cannot substitute for a user/job/alternative map;
+- external-user demand/adoption remains unproven and must not be implied by the phrase “proven core”;
+- commercial frameworks should not manufacture a customer model where none exists.
+
+#### Current external landscape signal
+
+Official materials confirm substantial generic capability overlap:
+- nodegoat: configurable humanities data models, source-linked data, spatial/temporal and network visualisation, API/publication;
+- Heurist: flexible humanities databases, Zotero sync, maps/timelines/networks, publishing/API;
+- WHG: historical place data, reconciliation, collections and APIs;
+- Enslaved.org: slavery-specific search across people/events/places/sources plus visualisation;
+- SlaveVoyages: specialized quantitative tables/timelines/maps for Atlantic slave-trade data;
+- Seshat: global systematic historical databank with expert review, snapshots, API and reproducible research outputs.
+
+This establishes alternatives and substitutes. It does **not** establish that Atlas value is absent.
+
+#### Active uncertainty
+
+The key question is now:
+
+> **For which concrete research/review job, if any, does the Atlas’s domain-specific evidence/abstention/research-state system create enough relative advantage over these alternatives and competent modular workflows to change behaviour?**
+
+#198 is active. #185–#187 are blocked until that question is reassessed.
+
+Durable standard: `docs/discovery/DISCOVERY_STANDARD_V2.md`.
