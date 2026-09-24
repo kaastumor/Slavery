@@ -5,7 +5,7 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-23  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE R1.7 / MVP — R1.6 QC passed with explicit limitations; subject research frozen**
+**Execution state:** **R1.8 REVIEW BOUNDARY — TECHNICAL_MVP_CANDIDATE; sponsor usability and publish/hold/rework decision pending**
 
 ## Direction after H2
 
@@ -519,13 +519,47 @@ After #182 records TECHNICAL_MVP_CANDIDATE, feature discovery #184–#187 may ru
 
 Delivery and discovery use WIP=1, short-lived branches/PRs, explicit dependencies, green CI and the Definition of Ready/Done in `docs/mvp/v0.1-plan.md`.
 
+## R1.7 / MVP v0.1 — TECHNICAL_MVP_CANDIDATE
+
+Issues #175–#182 crystallized the surviving evidence core without reopening the discarded platform.
+
+The candidate now has:
+- deterministic static R1 bundle;
+- locked reproducible frontend build;
+- explicit research-state overview;
+- explicit unresolved geometry state for all 77 frozen targets;
+- compact evidence register and target detail;
+- source/version + independence-group visibility;
+- discrete frozen-anchor navigation;
+- R1.6 temporal precision rendering;
+- static historical evidence path with no live API/database dependency.
+
+Important correction:
+legacy numeric BCE anchors now preserve the frozen calendar convention. Source-native `-500` displays as **500 BCE** and maps separately to Atlas astronomical internal year `-499`.
+
+Technical gate #182: **TECHNICAL_MVP_CANDIDATE**.
+
+Known limitations remain explicit:
+- all target geometry is unresolved;
+- neutral Natural Earth land is externally fetched at runtime;
+- no independent historical review;
+- sponsor/browser usability acceptance remains pending;
+- the public preview has not been promoted to this candidate;
+- v0.6.1 remains canonical.
+
+Feature discovery #184–#187 is now eligible as evidence gathering only. It does not authorize implementation.
+
+Next release boundary: R1.8 **publish / hold / rework** after sponsor usability review.
+
+Decision: D-081.  
+Gate: `docs/mvp/v0.1-release-check.md`.
+
 ## Remaining bounded project-system debt
 
 - `main` currently reports unprotected;
 - approximately 100 historical remote branches remain;
 - protected deployment environment/staging work remains trigger-bound (#43);
 - live migration-history reconciliation remains trigger-bound (#26);
-- the frontend lacks a committed real npm lockfile.
 
 These are preservation/administrative debt. None creates a development horizon.
 
