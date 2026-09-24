@@ -1,9 +1,26 @@
 name: foundation-ci
 
 on:
-  push:
-    branches: [main]
   pull_request:
+    paths:
+      - "compose.yaml"
+      - "requirements.txt"
+      - "config/**"
+      - "data/releases/**"
+      - "db/**"
+      - "docker/**"
+      - "prototype/**"
+      - "scripts/**"
+      - "supabase/**"
+      - "tests/**"
+      - "tools/**"
+      - "validation/**"
+      - ".github/workflows/ci.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: foundation-ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
