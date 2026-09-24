@@ -103,7 +103,7 @@ class Exp02MinimumPacketTests(unittest.TestCase):
                 "c0_only",
             },
         )
-        self.assertIn("not", self.manifest["non_absence_rule"].lower())
+        rule = self.manifest["non_absence_rule"].lower()\n        self.assertIn("absence", rule)\n        self.assertTrue("none imply" in rule or "does not imply" in rule or "do not imply" in rule)
 
     def test_held_and_unreviewed_frame_limits_are_not_optimized_away(self):
         candidate_by_id = {row["target_id"]: row for row in self.candidate["targets"]}
