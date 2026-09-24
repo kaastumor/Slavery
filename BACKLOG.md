@@ -10,39 +10,34 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# DISC-05 EXTERNAL ADJACENCY SCAN — RESULT READY
+# DISC-06 INFERENCE-CHAIN STRESS TEST — FREEZE GATE
 
-**Issue:** #238  
+**Issue:** #240  
 **Primary gate:** method / representation discovery  
-**Current stage:** EXTERNAL SCAN COMPLETE / MERGE GATE  
-**Historical subject research:** **PAUSED**
+**Current stage:** PROTOCOL + SIX-CASE REGRESSION SAMPLE FROZEN  
+**Historical subject research:** **PAUSED / PROHIBITED IN THIS EXPERIMENT**
 
-EXP-08 remains open/paused after 3 of 4 frozen cases. **Qi — 500 BCE remains frozen
-and unstarted**.
+DISC-05 is complete and closed. It selected one bounded question: whether explicit
+premise → reasoning → conclusion provenance materially improves the portable evidence
+core over the current packet.
 
-DISC-05 compared external precedents against the project's strongest current baseline
-without reopening the old feature queue.
+Frozen exposed regression cases:
+- Teotihuacan — 500 CE;
+- Shaolin — 1000 CE;
+- Inuit frame — 1800 CE;
+- Cahokia — 1200 CE;
+- Lazica — 500 CE;
+- Nālandā Mahāvihāra — 700 CE.
 
-Highest-value findings:
-- **CRMinf + factoid prosopography:** explicit premise → reasoning → conclusion
-  provenance is a credible missing-or-redundant question for the current evidence core;
-- **Evidence/Gap Maps + Seshat:** useful benchmark for research-coverage auditing, with
-  inferred-absence conventions explicitly rejected;
-- **Frictionless Data Package + RO-Crate:** credible standards to benchmark against the
-  custom portable evidence package;
-- **WHG Linked Places + PeriodO:** useful historical place/time interchange precedents;
-- **W3C Web Annotation:** parked until locator-recovery pain is demonstrated;
-- **living-review methods:** support trigger-based claim maintenance rather than blanket
-  recurring literature surveillance.
+The experimental ledger is intentionally tiny: inference ID, target, conclusion,
+premise references, one reasoning-rule label, result and review state. No RDF/graph
+database/schema migration.
 
-**Selected successor:** one bounded **inference-chain stress test** using existing
-researched cases with known adversarial corrections. Compare the current packet against
-a minimal CRMinf/FPO-inspired inference ledger. A negative result should reject the
-extra abstraction.
+**Current exact action:** merge the DISC-06 freeze if CI is green. Only then construct
+the ledger and compare it against the existing portable packet using the preregistered
+threshold.
 
-**Current exact action:** merge the DISC-05 scan if CI is green, close #238, then freeze
-the single inference-chain stress test before execution. No slavery-case research and
-no production implementation.
+EXP-08 remains open/paused after 3/4. **Qi — 500 BCE remains frozen/unstarted.**
 
 ## Discovery execution
 

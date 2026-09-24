@@ -1,0 +1,53 @@
+{
+  "experiment": "DISC-06",
+  "issue": 240,
+  "stage": "sample_frozen_before_prototype_execution",
+  "frozen_on": "2026-09-24",
+  "base_commit": "af42df969e0baccbb44ae4f162a8758581161d0b",
+  "exposure_state": "exposed_regression_material",
+  "historical_subject_research_allowed": false,
+  "prototype_execution_started": false,
+  "threshold": {
+    "survives": "material reconstructibility or revision-impact gain in >=2 distinct failure mechanisms without infrastructure or mere duplication",
+    "reject": "baseline reconstructs same dependencies without material ambiguity",
+    "narrow": "useful only for one rare mechanism"
+  },
+  "cases": [
+    {
+      "target_id": "R1:P:500:A:r1",
+      "label": "Teotihuacan",
+      "anchor": "500 CE",
+      "mechanism": "temporal_leakage"
+    },
+    {
+      "target_id": "R1:N:shaolin_1000",
+      "label": "Shaolin",
+      "anchor": "1000 CE",
+      "mechanism": "target_context_join"
+    },
+    {
+      "target_id": "R1:N:inuit_1800",
+      "label": "Inuit frame",
+      "anchor": "1800 CE",
+      "mechanism": "dimension_temporal_spatial_leakage"
+    },
+    {
+      "target_id": "R1:N:cahokia_1200",
+      "label": "Cahokia",
+      "anchor": "1200 CE",
+      "mechanism": "status_temporal_leakage"
+    },
+    {
+      "target_id": "R1:P:500:B:r1",
+      "label": "Lazica",
+      "anchor": "500 CE",
+      "mechanism": "temporal_dependency_network_territorial"
+    },
+    {
+      "target_id": "R1:N:nalanda_700",
+      "label": "Nālandā Mahāvihāra",
+      "anchor": "700 CE",
+      "mechanism": "target_context_dependency"
+    }
+  ]
+}
