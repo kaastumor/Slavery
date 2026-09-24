@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Build and extend the Historical Slavery Atlas as a globally scoped, time-aware **historical evidence method + compact auditable Atlas**, while requiring every increment beyond the core to earn itself against the strongest simpler baseline. Broad platform expansion remains stopped; bounded evidence research/discovery is proactive and continuous under WIP=1.
+Build and extend the Historical Slavery Atlas as a globally scoped, time-aware **historical evidence method + compact auditable Atlas**, while requiring every increment beyond the core to earn itself against the strongest simpler baseline. Broad platform expansion remains stopped. Work proceeds through **one active priority** whose mode is chosen from discovery, execution, consolidation, review/release, or maintenance; no mode is automatic.
 
 The project is an evidence-synthesis and data-curation system. It does not claim that one universal category can make all forms of coercion equivalent, and it does not replace specialist historical scholarship.
 
@@ -150,8 +150,9 @@ The existing canonical methodology remains binding unless explicitly superseded.
 
 The completed horizon descriptions below preserve decisions at their original
 boundaries. Their historical idle/authorization statements do not schedule current
-work; D-088 and root `BACKLOG.md` own continuation. Discovery execution follows
-`docs/discovery/DISCOVERY_EXECUTION.md`.
+work. **D-096** governs current continuation; root `BACKLOG.md` alone owns the current
+priority and mode. Discovery execution follows
+`docs/discovery/DISCOVERY_EXECUTION.md` only when discovery is the selected mode.
 
 Horizons are hypotheses, not promises.
 
@@ -181,26 +182,27 @@ Result:
 
 HC-004 / D-063 chose **STOP ACTIVE ATLAS EXPANSION; PRESERVE METHOD/CORPUS/AUDIT ARTIFACTS**.
 
-### H3 — Active evidence research horizon
+### H3 — Continuation modes after D-096
 
-The project does **not** use preservation/idle as the default state after a bounded horizon.
+The project does **not** require another experiment after every bounded horizon.
 
-Elapsed time is not treated as the scarce resource. The constrained resources are:
-- evidence quality;
-- focus;
-- project complexity.
+At a boundary, compare the next justified **mode of work** against the project goal:
 
-Therefore the default continuation rule is:
-1. finish and reconcile the current bounded horizon;
-2. identify the unresolved question with the highest expected information gain;
-3. preregister one successor experiment;
-4. continue under WIP=1.
+1. **discovery** — a material method/product/representation decision is still uncertain;
+2. **execution** — an accepted method can now be applied to bounded historical work;
+3. **consolidation** — accumulated batches/claims/sources/review states need reconciliation;
+4. **review/release** — a coherent candidate is ready for the applicable gates;
+5. **maintenance** — a released/settled scope needs correction, preservation or trigger-based upkeep.
 
-A successor must still have a discriminating question, falsifier, evidence contract and complexity boundary. Research volume is not progress by itself.
+Keep WIP at one active priority. Completion may legitimately lead to any mode above,
+including no new work when no mode is justified.
 
-Stopping, simplifying, rejecting and parking remain valid **evidence outcomes**. They are not automatic scheduling outcomes.
+Discovery requires a discriminating uncertainty. Execution does not need to re-prove a
+method already accepted for the same declared scope. Reopen settled methods only for a
+new failure, changed task, consequential scale pressure, changed evidence, or concrete
+consumer/release need.
 
-Current active horizon: **#213 / EXP-04 blind frontier tranche**. EXP-03 completed; D-089 extends the portable evidence contract. See root `BACKLOG.md` for the current checkpoint.
+Root `BACKLOG.md` owns the current mode and priority.
 
 ### H4 — Preservation as a capability, not a resting strategy
 

@@ -1860,3 +1860,68 @@ consumer, archive, validator or export need and validate it with that consumer's
 **No effect:** no historical conclusion, candidate content, schema/ontology, canonical
 v0.6.1, public release or production dependency changes.
 
+## D-096 — Mode-level continuation; accepted methods may become operational
+**Date:** 2026-09-25
+**Status:** accepted governance/operating amendment after constitutional red-team
+
+**Evidence:** GPT-6 Astra constitutional/governance audit supplied by the sponsor,
+together with observed pointer-repair drift and the serial DISC-05→09 adjacency chain.
+
+**Decision:** Supersede only the **scheduling/continuation clauses** of D-088, D-091 and
+D-092. Their WIP, evidence-quality, preregistration, first-refusal, freshness,
+adversarial, release-boundary and CI-cost controls remain.
+
+At every bounded boundary, choose one next **mode of work**:
+1. discovery;
+2. execution;
+3. consolidation;
+4. review/release;
+5. maintenance;
+6. no justified work when all modes are complete, unjustified or blocked.
+
+WIP remains **one active priority**, not one mandatory experiment.
+
+### Operational maturity
+
+A method may become `operational_for_scope` when it supports its declared routine task,
+known relevant failure modes have controls, and no unresolved method question blocks its
+use. Routine work may then apply it without re-proving strategic/method value.
+
+Reopen a settled method only for a demonstrated failure, changed task, consequential
+scale pressure, changed evidence, or concrete consumer/publication/interchange need.
+
+### Cross-batch reconciliation and review capacity
+
+Before sustained scaling or release, reconcile overlapping:
+- target identities;
+- claim revisions;
+- source identities/dependency groups;
+- review states;
+- release effects.
+
+Experiment-local artifacts do not silently become one cumulative current corpus.
+Admission of more material must remain within actual review/reconciliation capacity.
+
+### Mutable authority
+
+- `BACKLOG.md` owns current priority + mode;
+- the active protocol/checkpoint owns within-item unfinished work;
+- README/status are summaries/pointers and do not own the next action;
+- accepted amendments state what they supersede, where they apply and release effect.
+
+### Whole-project complexity budget
+
+Permanent methodology, metadata/schema, standards/adapters, automation and documentation
+must each own a distinct demonstrated responsibility and maintenance/retirement rule.
+Correctness-critical complexity is allowed; duplicated convenience complexity is not.
+
+### Immediate consequence
+
+DISC-09 remains a valid parked idea but is **not executed merely because it is next in
+the adjacency list**. The next project mode after this amendment is **consolidation**:
+reconcile post-R1 / EXP-04 / EXP-06 / EXP-07 / EXP-08 research artifacts and assess
+review capacity before admitting more cases or starting another method-discovery chain.
+
+**No effect:** no historical conclusion, ontology/schema, canonical v0.6.1, public
+release, EXP-08 frozen sample or CI cadence changes.
+

@@ -1,7 +1,7 @@
 # Autonomous evidence worker
 
 Repository: `kaastumor/Slavery`. Active issue and next action: root `BACKLOG.md`.
-WIP: one active experiment across workers. Operating rules: D-088, D-090, D-091, D-092.
+WIP: one active priority across workers. Operating rules: D-090, D-091, D-092, D-096.
 
 ## Entry and execution
 
@@ -21,10 +21,11 @@ WIP: one active experiment across workers. Operating rules: D-088, D-090, D-091,
 
 ## Continuity and boundaries
 
-After a bounded experiment completes, reconcile it and select one high-information
-successor under D-088. Stop/reject/simplify/park are legitimate results, not automatic
-idle scheduling. Do not invent work if useful evidence is blocked or violates scope.
-Evidence quality, focus and complexity take priority; elapsed time alone is not a stop rule.
+After a bounded item completes, reconcile it and select the next justified **mode**
+under D-096: discovery, execution, consolidation, review/release, maintenance, or no
+justified work. WIP=1 does not require another experiment. Do not invent work if the
+useful modes are complete, blocked or unjustified. Evidence quality, focus, review
+capacity and complexity take priority; elapsed time alone is not a stop rule.
 
 Historical source/method constraints in `docs/PROJECT_INSTRUCTIONS.md` remain binding.
 Internal critique is not independent review. Green CI is not historical/editorial
@@ -39,8 +40,9 @@ pass before merge. Known documentation/research text changes use lightweight che
 code, SQL, workflow, dependency and unknown paths retain the database gate. Use normal
 scoped CI; do not dispatch unrelated workflows or rerun unchanged passing jobs.
 Weekly/manual preview monitoring remains. Do not alter scheduler cadence/model merely
-because this runbook changes. When active state changes, reconcile README/status,
-BACKLOG and active checkpoint in the same coherent batch before merge.
+because this runbook changes. When active state changes, reconcile `BACKLOG.md` and
+the active checkpoint; README/status update only for material milestones and do not own
+the exact next action.
 
 ## End-of-run report
 

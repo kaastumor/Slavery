@@ -21,28 +21,20 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 
 ## Current state
 
-- canonical historical data release: `v0.6.1` (external immutable workbook; unchanged);
-- frozen legacy public preview: `mvp-preview-ancient-v2` (non-canonical demonstration);
-- architecture experiments COV-001→004: completed;
-- R1 historical subject research: **complete and frozen at 19 reviewed C1 rows**;
-- R1.6 release QC: **PASS WITH EXPLICIT LIMITATIONS**;
-- R1 candidate registry: 77 frozen targets = 19 reviewed C1 + 15 planned/unresearched C1 + 2 held + 41 C0-only;
-- source dependency layer: 45 source relations / 37 independence groups;
-- R1 closure: **HOLD_NO_RELEASE**; no automatic publication;
-- EXP-02: portable evidence packet survived; EXP-03 added terminology/mapping and source-role/claim-fitness requirements (D-089);
-- EXP-04 and EXP-06 historical tranches are complete; EXP-07 identity/anchor qualification closed with 7 ready + 1 hold;
-- EXP-08 is paused after 3/4 frozen cases; **Qi — 500 BCE remains frozen/unstarted**;
-- DISC-05 external adjacency scan is complete;
-- DISC-06 is complete and rejected a durable inference-ledger extension;
-- DISC-07 is complete and closed; it survives narrowly and is recorded as D-094;
-- future cross-chronology structural-coverage claims require a joint chronology × broad-frame-family QA check; sparse cells remain non-absence/non-quota states;
-- active horizon: **#250 / DISC-08 portable-package interoperability benchmark**, result ready;
-- disposition: **NARROW REUSE** — keep the Atlas manifest authoritative; permit optional generated Frictionless table/resource adapters for concrete interoperability needs; RO-Crate is not a default layer;
-- next after merge: freeze a bounded WHG Linked Places Format + PeriodO place/time interchange benchmark;
-- no historical subject-case expansion or production feature work is active;
-- no production migration, new public release or platform expansion authorized.
+For the **current priority and mode**, read repository-root `BACKLOG.md`; this README
+does not own the next action.
 
-See `BACKLOG.md`, `experiments/exp08-cross-frame-evidence/CHECKPOINT.md`, and `docs/08_DECISIONS_LOG.md`.
+Durable state:
+- canonical historical data release: `v0.6.1` unchanged;
+- best-supported project form: **portable reviewed evidence core + replaceable Atlas/map/table/API views**;
+- R1 closed with `HOLD_NO_RELEASE`; later EXP artifacts remain non-canonical research evidence;
+- EXP-08 is paused after 3/4 frozen cases; Qi — 500 BCE remains frozen/unstarted;
+- DISC-06 rejected a permanent inference-ledger layer;
+- DISC-07 added the joint chronology × broad-frame-family QA rule (D-094);
+- DISC-08 permits only narrow/optional Frictionless reuse; the Atlas manifest remains authoritative (D-095);
+- D-096 changes continuation from automatic successor experiments to mode-level selection and requires cross-batch consolidation/review-capacity control before sustained scaling;
+- DISC-09 is parked, not rejected.
+
 
 ## Repository boundary
 
