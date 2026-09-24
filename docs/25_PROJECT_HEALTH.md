@@ -1510,3 +1510,42 @@ The six frozen cases deliberately stress:
 No frontend, service, schema migration, canonical release, bulk geometry programme or external recruitment is authorized by EXP-03.
 
 **Health disposition:** CONTINUE.
+
+
+## HC-025 — EXP-03 heterogeneous evidence stress test — 2026-09-24
+
+**Decision:** **CORE REQUIRES EXTENSION; CONTINUE ACTIVE RESEARCH.**
+
+### Evidence gained
+
+Six fresh historical cases were researched across different periods, source traditions and target types.
+
+The portable form survived, but the EXP-02 minimum omitted two semantics that became material:
+- historical terminology/category mapping;
+- source role/claim fitness.
+
+Machine-readable output contains:
+- 6 targets;
+- 17 source relations;
+- 14 independence groups;
+- 3 repeated dependency groups.
+
+### What this changes
+
+The project no longer treats source role/claim fitness as disposable enrichment in the portable release contract.
+
+Historically specific categories such as tlacotli/tlatlacotin and nobi require explicit mapping state rather than silent normalization.
+
+### What this does not change
+
+- v0.6.1 remains canonical;
+- the database schema is not migrated;
+- no product/UI horizon is opened;
+- P0–P4 is not mechanically derived;
+- external review remains deferred.
+
+### Health disposition
+
+**CONTINUE.**
+
+Under D-088, complete #211 and choose the next WIP-1 experiment by expected information gain rather than returning to idle.
