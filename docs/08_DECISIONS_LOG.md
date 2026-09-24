@@ -1760,3 +1760,55 @@ counterevidence, boundary conditions and abstention.
 schema, ontology content, R1 reviewed states, public release and CI cadence remain
 unchanged.
 
+## D-093 — Reject a default explicit inference-ledger layer
+**Date:** 2026-09-24  
+**Status:** accepted negative method/architecture decision
+
+**Evidence:** DISC-05 external adjacency scan + DISC-06 inference-chain stress test.
+
+**Decision:** Do **not** add a canonical/default premise → reasoning → conclusion ledger
+to the portable evidence contract.
+
+DISC-06 reconstructed a minimal CRMinf/FPO-inspired ledger for six exposed regression
+cases with real prior corrections spanning:
+- temporal leakage;
+- target/context joins;
+- dimension and spatial-extent leakage;
+- status mapping;
+- source-family dependency;
+- network/territorial separation.
+
+The current packet already preserved the material dependency through its existing
+combination of:
+- bounded proposition + required abstention;
+- temporal applicability/precision;
+- evidence locus/inference extent;
+- law/practice and network/territorial notes;
+- source role/direction/claim fitness;
+- independence group;
+- adversarial-correction record.
+
+The experimental ledger added normalization and machine queryability, but no material
+premise, conclusion boundary or revision-impact information unavailable from the
+baseline in the frozen cases. It also added 15 synchronization/review rows.
+
+This fails the preregistered DISC-06 survival threshold.
+
+**External standards:** CIDOC CRMinf and factoid-prosopography practice remain useful
+conceptual references for asking premise/inference/revision questions. They are not
+adopted as an Atlas ontology, RDF model or release layer.
+
+**Reopen only if a real future review/update demonstrates**:
+1. one changed premise/source family affects multiple reviewed conclusions and current
+   source/dependency structures fail to identify them;
+2. reviewers materially disagree about the premises behind a conclusion despite the
+   current packet;
+3. a release update misses a conclusion that should have been re-reviewed because the
+   dependency was not reconstructible.
+
+Do not reopen for graph visualization, machine queryability alone, corpus size alone or
+theoretical alignment with CIDOC CRM.
+
+**No effect:** no historical conclusion changes; no schema/ontology migration; no
+canonical/public release; v0.6.1 remains canonical.
+

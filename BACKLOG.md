@@ -10,32 +10,38 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# DISC-06 INFERENCE-CHAIN STRESS TEST — FREEZE GATE
+# DISC-06 INFERENCE-CHAIN STRESS TEST — RESULT READY
 
 **Issue:** #240  
 **Primary gate:** method / representation discovery  
-**Current stage:** PROTOCOL + SIX-CASE REGRESSION SAMPLE FROZEN  
-**Historical subject research:** **PAUSED / PROHIBITED IN THIS EXPERIMENT**
+**Current stage:** COMPARISON COMPLETE / MERGE GATE  
+**Disposition:** **REJECT**  
+**Historical subject research:** **PAUSED / NONE PERFORMED**
 
-DISC-05 is complete and closed. It selected one bounded question: whether explicit
-premise → reasoning → conclusion provenance materially improves the portable evidence
-core over the current packet.
+DISC-06 tested a minimal CRMinf/FPO-inspired inference ledger against six exposed
+regression cases with known correction mechanisms.
 
-Frozen exposed regression cases:
-- Teotihuacan — 500 CE;
-- Shaolin — 1000 CE;
-- Inuit frame — 1800 CE;
-- Cahokia — 1200 CE;
-- Lazica — 500 CE;
-- Nālandā Mahāvihāra — 700 CE.
+Result:
+- all 6 correction mechanisms are materially reconstructible from the current packet;
+- the ledger adds normalization/queryability but **0 mechanisms** with material
+  information unavailable from the baseline;
+- the prototype adds 15 extra inference rows and therefore a new synchronization/review
+  surface;
+- the preregistered survival threshold is not met.
 
-The experimental ledger is intentionally tiny: inference ID, target, conclusion,
-premise references, one reasoning-rule label, result and review state. No RDF/graph
-database/schema migration.
+**Decision:** preserve the current portable evidence contract. Do not add an inference
+ledger, RDF layer, graph model or related schema.
 
-**Current exact action:** merge the DISC-06 freeze if CI is green. Only then construct
-the ledger and compare it against the existing portable packet using the preregistered
-threshold.
+**Reopen only on a demonstrated revision-propagation/reconstructibility failure.**
+
+The highest-information remaining DISC-05 candidate is the **research-coverage /
+evidence-gap audit**: test whether an ordinary non-visual matrix of region × period ×
+frame × research/access state reveals a selection bias that the current frozen
+registry/manual horizon process misses. This is a method test, not a historical
+absence/prevalence map.
+
+**Current exact action:** merge DISC-06 if CI is green, close #240, then freeze one
+bounded coverage-audit experiment before execution.
 
 EXP-08 remains open/paused after 3/4. **Qi — 500 BCE remains frozen/unstarted.**
 

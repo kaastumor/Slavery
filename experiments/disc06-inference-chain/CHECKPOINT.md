@@ -1,11 +1,14 @@
 # DISC-06 checkpoint
 
 **Issue:** #240  
-**State:** protocol/sample frozen; prototype execution not started  
-**Historical subject research:** prohibited  
+**State:** comparison complete; result ready for merge  
+**Disposition:** **REJECT**  
+**Historical subject research:** none  
 **EXP-08:** paused; Qi — 500 BCE frozen/unstarted
 
-Frozen regression sample:
+## Frozen test
+
+Six exposed regression cases:
 1. Teotihuacan — temporal leakage
 2. Shaolin — target/context join
 3. Inuit frame — dimension + time/extent leakage
@@ -13,15 +16,36 @@ Frozen regression sample:
 5. Lazica — time + dependency + network/territorial leakage
 6. Nālandā — target/context + dependency
 
-Pre-execution ID reconciliation completed against the canonical R1 final artifacts:
-- Inuit frame → `R1:N:inuit_arctic_1800`;
-- Cahokia → `R1:L:cahokia_1200`;
-- Lazica → `R1:P:500:D:r1`.
+The pre-execution clerical target-ID reconciliation remains recorded in the sample
+freeze; labels, anchors, mechanisms and threshold did not change.
 
-Labels, anchors, mechanisms, sample membership and thresholds are unchanged.
+## Result
 
-Compare the current portable packet with only the minimal inference ledger defined in
-`00_PROTOCOL.md`.
+The experimental ledger contains 15 rows.
 
-Do not add fields, change the success threshold, adopt CRMinf/RDF, or start any new
-historical research before the freeze PR merges.
+Observed gain:
+- material reconstructibility gain unavailable from baseline: **0 mechanisms**;
+- normalization/queryability gain: all six mechanisms;
+- baseline reconstruction: **6/6 mechanisms**.
+
+The frozen survival requirement (material gain in >=2 distinct mechanisms without mere
+duplication) therefore fails.
+
+Durable result:
+- preserve current portable packet;
+- reject a default inference ledger / RDF / graph representation;
+- retain CRMinf/FPO only as conceptual review references;
+- reopen only on a demonstrated revision-propagation/reconstructibility failure.
+
+Artifacts:
+- `02_EXPERIMENTAL_LEDGER.csv`
+- `03_COMPARISON.md`
+- `04_ADVERSARY.md`
+- `RESULT.md`
+
+## Next exact action
+
+Merge the result if CI is green, close #240, then freeze one bounded
+**research-coverage / evidence-gap audit** from DISC-05.
+
+Do not resume Qi or start new historical subject research.

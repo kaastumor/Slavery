@@ -5,15 +5,16 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-24  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE DISCOVERY HORIZON — #240 / DISC-06 inference-chain stress test; WIP 1**
+**Execution state:** **ACTIVE DISCOVERY HORIZON — #240 / DISC-06 result ready; WIP 1**
 
 ## Current execution order
 
 Active:
-1. **#240 / DISC-06 — inference-chain stress test.** Six already-reviewed correction
-   cases are frozen as exposed regression material. The experiment compares the current
-   portable packet with a minimal CRMinf/FPO-inspired inference ledger using a
-   preregistered success/failure threshold. No new historical research is allowed.
+1. **#240 / DISC-06 — inference-chain stress test.** Result: **REJECT** a default
+   inference ledger. The current packet reconstructs all six tested correction
+   mechanisms; the ledger adds machine queryability but no material information and
+   creates 15 extra review rows. After merge, freeze a bounded coverage/evidence-gap
+   audit as the next discovery question.
    EXP-08 remains open/paused after 3/4; Qi — 500 BCE is frozen/unstarted.
    Discovery execution: `docs/discovery/DISCOVERY_EXECUTION.md`.
 
