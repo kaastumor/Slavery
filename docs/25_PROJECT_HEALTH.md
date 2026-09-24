@@ -1020,3 +1020,58 @@ This setup is not new feature-value evidence. It is project-control evidence int
 
 Kill/shrink rule:
 if the MVP requires backend/platform expansion, invented geometry precision or loss of the R1 evidence contract, shrink/hold rather than rebuilding the old architecture.
+
+
+### HC-016 — Technical MVP gate — 2026-09-24
+
+Decision: **TECHNICAL_MVP_CANDIDATE; DO NOT CONFUSE TECHNICAL COMPLETION WITH PUBLICATION.**
+
+The R1.7 delivery queue #175–#182 has materially produced the small Atlas core defined by D-080.
+
+#### What now exists
+
+- reproducible locked Vite/TypeScript/MapLibre build;
+- deterministic static R1 candidate generated from immutable R1.6 inputs;
+- 77-target research-state registry;
+- explicit geometry representation state for every target;
+- neutral world map context;
+- compact evidence register with bounded proposition + abstention + provenance;
+- source-family / independence-group visibility;
+- language/access + internal-review labels;
+- discrete frozen research anchors;
+- exact/period/near-anchor/unknown/aggregate temporal rendering guards;
+- no live evidence API requirement.
+
+#### Adversarial findings during MVP delivery
+
+The MVP work found and corrected real issues rather than merely wrapping the data:
+- CI caught a MapLibre listener type/build defect before merge;
+- old P-level-first overview semantics were removed from the MVP path;
+- unresolved target geometry was retained instead of manufacturing map precision;
+- unresearched/held/C0 targets expose less information rather than simulated evidence;
+- the old numeric BCE display path would render source-native -500 as 501 BCE; R1.7 now separates source/display anchors from Atlas astronomical internal years.
+
+#### What remains deliberately weak
+
+- all 77 target geometries remain unresolved;
+- the neutral Natural Earth land layer is still an external static runtime dependency;
+- no independent historical review;
+- no full sponsor/browser/screen-reader usability acceptance;
+- the candidate is not yet the public/canonical release.
+
+These are visible release limitations, not reasons to rebuild backend/platform infrastructure.
+
+#### Product judgment
+
+The MVP still looks like the intended nugget:
+**evidence package + boring map + register**, not a revived research platform.
+
+No backend, database migration, auth, search service, graph infrastructure, frontend framework rewrite or new historical research was required.
+
+#### Boundary
+
+Open the post-MVP discovery lane for evidence-only experiments.
+
+In parallel, require sponsor usability review before R1.8 makes an explicit **PUBLISH / HOLD / REWORK** decision.
+
+A discovery result does not authorize production implementation.
