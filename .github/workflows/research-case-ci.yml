@@ -10,17 +10,11 @@ on:
       - "tools/validate_external_case.py"
       - "tests/test_validate_external_case.py"
       - ".github/workflows/research-case-ci.yml"
-  push:
-    branches: [main]
-    paths:
-      - "data/research_case_template.json"
-      - "data/research/cases/**"
-      - "data/research/external_cases/**"
-      - "tools/add_research_case.py"
-      - "tools/validate_external_case.py"
-      - "tests/test_validate_external_case.py"
-      - ".github/workflows/research-case-ci.yml"
   workflow_dispatch:
+
+concurrency:
+  group: research-case-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
