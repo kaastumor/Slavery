@@ -31,6 +31,13 @@ The sample is selected because the corrections already happened and span distinc
 failure mechanisms. It is **exposed regression material**, not fresh/blind historical
 evaluation.
 
+**Pre-execution clerical erratum — 2026-09-24:** three target IDs copied into the
+machine-readable freeze did not match the canonical R1 final artifacts. The labels,
+anchors and correction mechanisms were correct and remain unchanged. Before prototype
+construction, the IDs were reconciled to `R1:N:inuit_arctic_1800`,
+`R1:L:cahokia_1200`, and `R1:P:500:D:r1`. This is not target replacement or a
+threshold change.
+
 ## 3. Baseline
 
 Current portable packet:
