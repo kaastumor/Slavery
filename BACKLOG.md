@@ -14,7 +14,7 @@ This file answers **what is justified to work on next**.
 **Parent programme:** #159  
 **MVP parent:** #174  
 **Technical gate:** #182  
-**Decisions:** D-081, D-083, D-084, D-085, D-086  
+**Decisions:** D-081, D-083, D-084, D-085, D-086, D-086  
 **Current stage:** **R1 COMPLETE — HOLD_NO_RELEASE; EXP-02 COMPLETE; no automatic successor authorized**
 
 R1.7 has produced the intended small technical MVP candidate:
