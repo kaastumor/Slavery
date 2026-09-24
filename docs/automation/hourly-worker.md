@@ -103,6 +103,19 @@ Living-person/sensitive modern data remains separately policy-gated.
 
 Use a short-lived branch from current `main`. One active WIP issue normally produces one coherent PR.
 
+### Actions-budget rule
+
+GitHub Actions minutes are a project resource. Preserve evidence quality without paying for redundant execution.
+
+- Do **not** open a PR at the start of a research/discovery horizon.
+- Work and perform bounded/manual validations on the branch first; open the PR when the coherent experiment/delivery slice is ready for final CI/review.
+- After a PR is open, avoid cosmetic or piecemeal pushes that would retrigger the same workflows; batch corrections where safe.
+- Heavy foundation CI is for database/core-code changes, not ordinary docs/experiment packets.
+- Specialized CI should run only for the paths it protects.
+- Do not rerun successful workflows without a concrete reason.
+- Prefer one final exact-head CI verification over repeated “just in case” runs.
+- Production/manual workflows remain explicit; never run them merely to prove they still exist.
+
 Before merge:
 - run relevant focused tests;
 - run sanitation;
