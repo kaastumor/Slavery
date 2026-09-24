@@ -9,61 +9,60 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE PRESENTATION HORIZON — EXP-04 Research Preview
+# EXP-05 CLOSURE CANDIDATE — thin-view discrimination
 
-**Active issue:** #221  
-**Current stage:** LIVE PREVIEW / BROWSER REVIEW — WIP 1
+**Active issue:** #223  
+**Current stage:** CLOSURE CANDIDATE — final PR cleanup/checks
 
-EXP-04 (#213, merged #220) completed its eight-case method/representation test with
-**SUCCESS — PORTABLE CONTRACT SURVIVES EXP-04**. Five targets are
-`researched_internal`, three remain `under_review / unassessed`, and zero EXP-04
-targets are independently historically reviewed.
+#221 / the EXP-04 Research Preview is live and received sponsor first-look browser
+acceptance. That acceptance is lightweight usability evidence, not external demand or
+independent historical validation.
 
-Canonical v0.6.1 is unchanged.
+The current decision-relevant uncertainty is whether the **thin Atlas view materially
+improves difficult comparative work** over:
+- A: ordinary case packets + source notes;
+- B: the portable evidence package without the map;
+- C: the live map + table preview.
 
-Current horizon: make that experimental package inspectable without promoting it to
-canonical/public historical data.
+Frozen protocol: `experiments/exp05-thin-view-value/00_PROTOCOL.md`.
 
-Implementation boundary:
-- deterministic EXP-04 preview JSON generated from the checked-in target/source tables;
-- separate static `web/research-preview.html` page;
-- reuse existing Vite + MapLibre stack;
-- neutral land always visible;
-- navigation/reference markers only; no practice polygons;
-- map marker state reflects research stage only, never historical intensity;
-- table/detail view exposes bounded proposition, abstention, temporal state,
-  evidence-locus/inference-extent distinction, category notes, access limits and
-  source-family dependencies.
+Three tasks are preregistered:
+1. temporal + spatial truth;
+2. external/network versus territorial practice;
+3. category + dependency negative control.
 
-The preview must keep Indus, Hadhramaut and Cuzco visibly under review and must preserve
-Andaman's external-colonial-positive / indigenous-internal-unassessed split.
+All three lanes are complete. The live browser run completed with zero page errors and
+preserved the non-canonical / under-review / navigation-only geometry boundaries.
 
-Implementation is merged in #222 and the GitHub Pages deployment completed successfully.
+Observed:
+- B materially improves 3/3 tasks over A through lower comparison/provenance burden;
+- C materially improves 0/3 tasks over B under the frozen rule;
+- C remains a safe/readable inspection adapter with no observed historical overclaim.
 
-**Live preview:** `https://kaastumor.github.io/Slavery/research-preview.html`
 
-**Next:** inspect the rendered page in a normal browser for misleading compression,
-layout/accessibility problems, or any visual implication of historical extent/intensity.
-Any visual failure is a presentation/representation finding, not permission to
-strengthen the historical rows. Keep #221 open until that browser review is accepted.
+Result:
+> **portable package earns the comparative workflow value; thin Atlas remains a
+> maintenance/trigger-bound view.**
 
-Project form remains: portable reviewed evidence core + replaceable Atlas/map/table/API
-views. No production API/database mutation, schema migration or platform expansion is
-authorized by #221.
+Do not infer poor usability or map uselessness. Sponsor first-look feedback was
+positive; EXP-05 tested the stricter question of material task advantage.
 
-## Sponsor-visible milestone
+**Next after #223 merges/closes:** select one bounded **historical evidence-growth**
+successor by expected information gain. Prefer globally underrepresented
+non-Atlantic/non-Western targets and reuse the portable package; no new product
+horizon should intervene.
 
-The current WIP **is now live** as the sponsor-visible milestone: a non-canonical EXP-04
-**map + table** research preview.
 
-Acceptance:
-- all eight frozen targets visible;
-- 5 internal / 3 under-review / 0 independently-reviewed counts remain explicit;
-- reference points are labeled navigation-only;
-- under-review is never styled as absence;
-- source counts never determine marker size/intensity;
-- canonical v0.6.1 and existing R1 candidate stay untouched;
-- page is reproducibly built and viewable from the ordinary static deployment path.
+Canonical v0.6.1 remains unchanged. No historical research tranche, schema/API/database
+change, geometry programme or frontend change is authorized by #223.
+
+## Sponsor-visible state
+
+The EXP-04 preview remains live at
+`https://kaastumor.github.io/Slavery/research-preview.html`.
+
+#223 may inspect that existing view, but it must not modify the interface before all
+frozen lane-C tasks are captured.
 
 
 ## Discovery execution
@@ -109,7 +108,7 @@ Do **not** use elapsed research time alone as a stop criterion.
 
 # PARKED / trigger-bound operational debt
 
-These are not eligible while #221 is active unless they block the preview.
+These are not eligible while #223 is active unless they block the value experiment.
 
 ## #43 — protected staging / release-promotion administration
 
@@ -131,7 +130,7 @@ Handle when it materially blocks evidence work; do not turn administration into 
 
 # Explicitly NOT the current horizon
 
-Do not let the presentation test become platform drift. #221 does **not** authorize:
+Do not let the value test become platform drift. #223 does **not** authorize:
 
 - M2 production schema migration;
 - frontend redesign;
