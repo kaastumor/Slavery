@@ -26,19 +26,19 @@
       "mechanism": "target_context_join"
     },
     {
-      "target_id": "R1:N:inuit_1800",
+      "target_id": "R1:N:inuit_arctic_1800",
       "label": "Inuit frame",
       "anchor": "1800 CE",
       "mechanism": "dimension_temporal_spatial_leakage"
     },
     {
-      "target_id": "R1:N:cahokia_1200",
+      "target_id": "R1:L:cahokia_1200",
       "label": "Cahokia",
       "anchor": "1200 CE",
       "mechanism": "status_temporal_leakage"
     },
     {
-      "target_id": "R1:P:500:B:r1",
+      "target_id": "R1:P:500:D:r1",
       "label": "Lazica",
       "anchor": "500 CE",
       "mechanism": "temporal_dependency_network_territorial"
@@ -49,5 +49,22 @@
       "anchor": "700 CE",
       "mechanism": "target_context_dependency"
     }
-  ]
+  ],
+  "erratum": {
+    "date": "2026-09-24",
+    "stage": "before_prototype_execution",
+    "type": "clerical_target_id_reconciliation",
+    "unchanged": [
+      "labels",
+      "anchors",
+      "mechanisms",
+      "threshold",
+      "sample membership"
+    ],
+    "corrected_ids": {
+      "Inuit frame": "R1:N:inuit_arctic_1800",
+      "Cahokia": "R1:L:cahokia_1200",
+      "Lazica": "R1:P:500:D:r1"
+    }
+  }
 }
