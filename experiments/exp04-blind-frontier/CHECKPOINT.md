@@ -1,6 +1,6 @@
 # EXP-04 checkpoint — 2026-09-24
 
-One packet researched internally, one packet under review, and six targets not started.
+One packet researched internally, two packets under review, and five targets not started.
 Tranche outcome: NOT ASSESSED. No target has been added to reviewed R1/public/canonical data.
 
 The requested P453801 / a-ru-a lugal reconciliation advanced but direct
@@ -13,7 +13,7 @@ This is an experimental serialization of the existing stage/outcome distinction,
 not a schema decision or evidence that a new contract extension is required.
 
 Source table and packets are a checkpoint, not a release. Remaining tranche outputs:
-six target packets, final dependency/category/access audits, integrated adversary and verdict.
+five target packets, final dependency/category/access audits, integrated adversary and verdict.
 
 ## Reconciliation result
 
@@ -97,16 +97,48 @@ tranche verdict. A focused GPT-6 Astra medium-reasoning red-team of that represe
 question is warranted if/when a deeper model pass is available, but it is not a blocker
 for continuing the frozen sample.
 
+## Hadhramaut — 500 BCE result
+
+Hadhramaut remains **unassessed / under_review** after a claim-specific pass. The
+polity/frame is defensible around the anchor, and broader South Arabian epigraphy
+contains clear slavery/captivity/property evidence, but that regional evidence cannot
+be transferred into a Hadhramaut territorial claim.
+
+The strongest early target-specific corpus is Raybūn-Hadrān. Its publisher summary
+covers 458 Hadramitic inscriptions and explicitly notes that the corpus does not
+indicate individuals' places in a social hierarchy; it immediately qualifies this as
+an **argumentum a silentio** whose implications lack general agreement. Bron's review
+also stresses the fragmentary/formulaic corpus and gives a somewhat later temple-use
+range than the publisher. The archive therefore constrains inference rather than
+supporting an absence claim.
+
+Grasso 2023 supplies strong regional category controls: South Arabian subordinate
+terms such as `ʿbd` and `ʾdm` are context-sensitive, while captives and proprietary
+female-status records can support stronger slavery/property readings in specific
+inscriptions. Her Hadramitic stratification example is centuries later than the
+500 BCE anchor and is not back-projected.
+
+Potentially decisive target-specific resources remain incompletely accessible:
+Frantsouzoff 2001 Hadrān, Frantsouzoff 2007 Kafas/Naʿmān, Frantsouzoff 2012
+*East of Aden* social-structure analysis, and the 2026 Arbach/Frantsouzoff Hadramitic
+index/glossary. Exact recovery terms and required inscription-level metadata are
+recorded in 03_HADHRAMAUT_500BCE.md. Do not retry unchanged access mechanically.
+
+Internal attack result: **D-089 survives provisionally** because it can preserve
+regional-versus-territorial scope, lexical ambiguity, chronology uncertainty, source
+dependency and the access blocker without converting missing target evidence into
+historical absence. This is not a tranche-wide verdict.
+
 ## Next exact action
 
-Do **not** loop on the unchanged Indus book-access failure. Retain direct
-Laursen–Steinkeller pp. 83–84 verification as that case's reopening trigger. Proceed
-within the same frozen EXP-04 sample to **Hadhramaut — 500 BCE**.
+Do **not** loop on unchanged Indus or Hadhramaut source-access failures.
+Retain each packet's exact reopening condition and proceed within the same frozen
+EXP-04 sample to **Cuzco — 1300 CE**.
 
-Carry forward the Sumer lesson as a test condition, not a new rule: distinguish
-historical term/category mapping from generic dependency, and do not let a political
-or chronological transition manufacture territorial continuity.
+Carry forward two tested constraints: regional evidence cannot silently become
+territorial evidence, and missing/genre-limited records cannot become historical
+absence.
 
-Unchanged: eight-target frozen sample, Indus under review, Sumer internally researched,
-six targets not started, no tranche verdict, no independent review, and no
-public/canonical effects.
+Unchanged: eight-target frozen sample, Sumer internally researched, Indus and
+Hadhramaut under review, five targets not started, no tranche verdict, no independent
+review, and no public/canonical effects.

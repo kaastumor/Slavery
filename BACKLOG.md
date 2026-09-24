@@ -21,21 +21,39 @@ EXP-04 tests that contract on the eight previously registered targets frozen in 
 Protocol and pinned selection: `experiments/exp04-blind-frontier/00_PROTOCOL.md`
 and `sample.json`.
 
-Current checkpoint: **Sumerian City-States internally researched; Indus packet
-under review; six cases not started**. Sumer supports a bounded near-anchor slavery
-institution claim while preserving the Ur III→Isin-Larsa transition, aggregate-polity
-frame, and slave/dependent category boundaries. No canonical P-level or territorial
-designation was created.
+Current checkpoint: **Sumerian City-States internally researched; Indus and
+Hadhramaut under review; five cases not started**. Sumer supports a bounded near-anchor
+institution claim. Hadhramaut is deliberately not classified from regional South Arabian
+evidence or archive silence: its polity frame is supported, while target-specific
+near-anchor slavery evidence remains unresolved behind recorded corpus-access triggers.
+No canonical P-level or territorial designation was created.
 
-Indus direct Laursen–Steinkeller 2017 pp.83–84 verification remains a recorded
-reopening trigger; do not retry unchanged access.
+Indus and Hadhramaut reopening conditions are recorded in their packets; do not retry
+unchanged access.
 
-**Next:** continue the same frozen experiment with **Hadhramaut — 500 BCE**. Carry
-forward the tested distinction between historical status terms and generic dependency,
-but do not turn the Sumer result into a tranche-wide conclusion. See `CHECKPOINT.md`.
+**Next:** continue the same frozen experiment with **Cuzco — 1300 CE**. Preserve
+regional-versus-territorial scope, historical category mapping and non-absence research
+states. Do not turn individual target outcomes into a tranche-wide conclusion. See
+`CHECKPOINT.md`.
 
 Project form: portable reviewed evidence core + replaceable Atlas/map/table/API views.
 Canonical v0.6.1, frozen R1 registry and public preview remain unchanged.
+
+## Sponsor-visible milestone after EXP-04
+
+After the frozen eight-case tranche closes and its integrated adversarial/reconciliation
+gate is complete, the next planned milestone is a **non-canonical EXP-04 Research
+Preview** rather than another invisible research-only tranche.
+
+The preview should use the existing replaceable presentation path and expose the
+reviewed/experimental package as an ordinary **map + table**, including research state,
+temporal precision, evidence locus versus inference extent, category notes and unresolved
+geometry. Under-review and unresolved targets must remain visibly unresolved; the view
+must not convert them into absence or a stronger territorial claim.
+
+This is a queued successor boundary, **not current WIP** and not authorization to build
+or publish before EXP-04 closes. Scope should remain thin: reuse the existing web/map
+capability where possible, no platform redesign, and no automatic canonical release.
 
 ## Discovery execution
 
