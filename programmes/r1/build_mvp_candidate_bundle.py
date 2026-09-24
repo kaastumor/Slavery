@@ -7,6 +7,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from build_mvp_geometry_manifest import build as build_geometry_manifest
+
 ROOT = Path(__file__).resolve().parents[2]
 R1 = ROOT / "programmes" / "r1"
 DEFAULT_OUTPUT = ROOT / "web" / "public" / "data" / "r1-mvp-candidate.json"
@@ -36,6 +38,7 @@ def build() -> dict:
     registry = load(INPUTS["registry"])
     dependencies = load(INPUTS["dependencies"])
     temporal = load(INPUTS["temporal"])
+    geometry = build_geometry_manifest()
     rows = []
     for key in ("c1_tranche_01", "c1_tranche_02", "c1_tranche_03"):
         rows.extend(load(INPUTS[key])["rows"])
@@ -44,6 +47,7 @@ def build() -> dict:
     target_ids = [t["target_id"] for t in targets]
     row_ids = [r["target_id"] for r in rows]
     temporal_ids = [r["target_id"] for r in temporal["rows"]]
+    geometry_ids = [r["target_id"] for r in geometry["rows"]]
     expected_states = {
         "c1_review_complete": 19,
         "planned_c1_unresearched_ready": 15,
@@ -57,6 +61,7 @@ def build() -> dict:
     assert len(targets) == len(set(target_ids)) == 77, "frozen target membership drift"
     assert len(rows) == len(set(row_ids)) == 19, "reviewed C1 membership drift"
     assert set(row_ids) == set(temporal_ids), "temporal annotation membership drift"
+    assert set(target_ids) == set(geometry_ids), "geometry manifest membership drift"
     assert states == expected_states, f"research-state drift: {states}"
     assert all(t.get("absence_inference_prohibited") is True for t in targets), "non-absence guard missing"
     assert all(r.get("review_state") == "internally_adversarially_reviewed" for r in rows), "review label drift"
@@ -81,6 +86,7 @@ def build() -> dict:
         "reviewed_c1": rows,
         "source_dependencies": dependencies,
         "temporal_render_annotations": temporal,
+        "geometry_manifest": geometry,
     }
 
 
