@@ -14,8 +14,8 @@ This file answers **what is justified to work on next**.
 **Parent programme:** #159  
 **MVP parent:** #174  
 **Technical gate:** #182  
-**Decisions:** D-081, D-083  
-**Current stage:** **R1.8 — sponsor release/no-release gate (#203) ACTIVE**
+**Decisions:** D-081, D-083, D-084  
+**Current stage:** **R1.8 REWORK — stale committed candidate artifact repair in progress (#203)**
 
 R1.7 has produced the intended small technical MVP candidate:
 
@@ -52,6 +52,17 @@ v0.6.1 remains canonical.
 - sponsor/browser usability acceptance is still required;
 - current public preview remains the legacy non-canonical demonstration until an explicit release decision.
 
+## R1.8 internal adversary result
+
+The internal static/reconstructibility review found one release-integrity defect: the committed MVP candidate bundle was stale because CI regenerated it before checking it.
+
+Bounded REWORK only:
+- refresh the committed generated candidate;
+- make CI check committed freshness before generation;
+- regression-test committed bytes against deterministic reconstruction.
+
+No historical data or feature behavior changes are authorized.
+
 ## Next release action — #203 only
 
 Do **not** expand the MVP before review.
@@ -68,7 +79,7 @@ Active sequence:
 
 Canonical/public promotion remains separate. v0.6.1 remains canonical.
 
-## Discovery lane — protocol frozen, execution sequenced after R1.8
+## Discovery lane — internal-only until sponsor explicitly reopens external involvement
 
 Parent: #183.  
 Method: D-082 / `docs/discovery/DISCOVERY_STANDARD_V2.md`.
@@ -78,14 +89,13 @@ Completed/parked:
 - #198 corrected wide-lens reassessment — **COMPLETE**;
 - #185 search/filter — **PARK**;
 - #186 dependency visualization — **PARK the visualization; audit problem retained**;
-- #187 dedicated comparison view — **PARK**.
+- #187 dedicated comparison view — **PARK**;
+- #200 external expert audit — **DEFERRED BY SPONSOR**; protocol preserved, no recruitment/contact.
 
-Prepared:
-- **#200 — EXP-01 external expert audit crossover — protocol frozen; participant execution waits on #203.**
+Prepared next internal experiment:
+- **#205 — EXP-02 minimum sufficient evidence packet — protocol frozen; execution waits on #203 artifact freeze.**
 
-Recruitment feasibility may proceed in parallel, but no participant case task should run against a potentially superseded R1 packet.
-
-The experiment asks whether the structured Atlas evidence packet improves safety-critical claim review and provenance reconstruction over a competent ordinary source-note/table baseline.
+EXP-02 is subtractive only. It tests field necessity, invariant preservation and portability into boring Markdown/table forms. It does **not** claim user demand or adoption.
 
 No production feature implementation is authorized.
 
