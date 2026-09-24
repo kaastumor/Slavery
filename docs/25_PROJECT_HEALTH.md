@@ -1617,3 +1617,42 @@ states, temporal uncertainty, network evidence or node references into stronger
 historical claims. Reuse the existing presentation path; no platform expansion.
 
 Health disposition: **CONTINUE — EXP-04 RESEARCH PREVIEW.**
+
+
+## HC-028 — EXP-05 thin-view value discrimination — 2026-09-24
+
+**Decision:** **PORTABLE PACKAGE EARNS THE VALUE; THIN ATLAS MAINTENANCE-ONLY UNTIL A CHANGED TASK.**
+
+EXP-05 compared three frozen difficult comparative tasks across:
+- A: long-form case packets + source notes;
+- B: portable target/source tables;
+- C: the live non-canonical EXP-04 map + table preview.
+
+Result:
+- B materially improved 3/3 tasks over A through lower comparison/provenance-recovery
+  burden with no correctness or abstention loss;
+- C preserved all distinctions safely but materially improved 0/3 tasks over B under
+  the preregistered rule;
+- no UI-induced historical overclaim was observed.
+
+The live browser evidence verified the non-canonical boundary, under-review states,
+navigation-only geometry and integrated source/dependency display with zero page errors.
+
+Important limit: this is one internal same-operator workflow test. Artifact/interaction
+counts are a crude effort proxy; sponsor first-look feedback on the preview was positive.
+Therefore do not infer that the preview is poor UX or that maps have no value.
+
+Project consequence:
+- reinforce D-087's portable evidence core as the value owner;
+- retain the current thin Atlas as a safe replaceable inspection view;
+- stop richer application/UI expansion unless a real changed task earns it;
+- return WIP to bounded historical evidence growth rather than product work.
+
+Likely reopening triggers for derived-view investment are reviewed historical geometry,
+route/spatial-intersection tasks, or repeated observed navigation friction that changes
+correctness, uncertainty preservation, provenance recovery or material effort.
+
+No schema, ontology, methodology or canonical-release change follows. v0.6.1 remains
+canonical. External demand/adoption remains untested.
+
+Health disposition: **CONTINUE — HISTORICAL EVIDENCE, NOT APP EXPANSION.**
