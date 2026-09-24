@@ -1473,3 +1473,32 @@ Use the internal runway only for questions that can be answered honestly without
 **Durable artifacts:**
 - `docs/mvp/r1.8-internal-adversary.md`
 - `docs/discovery/EXP_02_MINIMUM_SUFFICIENT_PACKET.md`
+
+
+## D-085 — Close R1 with HOLD_NO_RELEASE
+**Date:** 2026-09-24  
+**Status:** accepted R1 final-gate decision
+
+**Decision:** Close R1 with **HOLD_NO_RELEASE**.
+
+The frozen R1 candidate at `a6987d3f14369c6ea2d7b2b3db74ac65faa8ec57` is internally coherent and reconstructible after the bounded stale-artifact repair.
+
+No public/canonical promotion occurs.
+
+**Why not publish now:**
+- 77/77 historical target geometries remain unresolved;
+- no independent historical review exists;
+- external involvement is intentionally deferred;
+- public promotion would not reduce the project’s current highest-value uncertainty;
+- v0.6.1 already remains the canonical historical release.
+
+**What this means:**
+- R1 is a completed bounded research/release programme;
+- HOLD_NO_RELEASE is a valid programme result, not a failed technical gate;
+- the candidate remains preserved as the frozen reference artifact;
+- #159 and #203 may close;
+- #205 becomes the active internal discovery item;
+- #200 remains deferred;
+- no R2, feature queue, geometry programme or new subject-research tranche is authorized.
+
+**Canonical release:** v0.6.1 unchanged.
