@@ -1,19 +1,28 @@
 {
   "experiment": "EXP-04",
-  "state": "partial_under_review",
+  "state": "complete_method_test_with_historical_cases_under_review",
   "canonical_effect": "none",
-  "reviewed_targets": 1,
-  "targets_under_review": 2,
-  "not_started": 5,
+  "reviewed_targets": 5,
+  "targets_under_review": 3,
+  "not_started": 0,
   "base_commit": "5b95ed1c01d0401ab47a2b189b6b4a5668c27a3b",
   "files": {
     "00_PROTOCOL.md": "11ed831fcbe9297536b6c4c7029a8165d6ba694e256a7caaf36e2881f6b55482",
     "01_INDUS_2000BCE.md": "431d79e46ceb34b749b1e421f408f97e7a27b40ec6d349d579a6f0a3f5a8fab8",
-    "CHECKPOINT.md": "9edea0212fbfd0b29e14eb58a024f12bb4b748fd01b811c5a27ac2717763e246",
-    "sample.json": "a4a854352bc21504f6f7a2b4c03431d3bc376dbb2ced14357ecf81e1609f7d63",
-    "source_relations.csv": "1c78d58ce94e866551a1d3bebf4aa3abcb975e49360d9b48d0ed20f47bc68a51",
-    "targets_extended.csv": "e9c69d94c1879122b6ed94fe6f94155acfbcb2afff03647f00496f9f1f3cf60d",
     "02_SUMER_2000BCE.md": "275fd5a832c3fde1c97813f9fa758b99b3ce4ea6bc7e31f698e0059f8174e56f",
-    "03_HADHRAMAUT_500BCE.md": "626b824a2c28f9a05d1c8669b1b4ef9d692abcc04dd587580f4a1969686c736d"
-  }
+    "03_HADHRAMAUT_500BCE.md": "626b824a2c28f9a05d1c8669b1b4ef9d692abcc04dd587580f4a1969686c736d",
+    "04_CUZCO_1300CE.md": "4b3b8a6c4603f4bbabd19fdb65225c3b986dc5b0ee3e5224f21825d56d6a5102",
+    "05_VIKING_900CE.md": "beac74acaebbe72de2e182a749079514269e9ca2f163625cacac56089a00937d",
+    "06_ANDAMAN_1800CE.md": "80a34598aed4603bb835042863249e39f103dd577fd9e5f31309691bc9b9ecf7",
+    "07_ANGKOR_1200CE.md": "7e487de9a949981c1f543a263015fe65ad42dc8be77f0dd4eb781656d1e79b9c",
+    "08_ETHIOPIAN_EMPIRE_1800CE.md": "310d3dca993999bd24289ac8902642f266e91dbe322ad6abd1fda70394eef246",
+    "09_DEPENDENCY_CATEGORY_ACCESS_AUDIT.md": "95aeed4be5adc9ac2de9075b4153980af93c5743b118dfc33e2b3e0fe991caba",
+    "10_ADVERSARY.md": "fa52a0920d6deb2adf4aece666e4ab7ac96818db2be2bd07624d349ddf55d26f",
+    "RESULT.md": "192e2390baf00fd1829e90d078c9b481862e4f04194e8df1951943321c1a1e34",
+    "CHECKPOINT.md": "c7351152c05b1e7f145741931fc6f9a238eb497a216ed7a21f5bdf3cef0359bb",
+    "sample.json": "a4a854352bc21504f6f7a2b4c03431d3bc376dbb2ced14357ecf81e1609f7d63",
+    "source_relations.csv": "32d42829225776495c32dc02ab26b901dcf03bb1590b7f0d52aa21e8d76ccbc0",
+    "targets_extended.csv": "54d526eb0ed6e098ba848c09206a040ce4d6a2d016b2c56fed474395c76565c6"
+  },
+  "method_disposition": "success_portable_contract_survives_exp04"
 }
