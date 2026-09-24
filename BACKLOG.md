@@ -10,32 +10,48 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# POST-R1 CUMULATIVE INTERNAL REVIEW — FREEZE GATE
+# POST-R1 CUMULATIVE INTERNAL REVIEW — RESULT READY
 
 **Issue:** #259  
 **Mode:** review / release  
-**Current stage:** 17-ROW MEMBERSHIP + INPUTS FROZEN  
-**Historical/source research:** **PROHIBITED**
+**Current stage:** REPLAY COMPLETE / MERGE GATE  
+**Disposition:** **CUMULATIVE_NONCANONICAL_CANDIDATE**  
+**Historical/source research:** **NONE PERFORMED**
 
-Frozen membership:
-- EXP-04: 8 subject-research rows;
-- EXP-06: 6 subject-research rows;
-- EXP-08: 3 completed subject-research rows;
-- total: **17**.
+Frozen 17-row replay result:
+- 12 `ACCEPT_INTERNAL_REVIEW`;
+- 5 `HOLD_EXISTING_EVIDENCE`;
+- 0 narrowed;
+- 0 rejected.
 
-Excluded:
-- 19 already-reviewed R1 rows;
-- EXP-07 qualification-only rows;
-- Kalabhra hold;
-- Qi — 500 BCE frozen/unstarted.
+HOLD rows:
+- Indus Valley Civilization — 2000 BCE;
+- Hadhramaut — 500 BCE;
+- Cuzco — 1300 CE;
+- Chámpa — 500 CE;
+- Magadha–Haryanka — 500 BCE.
 
-Review uses existing repository evidence only. A row that cannot be defended from its
-current packet is held/narrowed; it does not trigger fresh research.
+Source/reconstructibility gate:
+- 113 source relations inspected;
+- 0 missing source/version refs;
+- 0 missing independence groups;
+- 0 missing claim-fitness fields;
+- 0 within-target duplicate exact source versions;
+- 1 cross-target exact dependency family: `angkor-personnel-corpus` across Angkor
+  1200 and Khmer 1300.
 
-**Current exact action:** merge the freeze if CI is green, then replay all 17 rows and
-produce one cumulative non-canonical candidate/HOLD/rework decision.
+Candidate ID: `post-r1-cumulative-review-v1`.
 
-v0.6.1 remains canonical. No publication follows automatically.
+This is an **internal non-canonical review candidate** only. Independent historical
+review remains 0. No public/canonical publication is authorized.
+
+**Next mode after merge: MAINTENANCE / TRIGGER-BOUND REVIEW.**
+
+Do not resume Qi or other intake automatically. Reopen for sponsor-authorized historical
+intake, independent review, a concrete publication/consumer need, a demonstrated defect,
+or new evidence satisfying a HOLD trigger.
+
+v0.6.1 remains canonical.
 
 ## Discovery execution
 

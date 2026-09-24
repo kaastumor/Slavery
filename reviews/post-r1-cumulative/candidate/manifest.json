@@ -1,0 +1,29 @@
+{
+  "candidate_id": "post-r1-cumulative-review-v1",
+  "status": "internal_noncanonical_review_candidate",
+  "canonical_release": "v0.6.1_unchanged",
+  "base_review_issue": 259,
+  "frozen_review_base_commit": "2bb3d9b8aa9bc7864eb29a6192618258b93b8a59",
+  "membership_count": 17,
+  "accepted_count": 12,
+  "hold_count": 5,
+  "narrowed_count": 0,
+  "rejected_count": 0,
+  "independent_reviewed_count": 0,
+  "source_relation_count": 113,
+  "source_reconstructibility": {
+    "missing_source_version_ref": 0,
+    "missing_independence_group": 0,
+    "missing_claim_fitness": 0,
+    "within_target_duplicate_exact_source_version": 0,
+    "cross_target_exact_overlap_count": 1
+  },
+  "release_effects": {
+    "canonical_release_change": false,
+    "r1_review_state_change": false,
+    "p_level_assignment": false,
+    "historical_geometry_promotion": false,
+    "public_release": false,
+    "database_or_api_change": false
+  }
+}

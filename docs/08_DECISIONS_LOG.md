@@ -1925,3 +1925,54 @@ review capacity before admitting more cases or starting another method-discovery
 **No effect:** no historical conclusion, ontology/schema, canonical v0.6.1, public
 release, EXP-08 frozen sample or CI cadence changes.
 
+## D-097 — Post-R1 cumulative internal review yields a non-canonical candidate
+**Date:** 2026-09-25  
+**Status:** accepted internal review/release decision
+
+**Evidence:** #259, reviewing the frozen 17 post-R1 subject-research rows with existing
+repository evidence only.
+
+**Decision:** Record `post-r1-cumulative-review-v1` as an **internal non-canonical
+review candidate**.
+
+Row results:
+- 12 `ACCEPT_INTERNAL_REVIEW`;
+- 0 `NARROW_AND_ACCEPT`;
+- 5 `HOLD_EXISTING_EVIDENCE`;
+- 0 `REJECT_ARTIFACT`.
+
+The five HOLD rows remain:
+- Indus Valley Civilization — 2000 BCE;
+- Hadhramaut — 500 BCE;
+- Cuzco — 1300 CE;
+- Chámpa — 500 CE;
+- Magadha–Haryanka — 500 BCE.
+
+Across the 17-row tranche, all 113 source relations retain source/version identity,
+independence group and claim-fitness metadata. One exact cross-target source family is
+shared by Angkor 1200 and Khmer Empire 1300: Lustig & Lustig 2013 /
+`angkor-personnel-corpus`. It must not be counted as independent evidence across
+those rows.
+
+**Interpretation:** internal review validates each admitted row's bounded evidence
+state. It does not mean every admitted row is a positive slavery classification.
+Researched-inconclusive and dimensionally bounded coercion results remain valid review
+outcomes.
+
+**Publication boundary:** no automatic public/canonical publication follows. Independent
+historical review remains zero. The project already has a working non-canonical
+candidate pattern; another public surface is not justified without a concrete
+review/consumer need.
+
+**Next mode:** maintenance / trigger-bound review under D-096.
+
+Reopen for:
+1. sponsor authorization to resume historical intake, including Qi;
+2. independent/external historical review;
+3. a concrete consumer/publication need for the cumulative candidate;
+4. a demonstrated defect in an accepted row;
+5. new evidence satisfying a HOLD row's recorded trigger.
+
+**No effect:** canonical v0.6.1, frozen R1 state, P-levels, geometry, ontology/schema,
+production services and EXP-08's frozen Qi row remain unchanged.
+
