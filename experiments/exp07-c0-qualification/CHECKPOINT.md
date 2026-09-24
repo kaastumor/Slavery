@@ -1,14 +1,21 @@
 # EXP-07 checkpoint
 
 **Issue:** #229  
-**State:** sample frozen; qualification not yet executed  
+**State:** qualification complete; adversary passed with one hold  
 **Subject slavery/coercion research:** NOT STARTED
 
-The next action is identity/anchor/frame qualification for the eight rows in
-`01_SAMPLE_FREEZE.json` under `00_PROTOCOL.md`.
+Outputs:
+- `03_QUALIFICATION_RESULTS.json`
+- `03_QUALIFICATION_RESULTS.md`
+- `04_SOURCE_RELATIONS.csv`
+- `05_ADVERSARY.md`
+- `RESULT.md`
 
-Do not begin subject research in this checkpoint. Do not mutate the R1 registry.
+Disposition: **PASS WITH ONE HOLD**.
 
-Resume by producing one qualification record per frozen row, then an adversarial
-review of the qualification outcomes before choosing any later subject-research
-horizon.
+Seven rows are eligible for a later C1 subject-research selection gate. Kalabhra
+Dynasty — 500 CE is held on identity/time/frame grounds.
+
+Do not mutate the R1 registry from this experiment. The next action after merge is to
+compare qualified rows plus deferred Lithuania by expected information gain and freeze
+one subject-research horizon before subject research begins.

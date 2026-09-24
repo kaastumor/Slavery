@@ -1,0 +1,104 @@
+{
+  "experiment": "EXP-07",
+  "issue": 229,
+  "stage": "qualification_complete",
+  "canonical_release": "v0.6.1",
+  "subject_research_performed": false,
+  "disposition": "PASS_WITH_ONE_HOLD",
+  "counts": {
+    "QUALIFIED_C1_READY": 7,
+    "HOLD_IDENTITY_OR_TIME": 1,
+    "REJECT_FRAME_INVALID": 0,
+    "QUALIFICATION_INCONCLUSIVE": 0
+  },
+  "results": [
+    {
+      "target_id": "R1:N:great_zimbabwe_1400",
+      "target_label": "Great Zimbabwe",
+      "anchor": "1400",
+      "frame": "node_site",
+      "outcome": "QUALIFIED_C1_READY",
+      "temporal_precision": "anchor_supported",
+      "spatial_precision": "site/capital locus; no automatic state polygon",
+      "rationale": "UNESCO dates the complex to c.1100–1450 and identifies Great Zimbabwe as the principal city of a major state in the 14th century. The frozen 1400 site/node is therefore historically valid. The site may not stand in for the full state's territorial extent.",
+      "limitation": "Keep archaeological monument/site geometry separate from any larger political territory."
+    },
+    {
+      "target_id": "R1:N:swahili_1400",
+      "target_label": "Swahili maritime trade network",
+      "anchor": "1400",
+      "frame": "mobile_network",
+      "outcome": "QUALIFIED_C1_READY",
+      "temporal_precision": "anchor_supported",
+      "spatial_precision": "multi-port maritime network; route extent unresolved/schematic",
+      "rationale": "UNESCO places Kilwa's peak in the 13th–14th centuries and documents Swahili trading cities participating in Indian Ocean exchange; specialist archaeology identifies navigational infrastructure supporting Swahili shipping in the 14th–15th centuries. A 1400 maritime-network frame is defensible.",
+      "limitation": "No single Swahili polity or uniform coast-wide jurisdiction; later subject claims must remain node/route specific."
+    },
+    {
+      "target_id": "R1:N:maori_1700",
+      "target_label": "Māori communities in Aotearoa",
+      "anchor": "1700",
+      "frame": "region_community",
+      "outcome": "QUALIFIED_C1_READY",
+      "temporal_precision": "anchor_supported_broad_community_frame",
+      "spatial_precision": "multi-community archipelago/region; no single polity",
+      "rationale": "Te Ara places first Polynesian settlement around 1250–1300 and describes pre-European political organization through iwi and especially hapū with territorially grounded communities. Communities clearly existed by 1700.",
+      "limitation": "“Māori” as a collective self-designation is post-contact; at 1700 the research frame must be treated as a retrospective umbrella over distinct iwi/hapū, not one society or jurisdiction."
+    },
+    {
+      "target_id": "R1:N:ifugao_1700",
+      "target_label": "Ifugao communities, northern Luzon",
+      "anchor": "1700",
+      "frame": "region_community",
+      "outcome": "QUALIFIED_C1_READY",
+      "temporal_precision": "anchor_supported_with_local_locus",
+      "spatial_precision": "multi-community highland region; Old Kiyyangan/Tuwali evidence is a bounded locus",
+      "rationale": "Ifugao Archaeological Project work places major landscape/settlement change around the 17th century; Old Kiyyangan evidence documents sustained occupation/interactions across c.1600–1800. The 1700 highland-community frame is defensible.",
+      "limitation": "Ifugao comprises multiple ethnolinguistic groups. Evidence concentrated on Old Kiyyangan/Tuwali-Ifugao cannot be generalized to every Ifugao community."
+    },
+    {
+      "target_id": "R1:P:500:C:r1",
+      "target_label": "Nobatia",
+      "anchor": "500 CE",
+      "frame": "polity",
+      "outcome": "QUALIFIED_C1_READY",
+      "temporal_precision": "approximate_anchor_supported",
+      "spatial_precision": "Lower Nubian polity; exact 500 boundary unresolved",
+      "rationale": "Scholarship places the emergence of Nobadia/Nobatia in the fifth century and treats it as one of the medieval Nubian kingdoms. The polity frame at approximately 500 CE is defensible, although its exact institutional consolidation and boundary at the anchor are not exact.",
+      "limitation": "Do not back-project later sixth-century Christian-state evidence or later Makurian annexation into an exact 500 territorial configuration."
+    },
+    {
+      "target_id": "R1:P:500:E:r1",
+      "target_label": "Kalabhra Dynasty",
+      "anchor": "500 CE",
+      "frame": "polity",
+      "outcome": "HOLD_IDENTITY_OR_TIME",
+      "temporal_precision": "contested",
+      "spatial_precision": "unitary dynastic territory not securely established",
+      "rationale": "One modern study follows the conventional third–sixth-century Kalabhra-interregnum model and notes a fifth-century literary reference to a Kalabhra ruler. A source-critical reassessment argues that the notion of a continuous three-century Kalabhra dynastic interruption does not withstand close examination. The exact 500 CE unitary dynastic-polity frame is therefore not secure enough for subject research.",
+      "limitation": "Hold pending a dedicated identity/chronology reconstruction that distinguishes named rulers, later copper-plate memory, regional political change and any defensible territorial frame."
+    },
+    {
+      "target_id": "R1:P:-500:F:r2",
+      "target_label": "Qi",
+      "anchor": "500 BCE",
+      "frame": "polity",
+      "outcome": "QUALIFIED_C1_READY",
+      "temporal_precision": "anchor_supported",
+      "spatial_precision": "Eastern Zhou polity; exact selected-year frontier unresolved",
+      "rationale": "Cambridge scholarship identifies Qi as one of the large territorial states of the Eastern Zhou/Spring and Autumn political world, and archaeology places Qi incorporation of the Jiaodong Peninsula in the late Spring and Autumn period. A Qi polity at 500 BCE is historically valid.",
+      "limitation": "Do not use later Warring States or Qin/Han boundaries as the 500 BCE extent."
+    },
+    {
+      "target_id": "R1:P:1800:E:r1",
+      "target_label": "Khanate of Kokand",
+      "anchor": "1800 CE",
+      "frame": "polity",
+      "outcome": "QUALIFIED_C1_READY",
+      "temporal_precision": "anchor_supported_early_state_phase",
+      "spatial_precision": "Fergana-centered early Kokand state; later maximum extent excluded",
+      "rationale": "Encyclopaedia Iranica dates the Kokand state to 1709–1876 and identifies 1799–1842 as its expansion phase. The state existed at 1800, but its later nineteenth-century maximum extent cannot be projected back to the anchor.",
+      "limitation": "Use the early Fergana-centered polity at 1800; do not map the 1830s apogee or later conquests onto the anchor."
+    }
+  ]
+}
