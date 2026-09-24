@@ -34,9 +34,9 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - EXP-08 is paused after 3/4 frozen cases; **Qi — 500 BCE remains frozen/unstarted**;
 - DISC-05 external adjacency scan is complete;
 - DISC-06 is complete and rejected a durable inference-ledger extension;
-- active horizon: **#245 / DISC-07 cross-dimensional coverage audit**, result ready;
-- DISC-07 survives narrowly: future cross-chronology coverage claims need a joint chronology × broad-frame-family QA check; sparse cells remain non-absence/non-quota states;
-- next after merge: benchmark the portable candidate package against Frictionless Data Package, with RO-Crate only as a richer comparator if needed;
+- DISC-07 is complete and closed; it survives narrowly and is recorded as D-094;
+- future cross-chronology structural-coverage claims require a joint chronology × broad-frame-family QA check; sparse cells remain non-absence/non-quota states;
+- current next action: freeze a bounded portable-package interoperability benchmark against **Frictionless Data Package** first, with RO-Crate only as a richer comparator if needed;
 - no historical subject-case expansion or production feature work is active;
 - no production migration, new public release or platform expansion authorized.
 
