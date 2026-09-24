@@ -1,7 +1,7 @@
 # EXP-06 Candidate v1
 
-**Status:** non-canonical research candidate  
-**Gate:** issue #227 — PUBLISH_CANDIDATE / HOLD_NO_RELEASE / REWORK  
+**Status:** **PUBLISH_CANDIDATE approved** — non-canonical research candidate  
+**Gate:** issue #227 — decision recorded in `REVIEW_DECISION.md`  
 **Historical source commit:** `16906affed159722cf940e6723401c7ab4e5d9f4`  
 **Canonical historical release:** **v0.6.1 remains unchanged**
 
@@ -49,10 +49,10 @@ No historical practice polygon is materialized.
 
 ## Release decision
 
-Only issue #227 may decide:
+Issue #227 returned **PUBLISH_CANDIDATE** after a bounded browser/human-facing review.
 
-- **PUBLISH_CANDIDATE** — publish this explicitly non-canonical candidate;
-- **HOLD_NO_RELEASE** — preserve the exact candidate but do not publish it;
-- **REWORK** — fix only concrete release-blocking defects and rerun the gate.
+The candidate may be deployed through the existing static Pages path as an explicitly
+non-canonical research candidate. See `REVIEW_DECISION.md` for the exact reviewed
+commit/run/artifact and the bounded rework history.
 
 No candidate decision changes canonical v0.6.1.
