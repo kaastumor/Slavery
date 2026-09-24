@@ -10,40 +10,31 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# EXP-07 C0 QUALIFICATION — ACTIVE
+# EXP-07 C0 QUALIFICATION — RESULT READY
 
 **Issue:** #229  
-**Current stage:** FROZEN IDENTITY / ANCHOR QUALIFICATION  
-**Subject slavery/coercion research:** **NOT AUTHORIZED YET**
+**Current stage:** QUALIFICATION COMPLETE / MERGE GATE  
+**Subject slavery/coercion research:** **NOT STARTED**
 
-The next-horizon comparison is complete.
+EXP-07 completed identity/anchor/frame qualification without subject-evidence research.
 
-EXP-03/04/06 together leave exactly one untouched QA-ready C1 row in the frozen R1
-registry: **Grand Duchy of Lithuania — 1300 CE**. Selecting it merely because it is
-already ready would let C1 readiness/execution convenience bypass the specific C0
-qualification question that this horizon is meant to test.
+Result:
+- 7 QUALIFIED_C1_READY;
+- 1 HOLD_IDENTITY_OR_TIME: **Kalabhra Dynasty — 500 CE**;
+- 0 rejected;
+- 0 qualification-inconclusive.
 
-The project therefore opens one bounded C0 qualification horizon before new subject
-research. The frozen sample is recorded in
-`experiments/exp07-c0-qualification/01_SAMPLE_FREEZE.json`.
+The hold is substantive: current source-critical scholarship contests the unitary
+multi-century Kalabhra dynastic/interregnum frame strongly enough that the frozen
+500 CE polity object should not enter subject research without a dedicated
+identity/chronology reconstruction.
 
-Frozen rows:
-- Great Zimbabwe — 1400;
-- Swahili maritime trade network — 1400;
-- Māori communities in Aotearoa — 1700;
-- Ifugao communities, northern Luzon — 1700;
-- Nobatia — 500 CE;
-- Kalabhra Dynasty — 500 CE;
-- Qi — 500 BCE;
-- Khanate of Kokand — 1800 CE.
+No R1 registry state has been mutated.
 
-**Current exact action:** validate only target identity, anchor chronology, frame class,
-and defensible spatial scope. Do not inspect slavery/coercion evidence. Each row must
-end as QUALIFIED_C1_READY, HOLD_IDENTITY_OR_TIME, REJECT_FRAME_INVALID, or
-QUALIFICATION_INCONCLUSIVE.
-
-Only after #229 closes may a later subject-research horizon be selected from qualified
-rows. Do not silently mutate the R1 registry or promote C0 to historical research.
+**Current exact action:** merge the bounded qualification result if CI is green, close
+#229, then compare the seven qualified rows plus deferred **Grand Duchy of Lithuania —
+1300 CE** by expected information gain. Freeze exactly one subject-research horizon
+before any slavery/coercion research begins.
 
 ## Discovery execution
 
