@@ -1678,3 +1678,27 @@ PR runs cancel automatically. Main changes continue through reviewed PRs.
 
 Relevant verification is not waived. Green checks remain implementation evidence,
 not historical review. No ontology, canonical data or public-release effect.
+
+## D-091 — Compact discovery execution with distinct evidence gates
+**Date:** 2026-09-24
+**Status:** accepted operating decision; sponsor requested implementation and 5.6-ready discovery
+
+Use `discovery/DISCOVERY_EXECUTION.md` as the execution guide and
+`discovery/RUN_PROMPT.md` as the shared continuation prompt. Keep v2's novelty/value
+principle as a product-value reference. It does not impose customer-demand gates
+on historical research. Historical evidence, method/representation tests and
+product/workflow value require distinct conclusions and acceptance evidence.
+
+Resume from the backlog plus active protocol/checkpoint; load historical context
+when needed. WIP is one experiment across workers. At selection boundaries compare
+mechanism-based adjacencies and strong simpler/negative alternatives, then freeze
+one discriminating test. No candidate quota or automatic feature backlog.
+
+Preregistration, before/after adversarial passes, internal-versus-independent review,
+access limits, search sufficiency and concrete resumable actions must remain explicit.
+A partial checkpoint does not close its issue; successful research does not promote
+public/canonical data. D-088 continuity and D-090 CI cost controls remain.
+
+Validation: `discovery/EXECUTION_REVIEW_2026-09-24.md` records internal scenario replay
+and its limitations. No measured 5.6 performance or external-user validation claimed.
+No historical ontology, frozen sample, schema or release change.

@@ -1561,3 +1561,27 @@ check. No tranche verdict or contract-extension decision is made from this check
 Actions cost: D-090 narrows expensive runs while preserving relevant checks. No
 measured monetary-saving claim; the removed duplicate and unrelated triggers are
 directly inspectable. Continue #213, WIP 1; canonical/public boundaries unchanged.
+
+## HC-026 — Discovery execution repair — 2026-09-24
+
+**Disposition: CONTINUE + SIMPLIFY execution; retain EXP-04.**
+
+Repository audit found stale #198 scheduling in discovery cadence, candidate status
+on the established v2 guide, and #211 in the subordinate status snapshot. The worker
+also loaded broad historical operating context on every continuation. These are
+current instruction failures; no unseen cross-project review was treated as authority.
+
+D-091 replaces the stale routing, separates historical/method/product gates, provides
+a compact continuation prompt and applies it to the existing Indus checkpoint.
+Value-before-novelty remains; competitor overlap is neither rejection nor validation.
+Adjacency exploration is mechanism-based and does not automatically create delivery work.
+
+The guide passed internal scenario replay including access failure, historical/product
+gate confusion, weak baselines and self-review claims. This is process QA, not proof
+of 5.6 reliability. Evaluate subsequent real continuations for duplicate work, lost
+limitations, incorrect gate promotion and ability to resume the exact next action;
+record failures in the active checkpoint and revise only demonstrated friction.
+
+No new discovery experiment, schema, publication, service or scheduling cadence is
+created. Historical core/corpus remains supported internally; external adoption is
+still unproven. Resume #213's source reconciliation.

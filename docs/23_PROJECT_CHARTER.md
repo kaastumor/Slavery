@@ -148,6 +148,11 @@ The existing canonical methodology remains binding unless explicitly superseded.
 
 ## Strategic horizons
 
+The completed horizon descriptions below preserve decisions at their original
+boundaries. Their historical idle/authorization statements do not schedule current
+work; D-088 and root `BACKLOG.md` own continuation. Discovery execution follows
+`docs/discovery/DISCOVERY_EXECUTION.md`.
+
 Horizons are hypotheses, not promises.
 
 ### H0 — M1 methodology hardening (completed)

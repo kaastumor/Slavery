@@ -32,6 +32,12 @@ Sumerian City-States, preserving any shared-source dependency. See `CHECKPOINT.m
 Project form: portable reviewed evidence core + replaceable Atlas/map/table/API views.
 Canonical v0.6.1, frozen R1 registry and public preview remain unchanged.
 
+## Discovery execution
+
+Use `docs/discovery/DISCOVERY_EXECUTION.md` and `docs/discovery/RUN_PROMPT.md`.
+The sponsor-requested D-091 process repair changes execution guidance, not EXP-04's
+frozen sample, historical conclusions or acceptance criteria. Resume #213 after it.
+
 ## Actions budget
 
 Batch one coherent checkpoint per PR. Run Python tests/sanitation locally first.
