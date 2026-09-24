@@ -9,46 +9,38 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE HISTORICAL HORIZON — EXP-06 balanced evidence growth
+# EXP-06 CLOSURE CANDIDATE — balanced evidence growth
 
-**Active issue:** #225  
-**Current stage:** RESEARCH — WIP 1
+**Active issue:** #225
+**Current stage:** CLOSURE CANDIDATE — one coherent PR / scoped CI
 
-EXP-05 (#223, merged #224) established an internal workflow result:
-the portable target/source package materially improved 3/3 frozen comparative tasks
-over long-form case packets, while the current thin Atlas added no material task
-advantage over that package. The live preview remains a safe maintenance view; richer
-application work is trigger-bound.
+All six frozen targets are researched and serialized in the portable package.
 
-The current horizon returns to **real historical evidence growth** using six targets
-already frozen and QA-ready in the R1 registry. Their R1 release states remain
-unchanged.
+Observed:
+- 6 target rows / 36 source-relation rows;
+- 4 internally researched outcomes, including one researched-inconclusive;
+- 2 under-review outcomes where exact target identity/chronology remains unresolved;
+- no schema/ontology extension required;
+- no P-level, geometry promotion, R1 reviewed-state or canonical-release mutation.
 
-Frozen EXP-06 sample:
-- Chámpa — 500 CE;
-- Magadha – Haryanka dynasty — 500 BCE;
-- Later Mayan City-States — 1300 CE;
-- Mongol Yam/postal network — 1300 CE;
-- Yaghan communities, Tierra del Fuego — 1800 CE;
-- Khmer Empire — 1300 CE.
+Key results:
+- Chámpa: evidence exists, but the 500 CE polity frame is ambiguous;
+- Magadha: slavery context is supported more strongly than exact Haryanka chronology;
+- Mayapán: positive member-locus without aggregate-wide generalization;
+- Mongol Yam: positive compulsory service without slave-status collapse;
+- Yaghan: internal uncertainty preserved alongside external/intergroup coercion;
+- Khmer 1300: independent 1296–1297 capital-core slavery evidence; no empire-wide fill.
 
-Protocol: `experiments/exp06-balanced-evidence/00_PROTOCOL.md`.
+Protocol: `experiments/exp06-balanced-evidence/00_PROTOCOL.md`
+Result: `experiments/exp06-balanced-evidence/RESULT.md`
+Checkpoint: `experiments/exp06-balanced-evidence/CHECKPOINT.md`
 
-Selection purpose:
-- globally balanced/non-Atlantic evidence growth;
-- polity + aggregate + network + community frames;
-- one deliberate node→polity scope-transfer attack (Angkor 1200 → Khmer Empire 1300);
-- no new target invention or R1 reviewed-state mutation.
+**Next after #225 merges/closes:** select one new bounded historical evidence horizon
+from the remaining frozen/QA-ready queue by expected information gain. Do not insert
+another application/product horizon unless a changed task meets EXP-05's reopening
+conditions.
 
-Success means six honest bounded research states, including under-review states where
-decisive evidence remains unavailable. Missing evidence never becomes absence.
-
-**Current exact action:** research **Chámpa — 500 CE**, then continue sequentially
-through the frozen sample. Batch the tranche to minimize Actions cost.
-
-Canonical v0.6.1 remains unchanged. No schema/API/database, geometry programme,
-P-level assignment or frontend horizon is authorized.
-
+Canonical v0.6.1 remains unchanged.
 
 ## Discovery execution
 
