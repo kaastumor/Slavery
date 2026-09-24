@@ -1370,3 +1370,40 @@ This decision closes technical MVP delivery but does **not** canonicalize or pub
 - no backend/platform expansion is earned.
 
 **Durable gate:** `docs/mvp/v0.1-release-check.md`.
+
+
+## D-082 — Discovery v2 separates novelty from value and pauses feature-first discovery
+**Date:** 2026-09-24  
+**Status:** candidate decision under #198 until merged
+
+**Decision:** Adopt a corrected post-MVP discovery standard that treats competitor existence and novelty as evidence inputs, not decision shortcuts.
+
+Governing principle:
+
+> **EXISTING ≠ USELESS. DIFFERENT ≠ VALUABLE. NOVEL ≠ DEMANDED. COMPETITION ≠ VALIDATION. EVIDENCE DECIDES.**
+
+**Why:** The prior wide-angle review already used baseline/value evidence, but some conclusions gave competitor/standards overlap too much argumentative weight. The post-MVP queue also became feature-first before reconstructing user jobs and realistic alternatives.
+
+**Required discovery sequence:**
+1. user/circumstance/job;
+2. real current alternative, including manual work/non-consumption;
+3. novelty status separated from strategic relevance;
+4. relative advantage against that alternative;
+5. difference / importance / behavioural consequence kept distinct;
+6. adoption/switching friction where relevant;
+7. system-level complementarity with the existing core;
+8. OBSERVED / SUPPORTED INFERENCE / HYPOTHESIS / UNKNOWN evidence labels;
+9. adversarial attack;
+10. smallest falsifiable experiment with high information gain.
+
+**Calibration:** “proven core” means technically/methodologically validated within this project. External-user demand, adoption and willingness to switch are not proven.
+
+**Consequences:**
+- #198 becomes the active discovery reset;
+- #185–#187 are blocked until #198 decides whether to keep/rewrite, park or reject them;
+- desk/competitor research alone cannot produce PROMOTION CANDIDATE;
+- commercial/pricing/business-model analysis is conditional rather than ceremonial;
+- no production implementation is authorized by this method change;
+- v0.6.1 remains canonical and R1.8 publication remains separate.
+
+**Durable method:** `docs/discovery/DISCOVERY_STANDARD_V2.md`.
