@@ -25,9 +25,11 @@ Current checkpoint: **Indus packet under review; seven cases not started**.
 A positive secondary slavery interpretation and a Mesopotamian textual lead are
 preserved; no completed inconclusive or territorial-practice designation is asserted.
 
-**Next:** reconcile recovered CDLI P453801 / Nisaba 15 371 with the full Laursen–Steinkeller 2017 pp.83–84 discussion; verify
-status, date and acquisition geography; finish the Indus synthesis. Then research
-Sumerian City-States, preserving any shared-source dependency. See `CHECKPOINT.md`.
+**Next:** direct Laursen–Steinkeller 2017 pp.83–84 verification is blocked after
+reconciling the derivative reproduction with pinned CDLI P453801. Preserve the exact
+recovery trigger; do not retry unchanged access. Continue the same frozen experiment
+with **Sumerian City-States — 2000 BCE**, carrying any shared `a-ru-a`/source dependency.
+See `CHECKPOINT.md`.
 
 Project form: portable reviewed evidence core + replaceable Atlas/map/table/API views.
 Canonical v0.6.1, frozen R1 registry and public preview remain unchanged.
