@@ -13,7 +13,7 @@ This file answers **what is justified to work on next**.
 # EXP-08 CROSS-FRAME HISTORICAL EVIDENCE — ACTIVE
 
 **Issue:** #232  
-**Current stage:** SUBJECT RESEARCH — 1 / 4 FROZEN CASES COMPLETE  
+**Current stage:** SUBJECT RESEARCH — 2 / 4 FROZEN CASES COMPLETE  
 **Subject slavery/coercion research:** **IN PROGRESS**
 
 EXP-07 closed with seven QUALIFIED_C1_READY rows and one hold. The post-qualification
@@ -36,9 +36,13 @@ Great-Zimbabwe-specific slave-trade participation**, while hierarchy, tribute/ex
 dependency/reciprocity and organized collective labor are supported. Connected coastal
 slavery remains contextual and directional only.
 
-**Current exact action:** research **Māori communities in Aotearoa — 1700** under the
-frozen region/community frame. Preserve iwi/hapū specificity and do not turn later
-pan-Māori terminology or post-contact evidence into an exact 1700 aggregate claim.
+Māori communities in Aotearoa — 1700 is now **bounded-supported for pre-contact
+war-captive unfreedom/slavery-category relations**, with exact 1700 distribution,
+prevalence and local status rules across iwi/hapū explicitly unresolved.
+
+**Current exact action:** research **Nobatia — 500 CE** under the frozen polity frame.
+Preserve the approximate fifth-century formation boundary and do not project later
+sixth-century Christian-state evidence backward into an exact 500 claim.
 
 ## Discovery execution
 
