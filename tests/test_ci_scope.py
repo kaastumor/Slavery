@@ -21,6 +21,12 @@ class ScopeTests(unittest.TestCase):
     def test_ci_scope_unit_change_is_non_database(self):
         self.assertFalse(requires_database(['tools/ci_scope.py', 'tests/test_ci_scope.py']))
 
+    def test_exp05_browser_evidence_is_non_database(self):
+        self.assertFalse(requires_database([
+            '.github/workflows/exp05-value-browser.yml',
+            'experiments/exp05-thin-view-value/run_lane_c_browser.mjs',
+        ]))
+
     def test_mixed_and_unknown_changes_keep_database_gate(self):
         for path in [
             'db/migrations/0099.sql',
