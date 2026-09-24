@@ -1678,3 +1678,53 @@ No target is treated as absence. No P-level, geometry promotion, R1 reviewed-sta
 Most important project lesson: **evidence presence and representational scope must remain separable**. In several cases the evidence is stronger than the exact territorial/dynastic object available at the anchor.
 
 Health disposition: **CONTINUE — SELECT NEXT BOUNDED HISTORICAL TRANCHE BY INFORMATION GAIN.**
+
+
+## HC-030 — EXP-06 candidate publish/hold/rework gate — 2026-09-24
+
+**Decision:** **PUBLISH_CANDIDATE.**
+
+The completed EXP-06 six-case evidence tranche was frozen as
+`exp06-candidate-v1` with:
+- exact target/source CSV copies;
+- manifest + SHA-256 identity;
+- QC summary;
+- unresolved-issues list;
+- explicit review decision;
+- deterministic browser bundle;
+- thin map + evidence-register candidate surface.
+
+Candidate state:
+- 3 internally researched bounded outcomes;
+- 1 researched-inconclusive outcome;
+- 2 under-review outcomes;
+- 0 independent historical reviews.
+
+The first browser pass exposed one real usability defect: at 768 px the map and
+evidence register remained side-by-side, making the register cramped. Rework was
+limited to responsive layout; the candidate now stacks map/register below 820 px.
+A brittle title-case assertion was also corrected without changing candidate content.
+
+Successful browser evidence:
+- run `36054132409`;
+- job `107816768565`;
+- artifact `10831472682`;
+- zero page errors;
+- zero semantic assertion failures after rework;
+- desktop + narrow-screen overview screenshots;
+- one full target screenshot per frozen case.
+
+Visual review confirmed:
+- non-canonical / v0.6.1 boundary is prominent;
+- bounded, inconclusive and under-review states remain distinct;
+- non-absence semantics survive;
+- bounded proposition / required abstention are visible;
+- evidence locus and inference extent remain separate;
+- source/version/dependency evidence remains inspectable;
+- navigation markers do not read as practice polygons.
+
+**Publication meaning:** publish the candidate only as a static, explicitly
+non-canonical research artifact. This does not change canonical v0.6.1, R1 review
+state, P-levels, historical geometry, database/API state, or independent-review status.
+
+Health disposition: **CONTINUE — PUBLISH CANDIDATE, THEN RETURN TO BOUNDED HISTORICAL EVIDENCE WORK.**
