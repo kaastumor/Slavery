@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 20062)
-Total output lines: 1587
-
 # Historical Slavery Atlas — Project Health
 
 This file holds the **live assumptions register, standing material risks, value evidence and gate-health decisions**. It is not a second backlog.
@@ -538,7 +535,9 @@ The preregistered maintenance requirement was R <=70% of F update surface in >=4
 
 Three shocks yielded no acceptable new source and were later treated as neutral 0/0 rather than savings wins.
 
-Unde…62 tokens truncated… atom granularity.
+Under that interpretation, at most three rows could qualify, so the 4/6 gate became impossible to pass.
+
+Further, each rich F source object and each bare R source link counted as one source/citation atom, making the observed 2-vs-2 updates sensitive to atom granularity.
 
 This does not prove R has favorable long-run maintenance economics. It does mean the maintenance FAIL cannot settle the broader completeness thesis.
 
