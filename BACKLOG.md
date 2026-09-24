@@ -9,9 +9,9 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE EVIDENCE HORIZON — EXP-03 heterogeneous evidence stress test
+# ACTIVE EVIDENCE HORIZON — EXP-04 blind frontier research tranche
 
-**Active issue:** #211  
+**Active issue:** #213  
 **Current stage:** **ACTIVE RESEARCH / DISCOVERY — WIP 1**
 
 The current project form remains:
@@ -26,29 +26,32 @@ Elapsed time is not treated as the scarce resource. A completed horizon should n
 
 Stopping, rejecting, simplifying and parking remain valid **results**. They are not the default scheduler.
 
-## Active work — #211 / EXP-03
+## Active work — #213 / EXP-04
 
 Question:
 
-> Does the portable evidence core survive fresh, structurally heterogeneous historical research with non-polity targets, mixed geometry states, category-translation pressure, law/practice divergence and network/territorial overlap?
+> Does the D-089 extended portable evidence contract survive an ex-ante frozen frontier sample from the project's actual unresearched queue, without cherry-picking or archive-density bias?
 
-Frozen cases:
-1. Classical Athens, c. 400 BCE
-2. Mamluk Cairo, c. 1300 CE
-3. Tenochtitlan, c. 1500 CE
-4. Joseon Korea, c. 1700 CE
-5. Zanzibar Town / port, c. 1850 CE
-6. British India, 1843–1850 CE
+Frozen targets:
+1. Sumerian City-States — 2000 BCE
+2. Indus Valley Civilization — 2000 BCE
+3. Hadhramaut — 500 BCE
+4. Cuzco — 1300 CE
+5. Viking trade network — 900 CE
+6. Andaman Islands communities — 1800 CE
+7. Angkor — 1200 CE
+8. Ethiopian Empire — 1800 CE
 
 Required outputs:
-- one research packet per case;
+- eight bounded research packets;
 - source/dependency register;
-- geometry-state note per case;
-- portability audit against EXP-02;
+- extended portable target table;
+- category/terminology audit;
+- access/bias audit;
 - adversarial result;
 - explicit disposition.
 
-No canonical release/schema migration follows automatically.
+The sample was frozen before subject-evidence search. No canonical release/schema migration follows automatically.
 
 ## Continuation rule
 
