@@ -9,38 +9,42 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# EXP-06 CLOSURE CANDIDATE — balanced evidence growth
+# ACTIVE RELEASE GATE — EXP-06 non-canonical candidate
 
-**Active issue:** #225
-**Current stage:** CLOSURE CANDIDATE — one coherent PR / scoped CI
+**Active issue:** #227  
+**Current stage:** CANDIDATE PACKAGE + BROWSER REVIEW — WIP 1
 
-All six frozen targets are researched and serialized in the portable package.
+EXP-06 is complete and merged. Before another historical tranche begins, package the
+six-case evidence output as an exact **non-canonical candidate** and return exactly one:
 
-Observed:
-- 6 target rows / 36 source-relation rows;
-- 4 internally researched outcomes, including one researched-inconclusive;
-- 2 under-review outcomes where exact target identity/chronology remains unresolved;
-- no schema/ontology extension required;
-- no P-level, geometry promotion, R1 reviewed-state or canonical-release mutation.
+- **PUBLISH_CANDIDATE**
+- **HOLD_NO_RELEASE**
+- **REWORK**
 
-Key results:
-- Chámpa: evidence exists, but the 500 CE polity frame is ambiguous;
-- Magadha: slavery context is supported more strongly than exact Haryanka chronology;
-- Mayapán: positive member-locus without aggregate-wide generalization;
-- Mongol Yam: positive compulsory service without slave-status collapse;
-- Yaghan: internal uncertainty preserved alongside external/intergroup coercion;
-- Khmer 1300: independent 1296–1297 capital-core slavery evidence; no empire-wide fill.
+Canonical historical release **v0.6.1 remains unchanged**.
 
-Protocol: `experiments/exp06-balanced-evidence/00_PROTOCOL.md`
-Result: `experiments/exp06-balanced-evidence/RESULT.md`
-Checkpoint: `experiments/exp06-balanced-evidence/CHECKPOINT.md`
+Candidate boundary:
+- exact frozen EXP-06 target/source rows;
+- manifest/checksums;
+- QC summary;
+- unresolved-issues list;
+- thin human-facing map + evidence register;
+- navigation/reference geometry only;
+- explicit 3 bounded / 1 researched-inconclusive / 2 under-review states;
+- 0 independent historical reviews.
 
-**Next after #225 merges/closes:** select one new bounded historical evidence horizon
-from the remaining frozen/QA-ready queue by expected information gain. Do not insert
-another application/product horizon unless a changed task meets EXP-05's reopening
-conditions.
+Review must use the actual candidate artifact. Under-review and inconclusive must never
+render as absence. Chámpa/Magadha frame/chronology limits, Yaghan internal uncertainty,
+Mayapán aggregate limits, Mongol coerced-service/slavery separation and Khmer
+capital/core-vs-polity extent must remain visible.
 
-Canonical v0.6.1 remains unchanged.
+No new subject research, P-level, practice polygon, schema/API/database work, feature
+discovery or next research tranche is authorized while #227 is active.
+
+**Next exact action:** run the bounded browser review on the exact candidate, inspect
+the browser evidence, and record PUBLISH_CANDIDATE / HOLD_NO_RELEASE / REWORK. If
+REWORK, fix only concrete release-blocking defects and rerun the gate.
+
 
 ## Discovery execution
 
@@ -85,7 +89,7 @@ Do **not** use elapsed research time alone as a stop criterion.
 
 # PARKED / trigger-bound operational debt
 
-These are not eligible while #225 is active unless they block the historical tranche.
+These are not eligible while #227 is active unless they block the candidate gate.
 
 ## #43 — protected staging / release-promotion administration
 
@@ -107,7 +111,7 @@ Handle when it materially blocks evidence work; do not turn administration into 
 
 # Explicitly NOT the current horizon
 
-Do not let evidence growth become platform drift. #225 does **not** authorize:
+Do not let candidate review become platform drift. #227 does **not** authorize:
 
 - M2 production schema migration;
 - frontend redesign;
