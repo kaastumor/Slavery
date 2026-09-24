@@ -62,22 +62,27 @@ Next release sequence:
 3. make explicit R1.8 **PUBLISH / HOLD / REWORK** decision;
 4. canonical/public promotion remains separate from technical MVP completion.
 
-## Discovery lane — value-before-novelty reset active
+## Discovery lane — external value test active
 
 Parent: #183.  
-Method correction: D-082 / #198.
+Method: D-082 / `docs/discovery/DISCOVERY_STANDARD_V2.md`.
 
-Current order:
-1. #198 — corrected wide-lens / alternative-landscape / value reassessment — **ACTIVE**;
-2. #185 — search/filter — **BLOCKED pending #198**;
-3. #186 — source-dependency visualization — **BLOCKED pending #198**;
-4. #187 — cross-case comparison — **BLOCKED pending #198**.
+Completed:
+- #184 richer timeline — **REJECT NOW**;
+- #198 corrected wide-lens reassessment — **COMPLETE**;
+- #185 search/filter — **PARK**;
+- #186 dependency visualization — **PARK the visualization; audit problem retained**;
+- #187 dedicated comparison view — **PARK**.
 
-#184 richer timeline is complete: **REJECT NOW** under current evidence. Its conclusion remains valid because the rejection rests on relative task value and false-precision risk, not on competitor overlap.
+Active:
+- **#200 — EXP-01 external expert audit crossover — RUN EXPERIMENT / participant execution blocked on real external reviewers.**
 
-The reset reconstructs jobs and realistic alternatives before deciding whether the remaining feature ideas deserve experiments.
+The experiment asks whether the structured Atlas evidence packet improves safety-critical claim review and provenance reconstruction over a competent ordinary source-note/table baseline.
 
-Discovery does not authorize production implementation. Desk research cannot promote a feature.
+Protocol can be prepared autonomously. Execution may not substitute model/sponsor self-evaluation for external behaviour.
+
+No production feature implementation is authorized.
+
 
 ---
 
