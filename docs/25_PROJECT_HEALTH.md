@@ -1225,3 +1225,60 @@ The experiment is preserved, not postponed by indecision.
 Only participant execution is sequenced after R1.8.
 
 Durable gate: `docs/mvp/r1.8-sponsor-review.md`.
+
+
+### HC-020 — Internal-only path and R1.8 stale-artifact finding — 2026-09-24
+
+Decision: **DEFER EXTERNAL INVOLVEMENT; REWORK R1 RELEASE INTEGRITY; PREPARE SUBTRACTIVE INTERNAL DISCOVERY.**
+
+#### Sponsor constraint
+
+No external people should be involved yet.
+
+This is treated as a real project constraint, not as permission to simulate external validation internally.
+
+#200 remains preserved but deferred.
+
+#### Internal release adversary result
+
+A real R1.8 defect was found:
+
+the committed `web/public/data/r1-mvp-candidate.json` was stale and lacked the current:
+- research-state overview semantics;
+- temporal-navigation contract;
+- geometry manifest.
+
+The Web MVP workflow masked this because it regenerated the candidate before running its stale check.
+
+#### Bounded repair
+
+- refresh committed candidate;
+- check freshness before any CI regeneration;
+- add a committed-byte reconstruction regression.
+
+No historical claim or product feature changes.
+
+#### Next internal discovery
+
+#205 / EXP-02 asks whether the R1 evidence packet can be reduced while preserving:
+- proposition vs abstention;
+- temporal precision;
+- evidence locus vs inference extent;
+- law/practice and network/territorial boundaries;
+- exact provenance and source dependency;
+- review/access limits;
+- non-absence research states.
+
+It will also test whether ordinary Markdown / flat tables preserve the same internal contract.
+
+This experiment cannot establish user value.
+
+#### Boundary
+
+Finish #203 first.
+
+Then run #205.
+
+Stop and re-evaluate again after #205.
+
+No automatic successor.

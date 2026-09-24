@@ -30,6 +30,11 @@ class R1TechnicalMVPGateTests(unittest.TestCase):
         second = bundle_builder.canonical_bytes(bundle_builder.build())
         self.assertEqual(first, second)
 
+    def test_committed_candidate_matches_generator(self):
+        committed = (WEB / "public" / "data" / "r1-mvp-candidate.json").read_bytes()
+        expected = bundle_builder.canonical_bytes(bundle_builder.build())
+        self.assertEqual(committed, expected)
+
     def test_default_web_path_is_candidate_not_live_api(self):
         self.assertIn('src="/src/mvp.ts"', self.index)
         self.assertIn('./data/r1-mvp-candidate.json', self.mvp)

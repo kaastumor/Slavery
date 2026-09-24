@@ -7,7 +7,2188 @@
     "source_relations": 45,
     "targets": 77
   },
+  "geometry_manifest": {
+    "candidate_id": "R1-candidate-qc-2026-09-24",
+    "canonical_historical_release": "v0.6.1",
+    "counts": {
+      "targets": 77,
+      "unresolved_no_geometry": 77
+    },
+    "policy": {
+      "geometry_cannot_strengthen_historical_claim": true,
+      "modern_proxy_must_be_explicit": true,
+      "neutral_world_land_always_visible": true,
+      "sampling_midpoint_is_not_reviewed_geometry": true,
+      "unresolved_is_not_absence": true
+    },
+    "rows": [
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "target_id": "R1:L:-500:D",
+        "target_label": "Carthage"
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "target_id": "R1:L:1300:B",
+        "target_label": "Cuzco"
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "target_id": "R1:L:1800:A",
+        "target_label": "United States of America"
+      },
+      {
+        "expected_geometry_form": "aggregate_multi_geometry_or_no_single_polygon",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "target_id": "R1:L:1800:F",
+        "target_label": "Portuguese Colonies"
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "target_id": "R1:L:500:F",
+        "target_label": "Chámpa"
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "target_id": "R1:L:al_azhar_1100",
+        "target_label": "al-Azhar Mosque/university"
+      },
+      {
+        "expected_geometry_form": "fuzzy_region_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "target_id": "R1:L:andaman_1800",
+        "target_label": "Andaman Islands communities"
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "target_id": "R1:L:cahokia_1200",
+        "target_label": "Cahokia"
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "target_id": "R1:L:COV2:-500:C",
+        "target_label": "Hadhramaut"
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "target_id": "R1:L:COV2:1300:B",
+        "target_label": "Chimu Empire"
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "target_id": "R1:L:COV2:1300:E",
+        "target_label": "Pandya Empire"
+      },
+      {
+        "expected_geometry_form": "route_or_network_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "target_id": "R1:L:viking_900",
+        "target_label": "Viking trade network"
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:angkor_1200",
+        "target_label": "Angkor",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:gao_1500",
+        "target_label": "Gao",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:great_lavra_1100",
+        "target_label": "Great Lavra, Mount Athos",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:great_zimbabwe_1400",
+        "target_label": "Great Zimbabwe",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "route_or_network_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:hanseatic_1400",
+        "target_label": "Hanseatic League network",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "fuzzy_region_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:ifugao_1700",
+        "target_label": "Ifugao communities, northern Luzon",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "route_or_network_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:incense_m100",
+        "target_label": "Incense Route network",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "route_or_network_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:indian_ocean_1400",
+        "target_label": "Indian Ocean trade network",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "fuzzy_region_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:inuit_arctic_1800",
+        "target_label": "Inuit Arctic communities",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:ise_1000",
+        "target_label": "Ise Grand Shrine",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "fuzzy_region_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:kalahari_san_1800",
+        "target_label": "Kalahari San communities",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:karnak_amun_m1000",
+        "target_label": "Temple of Amun at Karnak",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "fuzzy_region_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:maori_1700",
+        "target_label": "Māori communities in Aotearoa",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "route_or_network_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:mongol_yam_1300",
+        "target_label": "Mongol Yam/postal network",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:nalanda_700",
+        "target_label": "Nalanda Mahavihara",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:samarkand_1400",
+        "target_label": "Samarkand",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "fuzzy_region_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:sapmi_1600",
+        "target_label": "Sápmi / Sámi communities",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:shaolin_1000",
+        "target_label": "Shaolin Monastery",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "route_or_network_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:swahili_1400",
+        "target_label": "Swahili maritime trade network",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:tenochtitlan_1500",
+        "target_label": "Tenochtitlan",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:timbuktu_1500",
+        "target_label": "Timbuktu",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:todaiji_800",
+        "target_label": "Tōdai-ji",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "route_or_network_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:trans_saharan_1300",
+        "target_label": "Trans-Saharan trade network",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "fuzzy_region_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "COV-004 neutral non-polity candidate universe",
+          "dataset_sha256": "",
+          "native_from_year": null,
+          "native_name": "",
+          "native_row_ordinal": null,
+          "native_to_year": null,
+          "native_type": "",
+          "seshat_id": "",
+          "version_commit": "",
+          "wikidata": ""
+        },
+        "target_id": "R1:N:yaghan_1800",
+        "target_label": "Yaghan communities, Tierra del Fuego",
+        "temporal_fit": {
+          "source_anchor_year": null,
+          "within_native_interval": false
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": -2000,
+          "native_name": "Middle Kingdom of Egypt",
+          "native_row_ordinal": 30,
+          "native_to_year": -1801,
+          "native_type": "POLITY",
+          "seshat_id": "eg_middle_k",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q191324"
+        },
+        "target_id": "R1:P:-2000:C:r1",
+        "target_label": "Middle Kingdom of Egypt",
+        "temporal_fit": {
+          "source_anchor_year": -2000,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": -2000,
+          "native_name": "Sumerian City-States",
+          "native_row_ordinal": 28,
+          "native_to_year": -1801,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q2345840"
+        },
+        "target_id": "R1:P:-2000:D:r1",
+        "target_label": "Sumerian City-States",
+        "temporal_fit": {
+          "source_anchor_year": -2000,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": -2000,
+          "native_name": "Elam",
+          "native_row_ordinal": 29,
+          "native_to_year": -1801,
+          "native_type": "POLITY",
+          "seshat_id": "ir_elam_2",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q128904"
+        },
+        "target_id": "R1:P:-2000:D:r2",
+        "target_label": "Elam",
+        "temporal_fit": {
+          "source_anchor_year": -2000,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "fuzzy_or_specialist_historical_geometry_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": -2000,
+          "native_name": "Indus Valley Civilization",
+          "native_row_ordinal": 27,
+          "native_to_year": -1801,
+          "native_type": "POLITY",
+          "seshat_id": "pk_kachi_urban_2",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q42534"
+        },
+        "target_id": "R1:P:-2000:E:r1",
+        "target_label": "Indus Valley Civilization",
+        "temporal_fit": {
+          "source_anchor_year": -2000,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": -630,
+          "native_name": "Kingdom of Kush",
+          "native_row_ordinal": 217,
+          "native_to_year": 337,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q241790"
+        },
+        "target_id": "R1:P:-500:C:r1",
+        "target_label": "Kingdom of Kush",
+        "temporal_fit": {
+          "source_anchor_year": -500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": -500,
+          "native_name": "Macedonian Empire",
+          "native_row_ordinal": 297,
+          "native_to_year": -481,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q83958"
+        },
+        "target_id": "R1:P:-500:D:r1",
+        "target_label": "Macedonian Empire",
+        "temporal_fit": {
+          "source_anchor_year": -500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": -550,
+          "native_name": "Peloponnesian League",
+          "native_row_ordinal": 258,
+          "native_to_year": -481,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q208742"
+        },
+        "target_id": "R1:P:-500:D:r2",
+        "target_label": "Peloponnesian League",
+        "temporal_fit": {
+          "source_anchor_year": -500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": -500,
+          "native_name": "Magadha - Haryanka dynasty",
+          "native_row_ordinal": 296,
+          "native_to_year": -481,
+          "native_type": "POLITY",
+          "seshat_id": "in_mahajanapada",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q12459974"
+        },
+        "target_id": "R1:P:-500:E:r1",
+        "target_label": "Magadha - Haryanka dynasty",
+        "temporal_fit": {
+          "source_anchor_year": -500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": -600,
+          "native_name": "Janapada of Avanti",
+          "native_row_ordinal": 232,
+          "native_to_year": -451,
+          "native_type": "POLITY",
+          "seshat_id": "in_mahajanapada",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q4827705"
+        },
+        "target_id": "R1:P:-500:E:r2",
+        "target_label": "Janapada of Avanti",
+        "temporal_fit": {
+          "source_anchor_year": -500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": -750,
+          "native_name": "Cai",
+          "native_row_ordinal": 173,
+          "native_to_year": -481,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q1025803"
+        },
+        "target_id": "R1:P:-500:F:r1",
+        "target_label": "Cai",
+        "temporal_fit": {
+          "source_anchor_year": -500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": -550,
+          "native_name": "Qi",
+          "native_row_ordinal": 263,
+          "native_to_year": -481,
+          "native_type": "POLITY",
+          "seshat_id": "cn_qi_spring_autumn",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q1143524"
+        },
+        "target_id": "R1:P:-500:F:r2",
+        "target_label": "Qi",
+        "temporal_fit": {
+          "source_anchor_year": -500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1260,
+          "native_name": "Later Mayan City-States",
+          "native_row_ordinal": 5791,
+          "native_to_year": 1428,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q28567"
+        },
+        "target_id": "R1:P:1300:A:r1",
+        "target_label": "Later Mayan City-States",
+        "temporal_fit": {
+          "source_anchor_year": 1300,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1294,
+          "native_name": "Puebloans - Aztec Regional System",
+          "native_row_ordinal": 5971,
+          "native_to_year": 1304,
+          "native_type": "POLITY",
+          "seshat_id": "us_aztec_puebloan",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q478805"
+        },
+        "target_id": "R1:P:1300:A:r2",
+        "target_label": "Puebloans - Aztec Regional System",
+        "temporal_fit": {
+          "source_anchor_year": 1300,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1241,
+          "native_name": "Mali Empire",
+          "native_row_ordinal": 5645,
+          "native_to_year": 1414,
+          "native_type": "POLITY",
+          "seshat_id": "ml_mali_emp",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q184536"
+        },
+        "target_id": "R1:P:1300:C:r1",
+        "target_label": "Mali Empire",
+        "temporal_fit": {
+          "source_anchor_year": 1300,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1294,
+          "native_name": "Makuria",
+          "native_row_ordinal": 6003,
+          "native_to_year": 1406,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q829356"
+        },
+        "target_id": "R1:P:1300:C:r2",
+        "target_label": "Makuria",
+        "temporal_fit": {
+          "source_anchor_year": 1300,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1294,
+          "native_name": "Grand Duchy of Lithuania",
+          "native_row_ordinal": 5987,
+          "native_to_year": 1313,
+          "native_type": "POLITY",
+          "seshat_id": "lt_lithuania_grand_duc",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q49683"
+        },
+        "target_id": "R1:P:1300:D:r1",
+        "target_label": "Grand Duchy of Lithuania",
+        "temporal_fit": {
+          "source_anchor_year": 1300,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1210,
+          "native_name": "Duchy of the Archipelago",
+          "native_row_ordinal": 5359,
+          "native_to_year": 1304,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q777981"
+        },
+        "target_id": "R1:P:1300:D:r2",
+        "target_label": "Duchy of the Archipelago",
+        "temporal_fit": {
+          "source_anchor_year": 1300,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1294,
+          "native_name": "Lan Na Kingdom",
+          "native_row_ordinal": 6026,
+          "native_to_year": 1343,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q1059707"
+        },
+        "target_id": "R1:P:1300:E:r1",
+        "target_label": "Lan Na Kingdom",
+        "temporal_fit": {
+          "source_anchor_year": 1300,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1285,
+          "native_name": "Kampili Kingdom",
+          "native_row_ordinal": 5919,
+          "native_to_year": 1325,
+          "native_type": "POLITY",
+          "seshat_id": "in_kampili_k",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q1446192"
+        },
+        "target_id": "R1:P:1300:E:r2",
+        "target_label": "Kampili Kingdom",
+        "temporal_fit": {
+          "source_anchor_year": 1300,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1241,
+          "native_name": "Khmer Empire",
+          "native_row_ordinal": 5654,
+          "native_to_year": 1313,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q201705"
+        },
+        "target_id": "R1:P:1300:F:r1",
+        "target_label": "Khmer Empire",
+        "temporal_fit": {
+          "source_anchor_year": 1300,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1192,
+          "native_name": "Kamakura Shogunate",
+          "native_row_ordinal": 5194,
+          "native_to_year": 1325,
+          "native_type": "POLITY",
+          "seshat_id": "jp_kamakura",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q736839"
+        },
+        "target_id": "R1:P:1300:F:r2",
+        "target_label": "Kamakura Shogunate",
+        "temporal_fit": {
+          "source_anchor_year": 1300,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1800,
+          "native_name": "French Louisiana",
+          "native_row_ordinal": 10547,
+          "native_to_year": 1802,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q5501836"
+        },
+        "target_id": "R1:P:1800:A:r1",
+        "target_label": "French Louisiana",
+        "temporal_fit": {
+          "source_anchor_year": 1800,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1796,
+          "native_name": "Kingdom of Hawaï'i",
+          "native_row_ordinal": 10406,
+          "native_to_year": 1810,
+          "native_type": "POLITY",
+          "seshat_id": "us_kamehameha_k",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q156418"
+        },
+        "target_id": "R1:P:1800:A:r2",
+        "target_label": "Kingdom of Hawaï'i",
+        "temporal_fit": {
+          "source_anchor_year": 1800,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1769,
+          "native_name": "Ethiopian Empire",
+          "native_row_ordinal": 10076,
+          "native_to_year": 1889,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q207521"
+        },
+        "target_id": "R1:P:1800:C:r1",
+        "target_label": "Ethiopian Empire",
+        "temporal_fit": {
+          "source_anchor_year": 1800,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1800,
+          "native_name": "Spanish Empire",
+          "native_row_ordinal": 10519,
+          "native_to_year": 1802,
+          "native_type": "POLITY",
+          "seshat_id": "es_spanish_emp_2",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q80702"
+        },
+        "target_id": "R1:P:1800:C:r2",
+        "target_label": "Spanish Empire",
+        "temporal_fit": {
+          "source_anchor_year": 1800,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1797,
+          "native_name": "Duchy of Bavaria",
+          "native_row_ordinal": 10468,
+          "native_to_year": 1802,
+          "native_type": "POLITY",
+          "seshat_id": "de_bavaria_1",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q47261"
+        },
+        "target_id": "R1:P:1800:D:r1",
+        "target_label": "Duchy of Bavaria",
+        "temporal_fit": {
+          "source_anchor_year": 1800,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1800,
+          "native_name": "Qajar Dynasty",
+          "native_row_ordinal": 10514,
+          "native_to_year": 1804,
+          "native_type": "POLITY",
+          "seshat_id": "ir_qajar_dyn",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q189326"
+        },
+        "target_id": "R1:P:1800:D:r2",
+        "target_label": "Qajar Dynasty",
+        "temporal_fit": {
+          "source_anchor_year": 1800,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1788,
+          "native_name": "Khanate of Kokand",
+          "native_row_ordinal": 10279,
+          "native_to_year": 1802,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q696241"
+        },
+        "target_id": "R1:P:1800:E:r1",
+        "target_label": "Khanate of Kokand",
+        "temporal_fit": {
+          "source_anchor_year": 1800,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1796,
+          "native_name": "Kazakh Khanate",
+          "native_row_ordinal": 10424,
+          "native_to_year": 1802,
+          "native_type": "POLITY",
+          "seshat_id": "kz_kazakh_khanate_2",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q1433867"
+        },
+        "target_id": "R1:P:1800:E:r2",
+        "target_label": "Kazakh Khanate",
+        "temporal_fit": {
+          "source_anchor_year": 1800,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1799,
+          "native_name": "Tokugawa Shogunate",
+          "native_row_ordinal": 10496,
+          "native_to_year": 1821,
+          "native_type": "POLITY",
+          "seshat_id": "jp_tokugawa_shogunate",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q205662"
+        },
+        "target_id": "R1:P:1800:F:r1",
+        "target_label": "Tokugawa Shogunate",
+        "temporal_fit": {
+          "source_anchor_year": 1800,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 1796,
+          "native_name": "Kingdom of Champasak",
+          "native_row_ordinal": 10408,
+          "native_to_year": 1827,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q403369"
+        },
+        "target_id": "R1:P:1800:F:r2",
+        "target_label": "Kingdom of Champasak",
+        "temporal_fit": {
+          "source_anchor_year": 1800,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "point_site_or_reviewed_bounded_geometry",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 106,
+          "native_name": "Teotihuacan",
+          "native_row_ordinal": 1226,
+          "native_to_year": 655,
+          "native_type": "POLITY",
+          "seshat_id": "mx_basin_of_mexico_7",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q172613"
+        },
+        "target_id": "R1:P:500:A:r1",
+        "target_label": "Teotihuacan",
+        "temporal_fit": {
+          "source_anchor_year": 500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 207,
+          "native_name": "Zapotec Civilization",
+          "native_row_ordinal": 1306,
+          "native_to_year": 509,
+          "native_type": "POLITY",
+          "seshat_id": "mx_monte_alban_3_a",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q844750"
+        },
+        "target_id": "R1:P:500:A:r2",
+        "target_label": "Zapotec Civilization",
+        "temporal_fit": {
+          "source_anchor_year": 500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 347,
+          "native_name": "Nobatia",
+          "native_row_ordinal": 1475,
+          "native_to_year": 646,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q568523"
+        },
+        "target_id": "R1:P:500:C:r1",
+        "target_label": "Nobatia",
+        "temporal_fit": {
+          "source_anchor_year": 500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 378,
+          "native_name": "Himyarite Kingdom",
+          "native_row_ordinal": 1526,
+          "native_to_year": 533,
+          "native_type": "POLITY",
+          "seshat_id": "ye_himyar_2",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q289577"
+        },
+        "target_id": "R1:P:500:C:r2",
+        "target_label": "Himyarite Kingdom",
+        "temporal_fit": {
+          "source_anchor_year": 500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 402,
+          "native_name": "Lazica",
+          "native_row_ordinal": 1630,
+          "native_to_year": 533,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q136884"
+        },
+        "target_id": "R1:P:500:D:r1",
+        "target_label": "Lazica",
+        "temporal_fit": {
+          "source_anchor_year": 500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 402,
+          "native_name": "Caucasian Iberia",
+          "native_row_ordinal": 1617,
+          "native_to_year": 509,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q19083"
+        },
+        "target_id": "R1:P:500:D:r2",
+        "target_label": "Caucasian Iberia",
+        "temporal_fit": {
+          "source_anchor_year": 500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 353,
+          "native_name": "Kalabhra Dynasty",
+          "native_row_ordinal": 1484,
+          "native_to_year": 591,
+          "native_type": "POLITY",
+          "seshat_id": "in_kalabhra_dyn",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q2572901"
+        },
+        "target_id": "R1:P:500:E:r1",
+        "target_label": "Kalabhra Dynasty",
+        "temporal_fit": {
+          "source_anchor_year": 500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 476,
+          "native_name": "Maitraka Dynasty",
+          "native_row_ordinal": 1865,
+          "native_to_year": 533,
+          "native_type": "POLITY",
+          "seshat_id": "in_maitraka_dyn",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q6737189"
+        },
+        "target_id": "R1:P:500:E:r2",
+        "target_label": "Maitraka Dynasty",
+        "temporal_fit": {
+          "source_anchor_year": 500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 263,
+          "native_name": "Tamna",
+          "native_row_ordinal": 1371,
+          "native_to_year": 681,
+          "native_type": "POLITY",
+          "seshat_id": "",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q28057"
+        },
+        "target_id": "R1:P:500:F:r1",
+        "target_label": "Tamna",
+        "temporal_fit": {
+          "source_anchor_year": 500,
+          "within_native_interval": true
+        }
+      },
+      {
+        "expected_geometry_form": "historical_polygon_or_unresolved",
+        "historical_claim_effect": "none",
+        "neutral_world_fallback": true,
+        "representation_note": "No reviewed geometry artifact is materialized for this frozen target in the R1 candidate package; render neutral world land and an explicit unresolved state.",
+        "representation_state": "unresolved_no_geometry",
+        "source_provenance": {
+          "dataset": "Cliopatria",
+          "dataset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+          "native_from_year": 500,
+          "native_name": "Southern Qi",
+          "native_row_ordinal": 1928,
+          "native_to_year": 509,
+          "native_type": "POLITY",
+          "seshat_id": "cn_southern_qi_dyn",
+          "version_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+          "wikidata": "Q62456"
+        },
+        "target_id": "R1:P:500:F:r2",
+        "target_label": "Southern Qi",
+        "temporal_fit": {
+          "source_anchor_year": 500,
+          "within_native_interval": true
+        }
+      }
+    ],
+    "schema": "historical-slavery-atlas.r1-mvp-geometry-manifest.v1"
+  },
   "non_absence_rule": "Unresearched, held, invalid, ambiguous and unresolved geometry states are research/representation states only; none imply historical absence.",
+  "overview_semantics": {
+    "geometry_states": [
+      {
+        "count": 77,
+        "description": "No reviewed target geometry is materialized. The neutral world land layer remains visible; unresolved geometry does not imply historical absence.",
+        "id": "unresolved_no_geometry",
+        "label": "Geometry unresolved"
+      }
+    ],
+    "research_states": [
+      {
+        "count": 5,
+        "description": "C1 research and adversarial replay completed with a bounded-supported outcome. This is not an intensity score.",
+        "id": "reviewed_classified",
+        "label": "Reviewed · bounded-supported"
+      },
+      {
+        "count": 14,
+        "description": "C1 research and adversarial replay completed, but the exact frozen target/year/frame question remains inconclusive. This is not absence.",
+        "id": "reviewed_inconclusive",
+        "label": "Reviewed · inconclusive"
+      },
+      {
+        "count": 15,
+        "description": "Identity/time QA permits subject research, but slavery/coercion research has not been performed. This is not absence.",
+        "id": "planned_unresearched",
+        "label": "Planned · unresearched"
+      },
+      {
+        "count": 2,
+        "description": "Identity/time/frame QA blocks subject research until the issue is resolved. This is not absence and no substitute target is used.",
+        "id": "held",
+        "label": "Held"
+      },
+      {
+        "count": 41,
+        "description": "Registered/research-state target only. C0 is never evidence of historical presence or absence.",
+        "id": "c0_only",
+        "label": "Registered only · C0"
+      }
+    ],
+    "rule": "Research state and geometry state are independent presentation dimensions. Neither is a historical intensity or absence scale.",
+    "targets": [
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_classified",
+        "target_id": "R1:L:-500:D"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:L:1300:B"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_classified",
+        "target_id": "R1:L:1800:A"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_inconclusive",
+        "target_id": "R1:L:1800:F"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:L:500:F"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_inconclusive",
+        "target_id": "R1:L:al_azhar_1100"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:L:andaman_1800"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_inconclusive",
+        "target_id": "R1:L:cahokia_1200"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:L:COV2:-500:C"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_classified",
+        "target_id": "R1:L:COV2:1300:B"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_inconclusive",
+        "target_id": "R1:L:COV2:1300:E"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:L:viking_900"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:N:angkor_1200"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_classified",
+        "target_id": "R1:N:gao_1500"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:great_lavra_1100"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:great_zimbabwe_1400"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:hanseatic_1400"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:ifugao_1700"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_inconclusive",
+        "target_id": "R1:N:incense_m100"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:indian_ocean_1400"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_inconclusive",
+        "target_id": "R1:N:inuit_arctic_1800"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:ise_1000"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:kalahari_san_1800"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:karnak_amun_m1000"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:maori_1700"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:N:mongol_yam_1300"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_inconclusive",
+        "target_id": "R1:N:nalanda_700"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:samarkand_1400"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:sapmi_1600"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_inconclusive",
+        "target_id": "R1:N:shaolin_1000"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:swahili_1400"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:tenochtitlan_1500"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:timbuktu_1500"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:todaiji_800"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:N:trans_saharan_1300"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:N:yaghan_1800"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_classified",
+        "target_id": "R1:P:-2000:C:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:P:-2000:D:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:-2000:D:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:P:-2000:E:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_inconclusive",
+        "target_id": "R1:P:-500:C:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:-500:D:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:-500:D:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:P:-500:E:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:-500:E:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_inconclusive",
+        "target_id": "R1:P:-500:F:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:-500:F:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:P:1300:A:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:1300:A:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_inconclusive",
+        "target_id": "R1:P:1300:C:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:1300:C:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:P:1300:D:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:1300:D:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:1300:E:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:1300:E:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:P:1300:F:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:1300:F:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "held",
+        "target_id": "R1:P:1800:A:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:1800:A:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "planned_unresearched",
+        "target_id": "R1:P:1800:C:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:1800:C:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "held",
+        "target_id": "R1:P:1800:D:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:1800:D:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:1800:E:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:1800:E:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:1800:F:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:1800:F:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_inconclusive",
+        "target_id": "R1:P:500:A:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:500:A:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:500:C:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:500:C:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_inconclusive",
+        "target_id": "R1:P:500:D:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:500:D:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:500:E:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:500:E:r2"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "reviewed_inconclusive",
+        "target_id": "R1:P:500:F:r1"
+      },
+      {
+        "geometry_state": "unresolved_no_geometry",
+        "research_state": "c0_only",
+        "target_id": "R1:P:500:F:r2"
+      }
+    ]
+  },
   "publication_state": "candidate_not_published_not_canonical",
   "review_scope": "internal_adversarial_review_only_not_independent_review",
   "reviewed_c1": [
@@ -4073,6 +6254,752 @@
       "target_label": "Southern Qi"
     }
   ],
+  "temporal_navigation": {
+    "anchors": [
+      {
+        "atlas_internal_year": -1999,
+        "display": "2000 BCE",
+        "source_year": -2000
+      },
+      {
+        "atlas_internal_year": -999,
+        "display": "1000 BCE",
+        "source_year": -1000
+      },
+      {
+        "atlas_internal_year": -499,
+        "display": "500 BCE",
+        "source_year": -500
+      },
+      {
+        "atlas_internal_year": -99,
+        "display": "100 BCE",
+        "source_year": -100
+      },
+      {
+        "atlas_internal_year": 500,
+        "display": "500 CE",
+        "source_year": 500
+      },
+      {
+        "atlas_internal_year": 700,
+        "display": "700 CE",
+        "source_year": 700
+      },
+      {
+        "atlas_internal_year": 800,
+        "display": "800 CE",
+        "source_year": 800
+      },
+      {
+        "atlas_internal_year": 900,
+        "display": "900 CE",
+        "source_year": 900
+      },
+      {
+        "atlas_internal_year": 1000,
+        "display": "1000 CE",
+        "source_year": 1000
+      },
+      {
+        "atlas_internal_year": 1100,
+        "display": "1100 CE",
+        "source_year": 1100
+      },
+      {
+        "atlas_internal_year": 1200,
+        "display": "1200 CE",
+        "source_year": 1200
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display": "1300 CE",
+        "source_year": 1300
+      },
+      {
+        "atlas_internal_year": 1400,
+        "display": "1400 CE",
+        "source_year": 1400
+      },
+      {
+        "atlas_internal_year": 1500,
+        "display": "1500 CE",
+        "source_year": 1500
+      },
+      {
+        "atlas_internal_year": 1600,
+        "display": "1600 CE",
+        "source_year": 1600
+      },
+      {
+        "atlas_internal_year": 1700,
+        "display": "1700 CE",
+        "source_year": 1700
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display": "1800 CE",
+        "source_year": 1800
+      }
+    ],
+    "rule": "Navigation uses discrete frozen research anchors. Temporal support precision comes from the R1.6 render annotation, never from slider position alone.",
+    "states": [
+      {
+        "count": 1,
+        "description": "A dated cross-section directly supports the selected anchor. This still does not imply spatial/legal uniformity.",
+        "id": "supported_exact_cross_section",
+        "label": "Exact cross-section"
+      },
+      {
+        "count": 3,
+        "description": "Evidence supports the historical period containing the anchor, not an event observed exactly in that year.",
+        "id": "supported_period_level",
+        "label": "Period-level support"
+      },
+      {
+        "count": 1,
+        "description": "Evidence is close enough to the anchor for bounded display only with an explicit approximate label.",
+        "id": "supported_near_anchor_approximate",
+        "label": "Near-anchor / approximate"
+      },
+      {
+        "count": 13,
+        "description": "The reviewed packet does not establish positive historical truth at the selected anchor.",
+        "id": "unknown",
+        "label": "Selected-year truth unknown"
+      },
+      {
+        "count": 1,
+        "description": "The frozen frame is an aggregate for which one territorial selected-year state would be misleading.",
+        "id": "not_applicable_aggregate",
+        "label": "No single selected-year territorial state"
+      },
+      {
+        "count": 58,
+        "description": "The target has a frozen research anchor, but no C1 subject packet exists. The anchor is a research frame, not historical truth.",
+        "id": "unassessed_not_researched",
+        "label": "Unassessed · subject research not performed"
+      }
+    ],
+    "targets": [
+      {
+        "atlas_internal_year": -499,
+        "display_anchor": "500 BCE",
+        "display_rule": "May be visible at the 500 BCE anchor only as Punic-period support; do not imply a single exact-year observation.",
+        "source_year": -500,
+        "state": "supported_period_level",
+        "target_id": "R1:L:-500:D"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1300,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:L:1300:B"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "The dated 1800 federal census supports selected-year presence; subnational legal/practice uniformity remains prohibited.",
+        "source_year": 1800,
+        "state": "supported_exact_cross_section",
+        "target_id": "R1:L:1800:A"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "No single territorial selected-year state may be rendered for the Portuguese-colonies aggregate.",
+        "source_year": 1800,
+        "state": "not_applicable_aggregate",
+        "target_id": "R1:L:1800:F"
+      },
+      {
+        "atlas_internal_year": 500,
+        "display_anchor": "500 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:L:500:F"
+      },
+      {
+        "atlas_internal_year": 1100,
+        "display_anchor": "1100 CE",
+        "display_rule": "Do not render institution-specific slavery at al-Azhar for 1100.",
+        "source_year": 1100,
+        "state": "unknown",
+        "target_id": "R1:L:al_azhar_1100"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1800,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:L:andaman_1800"
+      },
+      {
+        "atlas_internal_year": 1200,
+        "display_anchor": "1200 CE",
+        "display_rule": "Do not project earlier Mound 72 evidence to 1200.",
+        "source_year": 1200,
+        "state": "unknown",
+        "target_id": "R1:L:cahokia_1200"
+      },
+      {
+        "atlas_internal_year": -499,
+        "display_anchor": "500 BCE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": -500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:L:COV2:-500:C"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Corvée/labor-service support spans the archaeological phase containing 1300; do not imply an exact annual event or chattel-slavery status.",
+        "source_year": 1300,
+        "state": "supported_period_level",
+        "target_id": "R1:L:COV2:1300:B"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Contemporary Tamil slavery context is not synchronized tightly enough to the Pandya 1300 polity frame.",
+        "source_year": 1300,
+        "state": "unknown",
+        "target_id": "R1:L:COV2:1300:E"
+      },
+      {
+        "atlas_internal_year": 900,
+        "display_anchor": "900 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 900,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:L:viking_900"
+      },
+      {
+        "atlas_internal_year": 1200,
+        "display_anchor": "1200 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1200,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:angkor_1200"
+      },
+      {
+        "atlas_internal_year": 1500,
+        "display_anchor": "1500 CE",
+        "display_rule": "May be surfaced near the 1500 anchor only with approximate/near-anchor labeling; do not imply exact-year observation.",
+        "source_year": 1500,
+        "state": "supported_near_anchor_approximate",
+        "target_id": "R1:N:gao_1500"
+      },
+      {
+        "atlas_internal_year": 1100,
+        "display_anchor": "1100 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1100,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:great_lavra_1100"
+      },
+      {
+        "atlas_internal_year": 1400,
+        "display_anchor": "1400 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1400,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:great_zimbabwe_1400"
+      },
+      {
+        "atlas_internal_year": 1400,
+        "display_anchor": "1400 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1400,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:hanseatic_1400"
+      },
+      {
+        "atlas_internal_year": 1700,
+        "display_anchor": "1700 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1700,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:ifugao_1700"
+      },
+      {
+        "atlas_internal_year": -99,
+        "display_anchor": "100 BCE",
+        "display_rule": "Do not render route-wide positive slave traffic at 100 BCE.",
+        "source_year": -100,
+        "state": "unknown",
+        "target_id": "R1:N:incense_m100"
+      },
+      {
+        "atlas_internal_year": 1400,
+        "display_anchor": "1400 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1400,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:indian_ocean_1400"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "Do not render positive circumpolar/internal territorial practice at 1800.",
+        "source_year": 1800,
+        "state": "unknown",
+        "target_id": "R1:N:inuit_arctic_1800"
+      },
+      {
+        "atlas_internal_year": 1000,
+        "display_anchor": "1000 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1000,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:ise_1000"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1800,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:kalahari_san_1800"
+      },
+      {
+        "atlas_internal_year": -999,
+        "display_anchor": "1000 BCE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": -1000,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:karnak_amun_m1000"
+      },
+      {
+        "atlas_internal_year": 1700,
+        "display_anchor": "1700 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1700,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:maori_1700"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1300,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:mongol_yam_1300"
+      },
+      {
+        "atlas_internal_year": 700,
+        "display_anchor": "700 CE",
+        "display_rule": "Generic monastic servants/slaves context does not create a Nālandā 700 CE positive.",
+        "source_year": 700,
+        "state": "unknown",
+        "target_id": "R1:N:nalanda_700"
+      },
+      {
+        "atlas_internal_year": 1400,
+        "display_anchor": "1400 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1400,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:samarkand_1400"
+      },
+      {
+        "atlas_internal_year": 1600,
+        "display_anchor": "1600 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1600,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:sapmi_1600"
+      },
+      {
+        "atlas_internal_year": 1000,
+        "display_anchor": "1000 CE",
+        "display_rule": "Do not render positive selected-year slavery at 1000 CE.",
+        "source_year": 1000,
+        "state": "unknown",
+        "target_id": "R1:N:shaolin_1000"
+      },
+      {
+        "atlas_internal_year": 1400,
+        "display_anchor": "1400 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1400,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:swahili_1400"
+      },
+      {
+        "atlas_internal_year": 1500,
+        "display_anchor": "1500 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:tenochtitlan_1500"
+      },
+      {
+        "atlas_internal_year": 1500,
+        "display_anchor": "1500 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:timbuktu_1500"
+      },
+      {
+        "atlas_internal_year": 800,
+        "display_anchor": "800 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 800,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:todaiji_800"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1300,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:trans_saharan_1300"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1800,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:N:yaghan_1800"
+      },
+      {
+        "atlas_internal_year": -1999,
+        "display_anchor": "2000 BCE",
+        "display_rule": "May be visible at the 2000 BCE anchor only with period-level precision; do not imply an event dated exactly to 2000 BCE.",
+        "source_year": -2000,
+        "state": "supported_period_level",
+        "target_id": "R1:P:-2000:C:r1"
+      },
+      {
+        "atlas_internal_year": -1999,
+        "display_anchor": "2000 BCE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": -2000,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:-2000:D:r1"
+      },
+      {
+        "atlas_internal_year": -1999,
+        "display_anchor": "2000 BCE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": -2000,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:-2000:D:r2"
+      },
+      {
+        "atlas_internal_year": -1999,
+        "display_anchor": "2000 BCE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": -2000,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:-2000:E:r1"
+      },
+      {
+        "atlas_internal_year": -499,
+        "display_anchor": "500 BCE",
+        "display_rule": "Separated pre/post-anchor captive attestations do not fill 500 BCE.",
+        "source_year": -500,
+        "state": "unknown",
+        "target_id": "R1:P:-500:C:r1"
+      },
+      {
+        "atlas_internal_year": -499,
+        "display_anchor": "500 BCE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": -500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:-500:D:r1"
+      },
+      {
+        "atlas_internal_year": -499,
+        "display_anchor": "500 BCE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": -500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:-500:D:r2"
+      },
+      {
+        "atlas_internal_year": -499,
+        "display_anchor": "500 BCE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": -500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:-500:E:r1"
+      },
+      {
+        "atlas_internal_year": -499,
+        "display_anchor": "500 BCE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": -500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:-500:E:r2"
+      },
+      {
+        "atlas_internal_year": -499,
+        "display_anchor": "500 BCE",
+        "display_rule": "Broader early-China slavery context does not create a Cai 500 BCE state.",
+        "source_year": -500,
+        "state": "unknown",
+        "target_id": "R1:P:-500:F:r1"
+      },
+      {
+        "atlas_internal_year": -499,
+        "display_anchor": "500 BCE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": -500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:-500:F:r2"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1300,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1300:A:r1"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1300,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1300:A:r2"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Sākūra status uncertainty and later evidence do not create a Mali 1300 territorial state.",
+        "source_year": 1300,
+        "state": "unknown",
+        "target_id": "R1:P:1300:C:r1"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1300,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1300:C:r2"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1300,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1300:D:r1"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1300,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1300:D:r2"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1300,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1300:E:r1"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1300,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1300:E:r2"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1300,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1300:F:r1"
+      },
+      {
+        "atlas_internal_year": 1300,
+        "display_anchor": "1300 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1300,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1300:F:r2"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1800,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1800:A:r1"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1800,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1800:A:r2"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1800,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1800:C:r1"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1800,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1800:C:r2"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1800,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1800:D:r1"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1800,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1800:D:r2"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1800,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1800:E:r1"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1800,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1800:E:r2"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1800,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1800:F:r1"
+      },
+      {
+        "atlas_internal_year": 1800,
+        "display_anchor": "1800 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 1800,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:1800:F:r2"
+      },
+      {
+        "atlas_internal_year": 500,
+        "display_anchor": "500 CE",
+        "display_rule": "Do not render positive selected-year practice at 500 CE.",
+        "source_year": 500,
+        "state": "unknown",
+        "target_id": "R1:P:500:A:r1"
+      },
+      {
+        "atlas_internal_year": 500,
+        "display_anchor": "500 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:500:A:r2"
+      },
+      {
+        "atlas_internal_year": 500,
+        "display_anchor": "500 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:500:C:r1"
+      },
+      {
+        "atlas_internal_year": 500,
+        "display_anchor": "500 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:500:C:r2"
+      },
+      {
+        "atlas_internal_year": 500,
+        "display_anchor": "500 CE",
+        "display_rule": "Sixth-century Lazican slave-export evidence does not establish exact 500 CE selected-year truth.",
+        "source_year": 500,
+        "state": "unknown",
+        "target_id": "R1:P:500:D:r1"
+      },
+      {
+        "atlas_internal_year": 500,
+        "display_anchor": "500 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:500:D:r2"
+      },
+      {
+        "atlas_internal_year": 500,
+        "display_anchor": "500 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:500:E:r1"
+      },
+      {
+        "atlas_internal_year": 500,
+        "display_anchor": "500 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:500:E:r2"
+      },
+      {
+        "atlas_internal_year": 500,
+        "display_anchor": "500 CE",
+        "display_rule": "Broader Korean slavery/nobi context does not create a Tamna 500 CE positive.",
+        "source_year": 500,
+        "state": "unknown",
+        "target_id": "R1:P:500:F:r1"
+      },
+      {
+        "atlas_internal_year": 500,
+        "display_anchor": "500 CE",
+        "display_rule": "Frozen research anchor only; no subject-time inference because C1 subject research was not performed.",
+        "source_year": 500,
+        "state": "unassessed_not_researched",
+        "target_id": "R1:P:500:F:r2"
+      }
+    ]
+  },
   "temporal_render_annotations": {
     "allowed_states": [
       "supported_exact_cross_section",

@@ -5,23 +5,26 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-24  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **R1.8 RELEASE/NO-RELEASE GATE ACTIVE (#203); TECHNICAL_MVP_CANDIDATE frozen; #200 protocol prepared, participant execution waits on R1.8**
+**Execution state:** **R1.8 REWORK (#203) — committed MVP candidate was stale; bounded release-integrity repair active; external involvement deferred by sponsor**
 
 ## Current execution order
 
-1. **#203 — R1.8 sponsor usability + release/no-release gate**
-   - active;
-   - judges artifact coherence/honesty only;
-   - allowed outcomes: PUBLISH_CANDIDATE / HOLD_NO_RELEASE / REWORK.
+1. **#203 — R1.8 bounded REWORK**
+   - refresh stale committed candidate bundle;
+   - enforce pre-generation freshness check in CI;
+   - verify deterministic committed bytes;
+   - then return to sponsor release/no-release review.
 
-2. **#200 — external expert audit crossover**
-   - protocol frozen and merged;
-   - recruitment feasibility may proceed;
-   - participant case execution waits until #203 fixes the exact R1 artifact/packet.
+2. **#205 — minimum sufficient evidence packet**
+   - protocol prepared;
+   - execute only after #203 freezes R1;
+   - internal-only structural/portability experiment.
 
-3. No R2, feature queue, geometry expansion or new subject-research horizon is authorized.
+3. **#200 — external expert audit**
+   - deferred by sponsor;
+   - no recruitment/contact/participant execution.
 
-Sponsor review is not external-user validation. External value remains the purpose of #200.
+4. No R2, feature queue, geometry expansion or new subject-research horizon is authorized.
 
 ## Direction after H2
 

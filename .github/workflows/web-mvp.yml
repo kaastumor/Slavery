@@ -16,11 +16,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Generate candidate bundle
-        run: python programmes/r1/build_mvp_candidate_bundle.py
-      - name: Detect stale or non-deterministic output
+      - name: Verify committed candidate bundle is current
+        run: python programmes/r1/build_mvp_candidate_bundle.py --check
+      - name: Verify deterministic reconstruction
         run: |
-          python programmes/r1/build_mvp_candidate_bundle.py --check
           sha256sum web/public/data/r1-mvp-candidate.json > /tmp/candidate.sha256
           python programmes/r1/build_mvp_candidate_bundle.py
           sha256sum --check /tmp/candidate.sha256
