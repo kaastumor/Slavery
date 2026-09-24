@@ -21,15 +21,18 @@ EXP-04 tests that contract on the eight previously registered targets frozen in 
 Protocol and pinned selection: `experiments/exp04-blind-frontier/00_PROTOCOL.md`
 and `sample.json`.
 
-Current checkpoint: **Indus packet under review; seven cases not started**.
-A positive secondary slavery interpretation and a Mesopotamian textual lead are
-preserved; no completed inconclusive or territorial-practice designation is asserted.
+Current checkpoint: **Sumerian City-States internally researched; Indus packet
+under review; six cases not started**. Sumer supports a bounded near-anchor slavery
+institution claim while preserving the Ur III→Isin-Larsa transition, aggregate-polity
+frame, and slave/dependent category boundaries. No canonical P-level or territorial
+designation was created.
 
-**Next:** direct Laursen–Steinkeller 2017 pp.83–84 verification is blocked after
-reconciling the derivative reproduction with pinned CDLI P453801. Preserve the exact
-recovery trigger; do not retry unchanged access. Continue the same frozen experiment
-with **Sumerian City-States — 2000 BCE**, carrying any shared `a-ru-a`/source dependency.
-See `CHECKPOINT.md`.
+Indus direct Laursen–Steinkeller 2017 pp.83–84 verification remains a recorded
+reopening trigger; do not retry unchanged access.
+
+**Next:** continue the same frozen experiment with **Hadhramaut — 500 BCE**. Carry
+forward the tested distinction between historical status terms and generic dependency,
+but do not turn the Sumer result into a tranche-wide conclusion. See `CHECKPOINT.md`.
 
 Project form: portable reviewed evidence core + replaceable Atlas/map/table/API views.
 Canonical v0.6.1, frozen R1 registry and public preview remain unchanged.
