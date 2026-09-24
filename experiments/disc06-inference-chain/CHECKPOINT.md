@@ -13,6 +13,13 @@ Frozen regression sample:
 5. Lazica — time + dependency + network/territorial leakage
 6. Nālandā — target/context + dependency
 
+Pre-execution ID reconciliation completed against the canonical R1 final artifacts:
+- Inuit frame → `R1:N:inuit_arctic_1800`;
+- Cahokia → `R1:L:cahokia_1200`;
+- Lazica → `R1:P:500:D:r1`.
+
+Labels, anchors, mechanisms, sample membership and thresholds are unchanged.
+
 Compare the current portable packet with only the minimal inference ledger defined in
 `00_PROTOCOL.md`.
 
