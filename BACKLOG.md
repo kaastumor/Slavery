@@ -9,10 +9,10 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE VALUE HORIZON — EXP-05 thin-view discrimination
+# EXP-05 CLOSURE CANDIDATE — thin-view discrimination
 
 **Active issue:** #223  
-**Current stage:** EXECUTION — WIP 1
+**Current stage:** CLOSURE CANDIDATE — final PR cleanup/checks
 
 #221 / the EXP-04 Research Preview is live and received sponsor first-look browser
 acceptance. That acceptance is lightweight usability evidence, not external demand or
@@ -31,21 +31,27 @@ Three tasks are preregistered:
 2. external/network versus territorial practice;
 3. category + dependency negative control.
 
-Lane A has been executed first. Lane B has been executed second. Lane C will be
-captured once through the existing Playwright pattern against the live preview; no UI
-change is allowed before that run.
+All three lanes are complete. The live browser run completed with zero page errors and
+preserved the non-canonical / under-review / navigation-only geometry boundaries.
 
-Decision rule:
-- C material advantage on >=2/3 tasks → thin Atlas earns continued derived-view
-  investment;
-- B improves but C does not → preserve corpus/method; stop app expansion beyond
-  maintenance;
-- neither B nor C improves A → stop further Atlas expansion and preserve the
-  method/corpus/audit artifacts;
-- any dangerous UI-induced overclaim can force REVISE.
+Observed:
+- B materially improves 3/3 tasks over A through lower comparison/provenance burden;
+- C materially improves 0/3 tasks over B under the frozen rule;
+- C remains a safe/readable inspection adapter with no observed historical overclaim.
 
-This remains an **internal workflow/value experiment**. It cannot establish external
-demand, adoption, researcher preference or independent historical validity.
+
+Result:
+> **portable package earns the comparative workflow value; thin Atlas remains a
+> maintenance/trigger-bound view.**
+
+Do not infer poor usability or map uselessness. Sponsor first-look feedback was
+positive; EXP-05 tested the stricter question of material task advantage.
+
+**Next after #223 merges/closes:** select one bounded **historical evidence-growth**
+successor by expected information gain. Prefer globally underrepresented
+non-Atlantic/non-Western targets and reuse the portable package; no new product
+horizon should intervene.
+
 
 Canonical v0.6.1 remains unchanged. No historical research tranche, schema/API/database
 change, geometry programme or frontend change is authorized by #223.
