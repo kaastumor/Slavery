@@ -5,16 +5,16 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-24  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE DISCOVERY HORIZON — #240 / DISC-06 inference-chain stress test; WIP 1**
+**Execution state:** **ACTIVE DISCOVERY HORIZON — #245 / DISC-07 cross-dimensional coverage audit; WIP 1**
 
 ## Current execution order
 
 Active:
-1. **#240 / DISC-06 — inference-chain stress test.** Execution is complete:
-   **REJECT DURABLE EXTENSION**. The minimal ledger improved scanability but added no
-   material reconstructibility/revision-impact information across the six tested
-   correction mechanisms. A richer result would require an unearned assertion/factoid
-   layer. Next discovery candidate is the coverage/evidence-gap audit.
+1. **#245 / DISC-07 — cross-dimensional coverage audit.** The full 77-target R1.6
+   registry and success/failure threshold are frozen before matrix generation. The test
+   asks whether chronology × frame × neutral polity sector × research/QA interactions
+   reveal a material selection blind spot not explicit in current marginal balance
+   checks. No historical subject research is allowed.
    EXP-08 remains open/paused after 3/4; Qi — 500 BCE is frozen/unstarted.
    Discovery execution: `docs/discovery/DISCOVERY_EXECUTION.md`.
 

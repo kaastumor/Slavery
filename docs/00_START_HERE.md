@@ -65,7 +65,7 @@ A missing claim must never be rendered as a historical negative.
 - R1 completed with **HOLD_NO_RELEASE**; its repaired candidate remains a frozen internal reference rather than a public/canonical promotion.
 - EXP-02 showed that the frozen R1 safety/reconstructibility contract survives in a portable package manifest + flat target/source tables + optional Markdown packets.
 - That portable form is an architectural/release-boundary result, **not** a canonical schema migration.
-- Current execution state is **project discovery** under #240 / DISC-06. The six-case inference-chain stress test is complete and rejects a durable inference-ledger extension: the current portable packet preserved the tested reasoning dependencies, while genuinely richer formalization would require an unearned assertion/factoid layer. EXP-08 remains paused after 3/4 and Qi — 500 BCE remains frozen/unstarted. Preservation/idle is no longer the default successor state; after each bounded horizon the project selects the next highest-information research/discovery question while keeping WIP=1, evidence quality high and complexity bounded.
+- Current execution state is **project discovery** under #245 / DISC-07. The full 77-target R1 registry and a fixed discriminator are frozen to test whether cross-dimensional coverage matrices expose research-design blind spots hidden by current marginal balance checks. EXP-08 remains paused after 3/4 and Qi — 500 BCE remains frozen/unstarted. Preservation/idle is no longer the default successor state; after each bounded horizon the project selects the next highest-information research/discovery question while keeping WIP=1, evidence quality high and complexity bounded.
 
 ## Active-continuity rule
 
@@ -73,7 +73,7 @@ Elapsed time is not treated as the scarce resource. The scarce resources are evi
 
 A completed horizon should not automatically return the project to idle. Unless genuinely blocked, select one next bounded experiment by expected information gain, preregister it, and continue. Stopping/simplifying/rejecting remain valid evidence outcomes, not default scheduling policy.
 
-Current active experiment: **#240 / DISC-06 inference-chain stress test**.
+Current active experiment: **#245 / DISC-07 cross-dimensional coverage audit**.
 
 ## Non-negotiable principles
 
