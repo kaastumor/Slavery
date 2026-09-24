@@ -1,6 +1,6 @@
 {
   "candidate_id": "exp06-candidate-v1",
-  "candidate_status": "noncanonical_pending_publish_hold_rework_gate",
+  "candidate_status": "noncanonical_publish_candidate_approved",
   "source_historical_commit": "16906affed159722cf940e6723401c7ab4e5d9f4",
   "canonical_historical_release": "v0.6.1",
   "created_date": "2026-09-24",
@@ -22,7 +22,7 @@
   "artifacts": [
     {
       "path": "README.md",
-      "sha256": "d9ac684851e0f0a2bd6b6e00bdbe3b6e49f5e48997f7aced54cdb55b074e6910",
+      "sha256": "885343060efb91e1d673aee2ffe37f56284e60dbace2386e3cd05f2bdbcada8e",
       "role": "candidate_readme"
     },
     {
@@ -34,6 +34,11 @@
       "path": "UNRESOLVED_ISSUES.md",
       "sha256": "ab88bfe394a1bdb9e166698b9fff8411573e39124dba506c994f1d83d3077cd3",
       "role": "unresolved_issues"
+    },
+    {
+      "path": "REVIEW_DECISION.md",
+      "sha256": "43b24ff2c6f75a74f736e4f07b8ff770a70948ca0259c149d7d743a67981c2c0",
+      "role": "release_gate_decision"
     },
     {
       "path": "targets_extended.csv",
@@ -57,7 +62,7 @@
     },
     {
       "path": "../../../web/public/data/exp06-candidate.json",
-      "sha256": "89a958c5ff0c4f45cbebfc669b4f4ec325c9b48c58c2fc9fa2bba23cca14b3d3",
+      "sha256": "9e484c8f9fd9d207099b69f58ac68363771a30daf07984cd234982dec904f523",
       "role": "browser_candidate_bundle"
     }
   ],
@@ -68,6 +73,6 @@
       "HOLD_NO_RELEASE",
       "REWORK"
     ],
-    "current_disposition": null
+    "current_disposition": "PUBLISH_CANDIDATE"
   }
 }
