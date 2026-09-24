@@ -10,27 +10,30 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# NEXT DISCOVERY — PORTABLE PACKAGE INTEROPERABILITY FREEZE
+# DISC-08 PORTABLE PACKAGE INTEROPERABILITY — FREEZE GATE
 
-**Previous issue:** #245 / DISC-07 — **CLOSED**  
-**Previous disposition:** **SURVIVES NARROWLY**  
-**Historical subject research:** **PAUSED**
+**Issue:** #250  
+**Primary gate:** method / release-interchange discovery  
+**Current stage:** SUBJECT + SPECS + DISCRIMINATOR FROZEN  
+**Historical subject research:** **PAUSED / PROHIBITED**
 
-DISC-07 is complete on `main` (commit `adb85b7…`) and recorded as D-094.
+Frozen subject: **EXP-06 Candidate v1** (`exp06-candidate-v1`), preserving its exact
+candidate manifest, Git blobs and SHA-256 identities.
 
-Durable result:
-- marginal chronology and frame-diversity gates can hide a material interaction concentration;
-- future programmes claiming broad cross-chronology structural coverage must add a
-  chronology × **broad selection-frame family** QA check before subject research;
-- sparse cells remain research-design states only, never historical absence or quotas.
+First/simple baseline:
+- Frictionless Data Package v1;
+- Data Resource v1;
+- Tabular Data Resource v1.
 
-**Current exact action:** freeze one bounded **portable-package interoperability
-benchmark** using an existing non-canonical candidate package. Test **Frictionless Data
-Package** first as the simplest established baseline. Use **RO-Crate** only if a richer
-comparator is necessary to test reconstructibility/provenance value.
+Conditional richer comparator:
+- RO-Crate 1.3 only if Frictionless fails specifically on research-object/provenance
+  structure and the richer comparison could change the final standards decision.
 
-The benchmark must not change package contents, canonical v0.6.1, schema/ontology,
-public release state or application architecture.
+The candidate may not be moved, copied, rewritten or normalized for compatibility.
+
+**Current exact action:** merge the DISC-08 freeze if CI is green. Only then construct
+the disposable Frictionless descriptor and run the preregistered interoperability /
+validation comparison.
 
 EXP-08 remains open/paused after 3/4. **Qi — 500 BCE remains frozen/unstarted.**
 

@@ -36,7 +36,8 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - DISC-06 is complete and rejected a durable inference-ledger extension;
 - DISC-07 is complete and closed; it survives narrowly and is recorded as D-094;
 - future cross-chronology structural-coverage claims require a joint chronology × broad-frame-family QA check; sparse cells remain non-absence/non-quota states;
-- current next action: freeze a bounded portable-package interoperability benchmark against **Frictionless Data Package** first, with RO-Crate only as a richer comparator if needed;
+- active horizon: **#250 / DISC-08 portable-package interoperability benchmark**;
+- `exp06-candidate-v1`, Frictionless v1 and the success threshold are frozen before descriptor construction; RO-Crate 1.3 is conditional only;
 - no historical subject-case expansion or production feature work is active;
 - no production migration, new public release or platform expansion authorized.
 

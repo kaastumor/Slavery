@@ -5,15 +5,16 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-25  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **DISC-07 CLOSED / NEXT DISCOVERY FREEZE PENDING; WIP 0**
+**Execution state:** **ACTIVE DISCOVERY HORIZON — #250 / DISC-08 freeze gate; WIP 1**
 
 ## Current execution order
 
-Next:
-1. Freeze a bounded **portable-package interoperability benchmark** against an existing
-   non-canonical candidate package. Frictionless Data Package is the first/simple
-   baseline; use RO-Crate only if a richer comparator is necessary.
-   DISC-07 / #245 is closed with **SURVIVES NARROWLY** and D-094.
+Active:
+1. **#250 / DISC-08 — portable-package interoperability benchmark.** The exact
+   `exp06-candidate-v1` subject, Frictionless v1 specifications and frozen
+   ADOPT/NARROW/REJECT discriminator are preregistered before descriptor construction.
+   RO-Crate 1.3 is conditional only. No historical research or package mutation is
+   allowed.
    EXP-08 remains open/paused after 3/4; Qi — 500 BCE is frozen/unstarted.
    Discovery execution: `docs/discovery/DISCOVERY_EXECUTION.md`.
 
