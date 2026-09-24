@@ -26,14 +26,14 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - R1.6 release QC: **PASS WITH EXPLICIT LIMITATIONS**;
 - R1 candidate registry: 77 frozen targets = 19 reviewed C1 + 15 planned/unresearched C1 + 2 held + 41 C0-only;
 - source dependency layer: 45 source relations / 37 independence groups;
-- D-080: the project has crystallized to an **MVP v0.1** rather than returning to broad platform work;
-- active MVP parent: **#174**;
-- MVP definition: **immutable R1 candidate package + neutral world map + explicit geometry/research states + compact evidence register**;
-- delivery queue: #175→#182, WIP=1, short-lived PRs, green CI;
-- post-MVP discovery: #184→#187 only after #182 records `TECHNICAL_MVP_CANDIDATE`;
-- no new subject-research tranche, production migration, backend/service expansion, or new universal P0–P4 scale is authorized.
+- R1 closure: **HOLD_NO_RELEASE**; no automatic publication;
+- EXP-02: portable evidence packet survived; EXP-03 added terminology/mapping and source-role/claim-fitness requirements (D-089);
+- active horizon: **#213 / EXP-04 blind frontier tranche**, eight frozen targets;
+- current checkpoint: Indus packet under review, seven cases not started;
+- next: verify the recovered Meluhha textual lead before a territorial designation;
+- no production migration, new public release or platform expansion authorized.
 
-See `programmes/r1/20_RELEASE_QC.md`, `docs/mvp/v0.1-plan.md`, and `docs/mvp/delivery-discovery-cadence.md`.
+See `BACKLOG.md`, `experiments/exp04-blind-frontier/CHECKPOINT.md`, and `docs/08_DECISIONS_LOG.md`.
 
 ## Repository boundary
 

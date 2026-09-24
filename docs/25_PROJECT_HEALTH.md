@@ -1549,3 +1549,15 @@ Historically specific categories such as tlacotli/tlatlacotin and nobi require e
 **CONTINUE.**
 
 Under D-088, complete #211 and choose the next WIP-1 experiment by expected information gain rather than returning to idle.
+
+## EXP-04 continuation checkpoint — 2026-09-24
+
+Issue #213 had already frozen eight frontier targets after EXP-03; stale active
+references in README/backlog/worker have been reconciled. One Indus packet is under
+review, seven unstarted. A positive secondary interpretation prevented premature
+inconclusive classification; a source-native textual lead now determines the next
+check. No tranche verdict or contract-extension decision is made from this checkpoint.
+
+Actions cost: D-090 narrows expensive runs while preserving relevant checks. No
+measured monetary-saving claim; the removed duplicate and unrelated triggers are
+directly inspectable. Continue #213, WIP 1; canonical/public boundaries unchanged.

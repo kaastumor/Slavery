@@ -195,7 +195,7 @@ A successor must still have a discriminating question, falsifier, evidence contr
 
 Stopping, simplifying, rejecting and parking remain valid **evidence outcomes**. They are not automatic scheduling outcomes.
 
-Current active horizon: **#211 / EXP-03 heterogeneous evidence stress test**.
+Current active horizon: **#213 / EXP-04 blind frontier tranche**. EXP-03 completed; D-089 extends the portable evidence contract. See root `BACKLOG.md` for the current checkpoint.
 
 ### H4 — Preservation as a capability, not a resting strategy
 

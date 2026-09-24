@@ -1,0 +1,17 @@
+{
+  "experiment": "EXP-04",
+  "state": "partial_under_review",
+  "canonical_effect": "none",
+  "reviewed_targets": 0,
+  "targets_under_review": 1,
+  "not_started": 7,
+  "base_commit": "5b95ed1c01d0401ab47a2b189b6b4a5668c27a3b",
+  "files": {
+    "00_PROTOCOL.md": "11ed831fcbe9297536b6c4c7029a8165d6ba694e256a7caaf36e2881f6b55482",
+    "01_INDUS_2000BCE.md": "888a39b1a8adfd4664f0802d342e0f2c90ef47e06eeac78415794cb1826a147f",
+    "CHECKPOINT.md": "7a7e76b89bb9daa28dde4cce58767f3130a404ca7b2e9562aaee0d9cf7209add",
+    "sample.json": "a4a854352bc21504f6f7a2b4c03431d3bc376dbb2ced14357ecf81e1609f7d63",
+    "source_relations.csv": "6a1e95512b93ba30c91726d1898fbc5595e8608a9cd338ab48d42e2e67613107",
+    "targets_extended.csv": "a24f5e1b7e22ac897d7df732de0c6053018403f894eb6bfde1ca61202bbc1853"
+  }
+}

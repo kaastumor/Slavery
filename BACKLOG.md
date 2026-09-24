@@ -9,46 +9,36 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# ACTIVE EVIDENCE HORIZON — EXP-03 heterogeneous evidence stress test
+# ACTIVE EVIDENCE HORIZON — EXP-04 blind frontier tranche
 
-**Active issue:** #211  
-**Current stage:** **ACTIVE RESEARCH / DISCOVERY — WIP 1**
+**Active issue:** #213
+**Current stage:** ACTIVE RESEARCH / DISCOVERY — WIP 1
 
-The current project form remains:
+EXP-03 (#211, merged #212) completed with CORE REQUIRES EXTENSION; D-089 accepted
+historical terminology/category mapping and source role/claim fitness in the portable contract.
 
-> **portable reviewed evidence core + replaceable Atlas/map/table/API views**
+EXP-04 tests that contract on the eight previously registered targets frozen in #213.
+Protocol and pinned selection: `experiments/exp04-blind-frontier/00_PROTOCOL.md`
+and `sample.json`.
 
-The execution policy has changed:
+Current checkpoint: **Indus packet under review; seven cases not started**.
+A positive secondary slavery interpretation and a Mesopotamian textual lead are
+preserved; no completed inconclusive or territorial-practice designation is asserted.
 
-> **Do not optimize for returning to idle. Optimize for evidence quality, focus, information gain and bounded project complexity.**
+**Next:** reconcile recovered CDLI P453801 / Nisaba 15 371 with the full Laursen–Steinkeller 2017 pp.83–84 discussion; verify
+status, date and acquisition geography; finish the Indus synthesis. Then research
+Sumerian City-States, preserving any shared-source dependency. See `CHECKPOINT.md`.
 
-Elapsed time is not treated as the scarce resource. A completed horizon should normally be followed by the highest-information bounded research/discovery question that can materially change belief about the evidence method, corpus or Atlas use.
+Project form: portable reviewed evidence core + replaceable Atlas/map/table/API views.
+Canonical v0.6.1, frozen R1 registry and public preview remain unchanged.
 
-Stopping, rejecting, simplifying and parking remain valid **results**. They are not the default scheduler.
+## Actions budget
 
-## Active work — #211 / EXP-03
-
-Question:
-
-> Does the portable evidence core survive fresh, structurally heterogeneous historical research with non-polity targets, mixed geometry states, category-translation pressure, law/practice divergence and network/territorial overlap?
-
-Frozen cases:
-1. Classical Athens, c. 400 BCE
-2. Mamluk Cairo, c. 1300 CE
-3. Tenochtitlan, c. 1500 CE
-4. Joseon Korea, c. 1700 CE
-5. Zanzibar Town / port, c. 1850 CE
-6. British India, 1843–1850 CE
-
-Required outputs:
-- one research packet per case;
-- source/dependency register;
-- geometry-state note per case;
-- portability audit against EXP-02;
-- adversarial result;
-- explicit disposition.
-
-No canonical release/schema migration follows automatically.
+Batch one coherent checkpoint per PR. Run Python tests/sanitation locally first.
+Normal PR checks run sanitation and Python regressions; PostGIS runs for changes
+outside known documentation/research text paths, or on manual dispatch. No duplicate
+foundation run on merge. Legacy preview health remains weekly/manual, not every push.
+Do not skip required relevant checks or rerun unchanged successful jobs.
 
 ## Continuation rule
 
@@ -79,7 +69,7 @@ Do **not** use elapsed research time alone as a stop criterion.
 
 # PARKED / trigger-bound operational debt
 
-These are not eligible while #211 is active unless they block it.
+These are not eligible while #213 is active unless they block it.
 
 ## #43 — protected staging / release-promotion administration
 
@@ -101,7 +91,7 @@ Handle when it materially blocks evidence work; do not turn administration into 
 
 # Explicitly NOT the current horizon
 
-Do not let proactive research become platform drift. #211 does **not** authorize:
+Do not let proactive research become platform drift. #213 does **not** authorize:
 
 - M2 production schema migration;
 - frontend redesign;
