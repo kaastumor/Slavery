@@ -1,0 +1,49 @@
+name: EXP-05 Value Browser Evidence
+
+on:
+  pull_request:
+    paths:
+      - "experiments/exp05-thin-view-value/run_lane_c_browser.mjs"
+      - ".github/workflows/exp05-value-browser.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: exp05-value-browser-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lane-c-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install existing web dependencies and Chromium
+        working-directory: web
+        run: |
+          npm install --package-lock-only
+          npm ci
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Execute frozen lane C tasks against live preview
+        working-directory: web
+        run: |
+          node ../experiments/exp05-thin-view-value/run_lane_c_browser.mjs \
+            https://kaastumor.github.io/Slavery/research-preview.html \
+            /tmp/exp05-lane-c
+
+      - name: Upload EXP-05 lane C evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: exp05-lane-c-${{ github.sha }}
+          path: /tmp/exp05-lane-c/**
+          if-no-files-found: error
+          retention-days: 30
