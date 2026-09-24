@@ -1,7 +1,7 @@
 # EXP-04 checkpoint — 2026-09-24
 
-One packet under review; seven targets not started. Tranche outcome: NOT ASSESSED.
-No target has been added to reviewed R1/public/canonical data.
+One packet researched internally, one packet under review, and six targets not started.
+Tranche outcome: NOT ASSESSED. No target has been added to reviewed R1/public/canonical data.
 
 The requested P453801 / a-ru-a lugal reconciliation advanced but direct
 Laursen–Steinkeller 2017 pp. 83–84 access remains blocked. The derivative reproduction
@@ -12,8 +12,8 @@ targets_extended.csv retains D-089 fields and explicitly carries research_stage.
 This is an experimental serialization of the existing stage/outcome distinction,
 not a schema decision or evidence that a new contract extension is required.
 
-Source table and packet are a checkpoint, not a release. Remaining tranche outputs:
-seven packets, final dependency/category/access audits, integrated adversary and verdict.
+Source table and packets are a checkpoint, not a release. Remaining tranche outputs:
+six target packets, final dependency/category/access audits, integrated adversary and verdict.
 
 ## Reconciliation result
 
@@ -65,13 +65,48 @@ This subtask is historical evidence synthesis. Product/workflow value is not ass
 and cannot be inferred from this checkpoint. The D-089 portable fields provisionally
 preserve the material distinctions; no tranche-wide method verdict is warranted.
 
+## Sumerian City-States — 2000 BCE result
+
+The Sumer packet completed an internal research pass with
+**bounded_supported_with_transition_and_category_boundaries**. It does not create a
+canonical designation or P-level.
+
+The frozen frame remains a polity aggregate. Strong late-Ur-III evidence from several
+southern Mesopotamian loci documents slave sale, household ownership, court disputes
+and institutional/labor use immediately before the anchor. Broader Isin-Larsa evidence
+supports continuity of slave transactions into the succeeding period. The correct
+temporal inference is **near-anchor transition**, not an invented exact 2000 BCE
+observation or a single uniform “Sumerian” territorial regime.
+
+The strongest representation pressure came from adjacent status categories:
+- `geme₂` is not diagnostic of slave status by itself;
+- Pottorf's `un-il₂` is legally free/serflike rather than slave;
+- Bartash's dedicated/`a-ru-a` category cannot be normalized to “temple slave”;
+- captives, hired labor and slaves must remain distinct even inside the same labor
+  system.
+
+Neumann and Adams also constrain scale: dense documentation and repeated transactions
+do not establish slavery as the dominant labor mode or a population prevalence.
+The packet therefore records strong institutional presence with low prevalence
+confidence rather than inferring intensity from archive density.
+
+Internal attack result: **D-089 survives provisionally without extension**. Existing
+fields can carry aggregate identity, temporal transition, source dependency,
+law/practice separation and term/category boundaries. One successful case is not a
+tranche verdict. A focused GPT-6 Astra medium-reasoning red-team of that representation
+question is warranted if/when a deeper model pass is available, but it is not a blocker
+for continuing the frozen sample.
+
 ## Next exact action
 
-Do **not** loop on the unchanged book-access failure. Retain direct pp. 83–84
-verification as the Indus reopening trigger and proceed within the same EXP-04 frozen
-sample to **Sumerian City-States — 2000 BCE**, preserving any P453801 /
-Laursen–Steinkeller / a-ru-a dependency if that source family becomes relevant there.
-The Indus packet remains under review until its direct-source recovery condition is met.
+Do **not** loop on the unchanged Indus book-access failure. Retain direct
+Laursen–Steinkeller pp. 83–84 verification as that case's reopening trigger. Proceed
+within the same frozen EXP-04 sample to **Hadhramaut — 500 BCE**.
 
-Unchanged: eight-target sample, one packet under review, seven unstarted at this
-checkpoint, no tranche verdict, no independent review, no public/canonical effects.
+Carry forward the Sumer lesson as a test condition, not a new rule: distinguish
+historical term/category mapping from generic dependency, and do not let a political
+or chronological transition manufacture territorial continuity.
+
+Unchanged: eight-target frozen sample, Indus under review, Sumer internally researched,
+six targets not started, no tranche verdict, no independent review, and no
+public/canonical effects.
