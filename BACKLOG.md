@@ -20,8 +20,8 @@ The next-horizon comparison is complete.
 
 EXP-03/04/06 together leave exactly one untouched QA-ready C1 row in the frozen R1
 registry: **Grand Duchy of Lithuania — 1300 CE**. Selecting it merely because it is
-already ready would overweight execution convenience and conflict with the project's
-non-Atlantic/non-Western balancing priority.
+already ready would let C1 readiness/execution convenience bypass the specific C0
+qualification question that this horizon is meant to test.
 
 The project therefore opens one bounded C0 qualification horizon before new subject
 research. The frozen sample is recorded in
