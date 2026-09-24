@@ -22,6 +22,8 @@ SAFE_FILES = {
     'tools/build_exp04_research_preview.py',
     'tools/ci_scope.py',
     'tests/test_ci_scope.py',
+    '.github/workflows/exp05-value-browser.yml',
+    'experiments/exp05-thin-view-value/run_lane_c_browser.mjs',
 }
 
 
