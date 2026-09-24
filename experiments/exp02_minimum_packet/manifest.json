@@ -1,0 +1,116 @@
+{
+  "schema": "historical-slavery-atlas.exp02.minimum-packet.v1",
+  "experiment": "EXP-02",
+  "frozen_repo_commit": "a6987d3f14369c6ea2d7b2b3db74ac65faa8ec57",
+  "frozen_candidate_blob_sha": "057a61f4758a5ce1dce247c1eb97c7e421c5f979",
+  "frozen_candidate_id": "R1-candidate-qc-2026-09-24",
+  "canonical_historical_release": "v0.6.1",
+  "publication_state": "candidate_not_published_not_canonical",
+  "review_scope": "internal_adversarial_review_only_not_independent_review",
+  "reviewed_row_state_hoisted": "internally_adversarially_reviewed",
+  "non_absence_rule": "Unresearched, held, invalid, ambiguous and unresolved geometry states are research/representation states only; none imply historical absence.",
+  "source_identity": {
+    "c1_tranche_01": {
+      "blob_sha": "1d561a33779464264bb89cc501d62c97f14070c8",
+      "path": "programmes/r1/c1_tranche_01_final.json"
+    },
+    "c1_tranche_02": {
+      "blob_sha": "dd7db85f93d47deaa31eddef1d3697bcf6e5d1e9",
+      "path": "programmes/r1/c1_tranche_02_final.json"
+    },
+    "c1_tranche_03": {
+      "blob_sha": "68a6b6d57a318db9b48b46f30ae0e8b7ce363678",
+      "path": "programmes/r1/c1_tranche_03_final.json"
+    },
+    "dependencies": {
+      "blob_sha": "17135ed816a38e186d0083c4475fcca87d50f8de",
+      "path": "programmes/r1/r1_source_dependencies.json"
+    },
+    "manifest": {
+      "blob_sha": "34f03b777929f2988807a76684c5172aea877f33",
+      "path": "programmes/r1/r1_release_qc_manifest.json"
+    },
+    "registry": {
+      "blob_sha": "cec379246221d166db3830845566311077596862",
+      "path": "programmes/r1/r1_candidate_target_registry.json"
+    },
+    "temporal": {
+      "blob_sha": "86fcb2a45d167e3ca49313e74bdcb697bc4d7b37",
+      "path": "programmes/r1/r1_temporal_render_annotations.json"
+    }
+  },
+  "research_state_definitions": [
+    {
+      "id": "reviewed_classified",
+      "label": "Reviewed · bounded-supported",
+      "description": "C1 research and adversarial replay completed with a bounded-supported outcome. This is not an intensity score."
+    },
+    {
+      "id": "reviewed_inconclusive",
+      "label": "Reviewed · inconclusive",
+      "description": "C1 research and adversarial replay completed, but the exact frozen target/year/frame question remains inconclusive. This is not absence."
+    },
+    {
+      "id": "planned_unresearched",
+      "label": "Planned · unresearched",
+      "description": "Identity/time QA permits subject research, but slavery/coercion research has not been performed. This is not absence."
+    },
+    {
+      "id": "held",
+      "label": "Held",
+      "description": "Identity/time/frame QA blocks subject research until the issue is resolved. This is not absence and no substitute target is used."
+    },
+    {
+      "id": "c0_only",
+      "label": "Registered only · C0",
+      "description": "Registered/research-state target only. C0 is never evidence of historical presence or absence."
+    }
+  ],
+  "temporal_state_definitions": [
+    {
+      "id": "supported_exact_cross_section",
+      "label": "Exact cross-section",
+      "description": "A dated cross-section directly supports the selected anchor. This still does not imply spatial/legal uniformity."
+    },
+    {
+      "id": "supported_period_level",
+      "label": "Period-level support",
+      "description": "Evidence supports the historical period containing the anchor, not an event observed exactly in that year."
+    },
+    {
+      "id": "supported_near_anchor_approximate",
+      "label": "Near-anchor / approximate",
+      "description": "Evidence is close enough to the anchor for bounded display only with an explicit approximate label."
+    },
+    {
+      "id": "unknown",
+      "label": "Selected-year truth unknown",
+      "description": "The reviewed packet does not establish positive historical truth at the selected anchor."
+    },
+    {
+      "id": "not_applicable_aggregate",
+      "label": "No single selected-year territorial state",
+      "description": "The frozen frame is an aggregate for which one territorial selected-year state would be misleading."
+    },
+    {
+      "id": "unassessed_not_researched",
+      "label": "Unassessed · subject research not performed",
+      "description": "The target has a frozen research anchor, but no C1 subject packet exists. The anchor is a research frame, not historical truth."
+    }
+  ],
+  "geometry": {
+    "default_state": "unresolved_no_geometry",
+    "overrides": [],
+    "policy": {
+      "unresolved_is_not_absence": true,
+      "geometry_cannot_strengthen_historical_claim": true,
+      "neutral_world_land_always_visible": true
+    }
+  },
+  "counts": {
+    "targets": 77,
+    "reviewed_c1": 19,
+    "source_relations": 45,
+    "independence_groups": 37
+  }
+}
