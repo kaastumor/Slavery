@@ -86,7 +86,7 @@ def build_bundle(target_bytes: bytes, source_bytes: bytes) -> dict:
     return {
         "schema": "historical-slavery-atlas.exp06-candidate.v1",
         "candidate_id": "exp06-candidate-v1",
-        "publication_state": "candidate_noncanonical_pending_gate",
+        "publication_state": "published_candidate_noncanonical",
         "canonical_historical_release": "v0.6.1",
         "source_historical_commit": SOURCE_COMMIT,
         "review_scope": "internal_research_only_not_independent_historical_review",
@@ -119,6 +119,7 @@ def build_manifest(bundle_bytes: bytes) -> dict:
         ("README.md", CAND / "README.md", "candidate_readme"),
         ("QC_SUMMARY.md", CAND / "QC_SUMMARY.md", "qc_summary"),
         ("UNRESOLVED_ISSUES.md", CAND / "UNRESOLVED_ISSUES.md", "unresolved_issues"),
+        ("REVIEW_DECISION.md", CAND / "REVIEW_DECISION.md", "release_gate_decision"),
         ("targets_extended.csv", CAND / "targets_extended.csv", "portable_targets"),
         ("source_relations.csv", CAND / "source_relations.csv", "portable_source_relations"),
         ("../RESULT.md", EXP / "RESULT.md", "research_result"),
@@ -132,7 +133,7 @@ def build_manifest(bundle_bytes: bytes) -> dict:
     })
     return {
         "candidate_id": "exp06-candidate-v1",
-        "candidate_status": "noncanonical_pending_publish_hold_rework_gate",
+        "candidate_status": "noncanonical_publish_candidate_approved",
         "source_historical_commit": SOURCE_COMMIT,
         "canonical_historical_release": "v0.6.1",
         "created_date": "2026-09-24",
@@ -155,7 +156,7 @@ def build_manifest(bundle_bytes: bytes) -> dict:
         "review_gate": {
             "issue": 227,
             "allowed_dispositions": ["PUBLISH_CANDIDATE", "HOLD_NO_RELEASE", "REWORK"],
-            "current_disposition": None,
+            "current_disposition": "PUBLISH_CANDIDATE",
         },
     }
 
