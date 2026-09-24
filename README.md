@@ -34,7 +34,8 @@ Durable state:
 - DISC-08 permits only narrow/optional Frictionless reuse; the Atlas manifest remains authoritative (D-095);
 - D-096 changes continuation from automatic successor experiments to mode-level selection and requires cross-batch consolidation/review-capacity control before sustained scaling;
 - cross-batch consolidation reconciles 41 unique R1/EXP-04/06/07/08 targets;
-- active mode is now **review/release** under #259, with exactly 17 post-R1 subject-research rows frozen for cumulative internal replay and no new intake;
+- #259 cumulative internal replay is complete: 12 rows accepted, 5 held, yielding internal non-canonical candidate `post-r1-cumulative-review-v1`;
+- next mode is **maintenance / trigger-bound review** rather than automatic publication or new intake;
 - DISC-09 is parked, not rejected.
 
 

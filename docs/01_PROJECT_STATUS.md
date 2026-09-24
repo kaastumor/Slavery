@@ -7,7 +7,7 @@ current CI override this snapshot.
 **Status date:** 2026-09-25  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **REVIEW/RELEASE FREEZE GATE — #259 / 17 post-R1 rows**
+**Execution state:** **REVIEW RESULT READY — maintenance / trigger-bound review is next after merge**
 
 ## Current durable state
 
@@ -16,7 +16,8 @@ current CI override this snapshot.
 - DISC-09 remains parked without a negative result;
 - cross-batch consolidation now covers 41 unique targets across R1 and EXP-04/06/07/08;
 - consolidation disposition is **REVIEW_RELEASE_CANDIDATE**;
-- #259 freezes exactly 17 post-R1 subject-research rows for existing-evidence internal replay;
+- #259 replay is complete: 12 rows accepted for internal review, 5 remain explicit HOLDs;
+- internal candidate `post-r1-cumulative-review-v1` is non-canonical and has 0 independent review;
 - exact current action is owned by `BACKLOG.md`;
 - EXP-08 remains open/paused after 3/4; Qi — 500 BCE remains frozen/unstarted.
 

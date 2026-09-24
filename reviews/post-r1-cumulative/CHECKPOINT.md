@@ -2,16 +2,27 @@
 
 **Issue:** #259  
 **Mode:** review / release  
-**State:** 17-row membership and inputs frozen; replay not started  
-**Historical/source research:** prohibited
+**State:** replay complete; result ready for merge  
+**Disposition:** **CUMULATIVE_NONCANONICAL_CANDIDATE**  
+**Historical/source research:** none
 
-Next action after merge:
-- replay the 17 rows against the existing portable evidence contract and known failure
-  classes;
-- use existing repository packets/source relations only;
-- preserve HOLD where current artifacts are insufficient;
-- produce per-row review dispositions plus one tranche-level
-  CUMULATIVE_NONCANONICAL_CANDIDATE / HOLD_FOR_REVIEW_DEBT /
-  REWORK_EXISTING_ARTIFACTS decision.
+Results:
+- 17 frozen rows reviewed;
+- 12 `ACCEPT_INTERNAL_REVIEW`;
+- 5 `HOLD_EXISTING_EVIDENCE`;
+- 0 narrowed;
+- 0 rejected;
+- 113 source relations reconstructible;
+- 1 cross-target exact dependency family: `angkor-personnel-corpus`.
 
-Qi remains frozen/unstarted. No canonical release effect.
+Candidate:
+- `candidate/post-r1-cumulative-review-v1`;
+- internal non-canonical only;
+- independent review = 0;
+- canonical v0.6.1 unchanged.
+
+## Next mode
+
+After merge, close #259 and enter **maintenance / trigger-bound review**.
+
+Do not resume Qi or other intake automatically. Reopen only on D-097 triggers.
