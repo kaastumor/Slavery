@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d211f" />
+    <meta name="description" content="Non-canonical EXP-04 research preview for the Historical Slavery Atlas." />
+    <title>Historical Slavery Atlas — EXP-04 Research Preview</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#preview-panel">Skip map and go to research table</a>
+    <div id="app">
+      <header class="appbar preview-appbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <div class="eyebrow">Experimental research view</div>
+            <h1>EXP-04 Research Preview</h1>
+          </div>
+        </div>
+        <div class="preview-boundary">
+          <strong>Non-canonical</strong>
+          <span>Internal research only · no P-levels · no practice polygons</span>
+        </div>
+        <div class="app-status">
+          <div id="release-badge" class="release-badge preview">Loading EXP-04…</div>
+          <div id="status" class="status" role="status">Loading research package…</div>
+        </div>
+      </header>
+
+      <main class="workspace preview-workspace">
+        <section class="map-shell" aria-label="EXP-04 navigation map">
+          <div id="map" aria-label="Navigation-only world map for EXP-04 targets. Historical claims are in the adjacent research table."></div>
+          <div class="map-toolbar" aria-label="Map view controls">
+            <button id="fit-references" type="button">All references</button>
+            <button id="fit-world" type="button">World</button>
+          </div>
+          <details class="legend" open>
+            <summary>Preview legend</summary>
+            <div class="legend-body">
+              <div class="legend-section-title">Research stage · not historical intensity</div>
+              <div class="state-legend">
+                <div class="state-legend-row"><span class="stage-dot researched"></span><span>Internally researched</span></div>
+                <div class="state-legend-row"><span class="stage-dot review"></span><span>Under review / unassessed</span></div>
+              </div>
+              <div class="legend-note">
+                Markers are navigation references only. They are not historical territory,
+                practice extent, jurisdiction, prevalence, or evidence weight. Neutral land
+                remains visible everywhere.
+              </div>
+            </div>
+          </details>
+        </section>
+
+        <aside id="preview-panel" class="panel preview-panel" aria-label="EXP-04 research table" tabindex="-1">
+          <div class="panel-loading">Loading EXP-04 research preview…</div>
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="/src/research-preview.ts"></script>
+  </body>
+</html>

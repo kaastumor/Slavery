@@ -1,0 +1,171 @@
+.preview-appbar {
+  grid-template-columns: minmax(250px, 1fr) minmax(260px, 0.9fr) minmax(250px, auto);
+}
+
+.preview-boundary {
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  gap: 0.15rem;
+  text-align: center;
+  font-size: 0.78rem;
+  line-height: 1.25;
+  color: #555c58;
+}
+
+.preview-boundary strong {
+  color: #8a4b24;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+}
+
+.preview-workspace {
+  min-height: calc(100vh - 82px);
+}
+
+.preview-panel {
+  min-width: 0;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin-top: 1rem;
+  border: 1px solid rgba(71, 77, 73, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 253, 248, 0.82);
+}
+
+.preview-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+  font-size: 0.82rem;
+}
+
+.preview-table th,
+.preview-table td {
+  padding: 0.72rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(71, 77, 73, 0.12);
+}
+
+.preview-table th {
+  position: sticky;
+  top: 0;
+  background: #f2efe7;
+  color: #424844;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.preview-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.preview-table tbody tr:hover {
+  background: rgba(238, 232, 220, 0.58);
+}
+
+.table-target {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #243f3c;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.table-target:hover,
+.table-target:focus-visible {
+  color: #6e3d24;
+}
+
+.research-stage {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.18rem 0.48rem;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  border: 1px solid rgba(82, 122, 118, 0.4);
+  background: rgba(82, 122, 118, 0.1);
+  color: #345a56;
+}
+
+.research-stage.under-review {
+  border-color: rgba(184, 134, 50, 0.46);
+  background: rgba(184, 134, 50, 0.1);
+  color: #73561e;
+}
+
+.stage-dot {
+  display: inline-block;
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 50%;
+  margin-right: 0.45rem;
+  box-shadow: 0 0 0 2px #fffdf8;
+}
+
+.stage-dot.researched {
+  background: #527a76;
+}
+
+.stage-dot.review {
+  background: #b88632;
+}
+
+.preview-panel .overview-stats {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.preview-panel .source-list {
+  max-height: none;
+}
+
+.preview-panel .source-meta {
+  overflow-wrap: anywhere;
+}
+
+.preview-panel .nonabsence-note {
+  margin-top: 1rem;
+}
+
+@media (max-width: 1050px) {
+  .preview-appbar {
+    grid-template-columns: 1fr auto;
+  }
+
+  .preview-boundary {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: start;
+    text-align: left;
+    padding-bottom: 0.4rem;
+  }
+
+  .preview-panel .overview-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .preview-boundary {
+    display: none;
+  }
+
+  .preview-table {
+    min-width: 680px;
+  }
+}
