@@ -31,6 +31,6 @@ Before data/schema/methodology changes, also read the relevant canonical method/
 
 ## Operating rule
 
-Use the evidence loop in `24_WAY_OF_WORKING.md`. Prefer the smallest useful experiment. Treat failure, simplification, redirection or stopping as valid outcomes.
+Use the evidence loop in `24_WAY_OF_WORKING.md`. Prefer the smallest useful experiment that materially changes belief. **Do not optimize for returning to idle.** After each bounded horizon, reconcile evidence and select one next high-information research/discovery experiment under WIP=1. Treat failure, simplification, redirection or stopping as valid experiment outcomes, but not as the default scheduling state. Elapsed time is not a scarce-resource stop rule; evidence quality, focus and project complexity are.
 
 Do not create a second backlog, risk register, roadmap or decision system beside the canonical repository structures.

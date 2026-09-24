@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Build and preserve the Historical Slavery Atlas as a globally scoped, time-aware **historical evidence method + compact auditable Atlas**, while requiring every increment beyond the core to earn itself against the strongest simpler baseline. Broad platform expansion remains stopped; bounded release/MVP work is explicitly authorized by R1.
+Build and extend the Historical Slavery Atlas as a globally scoped, time-aware **historical evidence method + compact auditable Atlas**, while requiring every increment beyond the core to earn itself against the strongest simpler baseline. Broad platform expansion remains stopped; bounded evidence research/discovery is proactive and continuous under WIP=1.
 
 The project is an evidence-synthesis and data-curation system. It does not claim that one universal category can make all forms of coercion equivalent, and it does not replace specialist historical scholarship.
 
@@ -176,17 +176,34 @@ Result:
 
 HC-004 / D-063 chose **STOP ACTIVE ATLAS EXPANSION; PRESERVE METHOD/CORPUS/AUDIT ARTIFACTS**.
 
-### H3 — No active research-expansion horizon
+### H3 — Active evidence research horizon
 
-The former globally balanced evidence-expansion candidate is **not authorized**. More records are not a remedy for a failed value threshold.
+The project does **not** use preservation/idle as the default state after a bounded horizon.
 
-It may be reconsidered only after explicit new authorization tied to a concrete value hypothesis and bounded cost model. A real external research/user need or simpler-baseline failure is one valid trigger; a preregistered methodological objective such as bias-resistant systematic coverage may also be valid if it tests a workflow not already rejected by COV-002.
+Elapsed time is not treated as the scarce resource. The constrained resources are:
+- evidence quality;
+- focus;
+- project complexity.
 
-### H4 — Preservation, not a product horizon
+Therefore the default continuation rule is:
+1. finish and reconcile the current bounded horizon;
+2. identify the unresolved question with the highest expected information gain;
+3. preregister one successor experiment;
+4. continue under WIP=1.
 
-Preservation is the resting state, not a new feature roadmap.
+A successor must still have a discriminating question, falsifier, evidence contract and complexity boundary. Research volume is not progress by itself.
 
-Maintain reconstructibility, security and integrity of the existing artifacts when needed. Do not create public-product, contribution-platform or infrastructure work merely to keep the project active.
+Stopping, simplifying, rejecting and parking remain valid **evidence outcomes**. They are not automatic scheduling outcomes.
+
+Current active horizon: **#211 / EXP-03 heterogeneous evidence stress test**.
+
+### H4 — Preservation as a capability, not a resting strategy
+
+Preservation/reconstructibility remains mandatory for releases, evidence packets and prior experiment state.
+
+It is not the project's default work mode. When no delivery task is justified, prefer a bounded research/discovery experiment over passive preservation if that experiment can materially change belief.
+
+Do not manufacture infrastructure, features, public-product work or external recruitment merely to remain active.
 
 ### Post-H2 bounded value experiment — COV-001 (completed)
 

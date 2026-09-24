@@ -1,0 +1,47 @@
+{
+  "schema": "historical-slavery-atlas.exp03.extended-portable-packet.v1",
+  "experiment": "EXP-03",
+  "state": "experimental_not_canonical",
+  "canonical_historical_release": "v0.6.1",
+  "cases": 6,
+  "source_relations": 17,
+  "disposition": "CORE_REQUIRES_EXTENSION",
+  "baseline": "EXP-02 minimum packet",
+  "preserved_core": [
+    "bounded_proposition",
+    "required_abstention",
+    "evidence_locus",
+    "inference_extent",
+    "temporal_state",
+    "law_practice_note",
+    "network_territorial_note",
+    "source_version_ref",
+    "locator",
+    "independence_group",
+    "language_access_limitations",
+    "coverage_confidence",
+    "research_state_non_absence"
+  ],
+  "target_extensions": [
+    "historical_terms",
+    "category_mapping_status",
+    "category_mapping_note"
+  ],
+  "source_relation_extensions": [
+    "evidence_role",
+    "claim_fitness"
+  ],
+  "geometry_policy": {
+    "package_default_allowed_only_when_uniform": true,
+    "mixed_release_requires_per_target_state": true,
+    "geometry_cannot_strengthen_historical_claim": true,
+    "neutral_world_land_always_visible": true
+  },
+  "non_decisions": [
+    "no canonical schema migration",
+    "no v0.6.1 reinterpretation",
+    "no public release",
+    "no universal taxonomy engine",
+    "no automatic prevalence/intensity derivation"
+  ]
+}

@@ -1593,3 +1593,74 @@ The project remains the **Historical Slavery Atlas**.
 **Canonical data:** v0.6.1 remains unchanged.
 
 **Durable reassessment:** `docs/26_PROJECT_FORM_AFTER_EXP02.md`.
+
+
+## D-088 — Active evidence continuity; idle is not the default successor
+**Date:** 2026-09-24  
+**Status:** accepted execution/governance decision  
+**Sponsor direction:** explicit
+
+**Decision:** Supersede only the **PRESERVATION / IDLE execution consequence** of D-087.
+
+The project form from D-087 remains accepted:
+
+> **portable reviewed evidence core + replaceable Atlas/map/table/API views**
+
+The project now operates under this continuation rule:
+
+> **After a bounded horizon completes, reconcile the evidence and select one next bounded research/discovery experiment by expected information gain. Do not optimize for returning to idle.**
+
+**Resource policy:**
+1. evidence quality is scarce;
+2. focus is scarce;
+3. project complexity is scarce;
+4. elapsed time is not treated as the scarce resource.
+
+Time/research-labour alone is therefore not a stop rule.
+
+**Controls:**
+- WIP remains 1;
+- each successor needs a discriminating question, falsifier, evidence contract and complexity boundary;
+- prefer real historical/source research over meta-work when both can resolve the uncertainty;
+- archive density still does not determine prevalence;
+- stopping, simplifying, rejecting and parking remain valid **experiment results**;
+- a no-work state is reserved for genuine blockers, constraint conflicts, or the absence of any bounded experiment capable of materially changing belief.
+
+**Still trigger-gated:**
+- canonical data/schema migration;
+- public/canonical release;
+- major infrastructure expansion;
+- external participant recruitment/review;
+- sensitive modern-person coverage.
+
+**Immediate consequence:** authorize **#211 / EXP-03 heterogeneous evidence stress test** as the active WIP-1 research horizon.
+
+**Canonical data:** v0.6.1 unchanged.
+
+
+## D-089 — Extend portable evidence contract after heterogeneous stress test
+**Date:** 2026-09-24
+**Status:** accepted architecture/release-contract decision
+
+**Evidence:** EXP-03 / #211.
+
+**Decision:** Preserve the D-087 portable-core project form, but extend the minimum portable evidence contract.
+
+For reviewed targets/claims, preserve where material:
+- historical term(s);
+- category-mapping status;
+- category-mapping note.
+
+For source relations, preserve:
+- evidence role;
+- claim fitness / inference scope.
+
+When geometry states are mixed, do not hoist one package-level geometry state across the release. Preserve per-target geometry state/role and unresolved/proxy warnings.
+
+**Reason:** Fresh Athens, Cairo, Tenochtitlan, Joseon, Zanzibar and British-India cases showed that a source may be decisive for one proposition but unfit for another, and that historically specific status terms cannot always be safely collapsed into one comparative category. The six cases still fit flat portable artifacts; platform expansion is not required.
+
+**Dependency rule:** source-version identity, locator and independence group remain mandatory. Claim fitness does not replace dependency tracking.
+
+**Complexity rule:** Do not respond by creating a universal taxonomy engine. Start with transparent term + mapping status/note and free-text claim-fitness semantics; normalize further only if repeated evidence warrants it.
+
+**Canonical effect:** none. v0.6.1 remains canonical; no database/schema migration or public release is authorized by this decision.

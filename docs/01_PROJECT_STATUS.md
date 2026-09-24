@@ -5,30 +5,35 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-24  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **PROJECT-FORM RECONCILED — portable evidence core + replaceable Atlas views; preservation/idle; no successor authorized**
+**Execution state:** **ACTIVE EVIDENCE HORIZON — #211 / EXP-03 heterogeneous evidence stress test; WIP 1**
 
 ## Current execution order
 
-There is no active delivery or discovery successor.
-
-Current resting form:
-- reviewed historical evidence core is portable;
-- PostgreSQL/PostGIS remains research/curation infrastructure;
-- immutable evidence packages are the preferred release/interchange boundary;
-- Atlas/map/table/API surfaces are replaceable presentation adapters;
-- v0.6.1 remains the canonical historical data release.
+Active:
+1. **#211 / EXP-03 — heterogeneous evidence stress test.**
 
 Completed:
 1. R1 — **HOLD_NO_RELEASE**.
 2. #205 / EXP-02 — **PORTABLE CORE SURVIVES + SIMPLIFY CANDIDATE**.
 3. #209 — project-form reassessment — **SIMPLIFY + PRESERVE ATLAS AS VIEW**.
 
+Project form remains:
+- reviewed historical evidence core is portable;
+- PostgreSQL/PostGIS remains research/curation infrastructure;
+- immutable evidence packages are the preferred release/interchange boundary;
+- Atlas/map/table/API surfaces are replaceable presentation adapters;
+- v0.6.1 remains the canonical historical data release.
+
+Execution policy:
+- WIP remains 1;
+- after a bounded horizon, choose the next discriminating research/discovery question by expected information gain;
+- elapsed time is not a scarce-resource stop rule;
+- evidence quality, focus and project complexity are the scarce resources;
+- prefer real historical/source research over meta-work when both can resolve the uncertainty;
+- stopping/simplifying/rejecting remain valid outcomes, but idle is not the default successor.
+
 Deferred:
 - #200 external expert audit; no recruitment/contact/participant execution.
-
-Do not open R2, a geometry programme, a feature queue, a schema migration or another internal experiment automatically.
-
-Current state is **preservation / idle** until a concrete reopen trigger appears.
 
 ## Project form after EXP-02
 

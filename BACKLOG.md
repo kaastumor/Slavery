@@ -9,114 +9,110 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# RESTING STATE — portable evidence core + replaceable Atlas views
+# ACTIVE EVIDENCE HORIZON — EXP-03 heterogeneous evidence stress test
 
-**Decisions:** D-081, D-083, D-084, D-085, D-086, D-087  
-**Current stage:** **PRESERVATION / IDLE — no active delivery or discovery successor**
+**Active issue:** #211  
+**Current stage:** **ACTIVE RESEARCH / DISCOVERY — WIP 1**
 
-The current best-supported project form is:
+The current project form remains:
 
 > **portable reviewed evidence core + replaceable Atlas/map/table/API views**
 
-## What is complete
+The execution policy has changed:
 
-- R1 — **HOLD_NO_RELEASE**;
-- EXP-02 — **PORTABLE CORE SURVIVES + SIMPLIFY CANDIDATE**;
-- project-form reassessment #209 — **SIMPLIFY + PRESERVE ATLAS AS VIEW**.
+> **Do not optimize for returning to idle. Optimize for evidence quality, focus, information gain and bounded project complexity.**
 
-## What this means
+Elapsed time is not treated as the scarce resource. A completed horizon should normally be followed by the highest-information bounded research/discovery question that can materially change belief about the evidence method, corpus or Atlas use.
 
-- PostgreSQL/PostGIS remains valid research/curation infrastructure;
-- immutable evidence packages are the preferred release/interchange boundary;
-- a map/web/API/table is a presentation adapter, not the owner of historical truth;
-- the project remains the Historical Slavery Atlas;
-- no canonical schema/data migration follows from EXP-02;
-- v0.6.1 remains canonical;
-- external-user value remains intentionally untested.
+Stopping, rejecting, simplifying and parking remain valid **results**. They are not the default scheduler.
 
-## No active successor
+## Active work — #211 / EXP-03
 
-Do **not** automatically start:
+Question:
 
-- R2;
-- global or tranche-based subject research;
-- geometry completion;
-- public-candidate publication;
-- frontend redesign;
-- portable-package productization;
-- schema simplification/migration;
-- new API/backend work;
-- search/graph/timeline/comparison features;
-- external recruitment or review;
-- another internal discovery experiment.
+> Does the portable evidence core survive fresh, structurally heterogeneous historical research with non-polity targets, mixed geometry states, category-translation pressure, law/practice divergence and network/territorial overlap?
 
-## Reopen triggers
+Frozen cases:
+1. Classical Athens, c. 400 BCE
+2. Mamluk Cairo, c. 1300 CE
+3. Tenochtitlan, c. 1500 CE
+4. Joseon Korea, c. 1700 CE
+5. Zanzibar Town / port, c. 1850 CE
+6. British India, 1843–1850 CE
 
-A bounded evaluation may be opened only when a concrete trigger appears, for example:
+Required outputs:
+- one research packet per case;
+- source/dependency register;
+- geometry-state note per case;
+- portability audit against EXP-02;
+- adversarial result;
+- explicit disposition.
 
-- an actual internal research/release task that the portable package cannot safely represent;
-- mixed resolved/unresolved geometry that invalidates the frozen-set simplification;
-- a real comparison/navigation task where an ordinary map/GIS view materially beats the table/register baseline;
-- a scale/reconstruction failure of the portable package;
-- explicit sponsor authorization for external/public-value testing;
-- a new systematic-coverage objective whose methodological question was not already answered by COV/R1.
+No canonical release/schema migration follows automatically.
 
-A trigger authorizes evaluation, not automatic implementation.
+## Continuation rule
 
-Durable project-form review: `docs/26_PROJECT_FORM_AFTER_EXP02.md`.
+After the active bounded horizon closes:
+
+1. reconcile the evidence;
+2. identify the most decision-relevant unresolved uncertainty;
+3. compare plausible next experiments by expected information gain;
+4. select **one** bounded successor (WIP 1);
+5. preregister its question, falsifier, evidence contract and complexity boundary;
+6. continue.
+
+Prefer real historical/source research over meta-work when both can answer the uncertainty.
+
+A no-work state is justified only when the next useful step is genuinely blocked by unavailable evidence/permissions, would violate project constraints, or no bounded experiment can materially change belief. “The previous horizon completed” is not itself a reason to idle.
+
+## Resource priority
+
+Optimize in this order:
+1. evidence quality;
+2. focus / question discipline;
+3. project complexity;
+4. only then execution convenience.
+
+Do **not** use elapsed research time alone as a stop criterion.
 
 ---
 
 # PARKED / trigger-bound operational debt
 
-These are not eligible autonomous work.
+These are not eligible while #211 is active unless they block it.
 
 ## #43 — protected staging / release-promotion administration
 
 Remaining protected environment / staging work matters only if production mutation or a new public release is again justified.
 
-Current controls intentionally reduce mutation:
-- production geometry promotion is manual/explicit;
-- current preview has static fallback;
-- no new production migration is authorized.
-
-Do not create paid staging or new credentials merely to close this issue.
-
 ## #26 — live Supabase migration-history reconciliation
 
-The documented live history mismatch remains real.
-
-Do not rewrite migration history casually. Reconcile it only before a future production migration/change actually requires that boundary.
+The documented live history mismatch remains real. Reconcile it only before a future production migration/change requires that boundary.
 
 ## Repository administration
 
-Not represented as a new issue/queue:
 - `main` currently reports unprotected;
-- approximately 100 historical remote topic branches remain;
-- current integration lacks the repository-admin capability needed for branch protection/bulk pruning.
+- historical remote topic branches remain;
+- current integration lacks some repository-admin capability.
 
-Handle when an admin-capable maintenance opportunity exists. Do not let it create a development horizon.
+Handle when it materially blocks evidence work; do not turn administration into the research horizon.
 
 ---
 
-# Explicitly NOT next
+# Explicitly NOT the current horizon
 
-Do not next start:
+Do not let proactive research become platform drift. #211 does **not** authorize:
 
 - M2 production schema migration;
-- bulk/global H2 evidence expansion;
-- bulk Cliopatria source-row → atlas identity publication;
-- another frontend redesign;
+- frontend redesign;
 - PMTiles/vector-tile infrastructure;
 - new search service;
 - graph database;
 - vector store/RAG infrastructure;
 - generic ontology/platform work;
-- generic digital-humanities research UI;
-- custom gazetteer/reconciliation service;
-- RDF/CIDOC/PROV infrastructure without a real consumer;
 - contributor/peer-review platform;
-- new monitoring/self-healing machinery;
-- new autonomous execution runway.
+- new autonomous infrastructure for its own sake;
+- external recruitment/review (still deferred by sponsor);
+- automatic canonical/public release.
 
-If the repository has no explicitly authorized issue after HC-003, **idle is the correct state**.
+The project should stay active through **bounded evidence work**, not through feature or infrastructure accumulation.

@@ -42,7 +42,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | A-004 | PostgreSQL/PostGIS is justified over files/spreadsheets for the working research/integrity system | survives with boundary | Time/spatial joins, provenance, release reconstruction and integrity are demonstrated. This does not prove that the public product needs an always-on database/API platform. |
 | A-005 | MapLibre + current API/GeoJSON delivery is sufficient at current scale | survives / freeze | It is sufficient for the existing non-canonical demonstration. Do not expand serving/render infrastructure until the thin-atlas value hypothesis is demonstrated. |
 | A-006 | The project can responsibly cover the present as well as antiquity | unproven / blocked for sensitive person-level expansion | Living-person/sensitive-data policy remains insufficient; do not let H2 modern expansion outrun this. |
-| A-007 | A serial issue-driven autonomous worker can create value without roadmap drift | survives only as a bounded gate mechanism / idle | M1/M2/H2 produced useful corrections, but H2 triggered the stop rule. No autonomous execution runway is justified in preservation state. |
+| A-007 | A serial issue-driven autonomous worker can create value without roadmap drift | survives with WIP=1 + information-gain selection | M1/M2/H2/COV/R1 repeatedly produced discriminating evidence. D-088 removes idle as the default successor while preserving bounded questions, adversarial gates and WIP=1. |
 | A-008 | The full interactive Atlas platform is the best form for the demonstrated contribution | rejected for active expansion | H2 did not show a repeatable material advantage for the corpus/method over a strong baseline, and the thin view did not materially beat the corpus in any case. Preserve existing artifacts; do not expand the platform. |
 | A-009 | A systematically assembled global historical coverage corpus may have value distinct from Atlas representation/UI | survives narrowly / scale economics unresolved | COV-001 found robust material value on 4/6 cross-cell tasks after adversarial downgrade, while specialist narrative and SlaveVoyages remained superior in their domains. The value lives in a flat coverage corpus, not Atlas infrastructure. |
 | A-010 | The value of the flat coverage corpus compounds faster than review/update burden as it scales | current row-by-row workflow not demonstrated; broader systematic-coverage economics remain open | COV-002 found persistent reuse and strong static compression, but its maintenance gate does not discriminate the economics of tiered/versioned/batch-curated coverage. ADV-001 limits the stop to the tested workflow. |
@@ -60,7 +60,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | R-004 | Governance/document drift | medium / controlled | Root backlog, gate issues, sanitation and health checks remained synchronized through M1; continue deleting stale state rather than adding parallel systems. |
 | R-005 | Public-repository leakage of secrets/private/sensitive source material or derivatives | high / controlled | SECURITY classification, .gitignore, sanitation, synthetic/public-safe CI fixtures. |
 | R-006 | Production/cloud dependence or outage erases public state | low-medium / controlled | Static release fallback and explicit release pointer preserve published preview state. Weekly liveness is enough; automatic cloud restart was retired. |
-| R-007 | Automation creates activity rather than evidence | medium / controlled | M1/M2 produced discriminating evidence, but HC-003 intentionally leaves no execution runway. Disabled/idle automation is the correct state. |
+| R-007 | Automation creates activity rather than evidence | medium / controlled | D-088 authorizes continuity only through one preregistered high-information experiment at a time. Evidence gained, not activity volume, is the progress metric; idle is not the default scheduler. |
 | R-008 | Branch/workflow/experiment accumulation increases cognitive load | medium / active | DVC and self-heal workflows were retired and duplicate main web build removed; ~100 historical remote branches still need admin-capable pruning. |
 | R-009 | Public preview is mistaken for canonical historical release | medium / controlled | explicit non-canonical release identity and immutable v0.6.1 baseline. |
 | R-010 | No repository license creates ambiguity if outside contribution/reuse begins | low / parked | Decide only when external contribution/distribution needs make it material. |
@@ -1447,3 +1447,105 @@ This is deliberate, not project abandonment.
 Reopen only when a concrete research/release, mixed-geometry, scale, navigation/comparison, systematic-coverage or sponsor-authorized external-value trigger appears.
 
 Durable reassessment: `docs/26_PROJECT_FORM_AFTER_EXP02.md`.
+
+
+## HC-024 — Reactivate continuous bounded evidence work — 2026-09-24
+
+**Decision:** **CONTINUE RESEARCH PROACTIVELY; REMOVE IDLE AS DEFAULT.**
+
+### Sponsor correction
+
+The prior preservation/idle posture over-weighted execution economy.
+
+For this project, elapsed time is not treated as the scarce resource. The scarce resources are:
+- evidence quality;
+- focus;
+- project complexity.
+
+This changes the execution policy without changing the historical methodology or D-087 project form.
+
+### What survives from HC-023 / D-087
+
+- portable reviewed evidence core remains the architectural center;
+- PostgreSQL/PostGIS remains research/curation infrastructure;
+- Atlas/map/table/API remain replaceable views;
+- v0.6.1 remains canonical;
+- no adapter may strengthen a reviewed historical claim;
+- external expert involvement remains deferred.
+
+### What changes
+
+The project no longer treats completion of a bounded horizon as a reason to return to preservation/idle.
+
+Default continuation is now:
+1. reconcile evidence;
+2. rank unresolved questions by expected information gain;
+3. select one bounded successor;
+4. preregister it;
+5. continue under WIP=1.
+
+A no-work state requires a real blocker or absence of a materially discriminating experiment.
+
+### Highest-information next horizon
+
+**#211 / EXP-03 heterogeneous evidence stress test.**
+
+Why:
+- EXP-02 used only 19 reviewed C1 rows;
+- all 77 frozen geometries were unresolved;
+- the portable-core result may therefore be overfit to one release shape;
+- fresh historical cases can test portability while also growing actual evidence.
+
+The six frozen cases deliberately stress:
+- polity/non-polity targets;
+- location versus inference extent;
+- law versus practice;
+- network versus territorial participation;
+- category translation;
+- archive-density differences;
+- mixed geometry states.
+
+### Complexity control
+
+No frontend, service, schema migration, canonical release, bulk geometry programme or external recruitment is authorized by EXP-03.
+
+**Health disposition:** CONTINUE.
+
+
+## HC-025 — EXP-03 heterogeneous evidence stress test — 2026-09-24
+
+**Decision:** **CORE REQUIRES EXTENSION; CONTINUE ACTIVE RESEARCH.**
+
+### Evidence gained
+
+Six fresh historical cases were researched across different periods, source traditions and target types.
+
+The portable form survived, but the EXP-02 minimum omitted two semantics that became material:
+- historical terminology/category mapping;
+- source role/claim fitness.
+
+Machine-readable output contains:
+- 6 targets;
+- 17 source relations;
+- 14 independence groups;
+- 3 repeated dependency groups.
+
+### What this changes
+
+The project no longer treats source role/claim fitness as disposable enrichment in the portable release contract.
+
+Historically specific categories such as tlacotli/tlatlacotin and nobi require explicit mapping state rather than silent normalization.
+
+### What this does not change
+
+- v0.6.1 remains canonical;
+- the database schema is not migrated;
+- no product/UI horizon is opened;
+- P0–P4 is not mechanically derived;
+- external review remains deferred.
+
+### Health disposition
+
+**CONTINUE.**
+
+Under D-088, complete #211 and choose the next WIP-1 experiment by expected information gain rather than returning to idle.

@@ -227,32 +227,33 @@ A view:
 
 ## 6. Current execution state
 
-**PRESERVATION / IDLE.**
+**ACTIVE EVIDENCE RESEARCH.**
 
-No active successor is justified after this reconciliation.
+D-088 supersedes only D-087's preservation/idle **execution consequence**. The project-form conclusion remains unchanged.
 
-Do not automatically start:
-- R2;
-- geometry completion;
-- web redesign;
-- API/backend migration;
-- portable-package productization;
-- schema simplification;
-- feature discovery;
-- external review.
+Current active horizon: **#211 / EXP-03 heterogeneous evidence stress test**.
 
-## 7. Reopen triggers
+The project should continue through bounded research/discovery rather than return to idle merely because a prior horizon completed. WIP remains 1.
 
-A new bounded horizon may be considered only when at least one concrete trigger appears, such as:
+## 7. Continuation and escalation rules
 
-- a real internal research/release task that the portable packet cannot safely represent;
-- a mixed-geometry release that invalidates the frozen-set geometry simplification;
-- a concrete comparison/navigation task where a map/GIS view beats the table/register baseline;
-- a scale/reconstruction failure of the portable package;
-- explicit sponsor authorization for external-user/public-value testing;
-- a new systematic-coverage objective with a preregistered methodological question not already answered by COV/R1.
+A bounded historical/methodological experiment does not require an external trigger merely to exist. After each horizon:
+- reconcile evidence;
+- choose the highest-information unresolved question;
+- preregister one successor;
+- continue if the experiment can materially change belief without unacceptable evidence-quality or complexity cost.
 
-A trigger authorizes evaluation, not automatic implementation.
+Elapsed time alone is not a stop criterion.
+
+Separate triggers are still required for:
+- canonical schema/data migration;
+- production/public release;
+- major infrastructure;
+- external recruitment/participant work;
+- sensitive modern-person data;
+- other scope changes with materially higher risk.
+
+Those triggers authorize evaluation, not automatic implementation.
 
 # Red-team conclusion
 
