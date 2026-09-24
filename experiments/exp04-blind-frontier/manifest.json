@@ -2,16 +2,17 @@
   "experiment": "EXP-04",
   "state": "partial_under_review",
   "canonical_effect": "none",
-  "reviewed_targets": 0,
+  "reviewed_targets": 1,
   "targets_under_review": 1,
-  "not_started": 7,
+  "not_started": 6,
   "base_commit": "5b95ed1c01d0401ab47a2b189b6b4a5668c27a3b",
   "files": {
     "00_PROTOCOL.md": "11ed831fcbe9297536b6c4c7029a8165d6ba694e256a7caaf36e2881f6b55482",
     "01_INDUS_2000BCE.md": "431d79e46ceb34b749b1e421f408f97e7a27b40ec6d349d579a6f0a3f5a8fab8",
-    "CHECKPOINT.md": "4fae6be83af8635ed798861976b764077d7c7040b40bb94582d8e6b5a6687f46",
+    "CHECKPOINT.md": "8b7eb31e4514c200a46e54cb86e550ae76e3fdc427a954d2296750737bcdb905",
     "sample.json": "a4a854352bc21504f6f7a2b4c03431d3bc376dbb2ced14357ecf81e1609f7d63",
-    "source_relations.csv": "d751c5f42dbc969b64701cb4a964f93809831d5550310b9be55d98a47978196c",
-    "targets_extended.csv": "167639e662ffb38fb88f29d374f6ce0a5d746743c6ce93704f22c35104e717f5"
+    "source_relations.csv": "9ec28e4bf833a2bfcac3015c7c69b0cd344118d346213b5d8430fbee55410791",
+    "targets_extended.csv": "c1d0bb0fd75409d012703f44c375ea2ecff82cc4a18c2fa1a66bc2eddcf297ec",
+    "02_SUMER_2000BCE.md": "275fd5a832c3fde1c97813f9fa758b99b3ce4ea6bc7e31f698e0059f8174e56f"
   }
 }
