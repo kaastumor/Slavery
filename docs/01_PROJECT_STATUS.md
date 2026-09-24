@@ -7,14 +7,15 @@ current CI override this snapshot.
 **Status date:** 2026-09-25  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **MODE TRANSITION — D-096; consolidation is next after merge**
+**Execution state:** **CONSOLIDATION RESULT READY — review/release is the next mode after merge**
 
 ## Current durable state
 
 - historical safeguards/methodology remain unchanged;
 - D-096 changes only continuation/governance: choose the next mode, not automatically another experiment;
-- DISC-09 is parked without a negative result;
-- next mode is cross-batch consolidation; exact current action is owned by `BACKLOG.md`;
+- DISC-09 remains parked without a negative result;
+- cross-batch consolidation now covers 41 unique targets across R1 and EXP-04/06/07/08;
+- consolidation disposition is **REVIEW_RELEASE_CANDIDATE**; exact current action is owned by `BACKLOG.md`;
 - EXP-08 remains open/paused after 3/4; Qi — 500 BCE remains frozen/unstarted.
 
 Recently completed:
@@ -36,12 +37,13 @@ Project form remains:
 - v0.6.1 remains the canonical historical data release.
 
 Execution policy:
-- WIP remains 1;
-- after a bounded horizon, choose the next discriminating research/discovery question by expected information gain;
-- elapsed time is not a scarce-resource stop rule;
-- evidence quality, focus and project complexity are the scarce resources;
-- prefer real historical/source research over meta-work when both can resolve the uncertainty;
-- stopping/simplifying/rejecting remain valid outcomes, but idle is not the default successor.
+- WIP remains 1 active priority;
+- after a bounded item, choose the next justified mode under D-096;
+- discovery is not the automatic successor to completion;
+- accepted methods may become operational for a declared scope;
+- review/reconciliation capacity constrains new intake;
+- elapsed time alone is not a stop rule;
+- no-work is valid when all useful modes are complete, unjustified or blocked.
 
 Deferred:
 - #200 external expert audit; no recruitment/contact/participant execution.
