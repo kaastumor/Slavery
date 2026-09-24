@@ -5,20 +5,26 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-24  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE EVIDENCE HORIZON — #213 / EXP-04 blind frontier tranche; WIP 1**
+**Execution state:** **ACTIVE EVIDENCE HORIZON — #232 / EXP-08 cross-frame historical evidence tranche; WIP 1**
 
 ## Current execution order
 
 Active:
-1. **#213 / EXP-04 — blind frontier tranche.** Indus under review; seven unstarted.
-   Resume the source/status reconciliation in the experiment checkpoint.
+1. **#232 / EXP-08 — cross-frame historical evidence tranche.** The four-target
+   sample is frozen and merged; subject research has not yet started. Begin with
+   Great Zimbabwe — 1400 under the frozen protocol.
    Discovery execution: `docs/discovery/DISCOVERY_EXECUTION.md`.
 
-Completed:
-1. #211 / EXP-03 — **CORE REQUIRES EXTENSION**, accepted as D-089.
-1. R1 — **HOLD_NO_RELEASE**.
-2. #205 / EXP-02 — **PORTABLE CORE SURVIVES + SIMPLIFY CANDIDATE**.
-3. #209 — project-form reassessment — **SIMPLIFY + PRESERVE ATLAS AS VIEW**.
+Recently completed:
+1. #229 / EXP-07 — **PASS WITH ONE HOLD**; 7 QUALIFIED_C1_READY, Kalabhra 500 CE held.
+2. #227–#228 / EXP-06 candidate gate — **PUBLISH_CANDIDATE**; non-canonical candidate only.
+3. #213 / EXP-04 — blind frontier tranche — completed.
+4. #211 / EXP-03 — **CORE REQUIRES EXTENSION**, accepted as D-089.
+
+Earlier durable milestones:
+- R1 — **HOLD_NO_RELEASE**.
+- #205 / EXP-02 — **PORTABLE CORE SURVIVES + SIMPLIFY CANDIDATE**.
+- #209 — project-form reassessment — **SIMPLIFY + PRESERVE ATLAS AS VIEW**.
 
 Project form remains:
 - reviewed historical evidence core is portable;

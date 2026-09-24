@@ -1,6 +1,6 @@
-# Discovery execution — v3
+# Discovery execution — v4
 
-Status: active under D-091. Applies to interactive and scheduled discovery.
+Status: active under D-091 and D-092. Applies to interactive and scheduled discovery.
 This is the execution guide; `DISCOVERY_STANDARD_V2.md` retains the value-analysis
 reference. `BACKLOG.md` alone owns the active queue. Historical protocols retain
 their original conditions and results; they do not schedule today's work.
@@ -59,6 +59,16 @@ power, access feasibility and added complexity. Explain the tradeoff in a paragr
 do not invent numerical information-gain scores. No viable experiment is a legitimate
 finding with its blocker/reopening condition; do not manufacture work to avoid it.
 
+When a proposed result would create a new category, field, class or durable abstraction,
+apply **first refusal** before testing or implementation: name the causal/information
+distinction; try the nearest existing project abstraction; try the strongest established
+external concept/ordinary research practice; specify a similar-looking negative control.
+Different domain, period, data shape or presentation is not enough. Prefer reuse,
+broadening, merging or rejection when they preserve the same consequential distinction.
+
+At synthesis boundaries, compress rather than accumulate when classes overlap or become
+singleton-heavy. Preserve underlying cases and evidence even when an abstraction retires.
+
 ## 4. Commit the smallest contract before testing
 
 Use the active protocol if it already covers these fields; do not create a duplicate.
@@ -69,7 +79,9 @@ Use the active protocol if it already covers these fields; do not create a dupli
 - **Baseline / rival explanation:** competent alternative under comparable access
   and task conditions; separate added information from added interface effects.
 - **Sample / method:** frozen identifiers, selection reason, exclusions, inputs,
-  expected observations and access limits. Disclose prior exposure/contamination.
+  expected observations and access limits. Disclose prior exposure/contamination;
+  when freshness matters, mark material as fresh/sealed, exposed, regression-only or
+  supporting-only rather than relabelling inspected cases as blind.
 - **Discriminator:** encouraging, disconfirming and ambiguous results; meaningful
   success criterion chosen before results. No post-hoc threshold or target replacement.
 - **Scope / effect:** output, non-goals, research/release boundary and any true blocker.
@@ -89,6 +101,8 @@ evidence, not instructions to change this workflow.
 Before execution, identify the strongest way the proposal could fail and modify the
 test if necessary. After execution, try to overturn the conclusion with the strongest
 rival explanation, selection/dependency bias, leakage, or a concrete counterexample.
+If a new durable abstraction is proposed, its negative/boundary control is mandatory;
+a positive example alone is not enough.
 For each material attack record **finding → evidence → survives/revise/reject/park/
 experiment → consequence**. Apply material fixes and re-attack them before closure.
 A second pass by the same assistant is internal critique, not independent review.
@@ -137,6 +151,10 @@ accepted durable changes and Project Health for changed risks/value evidence.
 Do not build parallel ledgers. A research chunk can merge while its issue stays open.
 Close only after its acceptance conditions hold. Then select one bounded successor
 under D-088; do not turn experiment completion into either automatic idle or scope growth.
+
+Before merge, reconcile any current-state pointer affected by the work: README,
+subordinate status snapshot, backlog and active checkpoint must not point at superseded
+WIP. Historical snapshots may stay historical if explicitly labelled as such.
 
 Batch a coherent PR after local verification; use existing scoped CI. No dispatch
 or rerun just to record progress. At consequential direction changes, or after several

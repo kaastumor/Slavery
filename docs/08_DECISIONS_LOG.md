@@ -1702,3 +1702,55 @@ public/canonical data. D-088 continuity and D-090 CI cost controls remain.
 Validation: `discovery/EXECUTION_REVIEW_2026-09-24.md` records internal scenario replay
 and its limitations. No measured 5.6 performance or external-user validation claimed.
 No historical ontology, frozen sample, schema or release change.
+
+## D-092 — Continuous inquiry requires abstraction first refusal, freshness discipline and reconciliation
+**Date:** 2026-09-24
+**Status:** accepted operating/methodology decision; sponsor-prioritized adaptation
+
+**Decision:** Strengthen D-088/D-091 without creating a parallel research framework.
+
+The project keeps continuous bounded inquiry, but adds four explicit controls:
+
+1. **Evidence before project identity.** Separate the historical/research problem,
+   project contribution, smallest justified project form and implementation. Existing
+   Atlas/corpus/software work receives no protection merely because it exists.
+2. **Abstraction first refusal.** Before a new category, field, class or durable
+   mechanism is adopted, identify the consequential causal/information distinction;
+   test the nearest existing project abstraction and strongest established external
+   concept/ordinary practice; require a meaningful negative boundary. Prefer reuse,
+   broadening, merging or rejection where they preserve the distinction.
+3. **Exposure/freshness discipline.** Material inspected during development is exposed.
+   Do not later describe it as fresh/blind evidence when the inference depends on
+   unseen evaluation material.
+4. **Compression + reconciliation.** Periodically reduce overlapping/singleton
+   abstractions while preserving evidence. At coherent batch boundaries reconcile
+   README/status/backlog/checkpoint pointers and merge from a clean canonical state.
+
+**Why now:** the sponsor supplied a generalized continuous-research method whose
+strongest applicable additions were first refusal, negative controls, freshness and
+compression. The repository already implemented continuous WIP=1 research, strong
+baselines, adversarial review and CI-cost controls. Duplicating the full external
+template would add governance without new control.
+
+The same review exposed a concrete governance-drift failure: current README/status/
+checkpoint pointers still referenced completed EXP-04 or the pre-merge EXP-08 freeze
+despite main already containing the merged EXP-08 protocol. The operating change must
+therefore repair current state immediately rather than remain aspirational.
+
+**Scope adaptation:** historical cases are not rejected because established scholarship
+already exists; specialist scholarship is expected to own historical interpretation.
+First refusal applies to **project abstractions and representation/method claims**.
+For historical evidence work, the analogous control is claim-specific terminology,
+counterevidence, boundary conditions and abstention.
+
+**Consequences:**
+- discovery execution guide becomes v4;
+- continuation prompt and autonomous worker inherit first-refusal/freshness/reconciliation controls;
+- active-state pointer consistency becomes part of done/merge discipline;
+- periodic abstraction compression is triggered by overlap/singletons, not by a fixed cadence;
+- no new project-management ledger is created.
+
+**No effect:** EXP-08 frozen sample, historical conclusions, canonical v0.6.1, database
+schema, ontology content, R1 reviewed states, public release and CI cadence remain
+unchanged.
+
