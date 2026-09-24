@@ -65,7 +65,7 @@ A missing claim must never be rendered as a historical negative.
 - R1 completed with **HOLD_NO_RELEASE**; its repaired candidate remains a frozen internal reference rather than a public/canonical promotion.
 - EXP-02 showed that the frozen R1 safety/reconstructibility contract survives in a portable package manifest + flat target/source tables + optional Markdown packets.
 - That portable form is an architectural/release-boundary result, **not** a canonical schema migration.
-- Current execution state is **active evidence research** under #232 / EXP-08. Its four-target sample is frozen and merged; Great Zimbabwe — 1400 is complete and Māori communities in Aotearoa — 1700 is the next sequential case. Preservation/idle is no longer the default successor state; after each bounded horizon the project selects the next highest-information research/discovery question while keeping WIP=1, evidence quality high and complexity bounded.
+- Current execution state is **active evidence research** under #232 / EXP-08. Its four-target sample is frozen and merged; Great Zimbabwe — 1400 and Māori communities in Aotearoa — 1700 are complete, and Nobatia — 500 CE is the next sequential case. Preservation/idle is no longer the default successor state; after each bounded horizon the project selects the next highest-information research/discovery question while keeping WIP=1, evidence quality high and complexity bounded.
 
 ## Active-continuity rule
 
