@@ -6,6 +6,8 @@ Build an interactive global historical atlas of slavery, slavery-like systems, c
 
 The atlas is an **evidence-synthesis and data-curation project**. It collects, normalizes, reconciles and digests existing historical evidence and specialist scholarship into transparent spatial-temporal claims.
 
+After R1 and EXP-02, the best-supported project form is a **portable reviewed evidence core with replaceable Atlas/map/table views**. The Atlas remains the project identity and a valid geographic inspection surface, but the web application does not own historical truth.
+
 It is not intended to function as an independent historical research institute or to generate novel historical theories where specialist scholarship already exists.
 
 The atlas must not reduce the question to a binary "slavery / no slavery" map. It must represent separate dimensions of evidence and keep uncertainty visible.
@@ -60,6 +62,10 @@ A missing claim must never be rendered as a historical negative.
 - `mvp-preview-ancient-v2` is an explicitly **non-canonical** public preview used to validate the end-to-end product path.
 - New manual research enters the normalized relational model directly and remains unpublished until it passes review and publication gates.
 - Research batches may expand reviewed database content without automatically changing the public preview or canonical data release.
+- R1 completed with **HOLD_NO_RELEASE**; its repaired candidate remains a frozen internal reference rather than a public/canonical promotion.
+- EXP-02 showed that the frozen R1 safety/reconstructibility contract survives in a portable package manifest + flat target/source tables + optional Markdown packets.
+- That portable form is an architectural/release-boundary result, **not** a canonical schema migration.
+- Current execution state is preservation/idle: no R2, feature queue, geometry-completion programme or external-user experiment is authorized automatically.
 
 ## Non-negotiable principles
 
