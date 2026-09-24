@@ -61,6 +61,67 @@ GEOMETRY_STATE_DEFINITIONS = [
 ]
 
 
+TEMPORAL_STATE_DEFINITIONS = [
+    {
+        "id": "supported_exact_cross_section",
+        "label": "Exact cross-section",
+        "description": "A dated cross-section directly supports the selected anchor. This still does not imply spatial/legal uniformity.",
+    },
+    {
+        "id": "supported_period_level",
+        "label": "Period-level support",
+        "description": "Evidence supports the historical period containing the anchor, not an event observed exactly in that year.",
+    },
+    {
+        "id": "supported_near_anchor_approximate",
+        "label": "Near-anchor / approximate",
+        "description": "Evidence is close enough to the anchor for bounded display only with an explicit approximate label.",
+    },
+    {
+        "id": "unknown",
+        "label": "Selected-year truth unknown",
+        "description": "The reviewed packet does not establish positive historical truth at the selected anchor.",
+    },
+    {
+        "id": "not_applicable_aggregate",
+        "label": "No single selected-year territorial state",
+        "description": "The frozen frame is an aggregate for which one territorial selected-year state would be misleading.",
+    },
+    {
+        "id": "unassessed_not_researched",
+        "label": "Unassessed · subject research not performed",
+        "description": "The target has a frozen research anchor, but no C1 subject packet exists. The anchor is a research frame, not historical truth.",
+    },
+]
+
+
+def source_year_from_anchor(anchor) -> int:
+    """Normalize candidate anchor display/native values to frozen source-year convention."""
+    if isinstance(anchor, int):
+        return anchor
+    if isinstance(anchor, str):
+        text = anchor.strip()
+        if text.endswith(" BCE"):
+            return -int(text[:-4].strip())
+        if text.endswith(" CE"):
+            return int(text[:-3].strip())
+        return int(text)
+    raise AssertionError(f"unsupported anchor value: {anchor!r}")
+
+
+def atlas_year_from_source(source_year: int) -> int:
+    """Convert frozen source-year BCE shorthand to astronomical Atlas internal year."""
+    return source_year + 1 if source_year < 0 else source_year
+
+
+def display_source_year(source_year: int) -> str:
+    if source_year < 0:
+        return f"{abs(source_year)} BCE"
+    if source_year > 0:
+        return f"{source_year} CE"
+    return "1 BCE (source-year zero is not a normal frozen anchor)"
+
+
 def overview_research_state(target: dict) -> str:
     state = target["release_research_state"]
     if state == "c1_review_complete":
@@ -152,6 +213,54 @@ def build() -> dict:
     }, f"overview research-state drift: {research_counts}"
     assert geometry_counts == {"unresolved_no_geometry": 77}, f"overview geometry-state drift: {geometry_counts}"
 
+    temporal_by_id = {row["target_id"]: row for row in temporal["rows"]}
+    temporal_targets = []
+    temporal_counts = {item["id"]: 0 for item in TEMPORAL_STATE_DEFINITIONS}
+    anchor_rows = {}
+    for target in targets:
+        tid = target["target_id"]
+        source_year = source_year_from_anchor(target["anchor"])
+        atlas_year = atlas_year_from_source(source_year)
+        anchor_rows[source_year] = {
+            "source_year": source_year,
+            "atlas_internal_year": atlas_year,
+            "display": display_source_year(source_year),
+        }
+        annotation = temporal_by_id.get(tid)
+        if target["release_research_state"] == "c1_review_complete":
+            assert annotation is not None, f"reviewed target lacks temporal annotation: {tid}"
+            state = annotation["state"]
+            display_rule = annotation["display_rule"]
+        else:
+            assert annotation is None, f"unreviewed target unexpectedly has reviewed temporal annotation: {tid}"
+            state = "unassessed_not_researched"
+            display_rule = "Frozen research anchor only; no subject-time inference because C1 subject research was not performed."
+        assert state in temporal_counts, f"unknown temporal state: {state}"
+        temporal_counts[state] += 1
+        temporal_targets.append(
+            {
+                "target_id": tid,
+                "source_year": source_year,
+                "atlas_internal_year": atlas_year,
+                "display_anchor": display_source_year(source_year),
+                "state": state,
+                "display_rule": display_rule,
+            }
+        )
+
+    assert temporal_counts == {
+        "supported_exact_cross_section": 1,
+        "supported_period_level": 3,
+        "supported_near_anchor_approximate": 1,
+        "unknown": 13,
+        "not_applicable_aggregate": 1,
+        "unassessed_not_researched": 58,
+    }, f"temporal-state drift: {temporal_counts}"
+    assert source_year_from_anchor(-500) == -500
+    assert atlas_year_from_source(-500) == -499
+    assert atlas_year_from_source(-1) == 0
+    assert display_source_year(-500) == "500 BCE"
+
     pinned = {item["path"]: item["blob_sha"] for item in manifest["immutable_inputs"]}
     for key in ("c1_tranche_01", "c1_tranche_02", "c1_tranche_03"):
         path = INPUTS[key]
@@ -178,6 +287,15 @@ def build() -> dict:
                 for definition in GEOMETRY_STATE_DEFINITIONS
             ],
             "targets": overview_targets,
+        },
+        "temporal_navigation": {
+            "rule": "Navigation uses discrete frozen research anchors. Temporal support precision comes from the R1.6 render annotation, never from slider position alone.",
+            "states": [
+                {**definition, "count": temporal_counts[definition["id"]]}
+                for definition in TEMPORAL_STATE_DEFINITIONS
+            ],
+            "anchors": [anchor_rows[key] for key in sorted(anchor_rows)],
+            "targets": temporal_targets,
         },
         "targets": targets,
         "reviewed_c1": rows,

@@ -65,6 +65,21 @@ type GeometryRow = {
   representation_note?: string | null;
 };
 
+type TemporalTarget = {
+  target_id: string;
+  source_year: number;
+  atlas_internal_year: number;
+  display_anchor: string;
+  state: string;
+  display_rule: string;
+};
+
+type TemporalAnchor = {
+  source_year: number;
+  atlas_internal_year: number;
+  display: string;
+};
+
 type CandidateBundle = {
   schema: string;
   candidate_id: string;
@@ -78,6 +93,12 @@ type CandidateBundle = {
     research_states: OverviewState[];
     geometry_states: OverviewState[];
     targets: Array<{ target_id: string; research_state: string; geometry_state: string }>;
+  };
+  temporal_navigation: {
+    rule: string;
+    states: OverviewState[];
+    anchors: TemporalAnchor[];
+    targets: TemporalTarget[];
   };
   targets: CandidateTarget[];
   reviewed_c1: ReviewedC1[];
@@ -104,6 +125,8 @@ const fitActiveButton = document.querySelector<HTMLButtonElement>("#fit-active")
 const researchStateLegend = document.querySelector<HTMLElement>("#research-state-legend")!;
 const geometryStateLegend = document.querySelector<HTMLElement>("#geometry-state-legend")!;
 
+let currentAnchorYear: number | null = null;
+
 const map = new Map({
   container: "map",
   style: { version: 8, sources: {}, layers: [{ id: "background", type: "background", paint: { "background-color": "#cfdcdf" } }] },
@@ -113,12 +136,6 @@ map.addControl(new NavigationControl({ showCompass: false }), "top-left");
 
 function escapeHtml(value: unknown): string {
   return String(value ?? "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" })[char]!);
-}
-
-function formatYear(value: string | number): string {
-  const year = typeof value === "number" ? value : /^-?\d+$/.test(value) ? Number(value) : Number.NaN;
-  if (!Number.isFinite(year)) return String(value);
-  return year <= 0 ? `${1 - year} BCE` : `${year} CE`;
 }
 
 function validateCandidate(value: unknown): CandidateBundle {
@@ -144,6 +161,14 @@ function validateCandidate(value: unknown): CandidateBundle {
   if (!candidate.geometry_manifest || !Array.isArray(candidate.geometry_manifest.rows) || candidate.geometry_manifest.rows.length !== candidate.counts.targets) {
     throw new Error("Candidate geometry manifest is missing or incomplete");
   }
+  if (!candidate.temporal_navigation || !Array.isArray(candidate.temporal_navigation.anchors) || !candidate.temporal_navigation.anchors.length) {
+    throw new Error("Candidate temporal navigation anchors are missing");
+  }
+  if (!Array.isArray(candidate.temporal_navigation.targets) || candidate.temporal_navigation.targets.length !== candidate.counts.targets) {
+    throw new Error("Candidate temporal target guards are incomplete");
+  }
+  const temporalStateTotal = candidate.temporal_navigation.states.reduce((sum, item) => sum + Number(item.count || 0), 0);
+  if (temporalStateTotal !== candidate.counts.targets) throw new Error("Candidate temporal state counts do not cover all targets");
   return candidate as CandidateBundle;
 }
 
@@ -179,6 +204,16 @@ function geometryFor(candidate: CandidateBundle, targetId: string): GeometryRow 
   return candidate.geometry_manifest.rows.find((row) => row.target_id === targetId);
 }
 
+function temporalFor(candidate: CandidateBundle, targetId: string): TemporalTarget | undefined {
+  return candidate.temporal_navigation.targets.find((row) => row.target_id === targetId);
+}
+
+function temporalLabel(candidate: CandidateBundle, targetId: string): string {
+  const temporal = temporalFor(candidate, targetId);
+  const definition = candidate.temporal_navigation.states.find((item) => item.id === temporal?.state);
+  return definition?.label ?? "Temporal state unknown";
+}
+
 function renderSource(source: ReviewedSource): string {
   const title = escapeHtml(source.title || source.source_version_ref);
   const linkedTitle = source.url
@@ -206,40 +241,46 @@ function bindRegisterButtons(candidate: CandidateBundle): void {
   });
 }
 
-function renderRegister(candidate: CandidateBundle): string {
-  const ordered = [...candidate.targets].sort((a, b) => {
-    const aYear = Number(a.anchor);
-    const bYear = Number(b.anchor);
-    if (Number.isFinite(aYear) && Number.isFinite(bYear) && aYear !== bYear) return aYear - bYear;
-    return a.target_label.localeCompare(b.target_label);
-  });
+function visibleTargets(candidate: CandidateBundle): CandidateTarget[] {
+  if (currentAnchorYear === null) return candidate.targets;
+  const visibleIds = new Set(
+    candidate.temporal_navigation.targets
+      .filter((row) => row.source_year === currentAnchorYear)
+      .map((row) => row.target_id),
+  );
+  return candidate.targets.filter((target) => visibleIds.has(target.target_id));
+}
 
+function renderRegister(candidate: CandidateBundle): string {
+  const ordered = visibleTargets(candidate).sort((a, b) => a.target_label.localeCompare(b.target_label));
   return ordered.map((target) => {
     const geometry = geometryFor(candidate, target.target_id);
+    const temporal = temporalFor(candidate, target.target_id);
     return `
       <button class="place-card" type="button" data-target-id="${escapeHtml(target.target_id)}" aria-label="Open evidence record for ${escapeHtml(target.target_label)}">
         <span class="place-card-top">
           <span class="place-card-name">${escapeHtml(target.target_label)}</span>
-          <span class="place-card-level">${escapeHtml(formatYear(target.anchor))}</span>
+          <span class="place-card-level">${escapeHtml(temporal?.display_anchor ?? String(target.anchor))}</span>
         </span>
-        <span class="place-card-meta">${escapeHtml(stateLabel(candidate, target.target_id))} · geometry: ${escapeHtml(geometry?.representation_state ?? "unknown")}</span>
+        <span class="place-card-meta">${escapeHtml(stateLabel(candidate, target.target_id))} · ${escapeHtml(temporalLabel(candidate, target.target_id))} · geometry: ${escapeHtml(geometry?.representation_state ?? "unknown")}</span>
       </button>`;
   }).join("");
 }
 
+function currentAnchor(candidate: CandidateBundle): TemporalAnchor {
+  return candidate.temporal_navigation.anchors.find((anchor) => anchor.source_year === currentAnchorYear)
+    ?? candidate.temporal_navigation.anchors.at(-1)!;
+}
+
 function renderCandidate(candidate: CandidateBundle): void {
-  const anchors = [...new Set(candidate.targets.map((target) => Number(target.anchor)).filter(Number.isFinite))].sort((a, b) => a - b);
-  const min = anchors[0] ?? -2000;
-  const max = anchors.at(-1) ?? 1800;
-  slider.min = String(min); slider.max = String(max); slider.value = String(max);
-  yearLabel.value = formatYear(max); yearLabel.textContent = formatYear(max);
-  timelineRange.innerHTML = `<span>${formatYear(min)}</span><span>${formatYear(max)}</span>`;
+  const selectedAnchor = currentAnchor(candidate);
+  const visibleCount = visibleTargets(candidate).length;
 
   releaseBadge.textContent = `${candidate.candidate_id} · candidate · non-canonical · internally reviewed`;
   releaseBadge.classList.add("preview");
   releaseBadge.title = `Canonical historical release remains ${candidate.canonical_historical_release}; review is internal adversarial review, not independent review.`;
   const unresolvedGeometry = candidate.overview_semantics.geometry_states.find((state) => state.id === "unresolved_no_geometry")?.count ?? 0;
-  status.textContent = `${candidate.counts.targets} frozen targets · ${candidate.counts.reviewed_c1} reviewed · ${unresolvedGeometry} geometry unresolved`;
+  status.textContent = `${visibleCount} frozen targets at ${selectedAnchor.display} · ${candidate.counts.reviewed_c1} reviewed total · ${unresolvedGeometry} geometry unresolved`;
 
   researchStateLegend.innerHTML = renderStateLegend(candidate.overview_semantics.research_states);
   geometryStateLegend.innerHTML = renderStateLegend(candidate.overview_semantics.geometry_states);
@@ -248,16 +289,17 @@ function renderCandidate(candidate: CandidateBundle): void {
   const geometryCards = candidate.overview_semantics.geometry_states.map(renderOverviewCard).join("");
   panel.innerHTML = `
     <div class="panel-header">
-      <div class="panel-kicker">R1 MVP candidate</div>
+      <div class="panel-kicker">R1 MVP candidate · frozen anchor ${escapeHtml(selectedAnchor.display)}</div>
       <h2>Evidence register</h2>
-      <div class="panel-subhead">Static/read-only candidate data. Research state is not historical presence, absence or intensity.</div>
+      <div class="panel-subhead">Anchor navigation is discrete. The selected anchor does not imply exact-year truth; reviewed records show their own temporal support precision.</div>
     </div>
     <div class="panel-body">
       <div class="overview-stats">
         <span><strong>${escapeHtml(candidate.counts.targets)}</strong><br>frozen targets</span>
         <span><strong>${escapeHtml(candidate.counts.reviewed_c1)}</strong><br>reviewed C1</span>
+        <span><strong>${escapeHtml(visibleCount)}</strong><br>at this anchor</span>
       </div>
-      <p class="method-note">${escapeHtml(candidate.overview_semantics.rule)}</p>
+      <p class="method-note">${escapeHtml(candidate.temporal_navigation.rule)}</p>
       <section aria-labelledby="research-state-heading">
         <h3 id="research-state-heading" class="overview-heading">Research coverage</h3>
         <div class="state-grid">${researchCards}</div>
@@ -268,8 +310,8 @@ function renderCandidate(candidate: CandidateBundle): void {
       </section>
       <div class="empty-state map-truth-note"><strong>Map boundary:</strong> no unresolved target is drawn as historical territory. Neutral world land stays visible, and geometry availability does not alter any historical claim.</div>
       <section class="register-section" aria-labelledby="register-heading">
-        <h3 id="register-heading" class="overview-heading">Frozen target register</h3>
-        <p class="method-note">Open a target to inspect its permitted evidence/research state. Unresearched and held targets intentionally expose less information.</p>
+        <h3 id="register-heading" class="overview-heading">Frozen target register · ${escapeHtml(selectedAnchor.display)}</h3>
+        <p class="method-note">Only targets sampled at this frozen research anchor are listed. Open a target to inspect its temporal precision and permitted evidence/research state.</p>
         <div class="place-list">${renderRegister(candidate)}</div>
       </section>
       <p class="source-meta">${escapeHtml(candidate.non_absence_rule)}</p>
@@ -282,7 +324,17 @@ function renderTargetDetail(candidate: CandidateBundle, targetId: string): void 
   if (!target) return;
   const reviewed = candidate.reviewed_c1.find((item) => item.target_id === targetId);
   const geometry = geometryFor(candidate, targetId);
+  const temporal = temporalFor(candidate, targetId);
   const researchLabel = stateLabel(candidate, targetId);
+  const timeLabel = temporalLabel(candidate, targetId);
+
+  const temporalBlock = `
+    <div class="claim-card temporal-card" data-temporal-state="${escapeHtml(temporal?.state ?? "unknown")}">
+      <div class="evidence-title">Temporal rendering guard</div>
+      <div class="temporal-state-label">${escapeHtml(timeLabel)}</div>
+      <p class="claim-summary">${escapeHtml(temporal?.display_rule ?? "No temporal display rule is available.")}</p>
+      ${temporal ? `<div class="source-meta">Frozen source anchor: ${escapeHtml(temporal.display_anchor)} · Atlas astronomical internal year: ${escapeHtml(temporal.atlas_internal_year)}</div>` : ""}
+    </div>`;
 
   const geometryBlock = `
     <details class="geometry-details">
@@ -301,9 +353,10 @@ function renderTargetDetail(candidate: CandidateBundle, targetId: string): void 
         <button class="back-button" id="register-back" type="button">← Back to register</button>
         <div class="panel-kicker">Research-state record · no subject claim</div>
         <h2>${escapeHtml(target.target_label)}</h2>
-        <div class="panel-subhead">${escapeHtml(formatYear(target.anchor))} · ${escapeHtml(researchLabel)}</div>
+        <div class="panel-subhead">${escapeHtml(temporal?.display_anchor ?? String(target.anchor))} · ${escapeHtml(researchLabel)}</div>
       </div>
       <div class="panel-body">
+        ${temporalBlock}
         <div class="claim-card">
           <div class="evidence-title">Permitted interpretation</div>
           <p class="claim-summary">${escapeHtml(target.interpretation)}</p>
@@ -313,7 +366,7 @@ function renderTargetDetail(candidate: CandidateBundle, targetId: string): void 
           <div><div class="evidence-title">Frame</div><p class="detail-text">${escapeHtml(target.effective_frame_class ?? "not recorded")}</p></div>
         </div>
         ${target.identity_limitation ? `<div class="claim-card"><div class="evidence-title">Identity / frame limitation</div><p class="claim-summary">${escapeHtml(target.identity_limitation)}</p></div>` : ""}
-        <div class="empty-state nonabsence-note"><strong>No historical absence inference.</strong><br>This target has no reviewed C1 subject packet in the candidate. Its research state must not be rendered as evidence that slavery/coercion was absent.</div>
+        <div class="empty-state nonabsence-note"><strong>No historical absence inference.</strong><br>This target has no reviewed C1 subject packet in the candidate. Its frozen anchor is a research frame only.</div>
         ${geometryBlock}
         <div class="release-inline">Candidate / non-canonical. No independent historical review is claimed.</div>
       </div>`;
@@ -329,9 +382,10 @@ function renderTargetDetail(candidate: CandidateBundle, targetId: string): void 
         <button class="back-button" id="register-back" type="button">← Back to register</button>
         <div class="panel-kicker">Reviewed C1 evidence record</div>
         <h2>${escapeHtml(reviewed.target_label)}</h2>
-        <div class="panel-subhead">${escapeHtml(formatYear(reviewed.anchor))} · ${escapeHtml(researchLabel)} · ${escapeHtml(reviewed.classification_outcome)}</div>
+        <div class="panel-subhead">${escapeHtml(temporal?.display_anchor ?? String(reviewed.anchor))} · ${escapeHtml(researchLabel)} · ${escapeHtml(reviewed.classification_outcome)}</div>
       </div>
       <div class="panel-body">
+        ${temporalBlock}
         <div class="claim-card">
           <div class="evidence-title">Strongest bounded proposition</div>
           <p class="claim-summary">${escapeHtml(reviewed.bounded_proposition)}</p>
@@ -364,14 +418,56 @@ function renderTargetDetail(candidate: CandidateBundle, targetId: string): void 
   panel.focus();
 }
 
+function requestedAnchorYear(): number | null {
+  const raw = new URL(window.location.href).searchParams.get("year");
+  if (raw === null || !/^-?\d+$/.test(raw)) return null;
+  return Number(raw);
+}
+
+function updateAnchorUrl(sourceYear: number): void {
+  const url = new URL(window.location.href);
+  url.searchParams.set("year", String(sourceYear));
+  window.history.replaceState({ ...window.history.state, atlasSourceYear: sourceYear }, "", url);
+}
+
+function selectAnchor(candidate: CandidateBundle, index: number, writeUrl: boolean): void {
+  const boundedIndex = Math.min(candidate.temporal_navigation.anchors.length - 1, Math.max(0, Math.round(index)));
+  const anchor = candidate.temporal_navigation.anchors[boundedIndex];
+  currentAnchorYear = anchor.source_year;
+  slider.value = String(boundedIndex);
+  yearLabel.value = anchor.display;
+  yearLabel.textContent = anchor.display;
+  if (writeUrl) updateAnchorUrl(anchor.source_year);
+  renderCandidate(candidate);
+}
+
+function initializeTimeline(candidate: CandidateBundle): void {
+  const anchors = candidate.temporal_navigation.anchors;
+  slider.min = "0";
+  slider.max = String(anchors.length - 1);
+  slider.step = "1";
+  timelineRange.innerHTML = `<span>${escapeHtml(anchors[0].display)}</span><span>${escapeHtml(anchors.at(-1)!.display)}</span>`;
+
+  const requested = requestedAnchorYear();
+  const requestedIndex = requested === null ? -1 : anchors.findIndex((anchor) => anchor.source_year === requested);
+  const initialIndex = requestedIndex >= 0 ? requestedIndex : anchors.length - 1;
+  selectAnchor(candidate, initialIndex, requestedIndex < 0);
+
+  slider.addEventListener("input", () => selectAnchor(candidate, Number(slider.value), true));
+  window.addEventListener("popstate", () => {
+    const year = requestedAnchorYear();
+    const index = year === null ? -1 : anchors.findIndex((anchor) => anchor.source_year === year);
+    if (index >= 0) selectAnchor(candidate, index, false);
+  });
+}
+
 async function boot(): Promise<void> {
   try {
     const [candidate] = await Promise.all([loadCandidate(), new Promise<void>((resolve) => map.once("load", () => resolve()))]);
     map.addSource("neutral-land", { type: "geojson", data: LAND_URL });
     map.addLayer({ id: "neutral-land-fill", type: "fill", source: "neutral-land", paint: { "fill-color": "#eee8dc", "fill-opacity": 1 } });
     map.addLayer({ id: "neutral-land-line", type: "line", source: "neutral-land", paint: { "line-color": "#777e78", "line-width": 0.75 } });
-    renderCandidate(candidate);
-    slider.addEventListener("input", () => { yearLabel.value = formatYear(Number(slider.value)); yearLabel.textContent = yearLabel.value; });
+    initializeTimeline(candidate);
     fitWorldButton.addEventListener("click", () => map.easeTo({ center: [15, 24], zoom: 1.35, duration: 420 }));
     fitActiveButton.disabled = true;
     fitActiveButton.title = "No reviewed target geometry is materialized; unresolved targets are not drawn as territory";
