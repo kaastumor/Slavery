@@ -25,13 +25,18 @@ The production MVP is a static Vite build deployed through GitHub Pages.
 
 The Vite base is relative so the same artifact can be hosted at a GitHub Pages project path, a custom domain, Cloudflare Pages, Netlify, Vercel, or another ordinary static host without rebuilding the frontend architecture.
 
-## Run locally
+## Reproducible build
 
-From `web/`:
+CI and local verification use the Node.js 22 release line with the npm version bundled by that runtime. The `Web MVP` workflow prints the exact resolved `node --version` and `npm --version` values for every verification run.
+
+From `web/`, install only from the committed dependency graph:
 
 1. `npm ci`
-2. `npm run dev`
-3. optionally set `VITE_ATLAS_API_URL` to another compatible API
+2. `npm run build`
+3. `npm run dev` when an interactive local server is needed
+4. optionally set `VITE_ATLAS_API_URL` to another compatible API
+
+`package-lock.json` is the dependency-resolution source for clean installs. CI deliberately does not regenerate it: package/lock drift must fail instead of being repaired implicitly.
 
 ## MVP behavior
 
