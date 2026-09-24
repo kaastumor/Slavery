@@ -31,7 +31,8 @@ class R1MVPOverviewTests(unittest.TestCase):
         )
         self.assertEqual(sum(counts.values()), 77)
         self.assertNotIn("P1", self.semantics["rule"])
-        self.assertIn("not a historical intensity", self.semantics["rule"])
+        self.assertIn("historical intensity", self.semantics["rule"])
+        self.assertIn("absence scale", self.semantics["rule"])
 
     def test_every_frozen_target_has_exactly_one_overview_state(self):
         self.assertEqual(len(self.overview_by_id), 77)
