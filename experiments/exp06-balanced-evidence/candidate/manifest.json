@@ -1,0 +1,73 @@
+{
+  "candidate_id": "exp06-candidate-v1",
+  "candidate_status": "noncanonical_pending_publish_hold_rework_gate",
+  "source_historical_commit": "16906affed159722cf940e6723401c7ab4e5d9f4",
+  "canonical_historical_release": "v0.6.1",
+  "created_date": "2026-09-24",
+  "counts": {
+    "targets": 6,
+    "researched_bounded": 3,
+    "researched_inconclusive": 1,
+    "under_review": 2,
+    "independently_reviewed": 0,
+    "source_relations": 36
+  },
+  "release_effect": {
+    "canonical_release_change": false,
+    "r1_review_state_change": false,
+    "p_level_assignment": false,
+    "historical_geometry_promotion": false,
+    "database_or_api_change": false
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "d9ac684851e0f0a2bd6b6e00bdbe3b6e49f5e48997f7aced54cdb55b074e6910",
+      "role": "candidate_readme"
+    },
+    {
+      "path": "QC_SUMMARY.md",
+      "sha256": "9823ccb9eab8555ea176ec08882664e7d052a9a5e3053a0e666458175a1b82d8",
+      "role": "qc_summary"
+    },
+    {
+      "path": "UNRESOLVED_ISSUES.md",
+      "sha256": "ab88bfe394a1bdb9e166698b9fff8411573e39124dba506c994f1d83d3077cd3",
+      "role": "unresolved_issues"
+    },
+    {
+      "path": "targets_extended.csv",
+      "sha256": "2993bf86f2e6904fd36611a020c3796c8de921d8654e9459150603bef54f1978",
+      "role": "portable_targets"
+    },
+    {
+      "path": "source_relations.csv",
+      "sha256": "97c0b7a3458817d379055c4d9afaad936e201261f325830e7832129eceac45db",
+      "role": "portable_source_relations"
+    },
+    {
+      "path": "../RESULT.md",
+      "sha256": "e0687e1bdc57a87a7df6078ba4f7884aa8da451da7f666d0c2f6d4facd0049e7",
+      "role": "research_result"
+    },
+    {
+      "path": "../CHECKPOINT.md",
+      "sha256": "ffd37fc3d30d651eb5a9332a9e0cfc263a7ba3b677ef7624eecc178bf3e8d21e",
+      "role": "research_checkpoint"
+    },
+    {
+      "path": "../../../web/public/data/exp06-candidate.json",
+      "sha256": "89a958c5ff0c4f45cbebfc669b4f4ec325c9b48c58c2fc9fa2bba23cca14b3d3",
+      "role": "browser_candidate_bundle"
+    }
+  ],
+  "review_gate": {
+    "issue": 227,
+    "allowed_dispositions": [
+      "PUBLISH_CANDIDATE",
+      "HOLD_NO_RELEASE",
+      "REWORK"
+    ],
+    "current_disposition": null
+  }
+}
