@@ -1327,3 +1327,46 @@ This is the crystallized surviving core of the Historical Slavery Atlas.
 - `programmes/r1/r1_temporal_render_annotations.json`
 - `programmes/r1/r1_release_qc_unresolved.json`
 - `programmes/r1/validate_r1_release_qc.py`
+
+
+## D-081 — Accept technical MVP candidate; open discovery lane; keep R1.8 publication explicit
+**Date:** 2026-09-24  
+**Status:** accepted product/release checkpoint decision
+
+**Decision:** Accept R1.7 / MVP v0.1 as **TECHNICAL_MVP_CANDIDATE**.
+
+The candidate is:
+> deterministic R1 evidence bundle + neutral world map + explicit research/geometry states + compact evidence register + discrete temporal guards.
+
+This decision closes technical MVP delivery but does **not** canonicalize or publicly publish the R1 candidate.
+
+**Evidence:**
+- #175–#181 merged through green Web MVP + foundation CI gates;
+- locked frontend dependency graph;
+- deterministic 77-target / 19-reviewed static candidate;
+- no live evidence API or database needed for core historical evidence;
+- all target geometry explicit, currently 77/77 unresolved rather than guessed;
+- research-state semantics preserve inconclusive/unresearched/held/C0 != absence;
+- reviewed details expose proposition, abstention, locus/extent, source/version/dependency, review and access limits;
+- discrete temporal anchors consume R1.6 render guards;
+- source-native BCE and Atlas astronomical internal years are separated correctly;
+- technical gate regression suite covers static boundary, accessibility semantics and deterministic reconstruction.
+
+**Explicit limitations:**
+- all historical target geometry unresolved;
+- external neutral-land asset remains a runtime static dependency;
+- no independent historical review;
+- uneven language/access coverage;
+- sponsor/browser usability acceptance pending;
+- current public preview remains legacy/non-canonical;
+- v0.6.1 remains canonical.
+
+**Consequences:**
+- MVP delivery queue #175–#182 is complete;
+- subject-research stop remains in force;
+- post-MVP discovery #184–#187 may run as evidence-only experiments;
+- discovery cannot directly authorize implementation;
+- next release decision is R1.8 **PUBLISH / HOLD / REWORK** after sponsor usability review;
+- no backend/platform expansion is earned.
+
+**Durable gate:** `docs/mvp/v0.1-release-check.md`.
