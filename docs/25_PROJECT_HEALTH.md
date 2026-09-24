@@ -1656,3 +1656,25 @@ No schema, ontology, methodology or canonical-release change follows. v0.6.1 rem
 canonical. External demand/adoption remains untested.
 
 Health disposition: **CONTINUE — HISTORICAL EVIDENCE, NOT APP EXPANSION.**
+
+## HC-029 — EXP-06 balanced evidence-growth tranche — 2026-09-24
+
+**Decision:** **CONTINUE HISTORICAL EVIDENCE GROWTH; NO CONTRACT OR APP EXPANSION.**
+
+EXP-06 researched six already-QA-ready frozen R1 targets chosen to reduce documentation-density/Atlantic bias while testing polity, aggregate, network and community frames.
+
+Results:
+- Chámpa 500: bounded fifth-century status/coercion evidence, but frozen polity identity remains under review;
+- Magadha–Haryanka 500 BCE: early-Magadhan/mid-first-millennium slavery context supported, exact dynastic anchor under review;
+- Later Maya 1300: Mayapán positive captive/slave-sale locus; aggregate-wide uniformity withheld;
+- Mongol Yam 1300: compulsory relay-household labor supported as coerced service, distinct from slavery;
+- Yaghan 1800: internal practice researched-inconclusive; external/intergroup captivity remains directional context;
+- Khmer Empire 1300: Zhou Daguan 1296–1297 independently supports household slavery at Angkor capital/core; polity-wide extent withheld.
+
+Portable output contains 6 target rows and 36 source-relation rows. The contract preserved target-frame uncertainty, chronology limits, aggregate member-loci, coerced-service/slave-status separation, external/internal coercion, dependency and prevalence abstention without another field extension.
+
+No target is treated as absence. No P-level, geometry promotion, R1 reviewed-state mutation, schema/API/database change, frontend expansion or canonical release follows. v0.6.1 remains canonical.
+
+Most important project lesson: **evidence presence and representational scope must remain separable**. In several cases the evidence is stronger than the exact territorial/dynastic object available at the anchor.
+
+Health disposition: **CONTINUE — SELECT NEXT BOUNDED HISTORICAL TRANCHE BY INFORMATION GAIN.**

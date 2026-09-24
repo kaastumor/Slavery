@@ -9,61 +9,38 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# EXP-05 CLOSURE CANDIDATE — thin-view discrimination
+# EXP-06 CLOSURE CANDIDATE — balanced evidence growth
 
-**Active issue:** #223  
-**Current stage:** CLOSURE CANDIDATE — final PR cleanup/checks
+**Active issue:** #225
+**Current stage:** CLOSURE CANDIDATE — one coherent PR / scoped CI
 
-#221 / the EXP-04 Research Preview is live and received sponsor first-look browser
-acceptance. That acceptance is lightweight usability evidence, not external demand or
-independent historical validation.
-
-The current decision-relevant uncertainty is whether the **thin Atlas view materially
-improves difficult comparative work** over:
-- A: ordinary case packets + source notes;
-- B: the portable evidence package without the map;
-- C: the live map + table preview.
-
-Frozen protocol: `experiments/exp05-thin-view-value/00_PROTOCOL.md`.
-
-Three tasks are preregistered:
-1. temporal + spatial truth;
-2. external/network versus territorial practice;
-3. category + dependency negative control.
-
-All three lanes are complete. The live browser run completed with zero page errors and
-preserved the non-canonical / under-review / navigation-only geometry boundaries.
+All six frozen targets are researched and serialized in the portable package.
 
 Observed:
-- B materially improves 3/3 tasks over A through lower comparison/provenance burden;
-- C materially improves 0/3 tasks over B under the frozen rule;
-- C remains a safe/readable inspection adapter with no observed historical overclaim.
+- 6 target rows / 36 source-relation rows;
+- 4 internally researched outcomes, including one researched-inconclusive;
+- 2 under-review outcomes where exact target identity/chronology remains unresolved;
+- no schema/ontology extension required;
+- no P-level, geometry promotion, R1 reviewed-state or canonical-release mutation.
 
+Key results:
+- Chámpa: evidence exists, but the 500 CE polity frame is ambiguous;
+- Magadha: slavery context is supported more strongly than exact Haryanka chronology;
+- Mayapán: positive member-locus without aggregate-wide generalization;
+- Mongol Yam: positive compulsory service without slave-status collapse;
+- Yaghan: internal uncertainty preserved alongside external/intergroup coercion;
+- Khmer 1300: independent 1296–1297 capital-core slavery evidence; no empire-wide fill.
 
-Result:
-> **portable package earns the comparative workflow value; thin Atlas remains a
-> maintenance/trigger-bound view.**
+Protocol: `experiments/exp06-balanced-evidence/00_PROTOCOL.md`
+Result: `experiments/exp06-balanced-evidence/RESULT.md`
+Checkpoint: `experiments/exp06-balanced-evidence/CHECKPOINT.md`
 
-Do not infer poor usability or map uselessness. Sponsor first-look feedback was
-positive; EXP-05 tested the stricter question of material task advantage.
+**Next after #225 merges/closes:** select one new bounded historical evidence horizon
+from the remaining frozen/QA-ready queue by expected information gain. Do not insert
+another application/product horizon unless a changed task meets EXP-05's reopening
+conditions.
 
-**Next after #223 merges/closes:** select one bounded **historical evidence-growth**
-successor by expected information gain. Prefer globally underrepresented
-non-Atlantic/non-Western targets and reuse the portable package; no new product
-horizon should intervene.
-
-
-Canonical v0.6.1 remains unchanged. No historical research tranche, schema/API/database
-change, geometry programme or frontend change is authorized by #223.
-
-## Sponsor-visible state
-
-The EXP-04 preview remains live at
-`https://kaastumor.github.io/Slavery/research-preview.html`.
-
-#223 may inspect that existing view, but it must not modify the interface before all
-frozen lane-C tasks are captured.
-
+Canonical v0.6.1 remains unchanged.
 
 ## Discovery execution
 
@@ -108,7 +85,7 @@ Do **not** use elapsed research time alone as a stop criterion.
 
 # PARKED / trigger-bound operational debt
 
-These are not eligible while #223 is active unless they block the value experiment.
+These are not eligible while #225 is active unless they block the historical tranche.
 
 ## #43 — protected staging / release-promotion administration
 
@@ -130,7 +107,7 @@ Handle when it materially blocks evidence work; do not turn administration into 
 
 # Explicitly NOT the current horizon
 
-Do not let the value test become platform drift. #223 does **not** authorize:
+Do not let evidence growth become platform drift. #225 does **not** authorize:
 
 - M2 production schema migration;
 - frontend redesign;
