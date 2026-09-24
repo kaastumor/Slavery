@@ -1,0 +1,115 @@
+{
+  "schema": "historical-slavery-atlas.exp02.analysis.v1",
+  "frozen_repo_commit": "a6987d3f14369c6ea2d7b2b3db74ac65faa8ec57",
+  "frozen_candidate_blob_sha": "057a61f4758a5ce1dce247c1eb97c7e421c5f979",
+  "counts": {
+    "targets": 77,
+    "reviewed_c1": 19,
+    "source_relations": 45,
+    "independence_groups": 37
+  },
+  "observed": {
+    "review_state_distinct": 1,
+    "language_access_distinct": 19,
+    "coverage_confidence_distinct": 6,
+    "law_practice_notes_present": 12,
+    "network_territorial_notes_present": 6,
+    "repeated_independence_groups": 7,
+    "temporal_same_anchor_different_state": {
+      "1300": [
+        "unassessed_not_researched",
+        "supported_period_level",
+        "unknown"
+      ],
+      "1800": [
+        "supported_exact_cross_section",
+        "not_applicable_aggregate",
+        "unassessed_not_researched",
+        "unknown"
+      ]
+    },
+    "geometry_state_distinct": 1
+  },
+  "ablation_matrix": [
+    {
+      "family": "bounded proposition / required abstention",
+      "disposition": "PRESERVE_CORE",
+      "reason": "They encode permitted claim versus prohibited overclaim. Both are populated for all 19 reviewed rows and are not safely reconstructible from classification alone."
+    },
+    {
+      "family": "evidence locus / inference extent",
+      "disposition": "PRESERVE_CORE",
+      "reason": "They encode where evidence sits versus how far inference may travel. Collapsing them recreates the target/context and territorial-generalization failure modes R1 corrected."
+    },
+    {
+      "family": "temporal state / display rule",
+      "disposition": "PRESERVE_CORE",
+      "reason": "Anchor is insufficient: reviewed targets at 1800 span unknown, aggregate-not-applicable, and exact-cross-section; reviewed targets at 1300 span unknown and period-level."
+    },
+    {
+      "family": "law/practice and network/territorial notes",
+      "disposition": "PRESERVE_CORE_WHEN_PRESENT",
+      "reason": "They are optional but carry explicit domain-boundary information in 12/19 and 6/19 reviewed rows respectively; omission would erase distinctions not recoverable from generic status fields without reinterpretation."
+    },
+    {
+      "family": "source version / locator / independence group",
+      "disposition": "PRESERVE_CORE",
+      "reason": "Exact evidence and dependency reconstruction require all three. Seven independence groups contain multiple source relations in the frozen set."
+    },
+    {
+      "family": "per-row review_state",
+      "disposition": "SIMPLIFY_CANDIDATE",
+      "reason": "All 19 reviewed rows share the same value. It can be hoisted to package-level review scope for this frozen release."
+    },
+    {
+      "family": "language/access limitation",
+      "disposition": "PRESERVE_CORE",
+      "reason": "All 19 reviewed rows carry distinct access/language limitations; these cannot be hoisted without information loss."
+    },
+    {
+      "family": "coverage confidence",
+      "disposition": "PRESERVE_CORE",
+      "reason": "Six distinct confidence states occur across the 19 reviewed rows."
+    },
+    {
+      "family": "research-state / non-absence distinction",
+      "disposition": "PRESERVE_CORE",
+      "reason": "All five frozen research states are populated. Collapsing them would recreate missing-evidence-equals-absence risk."
+    },
+    {
+      "family": "per-target geometry state",
+      "disposition": "REDUNDANT_IN_CURRENT_FROZEN_SET",
+      "reason": "All 77 targets are unresolved_no_geometry. A package default plus zero overrides preserves the current contract; this says nothing about future resolved-geometry releases."
+    },
+    {
+      "family": "detailed unresolved geometry provenance",
+      "disposition": "REDUNDANT_IN_CURRENT_FROZEN_SET",
+      "reason": "No target geometry is materialized and geometry has no historical-claim effect. Keep the frozen source artifact elsewhere; it is not required in the minimum evidence packet."
+    },
+    {
+      "family": "atlas_internal_year",
+      "disposition": "FORMAT_SPECIFIC",
+      "reason": "The portable packet preserves source anchor plus temporal state/display rule. Astronomical internal year is application/navigation machinery, not required for the frozen evidence contract."
+    },
+    {
+      "family": "source role / claim_fitness / free-text source notes",
+      "disposition": "FORMAT_SPECIFIC",
+      "reason": "Useful enrichment remains in the canonical candidate, but EXP-02 fixed invariants are preserved by source identity, locator, dependency family, direction and decisive flag."
+    }
+  ],
+  "portable_format_result": {
+    "markdown": "PORTABLE_CORE_SURVIVES",
+    "flat_target_plus_source_tables": "PORTABLE_CORE_SURVIVES",
+    "note": "Both require the package manifest/state definitions; neither result establishes user preference or product value."
+  },
+  "size_evidence": {
+    "original_candidate_json_bytes": 332010,
+    "compact_experiment_json_bytes": 116459,
+    "manifest_bytes": 4729,
+    "targets_csv_bytes": 46325,
+    "sources_csv_bytes": 12337,
+    "reviewed_packets_markdown_bytes": 43333,
+    "compact_json_ratio": 0.351,
+    "flat_tables_plus_manifest_ratio": 0.191
+  }
+}
