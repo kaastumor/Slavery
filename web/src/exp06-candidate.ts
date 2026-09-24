@@ -135,7 +135,7 @@ function validateBundle(value: unknown): CandidateBundle {
   const data = value as Partial<CandidateBundle>;
   if (data.schema !== "historical-slavery-atlas.exp06-candidate.v1") throw new Error("Unexpected candidate schema");
   if (data.candidate_id !== "exp06-candidate-v1") throw new Error("Unexpected candidate identity");
-  if (data.publication_state !== "candidate_noncanonical_pending_gate") throw new Error("Candidate publication boundary missing");
+  if (data.publication_state !== "published_candidate_noncanonical") throw new Error("Candidate publication boundary missing");
   if (data.canonical_historical_release !== "v0.6.1") throw new Error("Canonical release boundary drifted");
   if (!data.counts || data.counts.targets !== 6) throw new Error("Expected six frozen candidate targets");
   if (data.counts.researched_bounded !== 3 || data.counts.researched_inconclusive !== 1 || data.counts.under_review !== 2) {
@@ -359,7 +359,7 @@ async function boot(): Promise<void> {
     ]);
     bundle = data;
 
-    releaseBadge.textContent = `${data.candidate_id} · pending gate`;
+    releaseBadge.textContent = `${data.candidate_id} · published candidate`;
     releaseBadge.title = `Non-canonical candidate. Canonical historical release remains ${data.canonical_historical_release}.`;
     status.textContent = `${data.counts.researched_bounded} bounded · ${data.counts.researched_inconclusive} inconclusive · ${data.counts.under_review} under review`;
 
