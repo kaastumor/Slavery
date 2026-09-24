@@ -13,8 +13,8 @@ This file answers **what is justified to work on next**.
 # EXP-08 CROSS-FRAME HISTORICAL EVIDENCE — ACTIVE
 
 **Issue:** #232  
-**Current stage:** FROZEN SAMPLE MERGED / SUBJECT RESEARCH READY  
-**Subject slavery/coercion research:** **NOT STARTED**
+**Current stage:** SUBJECT RESEARCH — 1 / 4 FROZEN CASES COMPLETE  
+**Subject slavery/coercion research:** **IN PROGRESS**
 
 EXP-07 closed with seven QUALIFIED_C1_READY rows and one hold. The post-qualification
 selection compared those seven plus deferred Grand Duchy of Lithuania by expected
@@ -31,10 +31,14 @@ The tranche deliberately spans a node/site, a region/community and two widely
 separated polity/source environments. It avoids selecting all available rows and avoids
 repeating mobile-network/community mechanisms already exercised heavily in EXP-04/06.
 
-**Current exact action:** begin bounded subject research under #232 with **Great
-Zimbabwe — 1400**, preserving the frozen site/node frame and the EXP-08 evidence
-contract. Continue the remaining frozen cases sequentially; do not replace targets or
-expand the tranche mid-run.
+Great Zimbabwe — 1400 is now **researched-inconclusive for slavery/enslavement and
+Great-Zimbabwe-specific slave-trade participation**, while hierarchy, tribute/extraction,
+dependency/reciprocity and organized collective labor are supported. Connected coastal
+slavery remains contextual and directional only.
+
+**Current exact action:** research **Māori communities in Aotearoa — 1700** under the
+frozen region/community frame. Preserve iwi/hapū specificity and do not turn later
+pan-Māori terminology or post-contact evidence into an exact 1700 aggregate claim.
 
 ## Discovery execution
 

@@ -11,8 +11,9 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 
 Active:
 1. **#232 / EXP-08 — cross-frame historical evidence tranche.** The four-target
-   sample is frozen and merged; subject research has not yet started. Begin with
-   Great Zimbabwe — 1400 under the frozen protocol.
+   sample is frozen and merged. Great Zimbabwe — 1400 is complete as a
+   researched-inconclusive slavery/status case with supported collective-labor,
+   dependency and tribute context. Research Māori communities in Aotearoa — 1700 next.
    Discovery execution: `docs/discovery/DISCOVERY_EXECUTION.md`.
 
 Recently completed:

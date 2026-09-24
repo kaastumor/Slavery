@@ -32,8 +32,8 @@ For scheduled autonomous work, `docs/automation/hourly-worker.md` is the canonic
 - EXP-02: portable evidence packet survived; EXP-03 added terminology/mapping and source-role/claim-fitness requirements (D-089);
 - EXP-04 and EXP-06 historical tranches are complete; EXP-07 identity/anchor qualification closed with 7 ready + 1 hold;
 - active horizon: **#232 / EXP-08 cross-frame historical evidence tranche**, four frozen targets;
-- EXP-08 freeze is merged; subject research has not yet started;
-- next: begin **Great Zimbabwe — 1400** under the frozen EXP-08 evidence contract;
+- EXP-08 subject research is in progress: **Great Zimbabwe — 1400** is complete as a researched-inconclusive slavery/status case with positive collective-labor/dependency context;
+- next: research **Māori communities in Aotearoa — 1700** under the frozen EXP-08 evidence contract;
 - no production migration, new public release or platform expansion authorized.
 
 See `BACKLOG.md`, `experiments/exp08-cross-frame-evidence/CHECKPOINT.md`, and `docs/08_DECISIONS_LOG.md`.
