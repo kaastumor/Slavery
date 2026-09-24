@@ -1,6 +1,6 @@
 # Historical Slavery Atlas — Backlog
 
-**Updated:** 2026-09-24  
+**Updated:** 2026-09-25  
 **Role:** canonical execution queue only; assumptions/risks/value evidence live in `docs/25_PROJECT_HEALTH.md`  
 **Canonical historical data release:** `v0.6.1` (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
@@ -10,35 +10,27 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# DISC-07 CROSS-DIMENSIONAL COVERAGE AUDIT — RESULT READY
+# NEXT DISCOVERY — PORTABLE PACKAGE INTEROPERABILITY FREEZE
 
-**Issue:** #245  
-**Primary gate:** method / research-design discovery  
-**Disposition:** **SURVIVES NARROWLY**  
-**Historical subject research:** **NONE**
+**Previous issue:** #245 / DISC-07 — **CLOSED**  
+**Previous disposition:** **SURVIVES NARROWLY**  
+**Historical subject research:** **PAUSED**
 
-The 77-target R1.6 registry was audited with three non-visual cross-tabs.
+DISC-07 is complete on `main` (commit `adb85b7…`) and recorded as D-094.
 
-Material result:
-- anchor-band coverage and frame diversity both pass separately;
-- their **interaction is concentrated**, especially in early chronology;
-- current marginal gates do not explicitly state that limitation.
+Durable result:
+- marginal chronology and frame-diversity gates can hide a material interaction concentration;
+- future programmes claiming broad cross-chronology structural coverage must add a
+  chronology × **broad selection-frame family** QA check before subject research;
+- sparse cells remain research-design states only, never historical absence or quotas.
 
-Future target-frame programmes that claim cross-chronology structural diversity should
-therefore add a chronology × **broad selection-frame family** QA check before subject
-research.
+**Current exact action:** freeze one bounded **portable-package interoperability
+benchmark** using an existing non-canonical candidate package. Test **Frictionless Data
+Package** first as the simplest established baseline. Use **RO-Crate** only if a richer
+comparator is necessary to test reconstructibility/provenance value.
 
-Boundaries:
-- sparse cells are research-design states, never historical absence;
-- do not fill cells by quota;
-- polity sector-B gaps were already known and are not a new finding;
-- `effective_frame_class` is too granular for naïve balance counting;
-- immutable R1.6 research state is not a live post-R1 dashboard.
-
-**Current exact action:** merge DISC-07 if CI is green, close #245, then freeze the next
-discovery candidate: benchmark the existing portable candidate package against
-**Frictionless Data Package** first, with RO-Crate only as a richer comparator if it
-adds material reconstructibility/interoperability.
+The benchmark must not change package contents, canonical v0.6.1, schema/ontology,
+public release state or application architecture.
 
 EXP-08 remains open/paused after 3/4. **Qi — 500 BCE remains frozen/unstarted.**
 

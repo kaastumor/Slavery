@@ -1,7 +1,7 @@
 # DISC-07 checkpoint
 
 **Issue:** #245  
-**State:** matrices + adversary complete; result ready for merge  
+**State:** complete and merged on main; issue closed  
 **Disposition:** **SURVIVES NARROWLY**  
 **Historical subject research:** none  
 **EXP-08:** paused; Qi — 500 BCE frozen/unstarted
@@ -40,8 +40,9 @@ Artifacts:
 
 ## Next exact action
 
-Merge if CI is green, close #245, then freeze a portable-package interoperability
-benchmark using the existing candidate package. Frictionless is the first/simple
-baseline; RO-Crate is only a richer comparator if needed.
+Freeze a bounded portable-package interoperability benchmark using an existing
+non-canonical candidate package. Frictionless Data Package is the first/simple baseline;
+RO-Crate is only a richer comparator if necessary to test additional provenance or
+reconstructibility value.
 
 Do not resume Qi or begin new historical subject research.

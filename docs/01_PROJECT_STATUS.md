@@ -2,19 +2,18 @@
 
 For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issues/PRs and current CI override this snapshot.
 
-**Status date:** 2026-09-24  
+**Status date:** 2026-09-25  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **ACTIVE DISCOVERY HORIZON — #245 / DISC-07 result ready; WIP 1**
+**Execution state:** **DISC-07 CLOSED / NEXT DISCOVERY FREEZE PENDING; WIP 0**
 
 ## Current execution order
 
-Active:
-1. **#245 / DISC-07 — cross-dimensional coverage audit.** Result:
-   **SURVIVES NARROWLY**. Marginal chronology/frame balance hides a material interaction
-   concentration, so future broad target-frame claims require a joint chronology ×
-   broad-frame-family QA check. No cell-filling quota or absence inference follows.
-   Next candidate is a portable-package standards benchmark.
+Next:
+1. Freeze a bounded **portable-package interoperability benchmark** against an existing
+   non-canonical candidate package. Frictionless Data Package is the first/simple
+   baseline; use RO-Crate only if a richer comparator is necessary.
+   DISC-07 / #245 is closed with **SURVIVES NARROWLY** and D-094.
    EXP-08 remains open/paused after 3/4; Qi — 500 BCE is frozen/unstarted.
    Discovery execution: `docs/discovery/DISCOVERY_EXECUTION.md`.
 
