@@ -12,6 +12,43 @@ type CandidateTarget = {
   release_research_state: string;
   classification_outcome: string;
   interpretation: string;
+  absence_inference_prohibited?: boolean;
+  qa_state?: string | null;
+  effective_frame_class?: string | null;
+  identity_limitation?: string | null;
+  geometry_requirement?: string | null;
+};
+
+type ReviewedSource = {
+  source_version_ref: string;
+  title: string;
+  author?: string | null;
+  year?: string | number | null;
+  url?: string | null;
+  role?: string | null;
+  direction?: string | null;
+  decisive?: boolean;
+  claim_fitness?: string | null;
+  independence_group?: string | null;
+  locator?: string | null;
+  notes?: string | null;
+};
+
+type ReviewedC1 = {
+  target_id: string;
+  target_label: string;
+  anchor: string | number;
+  classification_outcome: string;
+  bounded_proposition: string;
+  required_abstention: string;
+  evidence_locus: string;
+  inference_extent: string;
+  law_practice_note?: string | null;
+  network_territorial_note?: string | null;
+  review_state: string;
+  language_access_limitations: string;
+  coverage_confidence: string;
+  sources: ReviewedSource[];
 };
 
 type OverviewState = {
@@ -19,6 +56,13 @@ type OverviewState = {
   label: string;
   description: string;
   count: number;
+};
+
+type GeometryRow = {
+  target_id: string;
+  representation_state: string;
+  expected_geometry_form?: string | null;
+  representation_note?: string | null;
 };
 
 type CandidateBundle = {
@@ -36,7 +80,14 @@ type CandidateBundle = {
     targets: Array<{ target_id: string; research_state: string; geometry_state: string }>;
   };
   targets: CandidateTarget[];
-  reviewed_c1: unknown[];
+  reviewed_c1: ReviewedC1[];
+  geometry_manifest: {
+    policy: {
+      unresolved_is_not_absence: boolean;
+      neutral_world_land_always_visible: boolean;
+    };
+    rows: GeometryRow[];
+  };
 };
 
 const CANDIDATE_URL = new URL("./data/r1-mvp-candidate.json", window.location.href).toString();
@@ -90,6 +141,9 @@ function validateCandidate(value: unknown): CandidateBundle {
   if (!Array.isArray(candidate.overview_semantics.targets) || candidate.overview_semantics.targets.length !== candidate.counts.targets) {
     throw new Error("Candidate per-target overview semantics are incomplete");
   }
+  if (!candidate.geometry_manifest || !Array.isArray(candidate.geometry_manifest.rows) || candidate.geometry_manifest.rows.length !== candidate.counts.targets) {
+    throw new Error("Candidate geometry manifest is missing or incomplete");
+  }
   return candidate as CandidateBundle;
 }
 
@@ -115,6 +169,64 @@ function renderOverviewCard(state: OverviewState): string {
     </article>`;
 }
 
+function stateLabel(candidate: CandidateBundle, targetId: string): string {
+  const overview = candidate.overview_semantics.targets.find((item) => item.target_id === targetId);
+  const definition = candidate.overview_semantics.research_states.find((item) => item.id === overview?.research_state);
+  return definition?.label ?? "Unknown research state";
+}
+
+function geometryFor(candidate: CandidateBundle, targetId: string): GeometryRow | undefined {
+  return candidate.geometry_manifest.rows.find((row) => row.target_id === targetId);
+}
+
+function renderSource(source: ReviewedSource): string {
+  const title = escapeHtml(source.title || source.source_version_ref);
+  const linkedTitle = source.url
+    ? `<a class="source-link" href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${title}</a>`
+    : `<span class="source-link">${title}</span>`;
+  const authorYear = [source.author, source.year].filter((value) => value !== null && value !== undefined && value !== "").map(escapeHtml).join(" · ");
+  const family = source.independence_group ? `Source family: ${escapeHtml(source.independence_group)}` : "Source family not recorded";
+  const roleFitness = [source.role, source.claim_fitness, source.decisive ? "decisive" : null].filter(Boolean).map(escapeHtml).join(" · ");
+  return `
+    <li>
+      <div class="source-line">${linkedTitle}</div>
+      ${authorYear ? `<div class="source-meta">${authorYear}</div>` : ""}
+      <div class="source-meta">${escapeHtml(source.source_version_ref)}</div>
+      ${source.locator ? `<div class="source-meta">Locator: ${escapeHtml(source.locator)}</div>` : ""}
+      <div class="source-meta">${family}${roleFitness ? ` · ${roleFitness}` : ""}</div>
+    </li>`;
+}
+
+function bindRegisterButtons(candidate: CandidateBundle): void {
+  panel.querySelectorAll<HTMLButtonElement>("[data-target-id]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetId = button.dataset.targetId;
+      if (targetId) renderTargetDetail(candidate, targetId);
+    });
+  });
+}
+
+function renderRegister(candidate: CandidateBundle): string {
+  const ordered = [...candidate.targets].sort((a, b) => {
+    const aYear = Number(a.anchor);
+    const bYear = Number(b.anchor);
+    if (Number.isFinite(aYear) && Number.isFinite(bYear) && aYear !== bYear) return aYear - bYear;
+    return a.target_label.localeCompare(b.target_label);
+  });
+
+  return ordered.map((target) => {
+    const geometry = geometryFor(candidate, target.target_id);
+    return `
+      <button class="place-card" type="button" data-target-id="${escapeHtml(target.target_id)}" aria-label="Open evidence record for ${escapeHtml(target.target_label)}">
+        <span class="place-card-top">
+          <span class="place-card-name">${escapeHtml(target.target_label)}</span>
+          <span class="place-card-level">${escapeHtml(formatYear(target.anchor))}</span>
+        </span>
+        <span class="place-card-meta">${escapeHtml(stateLabel(candidate, target.target_id))} · geometry: ${escapeHtml(geometry?.representation_state ?? "unknown")}</span>
+      </button>`;
+  }).join("");
+}
+
 function renderCandidate(candidate: CandidateBundle): void {
   const anchors = [...new Set(candidate.targets.map((target) => Number(target.anchor)).filter(Number.isFinite))].sort((a, b) => a - b);
   const min = anchors[0] ?? -2000;
@@ -137,7 +249,7 @@ function renderCandidate(candidate: CandidateBundle): void {
   panel.innerHTML = `
     <div class="panel-header">
       <div class="panel-kicker">R1 MVP candidate</div>
-      <h2>Research-state overview</h2>
+      <h2>Evidence register</h2>
       <div class="panel-subhead">Static/read-only candidate data. Research state is not historical presence, absence or intensity.</div>
     </div>
     <div class="panel-body">
@@ -155,8 +267,101 @@ function renderCandidate(candidate: CandidateBundle): void {
         <div class="state-grid">${geometryCards}</div>
       </section>
       <div class="empty-state map-truth-note"><strong>Map boundary:</strong> no unresolved target is drawn as historical territory. Neutral world land stays visible, and geometry availability does not alter any historical claim.</div>
+      <section class="register-section" aria-labelledby="register-heading">
+        <h3 id="register-heading" class="overview-heading">Frozen target register</h3>
+        <p class="method-note">Open a target to inspect its permitted evidence/research state. Unresearched and held targets intentionally expose less information.</p>
+        <div class="place-list">${renderRegister(candidate)}</div>
+      </section>
       <p class="source-meta">${escapeHtml(candidate.non_absence_rule)}</p>
     </div>`;
+  bindRegisterButtons(candidate);
+}
+
+function renderTargetDetail(candidate: CandidateBundle, targetId: string): void {
+  const target = candidate.targets.find((item) => item.target_id === targetId);
+  if (!target) return;
+  const reviewed = candidate.reviewed_c1.find((item) => item.target_id === targetId);
+  const geometry = geometryFor(candidate, targetId);
+  const researchLabel = stateLabel(candidate, targetId);
+
+  const geometryBlock = `
+    <details class="geometry-details">
+      <summary>Geometry representation</summary>
+      <div class="geometry-body">
+        <strong>${escapeHtml(geometry?.representation_state ?? "unknown")}</strong><br>
+        ${escapeHtml(geometry?.representation_note ?? "No geometry note is available.")}
+        ${geometry?.expected_geometry_form ? `<br>Expected form if later reviewed: ${escapeHtml(geometry.expected_geometry_form)}` : ""}
+        <br>Geometry availability does not create or strengthen a historical claim.
+      </div>
+    </details>`;
+
+  if (!reviewed) {
+    panel.innerHTML = `
+      <div class="panel-header">
+        <button class="back-button" id="register-back" type="button">← Back to register</button>
+        <div class="panel-kicker">Research-state record · no subject claim</div>
+        <h2>${escapeHtml(target.target_label)}</h2>
+        <div class="panel-subhead">${escapeHtml(formatYear(target.anchor))} · ${escapeHtml(researchLabel)}</div>
+      </div>
+      <div class="panel-body">
+        <div class="claim-card">
+          <div class="evidence-title">Permitted interpretation</div>
+          <p class="claim-summary">${escapeHtml(target.interpretation)}</p>
+        </div>
+        <div class="detail-grid">
+          <div><div class="evidence-title">QA state</div><p class="detail-text">${escapeHtml(target.qa_state ?? "not recorded")}</p></div>
+          <div><div class="evidence-title">Frame</div><p class="detail-text">${escapeHtml(target.effective_frame_class ?? "not recorded")}</p></div>
+        </div>
+        ${target.identity_limitation ? `<div class="claim-card"><div class="evidence-title">Identity / frame limitation</div><p class="claim-summary">${escapeHtml(target.identity_limitation)}</p></div>` : ""}
+        <div class="empty-state nonabsence-note"><strong>No historical absence inference.</strong><br>This target has no reviewed C1 subject packet in the candidate. Its research state must not be rendered as evidence that slavery/coercion was absent.</div>
+        ${geometryBlock}
+        <div class="release-inline">Candidate / non-canonical. No independent historical review is claimed.</div>
+      </div>`;
+  } else {
+    const sources = reviewed.sources.map(renderSource).join("");
+    const extraNotes = [
+      reviewed.law_practice_note ? `<div><div class="evidence-title">Law / practice note</div><p class="detail-text">${escapeHtml(reviewed.law_practice_note)}</p></div>` : "",
+      reviewed.network_territorial_note ? `<div><div class="evidence-title">Network / territorial note</div><p class="detail-text">${escapeHtml(reviewed.network_territorial_note)}</p></div>` : "",
+    ].filter(Boolean).join("");
+
+    panel.innerHTML = `
+      <div class="panel-header">
+        <button class="back-button" id="register-back" type="button">← Back to register</button>
+        <div class="panel-kicker">Reviewed C1 evidence record</div>
+        <h2>${escapeHtml(reviewed.target_label)}</h2>
+        <div class="panel-subhead">${escapeHtml(formatYear(reviewed.anchor))} · ${escapeHtml(researchLabel)} · ${escapeHtml(reviewed.classification_outcome)}</div>
+      </div>
+      <div class="panel-body">
+        <div class="claim-card">
+          <div class="evidence-title">Strongest bounded proposition</div>
+          <p class="claim-summary">${escapeHtml(reviewed.bounded_proposition)}</p>
+        </div>
+        <div class="claim-card abstention-card">
+          <div class="evidence-title">Required abstention</div>
+          <p class="claim-summary">${escapeHtml(reviewed.required_abstention)}</p>
+        </div>
+        <div class="detail-grid">
+          <div><div class="evidence-title">Evidence locus</div><p class="detail-text">${escapeHtml(reviewed.evidence_locus)}</p></div>
+          <div><div class="evidence-title">Inference extent</div><p class="detail-text">${escapeHtml(reviewed.inference_extent)}</p></div>
+          ${extraNotes}
+        </div>
+        <div class="claim-card">
+          <div class="evidence-title">Research limitations</div>
+          <p class="claim-summary">${escapeHtml(reviewed.language_access_limitations)}</p>
+          <div class="source-meta">Coverage confidence: ${escapeHtml(reviewed.coverage_confidence)} · Review: ${escapeHtml(reviewed.review_state)} (internal adversarial review only; not independent review)</div>
+        </div>
+        <div class="evidence-title">Source/version evidence</div>
+        <ul class="source-list">${sources}</ul>
+        ${geometryBlock}
+        <div class="release-inline">Candidate / non-canonical. Source-family labels expose shared evidentiary dependencies; publication count is not independent support.</div>
+      </div>`;
+  }
+
+  panel.querySelector<HTMLButtonElement>("#register-back")?.addEventListener("click", () => {
+    renderCandidate(candidate);
+    panel.focus();
+  });
+  panel.focus();
 }
 
 async function boot(): Promise<void> {
