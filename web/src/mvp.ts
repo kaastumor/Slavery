@@ -14,6 +14,13 @@ type CandidateTarget = {
   interpretation: string;
 };
 
+type OverviewState = {
+  id: string;
+  label: string;
+  description: string;
+  count: number;
+};
+
 type CandidateBundle = {
   schema: string;
   candidate_id: string;
@@ -22,6 +29,12 @@ type CandidateBundle = {
   review_scope: string;
   non_absence_rule: string;
   counts: { targets: number; reviewed_c1: number };
+  overview_semantics: {
+    rule: string;
+    research_states: OverviewState[];
+    geometry_states: OverviewState[];
+    targets: Array<{ target_id: string; research_state: string; geometry_state: string }>;
+  };
   targets: CandidateTarget[];
   reviewed_c1: unknown[];
 };
@@ -37,6 +50,8 @@ const yearLabel = document.querySelector<HTMLOutputElement>("#year-label")!;
 const timelineRange = document.querySelector<HTMLElement>("#timeline-range")!;
 const fitWorldButton = document.querySelector<HTMLButtonElement>("#fit-world")!;
 const fitActiveButton = document.querySelector<HTMLButtonElement>("#fit-active")!;
+const researchStateLegend = document.querySelector<HTMLElement>("#research-state-legend")!;
+const geometryStateLegend = document.querySelector<HTMLElement>("#geometry-state-legend")!;
 
 const map = new Map({
   container: "map",
@@ -64,6 +79,17 @@ function validateCandidate(value: unknown): CandidateBundle {
   if (!candidate.counts || candidate.counts.targets !== 77 || candidate.counts.reviewed_c1 !== 19) throw new Error("Candidate frozen counts do not match the R1.6 contract");
   if (!Array.isArray(candidate.targets) || candidate.targets.length !== candidate.counts.targets) throw new Error("Candidate target registry is missing or incomplete");
   if (!Array.isArray(candidate.reviewed_c1) || candidate.reviewed_c1.length !== candidate.counts.reviewed_c1) throw new Error("Candidate reviewed C1 packet is missing or incomplete");
+  if (!candidate.overview_semantics || !Array.isArray(candidate.overview_semantics.research_states) || !Array.isArray(candidate.overview_semantics.geometry_states)) {
+    throw new Error("Candidate overview semantics are missing");
+  }
+  const researchStateTotal = candidate.overview_semantics.research_states.reduce((sum, item) => sum + Number(item.count || 0), 0);
+  const geometryStateTotal = candidate.overview_semantics.geometry_states.reduce((sum, item) => sum + Number(item.count || 0), 0);
+  if (researchStateTotal !== candidate.counts.targets || geometryStateTotal !== candidate.counts.targets) {
+    throw new Error("Candidate overview state counts do not cover the frozen target registry");
+  }
+  if (!Array.isArray(candidate.overview_semantics.targets) || candidate.overview_semantics.targets.length !== candidate.counts.targets) {
+    throw new Error("Candidate per-target overview semantics are incomplete");
+  }
   return candidate as CandidateBundle;
 }
 
@@ -71,6 +97,22 @@ async function loadCandidate(): Promise<CandidateBundle> {
   const response = await fetch(CANDIDATE_URL, { cache: "no-store" });
   if (!response.ok) throw new Error(`Static R1 candidate returned ${response.status}`);
   return validateCandidate(await response.json());
+}
+
+function renderStateLegend(states: OverviewState[]): string {
+  return states.map((state) => `
+    <div class="state-legend-row">
+      <span class="state-chip" data-state="${escapeHtml(state.id)}">${escapeHtml(state.label)}</span>
+      <span class="state-count">${escapeHtml(state.count)}</span>
+    </div>`).join("");
+}
+
+function renderOverviewCard(state: OverviewState): string {
+  return `
+    <article class="state-card" data-state="${escapeHtml(state.id)}">
+      <div class="state-card-top"><strong>${escapeHtml(state.label)}</strong><span>${escapeHtml(state.count)}</span></div>
+      <p>${escapeHtml(state.description)}</p>
+    </article>`;
 }
 
 function renderCandidate(candidate: CandidateBundle): void {
@@ -84,11 +126,37 @@ function renderCandidate(candidate: CandidateBundle): void {
   releaseBadge.textContent = `${candidate.candidate_id} · candidate · non-canonical · internally reviewed`;
   releaseBadge.classList.add("preview");
   releaseBadge.title = `Canonical historical release remains ${candidate.canonical_historical_release}; review is internal adversarial review, not independent review.`;
-  status.textContent = `${candidate.counts.targets} frozen targets · ${candidate.counts.reviewed_c1} reviewed C1`;
+  const unresolvedGeometry = candidate.overview_semantics.geometry_states.find((state) => state.id === "unresolved_no_geometry")?.count ?? 0;
+  status.textContent = `${candidate.counts.targets} frozen targets · ${candidate.counts.reviewed_c1} reviewed · ${unresolvedGeometry} geometry unresolved`;
 
-  const rows = candidate.targets.slice(0, 12).map((target) => `
-    <li><strong>${escapeHtml(target.target_label)}</strong> · ${escapeHtml(formatYear(target.anchor))}<br><span class="source-meta">${escapeHtml(target.release_research_state)} · ${escapeHtml(target.classification_outcome)}</span></li>`).join("");
-  panel.innerHTML = `<div class="panel-header"><div class="panel-kicker">R1 MVP candidate</div><h2>Frozen evidence package</h2><div class="panel-subhead">Static/read-only candidate data. ${escapeHtml(candidate.non_absence_rule)}</div></div><div class="panel-body"><p><strong>${candidate.counts.targets}</strong> targets are loaded from the generated R1 candidate bundle. The live Atlas API is not used for core evidence data.</p><ul class="source-list">${rows}</ul><p class="source-meta">Target-state map semantics and compact evidence detail are completed in the next bounded MVP issues.</p></div>`;
+  researchStateLegend.innerHTML = renderStateLegend(candidate.overview_semantics.research_states);
+  geometryStateLegend.innerHTML = renderStateLegend(candidate.overview_semantics.geometry_states);
+
+  const researchCards = candidate.overview_semantics.research_states.map(renderOverviewCard).join("");
+  const geometryCards = candidate.overview_semantics.geometry_states.map(renderOverviewCard).join("");
+  panel.innerHTML = `
+    <div class="panel-header">
+      <div class="panel-kicker">R1 MVP candidate</div>
+      <h2>Research-state overview</h2>
+      <div class="panel-subhead">Static/read-only candidate data. Research state is not historical presence, absence or intensity.</div>
+    </div>
+    <div class="panel-body">
+      <div class="overview-stats">
+        <span><strong>${escapeHtml(candidate.counts.targets)}</strong><br>frozen targets</span>
+        <span><strong>${escapeHtml(candidate.counts.reviewed_c1)}</strong><br>reviewed C1</span>
+      </div>
+      <p class="method-note">${escapeHtml(candidate.overview_semantics.rule)}</p>
+      <section aria-labelledby="research-state-heading">
+        <h3 id="research-state-heading" class="overview-heading">Research coverage</h3>
+        <div class="state-grid">${researchCards}</div>
+      </section>
+      <section class="overview-section" aria-labelledby="geometry-state-heading">
+        <h3 id="geometry-state-heading" class="overview-heading">Geometry representation</h3>
+        <div class="state-grid">${geometryCards}</div>
+      </section>
+      <div class="empty-state map-truth-note"><strong>Map boundary:</strong> no unresolved target is drawn as historical territory. Neutral world land stays visible, and geometry availability does not alter any historical claim.</div>
+      <p class="source-meta">${escapeHtml(candidate.non_absence_rule)}</p>
+    </div>`;
 }
 
 async function boot(): Promise<void> {
@@ -101,7 +169,7 @@ async function boot(): Promise<void> {
     slider.addEventListener("input", () => { yearLabel.value = formatYear(Number(slider.value)); yearLabel.textContent = yearLabel.value; });
     fitWorldButton.addEventListener("click", () => map.easeTo({ center: [15, 24], zoom: 1.35, duration: 420 }));
     fitActiveButton.disabled = true;
-    fitActiveButton.title = "Historical target geometry is not yet promoted in the R1 candidate";
+    fitActiveButton.title = "No reviewed target geometry is materialized; unresolved targets are not drawn as territory";
   } catch (error) {
     console.error(error);
     releaseBadge.textContent = "R1 candidate load error";
