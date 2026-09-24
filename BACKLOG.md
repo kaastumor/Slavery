@@ -10,30 +10,40 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# NEXT HORIZON SELECTION — historical evidence
+# EXP-07 C0 QUALIFICATION — ACTIVE
 
-EXP-06 candidate v1 is **published as a non-canonical research candidate**.
+**Issue:** #229  
+**Current stage:** FROZEN IDENTITY / ANCHOR QUALIFICATION  
+**Subject slavery/coercion research:** **NOT AUTHORIZED YET**
 
-Completed gate:
-- issue #227 closed;
-- PR #228 merged as `40ef91d837376f6a67911ab76921141937e8cde7`;
-- successful browser review `36054132409`;
-- successful Pages deployment `36055931914`;
-- deployed Pages artifact contains the exact approved candidate bundle;
-- canonical v0.6.1 remains unchanged.
+The next-horizon comparison is complete.
 
-The project now returns to **bounded historical evidence work**, not application
-expansion.
+EXP-03/04/06 together leave exactly one untouched QA-ready C1 row in the frozen R1
+registry: **Grand Duchy of Lithuania — 1300 CE**. Selecting it merely because it is
+already ready would overweight execution convenience and conflict with the project's
+non-Atlantic/non-Western balancing priority.
 
-**Current exact action:** compare remaining frozen registry targets and prior experiment
-coverage, then select one high-information historical horizon. Prefer underrepresented
-non-Atlantic/non-Western contexts and avoid re-researching EXP-03/04/06 cases unless a
-recorded reopening trigger has changed.
+The project therefore opens one bounded C0 qualification horizon before new subject
+research. The frozen sample is recorded in
+`experiments/exp07-c0-qualification/01_SAMPLE_FREEZE.json`.
 
-If the best candidates are C0-only rather than QA-ready C1, run a bounded
-identity/anchor qualification tranche first. Do not silently promote a C0 row into
-subject research.
+Frozen rows:
+- Great Zimbabwe — 1400;
+- Swahili maritime trade network — 1400;
+- Māori communities in Aotearoa — 1700;
+- Ifugao communities, northern Luzon — 1700;
+- Nobatia — 500 CE;
+- Kalabhra Dynasty — 500 CE;
+- Qi — 500 BCE;
+- Khanate of Kokand — 1800 CE.
 
+**Current exact action:** validate only target identity, anchor chronology, frame class,
+and defensible spatial scope. Do not inspect slavery/coercion evidence. Each row must
+end as QUALIFIED_C1_READY, HOLD_IDENTITY_OR_TIME, REJECT_FRAME_INVALID, or
+QUALIFICATION_INCONCLUSIVE.
+
+Only after #229 closes may a later subject-research horizon be selected from qualified
+rows. Do not silently mutate the R1 registry or promote C0 to historical research.
 
 ## Discovery execution
 

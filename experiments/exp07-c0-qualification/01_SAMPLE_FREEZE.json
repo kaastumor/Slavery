@@ -1,0 +1,85 @@
+{
+  "experiment": "EXP-07",
+  "issue": 229,
+  "stage": "sample_frozen_before_subject_research",
+  "frozen_on": "2026-09-24",
+  "base_commit": "ae977be37e9ba7cd959750f1c32060fafff03324",
+  "registry_path": "programmes/r1/r1_candidate_target_registry.json",
+  "registry_blob_sha": "cec379246221d166db3830845566311077596862",
+  "canonical_release": "v0.6.1",
+  "subject_research_started": false,
+  "comparison": {
+    "exp03_cases": 6,
+    "exp04_r1_cases": 8,
+    "exp06_r1_cases": 6,
+    "untouched_qa_ready_c1": [
+      "R1:P:1300:D:r1"
+    ],
+    "untouched_qa_ready_c1_label": "Grand Duchy of Lithuania",
+    "decision": "defer_single_ready_western_row_and_run_c0_identity_anchor_qualification"
+  },
+  "selection_rules": [
+    "C0 registry rows only",
+    "no EXP-03/04/06 subject cases",
+    "prefer underrepresented non-Atlantic/non-Western contexts",
+    "maximize frame and chronological diversity using registry metadata only",
+    "do not inspect slavery/coercion evidence before freeze",
+    "qualification outcome is not a historical-practice outcome"
+  ],
+  "allowed_outcomes": [
+    "QUALIFIED_C1_READY",
+    "HOLD_IDENTITY_OR_TIME",
+    "REJECT_FRAME_INVALID",
+    "QUALIFICATION_INCONCLUSIVE"
+  ],
+  "targets": [
+    {
+      "target_id": "R1:N:great_zimbabwe_1400",
+      "target_label": "Great Zimbabwe",
+      "anchor": "1400",
+      "frame": "node_site"
+    },
+    {
+      "target_id": "R1:N:swahili_1400",
+      "target_label": "Swahili maritime trade network",
+      "anchor": "1400",
+      "frame": "mobile_network"
+    },
+    {
+      "target_id": "R1:N:maori_1700",
+      "target_label": "Māori communities in Aotearoa",
+      "anchor": "1700",
+      "frame": "region_community"
+    },
+    {
+      "target_id": "R1:N:ifugao_1700",
+      "target_label": "Ifugao communities, northern Luzon",
+      "anchor": "1700",
+      "frame": "region_community"
+    },
+    {
+      "target_id": "R1:P:500:C:r1",
+      "target_label": "Nobatia",
+      "anchor": "500 CE",
+      "frame": "polity"
+    },
+    {
+      "target_id": "R1:P:500:E:r1",
+      "target_label": "Kalabhra Dynasty",
+      "anchor": "500 CE",
+      "frame": "polity"
+    },
+    {
+      "target_id": "R1:P:-500:F:r2",
+      "target_label": "Qi",
+      "anchor": "500 BCE",
+      "frame": "polity"
+    },
+    {
+      "target_id": "R1:P:1800:E:r1",
+      "target_label": "Khanate of Kokand",
+      "anchor": "1800 CE",
+      "frame": "polity"
+    }
+  ]
+}
