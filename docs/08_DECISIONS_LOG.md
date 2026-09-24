@@ -1636,3 +1636,31 @@ Time/research-labour alone is therefore not a stop rule.
 **Immediate consequence:** authorize **#211 / EXP-03 heterogeneous evidence stress test** as the active WIP-1 research horizon.
 
 **Canonical data:** v0.6.1 unchanged.
+
+
+## D-089 — Extend portable evidence contract after heterogeneous stress test
+**Date:** 2026-09-24
+**Status:** accepted architecture/release-contract decision
+
+**Evidence:** EXP-03 / #211.
+
+**Decision:** Preserve the D-087 portable-core project form, but extend the minimum portable evidence contract.
+
+For reviewed targets/claims, preserve where material:
+- historical term(s);
+- category-mapping status;
+- category-mapping note.
+
+For source relations, preserve:
+- evidence role;
+- claim fitness / inference scope.
+
+When geometry states are mixed, do not hoist one package-level geometry state across the release. Preserve per-target geometry state/role and unresolved/proxy warnings.
+
+**Reason:** Fresh Athens, Cairo, Tenochtitlan, Joseon, Zanzibar and British-India cases showed that a source may be decisive for one proposition but unfit for another, and that historically specific status terms cannot always be safely collapsed into one comparative category. The six cases still fit flat portable artifacts; platform expansion is not required.
+
+**Dependency rule:** source-version identity, locator and independence group remain mandatory. Claim fitness does not replace dependency tracking.
+
+**Complexity rule:** Do not respond by creating a universal taxonomy engine. Start with transparent term + mapping status/note and free-text claim-fitness semantics; normalize further only if repeated evidence warrants it.
+
+**Canonical effect:** none. v0.6.1 remains canonical; no database/schema migration or public release is authorized by this decision.
