@@ -319,6 +319,98 @@ h1 {
   line-height: 1.5;
 }
 
+.overview-heading {
+  margin: 0 0 8px;
+  color: #5d625b;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.overview-section { margin-top: 17px; }
+.state-grid {
+  display: grid;
+  gap: 7px;
+}
+.state-card {
+  padding: 10px 11px;
+  background: #fff;
+  border: 1px solid #dedfd9;
+  border-radius: 6px;
+}
+.state-card-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 11px;
+}
+.state-card-top span {
+  color: #5f645d;
+  font-size: 13px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.state-card p {
+  margin: 5px 0 0;
+  color: #757a73;
+  font-size: 10px;
+  line-height: 1.45;
+}
+.state-legend {
+  display: grid;
+  gap: 5px;
+  margin-top: 7px;
+}
+.state-legend-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.state-chip {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  padding: 3px 6px;
+  color: #51564f;
+  background: #f2f1ec;
+  border: 1px solid #d8d9d3;
+  border-radius: 4px;
+  font-size: 9px;
+  line-height: 1.25;
+}
+.state-chip[data-state="reviewed_classified"] { border-left: 3px solid #5d6f5f; }
+.state-chip[data-state="reviewed_inconclusive"] { border-left: 3px solid #9a7b47; }
+.state-chip[data-state="planned_unresearched"] { border-left: 3px dashed #78818a; }
+.state-chip[data-state="held"] { border-left: 3px double #8b6964; }
+.state-chip[data-state="c0_only"] { border-left: 3px dotted #8b8f88; }
+.state-chip[data-state="unresolved_no_geometry"] { border-left: 3px solid #6f7f8a; }
+.state-count {
+  flex: 0 0 auto;
+  color: #6e736c;
+  font-size: 9px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.legend-section-title {
+  margin-top: 8px;
+  color: #686d66;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+}
+.legend-section-spaced {
+  margin-top: 11px;
+  padding-top: 9px;
+  border-top: 1px solid #dddeda;
+}
+.map-truth-note {
+  margin-top: 15px;
+  text-align: left;
+}
+
 .place-list {
   display: grid;
   gap: 8px;
