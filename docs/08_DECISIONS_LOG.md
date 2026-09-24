@@ -1502,3 +1502,48 @@ No public/canonical promotion occurs.
 - no R2, feature queue, geometry programme or new subject-research tranche is authorized.
 
 **Canonical release:** v0.6.1 unchanged.
+
+
+## D-086 — Accept EXP-02 portable-core result without canonical schema change
+**Date:** 2026-09-24  
+**Status:** accepted internal discovery decision
+
+**Decision:** Accept EXP-02 disposition:
+
+> **PORTABLE CORE SURVIVES + SIMPLIFY CANDIDATE**
+
+The frozen R1 evidence contract can be represented as:
+- package-level manifest/state definitions;
+- flat target table;
+- flat source-relation table;
+- human-readable Markdown packets;
+
+without requiring bespoke application structure for the fixed internal invariants.
+
+**Preserve as core:**
+- bounded proposition + required abstention;
+- evidence locus + inference extent;
+- per-target temporal state + display rule;
+- source version + locator + independence group;
+- language/access limitation;
+- coverage confidence;
+- explicit research-state / non-absence semantics;
+- law/practice and network/territorial notes when present.
+
+**Simplification candidates in this frozen set:**
+- hoist uniform per-row review state to package level;
+- hoist uniform unresolved geometry state to package default with overrides;
+- treat Atlas astronomical internal year as application-specific rather than evidence-packet core;
+- treat detailed unresolved-geometry provenance and some source-relation enrichment as outside the minimum portable packet.
+
+**Limits:**
+- no canonical ontology/schema change follows automatically;
+- no historical classification changes;
+- no claim is made about external user value, preference or adoption;
+- this result does not prove the Atlas UI is useless.
+
+**Evidence:** flat tables + manifest are about 19% of the uncompressed current candidate JSON size while preserving the fixed internal invariants; compact experiment JSON is about 35%.
+
+**Consequence:** strengthen the working hypothesis that the demonstrated core is a portable evidence method/package rather than application-dependent structure.
+
+Stop after EXP-02 and reassess project form before authorizing a successor.
