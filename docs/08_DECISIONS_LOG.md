@@ -1374,7 +1374,7 @@ This decision closes technical MVP delivery but does **not** canonicalize or pub
 
 ## D-082 — Discovery v2 separates novelty from value and pauses feature-first discovery
 **Date:** 2026-09-24  
-**Status:** candidate decision under #198 until merged
+**Status:** accepted
 
 **Decision:** Adopt a corrected post-MVP discovery standard that treats competitor existence and novelty as evidence inputs, not decision shortcuts.
 
@@ -1407,3 +1407,36 @@ Governing principle:
 - v0.6.1 remains canonical and R1.8 publication remains separate.
 
 **Durable method:** `docs/discovery/DISCOVERY_STANDARD_V2.md`.
+
+
+## D-083 — Finish R1 release/no-release gate before external participant execution
+**Date:** 2026-09-24  
+**Status:** accepted sequencing decision
+
+**Decision:** Make #203 the single active project boundary.
+
+The #200 external expert audit protocol is frozen and may remain prepared, but participant case execution waits until R1.8 identifies the exact frozen artifact/packet to carry forward.
+
+**Red-team rationale:**
+- sponsor usability is not external-user validation;
+- #200 preparation should not be discarded or repeatedly redesigned;
+- recruitment feasibility may proceed in parallel;
+- participant execution against a potentially superseded R1 packet would contaminate the experiment;
+- “publish” must not imply canonical promotion;
+- closing R1 on REWORK would hide unfinished release work;
+- freezing a permanent “method/package” identity before external evidence would bias discovery.
+
+**R1.8 dispositions:**
+- **PUBLISH_CANDIDATE** — close R1; non-canonical candidate/research preview only unless separately promoted;
+- **HOLD_NO_RELEASE** — close R1 with no publication;
+- **REWORK** — keep R1 open; fix only release-blocking defects and rerun #203.
+
+**Consequences:**
+- #159 closes only on PUBLISH_CANDIDATE or HOLD_NO_RELEASE;
+- #200 remains the highest-information post-R1 experiment;
+- no participant case task runs before #203;
+- recruitment feasibility may proceed;
+- v0.6.1 remains canonical;
+- no R2 or feature-delivery queue is authorized.
+
+**Durable gate:** `docs/mvp/r1.8-sponsor-review.md`.
