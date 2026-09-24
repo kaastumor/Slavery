@@ -1177,3 +1177,51 @@ The key question is now:
 #198 is active. #185–#187 are blocked until that question is reassessed.
 
 Durable standard: `docs/discovery/DISCOVERY_STANDARD_V2.md`.
+
+
+### HC-019 — R1.8 sequencing red team — 2026-09-24
+
+Decision: **FINISH THE R1 RELEASE/NO-RELEASE BOUNDARY BEFORE RUNNING EXTERNAL CASE TASKS.**
+
+The proposed post-reset sequence was attacked before implementation.
+
+#### What survived
+
+- R1 still needs an explicit end-state because #159 requires a release/no-release gate.
+- #200 remains the highest-information external-value experiment.
+- no feature queue should restart before that external-value uncertainty is reduced.
+
+#### What changed
+
+The initial plan was too serial and too easy to misread.
+
+Corrections:
+- sponsor usability is only a release-coherence gate, not user validation;
+- #200 protocol is frozen now rather than waiting;
+- recruitment feasibility may proceed in parallel;
+- participant execution waits for #203 so the tested packet cannot be silently superseded;
+- PUBLISH became PUBLISH_CANDIDATE to prevent canonical-release ambiguity;
+- HOLD_NO_RELEASE is an acceptable completed R1 outcome;
+- REWORK keeps R1 open;
+- “method/package” remains a working hypothesis, not a frozen project identity.
+
+#### Why #203 is now the active boundary
+
+R1 has:
+- completed subject research;
+- passed release QC with limitations;
+- produced a green technical MVP candidate;
+- not yet completed its sponsor release/no-release gate.
+
+Closing that programme boundary before external task execution prevents the project from testing an artifact whose own sponsor-level coherence is still unresolved.
+
+#### Why #200 remains prepared
+
+The external expert audit attacks the most important remaining value hypothesis:
+whether the structured evidence packet transfers its internal review value to independent reviewers.
+
+The experiment is preserved, not postponed by indecision.
+
+Only participant execution is sequenced after R1.8.
+
+Durable gate: `docs/mvp/r1.8-sponsor-review.md`.
