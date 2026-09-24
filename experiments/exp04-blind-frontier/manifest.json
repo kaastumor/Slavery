@@ -2,7 +2,7 @@
   "experiment": "EXP-04",
   "state": "complete_method_test_with_historical_cases_under_review",
   "canonical_effect": "none",
-  "reviewed_targets": 5,
+  "reviewed_targets": 0,
   "targets_under_review": 3,
   "not_started": 0,
   "base_commit": "5b95ed1c01d0401ab47a2b189b6b4a5668c27a3b",
@@ -24,5 +24,6 @@
     "source_relations.csv": "32d42829225776495c32dc02ab26b901dcf03bb1590b7f0d52aa21e8d76ccbc0",
     "targets_extended.csv": "54d526eb0ed6e098ba848c09206a040ce4d6a2d016b2c56fed474395c76565c6"
   },
-  "method_disposition": "success_portable_contract_survives_exp04"
+  "method_disposition": "success_portable_contract_survives_exp04",
+  "researched_internal_targets": 5
 }
