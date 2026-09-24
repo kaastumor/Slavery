@@ -1547,3 +1547,49 @@ without requiring bespoke application structure for the fixed internal invariant
 **Consequence:** strengthen the working hypothesis that the demonstrated core is a portable evidence method/package rather than application-dependent structure.
 
 Stop after EXP-02 and reassess project form before authorizing a successor.
+
+
+## D-087 — Simplify project form: portable evidence core, Atlas as view
+**Date:** 2026-09-24  
+**Status:** accepted project-form / architecture decision
+
+**Decision:** Adopt the following resting project form:
+
+> **portable reviewed evidence core + replaceable Atlas/map/table/API views**
+
+The project remains the **Historical Slavery Atlas**.
+
+“Atlas” is a geographic/time-aware inspection and publication mode. It is not the architectural owner of historical truth.
+
+**Evidence:**
+- H2: corpus/method beat the strongest baseline materially in only 1/3 tasks; thin view added 0/3 material gains;
+- COV-004: bespoke Atlas inspector did not materially beat a competent conventional map/register on the frozen map tasks;
+- COV-003/COV-004/R1: tiered evidence method, abstention, temporal/spatial guards, source dependency and research-state semantics survived;
+- R1: deterministic static candidate did not require a live evidence API;
+- EXP-02: fixed R1 safety/reconstructibility invariants survived in a manifest + flat target/source tables + Markdown packets.
+
+**Red-team result:**
+- do **not** infer that maps are useless;
+- do **not** rename the project away from Atlas;
+- do **not** delete PostgreSQL/PostGIS or the web implementation;
+- do **not** generalize frozen-set geometry simplification to future mixed-geometry releases;
+- do **not** treat the EXP-02 minimum packet as a canonical replacement schema;
+- do **not** infer user value from structural portability.
+
+**Architecture consequence:**
+- PostgreSQL/PostGIS remains valid research/curation infrastructure;
+- the preferred release/interchange boundary is reviewed research state → immutable portable evidence package;
+- maps, tables, Markdown, notebooks, APIs and web applications are presentation adapters;
+- no adapter may silently strengthen the reviewed evidence claim;
+- the research system may remain richer than the release package;
+- the release package may remain richer than any individual presentation view.
+
+**Execution consequence:**
+- current state becomes **PRESERVATION / IDLE**;
+- no R2, geometry-completion programme, feature queue, schema migration, portable-package productization or new discovery experiment is authorized automatically;
+- #200 external review remains deferred by sponsor;
+- reopen only on a concrete trigger defined in `docs/26_PROJECT_FORM_AFTER_EXP02.md`.
+
+**Canonical data:** v0.6.1 remains unchanged.
+
+**Durable reassessment:** `docs/26_PROJECT_FORM_AFTER_EXP02.md`.
