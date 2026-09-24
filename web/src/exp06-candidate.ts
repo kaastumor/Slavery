@@ -191,7 +191,7 @@ function renderOverview(data: CandidateBundle): void {
 
   panel.innerHTML = `
     <div class="panel-header">
-      <div class="panel-kicker">Issue #227 · publish / hold / rework gate</div>
+      <div class="panel-kicker">EXP-06 · published non-canonical candidate</div>
       <h2>EXP-06 evidence register</h2>
       <div class="panel-subhead">Exact non-canonical candidate from historical commit ${escapeHtml(data.source_historical_commit.slice(0, 7))}. Marker position is navigation only.</div>
     </div>
