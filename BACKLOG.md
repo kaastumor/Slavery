@@ -3,47 +3,36 @@
 **Updated:** 2026-09-24  
 **Role:** canonical execution queue only; assumptions/risks/value evidence live in `docs/25_PROJECT_HEALTH.md`  
 **Canonical historical data release:** `v0.6.1` (unchanged)  
-**Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)
+**Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
+**Published research candidate:** `exp06-candidate-v1` at `exp06-candidate.html` (non-canonical)
 
 This file answers **what is justified to work on next**.
 
 ---
 
-# EXP-06 RELEASE GATE — PUBLISH_CANDIDATE
+# NEXT HORIZON SELECTION — historical evidence
 
-**Issue:** #227  
-**Current stage:** FINAL MERGE + STATIC DEPLOYMENT VERIFICATION
+EXP-06 candidate v1 is **published as a non-canonical research candidate**.
 
-EXP-06 candidate v1 passed its bounded publish/hold/rework gate after one concrete
-responsive-layout repair.
+Completed gate:
+- issue #227 closed;
+- PR #228 merged as `40ef91d837376f6a67911ab76921141937e8cde7`;
+- successful browser review `36054132409`;
+- successful Pages deployment `36055931914`;
+- deployed Pages artifact contains the exact approved candidate bundle;
+- canonical v0.6.1 remains unchanged.
 
-Disposition: **PUBLISH_CANDIDATE**.
+The project now returns to **bounded historical evidence work**, not application
+expansion.
 
-Reviewed candidate evidence:
-- historical source commit `16906affed159722cf940e6723401c7ab4e5d9f4`;
-- successful browser run `36054132409`;
-- browser job `107816768565`;
-- browser artifact `10831472682`;
-- zero page errors / zero semantic failures after rework.
+**Current exact action:** compare remaining frozen registry targets and prior experiment
+coverage, then select one high-information historical horizon. Prefer underrepresented
+non-Atlantic/non-Western contexts and avoid re-researching EXP-03/04/06 cases unless a
+recorded reopening trigger has changed.
 
-Candidate semantics:
-- 3 bounded internal;
-- 1 researched inconclusive;
-- 2 under review;
-- 0 independently reviewed;
-- no P-levels;
-- no historical practice polygons;
-- canonical v0.6.1 unchanged.
-
-The candidate package includes manifest/checksums, QC, unresolved issues, exact
-portable CSVs and `REVIEW_DECISION.md`.
-
-**Next exact action:** merge PR #228 if ordinary checks remain green, verify Pages
-deployment of `exp06-candidate.html`, close #227, then select the next bounded
-historical evidence horizon by expected information gain.
-
-Do not insert another application/product horizon. Candidate publication itself does
-not authorize canonical promotion or new feature work.
+If the best candidates are C0-only rather than QA-ready C1, run a bounded
+identity/anchor qualification tranche first. Do not silently promote a C0 row into
+subject research.
 
 
 ## Discovery execution
@@ -89,7 +78,7 @@ Do **not** use elapsed research time alone as a stop criterion.
 
 # PARKED / trigger-bound operational debt
 
-These are not eligible while #227 is active unless they block the candidate gate.
+These remain trigger-bound and are not the default historical horizon.
 
 ## #43 — protected staging / release-promotion administration
 
@@ -111,7 +100,7 @@ Handle when it materially blocks evidence work; do not turn administration into 
 
 # Explicitly NOT the current horizon
 
-Do not let candidate review become platform drift. #227 does **not** authorize:
+Do not let renewed historical research become platform drift. The next historical horizon does **not** authorize:
 
 - M2 production schema migration;
 - frontend redesign;
