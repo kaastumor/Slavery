@@ -1,11 +1,19 @@
 # System Architecture
 
-**Architecture status:** approved migration target; not yet the canonical data implementation  
+**Architecture status:** approved research/curation target; presentation/release boundary simplified after EXP-02; not yet the canonical data implementation  
 **Canonical data remains:** `Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx`
 
 ## 1. Architectural goal
 
-Build a research-grade historical evidence system that can power a fully interactive web map without making the web application itself the source of historical truth.
+Build a research-grade historical evidence system whose reviewed output can be reconstructed and consumed independently of any one application.
+
+The system may power an interactive historical Atlas, ordinary GIS, tables, Markdown packets, notebooks or APIs, but no presentation surface is the source of historical truth.
+
+After EXP-02, the preferred release boundary is:
+
+> **reviewed research state → immutable portable evidence package → replaceable presentation adapters**
+
+PostgreSQL/PostGIS remains the working research/curation target. The portable package is a release/interchange boundary, not a replacement canonical schema.
 
 The architecture must support:
 
@@ -33,22 +41,48 @@ External sources / archives / datasets / scholarship
        parsing, normalization, validation
                      |
                      v
-        CANONICAL RESEARCH DATABASE
+        RESEARCH / CURATION SYSTEM
              PostgreSQL + PostGIS
                      |
-          +----------+-----------+
-          |                      |
-          v                      v
-   PUBLISH / MAP VIEWS      RESEARCH API
- reviewed/released data     claims/evidence
-          |                      |
-          +----------+-----------+
                      v
-               WEB APPLICATION
-                  MapLibre
+           REVIEW / RELEASE GATE
+                     |
+                     v
+       IMMUTABLE EVIDENCE PACKAGE
+ manifest + target rows + source relations
+                     |
+        +------------+-------------+-------------+
+        |                          |             |
+        v                          v             v
+  MAP / GIS VIEW             TABLE / MD      API / WEB
+ geographic adapter          inspection       adapter
 ```
 
-The exact hosting provider, backend framework and frontend framework are implementation choices. The separation of layers is the architectural requirement.
+The exact hosting provider, backend framework and frontend framework are implementation choices.
+
+The architectural requirement is the separation of:
+- source-native evidence;
+- research/curation state;
+- reviewed release state;
+- portable evidence package;
+- presentation adapters.
+
+A presentation adapter may omit information for a bounded task only if the omitted information cannot change the represented historical meaning. It may never strengthen a claim beyond the reviewed package.
+
+## 2A. Project-form boundary after EXP-02
+
+EXP-02 demonstrated, on the frozen R1 set, that the fixed safety/reconstructibility contract survives outside the application-shaped candidate JSON.
+
+This supports the following architecture policy:
+
+- the research database may remain richer than the portable package;
+- the portable package may remain richer than any single presentation view;
+- no view owns canonical truth;
+- uniform release-level facts may be hoisted to a package manifest when doing so is lossless for that release;
+- release-specific simplification must not be generalized silently to future mixed-state releases;
+- source/version identity and the distinctions that prevent false absence, false precision and false territorial inference remain explicit.
+
+The EXP-02 artifact is evidence for this boundary, not a canonical replacement data model.
 
 ## 3. Canonical database target
 
