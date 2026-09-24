@@ -10,44 +10,45 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CONSTITUTIONAL COMPRESSION / MODE TRANSITION — RESULT READY
+# CROSS-BATCH RESEARCH CONSOLIDATION — RESULT READY
 
-**Issue:** #255
-**Mode:** governance maintenance → consolidation handoff
-**Current stage:** MINIMAL AMENDMENT READY FOR MERGE
-**Historical subject research:** **PAUSED / NONE PERFORMED**
+**Issue:** #257  
+**Mode:** consolidation  
+**Current stage:** RECONCILIATION COMPLETE / MERGE GATE  
+**Disposition:** **REVIEW_RELEASE_CANDIDATE**  
+**Historical subject research:** **NONE PERFORMED**
 
-The Astra constitutional audit found that the project's historical safeguards remain
-load-bearing, but experiment-only continuation created a structural bias toward serial
-meta-discovery.
+R1 + EXP-04 + EXP-06 + EXP-07 + completed EXP-08 state are now reconciled into a
+single **non-canonical research inventory**.
 
-D-096 therefore changes **scheduling**, not historical methodology:
-- WIP = one active priority, not one mandatory experiment;
-- boundary modes are discovery / execution / consolidation / review-release / maintenance;
-- accepted methods may become operational within scope;
-- cross-batch reconciliation is required before sustained scaling/release;
-- review capacity constrains new intake;
-- BACKLOG owns current priority/mode; active checkpoint owns within-item progress;
-- whole-project complexity includes rules, metadata, standards, automation,
-  documentation and review burden.
+Key facts:
+- 41 unique targets;
+- 19 R1 rows internally adversarially reviewed;
+- 12 post-R1 rows researched internally;
+- 5 post-R1 rows remain under review;
+- 3 qualification-ready targets remain unresearched;
+- Kalabhra remains on identity/time hold;
+- Qi remains frozen/unstarted;
+- 0 independent historical reviews.
 
-DISC-09 / #253 and PR #254 are parked without a negative methodological verdict.
-Duplicate DISC-08 issue #248 is closed.
+Across 173 inspected source relations, one exact cross-experiment dependency overlap
+was found: Lustig & Lustig 2013 / `angkor-personnel-corpus`, shared by Angkor 1200
+and Khmer Empire 1300. The claims remain separately scoped but are not independent
+evidence streams.
 
-**Next mode after merge: CONSOLIDATION.**
+No R1 reviewed target ID conflicts with later subject experiments. EXP-07 → EXP-08
+target overlaps are deliberate qualification-to-research progressions, not competing
+claims.
 
-Open one bounded consolidation item to reconcile post-R1 / EXP-04 / EXP-06 / EXP-07 /
-EXP-08 artifacts into a cumulative **non-canonical research inventory**, checking:
-- duplicate/overlapping target identities;
-- claim revisions/supersession;
-- source identity and independence-group overlap;
-- current review state and publication ceiling;
-- unresolved issues;
-- review/reconciliation capacity before any new intake.
+**Next mode after merge: REVIEW / RELEASE.**
 
-Do **not** turn that reconciliation into canonical v0.6.1 mutation or automatic release.
+Freeze the 17 post-R1 subject-research target IDs as one cumulative internal review
+tranche. Review existing evidence only; do **not** admit new targets or resume Qi.
+Goal: one cumulative non-canonical review candidate or explicit HOLD decision.
 
-EXP-08 remains open/paused after 3/4. **Qi — 500 BCE remains frozen/unstarted.**
+Do not canonicalize or publish automatically. v0.6.1 remains canonical.
+
+EXP-08 stays paused after 3/4.
 
 ## Discovery execution
 
@@ -65,28 +66,31 @@ Do not skip required relevant checks or rerun unchanged successful jobs.
 
 ## Continuation rule
 
-After the active bounded horizon closes:
+D-096 governs continuation.
 
-1. reconcile the evidence;
-2. identify the most decision-relevant unresolved uncertainty;
-3. compare plausible next experiments by expected information gain;
-4. select **one** bounded successor (WIP 1);
-5. preregister its question, falsifier, evidence contract and complexity boundary;
-6. continue.
+At a boundary choose the next justified **mode**:
+1. discovery;
+2. execution;
+3. consolidation;
+4. review/release;
+5. maintenance;
+6. no justified work.
 
-Prefer real historical/source research over meta-work when both can answer the uncertainty.
+WIP = one active priority, not one mandatory experiment.
 
-A no-work state is justified only when the next useful step is genuinely blocked by unavailable evidence/permissions, would violate project constraints, or no bounded experiment can materially change belief. “The previous horizon completed” is not itself a reason to idle.
-
-## Resource priority
-
-Optimize in this order:
+Choose by:
 1. evidence quality;
-2. focus / question discipline;
-3. project complexity;
-4. only then execution convenience.
+2. decision importance / project goal;
+3. focus;
+4. review/reconciliation capacity;
+5. whole-project complexity;
+6. only then execution convenience.
 
-Do **not** use elapsed research time alone as a stop criterion.
+Elapsed time alone is not a stop rule, and unused capacity is not a reason to invent
+another experiment.
+
+Accepted methods may be used within their declared operational scope without re-proving
+their value. Reopen them only on a concrete trigger recorded in D-096.
 
 ---
 

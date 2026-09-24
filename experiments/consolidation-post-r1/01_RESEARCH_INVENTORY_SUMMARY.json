@@ -1,0 +1,39 @@
+{
+  "inventory_kind": "noncanonical_cross_batch_research_inventory",
+  "canonical_release": "v0.6.1_unchanged",
+  "target_count": 41,
+  "stage_counts": {
+    "review_complete": 19,
+    "under_review": 5,
+    "researched_internal": 12,
+    "qualification_complete": 4,
+    "frozen_unstarted": 1
+  },
+  "publication_ceiling_counts": {
+    "R1_candidate_HOLD_NO_RELEASE": 19,
+    "internal_research_only": 8,
+    "exp06_noncanonical_publish_candidate": 6,
+    "internal_research_only_paused": 4,
+    "qualification_only_noncanonical": 4
+  },
+  "internally_adversarially_reviewed_r1": 19,
+  "independent_reviewed": 0,
+  "under_review_targets": [
+    "R1:L:1300:B",
+    "R1:L:500:F",
+    "R1:L:COV2:-500:C",
+    "R1:P:-2000:E:r1",
+    "R1:P:-500:E:r1"
+  ],
+  "qualification_ready_unresearched": [
+    "R1:N:ifugao_1700",
+    "R1:N:swahili_1400",
+    "R1:P:1800:E:r1"
+  ],
+  "identity_time_hold": [
+    "R1:P:500:E:r1"
+  ],
+  "frozen_unstarted": [
+    "R1:P:-500:F:r2"
+  ]
+}

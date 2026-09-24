@@ -33,6 +33,7 @@ Durable state:
 - DISC-07 added the joint chronology × broad-frame-family QA rule (D-094);
 - DISC-08 permits only narrow/optional Frictionless reuse; the Atlas manifest remains authoritative (D-095);
 - D-096 changes continuation from automatic successor experiments to mode-level selection and requires cross-batch consolidation/review-capacity control before sustained scaling;
+- cross-batch consolidation now reconciles 41 unique R1/EXP-04/06/07/08 targets and selects **review/release** as the next mode rather than new intake;
 - DISC-09 is parked, not rejected.
 
 
