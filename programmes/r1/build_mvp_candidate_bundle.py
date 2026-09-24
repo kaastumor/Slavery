@@ -24,6 +24,62 @@ INPUTS = {
 }
 
 
+RESEARCH_STATE_DEFINITIONS = [
+    {
+        "id": "reviewed_classified",
+        "label": "Reviewed · bounded-supported",
+        "description": "C1 research and adversarial replay completed with a bounded-supported outcome. This is not an intensity score.",
+    },
+    {
+        "id": "reviewed_inconclusive",
+        "label": "Reviewed · inconclusive",
+        "description": "C1 research and adversarial replay completed, but the exact frozen target/year/frame question remains inconclusive. This is not absence.",
+    },
+    {
+        "id": "planned_unresearched",
+        "label": "Planned · unresearched",
+        "description": "Identity/time QA permits subject research, but slavery/coercion research has not been performed. This is not absence.",
+    },
+    {
+        "id": "held",
+        "label": "Held",
+        "description": "Identity/time/frame QA blocks subject research until the issue is resolved. This is not absence and no substitute target is used.",
+    },
+    {
+        "id": "c0_only",
+        "label": "Registered only · C0",
+        "description": "Registered/research-state target only. C0 is never evidence of historical presence or absence.",
+    },
+]
+
+GEOMETRY_STATE_DEFINITIONS = [
+    {
+        "id": "unresolved_no_geometry",
+        "label": "Geometry unresolved",
+        "description": "No reviewed target geometry is materialized. The neutral world land layer remains visible; unresolved geometry does not imply historical absence.",
+    },
+]
+
+
+def overview_research_state(target: dict) -> str:
+    state = target["release_research_state"]
+    if state == "c1_review_complete":
+        outcome = target["classification_outcome"]
+        if outcome == "classified":
+            return "reviewed_classified"
+        if outcome == "inconclusive":
+            return "reviewed_inconclusive"
+        raise AssertionError(f"unsupported reviewed outcome for MVP overview: {outcome}")
+    mapping = {
+        "planned_c1_unresearched_ready": "planned_unresearched",
+        "held_identity_or_time": "held",
+        "c0_registered_unresearched": "c0_only",
+    }
+    if state not in mapping:
+        raise AssertionError(f"unsupported research state for MVP overview: {state}")
+    return mapping[state]
+
+
 def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -67,6 +123,35 @@ def build() -> dict:
     assert all(r.get("review_state") == "internally_adversarially_reviewed" for r in rows), "review label drift"
     assert manifest["canonical_release"] == "v0.6.1"
 
+    geometry_by_id = {row["target_id"]: row for row in geometry["rows"]}
+    overview_targets = []
+    research_counts = {item["id"]: 0 for item in RESEARCH_STATE_DEFINITIONS}
+    geometry_counts = {item["id"]: 0 for item in GEOMETRY_STATE_DEFINITIONS}
+    for target in targets:
+        tid = target["target_id"]
+        research_state = overview_research_state(target)
+        geometry_state = geometry_by_id[tid]["representation_state"]
+        assert research_state in research_counts, f"unregistered overview research state: {research_state}"
+        assert geometry_state in geometry_counts, f"unregistered overview geometry state: {geometry_state}"
+        research_counts[research_state] += 1
+        geometry_counts[geometry_state] += 1
+        overview_targets.append(
+            {
+                "target_id": tid,
+                "research_state": research_state,
+                "geometry_state": geometry_state,
+            }
+        )
+
+    assert research_counts == {
+        "reviewed_classified": 5,
+        "reviewed_inconclusive": 14,
+        "planned_unresearched": 15,
+        "held": 2,
+        "c0_only": 41,
+    }, f"overview research-state drift: {research_counts}"
+    assert geometry_counts == {"unresolved_no_geometry": 77}, f"overview geometry-state drift: {geometry_counts}"
+
     pinned = {item["path"]: item["blob_sha"] for item in manifest["immutable_inputs"]}
     for key in ("c1_tranche_01", "c1_tranche_02", "c1_tranche_03"):
         path = INPUTS[key]
@@ -82,6 +167,18 @@ def build() -> dict:
         "non_absence_rule": registry["rule"],
         "source_identity": {name: {"path": path.relative_to(ROOT).as_posix(), "blob_sha": blob_sha(path)} for name, path in INPUTS.items()},
         "counts": {"targets": 77, "reviewed_c1": 19, "source_relations": dependencies["source_relation_count"], "independence_groups": len({g for s in dependencies["source_versions"] for g in s.get("independence_groups", [])})},
+        "overview_semantics": {
+            "rule": "Research state and geometry state are independent presentation dimensions. Neither is a historical intensity or absence scale.",
+            "research_states": [
+                {**definition, "count": research_counts[definition["id"]]}
+                for definition in RESEARCH_STATE_DEFINITIONS
+            ],
+            "geometry_states": [
+                {**definition, "count": geometry_counts[definition["id"]]}
+                for definition in GEOMETRY_STATE_DEFINITIONS
+            ],
+            "targets": overview_targets,
+        },
         "targets": targets,
         "reviewed_c1": rows,
         "source_dependencies": dependencies,
