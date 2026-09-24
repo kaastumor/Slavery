@@ -10,48 +10,39 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# POST-R1 CUMULATIVE INTERNAL REVIEW — RESULT READY
+# OVERNIGHT READY-QUEUE PROGRAMME — ACTIVE
 
-**Issue:** #259  
-**Mode:** review / release  
-**Current stage:** REPLAY COMPLETE / MERGE GATE  
-**Disposition:** **CUMULATIVE_NONCANONICAL_CANDIDATE**  
-**Historical/source research:** **NONE PERFORMED**
+**Issue:** #262  
+**Mode:** execution → consolidation → review/release  
+**Sponsor authorization:** 2026-09-25 overnight run  
+**Historical intake:** authorized only for the four frozen/qualified targets below
 
-Frozen 17-row replay result:
-- 12 `ACCEPT_INTERNAL_REVIEW`;
-- 5 `HOLD_EXISTING_EVIDENCE`;
-- 0 narrowed;
-- 0 rejected.
+**Morning goal:** research and internally review the currently ready historical queue,
+then produce one cumulative non-canonical successor candidate or explicit HOLD.
 
-HOLD rows:
-- Indus Valley Civilization — 2000 BCE;
-- Hadhramaut — 500 BCE;
-- Cuzco — 1300 CE;
-- Chámpa — 500 CE;
-- Magadha–Haryanka — 500 BCE.
+Frozen overnight targets:
+1. Qi — 500 BCE — `R1:P:-500:F:r2`
+2. Swahili maritime trade network — 1400 — `R1:N:swahili_1400`
+3. Ifugao communities — 1700 — `R1:N:ifugao_1700`
+4. Khanate of Kokand — 1800 — `R1:P:1800:E:r1`
 
-Source/reconstructibility gate:
-- 113 source relations inspected;
-- 0 missing source/version refs;
-- 0 missing independence groups;
-- 0 missing claim-fitness fields;
-- 0 within-target duplicate exact source versions;
-- 1 cross-target exact dependency family: `angkor-personnel-corpus` across Angkor
-  1200 and Khmer 1300.
+Execution order and run contracts are canonical in issue #262.
 
-Candidate ID: `post-r1-cumulative-review-v1`.
+Eight-run sequence:
+1. Qi subject research / close EXP-08;
+2. Swahili subject research;
+3. Ifugao subject research;
+4. Kokand subject research;
+5. four-case reconciliation/source dependency audit;
+6. cumulative adversarial internal review;
+7. integrate admitted rows into a new immutable non-canonical successor candidate;
+8. final QC + adversarial morning gate + handoff.
 
-This is an **internal non-canonical review candidate** only. Independent historical
-review remains 0. No public/canonical publication is authorized.
+WIP=1. Each run must finish/reconcile previous open WIP before advancing.
+No fifth target, no P-level, no geometry promotion, no automatic public/canonical
+release, and no threshold weakening to finish by morning.
 
-**Next mode after merge: MAINTENANCE / TRIGGER-BOUND REVIEW.**
-
-Do not resume Qi or other intake automatically. Reopen for sponsor-authorized historical
-intake, independent review, a concrete publication/consumer need, a demonstrated defect,
-or new evidence satisfying a HOLD trigger.
-
-v0.6.1 remains canonical.
+Canonical v0.6.1 remains unchanged.
 
 ## Discovery execution
 
