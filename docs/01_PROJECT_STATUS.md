@@ -5,26 +5,22 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-24  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **R1.8 REWORK (#203) — committed MVP candidate was stale; bounded release-integrity repair active; external involvement deferred by sponsor**
+**Execution state:** **R1 COMPLETE — HOLD_NO_RELEASE; EXP-02 minimum sufficient evidence packet active; external involvement deferred**
 
 ## Current execution order
 
-1. **#203 — R1.8 bounded REWORK**
-   - refresh stale committed candidate bundle;
-   - enforce pre-generation freshness check in CI;
-   - verify deterministic committed bytes;
-   - then return to sponsor release/no-release review.
+1. **#205 — EXP-02 minimum sufficient evidence packet**
+   - active;
+   - internal-only structural/portability experiment;
+   - frozen input: R1 candidate at `a6987d3f14369c6ea2d7b2b3db74ac65faa8ec57`.
 
-2. **#205 — minimum sufficient evidence packet**
-   - protocol prepared;
-   - execute only after #203 freezes R1;
-   - internal-only structural/portability experiment.
-
-3. **#200 — external expert audit**
+2. **#200 — external expert audit**
    - deferred by sponsor;
    - no recruitment/contact/participant execution.
 
-4. No R2, feature queue, geometry expansion or new subject-research horizon is authorized.
+3. No R2, feature queue, geometry expansion or new subject-research horizon is authorized.
+
+R1 / #159 is complete with **HOLD_NO_RELEASE**. v0.6.1 remains canonical.
 
 ## Direction after H2
 
