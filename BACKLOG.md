@@ -9,61 +9,58 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# EXP-04 CLOSURE CANDIDATE — blind frontier tranche
+# ACTIVE PRESENTATION HORIZON — EXP-04 Research Preview
 
-**Active issue:** #213
-**Current stage:** CLOSURE CANDIDATE — awaiting one batched PR/CI
+**Active issue:** #221  
+**Current stage:** IMPLEMENTATION / PRESENTATION TEST — WIP 1
 
-EXP-03 (#211, merged #212) completed with CORE REQUIRES EXTENSION; D-089 accepted
-historical terminology/category mapping and source role/claim fitness in the portable contract.
+EXP-04 (#213, merged #220) completed its eight-case method/representation test with
+**SUCCESS — PORTABLE CONTRACT SURVIVES EXP-04**. Five targets are
+`researched_internal`, three remain `under_review / unassessed`, and zero EXP-04
+targets are independently historically reviewed.
 
-EXP-04 tests that contract on the eight previously registered targets frozen in #213.
-Protocol and pinned selection: `experiments/exp04-blind-frontier/00_PROTOCOL.md`
-and `sample.json`.
+Canonical v0.6.1 is unchanged.
 
-Current checkpoint: **all eight frozen cases researched; five internally
-researched bounded outcomes and three under-review/unassessed historical cases**.
+Current horizon: make that experimental package inspectable without promoting it to
+canonical/public historical data.
 
-Method/representation result: **SUCCESS — PORTABLE CONTRACT SURVIVES EXP-04**.
-The integrated dependency/category/access audit and adversarial pass found no repeated
-material distinction that requires another D-089 field extension. This remains an
-internal method result, not independent historical validation.
+Implementation boundary:
+- deterministic EXP-04 preview JSON generated from the checked-in target/source tables;
+- separate static `web/research-preview.html` page;
+- reuse existing Vite + MapLibre stack;
+- neutral land always visible;
+- navigation/reference markers only; no practice polygons;
+- map marker state reflects research stage only, never historical intensity;
+- table/detail view exposes bounded proposition, abstention, temporal state,
+  evidence-locus/inference-extent distinction, category notes, access limits and
+  source-family dependencies.
 
-Historical cases still under review:
-- Indus — direct Laursen–Steinkeller pp.83–84 recovery trigger retained;
-- Hadhramaut — target-specific searchable Hadramitic corpus/social-structure recovery
-  trigger retained;
-- Cuzco — target-specific c.1200–1350 labor/status evidence trigger retained.
+The preview must keep Indus, Hadhramaut and Cuzco visibly under review and must preserve
+Andaman's external-colonial-positive / indigenous-internal-unassessed split.
 
-Do not retry unchanged access or reinterpret under-review as absence.
+**Next:** finish deterministic bundle/build checks, run one scoped PR CI cycle, deploy
+through the existing GitHub Pages path, then inspect the live preview for misleading
+compression. Any visual failure is a presentation/representation finding, not permission
+to strengthen the historical rows.
 
-**Next after this closure candidate merges and #213 closes:** activate the already
-queued **non-canonical EXP-04 Research Preview** as WIP 1. No additional research
-tranche should intervene unless closure review finds a material defect.
+Project form remains: portable reviewed evidence core + replaceable Atlas/map/table/API
+views. No production API/database mutation, schema migration or platform expansion is
+authorized by #221.
 
-Project form: portable reviewed evidence core + replaceable Atlas/map/table/API views.
-Canonical v0.6.1, frozen R1 registry and public preview remain unchanged.
+## Sponsor-visible milestone
 
-## Sponsor-visible milestone after EXP-04
+The current WIP **is** the sponsor-visible milestone: a non-canonical EXP-04
+**map + table** research preview.
 
-The next planned horizon is a **non-canonical EXP-04 Research Preview**: a thin
-ordinary **map + table** over the experimental portable package.
+Acceptance:
+- all eight frozen targets visible;
+- 5 internal / 3 under-review / 0 independently-reviewed counts remain explicit;
+- reference points are labeled navigation-only;
+- under-review is never styled as absence;
+- source counts never determine marker size/intensity;
+- canonical v0.6.1 and existing R1 candidate stay untouched;
+- page is reproducibly built and viewable from the ordinary static deployment path.
 
-Required behavior:
-- show research state and temporal precision;
-- separate evidence locus from inference extent;
-- expose category/mapping notes;
-- keep Indus, Hadhramaut and Cuzco visibly under review;
-- represent Andaman external colonial coercion separately from unassessed indigenous
-  internal practice;
-- use neutral land and only defensible point/route/reference geometry;
-- never infer practice extent or intensity from target labels, geometry or source
-  counts.
-
-Reuse the existing web/map path where possible. No platform redesign, production
-migration or automatic canonical/public release.
-
-This becomes current WIP only after #213 closes.
 
 ## Discovery execution
 
@@ -108,7 +105,7 @@ Do **not** use elapsed research time alone as a stop criterion.
 
 # PARKED / trigger-bound operational debt
 
-These are not eligible while #213 is active unless they block it.
+These are not eligible while #221 is active unless they block the preview.
 
 ## #43 — protected staging / release-promotion administration
 
@@ -130,7 +127,7 @@ Handle when it materially blocks evidence work; do not turn administration into 
 
 # Explicitly NOT the current horizon
 
-Do not let proactive research become platform drift. #213 does **not** authorize:
+Do not let the presentation test become platform drift. #221 does **not** authorize:
 
 - M2 production schema migration;
 - frontend redesign;
