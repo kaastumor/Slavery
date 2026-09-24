@@ -4,24 +4,36 @@ on:
   pull_request:
     paths:
       - "web/**"
+      - "programmes/r1/**"
       - ".github/workflows/web-mvp.yml"
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: web
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate candidate bundle
+        run: python programmes/r1/build_mvp_candidate_bundle.py
+      - name: Detect stale or non-deterministic output
+        run: |
+          python programmes/r1/build_mvp_candidate_bundle.py --check
+          sha256sum web/public/data/r1-mvp-candidate.json > /tmp/candidate.sha256
+          python programmes/r1/build_mvp_candidate_bundle.py
+          sha256sum --check /tmp/candidate.sha256
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
           cache: npm
           cache-dependency-path: web/package-lock.json
       - name: Runtime versions
+        working-directory: web
         run: |
           node --version
           npm --version
       - run: npm ci
+        working-directory: web
       - run: npm run build
+        working-directory: web
