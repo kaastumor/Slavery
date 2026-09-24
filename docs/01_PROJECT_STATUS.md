@@ -5,22 +5,49 @@ For execution order, use repository-root `BACKLOG.md`. GitHub `main`, open issue
 **Status date:** 2026-09-24  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **R1 COMPLETE — HOLD_NO_RELEASE; EXP-02 COMPLETE; internal core is portable; no successor authorized**
+**Execution state:** **PROJECT-FORM RECONCILED — portable evidence core + replaceable Atlas views; preservation/idle; no successor authorized**
 
 ## Current execution order
 
 There is no active delivery or discovery successor.
 
+Current resting form:
+- reviewed historical evidence core is portable;
+- PostgreSQL/PostGIS remains research/curation infrastructure;
+- immutable evidence packages are the preferred release/interchange boundary;
+- Atlas/map/table/API surfaces are replaceable presentation adapters;
+- v0.6.1 remains the canonical historical data release.
+
 Completed:
 1. R1 — **HOLD_NO_RELEASE**.
 2. #205 / EXP-02 — **PORTABLE CORE SURVIVES + SIMPLIFY CANDIDATE**.
+3. #209 — project-form reassessment — **SIMPLIFY + PRESERVE ATLAS AS VIEW**.
 
 Deferred:
 - #200 external expert audit; no recruitment/contact/participant execution.
 
-Do not open R2, a geometry programme, a feature queue or another internal experiment automatically.
+Do not open R2, a geometry programme, a feature queue, a schema migration or another internal experiment automatically.
 
-The next action is a project-form reassessment from the new evidence.
+Current state is **preservation / idle** until a concrete reopen trigger appears.
+
+## Project form after EXP-02
+
+D-087 / HC-023 reconcile the project after EXP-02.
+
+Best-supported form:
+
+> **portable reviewed evidence core + replaceable Atlas/map/table views**
+
+This does not rename the project or remove geographic presentation.
+
+It means:
+- evidence/release semantics are owned upstream of presentation;
+- the research database may remain richer than portable release artifacts;
+- the Atlas is a derived inspection surface rather than the architectural owner of truth;
+- no canonical schema change follows from EXP-02;
+- no active build/research horizon is currently justified.
+
+Durable reassessment: `docs/26_PROJECT_FORM_AFTER_EXP02.md`.
 
 ## Direction after H2
 
