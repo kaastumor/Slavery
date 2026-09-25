@@ -36,6 +36,21 @@ Candidate gate:
 A new candidate must improve coherent review/release state enough to justify another
 immutable package. It is not automatic bookkeeping for every reviewed row.
 
+Current branch result:
+- Lithuania 1300 — `ACCEPT_INTERNAL_REVIEW`;
+- Karnak 1000 BCE — `ACCEPT_INTERNAL_REVIEW`;
+- source reconciliation — PASS (12 delta relations; 0 exact overlap with v2 or
+  between the two delta rows);
+- candidate gate — **`KEEP_REVIEWED_DELTA_SEPARATE`**.
+
+This is a positive internal-review result, not a HOLD. No v3 package is built because
+v2 remains coherent and no publication/consumer/canonical trigger makes another
+immutable package decision-relevant. The reviewed delta remains durable and can be
+integrated later without new historical research.
+
+Next exact action: one coherent PR + normal scoped CI → merge → close #278 → return to
+the D-096 mode-selection boundary.
+
 No P-level, practice geometry, R1 state mutation, schema/ontology/database/API/frontend
 change, canonical/public release or independent-review claim.
 
