@@ -48,6 +48,26 @@ Allowed outcomes:
 `BOUNDED_SUPPORTED`, `RESEARCHED_INCONCLUSIVE`, or
 `HOLD_EVIDENCE_ACCESS_OR_SCOPE`.
 
+Current branch result: **RESEARCHED_INCONCLUSIVE** for Temple-of-Amun slave/unfree
+labour around 1000 BCE.
+
+What is supported:
+- earlier New Kingdom Amun/Karnak captive/enslaved labour;
+- near-anchor continuity of the Amun institution;
+- near-anchor subordinate/personnel/property context in the Amun priestly world,
+  including alienable/perpetual services.
+
+What remains unresolved:
+- a human slave/unfree labour category tied specifically to the Temple of Amun at
+  the selected anchor.
+
+Internal adversarial replay rejected four tempting bridges:
+New Kingdom continuity; `bꜣk.w = slave`; foreign/Asiatic = slave; and Amun-priestly
+family property = Temple-of-Amun workforce.
+
+Next exact action: one coherent PR + normal scoped CI → merge → close #276 → return to
+the D-096 mode-selection boundary. No automatic cumulative-candidate integration.
+
 No P-level, practice geometry, R1 reviewed-state mutation, schema/ontology change,
 database/API/frontend work, canonical mutation, cumulative-candidate integration or
 automatic publication.
