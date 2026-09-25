@@ -3,7 +3,7 @@
   "qc_state": "PASS_INTERNAL_NONCANONICAL",
   "predecessor_immutability": {
     "manifest_blob_sha": "abdf887ed33ee8b8813260a2a8482f752d387bfe",
-    "accepted_targets_blob_sha": "9f85c76c93f3c1b7601495222d3727c348639f",
+    "accepted_targets_blob_sha": "9f85c76c93f3c3b1f7601495222d3727c348639f",
     "note": "expected predecessor accepted-target SHA is checked again at Stage 8; v2 writes only to a new path"
   },
   "counts": {
