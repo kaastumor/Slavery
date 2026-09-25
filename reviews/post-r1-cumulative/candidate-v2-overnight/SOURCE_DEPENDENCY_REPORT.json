@@ -1,0 +1,75 @@
+{
+  "candidate_id": "post-r1-cumulative-review-v2-overnight",
+  "total_source_relations": 133,
+  "predecessor_source_relations": 113,
+  "new_source_relations": 20,
+  "exact_cross_target_overlap_count": 2,
+  "exact_cross_target_overlaps": [
+    {
+      "source_version_ref": "doi:10.3406/asean.2013.2272:2013",
+      "targets": [
+        "R1:N:angkor_1200",
+        "R1:P:1300:F:r1"
+      ],
+      "source_ids": [
+        "ANG-LUSTIG-LUSTIG-2013",
+        "KHM-LUSTIG-LUSTIG-2013"
+      ],
+      "rule": "one shared Angkor personnel source family; Khmer 1300 retains independent near-anchor Zhou Daguan support"
+    },
+    {
+      "source_version_ref": "Freeman-Grenville:EastAfricanCoast:2ed:1975:31-32",
+      "targets": [
+        "R1:N:great_zimbabwe_1400",
+        "R1:N:swahili_1400"
+      ],
+      "source_ids": [
+        "GZ-IBN-BATTUTA-KILWA-1331",
+        "SWA-IBN-BATTUTA-KILWA-1331"
+      ],
+      "rule": "one Ibn Battuta/Kilwa translation chain; Great Zimbabwe uses it as connected coastal context while Swahili uses it as bounded Kilwa node evidence"
+    }
+  ],
+  "overnight_within_target_repeated_groups": [
+    {
+      "target_id": "R1:P:-500:F:r2",
+      "group": "yue-shipu-narrative-family",
+      "relation_count": 3
+    },
+    {
+      "target_id": "R1:N:ifugao_1700",
+      "group": "barton-ifugao-ethnography",
+      "relation_count": 2
+    },
+    {
+      "target_id": "R1:N:ifugao_1700",
+      "group": "ifugao-archaeological-project",
+      "relation_count": 2
+    }
+  ],
+  "overnight_narrative_dependencies": [
+    {
+      "target_id": "R1:N:swahili_1400",
+      "source_id": "SWA-RODLAND-2026",
+      "depends_on": [
+        "SWA-VERNET-HABASQUE-2024",
+        "SWA-SONGO-MNARA-2020"
+      ]
+    },
+    {
+      "target_id": "R1:P:1800:E:r1",
+      "source_id": "KOK-NEWBY-2013",
+      "depends_on": [
+        "KOK-WATHEN-1834"
+      ]
+    },
+    {
+      "target_id": "R1:P:1800:E:r1",
+      "source_id": "KOK-IRANICA-2023",
+      "depends_on": [
+        "KOK-LEVI-2017"
+      ]
+    }
+  ],
+  "rule": "Dependency and reuse affect independence assessment only; source counts never mechanically determine prevalence, intensity or confidence."
+}
