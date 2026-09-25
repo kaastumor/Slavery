@@ -41,6 +41,21 @@ Qualification outcomes only:
 `QUALIFIED_C1_READY`, `HOLD_IDENTITY_OR_TIME`,
 `REJECT_FRAME_INVALID`, or `QUALIFICATION_INCONCLUSIVE`.
 
+Current branch result: **PASS — FOUR QUALIFIED**.
+
+Qualified rows:
+- Karnak 1000 BCE — institutional locus; estate/full-complex extent unresolved;
+- Tōdai-ji 800 — temple/institution locus; later estate/property extent unresolved;
+- Trans-Saharan network 1300 — changing multi-route network; no territorial polygon;
+- Sápmi / Sámi communities 1600 — retrospective multi-community region; no single polity/fixed boundary.
+
+Internal adversarial replay passed after these scope limits were made mandatory.
+No slavery/coercion subject research was performed.
+
+Next exact action: one coherent PR + normal scoped CI → merge → close #274 → return to
+the D-096 mode-selection boundary. Do not begin subject research until a separate
+subject-research sample is frozen.
+
 No subject slavery/coercion research, P-level, practice/legal/network classification,
 geometry promotion, R1 registry mutation, schema change, canonical change or automatic
 subject-research queue follows from qualification.
