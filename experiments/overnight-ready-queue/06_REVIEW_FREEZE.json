@@ -1,0 +1,45 @@
+{
+  "programme": "OVERNIGHT_READY_QUEUE",
+  "issue": 262,
+  "stage": 6,
+  "review_type": "internal_adversarial_cumulative_review",
+  "status": "inputs_frozen_before_review",
+  "base_commit": "eb055a76508628919131454604e11b3895269ee4",
+  "canonical_release": "v0.6.1_unchanged",
+  "membership": [
+    "R1:P:-500:F:r2",
+    "R1:N:swahili_1400",
+    "R1:N:ifugao_1700",
+    "R1:P:1800:E:r1"
+  ],
+  "input_blobs": {
+    "qi_packet": "c68afc14783d4d088a1dc43a26818f1b2f607709",
+    "exp08_targets": "db26844dc7666955b3b2d2360072aaf60bc6795b",
+    "exp08_sources": "cbb44a2972c8e234350db78de05df1bffcaacc9c",
+    "swahili_packet": "506f52fc6f01197c812ea441f3bf9e103e454a40",
+    "ifugao_packet": "5bf6c09262290da6d0bbbf6ce283143399e9f263",
+    "kokand_packet": "e1b312ca3a8679499c8ded636700bc2ae7266996",
+    "reconciliation_inventory": "b4040d7eabc40c91f865ee2a9bdde2b6f31ba618",
+    "dependency_report": "8dcd9ea93b1284a5c585bd38462a66c4287aad3c",
+    "reconciliation_report": "f6a95616b8205d5406020defe9f55ae3a4d39c7b"
+  },
+  "review_rule": "existing frozen evidence only; no new subject/source research; review bounded evidence state rather than require positive slavery classification",
+  "dispositions": [
+    "ACCEPT_INTERNAL_REVIEW",
+    "NARROW_AND_ACCEPT",
+    "HOLD_EXISTING_EVIDENCE",
+    "REJECT_ARTIFACT"
+  ],
+  "failure_classes": [
+    "temporal_leakage",
+    "target_context_leakage",
+    "network_territorial_leakage",
+    "event_status_inflation",
+    "false_source_independence",
+    "category_translation_inflation",
+    "geometry_inference",
+    "absence_inference",
+    "review_ceiling_inflation"
+  ],
+  "independent_historical_review_count": 0
+}
