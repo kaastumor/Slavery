@@ -10,47 +10,49 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — MAINTENANCE / TRIGGER-BOUND REVIEW
+# CURRENT MODE — EXECUTION
 
-**Latest completed programme:** #262 — overnight ready historical queue  
-**Latest internal candidate:** `post-r1-cumulative-review-v2-overnight`  
+**Active issue:** #272 — EXP-09 Lithuania 1300 bounded subject research  
+**Target:** `R1:P:1300:D:r1` — Grand Duchy of Lithuania — 1300 CE  
+**Frame:** polity; identity already validated in R1  
 **Canonical historical data release:** `v0.6.1` unchanged  
-**Historical intake:** no new tranche is currently authorized
+**WIP:** 1
 
-The sponsor-authorized four-target queue is complete:
-1. Qi — 500 BCE — internally reviewed bounded evidence state; exact Qi territorial
-   slavery/servitude remains researched-inconclusive.
-2. Swahili maritime trade network — 1400 — medieval slave-trade participation is
-   supported at the network dimension; coast-wide territorial prevalence and exact
-   volume remain unresolved.
-3. Ifugao communities — 1700 — exact-anchor slavery/status remains
-   researched-inconclusive; later traditional child sale, debt bondage, captivity and
-   slaveholding remain bounded contextual evidence.
-4. Khanate of Kokand — 1800 — exact-anchor slavery/slave-trade practice remains
-   researched-inconclusive; later early-nineteenth-century Kokand slavery/captive
-   enslavement remains bounded contextual evidence.
+Sponsor continuation authorization re-opened bounded historical intake after #262.
 
-The successor candidate contains:
-- 21 total members;
-- 16 internally accepted bounded evidence states;
-- 5 explicit HOLD rows;
-- 133 source relations by pinned lineage;
-- 2 explicit cross-target exact source-version dependencies;
-- 0 independent historical reviews.
+Why this target:
+- every EXP-07 `QUALIFIED_C1_READY` row has now received subject research;
+- Kalabhra remains an identity/time HOLD and is not eligible for subject research;
+- Lithuania is the remaining previously qualified untouched C1 target;
+- recent intake deliberately emphasized non-Western cases, so selecting Lithuania now
+  no longer defeats the balancing intent that previously deferred it;
+- using an existing qualified target avoids creating a new qualification batch first.
 
-Under D-096/D-098, the next justified mode is **maintenance / trigger-bound review**.
-This does not authorize another historical intake tranche automatically.
+Research question:
+> What bounded slavery/coercion interpretation, if any, is supportable for the Grand
+> Duchy of Lithuania at or close to 1300 CE?
 
-Reopen active work only for a concrete trigger such as:
-- new sponsor authorization for bounded historical intake;
-- independent/external historical review;
-- a concrete consumer/publication need for the cumulative candidate;
-- a demonstrated defect in an accepted row;
-- new evidence satisfying a recorded HOLD/reopen condition;
-- a production/release need that activates one of the parked operational items.
+Required controls:
+- no back-projection of later serfdom or sixteenth-century statutes;
+- no neighboring Rus'/Polish/Prussian/Teutonic substitution;
+- captivity != slave status without evidence;
+- law/status, territorial practice and external participation remain separate;
+- no source-count prevalence inference.
 
-The completed programme creates no P-level, historical-practice geometry, canonical
-release, public release, R1 reviewed-state, schema, database/API or frontend change.
+Allowed outcomes:
+`BOUNDED_SUPPORTED`, `RESEARCHED_INCONCLUSIVE`, or
+`HOLD_EVIDENCE_ACCESS_OR_SCOPE`.
+
+Current branch result: **BOUNDED_SUPPORTED**, narrowed to institutional presence in at
+least part of the grand-ducal court/domain economy around the 1300 horizon. The result
+has passed internal adversarial replay. It is not yet merged or independently reviewed.
+
+Next exact action: normal scoped PR verification → merge → close #272 → return to the
+D-096 mode-selection boundary. Do not integrate Lithuania into the frozen cumulative
+candidate automatically.
+
+No P-level, practice geometry, R1 reviewed-state mutation, schema/ontology change,
+database/API/frontend work, canonical mutation or automatic publication.
 
 ## Discovery execution
 

@@ -65,7 +65,7 @@ A missing claim must never be rendered as a historical negative.
 - R1 completed with **HOLD_NO_RELEASE**; its repaired candidate remains a frozen internal reference rather than a public/canonical promotion.
 - EXP-02 showed that the frozen R1 safety/reconstructibility contract survives in a portable package manifest + flat target/source tables + optional Markdown packets.
 - That portable form is an architectural/release-boundary result, **not** a canonical schema migration.
-- Current priority and mode are owned only by root `BACKLOG.md`. D-096 replaces experiment-only continuation with discovery / execution / consolidation / review-release / maintenance mode selection. The next post-amendment mode is consolidation; EXP-08 remains paused and Qi — 500 BCE remains frozen/unstarted.
+- Current priority and mode are owned only by root `BACKLOG.md`. D-096 replaces experiment-only continuation with discovery / execution / consolidation / review-release / maintenance mode selection. EXP-08 is complete 4/4; the sponsor-authorized overnight queue produced the non-canonical `post-r1-cumulative-review-v2-overnight` candidate, and the current bounded execution state is owned by `BACKLOG.md`.
 
 ## Active-continuity rule
 
