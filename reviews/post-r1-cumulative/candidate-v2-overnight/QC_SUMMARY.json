@@ -1,0 +1,37 @@
+{
+  "candidate_id": "post-r1-cumulative-review-v2-overnight",
+  "qc_state": "PASS_INTERNAL_NONCANONICAL",
+  "predecessor_immutability": {
+    "manifest_blob_sha": "abdf887ed33ee8b8813260a2a8482f752d387bfe",
+    "accepted_targets_blob_sha": "9f85c76c93f3c1b7601495222d3727c348639f",
+    "note": "expected predecessor accepted-target SHA is checked again at Stage 8; v2 writes only to a new path"
+  },
+  "counts": {
+    "membership": 21,
+    "accepted": 16,
+    "holds": 5,
+    "narrowed": 0,
+    "rejected": 0,
+    "independent_reviewed": 0,
+    "source_relations": 133
+  },
+  "reconstructibility": {
+    "missing_source_version_ref": 0,
+    "missing_independence_group": 0,
+    "missing_claim_fitness": 0,
+    "within_target_duplicate_exact_source_version": 0,
+    "cross_target_exact_overlap_count": 2
+  },
+  "invariants": {
+    "no_canonical_release_change": true,
+    "no_r1_review_state_change": true,
+    "no_p_level_assignment": true,
+    "no_practice_geometry_promotion": true,
+    "no_public_release": true,
+    "no_database_or_api_change": true,
+    "unknown_or_inconclusive_not_absence": true,
+    "source_count_not_prevalence": true
+  },
+  "unresolved_issue_file": "UNRESOLVED_ISSUES.md",
+  "final_publication_gate": "not_authorized"
+}
