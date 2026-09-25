@@ -10,49 +10,36 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — REVIEW / RELEASE
+# CURRENT MODE — MAINTENANCE
 
-**Active issue:** #278 — post-v2 Lithuania/Karnak delta review and candidate gate  
-**Frozen delta:** EXP-09 Lithuania 1300 + EXP-11 Karnak 1000 BCE  
-**Base candidate:** `post-r1-cumulative-review-v2-overnight` (immutable)  
+**Active issue:** #280 — skip PostGIS for review-only text PRs  
+**Trigger:** PR #279 unnecessarily started the PostGIS-heavy foundation job  
 **Canonical historical data release:** `v0.6.1` unchanged  
 **WIP:** 1
 
-No new historical/source research is authorized.
+Root cause:
+- `tools/ci_scope.py` treats text under `docs/`, `experiments/` and
+  `programmes/` as non-database changes;
+- `reviews/` was omitted;
+- because unknown paths fail closed, review-only text PRs started PostGIS.
 
-The review replays current failure classes over exactly two post-v2 subject rows:
-- `R1:P:1300:D:r1` — Grand Duchy of Lithuania — 1300 CE;
-- `R1:N:karnak_amun_m1000` — Temple of Amun at Karnak — 1000 BCE.
+Smallest correction:
+- add `reviews/` to the safe text roots;
+- preserve the existing suffix allowlist (`.md/.csv/.json/.txt`);
+- keep SQL, Python, binary and unknown review paths database-gated;
+- add positive + negative unit tests.
 
-Per-row outcomes:
-`ACCEPT_INTERNAL_REVIEW`, `NARROW_AND_ACCEPT`,
-`HOLD_EXISTING_EVIDENCE`, or `REJECT_ARTIFACT`.
+This does not weaken database verification for code, schema, migrations, executable
+artifacts or unknown paths.
 
-Candidate gate:
-- `BUILD_SUCCESSOR_CANDIDATE`;
-- `KEEP_REVIEWED_DELTA_SEPARATE`;
-- `HOLD_FOR_REWORK`.
+Done gate:
+- unit regression passes;
+- PR cheap checks pass;
+- PR itself demonstrates the PostGIS `foundation` job is skipped;
+- merge and close #280.
 
-A new candidate must improve coherent review/release state enough to justify another
-immutable package. It is not automatic bookkeeping for every reviewed row.
-
-Current branch result:
-- Lithuania 1300 — `ACCEPT_INTERNAL_REVIEW`;
-- Karnak 1000 BCE — `ACCEPT_INTERNAL_REVIEW`;
-- source reconciliation — PASS (12 delta relations; 0 exact overlap with v2 or
-  between the two delta rows);
-- candidate gate — **`KEEP_REVIEWED_DELTA_SEPARATE`**.
-
-This is a positive internal-review result, not a HOLD. No v3 package is built because
-v2 remains coherent and no publication/consumer/canonical trigger makes another
-immutable package decision-relevant. The reviewed delta remains durable and can be
-integrated later without new historical research.
-
-Next exact action: one coherent PR + normal scoped CI → merge → close #278 → return to
-the D-096 mode-selection boundary.
-
-No P-level, practice geometry, R1 state mutation, schema/ontology/database/API/frontend
-change, canonical/public release or independent-review claim.
+After merge, return to D-096 mode selection. The next historical candidate should not
+start until this maintenance item is closed.
 
 ## Discovery execution
 
