@@ -1,0 +1,77 @@
+{
+  "review": "post-v2-lithuania-karnak-delta",
+  "issue": 278,
+  "mode": "review_release",
+  "status": "inputs_frozen_before_delta_replay",
+  "base_commit": "c4d5d11f273e9ceed7e4215fbf9d7c195221fddc",
+  "canonical_release": "v0.6.1_unchanged",
+  "base_candidate": {
+    "candidate_id": "post-r1-cumulative-review-v2-overnight",
+    "membership_count": 21,
+    "accepted_count": 16,
+    "hold_count": 5,
+    "source_relation_count": 133,
+    "independent_reviewed_count": 0,
+    "immutable": true,
+    "blobs": {
+      "manifest": "759775715cab0b035164b1f18cd0b41bbdd615e1",
+      "accepted_targets": "bf62c81a3299a23c6e014e7c62a6cc50b6a3b202",
+      "holds": "23ad5830873213efee84d8d1ff56d347c306f8b9",
+      "unresolved_issues": "0a4e1f20094ec0d1735c91dc493fb21d106d9e61",
+      "source_dependency_report": "407a9c99c82fa9ab7b88b6345e992dfd1c9b445c"
+    }
+  },
+  "delta_membership": [
+    {
+      "target_id": "R1:P:1300:D:r1",
+      "target_label": "Grand Duchy of Lithuania",
+      "anchor": "1300 CE",
+      "origin": "EXP-09",
+      "input_blobs": {
+        "packet": "940670b8cb1159e0894f80c6751def93cc8b9686",
+        "targets": "180f8ef313fa742503ca5a52fe0c4b0c98946c70",
+        "sources": "5ca36f8332bd61ce913bad16c739ccf684f46b28",
+        "adversary": "4340586b74f273fc078a7744089420d18f966bf9",
+        "result": "08d0ed732f57d96c6bbeb51d8add5d9470c99828"
+      }
+    },
+    {
+      "target_id": "R1:N:karnak_amun_m1000",
+      "target_label": "Temple of Amun at Karnak",
+      "anchor": "1000 BCE",
+      "origin": "EXP-11",
+      "input_blobs": {
+        "packet": "ff37d9dcc9968ae4623be8058606ec8b298679b5",
+        "targets": "104ccc805ee53014762da427fe76a539d3cf6086",
+        "sources": "447bcbd3573e2e7ac1772bcbfab1989b2c2523d8",
+        "adversary": "db6f32c9e4ef67099feb3b5dbda61cdbc11b8261",
+        "result": "bc2562ff9e3cb76cd0e715f0118d00c4f76a037f"
+      }
+    }
+  ],
+  "review_rule": "existing frozen evidence only; no new subject/source research; acceptance validates bounded evidence state, not necessarily a positive slavery classification",
+  "row_dispositions": [
+    "ACCEPT_INTERNAL_REVIEW",
+    "NARROW_AND_ACCEPT",
+    "HOLD_EXISTING_EVIDENCE",
+    "REJECT_ARTIFACT"
+  ],
+  "candidate_gate": [
+    "BUILD_SUCCESSOR_CANDIDATE",
+    "KEEP_REVIEWED_DELTA_SEPARATE",
+    "HOLD_FOR_REWORK"
+  ],
+  "failure_classes": [
+    "temporal_leakage",
+    "target_context_leakage",
+    "institution_owner_locus_leakage",
+    "network_territorial_leakage",
+    "event_status_inflation",
+    "category_translation_inflation",
+    "false_source_independence",
+    "geometry_inference",
+    "absence_inference",
+    "review_ceiling_inflation"
+  ],
+  "independent_historical_review_count": 0
+}

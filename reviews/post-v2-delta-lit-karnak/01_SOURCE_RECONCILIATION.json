@@ -1,0 +1,53 @@
+{
+  "review": "post-v2-lithuania-karnak-delta",
+  "base_candidate_id": "post-r1-cumulative-review-v2-overnight",
+  "base_candidate_reconstructed_source_relation_count": 133,
+  "delta_source_relation_count": 12,
+  "delta_by_target": {
+    "R1:P:1300:D:r1": 5,
+    "R1:N:karnak_amun_m1000": 7
+  },
+  "reconstructibility": {
+    "missing_source_version_ref": 0,
+    "missing_independence_group": 0,
+    "missing_claim_fitness": 0
+  },
+  "exact_source_version_overlap": {
+    "delta_vs_v2_count": 0,
+    "delta_vs_v2": [],
+    "cross_target_within_delta_count": 0,
+    "cross_target_within_delta": []
+  },
+  "preserved_v2_cross_target_exact_overlap_count": 2,
+  "preserved_v2_cross_target_exact_overlaps": [
+    {
+      "source_version_ref": "doi:10.3406/asean.2013.2272:2013",
+      "targets": [
+        "R1:N:angkor_1200",
+        "R1:P:1300:F:r1"
+      ],
+      "dependency": "Lustig & Lustig 2013 / angkor-personnel-corpus"
+    },
+    {
+      "source_version_ref": "Freeman-Grenville:EastAfricanCoast:2ed:1975:31-32",
+      "targets": [
+        "R1:N:great_zimbabwe_1400",
+        "R1:N:swahili_1400"
+      ],
+      "dependency": "Ibn Battuta Kilwa 1331 / Freeman-Grenville translation chain"
+    }
+  ],
+  "interpretive_dependency_notes": {
+    "Lithuania": [
+      "Jeroschin and Peter of Dusburg belong to one chronicle chain.",
+      "VLE category synthesis explicitly depends on Jurginis 1960; not independent unless original study is separately reconstructed.",
+      "Later Dambrauskaite material is temporal/category control only."
+    ],
+    "Karnak": [
+      "Banishment Stela editions/translations are one textual family.",
+      "Galczynski 2024 and Valerio 2023 materially overlap in New Kingdom Amun captive-labour/source traditions.",
+      "Muhs 2016 near-anchor perpetual-service evidence concerns Amun-priestly family/property context and is not direct Temple-of-Amun workforce evidence."
+    ]
+  },
+  "result": "RECONCILIATION_PASS"
+}
