@@ -1,0 +1,105 @@
+{
+  "programme": "OVERNIGHT_READY_QUEUE",
+  "issue": 262,
+  "stage": 5,
+  "status": "four_case_reconciliation_complete",
+  "canonical_release": "v0.6.1_unchanged",
+  "target_count": 4,
+  "source_relation_count": 20,
+  "source_reconstructibility": {
+    "missing_source_version_ref": 0,
+    "missing_independence_group": 0,
+    "missing_claim_fitness": 0,
+    "exact_cross_target_source_version_overlap_count": 0
+  },
+  "source_counts": {
+    "R1:P:-500:F:r2": 5,
+    "R1:N:swahili_1400": 5,
+    "R1:N:ifugao_1700": 5,
+    "R1:P:1800:E:r1": 5
+  },
+  "repeated_independence_groups_within_targets": [
+    {
+      "independence_group": "yue-shipu-narrative-family",
+      "target_id": "R1:P:-500:F:r2",
+      "relation_count": 3,
+      "source_ids": [
+        "QI-YANZI-YUE-SHIPU",
+        "QI-LUSHI-YUE-SHIPU",
+        "QI-SHIJI-62-YUE-SHIPU"
+      ],
+      "rule": "parallel transmitted witnesses are one narrative family, not three independent events"
+    },
+    {
+      "independence_group": "barton-ifugao-ethnography",
+      "target_id": "R1:N:ifugao_1700",
+      "relation_count": 2,
+      "source_ids": [
+        "IFU-BARTON-LAW-1919",
+        "IFU-BARTON-ECON-1922"
+      ],
+      "rule": "same ethnographic programme; not two independent historical traditions"
+    },
+    {
+      "independence_group": "ifugao-archaeological-project",
+      "target_id": "R1:N:ifugao_1700",
+      "relation_count": 2,
+      "source_ids": [
+        "IFU-ACABADO-2017",
+        "IFU-ACABADO-2019"
+      ],
+      "rule": "same archaeological research programme; contextual exact-period evidence, not slave-status duplication"
+    }
+  ],
+  "explicit_dependencies_not_captured_by_identical_group": [
+    {
+      "target_id": "R1:N:swahili_1400",
+      "source_id": "SWA-RODLAND-2026",
+      "depends_on": [
+        "SWA-VERNET-HABASQUE-2024",
+        "SWA-SONGO-MNARA-2020"
+      ],
+      "note": "separate archaeological dataset but broad historical interpretation overlaps cited Swahili slavery scholarship"
+    },
+    {
+      "target_id": "R1:P:1800:E:r1",
+      "source_id": "KOK-NEWBY-2013",
+      "depends_on": [
+        "KOK-WATHEN-1834"
+      ],
+      "note": "specialist frontier interpretation; specific Kokand diplomatic-gift episode derives from Wathen"
+    },
+    {
+      "target_id": "R1:P:1800:E:r1",
+      "source_id": "KOK-IRANICA-2023",
+      "depends_on": [
+        "KOK-LEVI-2017"
+      ],
+      "note": "reference synthesis overlaps Levi/Beisembiev polity history; not independent state chronology"
+    }
+  ],
+  "known_repository_reuse": [
+    {
+      "source_version_ref": "Freeman-Grenville:EastAfricanCoast:2ed:1975:31-32",
+      "overnight_source_id": "SWA-IBN-BATTUTA-KILWA-1331",
+      "prior_location": "experiments/exp08-cross-frame-evidence/source_relations.csv",
+      "prior_source_id": "GZ-IBN-BATTUTA-KILWA-1331",
+      "note": "same Ibn Battuta/Kilwa translation chain previously used as connected context for Great Zimbabwe"
+    },
+    {
+      "source_version_ref": "doi:10.1080/0067270X.2020.1841978:2020",
+      "overnight_source_id": "SWA-SONGO-MNARA-2020",
+      "prior_location": "data/research/cases/global_04_songo_mnara_slavery.json",
+      "note": "same dedicated Songo Mnara study already staged as a bounded site case; reuse is not new independence"
+    },
+    {
+      "source_version_ref": "Iranica:KokandKhanate:2023",
+      "overnight_source_id": "KOK-IRANICA-2023",
+      "prior_location": "experiments/exp07-c0-qualification/04_SOURCE_RELATIONS.csv",
+      "prior_relation_id": "Q15",
+      "note": "same reference work previously used for identity/chronology; subject use remains a boundary/control role"
+    }
+  ],
+  "cross_case_dependency_conclusion": "No exact source-version or independence-group overlap exists among the four overnight targets themselves. Dependency pressure is within-case and through known reuse elsewhere in the repository.",
+  "independent_historical_review_count": 0
+}
