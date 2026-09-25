@@ -10,67 +10,34 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — EXECUTION
+# CURRENT MODE — REVIEW / RELEASE
 
-**Active issue:** #276 — EXP-11 Karnak 1000 BCE bounded subject research  
-**Target:** `R1:N:karnak_amun_m1000` — Temple of Amun at Karnak — 1000 BCE  
-**Frame:** `institution_estate` (institutional locus qualified; estate extent unresolved)  
+**Active issue:** #278 — post-v2 Lithuania/Karnak delta review and candidate gate  
+**Frozen delta:** EXP-09 Lithuania 1300 + EXP-11 Karnak 1000 BCE  
+**Base candidate:** `post-r1-cumulative-review-v2-overnight` (immutable)  
 **Canonical historical data release:** `v0.6.1` unchanged  
 **WIP:** 1
 
-EXP-10 completed with four neutral `QUALIFIED_C1_READY` rows and no subject research.
+No new historical/source research is authorized.
 
-Karnak is the next bounded subject horizon because:
-- Nālandā 700 and Shaolin 1000 exposed a recurring institution-frame failure:
-  generic monastic slavery/dependency evidence cannot be projected onto the target;
-- Karnak tests that exact failure mode with an ancient institution-specific target;
-- it also exercises the early chronology × non-polity interaction identified by
-  DISC-07/D-094;
-- Trans-Saharan and Sápmi would mostly replay already-exercised network/community
-  inference guards.
+The review replays current failure classes over exactly two post-v2 subject rows:
+- `R1:P:1300:D:r1` — Grand Duchy of Lithuania — 1300 CE;
+- `R1:N:karnak_amun_m1000` — Temple of Amun at Karnak — 1000 BCE.
 
-Selection is for discrimination, not expected positive evidence or archive density.
+Per-row outcomes:
+`ACCEPT_INTERNAL_REVIEW`, `NARROW_AND_ACCEPT`,
+`HOLD_EXISTING_EVIDENCE`, or `REJECT_ARTIFACT`.
 
-Research question:
-> What bounded slavery/coercion interpretation, if any, is supportable for the
-> Temple/Precinct of Amun at Karnak around 1000 BCE?
+Candidate gate:
+- `BUILD_SUCCESSOR_CANDIDATE`;
+- `KEEP_REVIEWED_DELTA_SEPARATE`;
+- `HOLD_FOR_REWORK`.
 
-Required controls:
-- temple worker/dependent != slave by default;
-- corvée, service, captives, dedicated persons, dependants and property status remain
-  distinct unless specialist interpretation supports a mapping;
-- generic Egyptian temple practice is contextual unless Karnak-specific;
-- New Kingdom / Late Period evidence is not silently projected to 1000 BCE;
-- Temple of Amun != whole Karnak complex != Thebes != an inferred estate territory;
-- source-native terminology and translation uncertainty remain visible.
+A new candidate must improve coherent review/release state enough to justify another
+immutable package. It is not automatic bookkeeping for every reviewed row.
 
-Allowed outcomes:
-`BOUNDED_SUPPORTED`, `RESEARCHED_INCONCLUSIVE`, or
-`HOLD_EVIDENCE_ACCESS_OR_SCOPE`.
-
-Current branch result: **RESEARCHED_INCONCLUSIVE** for Temple-of-Amun slave/unfree
-labour around 1000 BCE.
-
-What is supported:
-- earlier New Kingdom Amun/Karnak captive/enslaved labour;
-- near-anchor continuity of the Amun institution;
-- near-anchor subordinate/personnel/property context in the Amun priestly world,
-  including alienable/perpetual services.
-
-What remains unresolved:
-- a human slave/unfree labour category tied specifically to the Temple of Amun at
-  the selected anchor.
-
-Internal adversarial replay rejected four tempting bridges:
-New Kingdom continuity; `bꜣk.w = slave`; foreign/Asiatic = slave; and Amun-priestly
-family property = Temple-of-Amun workforce.
-
-Next exact action: one coherent PR + normal scoped CI → merge → close #276 → return to
-the D-096 mode-selection boundary. No automatic cumulative-candidate integration.
-
-No P-level, practice geometry, R1 reviewed-state mutation, schema/ontology change,
-database/API/frontend work, canonical mutation, cumulative-candidate integration or
-automatic publication.
+No P-level, practice geometry, R1 state mutation, schema/ontology/database/API/frontend
+change, canonical/public release or independent-review claim.
 
 ## Discovery execution
 
