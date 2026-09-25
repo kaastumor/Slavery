@@ -12,47 +12,38 @@ This file answers **what is justified to work on next**.
 
 # CURRENT MODE — EXECUTION
 
-**Active issue:** #272 — EXP-09 Lithuania 1300 bounded subject research  
-**Target:** `R1:P:1300:D:r1` — Grand Duchy of Lithuania — 1300 CE  
-**Frame:** polity; identity already validated in R1  
+**Active issue:** #274 — EXP-10 cross-frame C0 qualification tranche  
+**Method:** neutral identity / chronology / frame / spatial-scope qualification only  
 **Canonical historical data release:** `v0.6.1` unchanged  
 **WIP:** 1
 
-Sponsor continuation authorization re-opened bounded historical intake after #262.
+EXP-09 / Lithuania 1300 is complete and merged with a bounded-supported internal
+result. It is not automatically integrated into the frozen cumulative candidate.
 
-Why this target:
-- every EXP-07 `QUALIFIED_C1_READY` row has now received subject research;
-- Kalabhra remains an identity/time HOLD and is not eligible for subject research;
-- Lithuania is the remaining previously qualified untouched C1 target;
-- recent intake deliberately emphasized non-Western cases, so selecting Lithuania now
-  no longer defeats the balancing intent that previously deferred it;
-- using an existing qualified target avoids creating a new qualification batch first.
+The next execution item applies the already-demonstrated C0 qualification method to a
+pre-frozen four-target sample chosen without slavery/coercion subject evidence:
 
-Research question:
-> What bounded slavery/coercion interpretation, if any, is supportable for the Grand
-> Duchy of Lithuania at or close to 1300 CE?
+1. Temple of Amun at Karnak — 1000 BCE — `R1:N:karnak_amun_m1000`
+2. Tōdai-ji — 800 CE — `R1:N:todaiji_800`
+3. Trans-Saharan trade network — 1300 CE — `R1:N:trans_saharan_1300`
+4. Sápmi / Sámi communities — 1600 CE — `R1:N:sapmi_1600`
 
-Required controls:
-- no back-projection of later serfdom or sixteenth-century statutes;
-- no neighboring Rus'/Polish/Prussian/Teutonic substitution;
-- captivity != slave status without evidence;
-- law/status, territorial practice and external participation remain separate;
-- no source-count prevalence inference.
+Why this tranche:
+- all previously subject-ready rows have now been researched;
+- Kalabhra remains an identity/time HOLD;
+- DISC-07/D-094 found that chronology and frame diversity can pass separately while
+  their interaction remains concentrated;
+- this sample stresses that interaction without treating sparse cells as historical
+  gaps or creating a quota;
+- three broad frame families are tested across widely separated anchors.
 
-Allowed outcomes:
-`BOUNDED_SUPPORTED`, `RESEARCHED_INCONCLUSIVE`, or
-`HOLD_EVIDENCE_ACCESS_OR_SCOPE`.
+Qualification outcomes only:
+`QUALIFIED_C1_READY`, `HOLD_IDENTITY_OR_TIME`,
+`REJECT_FRAME_INVALID`, or `QUALIFICATION_INCONCLUSIVE`.
 
-Current branch result: **BOUNDED_SUPPORTED**, narrowed to institutional presence in at
-least part of the grand-ducal court/domain economy around the 1300 horizon. The result
-has passed internal adversarial replay. It is not yet merged or independently reviewed.
-
-Next exact action: normal scoped PR verification → merge → close #272 → return to the
-D-096 mode-selection boundary. Do not integrate Lithuania into the frozen cumulative
-candidate automatically.
-
-No P-level, practice geometry, R1 reviewed-state mutation, schema/ontology change,
-database/API/frontend work, canonical mutation or automatic publication.
+No subject slavery/coercion research, P-level, practice/legal/network classification,
+geometry promotion, R1 registry mutation, schema change, canonical change or automatic
+subject-research queue follows from qualification.
 
 ## Discovery execution
 
