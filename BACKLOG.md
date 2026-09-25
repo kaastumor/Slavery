@@ -12,53 +12,45 @@ This file answers **what is justified to work on next**.
 
 # CURRENT MODE — EXECUTION
 
-**Active issue:** #274 — EXP-10 cross-frame C0 qualification tranche  
-**Method:** neutral identity / chronology / frame / spatial-scope qualification only  
+**Active issue:** #276 — EXP-11 Karnak 1000 BCE bounded subject research  
+**Target:** `R1:N:karnak_amun_m1000` — Temple of Amun at Karnak — 1000 BCE  
+**Frame:** `institution_estate` (institutional locus qualified; estate extent unresolved)  
 **Canonical historical data release:** `v0.6.1` unchanged  
 **WIP:** 1
 
-EXP-09 / Lithuania 1300 is complete and merged with a bounded-supported internal
-result. It is not automatically integrated into the frozen cumulative candidate.
+EXP-10 completed with four neutral `QUALIFIED_C1_READY` rows and no subject research.
 
-The next execution item applies the already-demonstrated C0 qualification method to a
-pre-frozen four-target sample chosen without slavery/coercion subject evidence:
+Karnak is the next bounded subject horizon because:
+- Nālandā 700 and Shaolin 1000 exposed a recurring institution-frame failure:
+  generic monastic slavery/dependency evidence cannot be projected onto the target;
+- Karnak tests that exact failure mode with an ancient institution-specific target;
+- it also exercises the early chronology × non-polity interaction identified by
+  DISC-07/D-094;
+- Trans-Saharan and Sápmi would mostly replay already-exercised network/community
+  inference guards.
 
-1. Temple of Amun at Karnak — 1000 BCE — `R1:N:karnak_amun_m1000`
-2. Tōdai-ji — 800 CE — `R1:N:todaiji_800`
-3. Trans-Saharan trade network — 1300 CE — `R1:N:trans_saharan_1300`
-4. Sápmi / Sámi communities — 1600 CE — `R1:N:sapmi_1600`
+Selection is for discrimination, not expected positive evidence or archive density.
 
-Why this tranche:
-- all previously subject-ready rows have now been researched;
-- Kalabhra remains an identity/time HOLD;
-- DISC-07/D-094 found that chronology and frame diversity can pass separately while
-  their interaction remains concentrated;
-- this sample stresses that interaction without treating sparse cells as historical
-  gaps or creating a quota;
-- three broad frame families are tested across widely separated anchors.
+Research question:
+> What bounded slavery/coercion interpretation, if any, is supportable for the
+> Temple/Precinct of Amun at Karnak around 1000 BCE?
 
-Qualification outcomes only:
-`QUALIFIED_C1_READY`, `HOLD_IDENTITY_OR_TIME`,
-`REJECT_FRAME_INVALID`, or `QUALIFICATION_INCONCLUSIVE`.
+Required controls:
+- temple worker/dependent != slave by default;
+- corvée, service, captives, dedicated persons, dependants and property status remain
+  distinct unless specialist interpretation supports a mapping;
+- generic Egyptian temple practice is contextual unless Karnak-specific;
+- New Kingdom / Late Period evidence is not silently projected to 1000 BCE;
+- Temple of Amun != whole Karnak complex != Thebes != an inferred estate territory;
+- source-native terminology and translation uncertainty remain visible.
 
-Current branch result: **PASS — FOUR QUALIFIED**.
+Allowed outcomes:
+`BOUNDED_SUPPORTED`, `RESEARCHED_INCONCLUSIVE`, or
+`HOLD_EVIDENCE_ACCESS_OR_SCOPE`.
 
-Qualified rows:
-- Karnak 1000 BCE — institutional locus; estate/full-complex extent unresolved;
-- Tōdai-ji 800 — temple/institution locus; later estate/property extent unresolved;
-- Trans-Saharan network 1300 — changing multi-route network; no territorial polygon;
-- Sápmi / Sámi communities 1600 — retrospective multi-community region; no single polity/fixed boundary.
-
-Internal adversarial replay passed after these scope limits were made mandatory.
-No slavery/coercion subject research was performed.
-
-Next exact action: one coherent PR + normal scoped CI → merge → close #274 → return to
-the D-096 mode-selection boundary. Do not begin subject research until a separate
-subject-research sample is frozen.
-
-No subject slavery/coercion research, P-level, practice/legal/network classification,
-geometry promotion, R1 registry mutation, schema change, canonical change or automatic
-subject-research queue follows from qualification.
+No P-level, practice geometry, R1 reviewed-state mutation, schema/ontology change,
+database/API/frontend work, canonical mutation, cumulative-candidate integration or
+automatic publication.
 
 ## Discovery execution
 
