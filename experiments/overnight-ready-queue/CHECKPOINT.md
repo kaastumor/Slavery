@@ -1,7 +1,7 @@
 # Overnight ready-queue checkpoint
 
 **Controller:** #262  
-**State:** Stage 2 research complete on branch; merge/marker gate pending  
+**State:** Stage 3 research complete on branch; merge/marker gate pending  
 **Canonical release:** v0.6.1 unchanged  
 **Independent historical reviews:** 0
 
@@ -11,41 +11,46 @@
    - marker: `OVERNIGHT_STAGE_1_COMPLETE`
    - disposition: researched-inconclusive for Qi territorial slavery/servitude;
      near-anchor redeemable-servitude narrative preserved as context.
+2. Swahili maritime trade network — 1400 — `R1:N:swahili_1400`
+   - marker: `OVERNIGHT_STAGE_2_COMPLETE`
+   - disposition: bounded-supported medieval slave-trade participation with
+     node-specific local slavery; network-wide territorial prevalence/volume unresolved.
 
-## Stage 2 — Swahili maritime trade network — 1400
+## Stage 3 — Ifugao communities — 1700
 
-Packet: `02_SWAHILI_1400.md`
+Packet: `03_IFUGAO_1700.md`
 
 Bounded result:
-- medieval Swahili slave-trade participation around 1400: **supported**;
-- Kilwa 1331 local slavery and ruler raiding/captive-taking: **supported at that node**;
-- fifteenth-century Songo Mnara local enslaved-labour interpretation:
-  **supported with archaeological-proxy limits**;
-- participation by every Swahili port: **unresolved / not inferred**;
-- one uniform coast-wide territorial slavery regime: **not supported**;
-- exact network-wide volume/prevalence at 1400: **unresolved**.
+- exact-1700 slavery/servile institution: **researched-inconclusive**;
+- seventeenth/eighteenth-century social and agricultural transformation:
+  **supported exact-period context**;
+- later traditional child sale, debt bondage, captivity and slaveholding in Barton's
+  ethnography: **supported later/contextual evidence**;
+- continuity of those institutions to 1700: **unresolved**;
+- exact mapping of himbut/debt/servant/captive categories to chattel slavery:
+  **requires category caution**;
+- Ifugao-wide uniformity/prevalence: **not inferred**.
 
 Key controls:
-- mobile network ≠ one polity;
-- maritime connectivity ≠ slave trading by default;
-- network participation ≠ territorial prevalence at every node;
-- node-level practice ≠ coast-wide practice;
-- later Zanzibar plantation slavery is not back-projected;
-- source/document counts do not set scale.
+- retrospective ethnography ≠ exact-anchor evidence;
+- hierarchy/status differentiation ≠ slavery;
+- one Tuwali/Old Kiyyangan locus ≠ every Ifugao community;
+- Barton 1919 + 1922 are one closely related evidence family;
+- later comparative disagreement is preserved, not averaged away.
 
 Artifacts:
-- `02_SWAHILI_1400.md`
-- `targets_extended.csv`
-- `source_relations.csv`
+- `03_IFUGAO_1700.md`
+- appended `targets_extended.csv`
+- appended `source_relations.csv`
 
 No P-level, geometry promotion, R1 reviewed-state mutation, schema/ontology change,
 publication or canonical release follows.
 
 ## Next action
 
-Merge Stage 2 only after relevant cheap CI passes. Then add the exact controller
-marker `OVERNIGHT_STAGE_2_COMPLETE`.
+Merge Stage 3 only after relevant cheap CI passes. Then add
+`OVERNIGHT_STAGE_3_COMPLETE`.
 
-Only after that marker may Stage 3 begin:
+Only after that marker may Stage 4 begin:
 
-**Ifugao communities — 1700 — `R1:N:ifugao_1700`.**
+**Khanate of Kokand — 1800 — `R1:P:1800:E:r1`.**
