@@ -1,0 +1,65 @@
+{
+  "candidate_id": "post-r1-cumulative-review-v2-overnight",
+  "status": "internal_noncanonical_review_candidate",
+  "canonical_release": "v0.6.1_unchanged",
+  "predecessor": {
+    "candidate_id": "post-r1-cumulative-review-v1",
+    "path": "reviews/post-r1-cumulative/candidate",
+    "manifest_blob_sha": "abdf887ed33ee8b8813260a2a8482f752d387bfe",
+    "accepted_targets_blob_sha": "9f85c76c93f3c3b1f7601495222d3727c348639f",
+    "holds_blob_sha": "23ad5830873213efee84d8d1ff56d347c306f8b9",
+    "unresolved_issues_blob_sha": "48bd475cc67d1c69959c0f620020d9390997a9fb",
+    "mutation": false
+  },
+  "integration_issue": 262,
+  "stage_6_review_result": "FOUR_CASE_INTERNAL_REVIEW_PASS",
+  "membership_count": 21,
+  "accepted_count": 16,
+  "hold_count": 5,
+  "narrowed_count": 0,
+  "rejected_count": 0,
+  "independent_reviewed_count": 0,
+  "source_relation_count": 133,
+  "source_lineage": {
+    "predecessor_relation_count": 113,
+    "overnight_addition_relation_count": 20,
+    "qi_source_relations_path": "experiments/exp08-cross-frame-evidence/source_relations.csv",
+    "qi_source_relations_blob_sha": "cbb44a2972c8e234350db78de05df1bffcaacc9c",
+    "other_overnight_source_relations_path": "experiments/overnight-ready-queue/source_relations.csv",
+    "other_overnight_source_relations_blob_sha": "884f996a1ebbe20b094efe9dc6cae4c21c19b486"
+  },
+  "source_reconstructibility": {
+    "missing_source_version_ref": 0,
+    "missing_independence_group": 0,
+    "missing_claim_fitness": 0,
+    "within_target_duplicate_exact_source_version": 0,
+    "cross_target_exact_overlap_count": 2
+  },
+  "cross_target_exact_overlaps": [
+    {
+      "source_version_ref": "doi:10.3406/asean.2013.2272:2013",
+      "targets": [
+        "R1:N:angkor_1200",
+        "R1:P:1300:F:r1"
+      ],
+      "dependency": "Lustig & Lustig 2013 / angkor-personnel-corpus"
+    },
+    {
+      "source_version_ref": "Freeman-Grenville:EastAfricanCoast:2ed:1975:31-32",
+      "targets": [
+        "R1:N:great_zimbabwe_1400",
+        "R1:N:swahili_1400"
+      ],
+      "dependency": "Ibn Battuta Kilwa 1331 / Freeman-Grenville translation chain"
+    }
+  ],
+  "release_effects": {
+    "canonical_release_change": false,
+    "predecessor_candidate_rewrite": false,
+    "r1_review_state_change": false,
+    "p_level_assignment": false,
+    "historical_geometry_promotion": false,
+    "public_release": false,
+    "database_or_api_change": false
+  }
+}

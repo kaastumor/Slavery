@@ -1,44 +1,34 @@
 # Overnight ready-queue checkpoint
 
 **Controller:** #262  
-**State:** Stage 6 internal adversarial review complete on branch; merge/marker pending  
+**State:** Stage 7 successor candidate built on branch; merge/marker pending  
 **Canonical release:** v0.6.1 unchanged  
 **Independent historical reviews:** 0
 
-## Completed stages on main
+Completed on main:
+1. `OVERNIGHT_STAGE_1_COMPLETE`
+2. `OVERNIGHT_STAGE_2_COMPLETE`
+3. `OVERNIGHT_STAGE_3_COMPLETE`
+4. `OVERNIGHT_STAGE_4_COMPLETE`
+5. `OVERNIGHT_STAGE_5_COMPLETE`
+6. `OVERNIGHT_STAGE_6_COMPLETE`
 
-1. `OVERNIGHT_STAGE_1_COMPLETE` — Qi research
-2. `OVERNIGHT_STAGE_2_COMPLETE` — Swahili research
-3. `OVERNIGHT_STAGE_3_COMPLETE` — Ifugao research
-4. `OVERNIGHT_STAGE_4_COMPLETE` — Kokand research
-5. `OVERNIGHT_STAGE_5_COMPLETE` — four-case reconciliation
+## Stage 7
 
-## Stage 6 result
+New candidate:
+`reviews/post-r1-cumulative/candidate-v2-overnight/`
 
-Disposition: **FOUR_CASE_INTERNAL_REVIEW_PASS**.
+Disposition: **SUCCESSOR_CANDIDATE_BUILT**
 
-Rows:
-- 4 ACCEPT_INTERNAL_REVIEW;
-- 0 NARROW_AND_ACCEPT;
-- 0 HOLD_EXISTING_EVIDENCE;
-- 0 REJECT_ARTIFACT.
+Counts:
+- 21 members;
+- 16 accepted evidence states;
+- 5 explicit HOLDs;
+- 133 source relations by lineage;
+- 2 exact cross-target source-version overlaps;
+- 0 independent historical reviews.
 
-This validates four bounded evidence states, not four positive slavery claims.
+The predecessor `post-r1-cumulative-review-v1` is not modified.
 
-Artifacts:
-- `06_REVIEW_FREEZE.json`
-- `06_ROW_DECISIONS.csv`
-- `06_ADVERSARY.md`
-- `06_RESULT.md`
-
-No new historical/source research occurred.
-
-## Next action
-
-After merge, add `OVERNIGHT_STAGE_6_COMPLETE`.
-
-Stage 7 then builds a **new immutable/noncanonical successor candidate** from:
-- unchanged `post-r1-cumulative-review-v1`;
-- the four Stage-6 accepted evidence states.
-
-The predecessor candidate must not be overwritten.
+After green CI + merge, add `OVERNIGHT_STAGE_7_COMPLETE` and perform Stage 8 final
+QC/handoff. Do not publish automatically.
