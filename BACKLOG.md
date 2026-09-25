@@ -43,6 +43,14 @@ Allowed outcomes:
 `BOUNDED_SUPPORTED`, `RESEARCHED_INCONCLUSIVE`, or
 `HOLD_EVIDENCE_ACCESS_OR_SCOPE`.
 
+Current branch result: **BOUNDED_SUPPORTED**, narrowed to institutional presence in at
+least part of the grand-ducal court/domain economy around the 1300 horizon. The result
+has passed internal adversarial replay. It is not yet merged or independently reviewed.
+
+Next exact action: normal scoped PR verification → merge → close #272 → return to the
+D-096 mode-selection boundary. Do not integrate Lithuania into the frozen cumulative
+candidate automatically.
+
 No P-level, practice geometry, R1 reviewed-state mutation, schema/ontology change,
 database/API/frontend work, canonical mutation or automatic publication.
 
