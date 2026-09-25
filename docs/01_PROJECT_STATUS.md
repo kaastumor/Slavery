@@ -7,19 +7,18 @@ current CI override this snapshot.
 **Status date:** 2026-09-25  
 **Canonical historical data release:** v0.6.1 (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **REVIEW RESULT READY — maintenance / trigger-bound review is next after merge**
+**Execution state:** **BOUNDED HISTORICAL EXECUTION — current priority/mode is owned by `BACKLOG.md`**
 
 ## Current durable state
 
 - historical safeguards/methodology remain unchanged;
 - D-096 changes only continuation/governance: choose the next mode, not automatically another experiment;
 - DISC-09 remains parked without a negative result;
-- cross-batch consolidation now covers 41 unique targets across R1 and EXP-04/06/07/08;
-- consolidation disposition is **REVIEW_RELEASE_CANDIDATE**;
-- #259 replay is complete: 12 rows accepted for internal review, 5 remain explicit HOLDs;
-- internal candidate `post-r1-cumulative-review-v1` is non-canonical and has 0 independent review;
-- exact current action is owned by `BACKLOG.md`;
-- EXP-08 remains open/paused after 3/4; Qi — 500 BCE remains frozen/unstarted.
+- EXP-08 is complete 4/4; Qi — 500 BCE was completed as researched-inconclusive for exact Qi territorial slavery/servitude;
+- #262 completed the sponsor-authorized four-target queue through reconciliation, internal review, successor-candidate integration and final QC;
+- latest cumulative internal candidate `post-r1-cumulative-review-v2-overnight` contains 21 members: 16 internally accepted bounded evidence states and 5 explicit HOLDs, with 0 independent historical reviews;
+- EXP-09 researches the remaining previously qualified untouched C1 target, Grand Duchy of Lithuania — 1300 CE; its bounded internal result is `BOUNDED_SUPPORTED` for unfree-household/slavery presence in grand-ducal court structures around the anchor, without polity-wide prevalence or later-serfdom back-projection;
+- exact current action is owned by `BACKLOG.md`.
 
 Recently completed:
 1. #229 / EXP-07 — **PASS WITH ONE HOLD**; 7 QUALIFIED_C1_READY, Kalabhra 500 CE held.
