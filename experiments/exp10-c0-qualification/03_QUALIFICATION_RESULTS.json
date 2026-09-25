@@ -1,0 +1,61 @@
+{
+  "experiment": "EXP-10",
+  "issue": 274,
+  "stage": "qualification_complete",
+  "canonical_release": "v0.6.1",
+  "subject_research_performed": false,
+  "disposition": "PASS_FOUR_QUALIFIED",
+  "counts": {
+    "QUALIFIED_C1_READY": 4,
+    "HOLD_IDENTITY_OR_TIME": 0,
+    "REJECT_FRAME_INVALID": 0,
+    "QUALIFICATION_INCONCLUSIVE": 0
+  },
+  "results": [
+    {
+      "target_id": "R1:N:karnak_amun_m1000",
+      "target_label": "Temple of Amun at Karnak",
+      "anchor": "1000 BCE",
+      "frame": "institution_estate",
+      "outcome": "QUALIFIED_C1_READY",
+      "temporal_precision": "anchor_supported_institutional_continuity",
+      "spatial_precision": "Temple/Precinct of Amun-Ra institutional locus; estate holdings and full Karnak-complex extent unresolved",
+      "rationale": "Digital Karnak describes the Temple of Amun-Ra at Karnak as a long-lived institutional complex with at least three millennia of development. Near the exact anchor, Metropolitan Museum evidence dated ca. 1000–797 BCE identifies Nesikhonsu as wife of High Priest of Amun Pinedjem II and leader of a female music troop serving Amun-Re in his Karnak temple. The Temple of Amun institutional object is therefore securely valid around 1000 BCE.",
+      "limitation": "Keep the Temple/Precinct of Amun distinct from the entire Karnak complex, Thebes, or any inferred temple-estate territory. Do not derive ancient estate boundaries from modern archaeological-site geometry."
+    },
+    {
+      "target_id": "R1:N:todaiji_800",
+      "target_label": "Tōdai-ji",
+      "anchor": "800 CE",
+      "frame": "institution_estate",
+      "outcome": "QUALIFIED_C1_READY",
+      "temporal_precision": "anchor_supported_post_nara_foundation",
+      "spatial_precision": "Tōdai-ji temple/institution locus at Nara; historical estate/property extent unresolved",
+      "rationale": "Tōdai-ji's official history places its origin in 728, elevation within the state monastery system in 741, completion of the Great Buddha in 749 and consecration in 752, followed by construction of the wider temple complex. It records the institution continuing until at least the 855 earthquake. Nabunken independently characterizes Tōdai-ji as an eighth-century state-sponsored temple with Nara-period monumental construction. Tōdai-ji is securely valid as an institution at 800 CE.",
+      "limitation": "Treat the 800 target as the temple/institution, not Nara as a polity and not all later Tōdai-ji estates. Later shōen, reconstruction-period holdings, or modern World Heritage boundaries require separate dating before use."
+    },
+    {
+      "target_id": "R1:N:trans_saharan_1300",
+      "target_label": "Trans-Saharan trade network",
+      "anchor": "1300 CE",
+      "frame": "mobile_network",
+      "outcome": "QUALIFIED_C1_READY",
+      "temporal_precision": "anchor_supported_multi_route_network",
+      "spatial_precision": "changing multi-route caravan network linking North Africa/Mediterranean and regions south of the Sahara; no single route or territorial polygon",
+      "rationale": "Sarah Guérin's specialist synthesis states that in the thirteenth century trans-Saharan links between the Mediterranean and West Africa were extended and strengthened under Mali and explicitly places connected material exchange in the years around 1300. British Museum synthesis describes flourishing trans-Saharan camel routes from about 800 and distinguishes multiple route/network configurations, including separate routes toward Gao. A 1300 mobile-network frame is therefore defensible.",
+      "limitation": "Do not collapse the network into Mali, Kanem, one caravan trail, one city chain or a timeless Sahara-wide route. Any later subject claim must identify the relevant route/node/evidence locus; map geometry is schematic unless separately evidenced."
+    },
+    {
+      "target_id": "R1:N:sapmi_1600",
+      "target_label": "Sápmi / Sámi communities",
+      "anchor": "1600 CE",
+      "frame": "region_community",
+      "outcome": "QUALIFIED_C1_READY",
+      "temporal_precision": "anchor_supported_retrospective_multi_community_frame",
+      "spatial_precision": "multiple Sámi communities/siida across northern Fennoscandia and adjacent regions under overlapping/changing state claims; no single polity or fixed 1600 Sápmi boundary",
+      "rationale": "Lars Ivar Hansen's specialist study uses Swedish tax records from 1551–1600 and explicitly analyzes Sámi communities, mobility and interactions in northern Fennoscandia while noting that no fixed borders yet existed and several surrounding states operated in overlapping taxation/trade areas. A Store norske leksikon synthesis by historians likewise treats 1500–1800 as early-modern Sámi history and explains that Sápmi was not yet divided by fixed state borders around 1500, with competing claims continuing around the 1600 horizon. Sámi communities are therefore securely valid at 1600.",
+      "limitation": "Use 'Sápmi / Sámi communities' as a retrospective regional research container, not a single society, polity, jurisdiction or exact historical polygon. Preserve community/siida and state-claim variation; modern Sápmi boundaries are not 1600 jurisdictional boundaries."
+    }
+  ],
+  "boundary_confirmation": "Qualification used only identity, chronology, frame and spatial-scope evidence. No slavery/coercion subject evidence was selected, recorded or interpreted. Where a source page contained unrelated subject material elsewhere, only neutral qualification locators were used."
+}
