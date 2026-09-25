@@ -10,7 +10,7 @@ from pathlib import Path
 import sys
 
 
-SAFE_TEXT_ROOTS = ('docs/', 'experiments/', 'programmes/')
+SAFE_TEXT_ROOTS = ('docs/', 'experiments/', 'programmes/', 'reviews/')
 SAFE_TEXT_SUFFIXES = {'.md', '.csv', '.json', '.txt'}
 SAFE_PREFIXES = ('web/',)
 SAFE_FILES = {
