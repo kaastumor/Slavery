@@ -1,40 +1,44 @@
 # Overnight ready-queue checkpoint
 
 **Controller:** #262  
-**State:** Stage 5 reconciliation complete on branch; merge/marker gate pending  
+**State:** Stage 6 internal adversarial review complete on branch; merge/marker pending  
 **Canonical release:** v0.6.1 unchanged  
 **Independent historical reviews:** 0
 
-## Subject-research stages complete on main
+## Completed stages on main
 
-1. Qi — 500 BCE — `OVERNIGHT_STAGE_1_COMPLETE`
-2. Swahili maritime trade network — 1400 — `OVERNIGHT_STAGE_2_COMPLETE`
-3. Ifugao communities — 1700 — `OVERNIGHT_STAGE_3_COMPLETE`
-4. Khanate of Kokand — 1800 — `OVERNIGHT_STAGE_4_COMPLETE`
+1. `OVERNIGHT_STAGE_1_COMPLETE` — Qi research
+2. `OVERNIGHT_STAGE_2_COMPLETE` — Swahili research
+3. `OVERNIGHT_STAGE_3_COMPLETE` — Ifugao research
+4. `OVERNIGHT_STAGE_4_COMPLETE` — Kokand research
+5. `OVERNIGHT_STAGE_5_COMPLETE` — four-case reconciliation
 
-## Stage 5 reconciliation
+## Stage 6 result
+
+Disposition: **FOUR_CASE_INTERNAL_REVIEW_PASS**.
+
+Rows:
+- 4 ACCEPT_INTERNAL_REVIEW;
+- 0 NARROW_AND_ACCEPT;
+- 0 HOLD_EXISTING_EVIDENCE;
+- 0 REJECT_ARTIFACT.
+
+This validates four bounded evidence states, not four positive slavery claims.
 
 Artifacts:
-- `05_RECONCILIATION.md`
-- `05_RECONCILIATION_INVENTORY.csv`
-- `05_SOURCE_DEPENDENCY_REPORT.json`
+- `06_REVIEW_FREEZE.json`
+- `06_ROW_DECISIONS.csv`
+- `06_ADVERSARY.md`
+- `06_RESULT.md`
 
-Checks:
-- exactly 4 authorized targets;
-- 20 source relations;
-- 0 missing source/version references;
-- 0 missing independence groups;
-- 0 missing claim-fitness fields;
-- 0 exact source-version overlaps across the four targets;
-- within-case and repository-reuse dependencies explicitly preserved;
-- exact-anchor and dimensional HOLD boundaries retained;
-- no new subject research performed.
-
-Disposition: **RECONCILIATION_PASS**.
+No new historical/source research occurred.
 
 ## Next action
 
-After merge, add `OVERNIGHT_STAGE_5_COMPLETE`.
+After merge, add `OVERNIGHT_STAGE_6_COMPLETE`.
 
-Then Stage 6 freezes these four rows and performs the controller's adversarial review
-without new research.
+Stage 7 then builds a **new immutable/noncanonical successor candidate** from:
+- unchanged `post-r1-cumulative-review-v1`;
+- the four Stage-6 accepted evidence states.
+
+The predecessor candidate must not be overwritten.
