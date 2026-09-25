@@ -1,38 +1,51 @@
 # EXP-08 checkpoint
 
 **Issue:** #232  
-**State:** paused after 3 / 4 frozen cases by sponsor priority  
+**State:** subject-research tranche complete — 4 / 4 frozen cases researched internally  
 **Canonical release:** v0.6.1 unchanged
 
 Frozen sample:
 1. Great Zimbabwe — 1400 — **researched_internal / researched-inconclusive slavery-status**
 2. Māori communities in Aotearoa — 1700 — **researched_internal / bounded-supported pre-contact war-captive unfreedom**
 3. Nobatia — 500 CE — **researched_internal / bounded-supported royal retainer sacrifice; slave status unresolved**
-4. Qi — 500 BCE — **frozen / unstarted**
+4. Qi — 500 BCE — **researched_internal / researched-inconclusive Qi territorial slavery/servitude; near-anchor redeemable-servitude narrative retained as context**
 
-## Nobatia result
+## Qi result
 
-Packet: `04_NOBATIA_500CE.md`
+Packet: `05_QI_500BCE.md`
 
 Bounded result:
-- Qustul–Ballana royal human/retainer sacrifice near 500: **supported**;
-- slave status of sacrificed people: **unresolved**;
-- polity-wide Nobatian slaveholding prevalence: **unresolved**;
-- Nobatia-specific external slave trade at 500: **unresolved**.
+- the received Yue Shifu tradition describes three years of redeemable personal
+  servitude/dependency using 臣僕 / 僕, 贖 and 鬻 vocabulary: **supported contextual evidence**;
+- exact dating of that episode to 500 BCE: **unresolved**;
+- secure location of the servitude inside Qi territory: **unresolved / not supported by
+  the principal narrative, which places the encounter at Zhongmou on a journey to Jin**;
+- exact juridical mapping to hereditary/property slavery: **unresolved**;
+- Qi-wide institutionalization, prevalence and slave trade at 500 BCE: **unresolved**.
 
 Key controls:
-- sacrificed retainer ≠ slave by default;
-- older "attendant slave" terminology is historiography, not status proof;
-- Procopius assigns explicit solar human sacrifice to Blemmyes, not Nobatae;
-- 652 baqṭ and later Christian Nubia are not back-projected.
+- Qi-associated actor/text ≠ Qi territorial practice;
+- transmitted parallel witnesses ≠ independent attestations;
+- redeemable servant/dependency vocabulary ≠ automatic chattel-slave classification;
+- later Qin/Han law is not back-projected;
+- no P-level or practice polygon.
 
-## Pause / next action
+## EXP-08 completion
 
-Per sponsor instruction, stop slavery-evidence work after Nobatia. **Do not research
-Qi — 500 BCE now.** Preserve it exactly as frozen/unstarted.
+EXP-08 now has one internally researched packet for every frozen target. The experiment
+remains non-canonical and internally researched only; it does not alter R1 reviewed
+state, v0.6.1, P-levels, geometry, schema or publication.
 
-Next WIP: a bounded **project-discovery research run** looking for genuinely useful
-adjacent methods, comparable projects, research workflows and unmet opportunities for
-the Historical Slavery Atlas/evidence corpus.
+The overnight sponsor authorization in #262 resumed the previously paused Qi row
+without reselection. Stage 1 is therefore ready for the #262 completion gate after
+merge.
 
-EXP-08 remains open/paused and may resume later from Qi without reselection.
+## Next action
+
+Under overnight issue #262, continue only after Stage 1 is durably merged and marked
+complete. The next frozen target is:
+
+**Swahili maritime trade network — 1400 — R1:N:swahili_1400.**
+
+Keep external/network participation, node-specific practice and coast-wide territorial
+inference separate.
