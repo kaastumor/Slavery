@@ -10,36 +10,46 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — MAINTENANCE
+# CURRENT MODE — EXECUTION
 
-**Active issue:** #280 — skip PostGIS for review-only text PRs  
-**Trigger:** PR #279 unnecessarily started the PostGIS-heavy foundation job  
+**Active issue:** #282 — EXP-12 Tōdai-ji 800 bounded subject research  
+**Target:** `R1:N:todaiji_800` — Tōdai-ji — 800 CE  
+**Frame:** `institution_estate` (institutional locus qualified; estate extent unresolved)  
 **Canonical historical data release:** `v0.6.1` unchanged  
 **WIP:** 1
 
-Root cause:
-- `tools/ci_scope.py` treats text under `docs/`, `experiments/` and
-  `programmes/` as non-database changes;
-- `reviews/` was omitted;
-- because unknown paths fail closed, review-only text PRs started PostGIS.
+The review-only CI cost leak is fixed by #280 / PR #281. Text review artifacts now
+stay on cheap sanitation/Python checks while executable/non-text/unknown review paths
+remain database-gated.
 
-Smallest correction:
-- add `reviews/` to the safe text roots;
-- preserve the existing suffix allowlist (`.md/.csv/.json/.txt`);
-- keep SQL, Python, binary and unknown review paths database-gated;
-- add positive + negative unit tests.
+Tōdai-ji is the next bounded subject horizon because it gives a controlled replication
+of the institution-specific inference problem in a different source tradition:
+- Nālandā 700 and Shaolin 1000 remained target-specific inconclusive despite broader
+  monastic slavery/dependency context;
+- Karnak 1000 BCE remained selected-anchor inconclusive despite strong earlier
+  target-specific captive labour;
+- Tōdai-ji tests whether a Nara-period temple with a distinct legal/estate documentary
+  tradition supplies a stronger or equally bounded target-specific answer.
 
-This does not weaken database verification for code, schema, migrations, executable
-artifacts or unknown paths.
+Research question:
+> What bounded slavery/coercion interpretation, if any, is supportable for Tōdai-ji at
+> or around 800 CE?
 
-Done gate:
-- unit regression passes;
-- PR cheap checks pass;
-- PR itself demonstrates the PostGIS `foundation` job is skipped;
-- merge and close #280.
+Required controls:
+- temple worker / tenant / dependent / corvée worker != slave by default;
+- preserve `nuhi` / 奴婢 and other source-native status distinctions;
+- generic Nara/Heian slavery is contextual unless linked to Tōdai-ji;
+- later shōen/estate evidence is not back-projected;
+- temple identity != estate boundary or practice polygon;
+- law/status and actual practice remain separate.
 
-After merge, return to D-096 mode selection. The next historical candidate should not
-start until this maintenance item is closed.
+Allowed outcomes:
+`BOUNDED_SUPPORTED`, `RESEARCHED_INCONCLUSIVE`, or
+`HOLD_EVIDENCE_ACCESS_OR_SCOPE`.
+
+No P-level, practice geometry, R1 reviewed-state mutation, schema/ontology,
+database/API/frontend change, canonical mutation, cumulative-candidate integration or
+automatic publication.
 
 ## Discovery execution
 
