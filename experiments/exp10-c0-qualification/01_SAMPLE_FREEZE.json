@@ -1,0 +1,49 @@
+{
+  "experiment": "EXP-10",
+  "issue": 274,
+  "frozen_at": "2026-09-25",
+  "selection_evidence": "R1 C0 registry + DISC-07/D-094 chronology × broad-frame interaction only",
+  "subject_evidence_inspected_for_selection": false,
+  "substitution_after_qualification_starts": false,
+  "targets": [
+    {
+      "target_id": "R1:N:karnak_amun_m1000",
+      "target_label": "Temple of Amun at Karnak",
+      "anchor_year": -1000,
+      "display_anchor": "1000 BCE",
+      "frame_class": "institution_estate",
+      "selection_reason": "ancient non-polity institution interaction pressure"
+    },
+    {
+      "target_id": "R1:N:todaiji_800",
+      "target_label": "Tōdai-ji",
+      "anchor_year": 800,
+      "display_anchor": "800 CE",
+      "frame_class": "institution_estate",
+      "selection_reason": "same institution frame in a distant medieval chronology"
+    },
+    {
+      "target_id": "R1:N:trans_saharan_1300",
+      "target_label": "Trans-Saharan trade network",
+      "anchor_year": 1300,
+      "display_anchor": "1300 CE",
+      "frame_class": "mobile_network",
+      "selection_reason": "diffuse route/network identity and spatial-scope stress"
+    },
+    {
+      "target_id": "R1:N:sapmi_1600",
+      "target_label": "Sápmi / Sámi communities",
+      "anchor_year": 1600,
+      "display_anchor": "1600 CE",
+      "frame_class": "region_community",
+      "selection_reason": "retrospective multi-community/trans-jurisdictional frame stress"
+    }
+  ],
+  "prohibited_selection_signals": [
+    "slavery/coercion evidence presence",
+    "expected positive classification",
+    "archive density",
+    "source count",
+    "ease of subject research"
+  ]
+}
