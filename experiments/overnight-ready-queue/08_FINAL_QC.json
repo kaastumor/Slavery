@@ -1,0 +1,89 @@
+{
+  "controller_issue": 262,
+  "stage": 8,
+  "disposition": "OVERNIGHT_CANDIDATE_READY",
+  "qc_kind": "final_internal_repository_and_candidate_sanitation",
+  "checked_main": "7a00fea8a1716d0f00f214cb23b6e8ec22b254e7",
+  "stage_7_foundation_ci": {
+    "run_id": 36140927726,
+    "conclusion": "success"
+  },
+  "candidate": {
+    "id": "post-r1-cumulative-review-v2-overnight",
+    "membership_count": 21,
+    "accepted_count": 16,
+    "hold_count": 5,
+    "narrowed_count": 0,
+    "rejected_count": 0,
+    "independent_reviewed_count": 0,
+    "duplicate_member_ids": 0,
+    "accepted_csv_column_count": 9,
+    "hold_csv_column_count": 9
+  },
+  "source_reconstructibility": {
+    "relation_count": 133,
+    "missing_source_version_ref": 0,
+    "missing_independence_group": 0,
+    "missing_claim_fitness": 0,
+    "within_target_duplicate_exact_source_version": 0,
+    "cross_target_exact_overlap_count": 2,
+    "cross_target_exact_overlaps": [
+      {
+        "source_version_ref": "doi:10.3406/asean.2013.2272:2013",
+        "targets": [
+          "R1:N:angkor_1200",
+          "R1:P:1300:F:r1"
+        ]
+      },
+      {
+        "source_version_ref": "Freeman-Grenville:EastAfricanCoast:2ed:1975:31-32",
+        "targets": [
+          "R1:N:great_zimbabwe_1400",
+          "R1:N:swahili_1400"
+        ]
+      }
+    ]
+  },
+  "predecessor_immutability": {
+    "candidate_id": "post-r1-cumulative-review-v1",
+    "manifest_blob_sha": "abdf887ed33ee8b8813260a2a8482f752d387bfe",
+    "accepted_targets_blob_sha": "9f85c76c93f3c1b7601495222d3727c348639f",
+    "holds_blob_sha": "23ad5830873213efee84d8d1ff56d347c306f8b9",
+    "unresolved_issues_blob_sha": "48bd475cc67d1c69959c0f620020d9390997a9fb",
+    "verified_unchanged": true
+  },
+  "controller_markers_before_stage_8": {
+    "OVERNIGHT_STAGE_1_COMPLETE": 1,
+    "OVERNIGHT_STAGE_2_COMPLETE": 1,
+    "OVERNIGHT_STAGE_3_COMPLETE": 1,
+    "OVERNIGHT_STAGE_4_COMPLETE": 1,
+    "OVERNIGHT_STAGE_5_COMPLETE": 1,
+    "OVERNIGHT_STAGE_6_COMPLETE": 1,
+    "OVERNIGHT_STAGE_7_COMPLETE": 1
+  },
+  "boundaries": {
+    "canonical_release": "v0.6.1_unchanged",
+    "r1_review_state_change": false,
+    "p_level_assignment": false,
+    "historical_practice_geometry_promotion": false,
+    "public_release": false,
+    "database_or_api_change": false,
+    "schema_or_ontology_change": false,
+    "independent_review_claim": false,
+    "source_count_used_as_prevalence": false,
+    "missing_or_inconclusive_used_as_absence": false
+  },
+  "adversarial_goal_assessment": {
+    "authorized_target_count": 4,
+    "unauthorized_targets_added": 0,
+    "subject_research_complete": true,
+    "cross_case_reconciliation_complete": true,
+    "internal_adversarial_review_complete": true,
+    "successor_candidate_built": true,
+    "unresolved_uncertainty_visible": true,
+    "threshold_weakened_to_finish": false,
+    "goal_met": true
+  },
+  "next_d096_mode": "maintenance_trigger_bound_review",
+  "stage_8_pr_requirement": "Repository sanitation and Python regression checks must pass on the Stage 8 PR before merge and issue closure."
+}

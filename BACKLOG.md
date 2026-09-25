@@ -10,39 +10,47 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# OVERNIGHT READY-QUEUE PROGRAMME — ACTIVE
+# CURRENT MODE — MAINTENANCE / TRIGGER-BOUND REVIEW
 
-**Issue:** #262  
-**Mode:** execution → consolidation → review/release  
-**Sponsor authorization:** 2026-09-25 overnight run  
-**Historical intake:** authorized only for the four frozen/qualified targets below
+**Latest completed programme:** #262 — overnight ready historical queue  
+**Latest internal candidate:** `post-r1-cumulative-review-v2-overnight`  
+**Canonical historical data release:** `v0.6.1` unchanged  
+**Historical intake:** no new tranche is currently authorized
 
-**Morning goal:** research and internally review the currently ready historical queue,
-then produce one cumulative non-canonical successor candidate or explicit HOLD.
+The sponsor-authorized four-target queue is complete:
+1. Qi — 500 BCE — internally reviewed bounded evidence state; exact Qi territorial
+   slavery/servitude remains researched-inconclusive.
+2. Swahili maritime trade network — 1400 — medieval slave-trade participation is
+   supported at the network dimension; coast-wide territorial prevalence and exact
+   volume remain unresolved.
+3. Ifugao communities — 1700 — exact-anchor slavery/status remains
+   researched-inconclusive; later traditional child sale, debt bondage, captivity and
+   slaveholding remain bounded contextual evidence.
+4. Khanate of Kokand — 1800 — exact-anchor slavery/slave-trade practice remains
+   researched-inconclusive; later early-nineteenth-century Kokand slavery/captive
+   enslavement remains bounded contextual evidence.
 
-Frozen overnight targets:
-1. Qi — 500 BCE — `R1:P:-500:F:r2`
-2. Swahili maritime trade network — 1400 — `R1:N:swahili_1400`
-3. Ifugao communities — 1700 — `R1:N:ifugao_1700`
-4. Khanate of Kokand — 1800 — `R1:P:1800:E:r1`
+The successor candidate contains:
+- 21 total members;
+- 16 internally accepted bounded evidence states;
+- 5 explicit HOLD rows;
+- 133 source relations by pinned lineage;
+- 2 explicit cross-target exact source-version dependencies;
+- 0 independent historical reviews.
 
-Execution order and run contracts are canonical in issue #262.
+Under D-096/D-098, the next justified mode is **maintenance / trigger-bound review**.
+This does not authorize another historical intake tranche automatically.
 
-Eight-run sequence:
-1. Qi subject research / close EXP-08;
-2. Swahili subject research;
-3. Ifugao subject research;
-4. Kokand subject research;
-5. four-case reconciliation/source dependency audit;
-6. cumulative adversarial internal review;
-7. integrate admitted rows into a new immutable non-canonical successor candidate;
-8. final QC + adversarial morning gate + handoff.
+Reopen active work only for a concrete trigger such as:
+- new sponsor authorization for bounded historical intake;
+- independent/external historical review;
+- a concrete consumer/publication need for the cumulative candidate;
+- a demonstrated defect in an accepted row;
+- new evidence satisfying a recorded HOLD/reopen condition;
+- a production/release need that activates one of the parked operational items.
 
-WIP=1. Each run must finish/reconcile previous open WIP before advancing.
-No fifth target, no P-level, no geometry promotion, no automatic public/canonical
-release, and no threshold weakening to finish by morning.
-
-Canonical v0.6.1 remains unchanged.
+The completed programme creates no P-level, historical-practice geometry, canonical
+release, public release, R1 reviewed-state, schema, database/API or frontend change.
 
 ## Discovery execution
 

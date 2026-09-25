@@ -1976,3 +1976,62 @@ Reopen for:
 **No effect:** canonical v0.6.1, frozen R1 state, P-levels, geometry, ontology/schema,
 production services and EXP-08's frozen Qi row remain unchanged.
 
+## D-098 — Overnight ready queue yields successor non-canonical candidate
+**Date:** 2026-09-25  
+**Status:** accepted internal review/release decision
+
+**Evidence:** #262, completing the sponsor-authorized eight-stage ready-queue programme
+over Qi 500 BCE, Swahili maritime network 1400, Ifugao communities 1700 and Khanate
+of Kokand 1800.
+
+**Decision:** Record `post-r1-cumulative-review-v2-overnight` as the latest
+**internal non-canonical review candidate**, preserving
+`post-r1-cumulative-review-v1` unchanged as its predecessor.
+
+The successor contains:
+- 21 total members;
+- 16 `ACCEPT_INTERNAL_REVIEW` bounded evidence states;
+- 5 preserved `HOLD_EXISTING_EVIDENCE` rows;
+- 0 narrowed rows;
+- 0 rejected rows;
+- 0 independently reviewed rows;
+- 133 source relations by pinned lineage.
+
+The two exact cross-target source-version overlaps are:
+1. Angkor 1200 / Khmer 1300 — Lustig & Lustig 2013 /
+   `angkor-personnel-corpus`;
+2. Great Zimbabwe 1400 / Swahili 1400 — Ibn Battuta at Kilwa 1331 /
+   Freeman-Grenville translation chain.
+
+Neither overlap is independent corroboration across its paired rows.
+
+The four overnight additions retain their bounded meanings:
+- **Qi 500 BCE:** exact Qi territorial slavery/servitude remains
+  researched-inconclusive; Yue Shifu is contextual near-anchor evidence.
+- **Swahili 1400:** medieval slave-trade participation is supported at the network
+  dimension; coast-wide territorial prevalence and exact volume remain unresolved.
+- **Ifugao 1700:** exact-anchor slavery/status remains researched-inconclusive; later
+  traditional unfreedom evidence is not projected backward.
+- **Kokand 1800:** exact-anchor slavery/slave-trade practice remains
+  researched-inconclusive; later early-nineteenth-century Kokand-specific evidence is
+  not projected backward.
+
+**Interpretation:** internal acceptance validates a bounded evidence state, not a
+binary or uniformly positive slavery classification.
+
+**Publication boundary:** the successor is not automatically public or canonical.
+Independent historical review remains zero.
+
+**Next mode:** maintenance / trigger-bound review under D-096.
+
+Reopen for:
+1. new sponsor authorization for bounded historical intake;
+2. independent/external historical review;
+3. a concrete consumer/publication need for the cumulative candidate;
+4. a demonstrated defect in an accepted row;
+5. new evidence satisfying a HOLD or accepted-row reopen condition;
+6. a concrete production/release requirement activating parked operational work.
+
+**No effect:** canonical v0.6.1, frozen R1 state, P-levels, historical-practice
+geometry, ontology/schema, production database/API and frontend remain unchanged.
+
