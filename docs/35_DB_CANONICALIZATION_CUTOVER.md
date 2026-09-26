@@ -84,6 +84,8 @@ EXP-15's three newly qualified node sites are outside this historical-content fr
 
 Repository migration files: 0001–0029.
 
+**Critical additional finding:** the live database currently has no `atlas_meta.schema_migration` checksum ledger. The repository migration runner (`tools/migrate.py`) would create that ledger and otherwise consider every repository migration unrecorded. It must therefore **not** be run against production until a verified baseline has been established.
+
 Live Supabase history:
 - 0001–0011 present;
 - 0012–0014 absent;
@@ -100,8 +102,12 @@ Verified live 0012–0014 effects:
 
 Do **not** run 0012–0014 again.
 
-The task is to prove live definitions match repository intent, then repair migration
-history non-destructively where future tooling requires it.
+The task is to prove live definitions match repository intent, then establish two non-destructive history layers where future tooling requires them:
+
+1. reconcile the Supabase platform migration-history metadata; and
+2. create/seed the repository checksum ledger only from migrations whose live effects have been verified against the exact repository SQL/checksum.
+
+Do not let the checksum runner bootstrap an empty ledger and then replay production.
 
 Duplicate history rows must be explained. They are not deleted merely to make a list
 look tidy.
@@ -109,7 +115,9 @@ look tidy.
 ### Gate output
 
 - repository↔live migration matrix;
-- before/after live migration history;
+- repository file checksum inventory;
+- before/after Supabase migration history;
+- before/after `atlas_meta.schema_migration` checksum ledger;
 - verification queries;
 - regression/QC result;
 - explicit retained exceptions.
