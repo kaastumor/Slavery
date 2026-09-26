@@ -2,7 +2,7 @@ name: MVP Availability Monitor
 
 on:
   schedule:
-    # Non-canonical, unused preview: weekly liveness is enough; static fallback preserves published state.
+    # Release-derived public Atlas: weekly liveness remains proportionate absent a demonstrated user-critical SLA; static fallback preserves published state.
     - cron: "17 6 * * 1"
   workflow_dispatch:
 
@@ -48,7 +48,7 @@ jobs:
             });
             const existing = issues.find(i => i.title === title && !i.pull_request);
             const body = [
-              "The automated MVP availability monitor failed.",
+              "The automated public Atlas availability monitor failed.",
               "",
               "Workflow: " + context.serverUrl + "/" + context.repo.owner + "/" + context.repo.repo + "/actions/runs/" + context.runId,
               "",
