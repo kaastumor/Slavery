@@ -2245,3 +2245,65 @@ Therefore #26 is reactivated before authority cutover. RLS is not changed blindl
 **Release effect:** none yet. v0.6.1 remains canonical; v3 remains internal and
 noncanonical; the public preview remains unchanged.
 
+## D-102 — v0.6.1 live database semantics are reconciled; advance DB cutover to v3 mapping
+**Date:** 2026-09-26  
+**Status:** accepted internal migration/release-gate decision
+
+**Evidence:** #304, PR #306, live production repair and unchanged repository regression
+tests.
+
+**Decision:** Record Gate 1 of D-101 as:
+
+`V061_DB_RECONCILED`.
+
+The live database now satisfies the unchanged canonical v0.6.1 reconciliation contract
+after a bounded atomic repair restored the previously missing workbook-wide raw and
+global-evidence semantic phase.
+
+Verified live after repair:
+- 288 raw workbook rows;
+- 36 evidence-sheet coverage/source links;
+- 22 global semantic mappings;
+- 18 territorial-practice mappings;
+- 3 external-participation mappings;
+- 1 legal-event mapping;
+- 29 exact global source versions;
+- 0 automatically assigned P-levels.
+
+Existing Atlantic actors/voyages/ownership/crosswalks, workbook lineage, coverage
+assessments, release membership and public release channel remain unchanged.
+
+The live blocking QC issue was resolved only after:
+- unchanged `db/tests/002_v061_reconciliation.sql` passed;
+- schema smoke passed;
+- claim-kind integrity passed;
+- Supabase security advisor returned zero lints;
+- the private internal-schema boundary remained intact.
+
+### Release-bundle boundary
+
+The current D-054 full-state bundle implementation is actually scoped to the
+territorial-practice public preview. It is not a sufficient canonical database-release
+contract for the broader v0.6.1 state because that state includes voyages, actors,
+coverage, external participation and legal events.
+
+Do not force Gate 1 through that narrower contract.
+
+A canonical preservation-grade full-state bundle/release contract must be proven or
+extended at D-101 Gate 3/4 before the database authority flip and first DB-backed
+canonical release.
+
+### Next gate
+
+Proceed to D-101 Gate 2:
+
+> map/ingest frozen `post-r1-cumulative-review-v3-cross-frame` into the database
+> without semantic loss.
+
+Any material mismatch between v3 evidence semantics and existing relational structures
+is a schema-decision gate, not permission to flatten the evidence into notes.
+
+**No effect:** canonical release remains v0.6.1; v3 remains noncanonical; database
+authority has not flipped; independent historical review remains 0; public preview/UI
+remain unchanged.
+
