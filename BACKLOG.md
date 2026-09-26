@@ -1,6 +1,6 @@
 # Historical Slavery Atlas — Backlog
 
-**Updated:** 2026-09-25  
+**Updated:** 2026-09-26  
 **Role:** canonical execution queue only; assumptions/risks/value evidence live in `docs/25_PROJECT_HEALTH.md`  
 **Canonical historical data release:** `v0.6.1` (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
@@ -10,50 +10,48 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — OVERNIGHT CONTROLLED EXECUTION
+# CURRENT MODE — EXECUTION
 
-**Controller issue:** #291  
-**Stages complete on main:** 1–2  
-**Stages 3–6:** complete on branch `post-v2-five-row-cumulative`, pending one review PR  
-**Latest candidate after merge:** `post-r1-cumulative-review-v3-cross-frame`  
+**Active next issue:** #297 — EXP-15 neutral node-site C0 qualification tranche  
+**Mode:** neutral identity / chronology / frame / spatial-scope qualification  
+**Frozen sample:** Samarkand 1400; Timbuktu 1500; Tenochtitlan 1500  
+**Latest internal candidate:** `post-r1-cumulative-review-v3-cross-frame`  
 **Canonical historical data release:** `v0.6.1` unchanged  
-**WIP:** one cumulative review/package branch
+**WIP:** #297 qualification only; subject slavery/coercion research not started
 
-## Current programme result
+## Completed campaign state
 
-EXP-14 Trans-Saharan 1300 is complete and merged.
+#291's eight-stage correction campaign has completed its substantive work and final
+handoff is being merged.
 
-The EXP-10-derived cross-frame programme is now closed:
-- Karnak 1000 BCE — researched-inconclusive;
-- Tōdai-ji 800 — bounded-supported near-anchor non-free status;
-- Sápmi 1600 — bounded-supported state coercion, internal slavery unresolved;
-- Trans-Saharan 1300 — bounded-supported network participation.
+Latest internally reviewed cumulative state:
+- candidate membership: 26;
+- accepted bounded evidence states: 21;
+- HOLD rows: 5;
+- source relations: 166;
+- exact cross-target source-version overlaps: 2;
+- independent historical reviews: 0.
 
-Five post-v2 rows (including Lithuania 1300) passed cumulative internal review.
+EXP-10-derived subject programme is closed. EXP-14 Trans-Saharan 1300 is
+bounded-supported at the network-participation dimension.
 
-Source reconciliation:
-- v2 source relations: 133;
-- post-v2 additions: 33;
-- integrated lineage: 166;
-- missing version/group/claim-fitness metadata: 0;
-- new exact source-version overlap with v2: 0;
-- new cross-target exact overlaps: 0.
+## Next exact action
 
-D-099 packaging gate: **BUILD_SUCCESSOR_CANDIDATE**.
+Execute #297 using the accepted neutral C0 qualification method.
 
-The successor `post-r1-cumulative-review-v3-cross-frame` is internal/noncanonical:
-26 members, 21 accepted bounded evidence states, 5 HOLDs, 166 source relations,
-2 preserved candidate-wide exact cross-target dependencies, 0 independent historical
-reviews.
+For each frozen node:
+- validate identity at the anchor;
+- validate temporal precision;
+- test `node_site` framing;
+- define maximum safe spatial object;
+- preserve mandatory limitations.
 
-Next exact action:
-1. merge the Stages 3–6 review/package PR after cheap CI;
-2. record `NIGHT_STAGE_3_COMPLETE` through `NIGHT_STAGE_6_COMPLETE`;
-3. perform Stage 7 next-horizon allocation from fresh main;
-4. perform Stage 8 final QC/handoff and close #291.
+Do **not** inspect/select evidence because it concerns slavery/coercion.
 
-No automatic canonical/public release, P-level, practice geometry, R1 mutation,
-schema/ontology/database/API/frontend change or independent-review claim follows.
+Qualification does not authorize subject research automatically.
+
+No automatic P-level, practice geometry, R1 mutation, schema/ontology/database/API/
+frontend change, candidate integration, canonical release or public publication follows.
 
 ## Discovery execution
 
