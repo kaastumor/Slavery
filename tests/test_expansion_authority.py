@@ -22,8 +22,8 @@ class ExpansionAuthorityTests(unittest.TestCase):
             additions["post_m1_claim_ids"]
         )
         excluded = set(selection["exclusions"]["disputed_claim_ids"])
-        self.assertEqual(len(selected), 19)
-        self.assertEqual(len(additions["approved_geometry_ids"]), 47)
+        self.assertEqual(len(selected), 35)
+        self.assertEqual(len(additions["approved_geometry_ids"]), 49)
         self.assertTrue(selected.isdisjoint(excluded))
         self.assertTrue(selection["rules"]["explicit_membership_only"])
         self.assertTrue(selection["rules"]["reviewed_row_discovery_forbidden"])
@@ -43,9 +43,30 @@ class ExpansionAuthorityTests(unittest.TestCase):
             selection["supersedes_selection"],
             "release/selections/v0.8.0-expansion-01.json",
         )
-        self.assertEqual(selection["expected_counts"]["candidate_claims"], 59)
-        self.assertEqual(selection["expected_counts"]["candidate_spatial_entities"], 36)
-        self.assertEqual(selection["expected_counts"]["candidate_geometries"], 47)
+        self.assertEqual(selection["expected_counts"]["candidate_claims"], 75)
+        self.assertEqual(selection["expected_counts"]["candidate_spatial_entities"], 50)
+        self.assertEqual(selection["expected_counts"]["candidate_geometries"], 49)
+
+    def test_v2_selection_keeps_claim_and_geometry_completeness_separate(self) -> None:
+        selection = MODULE.load_selection(SELECTION)
+        additions = selection["additions"]
+        self.assertEqual(
+            selection["selection_schema"],
+            "historical-slavery-atlas-expansion-selection-v2",
+        )
+        self.assertEqual(len(additions["direct_recovery_claim_ids"]), 19)
+        self.assertEqual(len(additions["post_m1_claim_ids"]), 11)
+        self.assertEqual(len(additions["reviewed_state_claim_ids"]), 5)
+        self.assertIn(
+            "dac1fdbe-8a72-411e-a43c-6180e3d24298",
+            additions["reviewed_state_claim_ids"],
+        )
+        self.assertIn(
+            "cfd709dd-55ad-4f92-a6ec-f6c7910b3fe1",
+            additions["reviewed_state_claim_ids"],
+        )
+        self.assertTrue(selection["rules"]["claim_completeness_independent_of_geometry"])
+        self.assertTrue(selection["rules"]["reviewed_disputes_may_be_complete"])
 
     def test_predecessor_identity_is_exact_v070_authority(self) -> None:
         selection = MODULE.load_selection(SELECTION)
