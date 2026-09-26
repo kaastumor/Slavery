@@ -59,6 +59,13 @@ def ensure_ledger(conn) -> None:
             )
             """
         )
+        cur.execute(
+            f"""
+            ALTER TABLE ${META_SCHEMA}.${META_TABLE}
+                ADD COLUMN IF NOT EXISTS recording_method text NOT NULL DEFAULT 'runner_apply',
+                ADD COLUMN IF NOT EXISTS notes text
+            """
+        )
     conn.commit()
 
 
