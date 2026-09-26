@@ -14,7 +14,7 @@ class R1TechnicalMVPGateTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.bundle = bundle_builder.build()
-        cls.index = (WEB / "index.html").read_text(encoding="utf-8")
+        cls.index = (WEB / "r1-candidate.html").read_text(encoding="utf-8")
         cls.mvp = (WEB / "src" / "mvp.ts").read_text(encoding="utf-8")
         cls.release_check = (ROOT / "docs" / "mvp" / "v0.1-release-check.md").read_text(encoding="utf-8")
 
@@ -35,7 +35,7 @@ class R1TechnicalMVPGateTests(unittest.TestCase):
         expected = bundle_builder.canonical_bytes(bundle_builder.build())
         self.assertEqual(committed, expected)
 
-    def test_default_web_path_is_candidate_not_live_api(self):
+    def test_preserved_r1_candidate_path_is_static_not_live_api(self):
         self.assertIn('src="/src/mvp.ts"', self.index)
         self.assertIn('./data/r1-mvp-candidate.json', self.mvp)
         self.assertNotIn("VITE_ATLAS_API_URL", self.mvp)
