@@ -14,47 +14,78 @@ This file answers **what is justified to work on next**.
 
 **Parent gate:** #300 — canonical PostgreSQL + first DB-backed release gate  
 **Gate 0:** **PASS — MIGRATION_HISTORY_RECONCILED**  
-**Current gate:** Gate 1 — v0.6.1 DB reproduction / release-membership rebuild  
+**Current gate:** Gate 1 — v0.6.1 DB reproduction  
+**Active execution slice:** #304 — repair incomplete live v0.6.1 semantic migration  
 **Canonical historical data release:** `v0.6.1` unchanged  
-**Reviewed successor input:** `post-r1-cumulative-review-v3-cross-frame` remains frozen/noncanonical  
-**WIP:** #300 Gate 1 only
+**Reviewed successor input:** `post-r1-cumulative-review-v3-cross-frame` frozen/noncanonical  
+**WIP:** #304 only under parent #300
 
-Gate 0 completed:
-- migration 0030 applied exactly once;
-- repository checksum ledger established with 30 verified rows;
-- checksum mismatches = 0; extras = 0;
-- known Supabase 0012–0014 gaps and 0016/0029 retries preserved as legacy audit evidence;
-- release channel/membership counts unchanged;
-- claim-kind integrity remains clean;
-- internal schemas remain unavailable to anon/authenticated;
-- Supabase security advisor currently reports 0 lints.
+Gate 0 is complete on `main`:
+- forward migration 0030 applied exactly once;
+- 30-row checksum ledger verified with zero mismatch/extras;
+- known platform-history gaps/retries preserved as audit evidence;
+- no historical migration replay.
 
-## Gate 1 finding already established
+## Gate 1 live revalidation — blocking finding
 
-The old `0.6.1-db-migration-candidate` predates current reconstructible release
-membership/artifact machinery.
+The old `0.6.1-db-migration-candidate` cannot currently be treated as reconciled.
 
-Its embedded manifest contains:
-- 18 claim IDs;
-- 11 actor IDs;
-- 8 voyage IDs;
-- 18 source-version IDs;
-- 99 coverage-assessment IDs.
+Live execution of the unchanged
+`db/tests/002_v061_reconciliation.sql` failed.
 
-But current exact membership tables contain **0 rows for that release**, and
-`release_capture_status` remains
-`pending_d054_release_bundle_rebuild`.
+The test file is byte-identical to the version at the candidate's recorded
+reconciliation commit, so this is not test drift.
 
-Therefore Gate 1 is not a re-import of historical evidence. It is a controlled
-reconstruction/reconciliation task:
+Present and preserved:
+- Atlantic voyage/owner/source core;
+- 99 coverage assessments with expected state distribution;
+- canonical workbook source/version/asset;
+- canonical workbook SHA-256
+  `0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4`;
+- existing public preview/channel state.
 
-1. revalidate exact v0.6.1 workbook checksum/raw/crosswalk meaning;
-2. rebuild exact release membership from the frozen candidate manifest/current DB;
-3. generate/verify an immutable full-state bundle under the current release contract;
-4. preserve the unresolved QC issue and draft/noncanonical status;
-5. prove byte/digest reconstruction before any DB authority decision.
+Missing live:
+- `v061_workbook_row`: 0 / expected 288;
+- v0.4.7–v0.5.0 global evidence mappings: 0 / expected 22 mappings over
+  18 positive/disputed rows;
+- evidence-sheet coverage-source links: 0 / expected 36;
+- workbook external-participation claims: 0 / expected 3;
+- workbook legal-event claims: 0 / expected 1.
 
-No v3 ingestion until Gate 1 passes.
+A live blocking QC issue
+`V061_LIVE_RECONCILIATION_INCOMPLETE`
+is attached to the draft DB candidate.
+
+## Repair contract
+
+#304 restores **only** the missing phase:
+- no full importer replay/reset;
+- deterministic/idempotent identities;
+- atomic transaction;
+- exact source-version URLs;
+- 288 raw workbook rows;
+- 36 coverage-source links;
+- explicit 22 global semantic targets;
+- RI remains non-positive provenance;
+- territorial P-level stays NULL;
+- no geometry inference;
+- repaired claims remain reviewed + unpublished;
+- public release/channel membership is untouched.
+
+A partial/conflicting repair state must fail closed.
+
+## Gate 1 done gate
+
+1. reviewed repair code passes repository CI;
+2. live dry-run reports `READY_TO_REPAIR`;
+3. one controlled atomic live apply;
+4. unchanged `db/tests/002_v061_reconciliation.sql` passes;
+5. schema/security/release-channel invariants still pass;
+6. blocking QC issue is resolved only after those checks;
+7. then rebuild exact v0.6.1 release membership/bundle under current contract;
+8. record `V061_DB_RECONCILED`.
+
+No v3 ingestion and no DB authority flip until Gate 1 passes.
 
 ## Discovery execution
 
