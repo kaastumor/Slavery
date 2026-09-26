@@ -10,23 +10,77 @@ MODULE = importlib.util.module_from_spec(SPEC)
 assert SPEC.loader is not None
 SPEC.loader.exec_module(MODULE)
 
-SELECTION = ROOT / "release" / "selections" / "v0.8.0-expansion-01.json"
+SELECTION = ROOT / "release" / "selections" / "v0.8.0-expansion-02.json"
 PREDECESSOR = ROOT / "data" / "releases" / "v0.7.0" / "authority-state.json"
 
 
 class ExpansionAuthorityTests(unittest.TestCase):
-    def test_selection_is_explicit_and_excludes_disputed_claims(self) -> None:
+    def test_selection_is_explicit_and_preserves_reviewed_disputes(self) -> None:
         selection = MODULE.load_selection(SELECTION)
         additions = selection["additions"]
-        selected = set(additions["direct_recovery_claim_ids"]) | set(
-            additions["post_m1_claim_ids"]
+        selected = (
+            set(additions["direct_recovery_claim_ids"])
+            | set(additions["post_m1_claim_ids"])
+            | set(additions["reviewed_state_claim_ids"])
         )
-        excluded = set(selection["exclusions"]["disputed_claim_ids"])
-        self.assertEqual(len(selected), 18)
-        self.assertEqual(len(additions["approved_geometry_ids"]), 46)
+        excluded = (
+            set(selection["exclusions"]["superseded_legacy_prototype_claim_ids"])
+            | set(
+                selection["exclusions"][
+                    "legacy_prototype_claim_ids_pending_reconciliation"
+                ]
+            )
+        )
+        self.assertEqual(len(selected), 35)
+        self.assertEqual(len(additions["approved_geometry_ids"]), 49)
         self.assertTrue(selected.isdisjoint(excluded))
+        self.assertIn(
+            "cfd709dd-55ad-4f92-a6ec-f6c7910b3fe1",
+            additions["reviewed_state_claim_ids"],
+        )
         self.assertTrue(selection["rules"]["explicit_membership_only"])
         self.assertTrue(selection["rules"]["reviewed_row_discovery_forbidden"])
+        self.assertTrue(selection["rules"]["reviewed_disputes_may_be_complete"])
+
+    def test_final_selection_adds_todaiji_without_mutating_first_freeze(self) -> None:
+        selection = MODULE.load_selection(SELECTION)
+        additions = selection["additions"]
+        self.assertIn(
+            "687bed4f-281e-4821-bc23-1e75cb65dd99",
+            additions["post_m1_claim_ids"],
+        )
+        self.assertIn(
+            "4ea5165a-9bd2-4883-9cdd-4910aa491dc7",
+            additions["approved_geometry_ids"],
+        )
+        self.assertEqual(
+            selection["supersedes_selection"],
+            "release/selections/v0.8.0-expansion-01.json",
+        )
+        self.assertEqual(selection["expected_counts"]["candidate_claims"], 75)
+        self.assertEqual(selection["expected_counts"]["candidate_spatial_entities"], 50)
+        self.assertEqual(selection["expected_counts"]["candidate_geometries"], 49)
+
+    def test_v2_selection_keeps_claim_and_geometry_completeness_separate(self) -> None:
+        selection = MODULE.load_selection(SELECTION)
+        additions = selection["additions"]
+        self.assertEqual(
+            selection["selection_schema"],
+            "historical-slavery-atlas-expansion-selection-v2",
+        )
+        self.assertEqual(len(additions["direct_recovery_claim_ids"]), 19)
+        self.assertEqual(len(additions["post_m1_claim_ids"]), 11)
+        self.assertEqual(len(additions["reviewed_state_claim_ids"]), 5)
+        self.assertIn(
+            "dac1fdbe-8a72-411e-a43c-6180e3d24298",
+            additions["reviewed_state_claim_ids"],
+        )
+        self.assertIn(
+            "cfd709dd-55ad-4f92-a6ec-f6c7910b3fe1",
+            additions["reviewed_state_claim_ids"],
+        )
+        self.assertTrue(selection["rules"]["claim_completeness_independent_of_geometry"])
+        self.assertTrue(selection["rules"]["reviewed_disputes_may_be_complete"])
 
     def test_predecessor_identity_is_exact_v070_authority(self) -> None:
         selection = MODULE.load_selection(SELECTION)

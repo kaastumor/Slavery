@@ -3018,3 +3018,55 @@ supported Zhengzhou captive-taking claim is selected separately.
 
 **No immediate release effect:** this decision freezes candidate-construction semantics.
 It does not make v0.8.0 canonical, publish any new claim, or move the public channel.
+
+
+## D-115 — “All complete entries live” requires claim/geometry-independent v0.8 selection
+**Date:** 2026-09-27  
+**Status:** accepted sponsor-authorized release-selection correction
+
+**Trigger:** the sponsor explicitly requested that all currently complete Atlas entries be
+pushed to the live public release, while continuing hourly evidence expansion.
+
+The earlier D-114 `v0.8.0-expansion-01` selection was never canonical or public and is
+preserved as historical candidate evidence. It is superseded before publication.
+
+**Correction:** claim completeness and geometry completeness are separate dimensions.
+A reviewed claim does **not** become incomplete merely because no defensible historical
+geometry has been resolved. Such a claim may be published with geometry explicitly
+unresolved. Conversely, a geometry record never strengthens the historical claim.
+
+A reviewed disputed interpretation may also be evidence-complete. Publication must
+preserve the disputed state rather than treating disagreement as absence or silently
+excluding it. Likewise, a reviewed date dispute may remain explicit release state.
+
+**Eligibility rule for this cutover:** an added territorial-practice claim is eligible
+when it has:
+1. reviewed claim state;
+2. claim-level source evidence with preserved version/provenance;
+3. an accepted current/recovery classification state, including explicitly reviewed
+   `disputed` or `reviewed_with_date_dispute` state;
+4. no newly assigned post-M1 P-level.
+
+Geometry is selected independently. Any selected geometry must be reviewed, resolved,
+belong to a selected subject, and overlap at least one selected claim interval.
+Unresolved geometry remains unresolved and does not block the claim.
+
+Legacy `research_prototype_reviewed` rows are not treated as current-method complete
+merely because they were previously reviewed. Where a reconciled successor exists, the
+legacy row remains immutable lineage and is excluded. Remaining legacy prototype rows
+must be replayed before later promotion.
+
+**Decision:** `release/selections/v0.8.0-expansion-02.json` freezes the current complete
+claim set as predecessor union plus:
+
+- **35** exact added territorial-practice claims;
+- **32** added spatial entities;
+- **49** exact reviewed/resolved geometry records;
+- explicit disputed/date-disputed reviewed states where applicable.
+
+With v0.7.0 predecessor membership this yields a 75-claim / 50-spatial-entity /
+49-historical-geometry candidate authority before deterministic source-version closure.
+
+This decision authorizes candidate construction and release review. It does not bypass
+preservation-grade authority freezing, publication QC, immutable release creation, or
+the explicit serving-channel cutover gate.
