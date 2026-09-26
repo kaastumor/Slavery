@@ -2779,3 +2779,58 @@ public serving channel does **not** move in Gate 4.
 
 Gate 5 / #323 is separately authorized to stage, test and—only after its own acceptance
 gate—move the public UI/API release channel to an exact v0.7.0-derived materialization.
+
+
+## D-111 — Gate-5 public serving uses an immutable release-derived materialization
+**Date:** 2026-09-26  
+**Status:** accepted Gate-5 serving-design decision
+
+**Evidence:** #323, D-053, D-109, D-110 and the live serving-path audit.
+
+**Problem:** the existing `public_mvp_preview` channel intentionally requires a target
+whose manifest purpose equals the channel code. Canonical `v0.7.0` correctly has
+purpose `canonical_historical_release`, so repointing the preview channel directly to
+the canonical release would violate D-053's purpose boundary. The current Edge Function
+also reads `publish.claim`, which requires `publication_status='published'`; Gate 4
+correctly left all D-109 authority claim publication flags unchanged.
+
+Weakening either rule would conflate canonical release identity, mutable row lifecycle
+and public serving.
+
+**Decision:** Gate 5 will use a distinct immutable **serving materialization** derived
+only from canonical `v0.7.0`.
+
+The first materialization identity is:
+
+`v0.7.0-public-mvp-v1`
+
+Its rules are:
+
+1. it is non-canonical and has manifest purpose `public_mvp_preview`;
+2. it records `v0.7.0` as its sole canonical source release plus exact source package
+   and payload digests;
+3. its public JSON payload is built deterministically from the immutable v0.7.0
+   `authority-state.json`, not from mutable `atlas`/`publish` queries;
+4. territorial-practice map/list records may be projected for the existing client, but
+   the payload must explicitly report the release's other claim families and research
+   states so omission from the map cannot be read as historical absence;
+5. v0.7.0's zero reviewed historical evidence geometries must remain zero: no proxy
+   geometry is created merely to make the map colorful;
+6. neutral Natural Earth land remains an independent D-108 cartographic layer;
+7. exact source/version provenance for every displayed territorial-practice claim is
+   reconstructed from the frozen release objects;
+8. the existing `atlas-data` function may continue serving legacy preview releases
+   through the old DB-backed path, but when the channel points to the v0.7.0 serving
+   materialization it must return the prebuilt immutable payload instead of querying
+   mutable research rows;
+9. Pages fallback must use or verify the same materialized payload bytes rather than
+   deriving new historical content from a post-cutover live query;
+10. D-053 compare-and-set pointer semantics remain the production promotion/rollback
+    control. Rollback target `mvp-preview-ancient-v2` remains immutable and available.
+
+This is a presentation/materialization decision, not a new historical classification.
+It does not change v0.7.0 release bytes, D-109 research membership, claim publication
+flags, P-levels, historical geometry or independent-review state.
+
+A separate Gate-5 cutover decision is still required after staging, semantic/security
+regression and rollback proof.
