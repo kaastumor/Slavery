@@ -40,6 +40,5 @@ assert receipt["restored"] is True
 assert receipt["verification"] == "EXACT_OBJECT_DIGESTS_AND_PORTABLE_CARTOGRAPHY_MATCH"
 assert receipt["production_database_state_sha256"] == "31b7a7b675445e5758ffd68d64ff0f0cde83df1b0ea65f29835246deb2ae26ff"
 assert receipt["cartography_normalized_wkb_sha256"] == "ed1322c8266ca5e73e8f7aa528b284ddc0e6d2671af06e92cd9e46adf3cde159"
-assert receipt["verification"] == "EXACT_DIGEST_MATCH"
 print(json.dumps(receipt, indent=2, sort_keys=True))
 PY
