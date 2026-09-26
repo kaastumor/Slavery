@@ -49,6 +49,27 @@ Allowed outcomes:
 `BOUNDED_SUPPORTED`, `RESEARCHED_INCONCLUSIVE`, or
 `HOLD_EVIDENCE_ACCESS_OR_SCOPE`.
 
+Current branch result: **BOUNDED_SUPPORTED — near-anchor Tōdai-specific `奴/奴婢`
+status presence; labour extent and prevalence unresolved**.
+
+Supported:
+- Tōdai-specific eighth-century `奴婢` documentary tradition;
+- a decisive 792 Tōdai petition concerning named `奴` and their release into `良`;
+- specialist institution-specific treatment of Tōdai `奴婢` organization/service.
+
+Not promoted:
+- an exact-800 roster or persistence of the 750 donation at original scale;
+- all temple, construction or estate labour as enslaved;
+- corvée/service = slave status;
+- later Tōdai Yōroku duties as contemporary proof;
+- later shōen continuity, prevalence or practice geometry.
+
+Internal adversarial replay passed with these limits.
+
+Next exact action: one coherent PR + normal scoped CI → merge → close #282 → return to
+the D-096 mode-selection boundary. The Trans-Saharan trade network — 1300 remains the
+only EXP-10-qualified row without subject research.
+
 No P-level, practice geometry, R1 reviewed-state mutation, schema/ontology change,
 database/API/frontend work, canonical mutation, cumulative-candidate integration or
 automatic publication.
