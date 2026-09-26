@@ -10,69 +10,44 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — EXECUTION
+# CURRENT MODE — REVIEW / RELEASE
 
-**Active issue:** #282 — EXP-13 Tōdai-ji 800 bounded subject research  
-**Target:** `R1:N:todaiji_800` — Tōdai-ji — 800 CE  
-**Frame:** `institution_estate` — temple/institution locus; historical estate extent unresolved  
+**Active issue:** #288 — post-D099 Sápmi/Tōdai delta review  
+**Reviewed delta:** EXP-12 Sápmi 1600 + EXP-13 Tōdai-ji 800  
+**Immutable base candidate:** `post-r1-cumulative-review-v2-overnight`  
+**Earlier reviewed delta:** Lithuania 1300 + Karnak 1000 BCE (D-099; separate)  
 **Canonical historical data release:** `v0.6.1` unchanged  
 **WIP:** 1
 
-EXP-12 Sápmi is complete and merged. The older Tōdai issue #282 was renumbered from
-EXP-12 to EXP-13 because no Tōdai branch/research artifact existed before Sápmi became
-the completed EXP-12 case.
+No new historical/source research is authorized inside this review.
 
-Tōdai-ji is the next bounded subject horizon because it tests a recurring
-institution-specific failure mode in a distinct Japanese legal/documentary tradition:
-- Nālandā 700 and Shaolin 1000 remained target-specific inconclusive despite broader
-  monastic slavery/dependency evidence;
-- Karnak 1000 BCE had strong earlier target-positive evidence but no secure continuity
-  bridge at the anchor;
-- Tōdai-ji can test whether near-anchor Japanese temple/estate records preserve a
-  target-specific status distinction rather than forcing a generic institutional
-  projection.
+Current branch review result:
+- Sápmi 1600 — `ACCEPT_INTERNAL_REVIEW`;
+- Tōdai-ji 800 — `ACCEPT_INTERNAL_REVIEW`;
+- source reconciliation — `RECONCILIATION_PASS`;
+- 15 new source relations;
+- 0 missing source-version / independence-group / claim-fitness fields;
+- 0 exact source-version overlap with v2;
+- 0 exact overlap with the Lithuania/Karnak reviewed delta;
+- 0 exact Sápmi ↔ Tōdai source-version overlap.
 
-Research question:
-> What bounded slavery/coercion interpretation, if any, is supportable for Tōdai-ji
-> at or around 800 CE?
+Packaging gate:
+**`KEEP_REVIEWED_DELTA_SEPARATE`**.
 
-Required controls:
-- temple worker / tenant / dependent / corvée worker != slave by default;
-- distinguish `nuhi` / 奴婢 from service, tenancy, corvée and other dependent status;
-- generic Nara/Heian Japanese slavery evidence is contextual unless tied to Tōdai-ji;
-- later shōen evidence is not projected to 800 without dating;
-- temple identity != estate boundary or practice geometry;
-- legal categories != observed target practice automatically;
-- source-native terminology and dependency remain visible.
+This is a positive internal-review result, not a canonical/public release.
 
-Allowed outcomes:
-`BOUNDED_SUPPORTED`, `RESEARCHED_INCONCLUSIVE`, or
-`HOLD_EVIDENCE_ACCESS_OR_SCOPE`.
+D-099 remains sufficient: no successor candidate is created merely because another
+pair of rows passed review. v2 and the earlier reviewed delta remain immutable.
 
-Current branch result: **BOUNDED_SUPPORTED — near-anchor Tōdai-specific `奴/奴婢`
-status presence; labour extent and prevalence unresolved**.
+Next exact action: structural sanitation → one coherent PR → cheap scoped CI → merge →
+close #288 → return to D-096 mode selection.
 
-Supported:
-- Tōdai-specific eighth-century `奴婢` documentary tradition;
-- a decisive 792 Tōdai petition concerning named `奴` and their release into `良`;
-- specialist institution-specific treatment of Tōdai `奴婢` organization/service.
+After closure, the Trans-Saharan trade network — 1300 is the only EXP-10-qualified row
+without subject research. That fact is a state description, not an automatic execution
+instruction.
 
-Not promoted:
-- an exact-800 roster or persistence of the 750 donation at original scale;
-- all temple, construction or estate labour as enslaved;
-- corvée/service = slave status;
-- later Tōdai Yōroku duties as contemporary proof;
-- later shōen continuity, prevalence or practice geometry.
-
-Internal adversarial replay passed with these limits.
-
-Next exact action: one coherent PR + normal scoped CI → merge → close #282 → return to
-the D-096 mode-selection boundary. The Trans-Saharan trade network — 1300 remains the
-only EXP-10-qualified row without subject research.
-
-No P-level, practice geometry, R1 reviewed-state mutation, schema/ontology change,
-database/API/frontend work, canonical mutation, cumulative-candidate integration or
-automatic publication.
+No P-level, practice geometry, R1 state mutation, schema/ontology/database/API/frontend
+change, canonical/public release or independent-review claim.
 
 ## Discovery execution
 

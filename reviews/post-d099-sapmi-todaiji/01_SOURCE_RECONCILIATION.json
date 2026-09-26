@@ -1,0 +1,38 @@
+{
+  "review": "post-d099-sapmi-todaiji-delta",
+  "base_candidate_reconstructed_source_relation_count": 133,
+  "earlier_reviewed_delta_source_relation_count": 12,
+  "new_delta_source_relation_count": 15,
+  "new_delta_by_target": {
+    "R1:N:sapmi_1600": 7,
+    "R1:N:todaiji_800": 8
+  },
+  "reconstructibility": {
+    "missing_source_version_ref": 0,
+    "missing_independence_group": 0,
+    "missing_claim_fitness": 0
+  },
+  "exact_source_version_overlap": {
+    "new_delta_vs_v2_count": 0,
+    "new_delta_vs_v2": [],
+    "new_delta_vs_lithuania_karnak_count": 0,
+    "new_delta_vs_lithuania_karnak": [],
+    "sapmi_vs_todaiji_count": 0,
+    "sapmi_vs_todaiji": []
+  },
+  "preserved_v2_cross_target_exact_overlap_count": 2,
+  "interpretive_dependency_notes": {
+    "Sapmi": [
+      "Hansen 2018 and Evjen & Hansen 2009 belong partly to one northern Sámi tax-history programme.",
+      "Wheelersburg 1991 and Larsson & Päiviö Sjaunja 2020 overlap conceptually in Swedish tax-record historiography; they are not treated as independent proof of prevalence.",
+      "The 1589 capture episode is one historical chain; capture is not converted into enslavement."
+    ],
+    "Todaiji": [
+      "The Cultural Heritage Database and Historiographical Institute catalogs describe related Tōdai 奴婢 documentary material and are not independent attestations merely because provider/catalog differs.",
+      "The 792 Nihon Kōki event is one primary textual family across editions/transcriptions.",
+      "Kotobank terminology entries are category controls, not independent target events.",
+      "Later Tōdai Yōroku duty traditions are source-critically constrained and not contemporary labour proof."
+    ]
+  },
+  "result": "RECONCILIATION_PASS"
+}
