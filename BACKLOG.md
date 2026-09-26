@@ -10,44 +10,44 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — REVIEW / RELEASE
+# CURRENT MODE — EXECUTION
 
-**Active issue:** #288 — post-D099 Sápmi/Tōdai delta review  
-**Reviewed delta:** EXP-12 Sápmi 1600 + EXP-13 Tōdai-ji 800  
-**Immutable base candidate:** `post-r1-cumulative-review-v2-overnight`  
-**Earlier reviewed delta:** Lithuania 1300 + Karnak 1000 BCE (D-099; separate)  
+**Active issue:** #290 — EXP-14 Trans-Saharan 1300 bounded subject research  
+**Target:** `R1:N:trans_saharan_1300` — Trans-Saharan trade network — 1300 CE  
+**Frame:** `mobile_network` — changing multi-route caravan network  
 **Canonical historical data release:** `v0.6.1` unchanged  
 **WIP:** 1
 
-No new historical/source research is authorized inside this review.
+Review capacity is current: Sápmi 1600 and Tōdai-ji 800 have passed internal review in
+#288 / PR #289 and remain a separate reviewed delta under D-099.
 
-Current branch review result:
-- Sápmi 1600 — `ACCEPT_INTERNAL_REVIEW`;
-- Tōdai-ji 800 — `ACCEPT_INTERNAL_REVIEW`;
-- source reconciliation — `RECONCILIATION_PASS`;
-- 15 new source relations;
-- 0 missing source-version / independence-group / claim-fitness fields;
-- 0 exact source-version overlap with v2;
-- 0 exact overlap with the Lithuania/Karnak reviewed delta;
-- 0 exact Sápmi ↔ Tōdai source-version overlap.
+EXP-14 is justified as a bounded network discriminator and EXP-10 programme closure:
+- slavery in connected societies does not prove movement through the network;
+- one route, market, city or empire does not stand for the full network;
+- later trans-Saharan trade scale cannot be projected to 1300;
+- network participation and territorial practice remain separate.
 
-Packaging gate:
-**`KEEP_REVIEWED_DELTA_SEPARATE`**.
+Research question:
+> What bounded slavery/coercion interpretation, if any, is supportable for the
+> Trans-Saharan trade network around 1300 CE?
 
-This is a positive internal-review result, not a canonical/public release.
+Required controls:
+- node slavery != network participation;
+- captive/gift/retainer != commercial transfer unless evidenced;
+- gold/salt connectivity != slave-trade connectivity;
+- one route != whole network;
+- later 15th–19th-century scale != 1300;
+- Arabic status/ethnonym terms remain source-specific;
+- route geography remains schematic/unresolved;
+- source count != prevalence/volume.
 
-D-099 remains sufficient: no successor candidate is created merely because another
-pair of rows passed review. v2 and the earlier reviewed delta remain immutable.
+Allowed outcomes:
+`BOUNDED_SUPPORTED`, `RESEARCHED_INCONCLUSIVE`, or
+`HOLD_EVIDENCE_ACCESS_OR_SCOPE`.
 
-Next exact action: structural sanitation → one coherent PR → cheap scoped CI → merge →
-close #288 → return to D-096 mode selection.
-
-After closure, the Trans-Saharan trade network — 1300 is the only EXP-10-qualified row
-without subject research. That fact is a state description, not an automatic execution
-instruction.
-
-No P-level, practice geometry, R1 state mutation, schema/ontology/database/API/frontend
-change, canonical/public release or independent-review claim.
+No P-level, practice geometry, R1 reviewed-state mutation, schema/ontology change,
+database/API/frontend work, canonical mutation, cumulative-candidate integration or
+automatic publication.
 
 ## Discovery execution
 
