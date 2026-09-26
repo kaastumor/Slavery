@@ -1,0 +1,52 @@
+{
+  "gate": "D-101 Gate 2",
+  "disposition": "V3_DB_RECONCILED",
+  "date": "2026-09-26",
+  "candidate_id": "post-r1-cumulative-review-v3-cross-frame",
+  "observed_main_sha": "c97140ac8c97b94884cd93ec33c4017bc4548e13",
+  "live_schema": {
+    "migrations": [
+      "0031_v3_research_evidence_model",
+      "0032_v3_source_relation_provenance"
+    ],
+    "status": "live"
+  },
+  "ingest": {
+    "targets": 26,
+    "admitted": 21,
+    "holds": 5,
+    "source_relations": 166,
+    "unique_exact_source_versions": 164,
+    "claim_bridges": 0,
+    "target_spatial_links": 0,
+    "independent_reviews": 0,
+    "exact_field_mismatches": 0,
+    "extra_targets": 0,
+    "extra_source_relations": 0,
+    "representative_rerun_idempotence": "PASS"
+  },
+  "regression": {
+    "001_schema_smoke": "PASS",
+    "002_v061_reconciliation": "PASS",
+    "004_private_data_api_boundary": "PASS",
+    "005_release_channel_production_safe": "PASS",
+    "006_release_membership": "PASS",
+    "009_claim_kind_integrity": "PASS",
+    "010_v3_research_evidence_model": "PASS",
+    "011_v3_source_relation_provenance": "PASS",
+    "supabase_security_advisor": "0 lints"
+  },
+  "boundaries": {
+    "canonical_release": "v0.6.1 unchanged",
+    "db_authority_flipped": false,
+    "public_channel_moved": false,
+    "p_levels_added": false,
+    "historical_geometry_promoted": false,
+    "independent_review_count": 0
+  },
+  "notes": [
+    "Gate-2 loader creates research target/result/review/source provenance only; no positive historical claim bridges are created during this reconciliation.",
+    "The stock release-channel SQL test assumes a fresh database and collides with the existing production channel key; the same guard behavior was verified using a rollback-only production-safe test channel.",
+    "Supabase performance advisor findings are informational indexing opportunities and are deferred to Gate 3/UI performance rather than mixed into evidence semantics."
+  ]
+}

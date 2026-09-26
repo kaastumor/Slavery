@@ -15,75 +15,55 @@ This file answers **what is justified to work on next**.
 **Parent gate:** #300 — canonical PostgreSQL + first DB-backed release gate  
 **Gate 0:** **PASS — MIGRATION_HISTORY_RECONCILED**  
 **Gate 1:** **PASS — V061_DB_RECONCILED**  
-**Current gate:** Gate 2 — v3 reviewed-evidence DB reconciliation  
+**Gate 2:** **PASS — V3_DB_RECONCILED**  
+**Current gate:** Gate 3 — PostgreSQL canonical-research authority proof  
 **Canonical historical data release:** `v0.6.1` unchanged  
 **Frozen reviewed input:** `post-r1-cumulative-review-v3-cross-frame`  
-**WIP:** #308 — Gate 2 lossless v3 research-target/result schema + ingestion
+**WIP:** Gate-3 authority/release-reconstruction proof under #300
 
-## Gate 1 closeout
+## Gate 2 closeout
 
-The guarded v0.6.1 repair was applied once atomically to production.
+Live PostgreSQL now contains the frozen v3 research package losslessly:
 
-Restored:
-- 288 raw workbook rows;
-- 36 evidence-sheet coverage-source links;
-- 22 global semantic mappings over 18 positive/disputed workbook rows;
-- 18 territorial-practice claims;
-- 3 external-participation claims;
-- 1 legal-event claim;
-- 29 exact global source versions.
+- 26 research targets/results;
+- 21 internally admitted evidence states;
+- 5 HOLD states;
+- 166 target-source relations;
+- 164 unique exact source versions;
+- 0 target→historical-claim bridges from the Gate-2 import;
+- 0 target spatial links invented;
+- 0 independent reviews;
+- exact frozen-payload round trip: PASS;
+- representative idempotent rerun: PASS;
+- v0.6.1 regression: PASS;
+- private Data API boundary: PASS;
+- claim-kind / Gate-2 schema / source-provenance regressions: PASS;
+- Supabase security advisor: 0 lints.
 
-Preserved:
-- 8 voyages;
-- 11 actors;
-- 12 voyage-owner rows;
-- Atlantic crosswalks and owner semantics;
-- canonical workbook source/version/asset + checksum lineage;
-- 99 coverage assessments;
-- public release membership and `public_mvp_preview` channel;
-- zero auto-assigned P-levels;
-- no new practice geometry.
+Gate 2 changes research representation only. It does not publish or make the DB
+canonical.
 
-Live regression after repair:
-- unchanged `db/tests/002_v061_reconciliation.sql`: PASS;
-- `db/tests/001_schema_smoke.sql`: PASS;
-- `db/tests/009_claim_kind_integrity.sql`: PASS;
-- Supabase security advisor: 0 lints;
-- anon/authenticated internal-schema grants: none.
+## Gate 3 exact question
 
-Blocking QC `V061_LIVE_RECONCILIATION_INCOMPLETE` is resolved with live evidence.
+Can the reconciled live database become the authoritative **research state** while
+preserving immutable releases as the citable historical snapshots?
 
-The old draft `0.6.1-db-migration-candidate` manifest is not promoted and the public
-channel does not move. The current D-054 full-state bundle contract is intentionally
-territorial-preview-only and therefore is **not** used to represent the broader
-canonical v0.6.1 database state. A canonical full-state release contract remains a
-Gate 3/4 requirement.
+Required before authority flip:
 
-## Gate 2 exact question
+1. deterministic/stable IDs and idempotent re-ingestion;
+2. repository↔live schema/head agreement;
+3. preservation-grade full-state release reconstruction, broader than the current
+   territorial-preview bundle;
+4. exact release membership and object digests;
+5. draft/reviewed/published separation;
+6. backup/rollback/recovery proof;
+7. private Data API/security boundary;
+8. no unresolved blocking QC issue;
+9. reproducible successor package from DB state;
+10. explicit decision recording the authority flip.
 
-Can frozen v3 reviewed evidence be represented in the existing database without
-semantic loss?
-
-Must preserve:
-- target/frame/anchor identity;
-- bounded proposition + required abstention;
-- temporal precision and uncertainty;
-- evidence locus vs inference extent;
-- territorial vs external/network vs legal dimensions;
-- HOLD and researched-inconclusive as non-absence;
-- source/version identity;
-- dependency/independence groups;
-- claim fitness;
-- internal-review provenance;
-- unresolved geometry;
-- P-level null unless independently justified.
-
-Gate-2 mapping found a real representational gap. D-103 / #308 adds the smallest
-additive research-target/result layer plus missing claim semantics already defined in
-`docs/04_DATA_MODEL.md`. Migration 0031 is merged, live, checksum-pinned and passes live schema/v0.6.1/claim-kind/Gate-2 regressions. D-104 adds one final lossless source-relation provenance refinement in migration 0032 and wires Gate-2 SQL tests into CI. No v3 ingestion or authority flip occurs until 0032 is green/live and round-trip reconciliation passes.
-
-No DB authority flip, canonical release, public-channel move or UI cutover follows until
-Gate 2 and later gates pass.
+No UI/public cutover or canonical release follows until Gate 3 and Gate 4 separately
+pass.
 
 ## Discovery execution
 

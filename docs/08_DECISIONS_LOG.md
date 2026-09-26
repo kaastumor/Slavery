@@ -2388,3 +2388,58 @@ changes cannot silently break the model.
 **No release effect:** no historical conclusion, P-level, geometry, canonical authority,
 release membership, public channel or UI/API change follows from this refinement.
 
+## D-105 — Frozen v3 round-trips losslessly in live PostgreSQL; Gate 2 passes
+**Date:** 2026-09-26  
+**Status:** accepted database-reconciliation decision
+
+**Evidence:** #308, migrations 0031–0032, PRs #309–#311 and live production
+reconciliation.
+
+**Decision:** record D-101 Gate 2 as:
+
+`V3_DB_RECONCILED`.
+
+The frozen
+`post-r1-cumulative-review-v3-cross-frame` package now exists in the live research
+layer with:
+- 26 target/result identities;
+- 21 internally admitted bounded states;
+- 5 explicit HOLD states;
+- 166 target-source relations;
+- 164 unique exact source versions;
+- 0 target→historical-claim bridges created by the migration;
+- 0 target spatial links invented;
+- 0 independent-review events.
+
+Exact field-by-field live comparison against the frozen payload found **0 mismatches**
+for target/result/review semantics and **0 mismatches** for all source-relation
+provenance fields.
+
+A representative deterministic rerun left row counts unchanged, validating the
+idempotent loader contract.
+
+Live regressions passed for schema, canonical v0.6.1 reconciliation, private Data API
+boundary, release channel guard, release membership, claim-kind integrity, Gate-2
+research semantics and source-relation provenance. Supabase security advisor returned
+zero lints.
+
+### Interpretation
+
+The Gate-2 audit layer is review/research provenance, not a shortcut around normalized
+historical claims.
+
+HOLD and researched-inconclusive rows may legitimately have zero historical claims.
+Target-level source review does not become positive claim evidence automatically.
+No P-level or historical-practice geometry is inferred.
+
+### Next gate
+
+Advance D-101 to Gate 3: prove that PostgreSQL can safely become canonical **research
+state** while immutable packages remain canonical historical release snapshots.
+
+A preservation-grade full-state DB release/reconstruction contract is still required;
+the existing D-054 public-preview bundle is intentionally too narrow.
+
+**No release effect:** canonical release remains v0.6.1; public channel/UI remain
+unchanged; DB authority has not yet flipped; independent historical review remains 0.
+
