@@ -14,8 +14,8 @@
     <div id="app">
       <header class="appbar">
         <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><div class="eyebrow">Historical evidence atlas</div><h1>Historical Slavery Atlas</h1></div></div>
-        <div class="timeline"><div class="timeline-topline"><label class="timeline-label" for="year">Frozen anchor</label><output id="year-label" for="year" aria-live="polite">Loading…</output></div><input id="year" type="range" step="1" aria-label="Frozen research anchor" aria-describedby="timeline-help" /><div id="timeline-range" class="timeline-range"></div><span id="timeline-help" class="visually-hidden">Use the arrow keys to move between discrete frozen research anchors. An anchor does not imply exact-year historical evidence; each reviewed record shows its temporal support precision.</span></div>
-        <div class="app-status"><div id="release-badge" class="release-badge">Loading candidate…</div><div id="status" class="status" role="status">Loading evidence…</div></div>
+        <div class="timeline"><div class="timeline-topline"><label class="timeline-label" for="year">Year</label><output id="year-label" for="year" aria-live="polite">Loading…</output></div><input id="year" type="range" step="1" aria-label="Historical year" aria-describedby="timeline-help" /><div id="timeline-range" class="timeline-range"></div><span id="timeline-help" class="visually-hidden">Use the arrow keys to change the selected year. Claim intervals and geometry availability are evaluated independently.</span></div>
+        <div class="app-status"><div id="release-badge" class="release-badge">Loading release…</div><div id="status" class="status" role="status">Loading evidence…</div></div>
       </header>
       <main class="workspace">
         <section class="map-shell" aria-label="Historical map">
@@ -25,17 +25,18 @@
           <details class="legend">
             <summary>Legend &amp; evidence layers</summary>
             <div class="legend-body">
-              <div class="legend-section-title">Research state · not historical intensity</div>
-              <div id="research-state-legend" class="state-legend" aria-live="polite">Loading research states…</div>
-              <div class="legend-section-title legend-section-spaced">Geometry state · independent dimension</div>
-              <div id="geometry-state-legend" class="state-legend" aria-live="polite">Loading geometry states…</div>
-              <div class="legend-note">Research coverage and geometry are independent presentation dimensions. Unresearched, held, inconclusive and unresolved geometry never mean historical absence. The map is navigation/context; the evidence register remains the truth surface.</div>
+              <div class="legend-section-title">Territorial practice · map fill</div>
+              <div class="legend-row legend-levels"><span class="legend-chip p1">P1</span><span class="legend-chip p2">P2</span><span class="legend-chip p3">P3</span><span class="legend-chip p4">P4</span></div>
+              <div class="legend-row"><span class="legend-dot disputed" aria-hidden="true"></span><span>Genuinely disputed classification</span></div>
+              <div class="legend-section-title">Independent evidence dimensions</div>
+              <div class="legend-dimensions"><span class="dimension-key territorial">Territorial practice</span><span class="dimension-key legal">Legal / state regime</span><span class="dimension-key external">External / network participation</span><span class="dimension-key coverage">Research coverage</span><span class="dimension-key geometry">Historical geometry</span></div>
+              <div class="legend-note">Only territorial-practice claims are rendered by this map adapter. Legal status, external/network participation, research coverage and geometry remain separate dimensions. Missing evidence, under-review state and unresolved geometry are not historical absence.</div>
             </div>
           </details>
         </section>
-        <aside id="panel" class="panel" aria-label="R1 candidate evidence" aria-live="polite" tabindex="-1"><div class="panel-loading">Loading R1 candidate…</div></aside>
+        <aside id="panel" class="panel" aria-label="Canonical release evidence for selected year" aria-live="polite" tabindex="-1"><div class="panel-loading">Loading canonical release evidence…</div></aside>
       </main>
     </div>
-    <script type="module" src="/src/mvp.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

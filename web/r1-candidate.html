@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d211f" />
+    <meta name="description" content="Historical Slavery Atlas: a time-aware evidence synthesis of slavery, coerced labour and servile dependency." />
+    <link rel="stylesheet" href="/src/evidence-dimensions.css" />
+    <link rel="stylesheet" href="/src/accessibility.css" />
+    <title>Historical Slavery Atlas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#panel">Skip map and go to evidence</a>
+    <div id="app">
+      <header class="appbar">
+        <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><div class="eyebrow">Historical evidence atlas</div><h1>Historical Slavery Atlas</h1></div></div>
+        <div class="timeline"><div class="timeline-topline"><label class="timeline-label" for="year">Frozen anchor</label><output id="year-label" for="year" aria-live="polite">Loading…</output></div><input id="year" type="range" step="1" aria-label="Frozen research anchor" aria-describedby="timeline-help" /><div id="timeline-range" class="timeline-range"></div><span id="timeline-help" class="visually-hidden">Use the arrow keys to move between discrete frozen research anchors. An anchor does not imply exact-year historical evidence; each reviewed record shows its temporal support precision.</span></div>
+        <div class="app-status"><div id="release-badge" class="release-badge">Loading candidate…</div><div id="status" class="status" role="status">Loading evidence…</div></div>
+      </header>
+      <main class="workspace">
+        <section class="map-shell" aria-label="Historical map">
+          <div id="map" aria-label="Interactive historical map. Equivalent evidence is available in the adjacent evidence panel."></div>
+          <div id="map-warning" class="map-warning" role="alert" hidden>MapLibre reported a rendering error. Check the browser console for details.</div>
+          <div class="map-toolbar" aria-label="Map view controls"><button id="fit-active" type="button" title="Fit all active evidence">Active evidence</button><button id="fit-world" type="button" title="Reset to world view">World</button></div>
+          <details class="legend">
+            <summary>Legend &amp; evidence layers</summary>
+            <div class="legend-body">
+              <div class="legend-section-title">Research state · not historical intensity</div>
+              <div id="research-state-legend" class="state-legend" aria-live="polite">Loading research states…</div>
+              <div class="legend-section-title legend-section-spaced">Geometry state · independent dimension</div>
+              <div id="geometry-state-legend" class="state-legend" aria-live="polite">Loading geometry states…</div>
+              <div class="legend-note">Research coverage and geometry are independent presentation dimensions. Unresearched, held, inconclusive and unresolved geometry never mean historical absence. The map is navigation/context; the evidence register remains the truth surface.</div>
+            </div>
+          </details>
+        </section>
+        <aside id="panel" class="panel" aria-label="R1 candidate evidence" aria-live="polite" tabindex="-1"><div class="panel-loading">Loading R1 candidate…</div></aside>
+      </main>
+    </div>
+    <script type="module" src="/src/mvp.ts"></script>
+  </body>
+</html>
