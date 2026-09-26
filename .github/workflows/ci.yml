@@ -102,6 +102,9 @@ jobs:
       - name: Preservation full-state bundle v2
         run: bash ./scripts/db-test-full-state-release-bundle-v2.sh
 
+      - name: Gate 3 fresh-database logical recovery
+        run: bash ./scripts/db-test-gate3-logical-recovery.sh
+
       - name: Prototype map sanity
         run: |
           python -m json.tool prototype/map/data/world-land.geojson >/dev/null
