@@ -1,0 +1,76 @@
+{
+  "controller_issue": 291,
+  "programme": "overnight-2026-09-26 interactive correction",
+  "qc_state": "PASS_PENDING_FINAL_PR_MERGE_AND_STAGE8_MARKER",
+  "main_before_final_pr": "7dca4ae37d66f52752abd7c5c2c63128e14c3949",
+  "stage_markers_before_final_pr": {
+    "NIGHT_STAGE_1_COMPLETE": 1,
+    "NIGHT_STAGE_2_COMPLETE": 1,
+    "NIGHT_STAGE_3_COMPLETE": 1,
+    "NIGHT_STAGE_4_COMPLETE": 1,
+    "NIGHT_STAGE_5_COMPLETE": 1,
+    "NIGHT_STAGE_6_COMPLETE": 1,
+    "NIGHT_STAGE_7_COMPLETE": 1,
+    "NIGHT_STAGE_8_COMPLETE": 0
+  },
+  "programme_results": {
+    "exp14_trans_saharan": "BOUNDED_SUPPORTED",
+    "exp10_derived_programme": "EXP10_DERIVED_PROGRAMME_COMPLETE",
+    "post_v2_review": "FIVE_ROW_INTERNAL_REVIEW_PASS",
+    "packaging_gate": "BUILD_SUCCESSOR_CANDIDATE",
+    "successor_candidate": "post-r1-cumulative-review-v3-cross-frame",
+    "next_horizon_issue": 297
+  },
+  "candidate_v3": {
+    "membership": 26,
+    "accepted": 21,
+    "holds": 5,
+    "source_relations": 166,
+    "exact_cross_target_source_version_overlaps": 2,
+    "independent_historical_reviews": 0,
+    "qc": "PASS_INTERNAL_NONCANONICAL"
+  },
+  "source_reconstructibility": {
+    "missing_source_version_ref": 0,
+    "missing_independence_group": 0,
+    "missing_claim_fitness": 0,
+    "post_v2_exact_overlap_vs_v2": 0,
+    "post_v2_cross_target_exact_overlap": 0
+  },
+  "invariants": {
+    "canonical_release": "v0.6.1_unchanged",
+    "v2_candidate_immutable": true,
+    "p_level_promotion": false,
+    "practice_geometry_promotion": false,
+    "r1_review_state_mutation": false,
+    "schema_ontology_change": false,
+    "database_api_frontend_change": false,
+    "public_release": false,
+    "independent_review_claim": false,
+    "unknown_or_inconclusive_not_absence": true,
+    "source_count_not_prevalence": true
+  },
+  "repository_state_before_final_pr": {
+    "open_programme_prs": 0,
+    "active_controller_issue": 291,
+    "next_horizon_issue": 297,
+    "parked_operational_issues": [
+      43,
+      26
+    ]
+  },
+  "scheduler": {
+    "disabled_interactively": true,
+    "reason": "campaign executed interactively after scheduling-date error"
+  },
+  "private_ledger": {
+    "reconciliation_pending_at_artifact_freeze": true,
+    "required_final_state": "all 8 runs terminal DONE; github_reconciliation_pending false"
+  },
+  "completion_gate": [
+    "final handoff PR green and merged",
+    "NIGHT_STAGE_8_COMPLETE recorded exactly once",
+    "issue #291 closed completed",
+    "private execution ledger reconciled"
+  ]
+}

@@ -95,3 +95,21 @@ A later interactive session:
 
 The legacy `NIGHT_STAGE_N_COMPLETE` comments are interactive reconciliation markers,
 not scheduled recovery state.
+
+## Interactive correction / terminal state
+
+The scheduled campaign was disabled before any scheduled invocation because its start
+date was wrong for the sponsor's requested night.
+
+The fixed eight-stage campaign was then executed interactively with GitHub write access.
+
+Canonical completion is determined by issue #291 markers and final repository state,
+not by the unused scheduled-run ledger.
+
+After final closure:
+- stages 1–8 are complete;
+- #291 is closed;
+- the private ledger is reconciled to terminal DONE;
+- the scheduler remains disabled;
+- #297 owns the next WIP.
+
