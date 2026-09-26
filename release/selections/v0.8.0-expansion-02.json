@@ -48,15 +48,12 @@
       "0d0af02d-83bc-4f4e-a69d-d56d56326cd4",
       "0d285ce0-adbf-45e5-a727-b5446a9c169c",
       "102f2974-e240-4e23-bf91-256eee65a41d",
-      "136c0f0b-537f-4a39-a5ec-7117edfadbfb",
       "14edab60-6475-4699-978c-f51aaccd34d5",
       "17a40ab9-195f-4298-bd54-0a5994743cfe",
       "204d6af3-1f0b-463c-a4a9-28c0991623f8",
       "21c9c493-14f8-4c13-9845-0e8a738c9110",
       "26ccb13b-735a-43d2-b91d-dc829f124873",
-      "2a11ccf8-06c4-495a-85e2-214cd8d164ba",
       "34ff5048-242f-48a3-8fb2-5eca4dcd9a54",
-      "3cffa01a-740b-4195-a992-e4e4a96837da",
       "4803a371-1de6-47e2-8eaa-f0b24a079c66",
       "4ea5165a-9bd2-4883-9cdd-4910aa491dc7",
       "4f2ab0fb-cbfc-4160-9fbf-1fcce188ab92",
@@ -135,7 +132,7 @@
     "added_spatial_entities": 32,
     "candidate_claims": 75,
     "candidate_spatial_entities": 50,
-    "candidate_geometries": 49
+    "candidate_geometries": 46
   },
   "rules": {
     "explicit_membership_only": true,
@@ -149,5 +146,5 @@
     "reviewed_disputes_may_be_complete": true
   },
   "supersedes_selection": "release/selections/v0.8.0-expansion-01.json",
-  "completeness_note": "Supersedes the unpublished 18-addition freeze after sponsor requested all currently complete entries live. Candidate includes all current-method claims, direct reviewed recovery claims, and explicitly reviewed disputed/date-disputed evidence states. Geometry is selected independently: unresolved geometry never blocks an otherwise complete claim and never becomes an invented polygon. Unreconciled or superseded research_prototype_reviewed rows remain excluded until replayed under the current method."
+  "completeness_note": "Supersedes the unpublished 18-addition freeze after sponsor requested all currently complete entries live. Candidate includes all current-method claims, direct reviewed recovery claims, and explicitly reviewed disputed/date-disputed evidence states. Geometry is selected independently: unresolved geometry never blocks an otherwise complete claim and never becomes an invented polygon. Unreconciled or superseded research_prototype_reviewed rows remain excluded until replayed under the current method. Reviewed unresolved geometry records for Funan, Hawaiʻi and the Southern Maya Lowlands remain explicit claim state but are not members of approved resolved geometry."
 }
