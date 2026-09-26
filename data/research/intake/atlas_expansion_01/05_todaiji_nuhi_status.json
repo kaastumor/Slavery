@@ -1,0 +1,160 @@
+{
+  "case_key": "atlas-expansion-01/todaiji/nuhi-status-v1",
+  "spatial_entity": {
+    "canonical_name": "Tōdai-ji (Nara-period temple institution)",
+    "display_name": "Tōdai-ji",
+    "entity_type_code": "site",
+    "from_year": 751,
+    "to_year": 792,
+    "review_status": "reviewed",
+    "notes": "Institution/site frame limited to the documentary horizon used by this claim. The modern UNESCO component coordinate locates the enduring temple complex; estate holdings and work sites are distinct spatial objects."
+  },
+  "claim": {
+    "from_year": 751,
+    "to_year": 792,
+    "date_text_original": "Tōdai-specific 奴婢 records in 751/756 and a 792 emancipation petition",
+    "temporal_precision": "documented_eighth_century_events",
+    "temporal_certainty": "high",
+    "spatial_precision": "institution_site",
+    "summary": "Tōdai-ji has target-specific eighth-century evidence for legally non-free 奴/奴婢 status. Tōdai slave-register documents are attested in the mid-eighth century, and a 792 Nihon Kōki entry records Tōdai administrators successfully petitioning to release named temple 奴 into 良 status. Specialist scholarship treats Tōdai 奴婢 organization and service as a substantive historical institution. The atlas therefore records a bounded positive slavery/servile-slave status claim for the documented institutional horizon, without treating all temple construction, corvée, estate labour or later shōen dependency as slavery.",
+    "confidence": "high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Consolidates accepted EXP-13 / post-D099 internal review into claim-centric research state. The research target was 800 CE, but this claim interval stops at the last decisive documented event (792) rather than fabricating an exact-800 roster or persistence claim.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_internal_consolidated",
+      "notes": "Positive legally non-free 奴/奴婢 status at Tōdai-ji. No prevalence, workforce share, all-labour classification or estate-wide practice extent is inferred."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "東大寺奴婢見来帳",
+        "author_or_institution": "Japan Agency for Cultural Affairs, Cultural Heritage Database",
+        "source_type": "official_cultural_property_catalog_primary_document",
+        "source_classification": "primary",
+        "language_code": "ja",
+        "geographic_scope": "Tōdai-ji, Nara",
+        "temporal_scope": "751/756",
+        "independence_notes": "Official catalog identity for a Tōdai-specific 奴婢 register. Related modern catalogs of the same register family are not independent attestations.",
+        "reliability_limitations": "Catalog metadata establishes document identity/date/ownership; it does not by itself establish an 800 CE roster or specific work roles."
+      },
+      "version": {
+        "version_label": "Cultural Heritage Database record, accessed 2026-09-27",
+        "url_or_identifier": "https://online.bunka.go.jp/db/heritages/detail/157578",
+        "accessed_at": "2026-09-27T00:50:00Z"
+      },
+      "evidence_role": "target-specific slave-register identity",
+      "independence_group": "todaiji-nuhi-register-document-family",
+      "directness": "official primary-document catalog",
+      "direction": "supports",
+      "locator": "record title, Tōdai-ji ownership and 751/756 dating"
+    },
+    {
+      "source": {
+        "title": "日本後紀 延暦十一年十二月丁丑 — 東大寺奴広前等従良",
+        "author_or_institution": "Nihon Kōki; modern source edition via Kogakkan Historiographical Institute",
+        "source_type": "primary_chronicle_via_modern_source_edition",
+        "source_classification": "primary",
+        "language_code": "ja",
+        "geographic_scope": "Tōdai-ji / Kinkōmyōji",
+        "temporal_scope": "792 CE",
+        "independence_notes": "One primary chronicle event. Modern editions/transcriptions of the same entry remain one textual family.",
+        "reliability_limitations": "Strong for named temple 奴 and formal release into 良; does not establish headcount, duties or exact-800 persistence."
+      },
+      "version": {
+        "version_label": "Nihon Kōki shiryō (draft), Enryaku 11, p.115",
+        "url_or_identifier": "https://kogakkan.repo.nii.ac.jp/record/34/files/%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E7%B4%80%E8%A6%813-03.pdf",
+        "accessed_at": "2026-09-27T00:50:00Z"
+      },
+      "evidence_role": "near-anchor target-specific status and emancipation event",
+      "independence_group": "nihon-koki-792-todaiji-emancipation",
+      "directness": "primary chronicle via source edition",
+      "direction": "supports",
+      "locator": "Enryaku 11 (792), twelfth month; Tōdai 三綱 petition concerning 奴広前等 and 従良"
+    },
+    {
+      "source": {
+        "title": "日本古代奴婢の研究",
+        "author_or_institution": "Jinno Kiyokazu",
+        "source_type": "specialist_monograph",
+        "source_classification": "secondary",
+        "language_code": "ja",
+        "geographic_scope": "Ancient Japan, with dedicated Tōdai-ji chapters",
+        "temporal_scope": "Ancient Japanese 奴婢 system",
+        "independence_notes": "Principal specialist interpretation source; institution-specific chapters on Tōdai 奴婢 and registers.",
+        "reliability_limitations": "Detailed chapters were not fully open-access in the reviewed research pass; only verified bibliographic/TOC-level claims are used here."
+      },
+      "version": {
+        "version_label": "Nagoya University Press, 1993, ISBN 4-8158-0215-7",
+        "publication_year": 1993,
+        "url_or_identifier": "https://doi.org/10.11501/13206588",
+        "accessed_at": "2026-09-27T00:50:00Z"
+      },
+      "evidence_role": "specialist institution-specific status interpretation",
+      "independence_group": "jinno-ancient-japanese-nuhi",
+      "directness": "specialist monograph",
+      "direction": "supports",
+      "locator": "chapters on forms of service of slaves at Tōdai-ji and Tōdai slave registers"
+    },
+    {
+      "source": {
+        "title": "従良",
+        "author_or_institution": "Seisenban Nihon Kokugo Daijiten / Kotobank",
+        "source_type": "historical_reference_lexical_source",
+        "source_classification": "secondary",
+        "language_code": "ja",
+        "geographic_scope": "Japan",
+        "temporal_scope": "Nara-period terminology",
+        "independence_notes": "Terminology control supporting interpretation of the 792 status transition; not an independent Tōdai event.",
+        "reliability_limitations": "Reference synthesis, used only for category mapping."
+      },
+      "version": {
+        "version_label": "Kotobank reference entry, accessed 2026-09-27",
+        "url_or_identifier": "https://kotobank.jp/word/%E5%BE%93%E8%89%AF-527829",
+        "accessed_at": "2026-09-27T00:50:00Z"
+      },
+      "evidence_role": "status-mapping control",
+      "independence_group": "japanese-ryosen-lexical-historiography",
+      "directness": "historical lexical reference",
+      "direction": "qualifies",
+      "locator": "従良 as freeing 奴婢/other 賤民 into 良民"
+    }
+  ],
+  "geometry": {
+    "from_year": 751,
+    "to_year": 792,
+    "accuracy_status": "specialist",
+    "resolution_method": "UNESCO World Heritage component 870-001 supplies an authoritative coordinate for Tōdai-ji. The point locates the institutional/evidence site only. It is not an extent of slave residence, work, Tōdai estates, construction activity or Nara-period jurisdiction.",
+    "source_native_id": "UNESCO-WHC-870-001",
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        135.8397194444,
+        34.6888888889
+      ]
+    },
+    "source": {
+      "title": "Historic Monuments of Ancient Nara — Tōdai-ji geographical data",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "source_type": "official_heritage_geodata",
+      "source_classification": "geometry_reference",
+      "geographic_scope": "Tōdai-ji, Nara, Japan",
+      "temporal_scope": "Modern authoritative locator for the enduring historic temple component",
+      "independence_notes": "Geometry-only source; independent of the slavery/status evidence package.",
+      "reliability_limitations": "The UNESCO component coordinate locates Tōdai-ji; it does not reconstruct Nara-period estate, precinct or labour-practice extent."
+    },
+    "version": {
+      "version_label": "World Heritage List 870, component 870-001, geographical data",
+      "url_or_identifier": "https://whc.unesco.org/en/list/870/maps/",
+      "accessed_at": "2026-09-27T00:50:00Z",
+      "license_status": "official_web_record_citation_only",
+      "redistribution_status": "single component coordinate recorded; no UNESCO map asset mirrored"
+    },
+    "notes": "Mapped institutional locus only; not a practice polygon.",
+    "review_status": "reviewed"
+  }
+}
