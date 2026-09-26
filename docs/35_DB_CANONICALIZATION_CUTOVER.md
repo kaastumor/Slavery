@@ -82,7 +82,7 @@ EXP-15's three newly qualified node sites are outside this historical-content fr
 
 ### Before-state
 
-Repository migration files: 0001–0029.
+Repository migration files at the frozen before-state: 0001–0029. Gate 0 adds forward operational migration **0030** solely to establish the checksum-ledger structure.
 
 **Critical additional finding:** the live database currently has no `atlas_meta.schema_migration` checksum ledger. The repository migration runner (`tools/migrate.py`) would create that ledger and otherwise consider every repository migration unrecorded. It must therefore **not** be run against production until a verified baseline has been established.
 
@@ -122,7 +122,7 @@ look tidy.
 - regression/QC result;
 - explicit retained exceptions.
 
-Pass marker: `MIGRATION_HISTORY_RECONCILED`.
+Before the pass marker, 0030 must be applied exactly once and the verified checksum baseline for 0001–0030 must be complete.\n\nPass marker: `MIGRATION_HISTORY_RECONCILED`.
 
 ## 5. Gate 1 — v0.6.1 reproduction
 
