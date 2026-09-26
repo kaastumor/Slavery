@@ -5,12 +5,12 @@ This is a one-time reconciliation tool for #26 / #300. It does NOT apply histori
 schema migrations. Dry-run is the default.
 
 Safety model:
-- require the known v0.6.1 DB migration candidate at schema head 0029;
+- require repository/live operational migration head 0030 while the frozen v0.6.1 DB migration candidate remains a 0029 historical input;
 - require exact canonical workbook checksum lineage and prior migration validation;
 - require live sentinel objects for the historical 0012-0014 platform-history gap;
 - require Supabase platform history to match the explicit legacy-exception policy;
 - reject any existing checksum-ledger mismatch;
-- --apply additionally requires --confirm-head 0029.
+- --apply additionally requires --confirm-head 0030.
 
 The resulting atlas_meta.schema_migration rows are a verified-baseline recording of
 the repository migration files that define the accepted live schema, not original
@@ -32,7 +32,7 @@ MIGRATIONS_DIR = ROOT / "db" / "migrations"
 DEFAULT_POLICY = ROOT / "config" / "migration_ledger_exceptions.json"
 
 EXPECTED_RELEASE = "0.6.1-db-migration-candidate"
-EXPECTED_SCHEMA_HEAD = "0029"
+EXPECTED_REPOSITORY_HEAD = "0030"\nEXPECTED_RELEASE_SCHEMA_HEAD = "0029"
 EXPECTED_WORKBOOK_SHA256 = (
     "0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4"
 )
@@ -254,7 +254,7 @@ def preflight(cur, policy_path: Path) -> dict[str, Any]:
         raise BootstrapError("existing checksum ledger conflicts with repository files")
 
     return {
-        "repository_head": EXPECTED_SCHEMA_HEAD,
+        "repository_head": EXPECTED_REPOSITORY_HEAD,
         "repository_migration_count": len(inventory),
         "repository_inventory": inventory,
         "platform_history": history_result,
