@@ -2562,3 +2562,43 @@ This refinement reduces redundant release-artifact size without weakening:
 It does not change historical geometry, infer practice extent, move a public release
 channel or alter canonical v0.6.1.
 
+
+
+## D-108 — Cross-runtime cartography recovery is source-canonical, not EWKB-byte-canonical
+**Date:** 2026-09-26  
+**Status:** accepted Gate-3 recovery-contract correction
+
+**Evidence:** #313 / PR #318 fresh-database recovery run.
+
+The first Gate-3 fresh-database recovery run rebuilt the exact pinned Natural Earth
+source successfully but did **not** reproduce the production EWKB byte digest. Production
+currently runs PostgreSQL 17.6 with PostGIS 3.3.7 / GEOS 3.14.1, while the repository
+foundation CI deliberately uses the replaceable `postgis/postgis:17-3.5` runtime.
+
+This falsifies the cross-runtime part of D-107's earlier assumption that the derived
+land-fabric EWKB itself is a portable deterministic reconstruction invariant.
+
+**Decision:** keep D-107's production EWKB digest/byte length as a frozen **live drift
+fingerprint**, but do not use raw EWKB bytes as the canonical recovery identity across
+different PostGIS/GEOS runtimes.
+
+For fresh-database logical recovery, canonical cartography equivalence requires:
+
+- the exact pinned upstream URL/commit/blob/content hashes;
+- exact fabric identity and SRID;
+- the repository transformation code;
+- a valid, non-empty reconstructed land fabric;
+- explicit reporting of the rebuilt runtime EWKB digest/size.
+
+The reviewed research closure still requires exact stable IDs, membership and composite
+object digests. The logical Gate-3 database-state digest may reuse the frozen cartography
+identity only **after** the portable source-equivalence checks pass.
+
+This is intentionally weaker than a physical database backup and intentionally stronger
+than silently accepting arbitrary cartography. It preserves the architecture rule that
+the neutral land fabric is a reproducible derived cartographic layer rather than
+historical evidence.
+
+**No release effect:** PostgreSQL is not promoted by this decision alone; v0.6.1 remains
+canonical, the public channel remains unchanged, and independent historical review
+remains 0.
