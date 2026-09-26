@@ -25,7 +25,7 @@ class MvpAvailabilityGuardrailTests(unittest.TestCase):
         self.assertIn("published-release-snapshot-", DEPLOY)
         self.assertIn("Verify deployed static snapshot", DEPLOY)
 
-    def test_monitor_uses_low_cadence_for_noncanonical_preview(self):
+    def test_monitor_uses_low_cadence_for_release_derived_public_atlas(self):
         self.assertIn('cron: "17 6 * * 1"', WORKFLOW)
         self.assertNotIn('cron: "*/15 * * * *"', WORKFLOW)
 

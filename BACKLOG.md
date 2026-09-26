@@ -12,63 +12,58 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — CONSOLIDATION / POST-CUTOVER REVIEW
+# CURRENT MODE — MAINTENANCE / TRIGGER-BOUND — NO ACTIVE DELIVERY WIP
 
-**Parent canonicalization gate:** #300  
-**Gate 0:** **PASS — MIGRATION_HISTORY_RECONCILED**  
-**Gate 1:** **PASS — V061_DB_RECONCILED**  
-**Gate 2:** **PASS — V3_DB_RECONCILED**  
-**Gate 3:** **PASS — PROMOTE_DB_CANONICAL_RESEARCH_STATE**  
-**Gate 4:** **PASS — PUBLISH_DB_BACKED_CANONICAL_RELEASE**  
-**Gate 5:** **PASS — CUTOVER_PUBLIC_CHANNEL_TO_V070** under D-113  
+**Gate 0→5 canonicalization programme:** **COMPLETE**  
+**Canonical historical data release:** `v0.7.0`  
 **Live schema head:** `0034`  
-**Canonical release package schema:** `0033` (immutable v0.7.0 historical artifact)  
-**Independent historical review:** 0
+**Public serving adapter:** `v0.7.0-public-mvp-v1`  
+**Independent historical review:** 0  
+**Open delivery WIP:** none
 
-The DB-canonicalization / first DB-backed release programme is complete. No new
-historical subject-research tranche is automatically authorized by that success.
+## D-096 post-cutover mode review
 
-## Gate 5 closeout
+The post-cutover whole-project review finds **no justified automatic successor**.
 
-Public serving now uses the immutable release-derived adapter
-`v0.7.0-public-mvp-v1`.
+Why:
 
-Verified production invariants:
+- the canonicalization/release/cutover programme is complete and production verification
+  is green;
+- no unresolved historical-method question currently blocks routine use of the accepted
+  evidence contract;
+- no coherent unreleased candidate currently requires a release gate;
+- no observed public-serving defect, security lint or payload drift requires repair;
+- bespoke Atlas expansion remains unsupported by the earlier value evidence;
+- new historical intake is not authorized merely because capacity exists;
+- #43's remaining protected-environment / paid-staging work did not cause a demonstrated
+  Gate-5 failure and has no active production-promotion task to serve.
 
-- public payload SHA-256
-  `2a04787a2ee0e42a97f273621eebbf32ddc6a1b2e903239a626eb41d72c29786`;
-- 16 displayed spatial entities / 18 territorial-practice claims;
-- 0 reviewed historical evidence geometries;
-- 21 `researched_internal` + 5 `under_review` target states;
-- 6 researched-inconclusive outcomes remain non-absence;
-- independent historical review remains 0;
-- exact source-version provenance survives the serving adapter;
-- territorial practice remains distinct from law, external/network participation,
-  research coverage and geometry;
-- neutral Natural Earth land remains independent cartographic context;
-- live API and deployed static fallback use the same frozen payload bytes;
-- D-053 compare-and-set rollback to `mvp-preview-ancient-v2` was proved before cutover;
-- D-112 / migration 0034 freezes published release-manifest metadata;
-- Supabase security advisor: 0 lints after 0034;
-- Pages deployment of commit
-  `5675186303b30c43cdfaff9c41c72b64df1b153b`: PASS.
+This is **not** a claim that the project is finished forever. D-096 explicitly permits a
+no-active-work boundary when all useful modes are complete, unjustified or trigger-bound.
 
-The frozen R1 technical candidate remains available as a historical project artifact at
-`r1-candidate.html`; it is no longer the default public root.
+The standing weekly public-health monitor remains ordinary maintenance. Static fallback
+and exact release identity reduce outage risk; no user-critical SLA has been demonstrated
+that would justify higher-frequency monitoring.
 
-## Immediate consolidation task
+## Reopening triggers
 
-After the Gate-5 closeout PR merges:
+Choose one new WIP only when a concrete trigger occurs:
 
-1. close #323 with disposition `CUTOVER_PUBLIC_CHANNEL_TO_V070`;
-2. close parent #300 as the completed Gate-0→Gate-5 canonicalization programme;
-3. perform one project-wide backlog / health review under D-096;
-4. choose the next justified mode from discovery, execution, consolidation,
-   review/release, maintenance, or no justified work;
-5. do **not** reopen subject research merely because the release pipeline is now stable.
+1. **maintenance** — public API/site failure, release-byte mismatch, security regression,
+   migration/recovery defect, or a demonstrated released-data correction;
+2. **execution / consolidation** — sponsor-authorized historical intake, changed evidence,
+   or a recorded HOLD/accepted-row reopen condition;
+3. **review/release** — a coherent reviewed candidate plus a concrete publication need;
+4. **discovery** — a material unresolved method/value/representation question tied to a
+   real task rather than adjacency or unused capacity;
+5. **#43 infrastructure** — a future approved production mutation/release specifically
+   requires protected environments, durable least-privilege write credentials, or a
+   real staging target that the current bounded manual process cannot safely provide;
+6. **independent review** — only when an actual external-review horizon is explicitly
+   authorized.
 
-No UI redesign, automatic P-level inference, inferred historical geometry, archive-count
-prevalence inference or false independent-review claim is authorized by this closeout.
+Until one trigger is present, do not manufacture a research tranche, UI redesign,
+infrastructure project or discovery experiment.
 
 # Discovery execution
 
@@ -120,8 +115,15 @@ These remain trigger-bound and are not the default horizon.
 
 ## #43 — protected staging / release-promotion administration
 
-Remaining protected environment / staging work matters only when Gate 5/public
-promotion actually requires it.
+**Parked after the Gate-5 review.** Gate 5 completed with an immutable staged
+materialization, production CAS/rollback proof, manifest immutability and successful
+post-deploy verification. No release incident demonstrated that paid Supabase staging
+or protected GitHub deployment administration is currently necessary.
+
+Reopen #43 only for a future approved production mutation/release when the current
+bounded manual promotion path is insufficient or a durable least-privilege automated
+write boundary is concretely required. Do not create paid staging or credential
+infrastructure merely to make the issue disappear.
 
 ## #26 — migration-history reconciliation
 
@@ -149,20 +151,19 @@ the project horizon.
 
 # Explicitly NOT the current horizon
 
-Gate 4 does **not** authorize:
+The completed Gate-0→Gate-5 programme does **not** authorize:
 
-- new historical subject research;
-- UI/API cutover;
-- frontend redesign;
+- automatic new historical subject research;
+- richer frontend/application expansion;
+- automatic P-level inference;
+- inferred historical-practice geometry;
 - PMTiles/vector-tile infrastructure expansion;
-- new search service;
-- graph database;
-- vector store/RAG infrastructure;
-- generic ontology/platform work;
-- contributor/peer-review platform;
-- new autonomous infrastructure for its own sake;
-- external recruitment/review;
-- automatic public-channel movement.
+- new search, graph, vector-store/RAG or generic platform infrastructure;
+- contributor/peer-review platform work;
+- external recruitment/review without an explicit horizon;
+- paid staging/protected-environment administration without a concrete release need;
+- higher-frequency availability automation without evidence of a user-critical SLA;
+- another experiment merely because there is no active WIP.
 
-The current priority is one bounded release task: prove or reject the first DB-backed
-canonical historical release.
+The correct current state is **trigger-bound maintenance with no active delivery WIP**.
+

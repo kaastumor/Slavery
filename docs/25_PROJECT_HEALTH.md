@@ -83,6 +83,69 @@ No project-value claim changes: the cutover demonstrates release/presentation in
 not new historical coverage value or renewed justification for platform expansion.
 Independent historical review remains 0.
 
+### HC-032 — Post-cutover mode selection — 2026-09-26
+
+**Decision:** **MAINTENANCE / TRIGGER-BOUND; NO ACTIVE DELIVERY WIP.**
+
+The Gate-0→Gate-5 canonicalization programme is complete and the new public
+v0.7.0-derived serving path is live. D-096 therefore requires a mode decision rather
+than an automatic successor.
+
+### Modes considered
+
+- **Discovery:** not selected. No material unresolved method/value/representation
+  question is currently tied to a concrete task. Earlier evidence already rejects
+  adjacency-driven discovery as a scheduling rule.
+- **Execution:** not selected. No new historical subject tranche is currently
+  authorized, and unused capacity is not evidence that more intake is valuable.
+- **Consolidation:** complete for the current boundary. D-109/D-110/D-113 now reconcile
+  governed research authority, immutable release identity and public serving.
+- **Review/release:** complete for v0.7.0; no next coherent candidate has a concrete
+  publication need.
+- **Maintenance:** survives only as trigger-bound upkeep. Weekly public-health
+  monitoring, static fallback, rollback identity and immutable release metadata are
+  already in place.
+- **No active delivery work:** selected until a concrete trigger makes one of the modes
+  above decision-relevant.
+
+### #43 red-team
+
+The only open issue is #43, parked protected-staging / release-promotion administration.
+
+Gate 5 created a real opportunity to test whether the missing infrastructure was
+actually blocking. It was not: the release used an exact immutable staged
+materialization, production compare-and-set promotion, rollback proof, D-112 manifest
+immutability, clean security advisors and post-deploy verification without a release
+incident attributable to the absence of a paid Supabase branch or protected GitHub
+environment.
+
+That does **not** prove protected environments or a real staging database can never be
+useful. It means the current evidence does not justify their standing cost/complexity
+when there is no active future production mutation. #43 remains parked until a concrete
+release requires a capability the bounded manual path cannot safely provide.
+
+### Monitoring
+
+The current weekly public-health cadence remains proportionate. The public Atlas is now
+a release-derived view rather than an unused legacy preview, so stale wording is
+corrected. Static fallback preserves the published payload and there is still no
+demonstrated user-critical availability/SLA requirement that earns higher-frequency
+checks.
+
+### Reopening triggers
+
+Reopen exactly one WIP for:
+- a public API/site/release-integrity/security failure;
+- changed historical evidence or a recorded HOLD/review trigger;
+- sponsor-authorized historical intake;
+- a coherent reviewed candidate with a concrete publication need;
+- a material changed task that creates a real discovery uncertainty;
+- an approved production mutation that concretely requires #43 infrastructure;
+- explicitly authorized independent/external historical review.
+
+**No historical/release effect:** v0.7.0, D-109 membership, D-113 serving bytes,
+P-levels, geometry, source interpretation and independent-review state are unchanged.
+
 ## Value evidence
 
 Record meaningful outcomes, including no-value results.
