@@ -130,7 +130,7 @@ class V070PublicMaterializationTests(unittest.TestCase):
             ROOT / "supabase" / "functions" / "atlas-data" / "v070_payload.ts"
         ).read_text(encoding="utf-8")
         match = re.search(
-            r"export const V070_PAYLOAD = (.+);\\n?$",
+            r"export const V070_PAYLOAD = (.+);\n?$",
             module,
             flags=re.DOTALL,
         )
