@@ -75,15 +75,21 @@ async function main() {
     await setYear(page, currentYear);
     const brazil = page.locator("[data-place-id]").filter({ hasText: "Brazil" }).first();
     await brazil.waitFor({ state: "visible", timeout: 10_000 });
+    const brazilMeta = ((await brazil.locator(".place-card-meta").textContent()) || "").trim();
+    if (!brazilMeta.toLowerCase().includes("geometry unresolved")) {
+      failures.push("Brazil list card does not expose unresolved geometry");
+    }
     await brazil.click();
     await page.waitForTimeout(250);
     const brazilPanel = (await page.locator("#panel").innerText()).trim();
-    if (!brazilPanel.includes("Debt bondage")) failures.push("Brazil claim not visible");
+    if (!brazilPanel.toLowerCase().includes("debt bondage")) failures.push("Brazil claim not visible");
     if (!brazilPanel.includes("P-level unassigned")) failures.push("Brazil invents or hides null P-level");
     if (!brazilPanel.includes("Source version 9dfc9c89-f9b9-4d12-b6fd-28ddc3f399db")) {
       failures.push("Brazil exact source-version ID not visible");
     }
-    if (!brazilPanel.includes("No defensible geometry has been attached")) {
+    await page.locator(".geometry-details summary").click();
+    const brazilGeometry = ((await page.locator(".geometry-details").textContent()) || "").trim();
+    if (!brazilGeometry.includes("No defensible geometry has been attached")) {
       failures.push("Brazil unresolved geometry caveat missing");
     }
     const brazilShot = path.join(outputDir, "brazil-present.png");
