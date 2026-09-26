@@ -82,5 +82,9 @@
     "Gate 3 froze exact governed membership, composite object digests and database-state identity, then restored the closure into a fresh migrated PostgreSQL/PostGIS database.",
     "Source-native v0.6.1 lineage remains reconstructible through the immutable predecessor artifact plus Gate-1 ingest/reconciliation tooling; authority-state.json does not replace that predecessor artifact.",
     "The Supabase Free plan did not provide verified managed backup/PITR inventory to the project probe; the proven recovery guarantee is preservation-grade logical recovery of the governed research closure, not physical cluster/PITR recovery."
-  ]
+  ],
+  "cartography_recovery": {
+    "decision": "D-108",
+    "fingerprint_sha256": "31df6f9c2dd2a53185b2363c81dfd99e0307e28ead8915c3829975a46135a197"
+  }
 }
