@@ -80,9 +80,7 @@ Must preserve:
 
 Gate-2 mapping found a real representational gap. D-103 / #308 adds the smallest
 additive research-target/result layer plus missing claim semantics already defined in
-`docs/04_DATA_MODEL.md`. Migration 0031 must pass fresh-schema CI before any live
-application. No v3 ingestion or authority flip occurs until the new layer is live and
-round-trip reconciliation passes.
+`docs/04_DATA_MODEL.md`. Migration 0031 is merged, live, checksum-pinned and passes live schema/v0.6.1/claim-kind/Gate-2 regressions. D-104 adds one final lossless source-relation provenance refinement in migration 0032 and wires Gate-2 SQL tests into CI. No v3 ingestion or authority flip occurs until 0032 is green/live and round-trip reconciliation passes.
 
 No DB authority flip, canonical release, public-channel move or UI cutover follows until
 Gate 2 and later gates pass.
