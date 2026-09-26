@@ -230,6 +230,23 @@ def restore_research_results(cur, bundle: dict[str, Any]) -> None:
             insert_record(cur, "audit.research_target_claim", row)
 
 
+
+def portable_cartography_fingerprint(data: dict[str, Any]) -> dict[str, Any]:
+    keys = (
+        "fabric_id",
+        "content_sha256",
+        "source_commit_sha",
+        "source_blob_sha",
+        "srid",
+        "geometry_type",
+        "component_count",
+        "point_count",
+        "geodesic_area_m2_rounded_3",
+        "normalized_wkb_sha256",
+        "normalized_wkb_bytes",
+    )
+    return {key: data[key] for key in keys}
+
 def reconcile_cartography_metadata(
     cur, bundle: dict[str, Any], fingerprint: dict[str, Any]
 ) -> dict[str, Any]:
