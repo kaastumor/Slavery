@@ -25,6 +25,7 @@ from full_state_release_bundle import validate_bundle as validate_authority_bund
 PACKAGE_CONTRACT = "historical-slavery-atlas-canonical-release-package-v1"
 MANIFEST_SCHEMA = "historical-slavery-atlas-canonical-release-manifest-v1"
 AUTHORITY_FILENAME = "authority-state.json"
+CARTOGRAPHY_FILENAME = "cartography-recovery-fingerprint.json"
 
 GENERATED_DOCS = (
     "RELEASE.md",
@@ -78,6 +79,7 @@ def validate_spec(spec: dict[str, Any]) -> None:
         "purpose",
         "canonical_predecessor",
         "authority",
+        "cartography_recovery",
         "review",
         "public_channel",
         "methodology_references",
@@ -121,6 +123,15 @@ def validate_spec(spec: dict[str, Any]) -> None:
         raise ReleaseError("Gate-4 release must be rooted in D-109 authority")
     if not isinstance(authority["expected_counts"], dict):
         raise ReleaseError("spec.authority.expected_counts must be an object")
+
+    cartography = spec["cartography_recovery"]
+    if not isinstance(cartography, dict):
+        raise ReleaseError("spec.cartography_recovery must be an object")
+    for key in ("decision", "fingerprint_sha256"):
+        if not cartography.get(key):
+            raise ReleaseError(f"spec.cartography_recovery.{key} is required")
+    if cartography["decision"] != "D-108":
+        raise ReleaseError("Gate-4 cartography recovery must be rooted in D-108")
 
     review = spec["review"]
     if not isinstance(review, dict):
@@ -202,6 +213,67 @@ def validate_authority(spec: dict[str, Any], path: Path) -> dict[str, Any]:
     return bundle
 
 
+
+def validate_cartography_fingerprint(
+    spec: dict[str, Any],
+    authority: dict[str, Any],
+    path: Path,
+) -> dict[str, Any]:
+    fingerprint = load_json(path)
+    expected_sha = spec["cartography_recovery"]["fingerprint_sha256"]
+    actual_sha = sha256_file(path)
+    if actual_sha != expected_sha:
+        raise ReleaseError(
+            "cartography fingerprint SHA-256 mismatch: "
+            f"{actual_sha} != {expected_sha}"
+        )
+    if fingerprint.get("fingerprint_schema") != "gate3-cartography-portable-recovery-v1":
+        raise ReleaseError("unsupported portable cartography fingerprint schema")
+
+    payload = authority["cartography"]["payload"]
+    checks = {
+        "fabric_id": (fingerprint.get("fabric_id"), authority["cartography"]["id"]),
+        "content_sha256": (
+            fingerprint.get("content_sha256"),
+            payload.get("content_sha256"),
+        ),
+        "source_commit_sha": (
+            fingerprint.get("source_commit_sha"),
+            payload.get("source_commit_sha"),
+        ),
+        "source_blob_sha": (
+            fingerprint.get("source_blob_sha"),
+            payload.get("source_blob_sha"),
+        ),
+        "srid": (fingerprint.get("srid"), payload.get("geom_srid")),
+        "production_raw_ewkb_sha256": (
+            fingerprint.get("production_raw_ewkb_sha256"),
+            payload.get("geom_ewkb_sha256"),
+        ),
+        "production_raw_ewkb_bytes": (
+            fingerprint.get("production_raw_ewkb_bytes"),
+            payload.get("geom_ewkb_bytes"),
+        ),
+    }
+    for label, (actual, expected) in checks.items():
+        if actual != expected:
+            raise ReleaseError(
+                f"cartography {label} mismatch: {actual!r} != {expected!r}"
+            )
+
+    required_portable = (
+        "geometry_type",
+        "component_count",
+        "point_count",
+        "geodesic_area_m2_rounded_3",
+        "normalized_wkb_sha256",
+        "normalized_wkb_bytes",
+    )
+    for key in required_portable:
+        if fingerprint.get(key) in (None, ""):
+            raise ReleaseError(f"cartography fingerprint {key} is required")
+    return fingerprint
+
 def bullets(items: list[str]) -> str:
     return "\n".join(f"- {item}" for item in items)
 
@@ -265,8 +337,9 @@ Gate 4 does not move the public UI/API release channel. It remains
 `{channel['current_release']}` until a separate Gate-5 cutover passes.
 
 `authority-state.json` is a byte-for-byte preservation copy of the reviewed Gate-3
-authority snapshot. It is historical/research evidence, not a signal that every member
-must be exposed by the current public UI.
+authority snapshot. `cartography-recovery-fingerprint.json` carries the exact D-108
+portable cartography reconstruction invariant. These are preservation evidence, not a
+signal that every member must be exposed by the current public UI.
 
 See `manifest.json`, `SHA256SUMS.txt`, the QC/unresolved-issues documents and the
 migration/reconciliation report for the complete release contract.
@@ -331,7 +404,7 @@ def build_manifest(
     output_dir: Path,
 ) -> dict[str, Any]:
     file_entries = []
-    for filename in (AUTHORITY_FILENAME, *GENERATED_DOCS):
+    for filename in (AUTHORITY_FILENAME, CARTOGRAPHY_FILENAME, *GENERATED_DOCS):
         path = output_dir / filename
         file_entries.append(
             {
@@ -354,6 +427,7 @@ def build_manifest(
             **spec["authority"],
             "membership": authority["membership"],
         },
+        "cartography_recovery": spec["cartography_recovery"],
         "review": spec["review"],
         "public_channel": spec["public_channel"],
         "methodology_references": spec["methodology_references"],
@@ -364,6 +438,7 @@ def build_manifest(
 def write_sums(output_dir: Path) -> None:
     filenames = [
         AUTHORITY_FILENAME,
+        CARTOGRAPHY_FILENAME,
         *GENERATED_DOCS,
         "manifest.json",
     ]
@@ -376,16 +451,23 @@ def write_sums(output_dir: Path) -> None:
     )
 
 
-def build_package(spec_path: Path, authority_path: Path, output_dir: Path) -> None:
+def build_package(
+    spec_path: Path,
+    authority_path: Path,
+    cartography_path: Path,
+    output_dir: Path,
+) -> None:
     spec = load_json(spec_path)
     validate_spec(spec)
     authority = validate_authority(spec, authority_path)
+    validate_cartography_fingerprint(spec, authority, cartography_path)
 
     if output_dir.exists():
         shutil.rmtree(output_dir)
     output_dir.mkdir(parents=True)
 
     shutil.copyfile(authority_path, output_dir / AUTHORITY_FILENAME)
+    shutil.copyfile(cartography_path, output_dir / CARTOGRAPHY_FILENAME)
     (output_dir / "RELEASE.md").write_text(
         release_md(spec, authority), encoding="utf-8"
     )
@@ -414,10 +496,16 @@ def expected_files() -> set[str]:
     }
 
 
-def verify_package(spec_path: Path, authority_path: Path, release_dir: Path) -> None:
+def verify_package(
+    spec_path: Path,
+    authority_path: Path,
+    cartography_path: Path,
+    release_dir: Path,
+) -> None:
     spec = load_json(spec_path)
     validate_spec(spec)
     authority = validate_authority(spec, authority_path)
+    validate_cartography_fingerprint(spec, authority, cartography_path)
 
     actual_files = {
         path.name for path in release_dir.iterdir() if path.is_file()
@@ -441,6 +529,10 @@ def verify_package(spec_path: Path, authority_path: Path, release_dir: Path) -> 
 
     if (release_dir / AUTHORITY_FILENAME).read_bytes() != authority_path.read_bytes():
         raise ReleaseError("authority-state.json is not a byte-for-byte authority copy")
+    if (release_dir / CARTOGRAPHY_FILENAME).read_bytes() != cartography_path.read_bytes():
+        raise ReleaseError(
+            "cartography-recovery-fingerprint.json is not a byte-for-byte D-108 copy"
+        )
 
     for entry in manifest.get("files", []):
         path = release_dir / entry["filename"]
@@ -464,7 +556,7 @@ def verify_package(spec_path: Path, authority_path: Path, release_dir: Path) -> 
 
     with tempfile.TemporaryDirectory() as tmp:
         rebuilt = Path(tmp) / spec["release_version"]
-        build_package(spec_path, authority_path, rebuilt)
+        build_package(spec_path, authority_path, cartography_path, rebuilt)
         rebuilt_files = {
             path.name for path in rebuilt.iterdir() if path.is_file()
         }
@@ -482,17 +574,24 @@ def main() -> int:
     build = sub.add_parser("build")
     build.add_argument("spec", type=Path)
     build.add_argument("authority_bundle", type=Path)
+    build.add_argument("cartography_fingerprint", type=Path)
     build.add_argument("output_dir", type=Path)
 
     verify = sub.add_parser("verify")
     verify.add_argument("spec", type=Path)
     verify.add_argument("authority_bundle", type=Path)
+    verify.add_argument("cartography_fingerprint", type=Path)
     verify.add_argument("release_dir", type=Path)
 
     args = parser.parse_args()
     try:
         if args.command == "build":
-            build_package(args.spec, args.authority_bundle, args.output_dir)
+            build_package(
+                args.spec,
+                args.authority_bundle,
+                args.cartography_fingerprint,
+                args.output_dir,
+            )
             print(
                 json.dumps(
                     {
@@ -504,7 +603,12 @@ def main() -> int:
                 )
             )
         else:
-            verify_package(args.spec, args.authority_bundle, args.release_dir)
+            verify_package(
+                args.spec,
+                args.authority_bundle,
+                args.cartography_fingerprint,
+                args.release_dir,
+            )
             print(
                 json.dumps(
                     {
