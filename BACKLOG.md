@@ -3,7 +3,7 @@
 **Updated:** 2026-09-26  
 **Role:** canonical execution queue only; assumptions/risks/value evidence live in `docs/25_PROJECT_HEALTH.md`  
 **Canonical research authority:** PostgreSQL/PostGIS, explicit governed membership under D-109  
-**Canonical historical data release:** `v0.6.1` (unchanged)  
+**Canonical historical data release:** `v0.7.0`  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
 **Published research candidate:** `exp06-candidate-v1` at `exp06-candidate.html` (non-canonical)
 
@@ -11,86 +11,84 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — REVIEW / RELEASE + DATABASE CANONICALIZATION
+# CURRENT MODE — REVIEW / RELEASE + PUBLIC CUTOVER
 
 **Parent gate:** #300 — canonical PostgreSQL + first DB-backed release gate  
 **Gate 0:** **PASS — MIGRATION_HISTORY_RECONCILED**  
 **Gate 1:** **PASS — V061_DB_RECONCILED**  
 **Gate 2:** **PASS — V3_DB_RECONCILED**  
 **Gate 3:** **PASS — PROMOTE_DB_CANONICAL_RESEARCH_STATE**  
-**Current gate:** Gate 4 — first DB-backed canonical historical release  
-**Canonical historical data release:** `v0.6.1` unchanged  
+**Gate 4:** **PASS — PUBLISH_DB_BACKED_CANONICAL_RELEASE**  
+**Current gate:** Gate 5 — public UI/API cutover to canonical v0.7.0  
+**Canonical historical data release:** `v0.7.0`  
+**Current public preview/channel:** `mvp-preview-ancient-v2` until Gate 5 passes  
 **Frozen reviewed input:** `post-r1-cumulative-review-v3-cross-frame`  
-**WIP:** #319 — first DB-backed canonical release
+**WIP:** #323 — cut public UI/API to canonical v0.7.0 release
 
-## Gate 3 closeout
+## Gate 4 closeout
 
-D-109 makes PostgreSQL/PostGIS authoritative for the project's explicitly governed
-current research closure.
+D-110 makes `v0.7.0` the first canonical historical release generated from the
+D-109 PostgreSQL/PostGIS research-authority closure.
 
-Frozen authority baseline `gate3-db-authority-proof-v1`:
+Frozen release membership:
 
-- schema head 0033;
 - 40 claims;
 - 11 actors;
 - 18 spatial entities;
-- 0 reviewed historical geometries;
+- 0 reviewed historical evidence geometries;
 - 8 voyages;
 - 99 coverage assessments;
 - 211 exact source versions;
 - 26 research-target results;
 - membership SHA-256
   `ebc9d32f09857744841a0cf92699c41739b624ac4bd94c43798eb1f61e3b0dd3`;
-- production database-state SHA-256
+- D-109 production database-state SHA-256
   `31b7a7b675445e5758ffd68d64ff0f0cde83df1b0ea65f29835246deb2ae26ff`;
-- fresh-database logical recovery: PASS;
-- exact research-object digest reconstruction: PASS;
-- D-108 portable cartography fingerprint: PASS;
-- private Data API boundary: PASS;
+- deterministic package/rebuild: PASS;
+- exact typed release membership/digests: PASS;
+- D-108 portable cartography artifact included: PASS;
+- published membership/artifact immutability: PASS;
 - Supabase security advisor: 0 lints;
 - independent historical review: 0.
 
-Authority is defined by explicit governed membership, not physical row presence or
-`review_status` alone. Legacy preview/prototype rows remain outside the Gate-3 authority
-closure unless explicitly admitted later.
+The v0.6.1 workbook remains the immutable predecessor and source-native lineage anchor;
+it was not overwritten or silently normalized.
 
-The Supabase Free plan does not provide verified managed backup/PITR evidence to the
-project's current management probe. Gate 3 proves preservation-grade logical recovery,
-not physical cluster backup or arbitrary draft-row recovery.
+Gate 4 deliberately left every authority claim's `publication_status` unchanged and
+left `public_mvp_preview` pointing to `mvp-preview-ancient-v2`. Canonical release
+publication and public serving remain separate gates.
 
-No canonical historical release or public channel moved in Gate 3.
+## Gate 5 exact question
 
-## Gate 4 exact question
+Can the public UI/API be cut over to an exact v0.7.0-derived serving materialization
+without exposing draft/unrestricted research state or weakening the release's
+provenance, uncertainty, temporal/spatial or non-absence semantics?
 
-Can the project produce the first immutable DB-backed canonical historical release from
-the D-109 authority closure without weakening provenance, uncertainty, review state or
-release immutability?
+Required before channel move:
 
-Provisional release version: **v0.7.0**, unless Gate-4 work discovers a
-compatibility-breaking ontology change.
+1. derive serving state strictly from v0.7.0 release membership/materialization;
+2. never select public content by broad `review_status` alone;
+3. preserve territorial practice, law, external/network participation and coverage as
+   separate dimensions;
+4. preserve under-review, HOLD, researched-inconclusive and unresolved as non-absence;
+5. keep 0 reviewed historical evidence geometries truthful and retain neutral world
+   land independently;
+6. preserve exact source/source-version and source-native lineage;
+7. preserve D-108 cartography behavior;
+8. stage the exact API/browser artifact intended for production;
+9. run reconstruction, API/browser and security regression against that exact state;
+10. prove rollback to the previous serving pointer before promotion;
+11. move `public_mvp_preview` only as the final controlled step;
+12. verify post-cutover channel identity and no draft leakage.
 
-Required before publication:
+Allowed Gate-5 disposition:
 
-1. exact release membership derived from the governed DB authority boundary;
-2. predecessor v0.6.1 identity/checksum retained;
-3. reviewed v3 evidence and HOLD/inconclusive states preserved losslessly;
-4. schema/methodology/release-contract versions recorded;
-5. exact source/source-version information retained;
-6. changelog, QC summary and unresolved-issues list included;
-7. migration/reconciliation report included;
-8. deterministic manifest/checksums and independent rebuild verification;
-9. immutable published release artifacts;
-10. explicit review/publication states and truthful independent-review count;
-11. no legacy preview/prototype leakage through broad `review_status` selection;
-12. public release channel remains unchanged until Gate 5.
+- `CUTOVER_PUBLIC_CHANNEL_TO_V070`;
+- `HOLD_PUBLIC_CUTOVER`;
+- `REWORK_PUBLIC_MATERIALIZATION`.
 
-Allowed Gate-4 disposition:
-
-- `PUBLISH_DB_BACKED_CANONICAL_RELEASE`;
-- `HOLD_RELEASE_CANDIDATE`;
-- `REWORK_RELEASE_BUILDER`.
-
-No UI/API cutover follows until Gate 4 separately passes.
+No UI redesign, new historical research, P-level inference or historical geometry
+promotion is authorized by Gate 5.
 
 ## Discovery execution
 
