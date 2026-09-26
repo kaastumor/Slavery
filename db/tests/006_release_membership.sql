@@ -132,7 +132,7 @@ INSERT INTO audit.release_research_target_result(
     'legacy_membership_backfill'
 );
 
-DO $
+DO $$
 DECLARE
     blocked boolean := false;
 BEGIN
@@ -148,7 +148,7 @@ BEGIN
     IF NOT blocked THEN
         RAISE EXCEPTION 'captured_at_release research-result membership accepted a NULL digest';
     END IF;
-END $;
+END $$;
 
 UPDATE audit.release_manifest
 SET status='published'
@@ -169,10 +169,10 @@ BEGIN
     IF NOT blocked THEN
         RAISE EXCEPTION 'published release membership was mutable';
     END IF;
-END $;
+END $$;
 
 
-DO $
+DO $$
 DECLARE
     blocked boolean := false;
 BEGIN
@@ -187,7 +187,7 @@ BEGIN
     IF NOT blocked THEN
         RAISE EXCEPTION 'published research-result release membership was mutable';
     END IF;
-END $;
+END $$;
 
 
 ROLLBACK;
