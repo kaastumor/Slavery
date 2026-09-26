@@ -3020,40 +3020,52 @@ supported Zhengzhou captive-taking claim is selected separately.
 It does not make v0.8.0 canonical, publish any new claim, or move the public channel.
 
 
-## D-115 — “All complete entries live” supersedes the unpublished v0.8 expansion-01 selection with expansion-02
+## D-115 — “All complete entries live” requires claim/geometry-independent v0.8 selection
 **Date:** 2026-09-27  
 **Status:** accepted sponsor-authorized release-selection correction
 
-**Trigger:** the sponsor explicitly requested that all currently complete Atlas entries be pushed
-to the live public release, while continuing hourly evidence expansion.
+**Trigger:** the sponsor explicitly requested that all currently complete Atlas entries be
+pushed to the live public release, while continuing hourly evidence expansion.
 
-The earlier D-114 `v0.8.0-expansion-01` selection froze 18 additions before the
-Tōdai-ji entry was completed and ingested. That selection was never canonical or public,
-so it remains preserved as a historical candidate but is superseded before publication.
+The earlier D-114 `v0.8.0-expansion-01` selection was never canonical or public and is
+preserved as historical candidate evidence. It is superseded before publication.
 
-**Completeness rule for this cutover:** an added territorial-practice entry is eligible
-only when it has:
+**Correction:** claim completeness and geometry completeness are separate dimensions.
+A reviewed claim does **not** become incomplete merely because no defensible historical
+geometry has been resolved. Such a claim may be published with geometry explicitly
+unresolved. Conversely, a geometry record never strengthens the historical claim.
+
+A reviewed disputed interpretation may also be evidence-complete. Publication must
+preserve the disputed state rather than treating disagreement as absence or silently
+excluding it. Likewise, a reviewed date dispute may remain explicit release state.
+
+**Eligibility rule for this cutover:** an added territorial-practice claim is eligible
+when it has:
 1. reviewed claim state;
-2. claim-level source evidence;
-3. a non-disputed accepted classification under the current method;
-4. an explicitly selected reviewed, **resolved** geometry overlapping the claim interval;
-5. no new post-M1 P-level assignment.
+2. claim-level source evidence with preserved version/provenance;
+3. an accepted current/recovery classification state, including explicitly reviewed
+   `disputed` or `reviewed_with_date_dispute` state;
+4. no newly assigned post-M1 P-level.
 
-A legacy `research_prototype_reviewed` row is **not** treated as current-method complete
-merely because it is reviewed and has a polygon. It must first be reconciled into current
-claim semantics. Disputed rows remain excluded.
+Geometry is selected independently. Any selected geometry must be reviewed, resolved,
+belong to a selected subject, and overlap at least one selected claim interval.
+Unresolved geometry remains unresolved and does not block the claim.
 
-**Decision:** `release/selections/v0.8.0-expansion-02.json` supersedes the unpublished
-expansion-01 selection and freezes:
+Legacy `research_prototype_reviewed` rows are not treated as current-method complete
+merely because they were previously reviewed. Where a reconciled successor exists, the
+legacy row remains immutable lineage and is excluded. Remaining legacy prototype rows
+must be replayed before later promotion.
 
-- immutable v0.7.0 predecessor membership;
-- 19 exact added territorial-practice claims across 18 added spatial entities;
-- 47 exact reviewed/resolved geometry records;
-- deterministic source-version/spatial dependency closure only for those additions.
+**Decision:** `release/selections/v0.8.0-expansion-02.json` freezes the current complete
+claim set as predecessor union plus:
 
-The only delta relative to expansion-01 is the already-reviewed Tōdai-ji claim
-`687bed4f-281e-4821-bc23-1e75cb65dd99` plus reviewed UNESCO locus geometry
-`4ea5165a-9bd2-4883-9cdd-4910aa491dc7`.
+- **35** exact added territorial-practice claims;
+- **32** added spatial entities;
+- **49** exact reviewed/resolved geometry records;
+- explicit disputed/date-disputed reviewed states where applicable.
+
+With v0.7.0 predecessor membership this yields a 75-claim / 50-spatial-entity /
+49-historical-geometry candidate authority before deterministic source-version closure.
 
 This decision authorizes candidate construction and release review. It does not bypass
 preservation-grade authority freezing, publication QC, immutable release creation, or
