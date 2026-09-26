@@ -3,6 +3,8 @@ name: Public Atlas Browser Review
 on:
   pull_request:
     paths:
+      - "web/index.html"
+      - "web/r1-candidate.html"
       - "web/scripts/run_current_candidate_browser_smoke.mjs"
       - "web/scripts/run_v070_stage_browser_review.mjs"
       - "tests/fixtures/gate5/v070-index.html"
@@ -34,7 +36,7 @@ jobs:
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
 
-      - name: Verify current live API regression boundary
+      - name: Verify production API is exact v0.7.0 materialization
         shell: bash
         env:
           LIVE_API_URL: https://dilnayfllygkplsdymel.supabase.co/functions/v1/atlas-data
@@ -46,26 +48,46 @@ jobs:
             "$LIVE_API_URL" \
             -o /tmp/public-atlas-review/live/atlas-data.json
           python3 - <<'PY'
+          import hashlib
           import json
           from pathlib import Path
 
-          payload=json.loads(Path("/tmp/public-atlas-review/live/atlas-data.json").read_text())
-          names={p.get("display_name") or p.get("name") for p in payload.get("places", [])}
+          path=Path("/tmp/public-atlas-review/live/atlas-data.json")
+          body=path.read_bytes()
+          payload=json.loads(body)
+          digest=hashlib.sha256(body).hexdigest()
           summary={
               "release_version": payload.get("release_version"),
+              "serving_materialization_id": payload.get("serving_materialization_id"),
               "canonical": payload.get("canonical"),
               "place_count": len(payload.get("places", [])),
-              "has_hittite": "Hittite central Anatolia" in names,
+              "claim_count": sum(len(p.get("claims", [])) for p in payload.get("places", [])),
+              "payload_sha256": digest,
               "data_boundary": payload.get("data_boundary"),
           }
           Path("/tmp/public-atlas-review/live/api-summary.json").write_text(
               json.dumps(summary,indent=2)+"\n"
           )
           print(json.dumps(summary,indent=2))
-          assert payload.get("release_version") == "mvp-preview-ancient-v2", summary
-          assert payload.get("canonical") is False, summary
-          assert "Hittite central Anatolia" in names, summary
+          assert digest == "2a04787a2ee0e42a97f273621eebbf32ddc6a1b2e903239a626eb41d72c29786", summary
+          assert payload.get("release_version") == "v0.7.0", summary
+          assert payload.get("serving_materialization_id") == "v0.7.0-public-mvp-v1", summary
+          assert payload.get("canonical") is True, summary
+          assert len(payload.get("places", [])) == 16, summary
+          assert sum(len(p.get("claims", [])) for p in payload.get("places", [])) == 18, summary
+          assert all(p.get("geometries") == [] for p in payload.get("places", [])), summary
+          dims=payload["release_dimensions"]
+          assert dims["research_stage_counts"] == {"researched_internal":21,"under_review":5}
+          assert dims["researched_inconclusive_count"] == 6
+          assert dims["independent_historical_reviews"] == 0
+          assert dims["reviewed_historical_geometry_count"] == 0
           PY
+          grep -qi '^x-atlas-materialization: v0.7.0-public-mvp-v1' \
+            /tmp/public-atlas-review/live/api-headers.txt
+          if grep -qi '^x-atlas-stage: true' /tmp/public-atlas-review/live/api-headers.txt; then
+            echo "production API unexpectedly identifies as stage" >&2
+            exit 1
+          fi
 
       - name: Review current public candidate root
         working-directory: web
