@@ -18,6 +18,7 @@ async function setYear(page, year) {
 async function main() {
   const baseUrl = process.argv[2] || "http://127.0.0.1:4173/";
   const outputDir = path.resolve(process.argv[3] || "/tmp/v070-stage-review");
+  const forceApiFailure = process.argv.includes("--force-api-failure");
   await mkdir(outputDir, { recursive: true });
 
   const browser = await chromium.launch({
@@ -36,6 +37,13 @@ async function main() {
   const failures = [];
   const captures = [];
 
+  if (forceApiFailure) {
+    await page.route(
+      "https://dilnayfllygkplsdymel.supabase.co/functions/v1/atlas-data-v070-stage",
+      (route) => route.abort("failed"),
+    );
+  }
+
   try {
     await page.goto(baseUrl, { waitUntil: "networkidle", timeout: 30_000 });
     await page.locator("#year").waitFor({ state: "visible", timeout: 15_000 });
@@ -43,7 +51,13 @@ async function main() {
 
     const badge = (await page.locator("#release-badge").innerText()).trim();
     const badgeTitle = await page.locator("#release-badge").getAttribute("title");
-    if (badge !== "v0.7.0") failures.push(`unexpected release badge: ${badge}`);
+    if (!badge.startsWith("v0.7.0")) failures.push(`unexpected release badge: ${badge}`);
+    if (forceApiFailure && !badge.includes("static fallback")) {
+      failures.push(`forced API failure did not activate v0.7.0 fallback: ${badge}`);
+    }
+    if (!forceApiFailure && badge.includes("static fallback")) {
+      failures.push(`normal staged review unexpectedly used static fallback: ${badge}`);
+    }
     if (!badgeTitle?.includes("serving adapter v0.7.0-public-mvp-v1")) {
       failures.push(`release badge does not expose serving adapter: ${badgeTitle}`);
     }
@@ -112,6 +126,7 @@ async function main() {
 
     const summary = {
       base_url: baseUrl,
+      mode: forceApiFailure ? "forced_static_fallback" : "stage_api",
       release_badge: badge,
       release_badge_title: badgeTitle,
       current_year: currentYear,
