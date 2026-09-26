@@ -1,0 +1,57 @@
+{
+  "case_key": "atlas-expansion-01/old-babylonian-uruk/slavery-v2",
+  "spatial_entity": {
+    "canonical_name": "Old Babylonian Uruk",
+    "display_name": "Old Babylonian Uruk",
+    "entity_type_code": "city",
+    "from_year": -1741,
+    "to_year": -1739,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed Uruk spatial identity and reviewed geometry. The claim is institutionally bounded and must not be inflated to all inhabitants or all Old Babylonian cities."
+  },
+  "claim": {
+    "from_year": -1741,
+    "to_year": -1739,
+    "date_text_original": "Rīm-Anum's short reign at Uruk, 1742–1740 BCE",
+    "temporal_precision": "near_exact_reign",
+    "temporal_certainty": "high",
+    "spatial_precision": "city_institution_bounded",
+    "summary": "Texts from the Old Babylonian bīt asīrī at Uruk under Rīm-Anum document prisoners of war used as a labour force and as slaves within a state-managed institutional setting connected with flour production. This supports a bounded positive slavery designation at Uruk for this short period, but not a city-wide prevalence estimate or a claim that every prisoner or worker was enslaved.",
+    "confidence": "high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim 6d4a714b-1899-440f-b8c2-7c2b8b1d2cc9. Legacy P3 is not copied into this post-M1 claim.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Bounded institutional presence only; no prevalence or all-Uruk intensity inference."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "From Freedom to Slavery: Work and Words at the House of Prisoners of War in the Old Babylonian Period",
+        "author_or_institution": "Annunziata Rositani",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "geographic_scope": "Uruk",
+        "temporal_scope": "Old Babylonian period, especially Rīm-Anum's reign",
+        "independence_notes": "Dedicated specialist study of the Uruk bīt asīrī source corpus.",
+        "reliability_limitations": "Institution-specific corpus; cannot by itself establish city-wide slave prevalence or homogeneous status for all war captives."
+      },
+      "version": {
+        "version_label": "Journal of Global Slavery 3.1–2 (2018), pp. 41–67",
+        "publication_year": 2018,
+        "url_or_identifier": "https://doi.org/10.1163/2405836X-00301004",
+        "accessed_at": "2026-09-27T00:35:00Z"
+      },
+      "evidence_role": "specialist interpretation of the bīt asīrī institutional corpus",
+      "independence_group": "rositani-uruk-bit-asiri-2018",
+      "directness": "specialist source study",
+      "direction": "supports",
+      "locator": "abstract and article analysis of prisoners of war used as labour force and slaves"
+    }
+  ]
+}
