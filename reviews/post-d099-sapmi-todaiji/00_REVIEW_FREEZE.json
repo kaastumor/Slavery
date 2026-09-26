@@ -1,0 +1,49 @@
+{
+  "review": "post-d099-sapmi-todaiji-delta",
+  "issue": 288,
+  "mode": "review_release",
+  "status": "inputs_frozen_before_replay",
+  "base_commit": "94016e680a2cabce0a2f2fce36bd6f5a447f9d5a",
+  "canonical_release": "v0.6.1_unchanged",
+  "immutable_candidate": {
+    "candidate_id": "post-r1-cumulative-review-v2-overnight",
+    "membership_count": 21,
+    "accepted_count": 16,
+    "hold_count": 5,
+    "source_relation_count": 133,
+    "independent_reviewed_count": 0
+  },
+  "earlier_reviewed_delta": {
+    "review": "post-v2-lithuania-karnak-delta",
+    "membership_count": 2,
+    "source_relation_count": 12,
+    "packaging_gate": "KEEP_REVIEWED_DELTA_SEPARATE"
+  },
+  "delta_membership": [
+    {
+      "target_id": "R1:N:sapmi_1600",
+      "target_label": "Sápmi / Sámi communities",
+      "anchor": "1600 CE",
+      "origin": "EXP-12"
+    },
+    {
+      "target_id": "R1:N:todaiji_800",
+      "target_label": "Tōdai-ji",
+      "anchor": "800 CE",
+      "origin": "EXP-13"
+    }
+  ],
+  "review_rule": "existing merged evidence only; acceptance validates bounded evidence state and does not upgrade dimensions the packet leaves unresolved",
+  "row_dispositions": [
+    "ACCEPT_INTERNAL_REVIEW",
+    "NARROW_AND_ACCEPT",
+    "HOLD_EXISTING_EVIDENCE",
+    "REJECT_ARTIFACT"
+  ],
+  "packaging_gate": [
+    "BUILD_SUCCESSOR_CANDIDATE",
+    "KEEP_REVIEWED_DELTA_SEPARATE",
+    "HOLD_FOR_REWORK"
+  ],
+  "independent_historical_review_count": 0
+}
