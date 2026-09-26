@@ -67,7 +67,7 @@ insert into atlas.claim(
 ),
 (
   '71000000-0000-4000-8000-000000000008'::uuid,
-  'voyage_ownership',1300,1300,
+  'voyage_owner',1300,1300,
   'Gate3 ownership fixture','high','reviewed','unpublished','Disposable fixture'
 );
 
