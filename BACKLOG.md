@@ -19,7 +19,7 @@ This file answers **what is justified to work on next**.
 **Current gate:** Gate 3 — PostgreSQL canonical-research authority proof  
 **Canonical historical data release:** `v0.6.1` unchanged  
 **Frozen reviewed input:** `post-r1-cumulative-review-v3-cross-frame`  
-**WIP:** Gate-3 authority/release-reconstruction proof under #300
+**WIP:** #313 — full-state release reconstruction and DB authority proof
 
 ## Gate 2 closeout
 
