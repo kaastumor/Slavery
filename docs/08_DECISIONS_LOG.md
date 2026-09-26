@@ -2443,3 +2443,84 @@ the existing D-054 public-preview bundle is intentionally too narrow.
 **No release effect:** canonical release remains v0.6.1; public channel/UI remain
 unchanged; DB authority has not yet flipped; independent historical review remains 0.
 
+## D-106 — Full-state releases use top-level typed membership plus composite object snapshots
+**Date:** 2026-09-26  
+**Status:** accepted Gate-3 release-contract decision
+
+**Evidence:** #313 under parent D-101/#300.
+
+The existing D-054 preservation bundle is intentionally scoped to the territorial-practice
+public preview and cannot reconstruct the broader canonical research state now present in
+PostgreSQL.
+
+**Decision:** retain the existing hybrid release model—typed queryable membership plus
+an immutable preservation bundle—but define membership at the **top-level canonical
+object** boundary rather than adding one release-membership table for every physical
+child table.
+
+Top-level release object families are:
+
+- claim;
+- actor;
+- spatial entity;
+- geometry;
+- voyage;
+- research coverage assessment;
+- source version;
+- research-target result.
+
+Each top-level bundle object freezes the child rows that determine its meaning.
+
+Examples:
+
+- a claim snapshot includes the universal claim row, typed claim subtype, claim-source
+  relations, asserted intervals, evidence loci, inference extents and practice facets;
+- an actor snapshot includes actor names and actor-local attributes where applicable;
+- a voyage snapshot includes ownership, finance and stop rows;
+- a coverage snapshot includes its source-provenance rows;
+- a source-version snapshot includes its normalized source identity;
+- a research-target result snapshot includes stable target identity, all review events,
+  target-source provenance and target-to-claim bridges.
+
+This preserves exact reviewed state without turning every relational child into an
+independent release object.
+
+### Schema consequence
+
+Migration 0033 adds the one missing top-level membership family:
+
+`audit.release_research_target_result`.
+
+It uses the same digest/capture-state rules and published-release immutability guard as
+the existing D-054 typed membership tables.
+
+No older release is backfilled with invented research-result membership.
+
+### Reconstruction consequence
+
+The Gate-3 full-state bundle must freeze:
+- exact top-level membership;
+- exact composite object payloads;
+- per-object SHA-256;
+- sorted membership digests;
+- overall database-state digest;
+- schema/migration head;
+- source Git SHA;
+- release-contract version.
+
+Subordinate rows that are embedded in a composite object must be sorted deterministically
+before hashing.
+
+### Boundaries
+
+This decision does not:
+- promote PostgreSQL to canonical authority;
+- publish a release;
+- move a release channel;
+- infer a P-level or geometry;
+- alter v0.6.1;
+- convert internal review into independent review.
+
+Gate 3 still requires live migration/application, deterministic bundle build/verify,
+security, backup/rollback and authority-cutover proof.
+
