@@ -76,7 +76,7 @@ historical acceptance criteria or release boundary.
 Batch one coherent checkpoint per PR. Run Python tests/sanitation locally first.
 Normal PR checks run sanitation and Python regressions; PostGIS runs for changes
 outside known documentation/research text paths, or on manual dispatch. No duplicate
-foundation run on merge. Legacy preview health remains weekly/manual, not every push.
+foundation run on merge. Public Atlas health remains weekly/manual, not every push.
 Do not skip required relevant checks or rerun unchanged successful jobs.
 
 ## Continuation rule
