@@ -2,6 +2,10 @@ name: Supabase Recovery Evidence
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/db-recovery-evidence.yml"
 
 permissions:
   contents: read
