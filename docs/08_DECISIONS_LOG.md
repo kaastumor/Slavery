@@ -3061,11 +3061,11 @@ claim set as predecessor union plus:
 
 - **35** exact added territorial-practice claims;
 - **32** added spatial entities;
-- **49** exact reviewed/resolved geometry records;
+- **46** exact reviewed/resolved geometry records;
 - explicit disputed/date-disputed reviewed states where applicable.
 
 With v0.7.0 predecessor membership this yields a 75-claim / 50-spatial-entity /
-49-historical-geometry candidate authority before deterministic source-version closure.
+46-historical-geometry candidate authority before deterministic source-version closure.
 
 This decision authorizes candidate construction and release review. It does not bypass
 preservation-grade authority freezing, publication QC, immutable release creation, or

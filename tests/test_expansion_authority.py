@@ -32,7 +32,7 @@ class ExpansionAuthorityTests(unittest.TestCase):
             )
         )
         self.assertEqual(len(selected), 35)
-        self.assertEqual(len(additions["approved_geometry_ids"]), 49)
+        self.assertEqual(len(additions["approved_geometry_ids"]), 46)
         self.assertTrue(selected.isdisjoint(excluded))
         self.assertIn(
             "cfd709dd-55ad-4f92-a6ec-f6c7910b3fe1",
@@ -41,6 +41,14 @@ class ExpansionAuthorityTests(unittest.TestCase):
         self.assertTrue(selection["rules"]["explicit_membership_only"])
         self.assertTrue(selection["rules"]["reviewed_row_discovery_forbidden"])
         self.assertTrue(selection["rules"]["reviewed_disputes_may_be_complete"])
+        unresolved_geometry_ids = {
+            "136c0f0b-537f-4a39-a5ec-7117edfadbfb",
+            "2a11ccf8-06c4-495a-85e2-214cd8d164ba",
+            "3cffa01a-740b-4195-a992-e4e4a96837da",
+        }
+        self.assertTrue(
+            unresolved_geometry_ids.isdisjoint(additions["approved_geometry_ids"])
+        )
 
     def test_final_selection_adds_todaiji_without_mutating_first_freeze(self) -> None:
         selection = MODULE.load_selection(SELECTION)
@@ -59,7 +67,7 @@ class ExpansionAuthorityTests(unittest.TestCase):
         )
         self.assertEqual(selection["expected_counts"]["candidate_claims"], 75)
         self.assertEqual(selection["expected_counts"]["candidate_spatial_entities"], 50)
-        self.assertEqual(selection["expected_counts"]["candidate_geometries"], 49)
+        self.assertEqual(selection["expected_counts"]["candidate_geometries"], 46)
 
     def test_v2_selection_keeps_claim_and_geometry_completeness_separate(self) -> None:
         selection = MODULE.load_selection(SELECTION)
