@@ -19,7 +19,8 @@
       "repository_git_blob_sha": "555af1ab4b0253b86ce7cc69889bff74bf51432e",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "e24e161d434318c738112f8c06eb65677a59c5def514e84f8db1a4ebfd522c2f"
     },
     {
       "name": "0002_vocabularies",
@@ -27,7 +28,8 @@
       "repository_git_blob_sha": "5c43e12f60f96f5b1939ee78fffb2f22cab60616",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "e0b32dffa8eeeb14443ada0434d480d3d51404c05a72cf424231419308382197"
     },
     {
       "name": "0003_core_entities",
@@ -35,7 +37,8 @@
       "repository_git_blob_sha": "60a3c306b0a7ea4eeebef784572ea9a6e6076575",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "c85c9126850cce3111cde894b4332ac6a65124eddda4fc59602ff8d9dc434e98"
     },
     {
       "name": "0004_claims_and_relations",
@@ -43,7 +46,8 @@
       "repository_git_blob_sha": "bd80ec0e87c77158206d98f3ebf24bd1a8bd67c8",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "4c214baa88c7422eb93dcc7d2c3b831adf6e3d1bd5a7966872e2311d71f97099"
     },
     {
       "name": "0005_voyage_network",
@@ -51,7 +55,8 @@
       "repository_git_blob_sha": "65e70d0cdff2ab7dc9d567dbe6d35f92e7e6b2ea",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "cfe870f87b6c63a653396994bb62550870e6d497a2fda8b6313a6dd53fe87e3f"
     },
     {
       "name": "0006_ingest_audit_publish",
@@ -59,7 +64,8 @@
       "repository_git_blob_sha": "9a89cbc8bb18808d4e35bd2fca41aa226ca1bcbd",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "756c60ed5f76691c81aa7f7e55e80b1e85a03e1293165a511c7d2a3b2da4008f"
     },
     {
       "name": "0007_v061_crosswalks",
@@ -67,7 +73,8 @@
       "repository_git_blob_sha": "da39f49796d32016ac5fbf3aaa16d8ad329f95cc",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "88172c175b8fb97e61f44e2c4c9a77e855319a2f6331802bb9bafccf3f77764e"
     },
     {
       "name": "0008_crosswalk_constraints",
@@ -75,7 +82,8 @@
       "repository_git_blob_sha": "80ed6b59ee252ca004e933bb7ade72aa715acbb0",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "940a554cd05af39bc92bcfcc0550d6e771b0989ef0ac74fe9f48a0d3120f6948"
     },
     {
       "name": "0009_nullable_practice_level",
@@ -83,7 +91,8 @@
       "repository_git_blob_sha": "ede2e1c8e44042baf0dc5db86e58ed18ede664fb",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "7db9351f040db75eaaf9a14a051d2cd2386a16d0ca10f7709b90dd949962b926"
     },
     {
       "name": "0010_research_coverage_provenance",
@@ -91,7 +100,8 @@
       "repository_git_blob_sha": "bc23e9242ccda03613f94ff8a3aa6d5f3c143013",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "9754ca0c1f9f184ea669d634643530962b0a1f3fdd92b982bb3c7433129d1f7f"
     },
     {
       "name": "0011_external_participation_claims",
@@ -99,7 +109,8 @@
       "repository_git_blob_sha": "840e8d5de6e9909191f77585a9294b8f162382b6",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "6635ef407a623bae21abd68cf5ba3b1129f0dc79c46d2745f30a26857e3b2a74"
     },
     {
       "name": "0012_publish_map_geometry_land_clip",
@@ -107,7 +118,9 @@
       "repository_git_blob_sha": "b8becaf844ba57667eb4cd7525f2ae361ca7bea3",
       "supabase_platform_entry_count": 0,
       "platform_state": "missing",
-      "accepted_legacy_exception": "missing_schema_effect_verified_separately"
+      "accepted_legacy_exception": "missing_schema_effect_verified_separately",
+      "repository_sha256": "578e569c6b6b2353d26a558921e1b9cae7efc17e1b230ad092b9cc1095764355",
+      "live_effect_verification": "persistent neutral_land_mask table/PK/CHECK/GiST/valid row verified; view superseded later"
     },
     {
       "name": "0013_canonical_cartographic_land_fabric",
@@ -115,7 +128,9 @@
       "repository_git_blob_sha": "15d40eb8894a5a82b032128e1fdf834ed7c23a48",
       "supabase_platform_entry_count": 0,
       "platform_state": "missing",
-      "accepted_legacy_exception": "missing_schema_effect_verified_separately"
+      "accepted_legacy_exception": "missing_schema_effect_verified_separately",
+      "repository_sha256": "ee4f14f94f93e546fa4300128e6937527b134af0c66f23aad330125f066e68d8",
+      "live_effect_verification": "persistent land_fabric table/PK/CHECK/GiST/active index/valid active fabric verified; view superseded later"
     },
     {
       "name": "0014_cartography_land_fabric_created_at_default",
@@ -123,7 +138,9 @@
       "repository_git_blob_sha": "d88b512ca44dbc75e116f9cf086a7ba3e4c3af87",
       "supabase_platform_entry_count": 0,
       "platform_state": "missing",
-      "accepted_legacy_exception": "missing_schema_effect_verified_separately"
+      "accepted_legacy_exception": "missing_schema_effect_verified_separately",
+      "repository_sha256": "2f993fb3fdcb7bdb79e66662836a8d7f1360cc01b78dd58474db78482f1b7e91",
+      "live_effect_verification": "cartography.land_fabric.created_at default now() verified"
     },
     {
       "name": "0015_coastal_boundary_normalization",
@@ -131,7 +148,8 @@
       "repository_git_blob_sha": "63cc2047aa7105be583bc5515cde0f95cd33ce0f",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "1d90213a003f078f153f6af9298a0b85681273e1be1e6047338f8e139b273248"
     },
     {
       "name": "0016_restore_fast_map_geometry",
@@ -139,7 +157,8 @@
       "repository_git_blob_sha": "09e74a6dcd1b15469615797e6ba0246aa76e04c8",
       "supabase_platform_entry_count": 3,
       "platform_state": "duplicate",
-      "accepted_legacy_exception": "retry_history_preserved"
+      "accepted_legacy_exception": "retry_history_preserved",
+      "repository_sha256": "9df29485cf9e883ccccb2f2d51bb3c06aa3e60e9def2db2b5ab586dfc419a0ce"
     },
     {
       "name": "0017_precomputed_boundary_normalization",
@@ -147,7 +166,8 @@
       "repository_git_blob_sha": "e025e0885eb6863e93add369a840ff8fef48aa04",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "08b2bbbf885d7810aa2b75948cf4a6a3ceeabd331d9c50dbd25daa997a0bfe07"
     },
     {
       "name": "0018_refine_cliopatria_boundary_normalization",
@@ -155,7 +175,8 @@
       "repository_git_blob_sha": "d61408c1a29e9c3e7cfdec557fdf1d12baed904a",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "fca8c00c246e9e754c16e309c634e2078a3beae6bd14d515d80913bab1aad959"
     },
     {
       "name": "0019_adaptive_coastal_completion",
@@ -163,7 +184,8 @@
       "repository_git_blob_sha": "f47dd9bcd58ab7dae63791944cde6a437f9d0cf3",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "8228d71c253a9208f2d01e46b13c7aee08bedb0e79aca524f053d60675bf1b08"
     },
     {
       "name": "0020_hold_adaptive_completion",
@@ -171,7 +193,8 @@
       "repository_git_blob_sha": "c7e41662c1084bfdc2331face60047e31d619617",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "86fbc510b4283c6e49dd8cfde99db4f2172d28c2167ee6723039630b4e2801dc"
     },
     {
       "name": "0021_external_render_policy_fallback",
@@ -179,7 +202,8 @@
       "repository_git_blob_sha": "0d60f298c29ef0d3384d2243c9a1b465b4746fd2",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "34371b1f73827fc4e00e2b2c65cbdf91de9d1f39c8ef0f9c09047cda39f990af"
     },
     {
       "name": "0022_research_case_idempotency",
@@ -187,7 +211,8 @@
       "repository_git_blob_sha": "a5480775a69747a9f2232e866f27f8f218c14abc",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "3078c00156504dee654ee5134d6adee8cc492eb788d394468011ac2eab033ae0"
     },
     {
       "name": "0023_private_data_api_boundary",
@@ -195,7 +220,8 @@
       "repository_git_blob_sha": "207dce296612bef1ccd4945e393316f385bbef77",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "3dc00605cf672978815641de091ef63d2c121d256347baab9b05b4d7c3c5db35"
     },
     {
       "name": "0024_fix_make_year_range_search_path",
@@ -203,7 +229,8 @@
       "repository_git_blob_sha": "bff4c73f830376a10abbe78d39012637c1952a51",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "831b08f44e24fb4839b8b0ed08e6905490b41ffcc1397fe1b8d47b88c39548ee"
     },
     {
       "name": "0025_release_channel_pointer",
@@ -211,7 +238,8 @@
       "repository_git_blob_sha": "bcb556d983b7268e9e0088666594e1219ea1dacd",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "ee0de5396b9f6b963508a06908ce7ca608c604a8f7b9a658604a02bfc361308f"
     },
     {
       "name": "0026_reconstructible_release_membership",
@@ -219,7 +247,8 @@
       "repository_git_blob_sha": "e08ee7ae11aad81482f1921539a388f463f9003b",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "2ea8d37e5ef8b5b829b0370078160ec602b47426de0d1711db5bb5c781a39d93"
     },
     {
       "name": "0027_release_artifact_immutability",
@@ -227,7 +256,8 @@
       "repository_git_blob_sha": "5c18146293f2b3e3d910bcb5fdfdd1b635847a2b",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "2e1fb9e96512fbb7b2c28ee9cc81803813271470d1bdf84126ae0f048c05c15d"
     },
     {
       "name": "0028_claim_kind_integrity",
@@ -235,7 +265,8 @@
       "repository_git_blob_sha": "0e3b2b9d6a06c4c6d6de0d6bebea5afc829da37a",
       "supabase_platform_entry_count": 1,
       "platform_state": "present",
-      "accepted_legacy_exception": null
+      "accepted_legacy_exception": null,
+      "repository_sha256": "8cafd41427e9e34b4368c231f76e6e5471f215ec3e6100506a453df7ec501de4"
     },
     {
       "name": "0029_claim_kind_function_privileges",
@@ -243,7 +274,8 @@
       "repository_git_blob_sha": "b77fb9d66bc868df69b8023ce4ee316a3edd971b",
       "supabase_platform_entry_count": 2,
       "platform_state": "duplicate",
-      "accepted_legacy_exception": "retry_history_preserved"
+      "accepted_legacy_exception": "retry_history_preserved",
+      "repository_sha256": "95bb2143a8cd26f54a8cd08409d0d8f35dc847998e353019028b3dd2173bf4da"
     }
   ],
   "live_platform_entries": [
@@ -363,5 +395,7 @@
       "version": "20260923134428",
       "name": "0029_claim_kind_function_privileges"
     }
-  ]
+  ],
+  "sha256_inventory_complete": true,
+  "gate0_note": "Exact SHA-256 inventory added 2026-09-26. Repository checksum ledger remains absent live; no production bootstrap has been performed."
 }
