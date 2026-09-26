@@ -2,6 +2,11 @@ name: Freeze v0.8 Expansion Authority
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "release/selections/v0.8.0-freeze-request.json"
 
 permissions:
   contents: read
