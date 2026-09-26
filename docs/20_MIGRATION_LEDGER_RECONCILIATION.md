@@ -102,3 +102,46 @@ This is deliberately different from replaying historical migrations:
 
 The platform-history exception policy must therefore pass again **after** 0030 is
 recorded exactly once. Any absence or duplicate of 0030 blocks baseline seeding.
+
+## 2026-09-26 Gate 0 completion
+
+**Disposition:** `MIGRATION_HISTORY_RECONCILED`.
+
+Forward migration 0030 was merged through PR #302 after:
+- fast Python tests passed;
+- full clean-PostGIS migration run passed;
+- schema smoke, claim-kind, rollback fixtures, idempotency, private Data API,
+  release-channel, reconstructible-membership and full-state-bundle tests passed.
+
+0030 was then applied once to the live Supabase project.
+
+The live checksum ledger was seeded with SHA-256 values derived from the exact merged
+repository files 0001–0030.
+
+Post-seed verification:
+- ledger rows: 30;
+- checksum mismatches: 0;
+- unexpected/extra rows: 0;
+- all baseline rows carry `recording_method=verified_production_baseline`;
+- 0030 platform-history count: 1;
+- legacy 0012–0014 gaps remain preserved;
+- legacy 0016 count remains 3;
+- legacy 0029 count remains 2.
+
+No historical migration was replayed to create the baseline.
+
+Post-change historical/release invariants:
+- public channel remains `mvp-preview-ancient-v2`;
+- v0.6.1 workbook checksum remains exact;
+- `0.6.1-db-migration-candidate` remains draft/schema 0029;
+- claim/source counts unchanged;
+- release-membership counts unchanged;
+- claim-kind mismatches remain zero;
+- anon/authenticated retain zero internal-schema exposure;
+- Supabase security advisor returns zero current security lints.
+
+Durable machine-readable receipt:
+`reviews/db-canonicalization/gate0-reconciliation-result.json`.
+
+Gate 0 is complete. Gate 1 may now rebuild/reconcile the v0.6.1 DB candidate under the
+current exact release-membership/artifact contract.
