@@ -490,6 +490,7 @@ def build_package(
 def expected_files() -> set[str]:
     return {
         AUTHORITY_FILENAME,
+        CARTOGRAPHY_FILENAME,
         *GENERATED_DOCS,
         "manifest.json",
         "SHA256SUMS.txt",
