@@ -2974,3 +2974,47 @@ candidate/non-canonical.
 
 Gate 5 therefore passes without collapsing research authority, historical release
 identity and presentation state into one layer.
+
+
+## D-114 — Minor-release expansion authority is explicit predecessor union, never reviewed-row discovery
+**Date:** 2026-09-27  
+**Status:** accepted for Atlas Expansion 01 / v0.8.0 candidate construction
+
+**Context:** after v0.7.0 became canonical, sponsor-authorized historical intake reopened
+execution under D-096. The live research database contains reviewed legacy/prototype,
+post-M1, disputed and unpublished material that intentionally exceeds public release
+membership.
+
+A new release must therefore not be built from predicates such as
+`review_status='reviewed'`, `publication_status='published'`, source density, geometry
+availability, or "all rows currently in PostgreSQL".
+
+**Decision:** a minor historical expansion authority is frozen as:
+
+> exact immutable predecessor authority membership
+> + exact named reviewed claim additions
+> + exact named reviewed geometry additions
+> + deterministic source/spatial dependency closure for only those additions.
+
+Additional rules:
+
+1. predecessor objects must remain byte/semantically identical in the new authority;
+2. every added territorial-practice claim must have claim-level evidence;
+3. every added territorial-practice claim must have an explicitly selected reviewed
+   geometry record overlapping the claim interval; an `unresolved` geometry record is
+   valid evidence of unresolved cartography and must not be replaced by a fake polygon;
+4. geometry selection cannot strengthen historical classification;
+5. post-M1 claims must have `practice_level=NULL`; legacy P-levels survive only inside
+   immutable historical/pre-M1 lineage where already present;
+6. disputed claims are not pulled in merely because their spatial entity has reviewed
+   geometry;
+7. public publication/channel movement remains a separate release gate.
+
+For Atlas Expansion 01, the first v0.8.0 selection freezes v0.7.0 plus 18 added
+territorial-practice claims across 17 additional spatial entities, with 46 exact selected
+geometry records. The selection excludes the disputed Achaemenid slavery/servile
+interpretations and the disputed Zhengzhou slavery interpretation; the independently
+supported Zhengzhou captive-taking claim is selected separately.
+
+**No immediate release effect:** this decision freezes candidate-construction semantics.
+It does not make v0.8.0 canonical, publish any new claim, or move the public channel.
