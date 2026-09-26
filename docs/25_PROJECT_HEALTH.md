@@ -66,7 +66,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | R-010 | No repository license creates ambiguity if outside contribution/reuse begins | low / parked | Decide only when external contribution/distribution needs make it material. |
 | R-011 | Research/platform effort grows faster than demonstrated value over the strongest baseline | controlled by stop decision | H2 failed the pre-registered value threshold. D-063 stops active Atlas expansion; reopening requires new external evidence rather than more internal build-out. |
 
-### HC-029 — Gate-5 canonical public cutover — 2026-09-26
+### HC-031 — Gate-5 canonical public cutover — 2026-09-26
 
 Decision: **CUTOVER_PUBLIC_CHANNEL_TO_V070**.
 
