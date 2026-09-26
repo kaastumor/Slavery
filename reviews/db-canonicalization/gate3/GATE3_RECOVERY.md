@@ -37,8 +37,13 @@ Recovery procedure:
 4. refuse restore unless canonical/reviewed object tables are empty;
 5. restore frozen composite objects with stable IDs and original metadata;
 6. recompute every top-level composite object digest;
-7. recompute cartography and database-state digests;
-8. fail unless they match the frozen live Gate-3 proof exactly.
+7. require exact frozen object digests for the reviewed relational state;
+8. verify cartography using exact immutable source identity plus a production-captured
+   normalized geometry fingerprint and structural invariants.
+
+Raw EWKB remains recorded as a production implementation fingerprint. It is not used
+as a cross-engine recovery invariant because PostGIS/GEOS versions may serialize
+topologically equivalent unions differently.
 
 The restore tool does **not** claim to be a physical Supabase backup and does not
 preserve arbitrary mutable scratch/draft rows outside the frozen reviewed closure.
