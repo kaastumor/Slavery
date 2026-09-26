@@ -90,6 +90,7 @@ type ApiResponse = {
   release_version: string;
   schema_version: string;
   canonical: boolean;
+  serving_materialization_id?: string;
   data_boundary: string;
   date_model: string;
   cartography: CartographyFabric | null;
@@ -402,7 +403,7 @@ function renderOverview(year: number): void {
     <div class="panel-header">
       <div class="panel-kicker">Year overview</div>
       <h2>${formatYear(year)}</h2>
-      <div class="panel-subhead">Published territorial-practice evidence active in the selected year.</div>
+      <div class="panel-subhead">${release?.canonical ? "Canonical-release" : "Published preview"} territorial-practice evidence active in the selected year.</div>
     </div>
 
     <div class="panel-body">
@@ -661,6 +662,9 @@ async function boot(): Promise<void> {
     releaseBadge.classList.toggle("preview", !apiResponse.canonical);
     releaseBadge.title =
       `Schema ${apiResponse.schema_version} · ${apiResponse.data_boundary}` +
+      (apiResponse.serving_materialization_id
+        ? ` · serving adapter ${apiResponse.serving_materialization_id}`
+        : "") +
       (servingMode === "static_fallback" ? " · live API unavailable; showing deployed snapshot" : "");
 
     const years = places.flatMap((place) =>
