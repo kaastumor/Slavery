@@ -2,6 +2,7 @@
 
 **Updated:** 2026-09-26  
 **Role:** canonical execution queue only; assumptions/risks/value evidence live in `docs/25_PROJECT_HEALTH.md`  
+**Canonical research authority:** PostgreSQL/PostGIS, explicit governed membership under D-109  
 **Canonical historical data release:** `v0.6.1` (unchanged)  
 **Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
 **Published research candidate:** `exp06-candidate-v1` at `exp06-candidate.html` (non-canonical)
@@ -16,54 +17,80 @@ This file answers **what is justified to work on next**.
 **Gate 0:** **PASS — MIGRATION_HISTORY_RECONCILED**  
 **Gate 1:** **PASS — V061_DB_RECONCILED**  
 **Gate 2:** **PASS — V3_DB_RECONCILED**  
-**Current gate:** Gate 3 — PostgreSQL canonical-research authority proof  
+**Gate 3:** **PASS — PROMOTE_DB_CANONICAL_RESEARCH_STATE**  
+**Current gate:** Gate 4 — first DB-backed canonical historical release  
 **Canonical historical data release:** `v0.6.1` unchanged  
 **Frozen reviewed input:** `post-r1-cumulative-review-v3-cross-frame`  
-**WIP:** #313 — full-state release reconstruction and DB authority proof
+**WIP:** #319 — first DB-backed canonical release
 
-## Gate 2 closeout
+## Gate 3 closeout
 
-Live PostgreSQL now contains the frozen v3 research package losslessly:
+D-109 makes PostgreSQL/PostGIS authoritative for the project's explicitly governed
+current research closure.
 
-- 26 research targets/results;
-- 21 internally admitted evidence states;
-- 5 HOLD states;
-- 166 target-source relations;
-- 164 unique exact source versions;
-- 0 target→historical-claim bridges from the Gate-2 import;
-- 0 target spatial links invented;
-- 0 independent reviews;
-- exact frozen-payload round trip: PASS;
-- representative idempotent rerun: PASS;
-- v0.6.1 regression: PASS;
+Frozen authority baseline `gate3-db-authority-proof-v1`:
+
+- schema head 0033;
+- 40 claims;
+- 11 actors;
+- 18 spatial entities;
+- 0 reviewed historical geometries;
+- 8 voyages;
+- 99 coverage assessments;
+- 211 exact source versions;
+- 26 research-target results;
+- membership SHA-256
+  `ebc9d32f09857744841a0cf92699c41739b624ac4bd94c43798eb1f61e3b0dd3`;
+- production database-state SHA-256
+  `31b7a7b675445e5758ffd68d64ff0f0cde83df1b0ea65f29835246deb2ae26ff`;
+- fresh-database logical recovery: PASS;
+- exact research-object digest reconstruction: PASS;
+- D-108 portable cartography fingerprint: PASS;
 - private Data API boundary: PASS;
-- claim-kind / Gate-2 schema / source-provenance regressions: PASS;
-- Supabase security advisor: 0 lints.
+- Supabase security advisor: 0 lints;
+- independent historical review: 0.
 
-Gate 2 changes research representation only. It does not publish or make the DB
-canonical.
+Authority is defined by explicit governed membership, not physical row presence or
+`review_status` alone. Legacy preview/prototype rows remain outside the Gate-3 authority
+closure unless explicitly admitted later.
 
-## Gate 3 exact question
+The Supabase Free plan does not provide verified managed backup/PITR evidence to the
+project's current management probe. Gate 3 proves preservation-grade logical recovery,
+not physical cluster backup or arbitrary draft-row recovery.
 
-Can the reconciled live database become the authoritative **research state** while
-preserving immutable releases as the citable historical snapshots?
+No canonical historical release or public channel moved in Gate 3.
 
-Required before authority flip:
+## Gate 4 exact question
 
-1. deterministic/stable IDs and idempotent re-ingestion;
-2. repository↔live schema/head agreement;
-3. preservation-grade full-state release reconstruction, broader than the current
-   territorial-preview bundle;
-4. exact release membership and object digests;
-5. draft/reviewed/published separation;
-6. backup/rollback/recovery proof;
-7. private Data API/security boundary;
-8. no unresolved blocking QC issue;
-9. reproducible successor package from DB state;
-10. explicit decision recording the authority flip.
+Can the project produce the first immutable DB-backed canonical historical release from
+the D-109 authority closure without weakening provenance, uncertainty, review state or
+release immutability?
 
-No UI/public cutover or canonical release follows until Gate 3 and Gate 4 separately
-pass.
+Provisional release version: **v0.7.0**, unless Gate-4 work discovers a
+compatibility-breaking ontology change.
+
+Required before publication:
+
+1. exact release membership derived from the governed DB authority boundary;
+2. predecessor v0.6.1 identity/checksum retained;
+3. reviewed v3 evidence and HOLD/inconclusive states preserved losslessly;
+4. schema/methodology/release-contract versions recorded;
+5. exact source/source-version information retained;
+6. changelog, QC summary and unresolved-issues list included;
+7. migration/reconciliation report included;
+8. deterministic manifest/checksums and independent rebuild verification;
+9. immutable published release artifacts;
+10. explicit review/publication states and truthful independent-review count;
+11. no legacy preview/prototype leakage through broad `review_status` selection;
+12. public release channel remains unchanged until Gate 5.
+
+Allowed Gate-4 disposition:
+
+- `PUBLISH_DB_BACKED_CANONICAL_RELEASE`;
+- `HOLD_RELEASE_CANDIDATE`;
+- `REWORK_RELEASE_BUILDER`.
+
+No UI/API cutover follows until Gate 4 separately passes.
 
 ## Discovery execution
 
@@ -111,15 +138,25 @@ their value. Reopen them only on a concrete trigger recorded in D-096.
 
 # PARKED / trigger-bound operational debt
 
-These remain trigger-bound and are not the default historical horizon.
+These remain trigger-bound and are not the default horizon.
 
 ## #43 — protected staging / release-promotion administration
 
-Remaining protected environment / staging work matters only if production mutation or a new public release is again justified.
+Remaining protected environment / staging work matters only when Gate 5/public
+promotion actually requires it.
 
-## #26 — live Supabase migration-history reconciliation
+## #26 — migration-history reconciliation
 
-The documented live history mismatch remains real. Reconcile it only before a future production migration/change requires that boundary.
+**Closed / historical.** Gate 0 passed `MIGRATION_HISTORY_RECONCILED`. Do not reopen the
+old mismatch as active work unless a new concrete migration-history inconsistency is
+observed.
+
+## Managed backup/PITR
+
+Current Supabase Free-plan recovery evidence is logical/preservation-grade rather than
+physical managed backup/PITR. Revisit if plan/capabilities change or operational
+durability becomes a release requirement; do not require a paid temporary branch merely
+for process ceremony.
 
 ## Repository administration
 
@@ -127,24 +164,27 @@ The documented live history mismatch remains real. Reconcile it only before a fu
 - historical remote topic branches remain;
 - current integration lacks some repository-admin capability.
 
-Handle when it materially blocks evidence work; do not turn administration into the research horizon.
+Handle when it materially blocks evidence/release work; do not turn administration into
+the project horizon.
 
 ---
 
 # Explicitly NOT the current horizon
 
-Do not let renewed historical research become platform drift. The next historical horizon does **not** authorize:
+Gate 4 does **not** authorize:
 
-- M2 production schema migration;
+- new historical subject research;
+- UI/API cutover;
 - frontend redesign;
-- PMTiles/vector-tile infrastructure;
+- PMTiles/vector-tile infrastructure expansion;
 - new search service;
 - graph database;
 - vector store/RAG infrastructure;
 - generic ontology/platform work;
 - contributor/peer-review platform;
 - new autonomous infrastructure for its own sake;
-- external recruitment/review (still deferred by sponsor);
-- automatic canonical/public release.
+- external recruitment/review;
+- automatic public-channel movement.
 
-The project should stay active through **bounded evidence work**, not through feature or infrastructure accumulation.
+The current priority is one bounded release task: prove or reject the first DB-backed
+canonical historical release.

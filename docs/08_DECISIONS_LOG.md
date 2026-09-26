@@ -2605,3 +2605,79 @@ while detecting material reconstructed-geometry drift.
 **No release effect:** PostgreSQL is not promoted by this decision alone; v0.6.1 remains
 canonical, the public channel remains unchanged, and independent historical review
 remains 0.
+
+
+## D-109 — Promote PostgreSQL as canonical current research authority
+**Date:** 2026-09-26  
+**Status:** accepted authority-cutover decision  
+**Disposition:** `PROMOTE_DB_CANONICAL_RESEARCH_STATE`
+
+**Evidence:** #300, #313, PR #316, PR #318, and
+`reviews/db-canonicalization/gate3/GATE3_AUTHORITY_REVIEW.md`.
+
+**Decision:** the reconciled PostgreSQL/PostGIS system becomes the authoritative
+**current research state** of the project at the explicit Gate-3 membership boundary.
+
+Canonical research authority is not inferred from physical row presence or from
+`review_status='reviewed'` alone. The authority baseline is the governed reviewed
+closure frozen as `gate3-db-authority-proof-v1`, with:
+
+- schema head `0033`;
+- 40 claims;
+- 11 actors;
+- 18 spatial entities;
+- 0 reviewed historical geometries;
+- 8 voyages;
+- 99 research-coverage assessments;
+- 211 exact source versions;
+- 26 research-target results;
+- membership SHA-256
+  `ebc9d32f09857744841a0cf92699c41739b624ac4bd94c43798eb1f61e3b0dd3`;
+- production database-state SHA-256
+  `31b7a7b675445e5758ffd68d64ff0f0cde83df1b0ea65f29835246deb2ae26ff`.
+
+Legacy preview/prototype rows that remain in the database are not silently admitted to
+this authority closure. Future research becomes authoritative only through the normal
+review/admission process and must remain distinguishable from draft or legacy material.
+
+### Recovery qualification
+
+The Supabase Free plan did not expose verifiable managed-backup/PITR inventory to the
+configured read-only management probe. The project therefore claims only the recovery
+evidence it actually proved:
+
+- migrations from zero;
+- exact reviewed research-object restoration;
+- exact stable membership/object digests;
+- portable cartography recovery under D-108;
+- reconstruction into a fresh PostgreSQL/PostGIS database without mutable draft-table
+  dependency.
+
+This is preservation-grade logical recovery, not a claim of physical Supabase backup,
+PITR, restoration of arbitrary scratch rows, or a guaranteed operational RTO/RPO.
+
+### Rollback rule
+
+If canonical-research integrity becomes doubtful:
+
+1. stop admitting new canonical membership;
+2. keep the last immutable historical release untouched;
+3. reconstruct the latest frozen reviewed closure into a fresh migrated database;
+4. verify exact research-object digests and the D-108 cartography fingerprint;
+5. restore research authority only after verification passes.
+
+A research-authority rollback never moves the public release channel by itself.
+
+### Release/public effect
+
+None yet.
+
+- canonical historical release remains `v0.6.1`;
+- public preview remains `mvp-preview-ancient-v2`;
+- independent historical review remains 0;
+- no UI/API cutover occurs;
+- no new P-level, geometry or historical inference is created by the authority flip.
+
+Gate 4 is now authorized: assemble and adversarially validate the first DB-backed
+canonical historical release, provisionally `v0.7.0` unless Gate-4 work discovers a
+compatibility-breaking ontology change.
