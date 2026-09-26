@@ -20,7 +20,15 @@ BEGIN
         ('audit.ingest_run'),
         ('audit.research_coverage_assessment'),
         ('audit.research_coverage_source'),
-        ('atlas.external_participation_claim')
+        ('atlas.external_participation_claim'),
+        ('atlas.claim_asserted_interval'),
+        ('atlas.claim_evidence_locus'),
+        ('atlas.claim_inference_extent'),
+        ('audit.research_target'),
+        ('audit.research_target_result'),
+        ('audit.research_target_review'),
+        ('audit.research_target_source'),
+        ('audit.research_target_claim')
     ) AS required(name)
     WHERE to_regclass(name) IS NULL;
 
