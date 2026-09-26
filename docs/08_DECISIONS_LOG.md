@@ -2035,3 +2035,63 @@ Reopen for:
 **No effect:** canonical v0.6.1, frozen R1 state, P-levels, historical-practice
 geometry, ontology/schema, production database/API and frontend remain unchanged.
 
+## D-099 — Reviewed post-v2 delta remains separate until integration changes a real decision
+**Date:** 2026-09-26  
+**Status:** accepted internal review/release decision
+
+**Evidence:** #278, reviewing exactly two subject-research rows completed after
+`post-r1-cumulative-review-v2-overnight` with frozen existing evidence only:
+
+- `R1:P:1300:D:r1` — Grand Duchy of Lithuania — 1300 CE;
+- `R1:N:karnak_amun_m1000` — Temple of Amun at Karnak — 1000 BCE.
+
+**Row decisions:**
+- Lithuania 1300 — `ACCEPT_INTERNAL_REVIEW`;
+- Karnak 1000 BCE — `ACCEPT_INTERNAL_REVIEW`.
+
+Lithuania's accepted state remains a bounded positive for an unfree
+household/slavery category in at least part of the grand-ducal court/domain economy
+around the anchor. It does not establish exact-year statutory precision, universal
+captive-to-slave conversion, ordinary dues as slavery, polity-wide prevalence, later
+serfdom at 1300 or practice geometry.
+
+Karnak's accepted state remains **researched-inconclusive** for Temple-of-Amun human
+slave/unfree labour around 1000 BCE. Earlier New Kingdom Amun/Karnak captive/enslaved
+labour and near-anchor Amun-linked subordinate/service/property context remain
+supported, but no unsupported temporal, terminology, ethnicity or owner/locus bridge
+is promoted.
+
+**Source reconciliation:**
+- base v2 lineage: 133 source relations;
+- reviewed delta: 12 source relations (Lithuania 5; Karnak 7);
+- missing source-version refs: 0;
+- missing independence groups: 0;
+- missing claim-fitness fields: 0;
+- exact source-version overlap between delta and v2: 0;
+- exact Lithuania/Karnak cross-target source-version overlap: 0;
+- the two pre-existing v2 cross-target exact-version dependencies remain unchanged.
+
+**Candidate gate:** `KEEP_REVIEWED_DELTA_SEPARATE`.
+
+A new immutable candidate is not a rolling mirror of every internally reviewed row.
+Create a successor package only when cumulative packaging changes a real decision or
+workflow, such as:
+1. a concrete publication/downstream consumer need;
+2. a later coherent reviewed batch for which cumulative packaging materially improves
+   use/reconciliation;
+3. a source/dependency conflict requiring cumulative replay;
+4. an explicit canonical/release evaluation.
+
+There is **no fixed row-count threshold**. Two rows are not rejected as “too few”; the
+gate is decision/release value.
+
+The reviewed delta is durable and may be integrated later **without repeating subject
+research**, subject to whatever cumulative reconciliation/review is then appropriate.
+
+**Publication boundary:** internal review only; independent historical review remains
+zero.
+
+**No effect:** v2 candidate files remain immutable; canonical v0.6.1, R1 reviewed
+state, P-levels, historical-practice geometry, schema/ontology, database/API/frontend
+and public release state remain unchanged.
+
