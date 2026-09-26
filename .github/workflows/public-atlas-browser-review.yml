@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "web/scripts/run_public_atlas_browser_review.mjs"
+      - "web/scripts/run_v070_stage_browser_review.mjs"
       - "web/src/main.ts"
       - ".github/workflows/public-atlas-browser-review.yml"
   workflow_dispatch:
@@ -14,7 +15,7 @@ permissions:
 jobs:
   live-browser-review:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
 
     steps:
       - uses: actions/checkout@v4
@@ -48,6 +49,74 @@ jobs:
             https://kaastumor.github.io/Slavery/ \
             /tmp/public-atlas-review/fallback \
             --force-api-failure
+
+      - name: Verify immutable v0.7.0 stage API
+        shell: bash
+        env:
+          STAGE_API_URL: https://dilnayfllygkplsdymel.supabase.co/functions/v1/atlas-data-v070-stage
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/public-atlas-review/stage
+          curl --fail --show-error --silent --max-time 20 \
+            -D /tmp/public-atlas-review/stage/api-headers.txt \
+            "$STAGE_API_URL" \
+            -o /tmp/public-atlas-review/stage/atlas-data.json
+          python3 - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          path=Path("/tmp/public-atlas-review/stage/atlas-data.json")
+          body=path.read_bytes()
+          payload=json.loads(body)
+          digest=hashlib.sha256(body).hexdigest()
+          assert digest == "2a04787a2ee0e42a97f273621eebbf32ddc6a1b2e903239a626eb41d72c29786", digest
+          assert payload["release_version"] == "v0.7.0"
+          assert payload["serving_materialization_id"] == "v0.7.0-public-mvp-v1"
+          assert payload["canonical"] is True
+          assert payload["display_scope"] == "territorial_practice_only"
+          assert len(payload["places"]) == 16
+          assert sum(len(p["claims"]) for p in payload["places"]) == 18
+          assert all(p["geometries"] == [] for p in payload["places"])
+          dims=payload["release_dimensions"]
+          assert dims["research_stage_counts"] == {"researched_internal":21,"under_review":5}
+          assert dims["researched_inconclusive_count"] == 6
+          assert dims["independent_historical_reviews"] == 0
+          assert dims["reviewed_historical_geometry_count"] == 0
+          print(json.dumps({"payload_sha256":digest,"place_count":16,"claim_count":18},indent=2))
+          PY
+          grep -qi '^x-atlas-materialization: v0.7.0-public-mvp-v1' \
+            /tmp/public-atlas-review/stage/api-headers.txt
+          grep -qi '^x-atlas-stage: true' \
+            /tmp/public-atlas-review/stage/api-headers.txt
+
+      - name: Build web against v0.7.0 stage API
+        working-directory: web
+        shell: bash
+        env:
+          VITE_ATLAS_API_URL: https://dilnayfllygkplsdymel.supabase.co/functions/v1/atlas-data-v070-stage
+        run: npm run build
+
+      - name: Review v0.7.0 staged browser
+        working-directory: web
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run preview -- --host 127.0.0.1 --port 4173 >/tmp/v070-vite.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          ok=0
+          for attempt in {1..20}; do
+            if curl --fail --silent --max-time 3 http://127.0.0.1:4173/ >/dev/null; then
+              ok=1
+              break
+            fi
+            sleep 1
+          done
+          test "$ok" -eq 1
+          node scripts/run_v070_stage_browser_review.mjs \
+            http://127.0.0.1:4173/ \
+            /tmp/public-atlas-review/stage/browser
 
       - name: Upload live browser evidence
         if: always()
