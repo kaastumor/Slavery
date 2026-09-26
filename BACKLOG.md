@@ -10,44 +10,42 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — REVIEW / RELEASE
+# CURRENT MODE — OVERNIGHT CONTROLLED EXECUTION
 
-**Active issue:** #288 — post-D099 Sápmi/Tōdai delta review  
-**Reviewed delta:** EXP-12 Sápmi 1600 + EXP-13 Tōdai-ji 800  
-**Immutable base candidate:** `post-r1-cumulative-review-v2-overnight`  
-**Earlier reviewed delta:** Lithuania 1300 + Karnak 1000 BCE (D-099; separate)  
+**Controller issue:** #291 — close EXP-10 programme and reconcile post-v2 evidence  
+**Immediate dependency:** #290 — EXP-14 Trans-Saharan 1300 bounded subject research  
 **Canonical historical data release:** `v0.6.1` unchanged  
-**WIP:** 1
+**WIP:** one overnight controller programme; stages are serialized by exact issue markers
 
-No new historical/source research is authorized inside this review.
+The programme has eight goal-linked stages and is designed for one scheduled controller
+task running eight hourly occurrences.
 
-Current branch review result:
-- Sápmi 1600 — `ACCEPT_INTERNAL_REVIEW`;
-- Tōdai-ji 800 — `ACCEPT_INTERNAL_REVIEW`;
-- source reconciliation — `RECONCILIATION_PASS`;
-- 15 new source relations;
-- 0 missing source-version / independence-group / claim-fitness fields;
-- 0 exact source-version overlap with v2;
-- 0 exact overlap with the Lithuania/Karnak reviewed delta;
-- 0 exact Sápmi ↔ Tōdai source-version overlap.
+Progress is determined only by the lowest missing exact marker on issue #291:
+`NIGHT_STAGE_1_COMPLETE` through `NIGHT_STAGE_8_COMPLETE`.
 
-Packaging gate:
-**`KEEP_REVIEWED_DELTA_SEPARATE`**.
+Recovery rules:
+- every run re-reads GitHub `main`, #291 comments, open PRs/issues and relevant branches;
+- resume unfinished work rather than creating duplicate branches/PRs;
+- a run may complete multiple contiguous stages to recover from a missed occurrence;
+- do not skip a stage merely to match the nominal run number;
+- final occurrence must leave a truthful handoff even if programme completion fails.
 
-This is a positive internal-review result, not a canonical/public release.
+Actions budget:
+- normally <=3 coherent PR/CI cycles for the whole programme;
+- research/review text must use the cheap CI path and must not trigger PostGIS;
+- inspect pending CI once plus at most one bounded follow-up;
+- never rerun unchanged successful jobs.
 
-D-099 remains sufficient: no successor candidate is created merely because another
-pair of rows passed review. v2 and the earlier reviewed delta remain immutable.
+Programme goal:
+1. finish EXP-14 Trans-Saharan 1300;
+2. close the EXP-10-derived cross-frame programme;
+3. reconcile/review the five post-v2 subject rows;
+4. apply D-099 packaging discipline;
+5. select/freeze the next justified D-096 horizon;
+6. leave a final QC + morning handoff.
 
-Next exact action: structural sanitation → one coherent PR → cheap scoped CI → merge →
-close #288 → return to D-096 mode selection.
-
-After closure, the Trans-Saharan trade network — 1300 is the only EXP-10-qualified row
-without subject research. That fact is a state description, not an automatic execution
-instruction.
-
-No P-level, practice geometry, R1 state mutation, schema/ontology/database/API/frontend
-change, canonical/public release or independent-review claim.
+No automatic canonical/public release, P-level, historical-practice geometry, R1 state,
+schema/ontology/database/API/frontend mutation or independent-review claim.
 
 ## Discovery execution
 
