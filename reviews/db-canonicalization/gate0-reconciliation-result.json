@@ -1,0 +1,92 @@
+{
+  "schema_version": "gate0-reconciliation-result-v1",
+  "completed_at": "2026-09-26",
+  "parent_issue": 300,
+  "prerequisite_issue": 26,
+  "supabase_project_ref": "dilnayfllygkplsdymel",
+  "repository_main_at_migration_apply": "34288a71973e67afb8174587e08638fc8ab9bcd6",
+  "disposition": "MIGRATION_HISTORY_RECONCILED",
+  "platform_history": {
+    "total_entries": 30,
+    "known_legacy_missing": [
+      "0012_publish_map_geometry_land_clip",
+      "0013_canonical_cartographic_land_fabric",
+      "0014_cartography_land_fabric_created_at_default"
+    ],
+    "known_retry_counts": {
+      "0016_restore_fast_map_geometry": 3,
+      "0029_claim_kind_function_privileges": 2
+    },
+    "0030_checksum_migration_ledger": 1,
+    "policy": "legacy gaps/retries preserved as audit evidence; no replay/deletion"
+  },
+  "checksum_ledger": {
+    "table": "atlas_meta.schema_migration",
+    "rows": 30,
+    "mismatches": 0,
+    "extras": 0,
+    "recording_method": "verified_production_baseline",
+    "checksums": {
+      "0001_bootstrap.sql": "e24e161d434318c738112f8c06eb65677a59c5def514e84f8db1a4ebfd522c2f",
+      "0002_vocabularies.sql": "e0b32dffa8eeeb14443ada0434d480d3d51404c05a72cf424231419308382197",
+      "0003_core_entities.sql": "c85c9126850cce3111cde894b4332ac6a65124eddda4fc59602ff8d9dc434e98",
+      "0004_claims_and_relations.sql": "4c214baa88c7422eb93dcc7d2c3b831adf6e3d1bd5a7966872e2311d71f97099",
+      "0005_voyage_network.sql": "cfe870f87b6c63a653396994bb62550870e6d497a2fda8b6313a6dd53fe87e3f",
+      "0006_ingest_audit_publish.sql": "756c60ed5f76691c81aa7f7e55e80b1e85a03e1293165a511c7d2a3b2da4008f",
+      "0007_v061_crosswalks.sql": "88172c175b8fb97e61f44e2c4c9a77e855319a2f6331802bb9bafccf3f77764e",
+      "0008_crosswalk_constraints.sql": "940a554cd05af39bc92bcfcc0550d6e771b0989ef0ac74fe9f48a0d3120f6948",
+      "0009_nullable_practice_level.sql": "7db9351f040db75eaaf9a14a051d2cd2386a16d0ca10f7709b90dd949962b926",
+      "0010_research_coverage_provenance.sql": "9754ca0c1f9f184ea669d634643530962b0a1f3fdd92b982bb3c7433129d1f7f",
+      "0011_external_participation_claims.sql": "6635ef407a623bae21abd68cf5ba3b1129f0dc79c46d2745f30a26857e3b2a74",
+      "0012_publish_map_geometry_land_clip.sql": "578e569c6b6b2353d26a558921e1b9cae7efc17e1b230ad092b9cc1095764355",
+      "0013_canonical_cartographic_land_fabric.sql": "ee4f14f94f93e546fa4300128e6937527b134af0c66f23aad330125f066e68d8",
+      "0014_cartography_land_fabric_created_at_default.sql": "2f993fb3fdcb7bdb79e66662836a8d7f1360cc01b78dd58474db78482f1b7e91",
+      "0015_coastal_boundary_normalization.sql": "1d90213a003f078f153f6af9298a0b85681273e1be1e6047338f8e139b273248",
+      "0016_restore_fast_map_geometry.sql": "9df29485cf9e883ccccb2f2d51bb3c06aa3e60e9def2db2b5ab586dfc419a0ce",
+      "0017_precomputed_boundary_normalization.sql": "08b2bbbf885d7810aa2b75948cf4a6a3ceeabd331d9c50dbd25daa997a0bfe07",
+      "0018_refine_cliopatria_boundary_normalization.sql": "fca8c00c246e9e754c16e309c634e2078a3beae6bd14d515d80913bab1aad959",
+      "0019_adaptive_coastal_completion.sql": "8228d71c253a9208f2d01e46b13c7aee08bedb0e79aca524f053d60675bf1b08",
+      "0020_hold_adaptive_completion.sql": "86fbc510b4283c6e49dd8cfde99db4f2172d28c2167ee6723039630b4e2801dc",
+      "0021_external_render_policy_fallback.sql": "34371b1f73827fc4e00e2b2c65cbdf91de9d1f39c8ef0f9c09047cda39f990af",
+      "0022_research_case_idempotency.sql": "3078c00156504dee654ee5134d6adee8cc492eb788d394468011ac2eab033ae0",
+      "0023_private_data_api_boundary.sql": "3dc00605cf672978815641de091ef63d2c121d256347baab9b05b4d7c3c5db35",
+      "0024_fix_make_year_range_search_path.sql": "831b08f44e24fb4839b8b0ed08e6905490b41ffcc1397fe1b8d47b88c39548ee",
+      "0025_release_channel_pointer.sql": "ee0de5396b9f6b963508a06908ce7ca608c604a8f7b9a658604a02bfc361308f",
+      "0026_reconstructible_release_membership.sql": "2ea8d37e5ef8b5b829b0370078160ec602b47426de0d1711db5bb5c781a39d93",
+      "0027_release_artifact_immutability.sql": "2e1fb9e96512fbb7b2c28ee9cc81803813271470d1bdf84126ae0f048c05c15d",
+      "0028_claim_kind_integrity.sql": "8cafd41427e9e34b4368c231f76e6e5471f215ec3e6100506a453df7ec501de4",
+      "0029_claim_kind_function_privileges.sql": "95bb2143a8cd26f54a8cd08409d0d8f35dc847998e353019028b3dd2173bf4da",
+      "0030_checksum_migration_ledger.sql": "fc5e8b3606ee3df87b9cc115fb242f7f70eb97bf516db9f2dbffded952cd041d"
+    }
+  },
+  "post_change_regression": {
+    "public_channel": "mvp-preview-ancient-v2",
+    "release_membership_counts": {
+      "claims": 42,
+      "spatial_entities": 35,
+      "geometries": 73,
+      "source_versions": 62
+    },
+    "canonical_workbook_sha256": "0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4",
+    "v061_db_candidate_status": "draft",
+    "v061_db_candidate_schema_version": "0029",
+    "claim_count": 60,
+    "source_version_count": 111,
+    "territorial_claim_kind_mismatches": 0,
+    "external_claim_kind_mismatches": 0,
+    "anon_authenticated_internal_table_grants": 0,
+    "exposed_internal_schemas_to_anon_authenticated": 0,
+    "security_advisor_lints": 0,
+    "sentinel_objects": {
+      "neutral_land_mask": true,
+      "land_fabric": true,
+      "land_fabric_created_at_default": true,
+      "release_claim_table": true,
+      "release_artifact_table": true,
+      "checksum_ledger": true
+    }
+  },
+  "release_effect": "none",
+  "canonical_release": "v0.6.1",
+  "next_gate": "Gate 1 — rebuild/reconcile v0.6.1 candidate into current exact release-membership/artifact contract"
+}
