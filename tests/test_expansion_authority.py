@@ -10,7 +10,7 @@ MODULE = importlib.util.module_from_spec(SPEC)
 assert SPEC.loader is not None
 SPEC.loader.exec_module(MODULE)
 
-SELECTION = ROOT / "release" / "selections" / "v0.8.0-expansion-01.json"
+SELECTION = ROOT / "release" / "selections" / "v0.8.0-expansion-02.json"
 PREDECESSOR = ROOT / "data" / "releases" / "v0.7.0" / "authority-state.json"
 
 
@@ -22,11 +22,30 @@ class ExpansionAuthorityTests(unittest.TestCase):
             additions["post_m1_claim_ids"]
         )
         excluded = set(selection["exclusions"]["disputed_claim_ids"])
-        self.assertEqual(len(selected), 18)
-        self.assertEqual(len(additions["approved_geometry_ids"]), 46)
+        self.assertEqual(len(selected), 19)
+        self.assertEqual(len(additions["approved_geometry_ids"]), 47)
         self.assertTrue(selected.isdisjoint(excluded))
         self.assertTrue(selection["rules"]["explicit_membership_only"])
         self.assertTrue(selection["rules"]["reviewed_row_discovery_forbidden"])
+
+    def test_final_selection_adds_todaiji_without_mutating_first_freeze(self) -> None:
+        selection = MODULE.load_selection(SELECTION)
+        additions = selection["additions"]
+        self.assertIn(
+            "687bed4f-281e-4821-bc23-1e75cb65dd99",
+            additions["post_m1_claim_ids"],
+        )
+        self.assertIn(
+            "4ea5165a-9bd2-4883-9cdd-4910aa491dc7",
+            additions["approved_geometry_ids"],
+        )
+        self.assertEqual(
+            selection["supersedes_selection"],
+            "release/selections/v0.8.0-expansion-01.json",
+        )
+        self.assertEqual(selection["expected_counts"]["candidate_claims"], 59)
+        self.assertEqual(selection["expected_counts"]["candidate_spatial_entities"], 36)
+        self.assertEqual(selection["expected_counts"]["candidate_geometries"], 47)
 
     def test_predecessor_identity_is_exact_v070_authority(self) -> None:
         selection = MODULE.load_selection(SELECTION)
