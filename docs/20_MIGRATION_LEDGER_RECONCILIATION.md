@@ -85,3 +85,20 @@ The frozen before-state is recorded in
 `reviews/db-canonicalization/gate0-migration-matrix.json`.
 
 No production schema/data or release membership is changed by documenting this policy.
+
+### Forward bootstrap migration 0030
+
+Gate 0 uses one ordinary forward migration, `0030_checksum_migration_ledger.sql`, to
+create the checksum-ledger structure in production.
+
+This is deliberately different from replaying historical migrations:
+
+- 0030 creates only `atlas_meta.schema_migration` and its provenance columns;
+- it does not execute or imitate the schema/data effects of 0001–0029;
+- after 0030 is live, the separately verified checksum baseline for 0001–0030 is
+  inserted as operational metadata;
+- the frozen `0.6.1-db-migration-candidate` remains a schema-0029 historical input;
+  its manifest is not rewritten merely because the operational schema gains 0030.
+
+The platform-history exception policy must therefore pass again **after** 0030 is
+recorded exactly once. Any absence or duplicate of 0030 blocks baseline seeding.
