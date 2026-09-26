@@ -33,7 +33,7 @@ from full_state_release_bundle import (
 )
 
 
-SELECTION_SCHEMA = "historical-slavery-atlas-expansion-selection-v1"
+SELECTION_SCHEMAS = {"historical-slavery-atlas-expansion-selection-v1", "historical-slavery-atlas-expansion-selection-v2"}
 PURPOSE = "canonical_research_state_proof"
 
 
@@ -54,27 +54,32 @@ def sorted_unique(values) -> list[str]:
 
 def load_selection(path: Path) -> dict[str, Any]:
     data = load_json(path)
-    if data.get("selection_schema") != SELECTION_SCHEMA:
+    if data.get("selection_schema") not in SELECTION_SCHEMAS:
         raise ExpansionError("unsupported expansion selection schema")
     pred = data.get("predecessor")
     additions = data.get("additions")
     if not isinstance(pred, dict) or not isinstance(additions, dict):
         raise ExpansionError("selection predecessor/additions are required")
-    for key in (
+    required_keys = [
         "direct_recovery_claim_ids",
         "post_m1_claim_ids",
         "approved_geometry_ids",
-    ):
+    ]
+    if data.get("selection_schema") == "historical-slavery-atlas-expansion-selection-v2":
+        required_keys.append("reviewed_state_claim_ids")
+    for key in required_keys:
         values = additions.get(key)
         if not isinstance(values, list) or values != sorted(set(values)):
             raise ExpansionError(f"additions.{key} must be sorted and unique")
     direct = set(additions["direct_recovery_claim_ids"])
     post_m1 = set(additions["post_m1_claim_ids"])
-    if direct & post_m1:
-        raise ExpansionError("direct-recovery and post-M1 claim IDs overlap")
-    excluded = set((data.get("exclusions") or {}).get("disputed_claim_ids", []))
-    if excluded & (direct | post_m1):
-        raise ExpansionError("explicitly excluded disputed claims are selected")
+    reviewed_state = set(additions.get("reviewed_state_claim_ids", []))
+    if direct & post_m1 or direct & reviewed_state or post_m1 & reviewed_state:
+        raise ExpansionError("expansion claim categories overlap")
+    if data.get("selection_schema") == "historical-slavery-atlas-expansion-selection-v1":
+        excluded = set((data.get("exclusions") or {}).get("disputed_claim_ids", []))
+        if excluded & (direct | post_m1):
+            raise ExpansionError("explicitly excluded disputed claims are selected")
     return data
 
 
@@ -103,7 +108,8 @@ def derive_addition_closure(
     additions = selection["additions"]
     direct = additions["direct_recovery_claim_ids"]
     post_m1 = additions["post_m1_claim_ids"]
-    claim_ids = sorted_unique([*direct, *post_m1])
+    reviewed_state = additions.get("reviewed_state_claim_ids", [])
+    claim_ids = sorted_unique([*direct, *post_m1, *reviewed_state])
     geometry_ids = additions["approved_geometry_ids"]
 
     rows = _rows(
@@ -131,6 +137,7 @@ def derive_addition_closure(
         )
 
     post_m1_set = set(post_m1)
+    reviewed_state_set = set(reviewed_state)
     spatial_ids: set[str] = set()
     for claim_id, review, kind, spatial_id, practice_level, classification, has_source in rows:
         claim_id = str(claim_id)
@@ -146,6 +153,13 @@ def derive_addition_closure(
             raise ExpansionError(
                 f"{claim_id}: direct-recovery classification_status={classification!r}"
             )
+        if claim_id in reviewed_state_set and classification not in {
+            "disputed",
+            "reviewed_with_date_dispute",
+        }:
+            raise ExpansionError(
+                f"{claim_id}: reviewed-state classification_status={classification!r}"
+            )
         spatial_ids.add(str(spatial_id))
 
     geometry_rows = _rows(
@@ -153,7 +167,8 @@ def derive_addition_closure(
         """
         select g.geometry_id::text,g.spatial_entity_id::text,
                g.review_status::text,g.accuracy_status::text,
-               g.geometry_source_version_id::text
+               g.geometry_source_version_id::text,
+               g.geom is not null as is_resolved
         from atlas.geometry g
         where g.geometry_id=any(%s::uuid[])
         order by g.geometry_id
@@ -166,41 +181,72 @@ def derive_addition_closure(
             "selected geometries missing from database: "
             + ", ".join(sorted(set(geometry_ids) - found))
         )
-    for geometry_id, spatial_id, review, _accuracy, _source_version_id in geometry_rows:
+    for geometry_id, spatial_id, review, _accuracy, _source_version_id, is_resolved in geometry_rows:
         if review != "reviewed":
             raise ExpansionError(f"{geometry_id}: geometry is not reviewed")
+        if not is_resolved:
+            raise ExpansionError(f"{geometry_id}: selected geometry is unresolved")
         if str(spatial_id) not in spatial_ids:
             raise ExpansionError(
                 f"{geometry_id}: geometry belongs outside selected added entities"
             )
 
-    uncovered = _rows(
-        cur,
-        """
-        select c.claim_id::text
-        from atlas.claim c
-        join atlas.territorial_practice_claim tp using(claim_id)
-        where c.claim_id=any(%s::uuid[])
-          and not exists (
-            select 1 from atlas.geometry g
-            where g.geometry_id=any(%s::uuid[])
-              and g.spatial_entity_id=tp.spatial_entity_id
-              and g.review_status='reviewed'
-              and (
-                g.valid_years is null
-                or c.valid_years is null
-                or g.valid_years && c.valid_years
+    if selection.get("selection_schema") == "historical-slavery-atlas-expansion-selection-v1":
+        uncovered = _rows(
+            cur,
+            """
+            select c.claim_id::text
+            from atlas.claim c
+            join atlas.territorial_practice_claim tp using(claim_id)
+            where c.claim_id=any(%s::uuid[])
+              and not exists (
+                select 1 from atlas.geometry g
+                where g.geometry_id=any(%s::uuid[])
+                  and g.spatial_entity_id=tp.spatial_entity_id
+                  and g.review_status='reviewed'
+                  and (
+                    g.valid_years is null
+                    or c.valid_years is null
+                    or g.valid_years && c.valid_years
+                  )
               )
-          )
-        order by c.claim_id
-        """,
-        (claim_ids, geometry_ids),
-    )
-    if uncovered:
-        raise ExpansionError(
-            "selected claims lack an overlapping selected reviewed geometry: "
-            + ", ".join(str(row[0]) for row in uncovered)
+            order by c.claim_id
+            """,
+            (claim_ids, geometry_ids),
         )
+        if uncovered:
+            raise ExpansionError(
+                "selected claims lack an overlapping selected reviewed geometry: "
+                + ", ".join(str(row[0]) for row in uncovered)
+            )
+    else:
+        orphan_geometries = _rows(
+            cur,
+            """
+            select g.geometry_id::text
+            from atlas.geometry g
+            where g.geometry_id=any(%s::uuid[])
+              and not exists (
+                select 1
+                from atlas.claim c
+                join atlas.territorial_practice_claim tp using(claim_id)
+                where c.claim_id=any(%s::uuid[])
+                  and tp.spatial_entity_id=g.spatial_entity_id
+                  and (
+                    g.valid_years is null
+                    or c.valid_years is null
+                    or g.valid_years && c.valid_years
+                  )
+              )
+            order by g.geometry_id
+            """,
+            (geometry_ids, claim_ids),
+        )
+        if orphan_geometries:
+            raise ExpansionError(
+                "selected geometries lack an overlapping selected claim: "
+                + ", ".join(str(row[0]) for row in orphan_geometries)
+            )
 
     source_rows = _rows(
         cur,
@@ -306,11 +352,14 @@ def build_authority(
         ),
         "qc_summary": (
             "Explicit selected claims/geometries only; predecessor objects preserved; "
-            "post-M1 P-level assignment rejected; reviewed geometry overlap required."
+            "post-M1 P-level assignment rejected; claim completeness and geometry "
+            "completeness remain independent; selected geometries are reviewed, resolved "
+            "and overlap at least one selected claim."
         ),
         "unresolved_issues": (
-            "Independent historical review remains 0. R2 disputed claims remain excluded. "
-            "Candidate is not yet canonical or public."
+            "Independent historical review remains 0. Reviewed disputed/date-disputed "
+            "states remain explicit rather than being normalized away. Unreconciled "
+            "legacy prototype rows remain excluded. Candidate is not yet canonical or public."
         ),
     }
     state = {
