@@ -367,6 +367,7 @@ Suggested fields:
 - `independence_group`
 - `directness`
 - `supports_or_challenges`
+- `claim_fitness` — claim-specific source fitness/limitation; source quality is not global
 - `locator`
 - `notes`
 
@@ -399,6 +400,64 @@ Optional source-native row/object preservation for bulk datasets.
 - `checksum` where useful
 
 Raw values are not silently overwritten by normalized interpretations.
+
+
+## 6A. Research target and result layer
+
+A **research target** is a project research framing object, not a historical claim and
+not automatically a spatial entity. This distinction is necessary for aggregate,
+network, community, institution and other frames that can yield compound or
+inconclusive results.
+
+### RESEARCH_TARGET
+
+Stable target identity and framing:
+
+- `target_key` — stable repository/research identifier;
+- target label and raw anchor label;
+- normalized anchor year where safely resolved;
+- frame class;
+- optional normalized `spatial_entity_id`;
+- origin and review state.
+
+### RESEARCH_TARGET_RESULT
+
+Versioned result for one research target.
+
+It preserves bounded proposition, required abstention, temporal/status/category
+mapping notes, language/access limitations and unresolved geometry. A result may be
+`researched_inconclusive` or HOLD without creating any positive historical claim.
+
+### RESEARCH_TARGET_REVIEW
+
+A separate review event records:
+- internal vs independent review;
+- candidate/release context;
+- disposition;
+- admitted/not admitted;
+- review reason;
+- failure guards;
+- dependency/scope notes.
+
+Internal review and independent review must never be conflated.
+
+### RESEARCH_TARGET_SOURCE
+
+Links a reviewed target result to exact `SOURCE_VERSION` rows even when there is no
+positive historical claim. This preserves source-version identity, independence group,
+claim fitness, direction/role and locator without falsely asserting that the source
+supports a historical claim.
+
+### RESEARCH_TARGET_CLAIM
+
+Zero-to-many bridge from one target result to historical `CLAIM` rows.
+
+This allows compound results such as:
+- one supported external/network claim plus an unresolved internal dimension;
+- one bounded event/process claim plus a separate legal claim;
+- no positive claim for a researched-inconclusive/HOLD result.
+
+Do not force one research case into one claim merely for ingestion convenience.
 
 ## 7. Voyage / participation network
 
