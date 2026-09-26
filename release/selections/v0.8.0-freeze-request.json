@@ -1,0 +1,10 @@
+{
+  "request_schema": "historical-slavery-atlas-expansion-authority-freeze-request-v1",
+  "candidate_release_version": "v0.8.0",
+  "selection": "release/selections/v0.8.0-expansion-01.json",
+  "predecessor_authority": "data/releases/v0.7.0/authority-state.json",
+  "issue": 332,
+  "apply": false,
+  "requested_at": "2026-09-27",
+  "purpose": "One-shot read-only production authority freeze after D-114 selection and CI."
+}
