@@ -38,12 +38,13 @@ Recovery procedure:
 5. restore frozen composite objects with stable IDs and original metadata;
 6. recompute every top-level composite object digest;
 7. require exact frozen object digests for the reviewed relational state;
-8. verify cartography using exact immutable source identity plus a production-captured
-   normalized geometry fingerprint and structural invariants.
+8. verify cartography using exact immutable source identity, SRID, validity and
+   non-emptiness; record the rebuilt runtime EWKB fingerprint separately.
 
-Raw EWKB remains recorded as a production implementation fingerprint. It is not used
-as a cross-engine recovery invariant because PostGIS/GEOS versions may serialize
-topologically equivalent unions differently.
+Raw EWKB remains recorded as the production implementation fingerprint from the frozen
+live proof. It is deliberately not used as a cross-engine recovery invariant because
+the first fresh-database run demonstrated that different PostGIS/GEOS runtimes can
+serialize the same pinned-source land fabric to different EWKB bytes.
 
 The restore tool does **not** claim to be a physical Supabase backup and does not
 preserve arbitrary mutable scratch/draft rows outside the frozen reviewed closure.
@@ -64,9 +65,12 @@ not represented as existing today.
 ## Success criterion
 
 \`GATE3_LOGICAL_RECOVERY_PASS\` requires a fresh-database CI restore whose:
-- object digests exactly match the frozen live bundle;
-- cartography digest exactly matches D-107;
-- database-state SHA-256 equals
+- reviewed research-object digests exactly match the frozen live bundle;
+- cartography source commit/blob/content identity and SRID match exactly;
+- rebuilt cartography is valid and non-empty, while its runtime EWKB fingerprint is
+  reported separately from the frozen production EWKB fingerprint;
+- the logical database-state SHA-256, using the frozen cartography identity after the
+  source-equivalence check, equals
   \`31b7a7b675445e5758ffd68d64ff0f0cde83df1b0ea65f29835246deb2ae26ff\`.
 
 No production state, canonical release, public channel or UI is changed by this proof.
