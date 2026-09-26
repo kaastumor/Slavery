@@ -52,20 +52,27 @@ A missing claim must never be rendered as a historical negative.
 
 ## Canonical current state
 
-- Current canonical **data** release: `Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx`
-- Global research baseline: v0.5.0
-- All 99 broad region-period cells received at least one targeted first-pass research review.
-- Atlantic bulk ingestion was deliberately held back until this global first-pass baseline existed.
-- PostgreSQL + PostGIS is now the working normalized research system, using repository migrations through `0029`.
-- The canonical v0.6.1 workbook remains preserved and has not been overwritten.
-- The repository contains a real MapLibre web MVP and a release-gated API.
-- `mvp-preview-ancient-v2` is an explicitly **non-canonical** public preview used to validate the end-to-end product path.
-- New manual research enters the normalized relational model directly and remains unpublished until it passes review and publication gates.
-- Research batches may expand reviewed database content without automatically changing the public preview or canonical data release.
-- R1 completed with **HOLD_NO_RELEASE**; its repaired candidate remains a frozen internal reference rather than a public/canonical promotion.
-- EXP-02 showed that the frozen R1 safety/reconstructibility contract survives in a portable package manifest + flat target/source tables + optional Markdown packets.
-- That portable form is an architectural/release-boundary result, **not** a canonical schema migration.
-- Current priority and mode are owned only by root `BACKLOG.md`. D-096 replaces experiment-only continuation with discovery / execution / consolidation / review-release / maintenance mode selection. EXP-08 is complete 4/4; the sponsor-authorized overnight queue produced the non-canonical `post-r1-cumulative-review-v2-overnight` candidate, and the current bounded execution state is owned by `BACKLOG.md`.
+- Current canonical **historical data release:** `v0.7.0`, preserved in
+  `data/releases/v0.7.0/` under D-110.
+- Canonical **current research authority:** the explicitly governed PostgreSQL/PostGIS
+  closure under D-109; physical row presence or `review_status` alone does not confer
+  authority.
+- Repository/live schema head for that authority is `0033`.
+- The v0.6.1 workbook remains the immutable canonical predecessor and source-native
+  lineage anchor:
+  `Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx`, SHA-256
+  `0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4`.
+- v0.7.0 freezes 40 claims, 11 actors, 18 spatial entities, 0 reviewed historical
+  evidence geometries, 8 voyages, 99 coverage assessments, 211 source versions and
+  26 research-target results.
+- Independent historical review remains **0**.
+- `mvp-preview-ancient-v2` remains the **non-canonical public serving preview** until
+  Gate 5 / #323 separately passes; publishing v0.7.0 did not move that channel.
+- The repository contains the MapLibre web MVP and release-gated API, but public
+  services must consume reviewed/published release materializations rather than
+  unrestricted research tables.
+- Global research baseline and older R1/EXP/COV results remain preserved as historical
+  project evidence. Current priority and mode are owned only by root `BACKLOG.md`.
 
 ## Active-continuity rule
 

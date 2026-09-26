@@ -2,7 +2,7 @@
 
 Public repository preserving the Historical Slavery Atlas's global, time-aware historical-evidence methodology, research/release artifacts, adversarial fixtures and experimental atlas/query work for slavery and related coerced-labour/dependency systems.
 
-The repository is the canonical source of truth for project implementation, methodology and operating state. The immutable historical data baseline remains the external v0.6.1 workbook until a deliberately validated successor release is created.
+The repository is the canonical source of truth for project implementation, methodology and operating state. PostgreSQL/PostGIS is the governed current research authority under D-109, while immutable release packages own citable historical release identity. The current canonical historical release is v0.7.0; v0.6.1 remains its immutable predecessor.
 
 ## Start here
 
@@ -25,19 +25,23 @@ For the **current priority and mode**, read repository-root `BACKLOG.md`; this R
 does not own the next action.
 
 Durable state:
-- canonical historical data release: `v0.6.1` unchanged;
-- best-supported project form: **portable reviewed evidence core + replaceable Atlas/map/table/API views**;
-- R1 closed with `HOLD_NO_RELEASE`; later EXP artifacts remain non-canonical research evidence;
-- EXP-08 is paused after 3/4 frozen cases; Qi — 500 BCE remains frozen/unstarted;
-- DISC-06 rejected a permanent inference-ledger layer;
-- DISC-07 added the joint chronology × broad-frame-family QA rule (D-094);
-- DISC-08 permits only narrow/optional Frictionless reuse; the Atlas manifest remains authoritative (D-095);
-- D-096 changes continuation from automatic successor experiments to mode-level selection and requires cross-batch consolidation/review-capacity control before sustained scaling;
-- cross-batch consolidation reconciles 41 unique R1/EXP-04/06/07/08 targets;
-- #259 cumulative internal replay is complete: 12 rows accepted, 5 held, yielding internal non-canonical candidate `post-r1-cumulative-review-v1`;
-- next mode is **maintenance / trigger-bound review** rather than automatic publication or new intake;
-- DISC-09 is parked, not rejected.
-
+- canonical current research authority: explicit D-109 PostgreSQL/PostGIS membership
+  closure;
+- canonical historical data release: **`v0.7.0`** under D-110;
+- immutable canonical predecessor: `v0.6.1` workbook and exact checksum lineage;
+- v0.7.0 preserves 40 claims / 11 actors / 18 spatial entities / 0 reviewed historical
+  evidence geometries / 8 voyages / 99 coverage assessments / 211 exact source
+  versions / 26 research-target results;
+- independent historical review remains **0**;
+- the public UI/API has **not** moved with the release: `public_mvp_preview` still
+  points to `mvp-preview-ancient-v2`;
+- Gate 5 / #323 is the active priority: stage and verify an exact v0.7.0-derived serving
+  materialization, prove rollback, and only then decide whether to move the public
+  release channel;
+- best-supported project form remains **portable reviewed evidence core + governed
+  database research authority + immutable release packages + replaceable
+  Atlas/map/table/API views**;
+- D-096 continues to govern mode-level continuation and WIP=1.
 
 ## Repository boundary
 
@@ -45,7 +49,7 @@ This repository is **public**. It stores code, migrations, tests, public-safe re
 
 Do not commit secrets, the canonical workbook binary, restricted/copyrighted source assets, private source material or sensitive living-person material/derivatives. See `SECURITY.md`.
 
-The exact canonical v0.6.1 workbook is identified by:
+The exact immutable v0.6.1 predecessor workbook is identified by:
 
 `Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx`
 

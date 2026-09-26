@@ -2681,3 +2681,101 @@ None yet.
 Gate 4 is now authorized: assemble and adversarially validate the first DB-backed
 canonical historical release, provisionally `v0.7.0` unless Gate-4 work discovers a
 compatibility-breaking ontology change.
+
+
+## D-110 — Publish the first DB-backed canonical historical release v0.7.0
+**Date:** 2026-09-26  
+**Status:** accepted Gate-4 release decision  
+**Disposition:** `PUBLISH_DB_BACKED_CANONICAL_RELEASE`
+
+**Evidence:** #319, PR #321, PR #322, `data/releases/v0.7.0/`, and
+`reviews/db-canonicalization/gate4/GATE4_RELEASE_REVIEW.md`.
+
+**Decision:** `v0.7.0` becomes the canonical historical data release.
+
+The release is derived from the exact D-109 governed research-authority closure. Release
+membership is not rediscovered from physical database rows, `review_status`, publication
+flags or any other broad mutable predicate.
+
+### Frozen release identity
+
+The canonical package records:
+
+- schema head `0033`;
+- 40 claims;
+- 11 actors;
+- 18 spatial entities;
+- 0 reviewed historical evidence geometries;
+- 8 voyages;
+- 99 research-coverage assessments;
+- 211 exact source versions;
+- 26 research-target results;
+- membership SHA-256
+  `ebc9d32f09857744841a0cf92699c41739b624ac4bd94c43798eb1f61e3b0dd3`;
+- D-109 production database-state SHA-256
+  `31b7a7b675445e5758ffd68d64ff0f0cde83df1b0ea65f29835246deb2ae26ff`;
+- authority-bundle SHA-256
+  `e26bc9243c71226e6107162d15c44a0fa13d063ed7708bb12627e4ee8f13c54b`;
+- release-manifest SHA-256
+  `f65964221cbe2045d75303a5940c75f4526e9110a2b2cf323a9d0979e2f5e57a`;
+- `SHA256SUMS.txt` SHA-256
+  `16f6ecfcafbf145441066ff8db9a5dd2c258b857a692f2de7847e65f25879c0d`;
+- exact D-108 portable cartography fingerprint as a release artifact.
+
+The release package also carries its changelog, QC summary, unresolved-issues list and
+migration/reconciliation report.
+
+### Evidence/review truth
+
+The frozen research-target layer retains:
+- 21 `researched_internal` target states;
+- 5 `under_review` target states;
+- 6 research outcomes whose recorded result is explicitly inconclusive;
+- independent historical review count = **0**.
+
+The release preserves separate claim families rather than collapsing them:
+- 18 territorial-practice claims;
+- 12 voyage-owner claims;
+- 6 actor-attribute claims;
+- 3 external-participation claims;
+- 1 legal-event claim.
+
+HOLD, under-review, researched-inconclusive and unresolved geometry remain non-absence.
+No P-level, prevalence, nationality, political identity or historical geometry is
+inferred by publication.
+
+### Live publication proof
+
+Before publication, all eight D-109 object families and the production cartography
+snapshot were reconstructed from live PostgreSQL and compared to the frozen authority
+bundle; all matched exactly.
+
+The publication transaction then:
+- registered the exact canonical manifest as `published`;
+- inserted exact typed membership with frozen per-object digests;
+- registered 9 exact package files as `canonical_release_file` artifacts;
+- pinned repository artifact locators to package commit
+  `1cc7c227de9559a4659058d38327befdfdec6b5b`;
+- left all 40 authority claims' `publication_status` values unchanged;
+- left `public_mvp_preview` pointing to `mvp-preview-ancient-v2`.
+
+Post-commit no-op mutation probes confirmed that published membership and artifact rows
+are protected by the existing immutability guards. The Supabase security advisor
+reported zero lints.
+
+### Predecessor and recovery boundary
+
+The v0.6.1 workbook remains the immutable canonical predecessor with SHA-256
+`0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4`.
+Its source-native lineage is not replaced by the v0.7.0 authority-state copy.
+
+D-109/D-108 preservation-grade logical recovery remains the proved recovery guarantee.
+This release does not introduce or claim physical Supabase backup/PITR evidence.
+
+### Public effect
+
+Canonical historical release identity changes from `v0.6.1` to `v0.7.0`, but the
+public serving channel does **not** move in Gate 4.
+
+Gate 5 / #323 is separately authorized to stage, test and—only after its own acceptance
+gate—move the public UI/API release channel to an exact v0.7.0-derived materialization.

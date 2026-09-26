@@ -4,55 +4,76 @@ For current priority and mode, use repository-root `BACKLOG.md`. This file is a 
 state snapshot only and does **not** schedule work. GitHub `main`, open issues/PRs and
 current CI override this snapshot.
 
-**Status date:** 2026-09-25  
-**Canonical historical data release:** v0.6.1 (unchanged)  
-**Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Execution state:** **BOUNDED HISTORICAL EXECUTION — current priority/mode is owned by `BACKLOG.md`**
+**Status date:** 2026-09-26  
+**Canonical current research authority:** PostgreSQL/PostGIS, explicit D-109 governed closure  
+**Canonical historical data release:** v0.7.0  
+**Immutable predecessor:** v0.6.1 workbook  
+**Current public preview/channel:** `mvp-preview-ancient-v2` (non-canonical; Gate 5 not yet passed)  
+**Execution state:** **REVIEW / RELEASE + PUBLIC CUTOVER — current priority/mode is owned by `BACKLOG.md`**
 
 ## Current durable state
 
-- historical safeguards/methodology remain unchanged;
-- D-096 changes only continuation/governance: choose the next mode, not automatically another experiment;
-- DISC-09 remains parked without a negative result;
-- EXP-08 is complete 4/4; Qi — 500 BCE was completed as researched-inconclusive for exact Qi territorial slavery/servitude;
-- #262 completed the sponsor-authorized four-target queue through reconciliation, internal review, successor-candidate integration and final QC;
-- latest cumulative internal candidate `post-r1-cumulative-review-v2-overnight` contains 21 members: 16 internally accepted bounded evidence states and 5 explicit HOLDs, with 0 independent historical reviews;
-- EXP-09 researches the remaining previously qualified untouched C1 target, Grand Duchy of Lithuania — 1300 CE; its bounded internal result is `BOUNDED_SUPPORTED` for unfree-household/slavery presence in grand-ducal court structures around the anchor, without polity-wide prevalence or later-serfdom back-projection;
-- exact current action is owned by `BACKLOG.md`.
+- D-109 makes PostgreSQL/PostGIS authoritative for the explicitly governed current
+  research closure, not for every physical row and not from `review_status` alone.
+- D-110 publishes `v0.7.0` as the first canonical historical release generated from
+  that DB-backed authority closure.
+- v0.7.0 freezes exactly 40 claims, 11 actors, 18 spatial entities, 0 reviewed historical
+  evidence geometries, 8 voyages, 99 research-coverage assessments, 211 exact source
+  versions and 26 research-target results.
+- Membership SHA-256:
+  `ebc9d32f09857744841a0cf92699c41739b624ac4bd94c43798eb1f61e3b0dd3`.
+- D-109 production DB-state SHA-256:
+  `31b7a7b675445e5758ffd68d64ff0f0cde83df1b0ea65f29835246deb2ae26ff`.
+- The v0.7.0 package is deterministic and carries exact authority state, exact D-108
+  portable cartography fingerprint, changelog, QC summary, unresolved issues,
+  migration/reconciliation report, manifest and checksums.
+- Published typed membership and package artifact records are immutable under existing
+  release guards.
+- The v0.6.1 workbook remains an immutable predecessor/source-native lineage anchor and
+  has not been overwritten.
+- Independent historical review remains 0.
+- Public serving has **not** moved: `public_mvp_preview` still points to
+  `mvp-preview-ancient-v2`, and Gate 4 deliberately left authority-claim
+  `publication_status` values unchanged.
+- Current WIP is Gate 5 / #323: stage and adversarially verify an exact v0.7.0-derived
+  public materialization, prove rollback, then decide whether to move the public
+  channel.
+- Exact current action is owned by `BACKLOG.md`.
 
-Recently completed:
-1. #229 / EXP-07 — **PASS WITH ONE HOLD**; 7 QUALIFIED_C1_READY, Kalabhra 500 CE held.
-2. #227–#228 / EXP-06 candidate gate — **PUBLISH_CANDIDATE**; non-canonical candidate only.
-3. #213 / EXP-04 — blind frontier tranche — completed.
-4. #211 / EXP-03 — **CORE REQUIRES EXTENSION**, accepted as D-089.
+## Recently completed
 
-Earlier durable milestones:
-- R1 — **HOLD_NO_RELEASE**.
-- #205 / EXP-02 — **PORTABLE CORE SURVIVES + SIMPLIFY CANDIDATE**.
-- #209 — project-form reassessment — **SIMPLIFY + PRESERVE ATLAS AS VIEW**.
+1. #319 / Gate 4 — **PUBLISH_DB_BACKED_CANONICAL_RELEASE**; canonical historical
+   release v0.7.0.
+2. #313 / Gate 3 — **PROMOTE_DB_CANONICAL_RESEARCH_STATE**; D-109.
+3. Gate 2 — **V3_DB_RECONCILED**; frozen v3 review state represented losslessly.
+4. Gate 1 — **V061_DB_RECONCILED**; canonical predecessor semantics/source-native
+   lineage reproduced.
+5. Gate 0 — **MIGRATION_HISTORY_RECONCILED**.
 
 Project form remains:
-- reviewed historical evidence core is portable;
-- PostgreSQL/PostGIS remains research/curation infrastructure;
-- immutable evidence packages are the preferred release/interchange boundary;
-- Atlas/map/table/API surfaces are replaceable presentation adapters;
-- v0.6.1 remains the canonical historical data release.
+
+> **portable reviewed evidence core + governed PostgreSQL/PostGIS research authority + immutable release packages + replaceable Atlas/map/table/API views**
+
+This preserves the earlier project-form finding while making the authority boundary
+explicit: database state owns governed current research; immutable packages own citable
+historical releases; public UI/API state changes only through a separate release-channel
+gate.
 
 Execution policy:
-- WIP remains 1 active priority;
+- WIP remains one active priority;
 - after a bounded item, choose the next justified mode under D-096;
-- discovery is not the automatic successor to completion;
-- accepted methods may become operational for a declared scope;
+- release publication and public serving remain separate gates;
+- accepted methods may become operational only within their declared scope;
 - review/reconciliation capacity constrains new intake;
 - elapsed time alone is not a stop rule;
-- no-work is valid when all useful modes are complete, unjustified or blocked.
+- no-work remains valid when useful modes are complete, unjustified or blocked.
 
 Deferred:
 - #200 external expert audit; no recruitment/contact/participant execution.
 
-The sections below preserve earlier state snapshots and decisions. They are not
-current queue instructions; use `BACKLOG.md` and the active protocol/checkpoint
-above for scheduling.
+The sections below preserve earlier state snapshots and decisions. They are historical
+context, not current queue instructions; use `BACKLOG.md` and the active gate above for
+scheduling.
 
 ## Project form after EXP-02
 
