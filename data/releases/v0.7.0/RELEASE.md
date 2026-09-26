@@ -52,8 +52,9 @@ Gate 4 does not move the public UI/API release channel. It remains
 `mvp-preview-ancient-v2` until a separate Gate-5 cutover passes.
 
 `authority-state.json` is a byte-for-byte preservation copy of the reviewed Gate-3
-authority snapshot. It is historical/research evidence, not a signal that every member
-must be exposed by the current public UI.
+authority snapshot. `cartography-recovery-fingerprint.json` carries the exact D-108
+portable cartography reconstruction invariant. These are preservation evidence, not a
+signal that every member must be exposed by the current public UI.
 
 See `manifest.json`, `SHA256SUMS.txt`, the QC/unresolved-issues documents and the
 migration/reconciliation report for the complete release contract.
