@@ -190,7 +190,8 @@ BEGIN
 END $$;
 
 
-DO $
+
+DO $manifest_guard$
 DECLARE
     blocked boolean := false;
 BEGIN
@@ -215,7 +216,8 @@ BEGIN
     IF NOT blocked THEN
         RAISE EXCEPTION 'published release manifest metadata was mutable';
     END IF;
-END $;
+END
+$manifest_guard$;
 
 -- Archival is a lifecycle label only. It must not rewrite any historical metadata.
 UPDATE audit.release_manifest
@@ -223,7 +225,7 @@ SET status='archived'
 WHERE release_version='test-release-membership-0026'
   AND status='published';
 
-DO $
+DO $archived_guard$
 DECLARE
     blocked_update boolean := false;
     blocked_delete boolean := false;
@@ -258,7 +260,8 @@ BEGIN
     IF NOT blocked_delete THEN
         RAISE EXCEPTION 'archived release manifest was deletable';
     END IF;
-END $;
+END
+$archived_guard$;
 
 
 ROLLBACK;
