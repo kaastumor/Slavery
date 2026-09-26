@@ -13,7 +13,9 @@ from full_state_release_bundle import (  # noqa: E402
     BundleError,
     canonical_bytes,
     load_candidate,
+    sha256_file,
     sha256_value,
+    validate_bundle,
 )
 
 
@@ -82,6 +84,37 @@ class FullStateBundleV2Tests(unittest.TestCase):
 
     def test_bundle_schema_constant(self):
         self.assertEqual(BUNDLE_SCHEMA, "historical-slavery-atlas-full-state-bundle-v2")
+
+    def test_live_gate3_proof_bundle_lints_and_receipt_matches(self):
+        proof_dir = ROOT / "reviews" / "db-canonicalization" / "gate3"
+        candidate_path = proof_dir / "gate3-live-candidate.json"
+        bundle_path = proof_dir / "gate3-live-full-state-bundle.json"
+        receipt_path = proof_dir / "gate3-live-proof-receipt.json"
+
+        candidate = load_candidate(candidate_path)
+        bundle = json.loads(bundle_path.read_text(encoding="utf-8"))
+        receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+        validate_bundle(bundle)
+
+        self.assertEqual(bundle["candidate_sha256"], sha256_file(candidate_path))
+        self.assertEqual(receipt["candidate_sha256"], sha256_file(candidate_path))
+        self.assertEqual(receipt["bundle_sha256"], sha256_file(bundle_path))
+        self.assertEqual(receipt["membership_sha256"], candidate["membership_sha256"])
+        self.assertEqual(receipt["database_state_sha256"], bundle["database_state_sha256"])
+        self.assertEqual(receipt["cartography_sha256"], bundle["cartography_sha256"])
+
+        payload = bundle["cartography"]["payload"]
+        self.assertNotIn("geom_ewkb_hex", payload)
+        self.assertRegex(payload["geom_ewkb_sha256"], r"^[0-9a-f]{64}$")
+        self.assertGreater(payload["geom_ewkb_bytes"], 0)
+        self.assertEqual(receipt["cartography_identity"]["geom_ewkb_sha256"], payload["geom_ewkb_sha256"])
+        self.assertEqual(receipt["cartography_identity"]["content_sha256"], payload["content_sha256"])
+
+        expected_counts = {key: len(values) for key, values in candidate["membership"].items()}
+        self.assertEqual(receipt["counts"], expected_counts)
+        self.assertFalse(bundle["release"]["canonical"])
+        self.assertFalse(receipt["canonical"])
+        self.assertFalse(receipt["public_channel_moved"])
 
 
 if __name__ == "__main__":
