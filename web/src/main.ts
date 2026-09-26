@@ -252,7 +252,14 @@ function claimHtml(claim: Claim): string {
           : title;
         const details = [
           source.author_or_institution,
+          source.version_label,
           source.locator,
+        ].filter(Boolean).map((item) => escapeHtml(item)).join(" · ");
+        const provenance = [
+          source.source_version_id ? `Source version ${source.source_version_id}` : null,
+          source.source_type ? labelize(source.source_type) : null,
+          source.source_classification ? labelize(source.source_classification) : null,
+          source.independence_group ? `Source family ${source.independence_group}` : null,
         ].filter(Boolean).map((item) => escapeHtml(item)).join(" · ");
 
         return `
@@ -262,6 +269,7 @@ function claimHtml(claim: Claim): string {
               <div class="source-link">
                 ${link}
                 ${details ? `<div class="source-meta">${details}</div>` : ""}
+                ${provenance ? `<div class="source-meta">${provenance}</div>` : ""}
               </div>
             </div>
           </li>
