@@ -10,7 +10,7 @@ current CI override this snapshot.
 **Immutable predecessor:** v0.6.1 workbook  
 **Current public serving adapter:** `v0.7.0-public-mvp-v1` → canonical source `v0.7.0` under D-113  
 **Live schema head:** `0034`  
-**Execution state:** **CONSOLIDATION / POST-CUTOVER REVIEW — current priority/mode is owned by `BACKLOG.md`**
+**Execution state:** **MAINTENANCE / TRIGGER-BOUND — no active delivery WIP; current priority/mode is owned by `BACKLOG.md`**
 
 ## Current durable state
 
@@ -42,8 +42,11 @@ current CI override this snapshot.
   `2a04787a2ee0e42a97f273621eebbf32ddc6a1b2e903239a626eb41d72c29786`.
 - The public root now serves the canonical-release Atlas client; the previous R1
   technical candidate is preserved at `r1-candidate.html`.
-- The Gate-0→Gate-5 canonicalization programme is complete. Exact current action is
-  owned by `BACKLOG.md`.
+- The Gate-0→Gate-5 canonicalization programme is complete.
+- The post-cutover D-096 review found no justified automatic successor: #43 remains
+  parked, weekly public-health monitoring remains sufficient absent a demonstrated
+  user-critical SLA, and no new historical/product/infrastructure horizon is active.
+- Exact current action and reopening triggers are owned by `BACKLOG.md`.
 
 ## Recently completed
 
