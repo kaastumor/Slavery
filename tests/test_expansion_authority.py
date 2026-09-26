@@ -39,6 +39,25 @@ class ExpansionAuthorityTests(unittest.TestCase):
             "ebc9d32f09857744841a0cf92699c41739b624ac4bd94c43798eb1f61e3b0dd3",
         )
 
+    def test_management_sql_binding_is_literal_and_complete(self) -> None:
+        rendered = MODULE._bind_sql(
+            "select * from x where id=any(%s::uuid[]) and label=%s",
+            (["00000000-0000-0000-0000-000000000001"], "O'Reilly"),
+        )
+        self.assertNotIn("%s", rendered)
+        self.assertIn(
+            "ARRAY['00000000-0000-0000-0000-000000000001']::uuid[]",
+            rendered,
+        )
+        self.assertIn("'O''Reilly'", rendered)
+
+    def test_empty_uuid_array_binding_remains_typed(self) -> None:
+        rendered = MODULE._bind_sql(
+            "select * from x where id=any(%s::uuid[])",
+            ([],),
+        )
+        self.assertIn("ARRAY[]::uuid[]::uuid[]", rendered)
+
     def test_union_builder_preserves_nonexpanded_predecessor_dimensions(self) -> None:
         predecessor = json.loads(PREDECESSOR.read_text(encoding="utf-8"))
         membership = MODULE.build_membership(
