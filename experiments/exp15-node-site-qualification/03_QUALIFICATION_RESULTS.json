@@ -1,0 +1,50 @@
+{
+  "experiment": "EXP-15",
+  "issue": 297,
+  "stage": "qualification_complete",
+  "canonical_release": "v0.6.1",
+  "subject_research_performed": false,
+  "disposition": "PASS_THREE_QUALIFIED",
+  "counts": {
+    "QUALIFIED_C1_READY": 3,
+    "HOLD_IDENTITY_OR_TIME": 0,
+    "REJECT_FRAME_INVALID": 0,
+    "QUALIFICATION_INCONCLUSIVE": 0
+  },
+  "results": [
+    {
+      "target_id": "R1:N:samarkand_1400",
+      "target_label": "Samarkand",
+      "anchor": "1400 CE",
+      "frame": "node_site",
+      "outcome": "QUALIFIED_C1_READY",
+      "temporal_precision": "anchor_supported_timurid_capital_city",
+      "spatial_precision": "Timurid-period Samarkand urban node on the post-Mongol/new city site; not the whole Timurid realm and not ancient Afrasiab",
+      "rationale": "UNESCO identifies Samarkand's major 14th–15th-century Timurid development and distinguishes the medieval Timurid city south of ancient Afrasiab. Encyclopaedia Iranica states that Timur chose Samarkand as capital in 1371 and that major rebuilding resumed after 1396, directly spanning 1400.",
+      "limitation": "Future subject research must identify evidence within the Timurid city/node or clearly linked institutional loci. Do not use the Timurid realm, ancient Afrasiab, surrounding oasis, or modern World Heritage boundaries as practice extent."
+    },
+    {
+      "target_id": "R1:N:timbuktu_1500",
+      "target_label": "Timbuktu",
+      "anchor": "1500 CE",
+      "frame": "node_site",
+      "outcome": "QUALIFIED_C1_READY",
+      "temporal_precision": "anchor_supported_late_15th_early_16th_city",
+      "spatial_precision": "Timbuktu urban/commercial/intellectual node around the 1500 horizon; not Songhai territory and not the whole trans-Saharan network",
+      "rationale": "UNESCO places Timbuktu's economic and cultural apogee in the 15th and 16th centuries. Metropolitan Museum chronology places Timbuktu under Songhai control through the 1500 horizon and identifies its growth as an Islamic scholarly center under Askia Muhammad from 1493.",
+      "limitation": "Future subject research must remain city/node-specific. Songhai imperial evidence, caravan-route evidence, or Saharan-network evidence cannot substitute for Timbuktu urban practice unless the locus is explicit. Modern heritage/municipal boundaries are not historical practice geometry."
+    },
+    {
+      "target_id": "R1:N:tenochtitlan_1500",
+      "target_label": "Tenochtitlan",
+      "anchor": "1500 CE",
+      "frame": "node_site",
+      "outcome": "QUALIFIED_C1_READY",
+      "temporal_precision": "anchor_supported_pre_conquest_island_capital",
+      "spatial_precision": "pre-conquest island city/capital of Tenochtitlan in Lake Texcoco; not the full Triple Alliance/Aztec Empire and not modern Mexico City",
+      "rationale": "INAH identifies Tenochtitlan's foundation in 1325 and treats it as the Mexica capital. UNESCO describes the pre-Hispanic island city as the Aztec capital later destroyed and overlain by Mexico City. Metropolitan Museum chronology places a large urban Tenochtitlan-Tlatelolco population by ca.1490, directly bracketing 1500.",
+      "limitation": "Future subject research must distinguish city evidence from empire-wide tribute/political evidence and preserve Tenochtitlan/Tlatelolco specificity. Modern Historic Centre or Mexico City boundaries are not 1500 practice extent."
+    }
+  ],
+  "boundary_confirmation": "Qualification used identity, chronology, node-site frame and spatial-scope evidence only. No slavery/coercion evidence was selected, recorded or interpreted."
+}

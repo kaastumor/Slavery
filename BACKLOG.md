@@ -12,46 +12,35 @@ This file answers **what is justified to work on next**.
 
 # CURRENT MODE — EXECUTION
 
-**Active next issue:** #297 — EXP-15 neutral node-site C0 qualification tranche  
+**Active issue:** #297 — EXP-15 neutral node-site C0 qualification tranche  
 **Mode:** neutral identity / chronology / frame / spatial-scope qualification  
-**Frozen sample:** Samarkand 1400; Timbuktu 1500; Tenochtitlan 1500  
-**Latest internal candidate:** `post-r1-cumulative-review-v3-cross-frame`  
 **Canonical historical data release:** `v0.6.1` unchanged  
-**WIP:** #297 qualification only; subject slavery/coercion research not started
+**WIP:** #297 only
 
-## Completed campaign state
+Branch result: **PASS — THREE QUALIFIED**.
 
-#291's eight-stage correction campaign has completed its substantive work and final
-handoff is being merged.
+- Samarkand 1400 — `QUALIFIED_C1_READY`
+  - Timurid city/node;
+  - ancient Afrasiab, surrounding oasis and Timurid realm excluded.
+- Timbuktu 1500 — `QUALIFIED_C1_READY`
+  - urban/commercial/intellectual node;
+  - Songhai territory and the whole trans-Saharan network excluded.
+- Tenochtitlan 1500 — `QUALIFIED_C1_READY`
+  - pre-conquest island capital/city;
+  - Triple Alliance/Aztec territory and modern Mexico City excluded;
+  - Tlatelolco-linked evidence must remain explicit.
 
-Latest internally reviewed cumulative state:
-- candidate membership: 26;
-- accepted bounded evidence states: 21;
-- HOLD rows: 5;
-- source relations: 166;
-- exact cross-target source-version overlaps: 2;
-- independent historical reviews: 0.
+No slavery/coercion subject research was performed.
 
-EXP-10-derived subject programme is closed. EXP-14 Trans-Saharan 1300 is
-bounded-supported at the network-participation dimension.
+Next exact action:
+1. merge #297 after cheap research-text CI;
+2. close #297;
+3. return to D-096 mode selection;
+4. prefer **review/release** next: evaluate
+   `post-r1-cumulative-review-v3-cross-frame` for explicit canonical promotion before
+   opening another subject-research tranche.
 
-## Next exact action
-
-Execute #297 using the accepted neutral C0 qualification method.
-
-For each frozen node:
-- validate identity at the anchor;
-- validate temporal precision;
-- test `node_site` framing;
-- define maximum safe spatial object;
-- preserve mandatory limitations.
-
-Do **not** inspect/select evidence because it concerns slavery/coercion.
-
-Qualification does not authorize subject research automatically.
-
-No automatic P-level, practice geometry, R1 mutation, schema/ontology/database/API/
-frontend change, candidate integration, canonical release or public publication follows.
+EXP-15 itself does not authorize canonical/public release.
 
 ## Discovery execution
 
