@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 import sys
 import unittest
@@ -121,6 +122,35 @@ class V070PublicMaterializationTests(unittest.TestCase):
             }
             self.assertEqual(actual_source_versions, expected_source_versions)
             self.assertTrue(actual_source_versions <= allowed_source_versions)
+
+
+    def test_edge_function_embeds_exact_materialization_bytes(self) -> None:
+        payload_bytes = (MATERIALIZATION / "atlas-data.json").read_bytes()
+        module = (
+            ROOT / "supabase" / "functions" / "atlas-data" / "v070_payload.ts"
+        ).read_text(encoding="utf-8")
+        match = re.search(
+            r"export const V070_PAYLOAD = (.+);\\n?$",
+            module,
+            flags=re.DOTALL,
+        )
+        self.assertIsNotNone(match)
+        embedded = json.loads(match.group(1)).encode("utf-8")
+        self.assertEqual(embedded, payload_bytes)
+        self.assertIn(
+            'V070_PAYLOAD_SHA256 = "2a04787a2ee0e42a97f273621eebbf32ddc6a1b2e903239a626eb41d72c29786"',
+            module,
+        )
+
+    def test_production_function_keeps_channel_as_the_selector(self) -> None:
+        function = (
+            ROOT / "supabase" / "functions" / "atlas-data" / "index.ts"
+        ).read_text(encoding="utf-8")
+        self.assertIn("audit.release_channel", function)
+        self.assertIn("serving_materialization", function)
+        self.assertIn("V070_MATERIALIZATION_ID", function)
+        self.assertIn("V070_PAYLOAD", function)
+        self.assertNotIn("v0.7.0-public-mvp-v1'::", function)
 
 
 if __name__ == "__main__":
