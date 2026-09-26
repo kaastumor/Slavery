@@ -49,6 +49,28 @@ Allowed outcomes:
 `BOUNDED_SUPPORTED`, `RESEARCHED_INCONCLUSIVE`, or
 `HOLD_EVIDENCE_ACCESS_OR_SCOPE`.
 
+Current branch result: **BOUNDED_SUPPORTED — state-imposed coercive extraction;
+internal Sámi slavery unresolved**.
+
+Supported near the anchor:
+- overlapping state taxation and jurisdictional pressure;
+- Swedish punishment-backed tax-allegiance/trade enforcement;
+- bounded 1589 capture/displacement in an eastern borderland context.
+
+Not promoted:
+- taxation = slavery;
+- Crown employment = forced labour;
+- capture = enslavement;
+- internal Sámi slaveholding;
+- later seventeenth-century mining corvée at 1600;
+- Sápmi-wide uniformity or practice geometry.
+
+Internal adversarial replay passed with those dimensional limits.
+
+Next exact action: one coherent PR + normal scoped CI → merge → close #285 → return to
+the D-096 mode-selection boundary. Tōdai-ji 800 and Trans-Saharan 1300 remain
+qualified but unresearched.
+
 No P-level, practice geometry, R1 reviewed-state mutation, schema/ontology change,
 database/API/frontend work, canonical mutation, candidate integration or automatic
 publication.
