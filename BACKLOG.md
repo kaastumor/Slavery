@@ -12,18 +12,40 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — MAINTENANCE / TRIGGER-BOUND — NO ACTIVE DELIVERY WIP
+# CURRENT MODE — EXECUTION / CONSOLIDATION — ATLAS EXPANSION 01 (#332)
 
 **Gate 0→5 canonicalization programme:** **COMPLETE**  
 **Canonical historical data release:** `v0.7.0`  
 **Live schema head:** `0034`  
 **Public serving adapter:** `v0.7.0-public-mvp-v1`  
 **Independent historical review:** 0  
-**Open delivery WIP:** none
+**Open delivery WIP:** **#332 — balanced claim intake + defensible mapped loci**
 
-## D-096 post-cutover mode review
+## Sponsor-authorized D-096 reopening trigger
 
-The post-cutover whole-project review finds **no justified automatic successor**.
+On 2026-09-26 the sponsor explicitly authorized historical intake to begin filling the
+Atlas in both claims and mapped coverage. This activates D-096 mode
+**execution / consolidation**. It does not authorize automatic publication, P-level
+inference, indiscriminate geometry, or source-density-driven case selection.
+
+The active WIP has two inseparable safeguards:
+
+1. **Claim lane:** admit reviewed evidence packages only at their defensible temporal,
+   spatial and categorical scope. Start with already-reviewed weak-region research
+   before returning to source-dense Atlantic/Mediterranean defaults.
+2. **Geometry lane:** resolve geometry independently. Prefer exact/authoritative site
+   loci and genuinely defensible historical polygons; unresolved stays unresolved.
+   Geometry must never strengthen the historical claim.
+
+First checkpoint: formalize the reviewed `global_balance_04` weak-region cases as
+unpublished research claims, map at least one bounded locus (initially Songo Mnara),
+and prepare the next balanced intake tranche. Public v0.7.0 remains immutable until a
+separate review/release gate.
+
+## Previous D-096 post-cutover boundary
+
+The post-cutover whole-project review found **no justified automatic successor** before
+the sponsor-authorized intake trigger.
 
 Why:
 

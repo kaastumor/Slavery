@@ -1,0 +1,210 @@
+{
+  "schema": "atlas-expansion-recovery-inventory-v1",
+  "issue": 332,
+  "generated_from": "live PostgreSQL reviewed territorial-practice state, 2026-09-27",
+  "canonical_release": "v0.7.0",
+  "rules": {
+    "geometry_independent_of_claim": true,
+    "no_new_p_level_assignment": true,
+    "source_density_not_prevalence": true,
+    "missing_not_absence": true,
+    "public_release_unchanged": true
+  },
+  "tiers": {
+    "R0_direct_recovery": {
+      "description": "Reviewed published legacy claims with reviewed resolved geometry and ordinary reviewed classification. Eligible for release-candidate reconstruction subject to exact release-bundle QC; preserve legacy P only as historical compatibility metadata.",
+      "entities": [
+        {
+          "name": "Kanesh/Kültepe Old Assyrian colony",
+          "spatial_entity_id": "d86cdc82-26ed-4fe0-b1ab-7e902bafabdf",
+          "claim_ids": [
+            "7b467073-fd7f-4c58-b525-0b12c93cf8b4"
+          ],
+          "geometry_ids": [
+            "fada0ba1-143d-419a-bf84-896ce4c8538a"
+          ]
+        },
+        {
+          "name": "Hittite central Anatolia",
+          "spatial_entity_id": "f1b4d966-a605-459f-9d7b-8c33e75cbca3",
+          "claim_ids": [
+            "b9e7f3bf-8182-487c-a1d3-2648eb0f0975",
+            "da121ea7-b251-42ae-bdd1-c1393a6db632"
+          ],
+          "geometry_ids": [
+            "17a40ab9-195f-4298-bd54-0a5994743cfe",
+            "6ad53014-31f9-4076-9291-f6d161d34fce",
+            "7658b4b6-8456-4e0e-b545-02fdd9e2e844",
+            "9b32c6ca-d55d-4b7f-a4a0-46ee223fe2fc",
+            "e813d49c-b1a1-4bf4-9df2-0c14faca31f5"
+          ]
+        },
+        {
+          "name": "Neo-Babylonian Babylonia",
+          "spatial_entity_id": "dfc20c35-3467-484a-aa7d-95728f6b1b3a",
+          "claim_ids": [
+            "a65d95f3-9681-4001-8ae3-b8bad002465f"
+          ],
+          "geometry_ids": [
+            "62124dc0-f043-4c92-a463-e465d9fd6032",
+            "b5398faf-a447-4f67-a0c9-48c2cb2e33a9",
+            "cf8cc7b3-0eb8-4f65-8e3b-091eb88dd87c"
+          ]
+        },
+        {
+          "name": "Mauryan Empire",
+          "spatial_entity_id": "9b0b993d-02c9-4a3e-83b9-d3bf694fe303",
+          "claim_ids": [
+            "5ceb9d5c-9766-4663-a12b-d663186293dc"
+          ],
+          "geometry_ids": [
+            "0d285ce0-adbf-45e5-a727-b5446a9c169c",
+            "204d6af3-1f0b-463c-a4a9-28c0991623f8",
+            "655c8ee3-0eb6-4706-9980-b4e0712dba84",
+            "7dc611d1-4b29-4163-b723-0a597459d298",
+            "82b2f32f-de79-4a5a-98e0-56db15321588",
+            "93c03723-d03d-45fc-8611-a08a7506974f",
+            "958fa26b-0095-4448-9a64-4b27e44efd81"
+          ]
+        },
+        {
+          "name": "Qin Empire",
+          "spatial_entity_id": "90e94c09-0463-48d6-ad26-cd7bfacc724c",
+          "claim_ids": [
+            "1f865a88-6b27-4aa6-900f-813839856e6b"
+          ],
+          "geometry_ids": [
+            "0d0af02d-83bc-4f4e-a69d-d56d56326cd4",
+            "14edab60-6475-4699-978c-f51aaccd34d5",
+            "9abfabaa-3539-4c3e-95de-2e4452b2feb7",
+            "db0512e0-e13d-4bdd-bbcd-a68bb5f1a2c2"
+          ]
+        },
+        {
+          "name": "Western Han China",
+          "spatial_entity_id": "94c19677-c24a-4c9a-a717-d7a038a69920",
+          "claim_ids": [
+            "0fa340fd-b595-4c48-aee6-71e5e235212e"
+          ],
+          "geometry_ids": [
+            "102f2974-e240-4e23-bf91-256eee65a41d",
+            "26ccb13b-735a-43d2-b91d-dc829f124873",
+            "62dabec6-0cc5-4a9f-af7f-7a5caad1e009",
+            "81cb78c1-3b59-4c0a-b51f-f1c0d45bf866",
+            "970789fe-8b57-473d-ad82-778d441e3ae5",
+            "a00dc1d4-863d-4f85-b77f-a53a37f83b43",
+            "d1d6310e-ae50-4df4-9199-32781cfc5eb4",
+            "f739083b-53a7-4b97-aad6-b9ddaa5af490"
+          ]
+        },
+        {
+          "name": "Baekje",
+          "spatial_entity_id": "0ea143e3-cf01-42a0-836e-352d9354d2a4",
+          "claim_ids": [
+            "3b04340f-b830-48d1-9879-0f1b804e26c8"
+          ],
+          "geometry_ids": [
+            "e5a720f8-9e22-45fe-a5b0-c6464686525d"
+          ]
+        }
+      ]
+    },
+    "R1_prototype_reconcile": {
+      "description": "Mapped published prototype-era claims. Reconcile source/version/dependency and translate into current post-M1 claim semantics before admission.",
+      "entities": [
+        {
+          "name": "Old Babylonian Uruk",
+          "claim_ids": [
+            "6d4a714b-1899-440f-b8c2-7c2b8b1d2cc9"
+          ],
+          "geometry_ids": [
+            "b81dd8d2-3956-4060-856c-7ab2ca72fde7"
+          ]
+        },
+        {
+          "name": "New Kingdom Egypt",
+          "claim_ids": [
+            "7cd1da37-b2f8-4dba-b63b-9cffa6e19b65"
+          ],
+          "geometry_ids": [
+            "4803a371-1de6-47e2-8eaa-f0b24a079c66",
+            "4f2ab0fb-cbfc-4160-9fbf-1fcce188ab92",
+            "587b667e-7f1f-496f-a55e-13e1aabdedfa",
+            "a72ccfe2-6dd1-4f90-96ea-257ff2fbf958",
+            "d230ca36-be77-4699-b12e-77a491e58f35"
+          ]
+        },
+        {
+          "name": "Zhengzhou Shang City (Early Shang)",
+          "claim_ids": [
+            "b56b83a9-4a2b-4df6-8279-909089dc2227"
+          ],
+          "geometry_ids": [
+            "e8934935-2201-48d5-9308-63fa571ff860"
+          ]
+        },
+        {
+          "name": "Neo-Assyrian Nineveh",
+          "claim_ids": [
+            "e8d1cf12-725b-49db-8083-5a50389a1d86"
+          ],
+          "geometry_ids": [
+            "65f31d95-3e05-49f6-9f74-43f2a3717728"
+          ]
+        },
+        {
+          "name": "Classical Athens",
+          "claim_ids": [
+            "ae30281b-d7c3-4e89-be55-1471fa6bfa0f"
+          ],
+          "geometry_ids": [
+            "21c9c493-14f8-4c13-9845-0e8a738c9110"
+          ]
+        },
+        {
+          "name": "Roman Empire — early Principate",
+          "claim_ids": [
+            "ce2feb0a-917f-4bf1-9561-3d1f1f9887d4"
+          ],
+          "geometry_ids": [
+            "7beb33fa-c063-4a12-9511-2542028730f7",
+            "b7c31528-ff4c-49cf-a95b-c662afab4339",
+            "dce21f42-3e1a-4695-b036-4d20472a6ecb",
+            "edb239a8-4d54-44e4-970a-affb7c9af22e"
+          ]
+        }
+      ]
+    },
+    "R2_special_review": {
+      "description": "Mapped claims whose historical classification is explicitly disputed. Keep visible as disputed candidates only after dedicated review; geometry does not resolve the dispute.",
+      "entities": [
+        {
+          "name": "Achaemenid Persis/Elam royal economy",
+          "claim_ids": [
+            "cfd709dd-55ad-4f92-a6ec-f6c7910b3fe1",
+            "dda25043-a5a8-4564-8531-afb1f3f57722"
+          ],
+          "geometry_ids": [
+            "34ff5048-242f-48a3-8fb2-5eca4dcd9a54",
+            "f8a44a0b-f574-4c55-b5b1-b1e803f78543"
+          ]
+        },
+        {
+          "name": "Zhengzhou Shang City (Early Shang)",
+          "claim_ids": [
+            "896a3720-d871-495e-b23e-c24d7dde3039"
+          ],
+          "geometry_ids": [
+            "e8934935-2201-48d5-9308-63fa571ff860"
+          ]
+        }
+      ]
+    }
+  },
+  "staged_net_new_cases": [
+    "data/research/intake/atlas_expansion_01/01_funan_enslavement.json",
+    "data/research/intake/atlas_expansion_01/02_hawaii_kauwa_dependency.json",
+    "data/research/intake/atlas_expansion_01/03_late_classic_maya_captive_dependency.json",
+    "data/research/intake/atlas_expansion_01/04_songo_mnara_slavery.json"
+  ]
+}

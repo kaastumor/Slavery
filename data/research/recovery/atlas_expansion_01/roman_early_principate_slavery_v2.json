@@ -1,0 +1,103 @@
+{
+  "case_key": "atlas-expansion-01/roman-early-principate/slavery-v2",
+  "spatial_entity": {
+    "canonical_name": "Roman Empire — early Principate",
+    "display_name": "Roman Empire — early Principate",
+    "entity_type_code": "polity",
+    "from_year": 1,
+    "to_year": 22,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed spatial identity and its four independently reviewed Cliopatria time-slice geometries. Geometry describes political extent for navigation/context; it does not imply uniform slavery prevalence across every province."
+  },
+  "claim": {
+    "from_year": 1,
+    "to_year": 22,
+    "date_text_original": "early Principate, 1–22 CE atlas slice",
+    "temporal_precision": "bounded_release_slice",
+    "temporal_certainty": "high",
+    "spatial_precision": "imperial_polity_with_explicit_core_periphery_variation",
+    "summary": "Specialist scholarship treats Rome in the central Roman period and early Empire as a slave society in which slavery was structurally embedded in household, productive, commercial and elite-surplus relations. The strongest generalizations apply above all to Rome and the Italian core, while the institution existed to varying degrees across subject territories. The atlas therefore records a strong positive slavery/enslavement designation for the early-Principate polity slice without treating the whole imperial polygon as uniform in prevalence or assigning a new post-M1 P-level.",
+    "confidence": "high",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim ce2feb0a-917f-4bf1-9561-3d1f1f9887d4 into current post-M1 semantics. Legacy P4 is preserved only in historical release lineage and is not copied into this new research claim. Existing reviewed geometry IDs are frozen in data/research/recovery/atlas_expansion_01/recovery_inventory.json.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Positive institutional/structural classification. Do not infer one empire-wide prevalence level, demographic share or homogeneous labor regime from the political polygon. Italy/core evidence is especially strong; provincial variation is explicit in the specialist synthesis."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Slavery",
+        "author_or_institution": "Walter Scheidel",
+        "source_type": "book_chapter",
+        "source_classification": "secondary",
+        "geographic_scope": "Roman Empire, with particular emphasis on Italy/core and variation across subject territories",
+        "temporal_scope": "Roman central/imperial period",
+        "independence_notes": "Specialist economic synthesis. Same scholar as some Roman-demography literature; do not mechanically count related Scheidel publications as independent votes.",
+        "reliability_limitations": "Broad synthesis rather than a claim that every province had identical slave prevalence. The chapter itself emphasizes core/periphery variation."
+      },
+      "version": {
+        "version_label": "The Cambridge Companion to the Roman Economy (2012), chapter 5, pp. 89–113",
+        "publication_year": 2012,
+        "url_or_identifier": "https://doi.org/10.1017/CCO9781139030199.007",
+        "accessed_at": "2026-09-27T00:20:00Z"
+      },
+      "evidence_role": "specialist structural interpretation of Roman slavery",
+      "independence_group": "scheidel-roman-slavery-economic-synthesis",
+      "directness": "specialist synthesis",
+      "direction": "supports",
+      "locator": "chapter 5 summary and discussion of Rome as a slave society/slave economy, with strongest concentration in the Italian core"
+    },
+    {
+      "source": {
+        "title": "The slave society of Rome",
+        "author_or_institution": "Keith Bradley",
+        "source_type": "book_chapter",
+        "source_classification": "secondary",
+        "geographic_scope": "Rome and Roman society",
+        "temporal_scope": "central Roman period, roughly 200 BCE–200 CE",
+        "independence_notes": "Independent specialist monographic treatment from Scheidel's economic synthesis.",
+        "reliability_limitations": "Focuses Roman society and its institutional scale; not a province-by-province prevalence survey."
+      },
+      "version": {
+        "version_label": "Slavery and Society at Rome (Cambridge University Press, 1994), chapter 2, pp. 10–30",
+        "publication_year": 1994,
+        "url_or_identifier": "https://doi.org/10.1017/CBO9780511815386.003",
+        "accessed_at": "2026-09-27T00:20:00Z"
+      },
+      "evidence_role": "independent specialist interpretation of Rome as a slave society",
+      "independence_group": "bradley-slavery-society-at-rome",
+      "directness": "specialist monograph chapter",
+      "direction": "supports",
+      "locator": "chapter 2; Augustan manumission legislation and discussion of the scale/structure of slaveownership"
+    },
+    {
+      "source": {
+        "title": "Quantifying the Sources of Slaves in the Early Roman Empire",
+        "author_or_institution": "Walter Scheidel",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "geographic_scope": "Early Roman Empire",
+        "temporal_scope": "Principate",
+        "independence_notes": "Demographic analysis by the same scholar as the Cambridge economic synthesis; useful for early-Imperial temporal fit, not an independent historiographic vote.",
+        "reliability_limitations": "Demographic modelling cannot directly recover all regional distributions or precise slave totals."
+      },
+      "version": {
+        "version_label": "Journal of Roman Studies 87 (1997), pp. 156–169",
+        "publication_year": 1997,
+        "url_or_identifier": "https://doi.org/10.2307/301373",
+        "accessed_at": "2026-09-27T00:20:00Z"
+      },
+      "evidence_role": "early-Imperial temporal and demographic support",
+      "independence_group": "scheidel-roman-slavery-demography",
+      "directness": "specialist demographic modelling",
+      "direction": "qualifies",
+      "locator": "article argument on slave supply under the Principate; used for temporal fit and demographic-system context, not a precise prevalence estimate"
+    }
+  ]
+}
