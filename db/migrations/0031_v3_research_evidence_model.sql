@@ -43,7 +43,11 @@ CREATE TABLE atlas.claim_inference_extent (
     generalization_rationale text,
     PRIMARY KEY (claim_id, spatial_entity_id),
     CONSTRAINT broader_inference_requires_rationale
-        CHECK (generalization_basis IS NULL OR generalization_rationale IS NOT NULL)
+        CHECK (
+            generalization_basis IS NULL
+            OR generalization_basis = 'same_as_locus'
+            OR generalization_rationale IS NOT NULL
+        )
 );
 
 CREATE INDEX claim_inference_extent_spatial_idx
