@@ -13,70 +13,48 @@ This file answers **what is justified to work on next**.
 # CURRENT MODE — REVIEW / RELEASE + DATABASE CANONICALIZATION
 
 **Parent gate:** #300 — canonical PostgreSQL + first DB-backed release gate  
-**Immediate prerequisite:** #26 — live migration-history reconciliation  
-**Canonical historical data release:** `v0.6.1` remains unchanged  
-**Reviewed successor input:** `post-r1-cumulative-review-v3-cross-frame`  
-**WIP:** #300 parent gate; #26 is the current execution slice
+**Gate 0:** **PASS — MIGRATION_HISTORY_RECONCILED**  
+**Current gate:** Gate 1 — v0.6.1 DB reproduction / release-membership rebuild  
+**Canonical historical data release:** `v0.6.1` unchanged  
+**Reviewed successor input:** `post-r1-cumulative-review-v3-cross-frame` remains frozen/noncanonical  
+**WIP:** #300 Gate 1 only
 
-## Sequencing decision
+Gate 0 completed:
+- migration 0030 applied exactly once;
+- repository checksum ledger established with 30 verified rows;
+- checksum mismatches = 0; extras = 0;
+- known Supabase 0012–0014 gaps and 0016/0029 retries preserved as legacy audit evidence;
+- release channel/membership counts unchanged;
+- claim-kind integrity remains clean;
+- internal schemas remain unavailable to anon/authenticated;
+- Supabase security advisor currently reports 0 lints.
 
-The project is now deliberately **database-first before the next canonical release**.
+## Gate 1 finding already established
 
-Target architecture:
+The old `0.6.1-db-migration-candidate` predates current reconstructible release
+membership/artifact machinery.
 
-> source evidence → canonical PostgreSQL/PostGIS research state → explicit release gate → immutable release package → replaceable UI/API/GIS views
+Its embedded manifest contains:
+- 18 claim IDs;
+- 11 actor IDs;
+- 8 voyage IDs;
+- 18 source-version IDs;
+- 99 coverage-assessment IDs.
 
-This does **not** mean the live database is canonical yet.
+But current exact membership tables contain **0 rows for that release**, and
+`release_capture_status` remains
+`pending_d054_release_bundle_rebuild`.
 
-The authority flip requires:
-1. repository/live migration history reconciliation;
-2. deterministic semantic reproduction of v0.6.1;
-3. lossless ingestion/reconciliation of frozen v3 reviewed evidence;
-4. release-membership/reconstruction proof;
-5. security + draft/publish separation proof;
-6. rollback/recovery verification.
+Therefore Gate 1 is not a re-import of historical evidence. It is a controlled
+reconstruction/reconciliation task:
 
-Only then may the DB become canonical research state.
+1. revalidate exact v0.6.1 workbook checksum/raw/crosswalk meaning;
+2. rebuild exact release membership from the frozen candidate manifest/current DB;
+3. generate/verify an immutable full-state bundle under the current release contract;
+4. preserve the unresolved QC issue and draft/noncanonical status;
+5. prove byte/digest reconstruction before any DB authority decision.
 
-The first DB-backed canonical release is provisionally `v0.7.0` if the cutover does
-not introduce a compatibility-breaking ontology change.
-
-The UI/API cutover happens **after** the DB-backed immutable release passes QC. Public
-services continue to consume published/release materializations, never unrestricted
-draft research tables.
-
-Independent historical review is not required for internal DB canonicalization.
-Review provenance must remain explicit; current independent review count is 0.
-
-## Immediate Gate 0 findings
-
-Live Historical Slavery Atlas Supabase:
-- PostgreSQL 17.6, ACTIVE_HEALTHY;
-- repository schema head: 0029;
-- live migration history missing 0012–0014;
-- 0016 appears three times in live history;
-- 0029 appears twice;
-- required 0012–0014 schema effects are present;
-- existing `0.6.1-db-migration-candidate` is draft/noncanonical;
-- release membership/channel machinery already exists;
-- public channel still points to `mvp-preview-ancient-v2`.
-
-Security:
-- Supabase advisor flags RLS-disabled internal tables;
-- verified `anon` / `authenticated` have no USAGE on internal schemas and no table
-  grants there;
-- do not blindly enable RLS; recheck at canonical/public cutover.
-
-## Next exact action
-
-Complete #26 non-destructively:
-- compare repository 0012–0029 intent with actual live definitions;
-- build repository↔live migration matrix;
-- repair only migration history required for safe future tooling;
-- rerun schema/release/security regressions;
-- record `MIGRATION_HISTORY_RECONCILED`.
-
-Do **not** start new subject-history research while #300 is active.
+No v3 ingestion until Gate 1 passes.
 
 ## Discovery execution
 
