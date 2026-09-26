@@ -206,7 +206,7 @@ def derive_membership(cur, seed: dict[str, Any]) -> dict[str, list[str]]:
             """
             select distinct claim_id::text
             from audit.v061_evidence_claim_map
-            where legacy_evidence_id like 'v0.% Evidence!%'
+            where legacy_evidence_id like 'v0.%% Evidence!%%'
             """,
         )
     )
