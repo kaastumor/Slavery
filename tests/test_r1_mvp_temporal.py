@@ -64,7 +64,7 @@ class R1MVPTemporalTests(unittest.TestCase):
             self.assertTrue(row["display_rule"], target_id)
 
     def test_frontend_uses_discrete_anchor_navigation_not_annual_truth(self):
-        index = (WEB / "index.html").read_text(encoding="utf-8")
+        index = (WEB / "r1-candidate.html").read_text(encoding="utf-8")
         source = (WEB / "src" / "mvp.ts").read_text(encoding="utf-8")
         self.assertIn(">Frozen anchor<", index)
         self.assertIn("discrete frozen research anchors", index)
