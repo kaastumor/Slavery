@@ -190,4 +190,75 @@ BEGIN
 END $$;
 
 
+DO $
+DECLARE
+    blocked boolean := false;
+BEGIN
+    IF NOT EXISTS (
+        SELECT 1
+        FROM pg_trigger
+        WHERE tgrelid='audit.release_manifest'::regclass
+          AND tgname='release_manifest_immutable'
+          AND NOT tgisinternal
+    ) THEN
+        RAISE EXCEPTION 'release_manifest_immutable trigger is missing';
+    END IF;
+
+    BEGIN
+        UPDATE audit.release_manifest
+        SET qc_summary='tampered after publication'
+        WHERE release_version='test-release-membership-0026';
+    EXCEPTION WHEN others THEN
+        blocked := true;
+    END;
+
+    IF NOT blocked THEN
+        RAISE EXCEPTION 'published release manifest metadata was mutable';
+    END IF;
+END $;
+
+-- Archival is a lifecycle label only. It must not rewrite any historical metadata.
+UPDATE audit.release_manifest
+SET status='archived'
+WHERE release_version='test-release-membership-0026'
+  AND status='published';
+
+DO $
+DECLARE
+    blocked_update boolean := false;
+    blocked_delete boolean := false;
+    archived_status text;
+BEGIN
+    SELECT status INTO archived_status
+    FROM audit.release_manifest
+    WHERE release_version='test-release-membership-0026';
+
+    IF archived_status <> 'archived' THEN
+        RAISE EXCEPTION 'metadata-identical published -> archived transition failed';
+    END IF;
+
+    BEGIN
+        UPDATE audit.release_manifest
+        SET changelog='tampered after archival'
+        WHERE release_version='test-release-membership-0026';
+    EXCEPTION WHEN others THEN
+        blocked_update := true;
+    END;
+
+    BEGIN
+        DELETE FROM audit.release_manifest
+        WHERE release_version='test-release-membership-0026';
+    EXCEPTION WHEN others THEN
+        blocked_delete := true;
+    END;
+
+    IF NOT blocked_update THEN
+        RAISE EXCEPTION 'archived release manifest metadata was mutable';
+    END IF;
+    IF NOT blocked_delete THEN
+        RAISE EXCEPTION 'archived release manifest was deletable';
+    END IF;
+END $;
+
+
 ROLLBACK;
