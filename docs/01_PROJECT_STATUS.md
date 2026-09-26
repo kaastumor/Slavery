@@ -8,8 +8,9 @@ current CI override this snapshot.
 **Canonical current research authority:** PostgreSQL/PostGIS, explicit D-109 governed closure  
 **Canonical historical data release:** v0.7.0  
 **Immutable predecessor:** v0.6.1 workbook  
-**Current public preview/channel:** `mvp-preview-ancient-v2` (non-canonical; Gate 5 not yet passed)  
-**Execution state:** **REVIEW / RELEASE + PUBLIC CUTOVER — current priority/mode is owned by `BACKLOG.md`**
+**Current public serving adapter:** `v0.7.0-public-mvp-v1` → canonical source `v0.7.0` under D-113  
+**Live schema head:** `0034`  
+**Execution state:** **CONSOLIDATION / POST-CUTOVER REVIEW — current priority/mode is owned by `BACKLOG.md`**
 
 ## Current durable state
 
@@ -28,27 +29,32 @@ current CI override this snapshot.
   portable cartography fingerprint, changelog, QC summary, unresolved issues,
   migration/reconciliation report, manifest and checksums.
 - Published typed membership and package artifact records are immutable under existing
-  release guards.
+  release guards; D-112 / migration 0034 additionally freezes published release-manifest
+  metadata.
 - The v0.6.1 workbook remains an immutable predecessor/source-native lineage anchor and
   has not been overwritten.
 - Independent historical review remains 0.
-- Public serving has **not** moved: `public_mvp_preview` still points to
-  `mvp-preview-ancient-v2`, and Gate 4 deliberately left authority-claim
-  `publication_status` values unchanged.
-- Current WIP is Gate 5 / #323: stage and adversarially verify an exact v0.7.0-derived
-  public materialization, prove rollback, then decide whether to move the public
-  channel.
-- Exact current action is owned by `BACKLOG.md`.
+- D-113 closes Gate 5 with `CUTOVER_PUBLIC_CHANNEL_TO_V070`.
+- `public_mvp_preview` now points to `v0.7.0-public-mvp-v1`, a non-canonical serving
+  adapter derived only from canonical v0.7.0.
+- Production API, staged browser, forced static fallback and deployed Pages snapshot all
+  verified payload SHA-256
+  `2a04787a2ee0e42a97f273621eebbf32ddc6a1b2e903239a626eb41d72c29786`.
+- The public root now serves the canonical-release Atlas client; the previous R1
+  technical candidate is preserved at `r1-candidate.html`.
+- The Gate-0→Gate-5 canonicalization programme is complete. Exact current action is
+  owned by `BACKLOG.md`.
 
 ## Recently completed
 
-1. #319 / Gate 4 — **PUBLISH_DB_BACKED_CANONICAL_RELEASE**; canonical historical
+1. #323 / Gate 5 — **CUTOVER_PUBLIC_CHANNEL_TO_V070**; D-113.
+2. #319 / Gate 4 — **PUBLISH_DB_BACKED_CANONICAL_RELEASE**; canonical historical
    release v0.7.0.
-2. #313 / Gate 3 — **PROMOTE_DB_CANONICAL_RESEARCH_STATE**; D-109.
-3. Gate 2 — **V3_DB_RECONCILED**; frozen v3 review state represented losslessly.
-4. Gate 1 — **V061_DB_RECONCILED**; canonical predecessor semantics/source-native
+3. #313 / Gate 3 — **PROMOTE_DB_CANONICAL_RESEARCH_STATE**; D-109.
+4. Gate 2 — **V3_DB_RECONCILED**; frozen v3 review state represented losslessly.
+5. Gate 1 — **V061_DB_RECONCILED**; canonical predecessor semantics/source-native
    lineage reproduced.
-5. Gate 0 — **MIGRATION_HISTORY_RECONCILED**.
+6. Gate 0 — **MIGRATION_HISTORY_RECONCILED**.
 
 Project form remains:
 

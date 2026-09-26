@@ -40,7 +40,7 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | A-002 | P0–P4 can remain the target universal public summary | rejected | M1 shows the scale mixes evidentiary configuration with different historical structures. Preserve it only as legacy compatibility until a post-M1 interface exists. |
 | A-003 | Cliopatria is the best open global deep-time fallback backbone | survives for raw infrastructure | Exact 13,765-feature ingestion and selected-year behavior survive M2. The resolver remains experimental Atlas truth; specialist overrides and reviewed source→atlas identity remain necessary. |
 | A-004 | PostgreSQL/PostGIS is justified over files/spreadsheets for the working research/integrity system | survives with boundary | Time/spatial joins, provenance, release reconstruction and integrity are demonstrated. This does not prove that the public product needs an always-on database/API platform. |
-| A-005 | MapLibre + current API/GeoJSON delivery is sufficient at current scale | survives / freeze | It is sufficient for the existing non-canonical demonstration. Do not expand serving/render infrastructure until the thin-atlas value hypothesis is demonstrated. |
+| A-005 | MapLibre + current API/GeoJSON delivery is sufficient at current scale | survives / freeze | Gate 5 proved the current stack can serve the immutable v0.7.0-derived materialization with matching live/static bytes and no reviewed historical geometry invention. Do not expand serving/render infrastructure without a demonstrated need. |
 | A-006 | The project can responsibly cover the present as well as antiquity | unproven / blocked for sensitive person-level expansion | Living-person/sensitive-data policy remains insufficient; do not let H2 modern expansion outrun this. |
 | A-007 | A serial issue-driven autonomous worker can create value without roadmap drift | survives with WIP=1 + mode-level continuation | M1/M2/H2/COV/R1 produced discriminating evidence, but DISC-05→09 exposed a structural bias toward serial meta-discovery. D-096 keeps one active priority while making discovery, execution, consolidation, review/release and maintenance peer successor modes. |
 | A-008 | The full interactive Atlas platform is the best form for the demonstrated contribution | rejected for active expansion | H2 did not show a repeatable material advantage for the corpus/method over a strong baseline, and the thin view did not materially beat the corpus in any case. Preserve existing artifacts; do not expand the platform. |
@@ -62,9 +62,26 @@ Canonical repository inspected: `kaastumor/Slavery`, `main` at `f766ab9`.
 | R-006 | Production/cloud dependence or outage erases public state | low-medium / controlled | Static release fallback and explicit release pointer preserve published preview state. Weekly liveness is enough; automatic cloud restart was retired. |
 | R-007 | Automation creates activity rather than evidence | medium / controlled with revised scheduler | D-096 supersedes experiment-only continuation: one active priority may be discovery, execution, consolidation, review/release or maintenance. Evidence/decision gain remains the progress metric; unused capacity is not a reason to invent experiments. |
 | R-008 | Branch/workflow/experiment accumulation increases cognitive load | medium / active | DVC and self-heal workflows were retired and duplicate main web build removed; ~100 historical remote branches still need admin-capable pruning. |
-| R-009 | Public preview is mistaken for canonical historical release | medium / controlled | Canonical historical release is now v0.7.0 under D-110, while `mvp-preview-ancient-v2` remains an explicitly non-canonical serving preview until Gate 5; v0.6.1 remains the immutable predecessor. |
+| R-009 | Presentation/serving adapter is mistaken for canonical historical truth | medium / controlled | D-113 makes the public root a v0.7.0-derived view while keeping `v0.7.0-public-mvp-v1` explicitly non-canonical as an adapter. Canonical truth remains the immutable v0.7.0 package plus D-109 governed research authority; v0.6.1 remains the predecessor. |
 | R-010 | No repository license creates ambiguity if outside contribution/reuse begins | low / parked | Decide only when external contribution/distribution needs make it material. |
 | R-011 | Research/platform effort grows faster than demonstrated value over the strongest baseline | controlled by stop decision | H2 failed the pre-registered value threshold. D-063 stops active Atlas expansion; reopening requires new external evidence rather than more internal build-out. |
+
+### HC-031 — Gate-5 canonical public cutover — 2026-09-26
+
+Decision: **CUTOVER_PUBLIC_CHANNEL_TO_V070**.
+
+Evidence:
+- D-111 release-derived serving adapter;
+- D-112 / migration 0034 published-manifest immutability;
+- exact v0.7.0 payload SHA-256
+  `2a04787a2ee0e42a97f273621eebbf32ddc6a1b2e903239a626eb41d72c29786`;
+- staged and production API/browser checks;
+- rollback CAS proof;
+- successful GitHub Pages deployment and deployed fallback verification.
+
+No project-value claim changes: the cutover demonstrates release/presentation integrity,
+not new historical coverage value or renewed justification for platform expansion.
+Independent historical review remains 0.
 
 ## Value evidence
 

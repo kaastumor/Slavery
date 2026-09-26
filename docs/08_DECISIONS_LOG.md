@@ -2880,3 +2880,97 @@ flags or independent-review state. The public channel remains on
 `mvp-preview-ancient-v2` until Gate 5 independently passes. The live database schema
 may advance to 0034 after repository CI and migration verification; canonical v0.7.0
 remains the immutable schema-0033 historical release it already is.
+
+
+## D-113 — Gate 5 passes; public serving cuts over to the v0.7.0-derived materialization
+**Date:** 2026-09-26  
+**Status:** accepted public cutover decision
+
+**Disposition:** `CUTOVER_PUBLIC_CHANNEL_TO_V070`.
+
+**Evidence:** #323, PRs #325–#328, production migration 0034, D-111 and D-112.
+
+Gate 5 tested and promoted an exact public serving adapter derived only from canonical
+historical release `v0.7.0`.
+
+The selected serving materialization is:
+
+`v0.7.0-public-mvp-v1`
+
+It remains **non-canonical as a serving adapter**. Historical truth remains owned by the
+canonical `v0.7.0` release and the governed D-109 research authority.
+
+### Promotion evidence
+
+Before the final pointer move:
+
+- the materialization rebuilt deterministically from the immutable v0.7.0
+  `authority-state.json`;
+- exact public payload SHA-256:
+  `2a04787a2ee0e42a97f273621eebbf32ddc6a1b2e903239a626eb41d72c29786`;
+- displayed scope: 16 spatial entities / 18 territorial-practice claims;
+- all reviewed historical evidence geometry membership remained **0**;
+- 21 `researched_internal` and 5 `under_review` target states remained explicit;
+- 6 researched-inconclusive outcomes remained non-absence;
+- independent historical review remained **0**;
+- source-version provenance and source-family/dependency metadata survived the adapter;
+- D-108 neutral-land/cartography remained separate from historical evidence;
+- API/browser staging passed both live-stage and forced-static-fallback paths;
+- the current open-ended evidence path was verified through the 2026 selected year;
+- the previous R1 candidate root remained visibly non-canonical before cutover.
+
+A compare-and-set rollback drill proved the exact pointer transition
+`mvp-preview-ancient-v2 → v0.7.0-public-mvp-v1 → mvp-preview-ancient-v2`
+inside a rolled-back transaction before production promotion.
+
+The Gate-5 red team then found one additional blocker: published
+`audit.release_manifest` metadata was owner-mutable. D-112 / migration 0034 closed that
+gap. Production now blocks published-manifest mutation while keeping the D-053 release
+channel as the sole serving-pointer control. Supabase security advisors reported zero
+lints after migration 0034.
+
+### Production cutover
+
+The production compare-and-set update moved:
+
+`public_mvp_preview: mvp-preview-ancient-v2 → v0.7.0-public-mvp-v1`
+
+The production `atlas-data` endpoint was then independently checked by CI and returned
+the exact frozen v0.7.0 payload SHA-256 above, with 16 places, 18 territorial-practice
+claims, zero reviewed historical geometries and the expected serving-materialization
+identity.
+
+PR #327 promoted the **exact already-staged canonical root entrypoint bytes**. GitHub
+Pages deployed commit
+`5675186303b30c43cdfaff9c41c72b64df1b153b` successfully to:
+
+`https://kaastumor.github.io/Slavery/`
+
+The deploy workflow fetched the deployed static fallback back from Pages and verified:
+
+- release version `v0.7.0`;
+- payload SHA-256
+  `2a04787a2ee0e42a97f273621eebbf32ddc6a1b2e903239a626eb41d72c29786`;
+- 16 displayed spatial entities.
+
+The prior frozen R1 technical candidate is retained at
+`r1-candidate.html`; it is no longer the default public root and remains explicitly
+candidate/non-canonical.
+
+### Authority and release boundaries after cutover
+
+- Canonical current research authority: D-109 governed PostgreSQL/PostGIS closure.
+- Live repository/database schema head: `0034`.
+- Canonical historical release: `v0.7.0`, whose immutable release package remains a
+  schema-0033 historical artifact.
+- Public serving adapter: `v0.7.0-public-mvp-v1`, derived only from v0.7.0.
+- Public root: canonical-release Atlas client.
+- Previous serving pointer `mvp-preview-ancient-v2` remains available as rollback
+  target.
+- v0.6.1 remains the immutable predecessor/source-native lineage anchor.
+- Independent historical review remains 0.
+- No new P-level, historical geometry, prevalence, nationality/political identity or
+  absence inference was introduced by cutover.
+
+Gate 5 therefore passes without collapsing research authority, historical release
+identity and presentation state into one layer.

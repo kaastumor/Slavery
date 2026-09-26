@@ -57,7 +57,7 @@ A missing claim must never be rendered as a historical negative.
 - Canonical **current research authority:** the explicitly governed PostgreSQL/PostGIS
   closure under D-109; physical row presence or `review_status` alone does not confer
   authority.
-- Repository/live schema head for that authority is `0033`.
+- Repository/live schema head is `0034`; immutable canonical release `v0.7.0` remains a schema-0033 historical package.
 - The v0.6.1 workbook remains the immutable canonical predecessor and source-native
   lineage anchor:
   `Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx`, SHA-256
@@ -66,8 +66,10 @@ A missing claim must never be rendered as a historical negative.
   evidence geometries, 8 voyages, 99 coverage assessments, 211 source versions and
   26 research-target results.
 - Independent historical review remains **0**.
-- `mvp-preview-ancient-v2` remains the **non-canonical public serving preview** until
-  Gate 5 / #323 separately passes; publishing v0.7.0 did not move that channel.
+- `public_mvp_preview` now points to **`v0.7.0-public-mvp-v1`**, the D-111/D-113
+  non-canonical serving adapter derived only from canonical v0.7.0. The default public
+  root is the canonical-release Atlas client; the prior R1 candidate is preserved at
+  `r1-candidate.html`.
 - The repository contains the MapLibre web MVP and release-gated API, but public
   services must consume reviewed/published release materializations rather than
   unrestricted research tables.
