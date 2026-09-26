@@ -1,0 +1,95 @@
+{
+  "candidate_id": "post-r1-cumulative-review-v3-cross-frame",
+  "status": "internal_noncanonical_review_candidate",
+  "canonical_release": "v0.6.1_unchanged",
+  "predecessor": {
+    "candidate_id": "post-r1-cumulative-review-v2-overnight",
+    "path": "reviews/post-r1-cumulative/candidate-v2-overnight",
+    "manifest_blob_sha": "759775715cab0b035164b1f18cd0b41bbdd615e1",
+    "accepted_targets_blob_sha": "bf62c81a3299a23c6e014e7c62a6cc50b6a3b202",
+    "holds_blob_sha": "23ad5830873213efee84d8d1ff56d347c306f8b9",
+    "unresolved_issues_blob_sha": "0a4e1f20094ec0d1735c91dc493fb21d106d9e61",
+    "source_dependency_report_blob_sha": "407a9c99c82fa9ab7b88b6345e992dfd1c9b445c",
+    "mutation": false
+  },
+  "integration_controller_issue": 291,
+  "review_result": "FIVE_ROW_INTERNAL_REVIEW_PASS",
+  "packaging_gate": "BUILD_SUCCESSOR_CANDIDATE",
+  "membership_count": 26,
+  "accepted_count": 21,
+  "hold_count": 5,
+  "narrowed_count": 0,
+  "rejected_count": 0,
+  "independent_reviewed_count": 0,
+  "source_relation_count": 166,
+  "source_lineage": {
+    "predecessor_relation_count": 133,
+    "post_v2_addition_relation_count": 33,
+    "additions": [
+      {
+        "target_id": "R1:P:1300:D:r1",
+        "path": "experiments/exp09-lithuania-1300/source_relations.csv",
+        "blob_sha": "5ca36f8332bd61ce913bad16c739ccf684f46b28",
+        "relation_count": 5
+      },
+      {
+        "target_id": "R1:N:karnak_amun_m1000",
+        "path": "experiments/exp11-karnak-1000bce/source_relations.csv",
+        "blob_sha": "447bcbd3573e2e7ac1772bcbfab1989b2c2523d8",
+        "relation_count": 7
+      },
+      {
+        "target_id": "R1:N:sapmi_1600",
+        "path": "experiments/exp12-sapmi-1600/source_relations.csv",
+        "blob_sha": "4845f537385aca940671418299a0d58358363601",
+        "relation_count": 7
+      },
+      {
+        "target_id": "R1:N:todaiji_800",
+        "path": "experiments/exp13-todaiji-800/source_relations.csv",
+        "blob_sha": "d3363a1382d91beccaed05b99779192aae8f9f98",
+        "relation_count": 8
+      },
+      {
+        "target_id": "R1:N:trans_saharan_1300",
+        "path": "experiments/exp14-trans-saharan-1300/source_relations.csv",
+        "blob_sha": "d7c6d6500d0b528434cc5c845db46e4a82aa2945",
+        "relation_count": 6
+      }
+    ]
+  },
+  "source_reconstructibility": {
+    "missing_source_version_ref": 0,
+    "missing_independence_group": 0,
+    "missing_claim_fitness": 0,
+    "within_target_duplicate_exact_source_version": 0,
+    "cross_target_exact_overlap_count": 2
+  },
+  "cross_target_exact_overlaps": [
+    {
+      "source_version_ref": "doi:10.3406/asean.2013.2272:2013",
+      "targets": [
+        "R1:N:angkor_1200",
+        "R1:P:1300:F:r1"
+      ],
+      "dependency": "Lustig & Lustig 2013 / angkor-personnel-corpus"
+    },
+    {
+      "source_version_ref": "Freeman-Grenville:EastAfricanCoast:2ed:1975:31-32",
+      "targets": [
+        "R1:N:great_zimbabwe_1400",
+        "R1:N:swahili_1400"
+      ],
+      "dependency": "Ibn Battuta Kilwa 1331 / Freeman-Grenville translation chain"
+    }
+  ],
+  "release_effects": {
+    "canonical_release_change": false,
+    "predecessor_candidate_rewrite": false,
+    "r1_review_state_change": false,
+    "p_level_assignment": false,
+    "historical_geometry_promotion": false,
+    "public_release": false,
+    "database_or_api_change": false
+  }
+}

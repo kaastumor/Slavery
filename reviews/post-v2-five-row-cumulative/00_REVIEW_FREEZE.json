@@ -1,0 +1,25 @@
+{
+  "review": "post-v2-five-row-cumulative",
+  "controller_issue": 291,
+  "mode": "review_release",
+  "base_commit": "0caefb0b73c5b7140fab8adf1383d7a89f5bb36a",
+  "base_candidate_id": "post-r1-cumulative-review-v2-overnight",
+  "frozen_membership": [
+    "R1:P:1300:D:r1",
+    "R1:N:karnak_amun_m1000",
+    "R1:N:sapmi_1600",
+    "R1:N:todaiji_800",
+    "R1:N:trans_saharan_1300"
+  ],
+  "source_research_allowed": false,
+  "target_substitution_allowed": false,
+  "independent_review_claim_allowed": false,
+  "canonical_release": "v0.6.1_unchanged",
+  "inherited_review_state": {
+    "R1:P:1300:D:r1": "ACCEPT_INTERNAL_REVIEW via post-v2 Lithuania/Karnak delta",
+    "R1:N:karnak_amun_m1000": "ACCEPT_INTERNAL_REVIEW via post-v2 Lithuania/Karnak delta",
+    "R1:N:sapmi_1600": "ACCEPT_INTERNAL_REVIEW via post-D099 Sápmi/Tōdai delta",
+    "R1:N:todaiji_800": "ACCEPT_INTERNAL_REVIEW via post-D099 Sápmi/Tōdai delta",
+    "R1:N:trans_saharan_1300": "new replay required"
+  }
+}

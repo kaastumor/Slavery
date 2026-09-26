@@ -2094,3 +2094,66 @@ zero.
 state, P-levels, historical-practice geometry, schema/ontology, database/API/frontend
 and public release state remain unchanged.
 
+## D-100 — Five-row post-v2 batch earns immutable v3 internal candidate
+**Date:** 2026-09-26  
+**Status:** accepted internal review/release decision
+
+**Evidence:** #291 Stages 3–6, reconciling and replaying the five subject-research rows
+completed after `post-r1-cumulative-review-v2-overnight`:
+
+- Grand Duchy of Lithuania — 1300 CE;
+- Temple of Amun at Karnak — 1000 BCE;
+- Sápmi / Sámi communities — 1600 CE;
+- Tōdai-ji — 800 CE;
+- Trans-Saharan trade network — 1300 CE.
+
+**Review result:** `FIVE_ROW_INTERNAL_REVIEW_PASS`.
+
+All five rows receive `ACCEPT_INTERNAL_REVIEW` for their existing bounded evidence
+states. This does not make all five positive slavery classifications:
+- Karnak remains researched-inconclusive at the selected anchor;
+- Sápmi remains positive only at a bounded state-coercion dimension while internal
+  Sámi slavery remains unresolved;
+- the other rows retain their recorded target/time/frame limits.
+
+**Source reconciliation:**
+- predecessor v2 source relations: 133;
+- post-v2 additions: 33;
+- integrated lineage: 166;
+- missing source-version refs: 0;
+- missing independence groups: 0;
+- missing claim-fitness fields: 0;
+- within-target exact-version duplicates in the new batch: 0;
+- exact new-vs-v2 source-version overlaps: 0;
+- exact cross-target overlaps within the new batch: 0;
+- preserved candidate-wide exact cross-target overlaps: 2.
+
+**D-099 gate:** `BUILD_SUCCESSOR_CANDIDATE`.
+
+D-099 correctly prevented rolling candidate churn for the earlier two-row deltas. The
+current state is materially different: five reconciled reviewed rows now form one
+coherent post-v2 batch and the four-row EXP-10-derived cross-frame programme is closed.
+Cumulative packaging therefore improves review/release coherence rather than merely
+mirroring row count.
+
+**Successor:** `post-r1-cumulative-review-v3-cross-frame`.
+
+Counts:
+- membership: 26;
+- accepted bounded evidence states: 21;
+- explicit HOLD rows: 5;
+- narrowed: 0;
+- rejected: 0;
+- source relations: 166;
+- exact cross-target source-version overlaps: 2;
+- independent historical reviews: 0.
+
+The predecessor v2 candidate remains immutable.
+
+**Publication boundary:** v3 is internal and noncanonical. It is not automatically
+public, does not replace v0.6.1 and does not claim independent historical review.
+
+**No effect:** canonical v0.6.1, R1 reviewed state, P-levels, historical-practice
+geometry, schema/ontology, database/API/frontend and public release state remain
+unchanged.
+

@@ -12,67 +12,48 @@ This file answers **what is justified to work on next**.
 
 # CURRENT MODE — OVERNIGHT CONTROLLED EXECUTION
 
-**Controller issue:** #291 — close EXP-10 programme and reconcile post-v2 evidence  
-**Immediate dependency:** #290 — EXP-14 Trans-Saharan 1300 bounded subject research  
+**Controller issue:** #291  
+**Stages complete on main:** 1–2  
+**Stages 3–6:** complete on branch `post-v2-five-row-cumulative`, pending one review PR  
+**Latest candidate after merge:** `post-r1-cumulative-review-v3-cross-frame`  
 **Canonical historical data release:** `v0.6.1` unchanged  
-**WIP:** one fixed eight-slot campaign; no scheduled slot has run yet
+**WIP:** one cumulative review/package branch
 
-## Scheduled execution architecture
+## Current programme result
 
-Scheduled/autonomous executions are **READ-ONLY on GitHub** until the known scheduled
-GitHub mutation limitation is demonstrably resolved.
+EXP-14 Trans-Saharan 1300 is complete and merged.
 
-GitHub remains canonical for:
-- accepted project/governance state;
-- BACKLOG/current WIP;
-- campaign plan;
-- issues/PRs;
-- accepted checkpoints and review/release decisions.
+The EXP-10-derived cross-frame programme is now closed:
+- Karnak 1000 BCE — researched-inconclusive;
+- Tōdai-ji 800 — bounded-supported near-anchor non-free status;
+- Sápmi 1600 — bounded-supported state coercion, internal slavery unresolved;
+- Trans-Saharan 1300 — bounded-supported network participation.
 
-A private persistent execution ledger outside Git/CI owns only temporary scheduled-run:
-- claim status;
-- crash recovery;
-- terminal run status;
-- compact result/artifact pointer;
-- whether interactive GitHub reconciliation is pending.
+Five post-v2 rows (including Lithuania 1300) passed cumulative internal review.
 
-Current ledger state: **Runs 1–8 all PENDING**.
+Source reconciliation:
+- v2 source relations: 133;
+- post-v2 additions: 33;
+- integrated lineage: 166;
+- missing version/group/claim-fitness metadata: 0;
+- new exact source-version overlap with v2: 0;
+- new cross-target exact overlaps: 0.
 
-Every scheduled invocation must:
-1. read live GitHub canonical state;
-2. read the private execution ledger;
-3. resume any `IN_PROGRESS` slot, otherwise select the lowest `PENDING` slot;
-4. durably mark exactly one slot `IN_PROGRESS` **before** substantive work;
-5. stop before substantive work if the ledger cannot be written;
-6. execute exactly one bounded slot;
-7. never mutate GitHub;
-8. save substantive artifacts privately;
-9. mark the slot terminal as `DONE`, `REVISED`, `NO_VALUE`, or `BLOCKED`;
-10. set `github_reconciliation_pending: true` when canonical GitHub does not yet
-    reflect the result;
-11. never repeat a terminal slot or begin a second slot in the same invocation;
-12. never invent Run 9 or extend the fixed campaign.
+D-099 packaging gate: **BUILD_SUCCESSOR_CANDIDATE**.
 
-The historical `NIGHT_STAGE_N_COMPLETE` comments on #291 are now **interactive
-reconciliation markers only**, not scheduled claim/recovery state.
+The successor `post-r1-cumulative-review-v3-cross-frame` is internal/noncanonical:
+26 members, 21 accepted bounded evidence states, 5 HOLDs, 166 source relations,
+2 preserved candidate-wide exact cross-target dependencies, 0 independent historical
+reviews.
 
-An interactive session must reconcile terminal ledger results into GitHub in order,
-against current `main`, before writing markers, branches/commits, PRs, issue closures
-or BACKLOG changes.
+Next exact action:
+1. merge the Stages 3–6 review/package PR after cheap CI;
+2. record `NIGHT_STAGE_3_COMPLETE` through `NIGHT_STAGE_6_COMPLETE`;
+3. perform Stage 7 next-horizon allocation from fresh main;
+4. perform Stage 8 final QC/handoff and close #291.
 
-## Fixed eight-slot goal
-
-1. EXP-14 Trans-Saharan 1300 research packet.
-2. EXP-14 adversarial replay / merge-ready result for later interactive reconciliation.
-3. EXP-10-derived programme closure retrospective.
-4. Five-row post-v2 source/dependency reconciliation.
-5. Five-row adversarial cumulative internal review.
-6. D-099-compliant packaging gate.
-7. Next-horizon allocation review.
-8. Final QC + private morning handoff.
-
-No automatic canonical/public release, P-level, historical-practice geometry, R1 state,
-schema/ontology/database/API/frontend mutation or independent-review claim.
+No automatic canonical/public release, P-level, practice geometry, R1 mutation,
+schema/ontology/database/API/frontend change or independent-review claim follows.
 
 ## Discovery execution
 
