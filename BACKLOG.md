@@ -15,34 +15,61 @@ This file answers **what is justified to work on next**.
 **Controller issue:** #291 — close EXP-10 programme and reconcile post-v2 evidence  
 **Immediate dependency:** #290 — EXP-14 Trans-Saharan 1300 bounded subject research  
 **Canonical historical data release:** `v0.6.1` unchanged  
-**WIP:** one overnight controller programme; stages are serialized by exact issue markers
+**WIP:** one fixed eight-slot campaign; no scheduled slot has run yet
 
-The programme has eight goal-linked stages and is designed for one scheduled controller
-task running eight hourly occurrences.
+## Scheduled execution architecture
 
-Progress is determined only by the lowest missing exact marker on issue #291:
-`NIGHT_STAGE_1_COMPLETE` through `NIGHT_STAGE_8_COMPLETE`.
+Scheduled/autonomous executions are **READ-ONLY on GitHub** until the known scheduled
+GitHub mutation limitation is demonstrably resolved.
 
-Recovery rules:
-- every run re-reads GitHub `main`, #291 comments, open PRs/issues and relevant branches;
-- resume unfinished work rather than creating duplicate branches/PRs;
-- a run may complete multiple contiguous stages to recover from a missed occurrence;
-- do not skip a stage merely to match the nominal run number;
-- final occurrence must leave a truthful handoff even if programme completion fails.
+GitHub remains canonical for:
+- accepted project/governance state;
+- BACKLOG/current WIP;
+- campaign plan;
+- issues/PRs;
+- accepted checkpoints and review/release decisions.
 
-Actions budget:
-- normally <=3 coherent PR/CI cycles for the whole programme;
-- research/review text must use the cheap CI path and must not trigger PostGIS;
-- inspect pending CI once plus at most one bounded follow-up;
-- never rerun unchanged successful jobs.
+A private persistent execution ledger outside Git/CI owns only temporary scheduled-run:
+- claim status;
+- crash recovery;
+- terminal run status;
+- compact result/artifact pointer;
+- whether interactive GitHub reconciliation is pending.
 
-Programme goal:
-1. finish EXP-14 Trans-Saharan 1300;
-2. close the EXP-10-derived cross-frame programme;
-3. reconcile/review the five post-v2 subject rows;
-4. apply D-099 packaging discipline;
-5. select/freeze the next justified D-096 horizon;
-6. leave a final QC + morning handoff.
+Current ledger state: **Runs 1–8 all PENDING**.
+
+Every scheduled invocation must:
+1. read live GitHub canonical state;
+2. read the private execution ledger;
+3. resume any `IN_PROGRESS` slot, otherwise select the lowest `PENDING` slot;
+4. durably mark exactly one slot `IN_PROGRESS` **before** substantive work;
+5. stop before substantive work if the ledger cannot be written;
+6. execute exactly one bounded slot;
+7. never mutate GitHub;
+8. save substantive artifacts privately;
+9. mark the slot terminal as `DONE`, `REVISED`, `NO_VALUE`, or `BLOCKED`;
+10. set `github_reconciliation_pending: true` when canonical GitHub does not yet
+    reflect the result;
+11. never repeat a terminal slot or begin a second slot in the same invocation;
+12. never invent Run 9 or extend the fixed campaign.
+
+The historical `NIGHT_STAGE_N_COMPLETE` comments on #291 are now **interactive
+reconciliation markers only**, not scheduled claim/recovery state.
+
+An interactive session must reconcile terminal ledger results into GitHub in order,
+against current `main`, before writing markers, branches/commits, PRs, issue closures
+or BACKLOG changes.
+
+## Fixed eight-slot goal
+
+1. EXP-14 Trans-Saharan 1300 research packet.
+2. EXP-14 adversarial replay / merge-ready result for later interactive reconciliation.
+3. EXP-10-derived programme closure retrospective.
+4. Five-row post-v2 source/dependency reconciliation.
+5. Five-row adversarial cumulative internal review.
+6. D-099-compliant packaging gate.
+7. Next-horizon allocation review.
+8. Final QC + private morning handoff.
 
 No automatic canonical/public release, P-level, historical-practice geometry, R1 state,
 schema/ontology/database/API/frontend mutation or independent-review claim.

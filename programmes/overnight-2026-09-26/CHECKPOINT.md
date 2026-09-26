@@ -1,20 +1,34 @@
 # Overnight programme checkpoint
 
 **Controller issue:** #291  
-**State at freeze:** programme planned; no night stage marker recorded  
-**Immediate work:** Stage 1 — resume #290 / EXP-14 Trans-Saharan 1300  
+**Architecture state:** scheduled-write repair completed before first scheduled run  
+**Scheduled GitHub mode:** read-only  
+**Private ledger:** persistent connected Google Drive document; interactive write/read-back verified  
+**Run state:** Runs 1–8 all `PENDING`  
+**Any `IN_PROGRESS` slot:** no  
+**Substantive scheduled work performed:** no  
 **Canonical release:** v0.6.1 unchanged
 
-## Existing durable state inherited
+## Interactive verification
 
-- immutable candidate: `post-r1-cumulative-review-v2-overnight`;
-- reviewed post-v2 delta: Lithuania 1300 + Karnak 1000 BCE;
-- reviewed post-D099 delta: Sápmi 1600 + Tōdai-ji 800;
-- open unresearched EXP-10-derived target: Trans-Saharan 1300 (#290);
-- D-099: candidate packaging is trigger/value based, not rolling row-count churn.
+Interactive GitHub mutation succeeded in the sponsor session. This establishes only
+that interactive writes work; scheduled runs are deliberately not allowed to depend on
+GitHub mutation.
 
-## Next exact action
+## Recovery invariant
 
-Read #291 markers. If none exist, begin Stage 1 on a single Trans-Saharan branch.
+The next scheduled invocation must:
+1. read GitHub canonical state;
+2. read the private execution ledger;
+3. claim Run 1 as `IN_PROGRESS` in the ledger before any research;
+4. stop if that ledger write fails;
+5. execute Run 1 only;
+6. terminate Run 1 privately and flag GitHub reconciliation pending.
 
-Do not pre-create later-stage branches.
+No `NIGHT_STAGE_N_COMPLETE` marker should be written by scheduled context.
+
+## Immediate slot
+
+Run 1 — EXP-14 Trans-Saharan 1300 bounded subject packet.
+
+Do not pre-create later-stage branches or perform scheduled GitHub writes.
