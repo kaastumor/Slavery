@@ -1,3 +1,10 @@
+begin;
+
+-- Test-only cleanup escape hatch. Production published manifests remain immutable.
+-- This script runs only against the disposable CI database; the transaction ensures
+-- the trigger is restored even if cleanup fails.
+alter table audit.release_manifest disable trigger release_manifest_immutable;
+
 update audit.release_manifest
 set status='validated'
 where release_version='d054-bundle-fixture-release'
@@ -12,3 +19,7 @@ delete from atlas.spatial_entity where spatial_entity_id='33333333-3333-4333-833
 delete from atlas.source_version where source_version_id='22222222-2222-4222-8222-222222222222'::uuid;
 delete from atlas.source where source_id='11111111-1111-4111-8111-111111111111'::uuid;
 delete from cartography.land_fabric where fabric_id='d054-bundle-fixture-land';
+
+alter table audit.release_manifest enable trigger release_manifest_immutable;
+
+commit;
