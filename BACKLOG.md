@@ -10,36 +10,36 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — MAINTENANCE
+# CURRENT MODE — MAINTENANCE / TRIGGER-BOUND REVIEW
 
-**Active issue:** #280 — skip PostGIS for review-only text PRs  
-**Trigger:** PR #279 unnecessarily started the PostGIS-heavy foundation job  
+**Latest completed review:** #278 / PR #279 — Lithuania/Karnak post-v2 delta  
+**Latest maintenance:** #280 / PR #281 — review-only CI scope correction  
+**Latest immutable candidate:** `post-r1-cumulative-review-v2-overnight`  
+**Reviewed delta:** Lithuania 1300 + Karnak 1000 BCE, kept separate under D-099  
 **Canonical historical data release:** `v0.6.1` unchanged  
-**WIP:** 1
+**WIP:** none until the next D-096 mode is selected
 
-Root cause:
-- `tools/ci_scope.py` treats text under `docs/`, `experiments/` and
-  `programmes/` as non-database changes;
-- `reviews/` was omitted;
-- because unknown paths fail closed, review-only text PRs started PostGIS.
+Current reviewed/research-ready state:
+- Lithuania 1300 — internally accepted bounded positive;
+- Karnak 1000 BCE — internally accepted researched-inconclusive;
+- Tōdai-ji 800 — `QUALIFIED_C1_READY`, subject research not yet performed;
+- Trans-Saharan trade network 1300 — `QUALIFIED_C1_READY`, subject research not yet performed;
+- Sápmi / Sámi communities 1600 — `QUALIFIED_C1_READY`, subject research not yet performed;
+- Kalabhra 500 — remains `HOLD_IDENTITY_OR_TIME`.
 
-Smallest correction:
-- add `reviews/` to the safe text roots;
-- preserve the existing suffix allowlist (`.md/.csv/.json/.txt`);
-- keep SQL, Python, binary and unknown review paths database-gated;
-- add positive + negative unit tests.
+D-099 keeps the two reviewed post-v2 rows as a durable delta rather than creating v3
+without a publication, consumer, cumulative-reconciliation or canonical-release trigger.
 
-This does not weaken database verification for code, schema, migrations, executable
-artifacts or unknown paths.
+PR #281 fixed the CI-cost defect that caused review-only text changes under `reviews/`
+to start PostGIS. Review markdown/CSV/JSON/text now follows the same cheap path as other
+safe research text; executable, SQL, binary and unknown review paths remain fail-closed.
 
-Done gate:
-- unit regression passes;
-- PR cheap checks pass;
-- PR itself demonstrates the PostGIS `foundation` job is skipped;
-- merge and close #280.
+At this boundary choose the next justified D-096 mode. Sponsor continuation can
+authorize another bounded historical intake, but qualification does not require all
+three ready rows to be researched.
 
-After merge, return to D-096 mode selection. The next historical candidate should not
-start until this maintenance item is closed.
+No automatic P-level, practice geometry, R1 mutation, schema/ontology/database/API/
+frontend change, candidate integration, canonical release or public publication follows.
 
 ## Discovery execution
 
