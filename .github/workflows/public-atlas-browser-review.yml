@@ -33,6 +33,39 @@ jobs:
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
 
+      - name: Verify current live API regression boundary
+        shell: bash
+        env:
+          LIVE_API_URL: https://dilnayfllygkplsdymel.supabase.co/functions/v1/atlas-data
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/public-atlas-review/live
+          curl --fail --show-error --silent --max-time 20 \
+            -D /tmp/public-atlas-review/live/api-headers.txt \
+            "$LIVE_API_URL" \
+            -o /tmp/public-atlas-review/live/atlas-data.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          payload=json.loads(Path("/tmp/public-atlas-review/live/atlas-data.json").read_text())
+          names={p.get("display_name") or p.get("name") for p in payload.get("places", [])}
+          summary={
+              "release_version": payload.get("release_version"),
+              "canonical": payload.get("canonical"),
+              "place_count": len(payload.get("places", [])),
+              "has_hittite": "Hittite central Anatolia" in names,
+              "data_boundary": payload.get("data_boundary"),
+          }
+          Path("/tmp/public-atlas-review/live/api-summary.json").write_text(
+              json.dumps(summary,indent=2)+"\n"
+          )
+          print(json.dumps(summary,indent=2))
+          assert payload.get("release_version") == "mvp-preview-ancient-v2", summary
+          assert payload.get("canonical") is False, summary
+          assert "Hittite central Anatolia" in names, summary
+          PY
+
       - name: Review live public atlas
         working-directory: web
         shell: bash
@@ -51,6 +84,7 @@ jobs:
             --force-api-failure
 
       - name: Verify immutable v0.7.0 stage API
+        if: always()
         shell: bash
         env:
           STAGE_API_URL: https://dilnayfllygkplsdymel.supabase.co/functions/v1/atlas-data-v070-stage
@@ -91,6 +125,7 @@ jobs:
             /tmp/public-atlas-review/stage/api-headers.txt
 
       - name: Build web against v0.7.0 stage API
+        if: always()
         working-directory: web
         shell: bash
         env:
@@ -98,6 +133,7 @@ jobs:
         run: npm run build
 
       - name: Review v0.7.0 staged browser
+        if: always()
         working-directory: web
         shell: bash
         run: |
