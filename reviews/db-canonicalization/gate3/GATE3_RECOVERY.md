@@ -8,7 +8,7 @@
 
 PR #317 added a read-only Supabase backup-inventory workflow.
 
-Run \`36266187423\` proved:
+Run `36266187423` proved:
 - the configured management token exists;
 - the backup inventory request returns HTTP **403**.
 
@@ -27,7 +27,8 @@ Recovery inputs:
 
 1. repository migrations through the exact schema head;
 2. the committed Gate-3 full-state preservation bundle;
-3. the pinned Natural Earth 10m cartography source used by D-107.
+3. the pinned Natural Earth 10m cartography source used by D-107/D-108;
+4. the production-captured portable cartography fingerprint.
 
 Recovery procedure:
 
@@ -38,8 +39,8 @@ Recovery procedure:
 5. restore frozen composite objects with stable IDs and original metadata;
 6. recompute every top-level composite object digest;
 7. require exact frozen object digests for the reviewed relational state;
-8. verify cartography using exact immutable source identity, SRID, validity and
-   non-emptiness; record the rebuilt runtime EWKB fingerprint separately.
+8. require the portable cartography fingerprint to match exactly: SRID, geometry type,
+   component/point counts, rounded geodesic area and normalized WKB digest/size.
 
 Raw EWKB remains recorded as the production implementation fingerprint from the frozen
 live proof. It is deliberately not used as a cross-engine recovery invariant because
@@ -64,13 +65,13 @@ not represented as existing today.
 
 ## Success criterion
 
-\`GATE3_LOGICAL_RECOVERY_PASS\` requires a fresh-database CI restore whose:
+`GATE3_LOGICAL_RECOVERY_PASS` requires a fresh-database CI restore whose:
 - reviewed research-object digests exactly match the frozen live bundle;
-- cartography source commit/blob/content identity and SRID match exactly;
-- rebuilt cartography is valid and non-empty, while its runtime EWKB fingerprint is
-  reported separately from the frozen production EWKB fingerprint;
-- the logical database-state SHA-256, using the frozen cartography identity after the
-  source-equivalence check, equals
-  \`31b7a7b675445e5758ffd68d64ff0f0cde83df1b0ea65f29835246deb2ae26ff\`.
+- portable cartography fingerprint exactly matches the production-captured fingerprint;
+- raw runtime EWKB is reported separately from the frozen production EWKB fingerprint;
+- frozen production database-state SHA-256 remains
+  `31b7a7b675445e5758ffd68d64ff0f0cde83df1b0ea65f29835246deb2ae26ff`;
+- the tool emits a separate logical-recovery state digest over exact research objects
+  plus the portable cartography fingerprint.
 
 No production state, canonical release, public channel or UI is changed by this proof.
