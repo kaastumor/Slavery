@@ -1,0 +1,2363 @@
+{
+  "04389989-f2d1-5ae3-9cbf-c7db10c8f808": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -2000,
+      "from_year": -2999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-2999,-1999)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "3000–2001 BCE",
+      "region_label_raw": "North Africa & Arabia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "04389989-f2d1-5ae3-9cbf-c7db10c8f808",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "05616199-08e9-55ef-a013-7307fdf030c1": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1799,
+      "from_year": 1500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1500,1800)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1500–1799",
+      "region_label_raw": "South Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "05616199-08e9-55ef-a013-7307fdf030c1",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "0bd84e5d-0ee4-5bee-8f59-ac0f2b006e9e": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 499,
+      "from_year": 1,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1,500)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1–499 CE",
+      "region_label_raw": "West & Central Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "0bd84e5d-0ee4-5bee-8f59-ac0f2b006e9e",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "0d898106-9b18-5d4f-8849-ca25d598e5b2": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1499,
+      "from_year": 1000,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1000,1500)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1499",
+      "region_label_raw": "West & Central Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "0d898106-9b18-5d4f-8849-ca25d598e5b2",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "0fb06de5-2a02-5196-ba00-60d543394ee7": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.5.0 Evidence!4; coverage=P.",
+        "locator": "v0.5.0 Evidence!4",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "ed3a7536-e0ca-5103-bb3b-f2e026bf5594",
+        "coverage_assessment_id": "0fb06de5-2a02-5196-ba00-60d543394ee7"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -2000,
+      "from_year": -2999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-2999,-1999)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "3000–2001 BCE",
+      "region_label_raw": "Europe & Mediterranean",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "0fb06de5-2a02-5196-ba00-60d543394ee7",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "109fb3bb-f404-5728-a0e7-90bc10f70f1f": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1799,
+      "from_year": 1500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1500,1800)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1500–1799",
+      "region_label_raw": "West & Central Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "109fb3bb-f404-5728-a0e7-90bc10f70f1f",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "1334e3c3-c38e-522e-a5c8-ba0287638220": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.9 Evidence!9; coverage=RI.",
+        "locator": "v0.4.9 Evidence!9",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "ecb0cfc9-0511-5b18-91dd-e30ed29df3ae",
+        "coverage_assessment_id": "1334e3c3-c38e-522e-a5c8-ba0287638220"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -2000,
+      "from_year": -2999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-2999,-1999)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "3000–2001 BCE",
+      "region_label_raw": "East Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "1334e3c3-c38e-522e-a5c8-ba0287638220",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "13b6fa4b-c750-5801-89ca-ac3bdb2308e6": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1799,
+      "from_year": 1500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1500,1800)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1500–1799",
+      "region_label_raw": "Europe & Mediterranean",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "13b6fa4b-c750-5801-89ca-ac3bdb2308e6",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "18f581f2-45ea-520f-96c5-c471fda55cd7": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 499,
+      "from_year": 1,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1,500)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1–499 CE",
+      "region_label_raw": "South Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "18f581f2-45ea-520f-96c5-c471fda55cd7",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "1ac5ca78-0661-57e9-ac63-7e12b4b14e7f": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.7 Evidence!12; coverage=S.",
+        "locator": "v0.4.7 Evidence!12",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "9dfc9c89-f9b9-4d12-b6fd-28ddc3f399db",
+        "coverage_assessment_id": "1ac5ca78-0661-57e9-ac63-7e12b4b14e7f"
+      },
+      {
+        "notes": "Reviewed source cited by v0.4.7 Evidence!13; coverage=S.",
+        "locator": "v0.4.7 Evidence!13",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "f8259d71-ea27-4658-a2d0-2bae202e2eb7",
+        "coverage_assessment_id": "1ac5ca78-0661-57e9-ac63-7e12b4b14e7f"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": null,
+      "from_year": 1900,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1900,)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1900–present",
+      "region_label_raw": "Americas",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "1ac5ca78-0661-57e9-ac63-7e12b4b14e7f",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "1bf30bed-828a-5b9e-b830-47fc615ce520": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 499,
+      "from_year": 1,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1,500)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1–499 CE",
+      "region_label_raw": "East & Southern Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "1bf30bed-828a-5b9e-b830-47fc615ce520",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "1e4e6ad8-a1e3-5166-b537-ae2a83ea0397": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1799,
+      "from_year": 1500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1500,1800)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1500–1799",
+      "region_label_raw": "Americas",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "1e4e6ad8-a1e3-5166-b537-ae2a83ea0397",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "1ec93ae8-9eb8-5667-ab54-177eaf9d818c": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 0,
+      "from_year": -999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-999,1)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1 BCE",
+      "region_label_raw": "Europe & Mediterranean",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "1ec93ae8-9eb8-5667-ab54-177eaf9d818c",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "21ea9601-3093-56a5-9167-331289d318c0": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1499,
+      "from_year": 1000,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1000,1500)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1499",
+      "region_label_raw": "Americas",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "21ea9601-3093-56a5-9167-331289d318c0",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "21f1a8fa-9048-53be-bcac-3413714e0767": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1799,
+      "from_year": 1500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1500,1800)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1500–1799",
+      "region_label_raw": "East Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "21f1a8fa-9048-53be-bcac-3413714e0767",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "22b37065-99f2-509d-bc38-6755f0c18d66": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.7 Evidence!10; coverage=S.",
+        "locator": "v0.4.7 Evidence!10",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "64a20897-9b86-5373-af1f-798ba331d7e0",
+        "coverage_assessment_id": "22b37065-99f2-509d-bc38-6755f0c18d66"
+      },
+      {
+        "notes": "Reviewed source cited by v0.4.7 Evidence!11; coverage=S.",
+        "locator": "v0.4.7 Evidence!11",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "72043f24-92d0-5c2b-9393-4c87e4405e08",
+        "coverage_assessment_id": "22b37065-99f2-509d-bc38-6755f0c18d66"
+      },
+      {
+        "notes": "Reviewed source cited by v0.4.7 Evidence!9; coverage=S.",
+        "locator": "v0.4.7 Evidence!9",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "fac215e5-fd40-5c70-8184-29abb1b098ff",
+        "coverage_assessment_id": "22b37065-99f2-509d-bc38-6755f0c18d66"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": null,
+      "from_year": 1900,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1900,)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1900–present",
+      "region_label_raw": "East Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "22b37065-99f2-509d-bc38-6755f0c18d66",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "27a131c2-7387-5ecd-b6d4-664899a07bc0": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.9 Evidence!10; coverage=D.",
+        "locator": "v0.4.9 Evidence!10",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "0e0358e5-6b88-526e-a65d-16f0a2958482",
+        "coverage_assessment_id": "27a131c2-7387-5ecd-b6d4-664899a07bc0"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -1000,
+      "from_year": -1999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-1999,-999)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "2000–1001 BCE",
+      "region_label_raw": "East Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "D",
+      "coverage_assessment_id": "27a131c2-7387-5ecd-b6d4-664899a07bc0",
+      "normalized_coverage_state_code": "disputed"
+    }
+  },
+  "27e448bc-ab90-55a6-94f6-baf750af82d6": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.8 Evidence!7; coverage=RI.",
+        "locator": "v0.4.8 Evidence!7",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "68faad69-da4e-5325-8104-560ee0723277",
+        "coverage_assessment_id": "27e448bc-ab90-55a6-94f6-baf750af82d6"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 0,
+      "from_year": -999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-999,1)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1 BCE",
+      "region_label_raw": "Southeast Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "27e448bc-ab90-55a6-94f6-baf750af82d6",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "280b5bc0-32d2-510e-a92d-c62350233c96": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 999,
+      "from_year": 500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[500,1000)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "500–999",
+      "region_label_raw": "Mesopotamia & Near East",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "280b5bc0-32d2-510e-a92d-c62350233c96",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "287d3203-9026-5f7b-9173-0d5d455333e0": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 0,
+      "from_year": -999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-999,1)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1 BCE",
+      "region_label_raw": "North Africa & Arabia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "287d3203-9026-5f7b-9173-0d5d455333e0",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "29baf8c8-414b-54a8-a8b6-e8c8ad6423eb": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.5.0 Evidence!11; coverage=RI.",
+        "locator": "v0.5.0 Evidence!11",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "cc473596-2a3d-5d28-a009-3bbd3cdebe17",
+        "coverage_assessment_id": "29baf8c8-414b-54a8-a8b6-e8c8ad6423eb"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -2000,
+      "from_year": -2999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-2999,-1999)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "3000–2001 BCE",
+      "region_label_raw": "Americas",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "29baf8c8-414b-54a8-a8b6-e8c8ad6423eb",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "2ec00d04-2258-5799-b55d-6d867583d91e": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 0,
+      "from_year": -999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-999,1)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1 BCE",
+      "region_label_raw": "Iran & Central Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "2ec00d04-2258-5799-b55d-6d867583d91e",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "2fbbc709-8e53-5553-9962-2a860a5c3740": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.9 Evidence!4; coverage=S.",
+        "locator": "v0.4.9 Evidence!4",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "c31946b4-be4a-55c9-ae4f-b2443120854e",
+        "coverage_assessment_id": "2fbbc709-8e53-5553-9962-2a860a5c3740"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -1000,
+      "from_year": -1999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-1999,-999)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "2000–1001 BCE",
+      "region_label_raw": "Europe & Mediterranean",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "2fbbc709-8e53-5553-9962-2a860a5c3740",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "31b0bc23-51e2-5428-b8f2-169c434cfe3d": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1799,
+      "from_year": 1500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1500,1800)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1500–1799",
+      "region_label_raw": "North Africa & Arabia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "31b0bc23-51e2-5428-b8f2-169c434cfe3d",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "325bd11b-6203-5afd-bfdc-775af9b5c0c9": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1499,
+      "from_year": 1000,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1000,1500)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1499",
+      "region_label_raw": "North Africa & Arabia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "325bd11b-6203-5afd-bfdc-775af9b5c0c9",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "33ef0aac-f6eb-5142-a561-4839a982ff1b": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 499,
+      "from_year": 1,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1,500)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1–499 CE",
+      "region_label_raw": "Southeast Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "33ef0aac-f6eb-5142-a561-4839a982ff1b",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "360ce290-d1bd-58d1-b447-ae92367db85d": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 0,
+      "from_year": -999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-999,1)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1 BCE",
+      "region_label_raw": "South Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "360ce290-d1bd-58d1-b447-ae92367db85d",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "3ceda2c1-1a19-5f03-b7ef-e01c62bfd7bf": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.8 Evidence!8; coverage=RI.",
+        "locator": "v0.4.8 Evidence!8",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "b0e5925b-af1a-5588-8711-fd52204844c0",
+        "coverage_assessment_id": "3ceda2c1-1a19-5f03-b7ef-e01c62bfd7bf"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 0,
+      "from_year": -999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-999,1)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1 BCE",
+      "region_label_raw": "West & Central Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "3ceda2c1-1a19-5f03-b7ef-e01c62bfd7bf",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "3e85b82e-3903-5b7c-a497-0400185c4d20": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": null,
+      "from_year": 1900,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1900,)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1900–present",
+      "region_label_raw": "Southeast Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "3e85b82e-3903-5b7c-a497-0400185c4d20",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "41216c40-0ed7-53b8-b006-e9156628af1d": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1899,
+      "from_year": 1800,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1800,1900)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1800–1899",
+      "region_label_raw": "Europe & Mediterranean",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "41216c40-0ed7-53b8-b006-e9156628af1d",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "494c8759-2937-5492-abbb-63530b845e29": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.5.0 Evidence!6; coverage=RI.",
+        "locator": "v0.5.0 Evidence!6",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "c07a40ea-1af1-5005-8e4f-450f1529f0de",
+        "coverage_assessment_id": "494c8759-2937-5492-abbb-63530b845e29"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -1000,
+      "from_year": -1999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-1999,-999)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "2000–1001 BCE",
+      "region_label_raw": "Southeast Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "494c8759-2937-5492-abbb-63530b845e29",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "4a03f798-9a14-5b47-bef6-9faaefb7b7f8": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -1000,
+      "from_year": -1999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-1999,-999)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "2000–1001 BCE",
+      "region_label_raw": "North Africa & Arabia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "4a03f798-9a14-5b47-bef6-9faaefb7b7f8",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "4f3890ac-8c5b-5131-b231-b4dbf017de61": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 499,
+      "from_year": 1,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1,500)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1–499 CE",
+      "region_label_raw": "Iran & Central Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "4f3890ac-8c5b-5131-b231-b4dbf017de61",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "503e7d7e-3122-5a6b-8e86-445d43c6c79c": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.5.0 Evidence!10; coverage=RI.",
+        "locator": "v0.5.0 Evidence!10",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "b0e5925b-af1a-5588-8711-fd52204844c0",
+        "coverage_assessment_id": "503e7d7e-3122-5a6b-8e86-445d43c6c79c"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -1000,
+      "from_year": -1999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-1999,-999)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "2000–1001 BCE",
+      "region_label_raw": "East & Southern Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "503e7d7e-3122-5a6b-8e86-445d43c6c79c",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "5192a891-8c31-55da-8a9a-8f09717a0abd": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.5.0 Evidence!13; coverage=RI.",
+        "locator": "v0.5.0 Evidence!13",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "8d2cd4a5-007a-5520-8d47-694cefd4c240",
+        "coverage_assessment_id": "5192a891-8c31-55da-8a9a-8f09717a0abd"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -2000,
+      "from_year": -2999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-2999,-1999)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "3000–2001 BCE",
+      "region_label_raw": "Oceania & Pacific",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "5192a891-8c31-55da-8a9a-8f09717a0abd",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "52e9efdf-0b0a-5e35-b480-27526e2d1fd2": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -1000,
+      "from_year": -1999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-1999,-999)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "2000–1001 BCE",
+      "region_label_raw": "Mesopotamia & Near East",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "52e9efdf-0b0a-5e35-b480-27526e2d1fd2",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "548cce0a-0a69-5b28-916e-c01a4f8611b9": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.9 Evidence!11; coverage=RI.",
+        "locator": "v0.4.9 Evidence!11",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "d123db0d-356d-520f-83d4-adbcd9355a81",
+        "coverage_assessment_id": "548cce0a-0a69-5b28-916e-c01a4f8611b9"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 0,
+      "from_year": -999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-999,1)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1 BCE",
+      "region_label_raw": "Americas",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "548cce0a-0a69-5b28-916e-c01a4f8611b9",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "54cfcbbb-ed9a-5f87-b47d-ecc89ebc2631": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 999,
+      "from_year": 500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[500,1000)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "500–999",
+      "region_label_raw": "South Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "54cfcbbb-ed9a-5f87-b47d-ecc89ebc2631",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "5674ee52-eaf1-5cc1-a7ce-396f208ced31": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.8 Evidence!6; coverage=S.",
+        "locator": "v0.4.8 Evidence!6",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "dc410234-3f13-5e41-9ce9-4391a850cc23",
+        "coverage_assessment_id": "5674ee52-eaf1-5cc1-a7ce-396f208ced31"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": null,
+      "from_year": 1900,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1900,)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1900–present",
+      "region_label_raw": "Mesopotamia & Near East",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "5674ee52-eaf1-5cc1-a7ce-396f208ced31",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "598b9464-9631-5639-b265-482183249a83": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1899,
+      "from_year": 1800,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1800,1900)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1800–1899",
+      "region_label_raw": "Southeast Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "598b9464-9631-5639-b265-482183249a83",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "6cc9d392-aef4-5546-8b12-109b342f425f": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.8 Evidence!5; coverage=S.",
+        "locator": "v0.4.8 Evidence!5",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "80a15e45-28fb-541b-b6e2-e4f0584bb980",
+        "coverage_assessment_id": "6cc9d392-aef4-5546-8b12-109b342f425f"
+      },
+      {
+        "notes": "Reviewed source cited by v0.4.8 Evidence!4; coverage=S.",
+        "locator": "v0.4.8 Evidence!4",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "b32499b8-ed21-5f46-9937-4c69972e5bdb",
+        "coverage_assessment_id": "6cc9d392-aef4-5546-8b12-109b342f425f"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": null,
+      "from_year": 1900,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1900,)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1900–present",
+      "region_label_raw": "Europe & Mediterranean",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "6cc9d392-aef4-5546-8b12-109b342f425f",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "6f112fd1-5270-57d5-868e-6f7198de7a98": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1899,
+      "from_year": 1800,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1800,1900)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1800–1899",
+      "region_label_raw": "South Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "6f112fd1-5270-57d5-868e-6f7198de7a98",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "719b885c-1ea8-5e1d-868c-93e563191939": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 0,
+      "from_year": -999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-999,1)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1 BCE",
+      "region_label_raw": "East Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "719b885c-1ea8-5e1d-868c-93e563191939",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "73985591-76f0-5499-bf43-f64765c0019f": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 999,
+      "from_year": 500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[500,1000)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "500–999",
+      "region_label_raw": "East & Southern Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "73985591-76f0-5499-bf43-f64765c0019f",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "770411d7-5bbf-5c44-8a84-e7c118bdfaf0": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 999,
+      "from_year": 500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[500,1000)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "500–999",
+      "region_label_raw": "Americas",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "D",
+      "coverage_assessment_id": "770411d7-5bbf-5c44-8a84-e7c118bdfaf0",
+      "normalized_coverage_state_code": "disputed"
+    }
+  },
+  "77ee6004-d905-5c0e-9f55-bad25323f530": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 499,
+      "from_year": 1,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1,500)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1–499 CE",
+      "region_label_raw": "Mesopotamia & Near East",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "77ee6004-d905-5c0e-9f55-bad25323f530",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "795942bf-e908-5c83-bdb2-75ebef8c93f2": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 499,
+      "from_year": 1,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1,500)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1–499 CE",
+      "region_label_raw": "North Africa & Arabia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "795942bf-e908-5c83-bdb2-75ebef8c93f2",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "7b530faf-5d3f-5597-94bf-f20fc2c42610": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1899,
+      "from_year": 1800,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1800,1900)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1800–1899",
+      "region_label_raw": "West & Central Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "7b530faf-5d3f-5597-94bf-f20fc2c42610",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "7be74348-856e-5c91-bc38-3b445a6edafc": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": null,
+      "from_year": 1900,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1900,)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1900–present",
+      "region_label_raw": "South Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "7be74348-856e-5c91-bc38-3b445a6edafc",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "81088a95-7908-560f-bde3-c60696de8cbe": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1899,
+      "from_year": 1800,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1800,1900)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1800–1899",
+      "region_label_raw": "Oceania & Pacific",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "81088a95-7908-560f-bde3-c60696de8cbe",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "81bc15b9-2121-5c5e-8445-2fc9a1fdbf80": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.5.0 Evidence!8; coverage=RI.",
+        "locator": "v0.5.0 Evidence!8",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "b0e5925b-af1a-5588-8711-fd52204844c0",
+        "coverage_assessment_id": "81bc15b9-2121-5c5e-8445-2fc9a1fdbf80"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -1000,
+      "from_year": -1999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-1999,-999)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "2000–1001 BCE",
+      "region_label_raw": "West & Central Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "81bc15b9-2121-5c5e-8445-2fc9a1fdbf80",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "81d43468-3018-5d57-a33a-91b855c36e3c": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.5.0 Evidence!12; coverage=RI.",
+        "locator": "v0.5.0 Evidence!12",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "cc473596-2a3d-5d28-a009-3bbd3cdebe17",
+        "coverage_assessment_id": "81d43468-3018-5d57-a33a-91b855c36e3c"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -1000,
+      "from_year": -1999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-1999,-999)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "2000–1001 BCE",
+      "region_label_raw": "Americas",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "81d43468-3018-5d57-a33a-91b855c36e3c",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "82779b92-9f2c-5f49-a266-0fe26bb7c69b": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1499,
+      "from_year": 1000,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1000,1500)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1499",
+      "region_label_raw": "Oceania & Pacific",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "82779b92-9f2c-5f49-a266-0fe26bb7c69b",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "87617a75-a7e8-5421-b0fb-730ffccf15e2": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.5.0 Evidence!14; coverage=RI.",
+        "locator": "v0.5.0 Evidence!14",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "8d2cd4a5-007a-5520-8d47-694cefd4c240",
+        "coverage_assessment_id": "87617a75-a7e8-5421-b0fb-730ffccf15e2"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -1000,
+      "from_year": -1999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-1999,-999)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "2000–1001 BCE",
+      "region_label_raw": "Oceania & Pacific",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "87617a75-a7e8-5421-b0fb-730ffccf15e2",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "888f6186-62fb-5447-989e-118b0ae8611d": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 999,
+      "from_year": 500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[500,1000)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "500–999",
+      "region_label_raw": "North Africa & Arabia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "888f6186-62fb-5447-989e-118b0ae8611d",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "8c24a35c-e05a-5338-9794-6a89cbc01617": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": null,
+      "from_year": 1900,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1900,)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1900–present",
+      "region_label_raw": "North Africa & Arabia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "8c24a35c-e05a-5338-9794-6a89cbc01617",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "8d079894-565f-57ca-b9d7-cb43b266233a": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.7 Evidence!5; coverage=S.",
+        "locator": "v0.4.7 Evidence!5",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "08b2c86a-bfe6-5b1b-aaab-65acf549ea6d",
+        "coverage_assessment_id": "8d079894-565f-57ca-b9d7-cb43b266233a"
+      },
+      {
+        "notes": "Reviewed source cited by v0.4.7 Evidence!4; coverage=S.",
+        "locator": "v0.4.7 Evidence!4",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "68a5ab9f-3813-5c7d-bdca-b01eeffacfca",
+        "coverage_assessment_id": "8d079894-565f-57ca-b9d7-cb43b266233a"
+      },
+      {
+        "notes": "Reviewed source cited by v0.4.7 Evidence!6; coverage=S.",
+        "locator": "v0.4.7 Evidence!6",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "eebe7c2a-78c4-5b9e-9f87-8b11686d4c7d",
+        "coverage_assessment_id": "8d079894-565f-57ca-b9d7-cb43b266233a"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 999,
+      "from_year": 500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[500,1000)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "500–999",
+      "region_label_raw": "Europe & Mediterranean",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "8d079894-565f-57ca-b9d7-cb43b266233a",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "8d8fe2a3-9a7f-5026-bd71-40f41863cbd3": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1899,
+      "from_year": 1800,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1800,1900)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1800–1899",
+      "region_label_raw": "East Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "8d8fe2a3-9a7f-5026-bd71-40f41863cbd3",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "9123ab4d-5cfe-5aed-8242-c9f6aca8c93d": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1499,
+      "from_year": 1000,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1000,1500)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1499",
+      "region_label_raw": "Mesopotamia & Near East",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "9123ab4d-5cfe-5aed-8242-c9f6aca8c93d",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "9176260e-e843-532e-b6b3-3a58ab9ace76": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1499,
+      "from_year": 1000,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1000,1500)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1499",
+      "region_label_raw": "East Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "9176260e-e843-532e-b6b3-3a58ab9ace76",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "9216f7bf-0718-575a-bcdd-03fe1a766a20": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1899,
+      "from_year": 1800,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1800,1900)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1800–1899",
+      "region_label_raw": "Americas",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "9216f7bf-0718-575a-bcdd-03fe1a766a20",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "945ab0b7-14f5-5c5e-92a8-e0cb52c98866": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.5.0 Evidence!7; coverage=RI.",
+        "locator": "v0.5.0 Evidence!7",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "b0e5925b-af1a-5588-8711-fd52204844c0",
+        "coverage_assessment_id": "945ab0b7-14f5-5c5e-92a8-e0cb52c98866"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -2000,
+      "from_year": -2999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-2999,-1999)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "3000–2001 BCE",
+      "region_label_raw": "West & Central Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "945ab0b7-14f5-5c5e-92a8-e0cb52c98866",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "9890e44a-7060-5af2-a051-ef0b57526654": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.9 Evidence!8; coverage=P.",
+        "locator": "v0.4.9 Evidence!8",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "d35fcca3-0169-5c1a-819e-57471a0e6ecd",
+        "coverage_assessment_id": "9890e44a-7060-5af2-a051-ef0b57526654"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -1000,
+      "from_year": -1999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-1999,-999)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "2000–1001 BCE",
+      "region_label_raw": "South Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "9890e44a-7060-5af2-a051-ef0b57526654",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "9dfe2fb0-053b-522f-8663-9d0c22531471": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.7 Evidence!8; coverage=S.",
+        "locator": "v0.4.7 Evidence!8",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "7c031f3b-20d7-56e3-9651-8ce512665b15",
+        "coverage_assessment_id": "9dfe2fb0-053b-522f-8663-9d0c22531471"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": null,
+      "from_year": 1900,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1900,)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1900–present",
+      "region_label_raw": "Iran & Central Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "9dfe2fb0-053b-522f-8663-9d0c22531471",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "a091adba-2fb6-5c4c-a1ef-fda172af1376": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.8 Evidence!9; coverage=RI.",
+        "locator": "v0.4.8 Evidence!9",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "b0e5925b-af1a-5588-8711-fd52204844c0",
+        "coverage_assessment_id": "a091adba-2fb6-5c4c-a1ef-fda172af1376"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 0,
+      "from_year": -999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-999,1)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1 BCE",
+      "region_label_raw": "East & Southern Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "a091adba-2fb6-5c4c-a1ef-fda172af1376",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "a2f83bde-3ffc-5d68-8b96-bc3742b1c8e1": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1499,
+      "from_year": 1000,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1000,1500)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1499",
+      "region_label_raw": "Southeast Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "a2f83bde-3ffc-5d68-8b96-bc3742b1c8e1",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "ada798a5-4243-5c52-b169-ff89d067fa01": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.9 Evidence!6; coverage=RI.",
+        "locator": "v0.4.9 Evidence!6",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "d1290e6a-94c3-5e1a-ba28-07e24490b47d",
+        "coverage_assessment_id": "ada798a5-4243-5c52-b169-ff89d067fa01"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -1000,
+      "from_year": -1999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-1999,-999)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "2000–1001 BCE",
+      "region_label_raw": "Iran & Central Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "ada798a5-4243-5c52-b169-ff89d067fa01",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "b1b5fb11-fa9e-5a02-8c77-780523bc7603": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1499,
+      "from_year": 1000,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1000,1500)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1499",
+      "region_label_raw": "East & Southern Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "b1b5fb11-fa9e-5a02-8c77-780523bc7603",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "b294b37d-1f29-5814-8eab-5782dfba55ab": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1499,
+      "from_year": 1000,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1000,1500)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1499",
+      "region_label_raw": "Iran & Central Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "b294b37d-1f29-5814-8eab-5782dfba55ab",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "b2db339a-c5be-5d6a-a2ed-e1bfe6efbd61": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": null,
+      "from_year": 1900,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1900,)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1900–present",
+      "region_label_raw": "Oceania & Pacific",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "D",
+      "coverage_assessment_id": "b2db339a-c5be-5d6a-a2ed-e1bfe6efbd61",
+      "normalized_coverage_state_code": "disputed"
+    }
+  },
+  "b2e04b87-bd93-56bd-89fd-1cbfe1e58546": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 499,
+      "from_year": 1,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1,500)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1–499 CE",
+      "region_label_raw": "Oceania & Pacific",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "b2e04b87-bd93-56bd-89fd-1cbfe1e58546",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "b329d36c-1735-51e9-aba8-6d70d1c1e831": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": null,
+      "from_year": 1900,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1900,)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1900–present",
+      "region_label_raw": "East & Southern Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "b329d36c-1735-51e9-aba8-6d70d1c1e831",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "b59f8b61-ab5b-5dac-bb3c-356866d9c16e": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 0,
+      "from_year": -999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-999,1)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1 BCE",
+      "region_label_raw": "Mesopotamia & Near East",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "b59f8b61-ab5b-5dac-bb3c-356866d9c16e",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "b7217503-486c-5cd4-b1aa-296f4e5396a7": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 999,
+      "from_year": 500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[500,1000)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "500–999",
+      "region_label_raw": "Oceania & Pacific",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "b7217503-486c-5cd4-b1aa-296f4e5396a7",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "b75d9bc0-0935-59ea-82b4-558dde7fb3c0": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.5.0 Evidence!5; coverage=RI.",
+        "locator": "v0.5.0 Evidence!5",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "be9d708b-ad94-591c-9608-b3674f61c293",
+        "coverage_assessment_id": "b75d9bc0-0935-59ea-82b4-558dde7fb3c0"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -2000,
+      "from_year": -2999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-2999,-1999)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "3000–2001 BCE",
+      "region_label_raw": "Southeast Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "b75d9bc0-0935-59ea-82b4-558dde7fb3c0",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "b9eb61a4-8f90-5711-ad0a-3537c1155da8": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1799,
+      "from_year": 1500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1500,1800)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1500–1799",
+      "region_label_raw": "East & Southern Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "b9eb61a4-8f90-5711-ad0a-3537c1155da8",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "bb72cc52-a192-5ddd-9a02-2a7fdeeb3fbd": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 499,
+      "from_year": 1,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1,500)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1–499 CE",
+      "region_label_raw": "Americas",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "D",
+      "coverage_assessment_id": "bb72cc52-a192-5ddd-9a02-2a7fdeeb3fbd",
+      "normalized_coverage_state_code": "disputed"
+    }
+  },
+  "bfa24d57-8851-5ab9-b8b6-d98f05b342e9": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1799,
+      "from_year": 1500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1500,1800)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1500–1799",
+      "region_label_raw": "Oceania & Pacific",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "bfa24d57-8851-5ab9-b8b6-d98f05b342e9",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "c063669f-9891-5dd4-8831-b4e1eb024f94": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": null,
+      "from_year": 1900,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1900,)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1900–present",
+      "region_label_raw": "West & Central Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "c063669f-9891-5dd4-8831-b4e1eb024f94",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "c2ebcec5-94f1-56ea-a8fa-a319233eb217": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 999,
+      "from_year": 500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[500,1000)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "500–999",
+      "region_label_raw": "West & Central Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "c2ebcec5-94f1-56ea-a8fa-a319233eb217",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "d25e2f6b-6c98-5de7-a8a4-caefe7b33531": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.9 Evidence!5; coverage=P.",
+        "locator": "v0.4.9 Evidence!5",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "5122f730-bd82-55d7-b7ac-29dd3cb25fd5",
+        "coverage_assessment_id": "d25e2f6b-6c98-5de7-a8a4-caefe7b33531"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -2000,
+      "from_year": -2999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-2999,-1999)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "3000–2001 BCE",
+      "region_label_raw": "Iran & Central Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "d25e2f6b-6c98-5de7-a8a4-caefe7b33531",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "d284c436-4a7b-5c50-b450-613f52d68f5f": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 999,
+      "from_year": 500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[500,1000)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "500–999",
+      "region_label_raw": "Iran & Central Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "d284c436-4a7b-5c50-b450-613f52d68f5f",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "d292fc50-7efb-5ae7-aab3-886863589fef": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1499,
+      "from_year": 1000,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1000,1500)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1499",
+      "region_label_raw": "Europe & Mediterranean",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "d292fc50-7efb-5ae7-aab3-886863589fef",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "d9e8a19e-34dc-547f-ae77-a40ef377f678": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1899,
+      "from_year": 1800,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1800,1900)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1800–1899",
+      "region_label_raw": "Iran & Central Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "d9e8a19e-34dc-547f-ae77-a40ef377f678",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "dd9da828-ebe5-53e3-bfc0-6946944a1810": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1499,
+      "from_year": 1000,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1000,1500)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1499",
+      "region_label_raw": "South Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "dd9da828-ebe5-53e3-bfc0-6946944a1810",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "de4a41ac-2d57-5dad-b2d9-9d96ad6ce1f6": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1799,
+      "from_year": 1500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1500,1800)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1500–1799",
+      "region_label_raw": "Iran & Central Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "de4a41ac-2d57-5dad-b2d9-9d96ad6ce1f6",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "deb584f1-57ca-5de6-92fa-47b691746375": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -2000,
+      "from_year": -2999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-2999,-1999)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "3000–2001 BCE",
+      "region_label_raw": "Mesopotamia & Near East",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "deb584f1-57ca-5de6-92fa-47b691746375",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "e4bf66c1-3196-5962-84a5-6d6a5d198653": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 499,
+      "from_year": 1,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1,500)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1–499 CE",
+      "region_label_raw": "Europe & Mediterranean",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "e4bf66c1-3196-5962-84a5-6d6a5d198653",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "eaa1ab0a-e08f-5c49-8650-3dbdaa86638c": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 999,
+      "from_year": 500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[500,1000)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "500–999",
+      "region_label_raw": "East Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "eaa1ab0a-e08f-5c49-8650-3dbdaa86638c",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "ecfc83db-a735-5c28-ad2f-3e69aff4d543": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1799,
+      "from_year": 1500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1500,1800)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1500–1799",
+      "region_label_raw": "Southeast Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "ecfc83db-a735-5c28-ad2f-3e69aff4d543",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "ee320205-126e-56b7-9050-530b039e5334": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.7 Evidence!7; coverage=S.",
+        "locator": "v0.4.7 Evidence!7",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "e557c54f-98b0-5d92-bf1f-0ea020478f34",
+        "coverage_assessment_id": "ee320205-126e-56b7-9050-530b039e5334"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1899,
+      "from_year": 1800,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1800,1900)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1800–1899",
+      "region_label_raw": "Mesopotamia & Near East",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "ee320205-126e-56b7-9050-530b039e5334",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "ee59c6ac-cb97-588e-b640-3dcd755861e4": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1799,
+      "from_year": 1500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1500,1800)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1500–1799",
+      "region_label_raw": "Mesopotamia & Near East",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "ee59c6ac-cb97-588e-b640-3dcd755861e4",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "f0049a4c-b605-576d-9579-f260b6e30f1f": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.9 Evidence!7; coverage=RI.",
+        "locator": "v0.4.9 Evidence!7",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "0d40a480-029e-50eb-a8ae-373309715e8a",
+        "coverage_assessment_id": "f0049a4c-b605-576d-9579-f260b6e30f1f"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -2000,
+      "from_year": -2999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-2999,-1999)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "3000–2001 BCE",
+      "region_label_raw": "South Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "f0049a4c-b605-576d-9579-f260b6e30f1f",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "f1103f95-c0b7-57fe-869f-42366c7b628d": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.4.9 Evidence!12; coverage=RI.",
+        "locator": "v0.4.9 Evidence!12",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "2985eb5c-ce54-5c0b-b9b1-7f6e80d21196",
+        "coverage_assessment_id": "f1103f95-c0b7-57fe-869f-42366c7b628d"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 0,
+      "from_year": -999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-999,1)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1000–1 BCE",
+      "region_label_raw": "Oceania & Pacific",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "f1103f95-c0b7-57fe-869f-42366c7b628d",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "f1b555be-38ec-5ac9-9d0f-13720084ea8d": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 499,
+      "from_year": 1,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1,500)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1–499 CE",
+      "region_label_raw": "East Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "f1b555be-38ec-5ac9-9d0f-13720084ea8d",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "f491b9c0-7948-5f01-b04d-0ea3f350e84e": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1899,
+      "from_year": 1800,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1800,1900)",
+      "review_status": "reviewed",
+      "coverage_points": 2,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1800–1899",
+      "region_label_raw": "North Africa & Arabia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "P",
+      "coverage_assessment_id": "f491b9c0-7948-5f01-b04d-0ea3f350e84e",
+      "normalized_coverage_state_code": "reviewed"
+    }
+  },
+  "f5912bdc-db45-5800-99c8-590ce293e6ee": {
+    "sources": [
+      {
+        "notes": "Reviewed source cited by v0.5.0 Evidence!9; coverage=RI.",
+        "locator": "v0.5.0 Evidence!9",
+        "source_role": "evidence_sheet_source",
+        "source_version_id": "b0e5925b-af1a-5588-8711-fd52204844c0",
+        "coverage_assessment_id": "f5912bdc-db45-5800-99c8-590ce293e6ee"
+      }
+    ],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": -2000,
+      "from_year": -2999,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[-2999,-1999)",
+      "review_status": "reviewed",
+      "coverage_points": 1,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "3000–2001 BCE",
+      "region_label_raw": "East & Southern Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "RI",
+      "coverage_assessment_id": "f5912bdc-db45-5800-99c8-590ce293e6ee",
+      "normalized_coverage_state_code": "researched_inconclusive"
+    }
+  },
+  "fe44570e-cc88-5c6a-a19f-01bda4f0a7a0": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 1899,
+      "from_year": 1800,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[1800,1900)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "1800–1899",
+      "region_label_raw": "East & Southern Africa",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "fe44570e-cc88-5c6a-a19f-01bda4f0a7a0",
+      "normalized_coverage_state_code": "classified"
+    }
+  },
+  "ff50e791-faf1-57a6-828e-31d105ea9757": {
+    "sources": [],
+    "coverage_assessment": {
+      "notes": "Project research-coverage metadata; not historical prevalence or territorial P-level.",
+      "to_year": 999,
+      "from_year": 500,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": "[500,1000)",
+      "review_status": "reviewed",
+      "coverage_points": 3,
+      "release_version": "0.6.1",
+      "researchability": null,
+      "period_label_raw": "500–999",
+      "region_label_raw": "Southeast Asia",
+      "spatial_entity_id": null,
+      "publication_status": "unpublished",
+      "legacy_coverage_code": "S",
+      "coverage_assessment_id": "ff50e791-faf1-57a6-828e-31d105ea9757",
+      "normalized_coverage_state_code": "classified"
+    }
+  }
+}
