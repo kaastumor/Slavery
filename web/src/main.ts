@@ -16,6 +16,7 @@ import "./styles.css";
 setWorkerUrl(workerUrl);
 
 type SourceRef = {
+  source_version_id?: string;
   title: string;
   author_or_institution: string | null;
   source_type: string | null;
@@ -24,6 +25,10 @@ type SourceRef = {
   url: string | null;
   direction: "supports" | "challenges" | "qualifies" | "context" | string;
   locator: string | null;
+  directness?: string | null;
+  evidence_role?: string | null;
+  claim_fitness?: string | null;
+  independence_group?: string | null;
 };
 
 type Claim = {
