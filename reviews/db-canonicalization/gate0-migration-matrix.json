@@ -1,0 +1,367 @@
+{
+  "schema_version": "gate0-migration-matrix-v1",
+  "audit_date": "2026-09-26",
+  "repository_commit": "06c0d14b8f8b5312cea425bb15dee80b539b1c2a",
+  "repository_migration_count": 29,
+  "supabase_project_ref": "dilnayfllygkplsdymel",
+  "supabase_platform_entry_count": 29,
+  "checksum_ledger": {
+    "table": "atlas_meta.schema_migration",
+    "live_present": false,
+    "future_authority": "repository checksum ledger after verified bootstrap",
+    "action": "do_not_run_tools_migrate_up_until_verified_baseline_is_bootstrapped"
+  },
+  "platform_history_policy": "preserve known gaps/retries as legacy audit evidence; fail on any new drift",
+  "rows": [
+    {
+      "name": "0001_bootstrap",
+      "repository_path": "db/migrations/0001_bootstrap.sql",
+      "repository_git_blob_sha": "555af1ab4b0253b86ce7cc69889bff74bf51432e",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0002_vocabularies",
+      "repository_path": "db/migrations/0002_vocabularies.sql",
+      "repository_git_blob_sha": "5c43e12f60f96f5b1939ee78fffb2f22cab60616",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0003_core_entities",
+      "repository_path": "db/migrations/0003_core_entities.sql",
+      "repository_git_blob_sha": "60a3c306b0a7ea4eeebef784572ea9a6e6076575",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0004_claims_and_relations",
+      "repository_path": "db/migrations/0004_claims_and_relations.sql",
+      "repository_git_blob_sha": "bd80ec0e87c77158206d98f3ebf24bd1a8bd67c8",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0005_voyage_network",
+      "repository_path": "db/migrations/0005_voyage_network.sql",
+      "repository_git_blob_sha": "65e70d0cdff2ab7dc9d567dbe6d35f92e7e6b2ea",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0006_ingest_audit_publish",
+      "repository_path": "db/migrations/0006_ingest_audit_publish.sql",
+      "repository_git_blob_sha": "9a89cbc8bb18808d4e35bd2fca41aa226ca1bcbd",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0007_v061_crosswalks",
+      "repository_path": "db/migrations/0007_v061_crosswalks.sql",
+      "repository_git_blob_sha": "da39f49796d32016ac5fbf3aaa16d8ad329f95cc",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0008_crosswalk_constraints",
+      "repository_path": "db/migrations/0008_crosswalk_constraints.sql",
+      "repository_git_blob_sha": "80ed6b59ee252ca004e933bb7ade72aa715acbb0",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0009_nullable_practice_level",
+      "repository_path": "db/migrations/0009_nullable_practice_level.sql",
+      "repository_git_blob_sha": "ede2e1c8e44042baf0dc5db86e58ed18ede664fb",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0010_research_coverage_provenance",
+      "repository_path": "db/migrations/0010_research_coverage_provenance.sql",
+      "repository_git_blob_sha": "bc23e9242ccda03613f94ff8a3aa6d5f3c143013",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0011_external_participation_claims",
+      "repository_path": "db/migrations/0011_external_participation_claims.sql",
+      "repository_git_blob_sha": "840e8d5de6e9909191f77585a9294b8f162382b6",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0012_publish_map_geometry_land_clip",
+      "repository_path": "db/migrations/0012_publish_map_geometry_land_clip.sql",
+      "repository_git_blob_sha": "b8becaf844ba57667eb4cd7525f2ae361ca7bea3",
+      "supabase_platform_entry_count": 0,
+      "platform_state": "missing",
+      "accepted_legacy_exception": "missing_schema_effect_verified_separately"
+    },
+    {
+      "name": "0013_canonical_cartographic_land_fabric",
+      "repository_path": "db/migrations/0013_canonical_cartographic_land_fabric.sql",
+      "repository_git_blob_sha": "15d40eb8894a5a82b032128e1fdf834ed7c23a48",
+      "supabase_platform_entry_count": 0,
+      "platform_state": "missing",
+      "accepted_legacy_exception": "missing_schema_effect_verified_separately"
+    },
+    {
+      "name": "0014_cartography_land_fabric_created_at_default",
+      "repository_path": "db/migrations/0014_cartography_land_fabric_created_at_default.sql",
+      "repository_git_blob_sha": "d88b512ca44dbc75e116f9cf086a7ba3e4c3af87",
+      "supabase_platform_entry_count": 0,
+      "platform_state": "missing",
+      "accepted_legacy_exception": "missing_schema_effect_verified_separately"
+    },
+    {
+      "name": "0015_coastal_boundary_normalization",
+      "repository_path": "db/migrations/0015_coastal_boundary_normalization.sql",
+      "repository_git_blob_sha": "63cc2047aa7105be583bc5515cde0f95cd33ce0f",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0016_restore_fast_map_geometry",
+      "repository_path": "db/migrations/0016_restore_fast_map_geometry.sql",
+      "repository_git_blob_sha": "09e74a6dcd1b15469615797e6ba0246aa76e04c8",
+      "supabase_platform_entry_count": 3,
+      "platform_state": "duplicate",
+      "accepted_legacy_exception": "retry_history_preserved"
+    },
+    {
+      "name": "0017_precomputed_boundary_normalization",
+      "repository_path": "db/migrations/0017_precomputed_boundary_normalization.sql",
+      "repository_git_blob_sha": "e025e0885eb6863e93add369a840ff8fef48aa04",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0018_refine_cliopatria_boundary_normalization",
+      "repository_path": "db/migrations/0018_refine_cliopatria_boundary_normalization.sql",
+      "repository_git_blob_sha": "d61408c1a29e9c3e7cfdec557fdf1d12baed904a",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0019_adaptive_coastal_completion",
+      "repository_path": "db/migrations/0019_adaptive_coastal_completion.sql",
+      "repository_git_blob_sha": "f47dd9bcd58ab7dae63791944cde6a437f9d0cf3",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0020_hold_adaptive_completion",
+      "repository_path": "db/migrations/0020_hold_adaptive_completion.sql",
+      "repository_git_blob_sha": "c7e41662c1084bfdc2331face60047e31d619617",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0021_external_render_policy_fallback",
+      "repository_path": "db/migrations/0021_external_render_policy_fallback.sql",
+      "repository_git_blob_sha": "0d60f298c29ef0d3384d2243c9a1b465b4746fd2",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0022_research_case_idempotency",
+      "repository_path": "db/migrations/0022_research_case_idempotency.sql",
+      "repository_git_blob_sha": "a5480775a69747a9f2232e866f27f8f218c14abc",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0023_private_data_api_boundary",
+      "repository_path": "db/migrations/0023_private_data_api_boundary.sql",
+      "repository_git_blob_sha": "207dce296612bef1ccd4945e393316f385bbef77",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0024_fix_make_year_range_search_path",
+      "repository_path": "db/migrations/0024_fix_make_year_range_search_path.sql",
+      "repository_git_blob_sha": "bff4c73f830376a10abbe78d39012637c1952a51",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0025_release_channel_pointer",
+      "repository_path": "db/migrations/0025_release_channel_pointer.sql",
+      "repository_git_blob_sha": "bcb556d983b7268e9e0088666594e1219ea1dacd",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0026_reconstructible_release_membership",
+      "repository_path": "db/migrations/0026_reconstructible_release_membership.sql",
+      "repository_git_blob_sha": "e08ee7ae11aad81482f1921539a388f463f9003b",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0027_release_artifact_immutability",
+      "repository_path": "db/migrations/0027_release_artifact_immutability.sql",
+      "repository_git_blob_sha": "5c18146293f2b3e3d910bcb5fdfdd1b635847a2b",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0028_claim_kind_integrity",
+      "repository_path": "db/migrations/0028_claim_kind_integrity.sql",
+      "repository_git_blob_sha": "0e3b2b9d6a06c4c6d6de0d6bebea5afc829da37a",
+      "supabase_platform_entry_count": 1,
+      "platform_state": "present",
+      "accepted_legacy_exception": null
+    },
+    {
+      "name": "0029_claim_kind_function_privileges",
+      "repository_path": "db/migrations/0029_claim_kind_function_privileges.sql",
+      "repository_git_blob_sha": "b77fb9d66bc868df69b8023ce4ee316a3edd971b",
+      "supabase_platform_entry_count": 2,
+      "platform_state": "duplicate",
+      "accepted_legacy_exception": "retry_history_preserved"
+    }
+  ],
+  "live_platform_entries": [
+    {
+      "version": "20260919202746",
+      "name": "0001_bootstrap"
+    },
+    {
+      "version": "20260919202749",
+      "name": "0002_vocabularies"
+    },
+    {
+      "version": "20260919202752",
+      "name": "0003_core_entities"
+    },
+    {
+      "version": "20260919202755",
+      "name": "0004_claims_and_relations"
+    },
+    {
+      "version": "20260919202757",
+      "name": "0005_voyage_network"
+    },
+    {
+      "version": "20260919202800",
+      "name": "0006_ingest_audit_publish"
+    },
+    {
+      "version": "20260919202803",
+      "name": "0007_v061_crosswalks"
+    },
+    {
+      "version": "20260919202805",
+      "name": "0008_crosswalk_constraints"
+    },
+    {
+      "version": "20260919202807",
+      "name": "0009_nullable_practice_level"
+    },
+    {
+      "version": "20260919202810",
+      "name": "0010_research_coverage_provenance"
+    },
+    {
+      "version": "20260919202823",
+      "name": "0011_external_participation_claims"
+    },
+    {
+      "version": "20260920114108",
+      "name": "0015_coastal_boundary_normalization"
+    },
+    {
+      "version": "20260920115331",
+      "name": "0016_restore_fast_map_geometry"
+    },
+    {
+      "version": "20260920115433",
+      "name": "0016_restore_fast_map_geometry"
+    },
+    {
+      "version": "20260920115608",
+      "name": "0016_restore_fast_map_geometry"
+    },
+    {
+      "version": "20260920120409",
+      "name": "0017_precomputed_boundary_normalization"
+    },
+    {
+      "version": "20260920123122",
+      "name": "0018_refine_cliopatria_boundary_normalization"
+    },
+    {
+      "version": "20260920134806",
+      "name": "0019_adaptive_coastal_completion"
+    },
+    {
+      "version": "20260920135444",
+      "name": "0020_hold_adaptive_completion"
+    },
+    {
+      "version": "20260920145534",
+      "name": "0021_external_render_policy_fallback"
+    },
+    {
+      "version": "20260920161401",
+      "name": "0022_research_case_idempotency"
+    },
+    {
+      "version": "20260920185751",
+      "name": "0023_private_data_api_boundary"
+    },
+    {
+      "version": "20260920185904",
+      "name": "0024_fix_make_year_range_search_path"
+    },
+    {
+      "version": "20260920194413",
+      "name": "0025_release_channel_pointer"
+    },
+    {
+      "version": "20260920200227",
+      "name": "0026_reconstructible_release_membership"
+    },
+    {
+      "version": "20260920201500",
+      "name": "0027_release_artifact_immutability"
+    },
+    {
+      "version": "20260923131112",
+      "name": "0028_claim_kind_integrity"
+    },
+    {
+      "version": "20260923134302",
+      "name": "0029_claim_kind_function_privileges"
+    },
+    {
+      "version": "20260923134428",
+      "name": "0029_claim_kind_function_privileges"
+    }
+  ]
+}

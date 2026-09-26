@@ -2157,3 +2157,91 @@ public, does not replace v0.6.1 and does not claim independent historical review
 geometry, schema/ontology, database/API/frontend and public release state remain
 unchanged.
 
+## D-101 — Canonicalize PostgreSQL research state before the next canonical data release
+**Date:** 2026-09-26  
+**Status:** accepted architecture/release sequencing decision
+
+**Sponsor direction:** prefer the long-term database-first path before updating the
+canonical release/UI, with independent historical review not treated as a prerequisite
+for internal canonicalization.
+
+**Decision:**
+
+The project will distinguish two kinds of authority:
+
+1. **Canonical research state** — the reconciled PostgreSQL/PostGIS database after
+   migration and evidence reconciliation gates pass.
+2. **Canonical historical releases** — immutable, checksummed snapshots/packages
+   generated from reviewed canonical DB state.
+
+A mutable database does not replace immutable release identity.
+
+### Why DB-first now
+
+The project has moved beyond the point where another file-first canonical release is
+the cleanest long-term step.
+
+The live database already contains:
+- the v0.6.1 migration candidate and exact workbook checksum lineage;
+- raw/crosswalk/audit structures;
+- claim/source structures;
+- release-channel and exact release-membership machinery;
+- release artifact immutability support through repository migration 0027;
+- later integrity/security-boundary migrations through 0029.
+
+The reviewed v3 package adds a heterogeneous 26-member evidence state that benefits
+from first-class relational identity, source-version, review-state and release
+membership rather than another temporary canonical file layer.
+
+### Red-team constraints
+
+DB-first survives only under these controls:
+
+- deployment does not equal canonicality;
+- v3 is not renamed into a release;
+- v0.6.1 remains immutable until DB reproduction passes;
+- internal review and independent review remain distinct;
+- missing/HOLD/inconclusive states remain non-absence;
+- no P-level or geometry is inferred during migration;
+- schema gaps trigger explicit decisions instead of silent normalization;
+- draft DB research never becomes public merely because it exists in the DB;
+- the DB authority flip and the UI/public cutover are separate gates;
+- every canonical release remains independently reconstructible from manifest,
+  membership, exports/checksums and code/schema versions.
+
+### Cutover gate order
+
+0. **Migration-history reconciliation** — resolve repository/live history drift without
+   replaying already-present schema changes.
+1. **v0.6.1 DB reconciliation** — reproduce legacy meaning and raw lineage.
+2. **v3 DB reconciliation** — ingest/map frozen reviewed evidence without semantic loss.
+3. **DB authority gate** — stable IDs, idempotence, release reconstruction,
+   draft/publish separation, security, backup/rollback.
+4. **First DB-backed canonical release** — provisionally `v0.7.0` if no breaking
+   ontology change occurred.
+5. **UI/API cutover** — public channel switches only to the exact tested release
+   materialization; UI redesign is not implied.
+
+### Independent review
+
+Independent historical review remains **0** and must remain visible as such.
+
+It is not a prerequisite for the database becoming the authoritative state of the
+project's internally reviewed knowledge. Future independent review can update claims
+and release states through the same review/supersession process.
+
+### Current live blockers
+
+Read-only audit on 2026-09-26 found:
+- repository head 0029;
+- live history missing 0012–0014 despite their schema effects being present;
+- duplicate live history names for 0016 and 0029;
+- generic Supabase RLS-disabled advisories;
+- but no `anon`/`authenticated` USAGE or table grants on the internal atlas/audit/
+  raw/staging/publish/cartography schemas.
+
+Therefore #26 is reactivated before authority cutover. RLS is not changed blindly.
+
+**Release effect:** none yet. v0.6.1 remains canonical; v3 remains internal and
+noncanonical; the public preview remains unchanged.
+

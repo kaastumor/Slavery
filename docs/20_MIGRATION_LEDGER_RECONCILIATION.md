@@ -24,3 +24,64 @@ Repository issue #128 reconciles that already-live migration back into version c
 
 After #128 merges, the expected repository/live migration head is `0029`. The earlier 0012–0014 ledger gaps and repeated 0016 entries remain explicitly unresolved under the policy above; adding 0028–0029 does not authorize rewriting them.
 
+## 2026-09-26 DB-canonicalization Gate 0 policy
+
+Issue #300 now makes migration reconciliation a prerequisite to the database becoming
+canonical research state.
+
+A second migration-history problem was found during the live audit:
+
+- Supabase platform history contains the known 0012–0014 gaps and 0016/0029 retries;
+- the live database has **no** `atlas_meta.schema_migration` checksum ledger, even
+  though repository `tools/migrate.py` expects it.
+
+This means `tools/migrate.py up` must **not** be run against production until the live
+schema has been verified and a checksum baseline has been recorded. Otherwise an empty
+ledger would make already-live migrations appear pending.
+
+### Authority after reconciliation
+
+Keep the two histories for different purposes:
+
+1. **Supabase platform history** remains legacy operational/audit evidence. Known gaps
+   and retries are preserved, not cosmetically deleted.
+2. **Repository checksum ledger** becomes the deterministic authority for future Atlas
+   migrations after one guarded verified-baseline bootstrap.
+
+The platform ledger is therefore checked against an explicit exception policy:
+- 0012–0014 may remain absent only while their live schema effects are separately
+  verified;
+- 0016 must remain exactly the documented three retry entries unless explicitly
+  reconciled;
+- 0029 must remain exactly the documented two retry entries unless explicitly
+  reconciled;
+- any new missing, duplicate or unknown migration fails the check.
+
+### Bootstrap semantics
+
+`tools/bootstrap_migration_ledger.py` is the only approved path for the initial
+checksum-ledger baseline.
+
+It is dry-run by default and requires, before apply:
+- exact repository migration set 0001–0029;
+- exact accepted platform-history exception shape;
+- live 0012–0014 sentinel objects;
+- live `0.6.1-db-migration-candidate` at schema head 0029;
+- recorded prior migration validation;
+- exact v0.6.1 workbook checksum lineage;
+- no conflicting existing checksum ledger.
+
+An apply requires explicit `--confirm-head 0029`.
+
+Rows recorded by this bootstrap use
+`recording_method='verified_production_baseline'`. Their `applied_at` timestamp is
+the **baseline recording time**, not a claim about when the historical migration
+originally executed.
+
+After bootstrap, normal migrations use the checksum runner and must reject changed
+already-applied migration files.
+
+The frozen before-state is recorded in
+`reviews/db-canonicalization/gate0-migration-matrix.json`.
+
+No production schema/data or release membership is changed by documenting this policy.

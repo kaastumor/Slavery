@@ -1,0 +1,72 @@
+{
+  "audit_date": "2026-09-26",
+  "parent_issue": 300,
+  "prerequisite_issue": 26,
+  "supabase_project": {
+    "name": "Historical Slavery Atlas",
+    "ref": "dilnayfllygkplsdymel",
+    "postgres": "17.6.1.166",
+    "status": "ACTIVE_HEALTHY"
+  },
+  "repository_schema_head": "0029",
+  "live_migration_history_summary": {
+    "present_0001_through_0011": true,
+    "missing_names": [
+      "0012_publish_map_geometry_land_clip",
+      "0013_canonical_cartographic_land_fabric",
+      "0014_cartography_land_fabric_created_at_default"
+    ],
+    "duplicate_names": {
+      "0016_restore_fast_map_geometry": 3,
+      "0029_claim_kind_function_privileges": 2
+    }
+  },
+  "verified_live_objects": {
+    "publish.neutral_land_mask": true,
+    "cartography.land_fabric": true,
+    "cartography.land_fabric.created_at_default": true,
+    "audit.release_claim": true,
+    "audit.release_artifact": true
+  },
+  "live_exact_counts": {
+    "spatial_entities": 38,
+    "geometries": 68,
+    "claims": 60,
+    "source_versions": 111,
+    "release_claim_memberships": 42,
+    "release_spatial_entity_memberships": 35,
+    "release_geometry_memberships": 73,
+    "release_source_version_memberships": 62
+  },
+  "v061_crosswalk_counts": {
+    "source_map": 17,
+    "owner_actor_map": 12,
+    "voyage_map": 8,
+    "voyage_owner_map": 12,
+    "evidence_claim_map": 17,
+    "raw_records": 159,
+    "qc_issues": 1
+  },
+  "release_state": {
+    "current_public_channel": "mvp-preview-ancient-v2",
+    "db_migration_candidate": "0.6.1-db-migration-candidate",
+    "db_migration_candidate_status": "draft_noncanonical",
+    "v061_workbook_sha256": "0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4"
+  },
+  "data_api_security_read_only_audit": {
+    "rls_advisor_finding": "internal tables have RLS disabled",
+    "anon_internal_schema_usage": false,
+    "authenticated_internal_schema_usage": false,
+    "anon_authenticated_internal_table_grants": 0,
+    "conclusion": "track defense-in-depth finding; do not blindly enable RLS"
+  },
+  "canonical_release_unchanged": "v0.6.1",
+  "v3_status": "internal_noncanonical_frozen_input",
+  "authority_flip_performed": false,
+  "repository_checksum_ledger": {
+    "expected_table": "atlas_meta.schema_migration",
+    "live_present": false,
+    "consequence": "repository migration runner must not be run in up mode against production until a verified checksum baseline is seeded"
+  },
+  "gate0_risk": "two migration-history systems are currently unreconciled: Supabase platform history is incomplete/duplicated and repository checksum ledger is absent"
+}

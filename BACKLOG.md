@@ -10,37 +10,73 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — EXECUTION
+# CURRENT MODE — REVIEW / RELEASE + DATABASE CANONICALIZATION
 
-**Active issue:** #297 — EXP-15 neutral node-site C0 qualification tranche  
-**Mode:** neutral identity / chronology / frame / spatial-scope qualification  
-**Canonical historical data release:** `v0.6.1` unchanged  
-**WIP:** #297 only
+**Parent gate:** #300 — canonical PostgreSQL + first DB-backed release gate  
+**Immediate prerequisite:** #26 — live migration-history reconciliation  
+**Canonical historical data release:** `v0.6.1` remains unchanged  
+**Reviewed successor input:** `post-r1-cumulative-review-v3-cross-frame`  
+**WIP:** #300 parent gate; #26 is the current execution slice
 
-Branch result: **PASS — THREE QUALIFIED**.
+## Sequencing decision
 
-- Samarkand 1400 — `QUALIFIED_C1_READY`
-  - Timurid city/node;
-  - ancient Afrasiab, surrounding oasis and Timurid realm excluded.
-- Timbuktu 1500 — `QUALIFIED_C1_READY`
-  - urban/commercial/intellectual node;
-  - Songhai territory and the whole trans-Saharan network excluded.
-- Tenochtitlan 1500 — `QUALIFIED_C1_READY`
-  - pre-conquest island capital/city;
-  - Triple Alliance/Aztec territory and modern Mexico City excluded;
-  - Tlatelolco-linked evidence must remain explicit.
+The project is now deliberately **database-first before the next canonical release**.
 
-No slavery/coercion subject research was performed.
+Target architecture:
 
-Next exact action:
-1. merge #297 after cheap research-text CI;
-2. close #297;
-3. return to D-096 mode selection;
-4. prefer **review/release** next: evaluate
-   `post-r1-cumulative-review-v3-cross-frame` for explicit canonical promotion before
-   opening another subject-research tranche.
+> source evidence → canonical PostgreSQL/PostGIS research state → explicit release gate → immutable release package → replaceable UI/API/GIS views
 
-EXP-15 itself does not authorize canonical/public release.
+This does **not** mean the live database is canonical yet.
+
+The authority flip requires:
+1. repository/live migration history reconciliation;
+2. deterministic semantic reproduction of v0.6.1;
+3. lossless ingestion/reconciliation of frozen v3 reviewed evidence;
+4. release-membership/reconstruction proof;
+5. security + draft/publish separation proof;
+6. rollback/recovery verification.
+
+Only then may the DB become canonical research state.
+
+The first DB-backed canonical release is provisionally `v0.7.0` if the cutover does
+not introduce a compatibility-breaking ontology change.
+
+The UI/API cutover happens **after** the DB-backed immutable release passes QC. Public
+services continue to consume published/release materializations, never unrestricted
+draft research tables.
+
+Independent historical review is not required for internal DB canonicalization.
+Review provenance must remain explicit; current independent review count is 0.
+
+## Immediate Gate 0 findings
+
+Live Historical Slavery Atlas Supabase:
+- PostgreSQL 17.6, ACTIVE_HEALTHY;
+- repository schema head: 0029;
+- live migration history missing 0012–0014;
+- 0016 appears three times in live history;
+- 0029 appears twice;
+- required 0012–0014 schema effects are present;
+- existing `0.6.1-db-migration-candidate` is draft/noncanonical;
+- release membership/channel machinery already exists;
+- public channel still points to `mvp-preview-ancient-v2`.
+
+Security:
+- Supabase advisor flags RLS-disabled internal tables;
+- verified `anon` / `authenticated` have no USAGE on internal schemas and no table
+  grants there;
+- do not blindly enable RLS; recheck at canonical/public cutover.
+
+## Next exact action
+
+Complete #26 non-destructively:
+- compare repository 0012–0029 intent with actual live definitions;
+- build repository↔live migration matrix;
+- repair only migration history required for safe future tooling;
+- rerun schema/release/security regressions;
+- record `MIGRATION_HISTORY_RECONCILED`.
+
+Do **not** start new subject-history research while #300 is active.
 
 ## Discovery execution
 

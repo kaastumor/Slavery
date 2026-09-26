@@ -1,0 +1,15 @@
+{
+  "schema_version": "migration-ledger-exceptions-v1",
+  "project_ref": "dilnayfllygkplsdymel",
+  "recorded_at": "2026-09-26",
+  "allowed_missing_remote": [
+    "0012_publish_map_geometry_land_clip",
+    "0013_canonical_cartographic_land_fabric",
+    "0014_cartography_land_fabric_created_at_default"
+  ],
+  "allowed_duplicate_remote": {
+    "0016_restore_fast_map_geometry": 3,
+    "0029_claim_kind_function_privileges": 2
+  },
+  "rationale": "Legacy Supabase platform-history drift and retry records. Schema effects are verified separately. Preserve this history rather than replaying or deleting migrations solely for cosmetic alignment. New drift must still fail."
+}
