@@ -230,22 +230,49 @@ def restore_research_results(cur, bundle: dict[str, Any]) -> None:
             insert_record(cur, "audit.research_target_claim", row)
 
 
-def reconcile_cartography_metadata(cur, bundle: dict[str, Any]) -> None:
+def portable_cartography_fingerprint(data: dict[str, Any]) -> dict[str, Any]:
+    keys = (
+        "fabric_id",
+        "content_sha256",
+        "source_commit_sha",
+        "source_blob_sha",
+        "srid",
+        "geometry_type",
+        "component_count",
+        "point_count",
+        "geodesic_area_m2_rounded_3",
+        "normalized_wkb_sha256",
+        "normalized_wkb_bytes",
+    )
+    return {key: data[key] for key in keys}
+
+
+def reconcile_cartography_metadata(
+    cur, bundle: dict[str, Any], fingerprint: dict[str, Any]
+) -> dict[str, Any]:
     frozen = bundle["cartography"]
     if frozen.get("kind") != "land_fabric":
         raise BundleError("Gate-3 recovery proof expects pinned land_fabric cartography")
+
     payload = dict(frozen["payload"])
     expected_id = str(frozen["id"])
-    expected_geom_sha = str(payload.pop("geom_ewkb_sha256"))
-    expected_geom_bytes = int(payload.pop("geom_ewkb_bytes"))
-    expected_srid = int(payload.pop("geom_srid"))
 
     cur.execute(
         """
-        select fabric_id, source_commit_sha, source_blob_sha, content_sha256,
-               st_srid(geom),
-               encode(digest(st_asewkb(geom),'sha256'),'hex'),
-               octet_length(st_asewkb(geom))
+        select
+          fabric_id,
+          source_commit_sha,
+          source_blob_sha,
+          content_sha256,
+          st_srid(geom),
+          geometrytype(geom),
+          st_numgeometries(geom),
+          st_npoints(geom),
+          round(st_area(geom::geography)::numeric,3)::text,
+          encode(digest(st_asbinary(st_normalize(geom)),'sha256'),'hex'),
+          octet_length(st_asbinary(st_normalize(geom))),
+          encode(digest(st_asewkb(geom),'sha256'),'hex'),
+          octet_length(st_asewkb(geom))
         from cartography.land_fabric
         where active
         """
@@ -254,21 +281,42 @@ def reconcile_cartography_metadata(cur, bundle: dict[str, Any]) -> None:
     if len(rows) != 1:
         raise BundleError(f"expected exactly one active land fabric; found {len(rows)}")
     row = rows[0]
-    if str(row[0]) != expected_id:
-        raise BundleError(f"land-fabric id mismatch: {row[0]} != {expected_id}")
-    if int(row[4]) != expected_srid:
-        raise BundleError("land-fabric SRID mismatch")
-    if str(row[5]) != expected_geom_sha or int(row[6]) != expected_geom_bytes:
-        raise BundleError("reconstructed land-fabric geometry digest/size mismatch")
-    if str(row[3]) != str(payload["content_sha256"]):
-        raise BundleError("reconstructed land-fabric source content SHA mismatch")
-    if str(row[1]) != str(payload["source_commit_sha"]) or str(row[2]) != str(
-        payload["source_blob_sha"]
-    ):
-        raise BundleError("reconstructed land-fabric immutable source identity mismatch")
+    observed = {
+        "fabric_id": str(row[0]),
+        "source_commit_sha": str(row[1]),
+        "source_blob_sha": str(row[2]),
+        "content_sha256": str(row[3]),
+        "srid": int(row[4]),
+        "geometry_type": str(row[5]),
+        "component_count": int(row[6]),
+        "point_count": int(row[7]),
+        "geodesic_area_m2_rounded_3": str(row[8]),
+        "normalized_wkb_sha256": str(row[9]),
+        "normalized_wkb_bytes": int(row[10]),
+        "runtime_raw_ewkb_sha256": str(row[11]),
+        "runtime_raw_ewkb_bytes": int(row[12]),
+    }
 
-    # The source loader creates a new timestamp. Restore the frozen metadata timestamp
-    # so the reconstructed cartography object hashes exactly to the live proof.
+    expected = portable_cartography_fingerprint(fingerprint)
+    actual = portable_cartography_fingerprint(observed)
+    if actual != expected:
+        raise BundleError(
+            "portable cartography fingerprint mismatch: "
+            + json.dumps({"expected": expected, "observed": actual}, sort_keys=True)
+        )
+
+    if expected_id != expected["fabric_id"]:
+        raise BundleError("bundle/fingerprint land-fabric identity mismatch")
+    if str(payload["content_sha256"]) != expected["content_sha256"]:
+        raise BundleError("bundle/fingerprint source content SHA mismatch")
+    if str(payload["source_commit_sha"]) != expected["source_commit_sha"]:
+        raise BundleError("bundle/fingerprint source commit mismatch")
+    if str(payload["source_blob_sha"]) != expected["source_blob_sha"]:
+        raise BundleError("bundle/fingerprint source blob mismatch")
+
+    # Raw EWKB is retained in the live bundle as an implementation fingerprint, but
+    # PostGIS/GEOS versions may serialize equivalent unions differently. The portable
+    # recovery invariant is the exact immutable source plus normalized geometry shape.
     cur.execute(
         """
         update cartography.land_fabric
@@ -277,9 +325,15 @@ def reconcile_cartography_metadata(cur, bundle: dict[str, Any]) -> None:
         """,
         (payload["created_at"], expected_id),
     )
+    return observed
 
 
-def verify_restored_state(cur, bundle: dict[str, Any]) -> dict[str, Any]:
+def verify_restored_state(
+    cur,
+    bundle: dict[str, Any],
+    fingerprint: dict[str, Any],
+    cartography_observed: dict[str, Any],
+) -> dict[str, Any]:
     membership = bundle["membership"]
     objects, cartography = snapshot_objects(cur, membership)
     current = object_digests(objects)
@@ -294,24 +348,31 @@ def verify_restored_state(cur, bundle: dict[str, Any]) -> dict[str, Any]:
                     changed.append(f"{group}:{object_id}")
         raise BundleError("restored object digest mismatch: " + ", ".join(changed))
 
-    cart_sha = sha256_value(cartography)
-    if cart_sha != bundle["cartography_sha256"]:
-        raise BundleError("restored cartography snapshot digest mismatch")
+    frozen_meta = dict(bundle["cartography"]["payload"])
+    runtime_meta = dict(cartography["payload"])
+    for key in ("geom_ewkb_sha256", "geom_ewkb_bytes"):
+        frozen_meta.pop(key, None)
+        runtime_meta.pop(key, None)
+    if runtime_meta != frozen_meta:
+        raise BundleError("restored cartography metadata differs from frozen bundle")
 
-    state = {
+    portable = portable_cartography_fingerprint(fingerprint)
+    logical_state = {
         "bundle_schema": bundle["bundle_schema"],
         "schema_version": bundle["release"]["schema_version"],
         "membership": membership,
         "object_digests": current,
-        "cartography_sha256": cart_sha,
+        "cartography_recovery_fingerprint": portable,
     }
-    state_sha = sha256_value(state)
-    if state_sha != bundle["database_state_sha256"]:
-        raise BundleError("restored database-state digest mismatch")
-
     return {
-        "database_state_sha256": state_sha,
-        "cartography_sha256": cart_sha,
+        "production_database_state_sha256": bundle["database_state_sha256"],
+        "logical_recovery_state_sha256": sha256_value(logical_state),
+        "cartography_portable_fingerprint_sha256": sha256_value(portable),
+        "cartography_normalized_wkb_sha256": portable["normalized_wkb_sha256"],
+        "runtime_raw_ewkb_sha256": cartography_observed[
+            "runtime_raw_ewkb_sha256"
+        ],
+        "production_raw_ewkb_sha256": fingerprint["production_raw_ewkb_sha256"],
         "counts": {key: len(value) for key, value in membership.items()},
     }
 
@@ -321,25 +382,33 @@ def main() -> int:
     parser.add_argument("bundle", type=Path)
     parser.add_argument("--dsn", default=os.environ.get("DATABASE_URL"))
     parser.add_argument("--receipt", type=Path)
+    parser.add_argument("--cartography-fingerprint", type=Path, required=True)
     args = parser.parse_args()
     if not args.dsn:
         parser.error("--dsn or DATABASE_URL is required")
 
     bundle = json.loads(args.bundle.read_text(encoding="utf-8"))
+    fingerprint = json.loads(
+        args.cartography_fingerprint.read_text(encoding="utf-8")
+    )
     validate_bundle(bundle)
 
     try:
         with psycopg.connect(args.dsn, autocommit=False) as conn:
             with conn.cursor() as cur:
                 require_empty_target(cur)
-                reconcile_cartography_metadata(cur, bundle)
+                cartography_observed = reconcile_cartography_metadata(
+                    cur, bundle, fingerprint
+                )
                 restore_sources(cur, bundle)
                 restore_spatial(cur, bundle)
                 restore_actors(cur, bundle)
                 restore_claims_and_voyages(cur, bundle)
                 restore_coverage(cur, bundle)
                 restore_research_results(cur, bundle)
-                result = verify_restored_state(cur, bundle)
+                result = verify_restored_state(
+                    cur, bundle, fingerprint, cartography_observed
+                )
             conn.commit()
 
         receipt = {
