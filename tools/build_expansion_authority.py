@@ -17,6 +17,8 @@ import json
 import os
 from pathlib import Path
 import sys
+import urllib.error
+import urllib.request
 from typing import Any
 
 from full_state_release_bundle import (
@@ -359,6 +361,112 @@ def verify_live(
     verify_predecessor_objects_preserved(predecessor, objects)
 
 
+
+def _sql_literal(value: Any) -> str:
+    if isinstance(value, (list, tuple)):
+        if not value:
+            return "ARRAY[]::uuid[]"
+        return "ARRAY[" + ",".join(_sql_literal(str(item)) for item in value) + "]"
+    if value is None:
+        return "null"
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    if isinstance(value, (int, float)):
+        return str(value)
+    return "'" + str(value).replace("'", "''") + "'"
+
+
+def _bind_sql(query: str, params: tuple[Any, ...]) -> str:
+    rendered = query
+    for value in params:
+        if "%s" not in rendered:
+            raise ExpansionError("too many SQL parameters for management query")
+        rendered = rendered.replace("%s", _sql_literal(value), 1)
+    if "%s" in rendered:
+        raise ExpansionError("not enough SQL parameters for management query")
+    return rendered
+
+
+def _management_query(project_ref: str, token: str, query: str) -> Any:
+    request = urllib.request.Request(
+        f"https://api.supabase.com/v1/projects/{project_ref}/database/query",
+        data=json.dumps({"query": query}, separators=(",", ":")).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "User-Agent": "historical-slavery-atlas-expansion-authority/1",
+        },
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=120) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")
+        raise ExpansionError(
+            f"Supabase Management API query failed HTTP {exc.code}: {body[:3000]}"
+        ) from exc
+    except urllib.error.URLError as exc:
+        raise ExpansionError(f"Supabase Management API query failed: {exc}") from exc
+
+
+def _management_rows(payload: Any) -> list[dict[str, Any]]:
+    if isinstance(payload, list):
+        return [row for row in payload if isinstance(row, dict)]
+    if isinstance(payload, dict):
+        for key in ("result", "data"):
+            value = payload.get(key)
+            if isinstance(value, list):
+                return [row for row in value if isinstance(row, dict)]
+    raise ExpansionError(f"unexpected management query response: {type(payload)}")
+
+
+class ManagementCursor:
+    def __init__(self, project_ref: str, token: str):
+        self.project_ref = project_ref
+        self.token = token
+        self._rows: list[tuple[Any, ...]] = []
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc, tb):
+        return False
+
+    def execute(self, query: str, params: tuple[Any, ...] | None = None) -> None:
+        rendered = _bind_sql(query, params or ())
+        rows = _management_rows(
+            _management_query(self.project_ref, self.token, rendered)
+        )
+        # PostgreSQL/Management API JSON preserves SELECT field order.  Convert each
+        # row to the tuple contract used by the existing preservation snapshotter.
+        self._rows = [tuple(row.values()) for row in rows]
+
+    def fetchall(self) -> list[tuple[Any, ...]]:
+        return list(self._rows)
+
+    def fetchone(self) -> tuple[Any, ...] | None:
+        return self._rows[0] if self._rows else None
+
+
+class ManagementConnection:
+    def __init__(self, project_ref: str, token: str):
+        self.project_ref = project_ref
+        self.token = token
+
+    def cursor(self) -> ManagementCursor:
+        return ManagementCursor(self.project_ref, self.token)
+
+    def rollback(self) -> None:
+        return None
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc, tb):
+        return False
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     sub = parser.add_subparsers(dest="command", required=True)
@@ -368,18 +476,29 @@ def main() -> int:
         cmd.add_argument("predecessor_authority", type=Path)
         cmd.add_argument("authority_bundle", type=Path)
         cmd.add_argument("--dsn", default=os.environ.get("DATABASE_URL"))
+        cmd.add_argument("--project-ref")
+        cmd.add_argument(
+            "--management-token",
+            default=os.environ.get("SUPABASE_MANAGEMENT_TOKEN"),
+        )
         cmd.add_argument("--source-git-sha", default=os.environ.get("GITHUB_SHA", "unknown"))
 
     args = parser.parse_args()
     try:
         selection = load_selection(args.selection)
         predecessor = load_predecessor(selection, args.predecessor_authority)
-        if not args.dsn:
-            parser.error("--dsn or DATABASE_URL is required")
+        if args.dsn:
+            import psycopg
+            connection = psycopg.connect(args.dsn, autocommit=False)
+        elif args.project_ref and args.management_token:
+            connection = ManagementConnection(args.project_ref, args.management_token)
+        else:
+            parser.error(
+                "provide --dsn/DATABASE_URL or --project-ref plus "
+                "--management-token/SUPABASE_MANAGEMENT_TOKEN"
+            )
 
-        import psycopg
-
-        with psycopg.connect(args.dsn, autocommit=False) as conn:
+        with connection as conn:
             if args.command == "build":
                 bundle = build_authority(
                     conn,
