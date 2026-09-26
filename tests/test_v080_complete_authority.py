@@ -4,7 +4,7 @@ import json
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-AUTHORITY = ROOT / "data" / "release_candidates" / "v0.8.0-expansion-02-authority.json"
+AUTHORITY = ROOT / "data" / "release_candidates" / "v0.8.0-expansion-02-authority.bundle.json"
 SELECTION = ROOT / "release" / "selections" / "v0.8.0-expansion-02.json"
 PREDECESSOR = ROOT / "data" / "releases" / "v0.7.0" / "authority-state.json"
 
