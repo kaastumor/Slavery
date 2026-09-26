@@ -15,18 +15,32 @@ PREDECESSOR = ROOT / "data" / "releases" / "v0.7.0" / "authority-state.json"
 
 
 class ExpansionAuthorityTests(unittest.TestCase):
-    def test_selection_is_explicit_and_excludes_disputed_claims(self) -> None:
+    def test_selection_is_explicit_and_preserves_reviewed_disputes(self) -> None:
         selection = MODULE.load_selection(SELECTION)
         additions = selection["additions"]
-        selected = set(additions["direct_recovery_claim_ids"]) | set(
-            additions["post_m1_claim_ids"]
+        selected = (
+            set(additions["direct_recovery_claim_ids"])
+            | set(additions["post_m1_claim_ids"])
+            | set(additions["reviewed_state_claim_ids"])
         )
-        excluded = set(selection["exclusions"]["disputed_claim_ids"])
+        excluded = (
+            set(selection["exclusions"]["superseded_legacy_prototype_claim_ids"])
+            | set(
+                selection["exclusions"][
+                    "legacy_prototype_claim_ids_pending_reconciliation"
+                ]
+            )
+        )
         self.assertEqual(len(selected), 35)
         self.assertEqual(len(additions["approved_geometry_ids"]), 49)
         self.assertTrue(selected.isdisjoint(excluded))
+        self.assertIn(
+            "cfd709dd-55ad-4f92-a6ec-f6c7910b3fe1",
+            additions["reviewed_state_claim_ids"],
+        )
         self.assertTrue(selection["rules"]["explicit_membership_only"])
         self.assertTrue(selection["rules"]["reviewed_row_discovery_forbidden"])
+        self.assertTrue(selection["rules"]["reviewed_disputes_may_be_complete"])
 
     def test_final_selection_adds_todaiji_without_mutating_first_freeze(self) -> None:
         selection = MODULE.load_selection(SELECTION)
