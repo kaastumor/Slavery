@@ -1,0 +1,81 @@
+{
+  "case_key": "atlas-expansion-01/classical-athens/slavery-v2",
+  "spatial_entity": {
+    "canonical_name": "Classical Athens",
+    "display_name": "Classical Athens",
+    "entity_type_code": "polity",
+    "from_year": -549,
+    "to_year": -329,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed Classical Athens spatial identity and reviewed geometry. The political geometry provides historical context and does not encode a uniform prevalence surface."
+  },
+  "claim": {
+    "from_year": -549,
+    "to_year": -329,
+    "date_text_original": "Classical Athens, broadly sixth to fourth centuries BCE",
+    "temporal_precision": "broad_historical_period",
+    "temporal_certainty": "high",
+    "spatial_precision": "polity_with_institutional_and_economic_scope",
+    "summary": "Specialist scholarship treats slavery as integral to Classical Athenian society and economy. Slaves were embedded in household, productive, commercial and civic contexts, and Athens is regularly analyzed as a slave society rather than merely a society in which some enslaved people were present. The atlas records a strong positive slavery designation for Classical Athens while leaving demographic prevalence and sector-specific intensity unquantified and assigning no new post-M1 P-level.",
+    "confidence": "high",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim ae30281b-d7c3-4e89-be55-1471fa6bfa0f. Legacy P4 remains historical metadata only and is not copied into this post-M1 claim.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Positive structural classification. Do not infer one numeric prevalence estimate or treat all Greek poleis as equivalent to Athens."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Classical Athens",
+        "author_or_institution": "T. E. Rihll",
+        "source_type": "book_chapter",
+        "source_classification": "secondary",
+        "geographic_scope": "Classical Athens",
+        "temporal_scope": "Classical period, approximately 500–300 BCE",
+        "independence_notes": "Specialist chapter focused directly on whether Classical Athens qualifies as a slave society.",
+        "reliability_limitations": "The slave-society designation is structural and comparative; it does not provide one uncontested population percentage for every subperiod."
+      },
+      "version": {
+        "version_label": "The Cambridge World History of Slavery, Vol. 1 (2011), chapter 3, pp. 48–73",
+        "publication_year": 2011,
+        "url_or_identifier": "https://doi.org/10.1017/CHOL9780521840668.005",
+        "accessed_at": "2026-09-27T00:35:00Z"
+      },
+      "evidence_role": "specialist Athens-specific structural interpretation",
+      "independence_group": "rihll-classical-athens-slavery",
+      "directness": "specialist synthesis",
+      "direction": "supports",
+      "locator": "chapter introduction and analysis of Athens as a slave society"
+    },
+    {
+      "source": {
+        "title": "Slavery in Ancient Greece",
+        "author_or_institution": "Kostas Vlassopoulos",
+        "source_type": "book_chapter",
+        "source_classification": "secondary",
+        "geographic_scope": "Greek city-states, including Athens",
+        "temporal_scope": "Ancient Greek world",
+        "independence_notes": "Recent specialist synthesis independent from the Rihll chapter.",
+        "reliability_limitations": "Emphasizes diversity among local Greek slaving systems; Greek-wide statements must not erase polity-specific variation."
+      },
+      "version": {
+        "version_label": "The Palgrave Handbook of Global Slavery throughout History (2023), pp. 67–85",
+        "publication_year": 2023,
+        "url_or_identifier": "https://doi.org/10.1007/978-3-031-13260-5_4",
+        "license_status": "open_access",
+        "accessed_at": "2026-09-27T00:35:00Z"
+      },
+      "evidence_role": "recent comparative specialist synthesis and variation control",
+      "independence_group": "vlassopoulos-greek-slavery-2023",
+      "directness": "specialist synthesis",
+      "direction": "qualifies",
+      "locator": "abstract and discussion of distinct local slaving systems"
+    }
+  ]
+}
