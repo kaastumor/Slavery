@@ -16,7 +16,7 @@ RECOVERY = ROOT / "data" / "research" / "recovery" / "atlas_expansion_01"
 class AtlasExpansion01Tests(unittest.TestCase):
     def test_all_new_claim_packages_are_valid_post_m1_cases(self) -> None:
         paths = sorted(INTAKE.glob("*.json")) + sorted(RECOVERY.glob("*_v2.json"))
-        self.assertEqual(len(paths), 10)
+        self.assertEqual(len(paths), 11)
         for path in paths:
             with self.subTest(path=path.name):
                 spec = load_spec(path, require_case_key=True)
@@ -34,6 +34,17 @@ class AtlasExpansion01Tests(unittest.TestCase):
             geometry = spec.get("geometry")
             if geometry and geometry["accuracy_status"] == "unresolved":
                 self.assertIsNone(geometry.get("geojson"), path.name)
+
+    def test_todaiji_is_mapped_as_institutional_locus_only(self) -> None:
+        spec = json.loads(
+            (INTAKE / "05_todaiji_nuhi_status.json").read_text(encoding="utf-8")
+        )
+        geometry = spec["geometry"]
+        self.assertEqual(geometry["geojson"]["type"], "Point")
+        self.assertEqual(geometry["source_native_id"], "UNESCO-WHC-870-001")
+        self.assertIn("institutional/evidence site only", geometry["resolution_method"])
+        self.assertIn("not a practice polygon", geometry["notes"].lower())
+        self.assertIsNone(spec["claim"]["territorial_practice"]["practice_level"])
 
     def test_songo_mnara_is_a_locus_not_a_practice_polygon(self) -> None:
         spec = json.loads(
