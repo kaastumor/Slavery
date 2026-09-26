@@ -15,10 +15,8 @@ RECOVERY = ROOT / "data" / "research" / "recovery" / "atlas_expansion_01"
 
 class AtlasExpansion01Tests(unittest.TestCase):
     def test_all_new_claim_packages_are_valid_post_m1_cases(self) -> None:
-        paths = sorted(INTAKE.glob("*.json")) + [
-            RECOVERY / "roman_early_principate_slavery_v2.json"
-        ]
-        self.assertEqual(len(paths), 5)
+        paths = sorted(INTAKE.glob("*.json")) + sorted(RECOVERY.glob("*_v2.json"))
+        self.assertEqual(len(paths), 10)
         for path in paths:
             with self.subTest(path=path.name):
                 spec = load_spec(path, require_case_key=True)
@@ -61,6 +59,23 @@ class AtlasExpansion01Tests(unittest.TestCase):
         }
         self.assertIn("Achaemenid Persis/Elam royal economy", disputed_names)
         self.assertIn("Zhengzhou Shang City (Early Shang)", disputed_names)
+
+    def test_zhengzhou_captive_claim_stays_separate_from_disputed_slavery(self) -> None:
+        spec = json.loads(
+            (RECOVERY / "zhengzhou_captive_taking_v2.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        practice = spec["claim"]["territorial_practice"]
+        self.assertEqual(
+            practice["practice_type_code"], "captive_taking_incorporation"
+        )
+        self.assertIsNone(practice["practice_level"])
+        self.assertIn(
+            "896a3720-d871-495e-b23e-c24d7dde3039",
+            spec["claim"]["notes"],
+        )
+        self.assertIn("remains separate", spec["claim"]["notes"])
 
     def test_rome_reconciliation_does_not_copy_legacy_p4(self) -> None:
         spec = json.loads(

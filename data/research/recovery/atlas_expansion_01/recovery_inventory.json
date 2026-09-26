@@ -110,7 +110,7 @@
       ]
     },
     "R1_prototype_reconcile": {
-      "description": "Mapped published prototype-era claims. Reconcile source/version/dependency and translate into current post-M1 claim semantics before admission.",
+      "description": "Mapped published prototype-era claims replayed into current post-M1 semantics. New v2 packages assign no new P-level and preserve source/geometry limits; legacy rows remain immutable lineage.",
       "entities": [
         {
           "name": "Old Babylonian Uruk",
@@ -119,7 +119,9 @@
           ],
           "geometry_ids": [
             "b81dd8d2-3956-4060-856c-7ab2ca72fde7"
-          ]
+          ],
+          "reconciliation_status": "reconciled_post_m1_package",
+          "reconciled_case_path": "data/research/recovery/atlas_expansion_01/old_babylonian_uruk_slavery_v2.json"
         },
         {
           "name": "New Kingdom Egypt",
@@ -132,7 +134,9 @@
             "587b667e-7f1f-496f-a55e-13e1aabdedfa",
             "a72ccfe2-6dd1-4f90-96ea-257ff2fbf958",
             "d230ca36-be77-4699-b12e-77a491e58f35"
-          ]
+          ],
+          "reconciliation_status": "reconciled_post_m1_package",
+          "reconciled_case_path": "data/research/recovery/atlas_expansion_01/new_kingdom_egypt_slavery_v2.json"
         },
         {
           "name": "Zhengzhou Shang City (Early Shang)",
@@ -141,7 +145,9 @@
           ],
           "geometry_ids": [
             "e8934935-2201-48d5-9308-63fa571ff860"
-          ]
+          ],
+          "reconciliation_status": "reconciled_post_m1_package",
+          "reconciled_case_path": "data/research/recovery/atlas_expansion_01/zhengzhou_captive_taking_v2.json"
         },
         {
           "name": "Neo-Assyrian Nineveh",
@@ -150,7 +156,9 @@
           ],
           "geometry_ids": [
             "65f31d95-3e05-49f6-9f74-43f2a3717728"
-          ]
+          ],
+          "reconciliation_status": "reconciled_post_m1_package",
+          "reconciled_case_path": "data/research/recovery/atlas_expansion_01/neo_assyrian_nineveh_slavery_v2.json"
         },
         {
           "name": "Classical Athens",
@@ -159,7 +167,9 @@
           ],
           "geometry_ids": [
             "21c9c493-14f8-4c13-9845-0e8a738c9110"
-          ]
+          ],
+          "reconciliation_status": "reconciled_post_m1_package",
+          "reconciled_case_path": "data/research/recovery/atlas_expansion_01/classical_athens_slavery_v2.json"
         },
         {
           "name": "Roman Empire — early Principate",
@@ -171,7 +181,9 @@
             "b7c31528-ff4c-49cf-a95b-c662afab4339",
             "dce21f42-3e1a-4695-b036-4d20472a6ecb",
             "edb239a8-4d54-44e4-970a-affb7c9af22e"
-          ]
+          ],
+          "reconciliation_status": "reconciled_post_m1_package",
+          "reconciled_case_path": "data/research/recovery/atlas_expansion_01/roman_early_principate_slavery_v2.json"
         }
       ]
     },

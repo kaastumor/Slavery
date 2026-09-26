@@ -1,0 +1,58 @@
+{
+  "case_key": "atlas-expansion-01/zhengzhou/captive-taking-v2",
+  "spatial_entity": {
+    "canonical_name": "Zhengzhou Shang City (Early Shang)",
+    "display_name": "Zhengzhou Shang City (Early Shang)",
+    "entity_type_code": "site",
+    "from_year": -1426,
+    "to_year": -1379,
+    "review_status": "reviewed",
+    "notes": "Reuses the reviewed site identity and site geometry. The separate legacy slavery interpretation remains disputed and is not merged into this captive-taking claim."
+  },
+  "claim": {
+    "from_year": -1426,
+    "to_year": -1379,
+    "date_text_original": "upper Erligang phase, approximately 1427–1380 BCE",
+    "temporal_precision": "archaeological_phase",
+    "temporal_certainty": "high",
+    "spatial_precision": "archaeological_site",
+    "summary": "Stable-isotope, archaeological and contextual analysis of the Zhengzhou Shang City skull ditch concludes that the individuals were most likely prisoners of war captured during early Shang military expansion. The atlas records recurrent coercive captive-taking at this bounded site/context while explicitly not translating the remains into proof of slave status. The separate slavery interpretation remains disputed.",
+    "confidence": "high_for_captivity_not_slave_status",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy captive-taking claim b56b83a9-4a2b-4df6-8279-909089dc2227. Legacy P1 is not copied. Disputed slavery claim 896a3720-d871-495e-b23e-c24d7dde3039 remains separate.",
+    "territorial_practice": {
+      "practice_type_code": "captive_taking_incorporation",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Captive-taking positive; slave status not established by this evidence package."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "The Truth of Unusual Deaths under Military Expansion: Evidence from the Stable Isotopes of a Human Skull Ditch in the Capital City of the Early Shang Dynasty",
+        "author_or_institution": "Jingwen Liao et al.",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "geographic_scope": "Zhengzhou Shang City",
+        "temporal_scope": "Early Shang / upper Erligang phase",
+        "independence_notes": "Peer-reviewed multidisciplinary archaeological study integrating isotopic and contextual evidence.",
+        "reliability_limitations": "Authors explicitly conclude prisoner-of-war status is most likely and caution that the sampled evidence does not prove slave status."
+      },
+      "version": {
+        "version_label": "International Journal of Environmental Research and Public Health 19 (2022), PMCID PMC9690788",
+        "publication_year": 2022,
+        "url_or_identifier": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9690788/",
+        "license_status": "CC_BY",
+        "accessed_at": "2026-09-27T00:35:00Z"
+      },
+      "evidence_role": "archaeological/isotopic identification of captive population",
+      "independence_group": "liao-zhengzhou-skull-ditch-2022",
+      "directness": "peer-reviewed archaeological analysis",
+      "direction": "supports",
+      "locator": "abstract, contextual analysis and conclusion: most likely prisoners of war, not slaves"
+    }
+  ]
+}

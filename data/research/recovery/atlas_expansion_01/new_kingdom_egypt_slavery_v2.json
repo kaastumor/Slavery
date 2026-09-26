@@ -1,0 +1,81 @@
+{
+  "case_key": "atlas-expansion-01/new-kingdom-egypt/slavery-v2",
+  "spatial_entity": {
+    "canonical_name": "New Kingdom Egypt",
+    "display_name": "New Kingdom Egypt",
+    "entity_type_code": "polity",
+    "from_year": -1549,
+    "to_year": -1069,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed New Kingdom spatial identity and time-sliced geometry. Political extent does not imply uniform slave prevalence or identical legal status across all dependent populations."
+  },
+  "claim": {
+    "from_year": -1549,
+    "to_year": -1069,
+    "date_text_original": "New Kingdom, approximately 1550–1070 BCE",
+    "temporal_precision": "historical_period",
+    "temporal_certainty": "high",
+    "spatial_precision": "polity_with_status_category_limits",
+    "summary": "Specialist Egyptological synthesis identifies the New Kingdom as a period of large-scale foreign enslavement associated with military campaigns and also documents locally owned or rented servitude. The terminology and legal status of Egyptian dependents were heterogeneous, so the atlas records positive slavery/enslavement while keeping servants, conscripts, corvée labour and foreign war captives analytically distinct and assigning no new post-M1 P-level.",
+    "confidence": "high_with_category_limits",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim 7cd1da37-b2f8-4dba-b63b-9cffa6e19b65. Legacy P3 remains historical metadata only.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Positive classification with terminology controls. Do not equate all bAk/Hm, corvée or state labour with slavery."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Slavery and Servitude",
+        "author_or_institution": "Antonio Loprieno",
+        "source_type": "reference_article",
+        "source_classification": "secondary",
+        "geographic_scope": "Pharaonic Egypt",
+        "temporal_scope": "Dynastic Egypt through Hellenistic period",
+        "independence_notes": "Specialist Egyptological synthesis with explicit historical differentiation among coercive labour, servants and slavery.",
+        "reliability_limitations": "Broad synthesis; Egyptian status terminology is heterogeneous and cannot be normalized mechanically to modern slavery categories."
+      },
+      "version": {
+        "version_label": "UCLA Encyclopedia of Egyptology, version 1 (2012)",
+        "publication_year": 2012,
+        "url_or_identifier": "https://escholarship.org/uc/item/8mx2073f",
+        "license_status": "open_access",
+        "accessed_at": "2026-09-27T00:35:00Z"
+      },
+      "evidence_role": "specialist period classification and terminology control",
+      "independence_group": "loprieno-egypt-slavery-synthesis",
+      "directness": "specialist synthesis",
+      "direction": "supports",
+      "locator": "abstract and New Kingdom discussion of large-scale foreign slavery and locally owned/rented servitude"
+    },
+    {
+      "source": {
+        "title": "Slavery in Pharaonic and Hellenistic Egypt",
+        "author_or_institution": "Antonio Loprieno",
+        "source_type": "reference_article",
+        "source_classification": "secondary",
+        "geographic_scope": "Egypt",
+        "temporal_scope": "Pharaonic and Hellenistic periods",
+        "independence_notes": "Updated synthesis by the same scholar; same broad historiographic family as the 2012 UEE article and not counted as independent.",
+        "reliability_limitations": "Used as an update/consistency check rather than a second independent attestation."
+      },
+      "version": {
+        "version_label": "Oxford Research Encyclopedia of African History (2022)",
+        "publication_year": 2022,
+        "url_or_identifier": "https://doi.org/10.1093/acrefore/9780190277734.013.870",
+        "accessed_at": "2026-09-27T00:35:00Z"
+      },
+      "evidence_role": "updated specialist synthesis and chronology control",
+      "independence_group": "loprieno-egypt-slavery-synthesis",
+      "directness": "specialist synthesis",
+      "direction": "qualifies",
+      "locator": "abstract; New Kingdom large-scale foreign slavery and locally owned/rented servitude"
+    }
+  ]
+}
