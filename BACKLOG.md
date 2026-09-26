@@ -4,93 +4,73 @@
 **Role:** canonical execution queue only; assumptions/risks/value evidence live in `docs/25_PROJECT_HEALTH.md`  
 **Canonical research authority:** PostgreSQL/PostGIS, explicit governed membership under D-109  
 **Canonical historical data release:** `v0.7.0`  
-**Current public preview:** `mvp-preview-ancient-v2` (non-canonical legacy demonstration)  
-**Published research candidate:** `exp06-candidate-v1` at `exp06-candidate.html` (non-canonical)
+**Current public serving adapter:** `v0.7.0-public-mvp-v1` → canonical source `v0.7.0`  
+**Public Atlas:** `https://kaastumor.github.io/Slavery/`  
+**Preserved R1 technical candidate:** `r1-candidate.html` (non-canonical historical project artifact)
 
 This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — REVIEW / RELEASE + PUBLIC CUTOVER
+# CURRENT MODE — CONSOLIDATION / POST-CUTOVER REVIEW
 
-**Parent gate:** #300 — canonical PostgreSQL + first DB-backed release gate  
+**Parent canonicalization gate:** #300  
 **Gate 0:** **PASS — MIGRATION_HISTORY_RECONCILED**  
 **Gate 1:** **PASS — V061_DB_RECONCILED**  
 **Gate 2:** **PASS — V3_DB_RECONCILED**  
 **Gate 3:** **PASS — PROMOTE_DB_CANONICAL_RESEARCH_STATE**  
 **Gate 4:** **PASS — PUBLISH_DB_BACKED_CANONICAL_RELEASE**  
-**Current gate:** Gate 5 — public UI/API cutover to canonical v0.7.0  
-**Canonical historical data release:** `v0.7.0`  
-**Current public preview/channel:** `mvp-preview-ancient-v2` until Gate 5 passes  
-**Frozen reviewed input:** `post-r1-cumulative-review-v3-cross-frame`  
-**WIP:** #323 — cut public UI/API to canonical v0.7.0 release
+**Gate 5:** **PASS — CUTOVER_PUBLIC_CHANNEL_TO_V070** under D-113  
+**Live schema head:** `0034`  
+**Canonical release package schema:** `0033` (immutable v0.7.0 historical artifact)  
+**Independent historical review:** 0
 
-## Gate 4 closeout
+The DB-canonicalization / first DB-backed release programme is complete. No new
+historical subject-research tranche is automatically authorized by that success.
 
-D-110 makes `v0.7.0` the first canonical historical release generated from the
-D-109 PostgreSQL/PostGIS research-authority closure.
+## Gate 5 closeout
 
-Frozen release membership:
+Public serving now uses the immutable release-derived adapter
+`v0.7.0-public-mvp-v1`.
 
-- 40 claims;
-- 11 actors;
-- 18 spatial entities;
+Verified production invariants:
+
+- public payload SHA-256
+  `2a04787a2ee0e42a97f273621eebbf32ddc6a1b2e903239a626eb41d72c29786`;
+- 16 displayed spatial entities / 18 territorial-practice claims;
 - 0 reviewed historical evidence geometries;
-- 8 voyages;
-- 99 coverage assessments;
-- 211 exact source versions;
-- 26 research-target results;
-- membership SHA-256
-  `ebc9d32f09857744841a0cf92699c41739b624ac4bd94c43798eb1f61e3b0dd3`;
-- D-109 production database-state SHA-256
-  `31b7a7b675445e5758ffd68d64ff0f0cde83df1b0ea65f29835246deb2ae26ff`;
-- deterministic package/rebuild: PASS;
-- exact typed release membership/digests: PASS;
-- D-108 portable cartography artifact included: PASS;
-- published membership/artifact immutability: PASS;
-- Supabase security advisor: 0 lints;
-- independent historical review: 0.
+- 21 `researched_internal` + 5 `under_review` target states;
+- 6 researched-inconclusive outcomes remain non-absence;
+- independent historical review remains 0;
+- exact source-version provenance survives the serving adapter;
+- territorial practice remains distinct from law, external/network participation,
+  research coverage and geometry;
+- neutral Natural Earth land remains independent cartographic context;
+- live API and deployed static fallback use the same frozen payload bytes;
+- D-053 compare-and-set rollback to `mvp-preview-ancient-v2` was proved before cutover;
+- D-112 / migration 0034 freezes published release-manifest metadata;
+- Supabase security advisor: 0 lints after 0034;
+- Pages deployment of commit
+  `5675186303b30c43cdfaff9c41c72b64df1b153b`: PASS.
 
-The v0.6.1 workbook remains the immutable predecessor and source-native lineage anchor;
-it was not overwritten or silently normalized.
+The frozen R1 technical candidate remains available as a historical project artifact at
+`r1-candidate.html`; it is no longer the default public root.
 
-Gate 4 deliberately left every authority claim's `publication_status` unchanged and
-left `public_mvp_preview` pointing to `mvp-preview-ancient-v2`. Canonical release
-publication and public serving remain separate gates.
+## Immediate consolidation task
 
-## Gate 5 exact question
+After the Gate-5 closeout PR merges:
 
-Can the public UI/API be cut over to an exact v0.7.0-derived serving materialization
-without exposing draft/unrestricted research state or weakening the release's
-provenance, uncertainty, temporal/spatial or non-absence semantics?
+1. close #323 with disposition `CUTOVER_PUBLIC_CHANNEL_TO_V070`;
+2. close parent #300 as the completed Gate-0→Gate-5 canonicalization programme;
+3. perform one project-wide backlog / health review under D-096;
+4. choose the next justified mode from discovery, execution, consolidation,
+   review/release, maintenance, or no justified work;
+5. do **not** reopen subject research merely because the release pipeline is now stable.
 
-Required before channel move:
+No UI redesign, automatic P-level inference, inferred historical geometry, archive-count
+prevalence inference or false independent-review claim is authorized by this closeout.
 
-1. derive serving state strictly from v0.7.0 release membership/materialization;
-2. never select public content by broad `review_status` alone;
-3. preserve territorial practice, law, external/network participation and coverage as
-   separate dimensions;
-4. preserve under-review, HOLD, researched-inconclusive and unresolved as non-absence;
-5. keep 0 reviewed historical evidence geometries truthful and retain neutral world
-   land independently;
-6. preserve exact source/source-version and source-native lineage;
-7. preserve D-108 cartography behavior;
-8. stage the exact API/browser artifact intended for production;
-9. run reconstruction, API/browser and security regression against that exact state;
-10. prove rollback to the previous serving pointer before promotion;
-11. move `public_mvp_preview` only as the final controlled step;
-12. verify post-cutover channel identity and no draft leakage.
-
-Allowed Gate-5 disposition:
-
-- `CUTOVER_PUBLIC_CHANNEL_TO_V070`;
-- `HOLD_PUBLIC_CUTOVER`;
-- `REWORK_PUBLIC_MATERIALIZATION`.
-
-No UI redesign, new historical research, P-level inference or historical geometry
-promotion is authorized by Gate 5.
-
-## Discovery execution
+# Discovery execution
 
 Use `docs/discovery/DISCOVERY_EXECUTION.md` and `docs/discovery/RUN_PROMPT.md`.
 D-091/D-092 govern execution discipline; neither changes EXP-08's frozen sample,
