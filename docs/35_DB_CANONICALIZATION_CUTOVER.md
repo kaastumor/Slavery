@@ -167,6 +167,17 @@ absence.
 Any field that cannot be represented without loss becomes a **schema decision gate**.
 It is not silently packed into generic notes merely to complete ingestion.
 
+### Gate-2 schema decision
+
+Mapping the frozen v3 package exposed a genuine gap in the live schema. D-103 / #308
+therefore introduces migration 0031 with a normalized audit research-target/result/
+review/source layer and the missing claim applicability/locus/extent/fitness fields
+already specified by the canonical data model.
+
+The migration is additive and does not publish anything. Gate 2 still requires live
+application, idempotent v3 loading and 26-member / 166-source round-trip QC before
+`V3_DB_RECONCILED` may be recorded.
+
 Pass marker: `V3_DB_RECONCILED`.
 
 ## 7. Gate 3 — DB authority
