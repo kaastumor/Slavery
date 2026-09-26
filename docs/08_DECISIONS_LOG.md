@@ -2352,3 +2352,39 @@ one or many historical claims.
 channel, P-level, geometry promotion or UI change. Migration 0031 and live Gate-2
 reconciliation must pass separately.
 
+## D-104 — Preserve v3 target-source provenance fields first-class before ingestion
+**Date:** 2026-09-26  
+**Status:** accepted Gate-2 schema refinement
+
+**Evidence:** #308 source-lineage audit over all 166 frozen v3 source relations.
+
+The audit found:
+- 166 target-source relations;
+- 164 unique exact source versions;
+- 0 exact-source metadata conflicts;
+- 2 already-known cross-target shared source versions;
+- all 166 rows contain decisive/access-limitation/access-date/dependency fields;
+- one row contains an asset SHA-256.
+
+Packing those fields into generic notes would be lossless only syntactically and would
+weaken future dependency/access auditing.
+
+**Decision:** migration 0032 adds first-class fields to
+`audit.research_target_source`:
+- `source_id_raw`;
+- `decisive`;
+- `access_limitation`;
+- `accessed_at_text`;
+- `asset_sha256`;
+- `dependency_note`.
+
+The raw access date remains text so source-native precision is not silently normalized.
+The target-source layer remains research/review provenance and does not itself create a
+historical claim.
+
+Gate-2 SQL regression files 010 and 011 become explicit CI steps so future schema
+changes cannot silently break the model.
+
+**No release effect:** no historical conclusion, P-level, geometry, canonical authority,
+release membership, public channel or UI/API change follows from this refinement.
+

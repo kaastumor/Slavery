@@ -76,6 +76,11 @@ jobs:
       - name: Claim-kind integrity
         run: docker compose exec -T db sh -lc 'psql -v ON_ERROR_STOP=1 -U "$POSTGRES_USER" -d "$POSTGRES_DB" -f /workspace/db/tests/009_claim_kind_integrity.sql'
 
+      - name: V3 research evidence model
+        run: |
+          docker compose exec -T db sh -lc 'psql -v ON_ERROR_STOP=1 -U "$POSTGRES_USER" -d "$POSTGRES_DB" -f /workspace/db/tests/010_v3_research_evidence_model.sql'
+          docker compose exec -T db sh -lc 'psql -v ON_ERROR_STOP=1 -U "$POSTGRES_USER" -d "$POSTGRES_DB" -f /workspace/db/tests/011_v3_source_relation_provenance.sql'
+
       - name: Non-Atlantic rollback fixtures
         run: ./scripts/db-test-non-atlantic.sh
 

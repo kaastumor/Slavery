@@ -444,9 +444,10 @@ Internal review and independent review must never be conflated.
 ### RESEARCH_TARGET_SOURCE
 
 Links a reviewed target result to exact `SOURCE_VERSION` rows even when there is no
-positive historical claim. This preserves source-version identity, independence group,
-claim fitness, direction/role and locator without falsely asserting that the source
-supports a historical claim.
+positive historical claim. This preserves source-version identity, raw research source
+ID, independence group, claim fitness, direction/role, locator, decisive flag,
+access limitation, raw access-date text, optional asset SHA-256 and dependency note
+without falsely asserting that the source supports a historical claim.
 
 ### RESEARCH_TARGET_CLAIM
 
