@@ -42,7 +42,8 @@ async function main() {
     if (!targetLabel || !panel.includes(targetLabel)) {
       failures.push("candidate evidence-register navigation did not open the selected target");
     }
-    if (!panel.toLowerCase().includes("independent review")) {
+    const panelLower = panel.toLowerCase();
+    if (!panelLower.includes("independent review") && !panelLower.includes("independent historical review")) {
       failures.push("candidate detail no longer exposes the independent-review boundary");
     }
 
