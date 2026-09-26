@@ -1,0 +1,91 @@
+name: Supabase Recovery Evidence
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  backups:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      PROJECT_REF: dilnayfllygkplsdymel
+      SUPABASE_MANAGEMENT_TOKEN: ${{ secrets.SUPABASE_MANAGEMENT_TOKEN }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Require management token
+        run: test -n "$SUPABASE_MANAGEMENT_TOKEN"
+
+      - name: List project backups read-only
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build
+          curl --fail --silent --show-error \
+            -H "Authorization: Bearer $SUPABASE_MANAGEMENT_TOKEN" \
+            "https://api.supabase.com/v1/projects/$PROJECT_REF/database/backups" \
+            > build/supabase-backups-raw.json
+
+      - name: Validate recovery evidence
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+
+          raw = json.loads(Path("build/supabase-backups-raw.json").read_text())
+          backups = raw.get("backups") or []
+          completed = [b for b in backups if b.get("status") == "COMPLETED"]
+          pitr = bool(raw.get("pitr_enabled"))
+          walg = bool(raw.get("walg_enabled"))
+
+          receipt = {
+              "project_ref": "dilnayfllygkplsdymel",
+              "region": raw.get("region"),
+              "pitr_enabled": pitr,
+              "walg_enabled": walg,
+              "backup_count": len(backups),
+              "completed_backup_count": len(completed),
+              "backups": [
+                  {
+                      "id": b.get("id"),
+                      "status": b.get("status"),
+                      "inserted_at": b.get("inserted_at"),
+                      "is_physical_backup": b.get("is_physical_backup"),
+                  }
+                  for b in backups
+              ],
+              "physical_backup_data": raw.get("physical_backup_data"),
+          }
+          Path("build/supabase-recovery-receipt.json").write_text(
+              json.dumps(receipt, indent=2, sort_keys=True) + "\n"
+          )
+
+          summary = Path(__import__("os").environ["GITHUB_STEP_SUMMARY"])
+          with summary.open("a") as f:
+              f.write("## Supabase recovery evidence\n\n")
+              f.write(f"- PITR enabled: **{pitr}**\n")
+              f.write(f"- WAL-G enabled: **{walg}**\n")
+              f.write(f"- Backups returned: **{len(backups)}**\n")
+              f.write(f"- Completed backups: **{len(completed)}**\n")
+              for b in completed[:10]:
+                  f.write(
+                      f"- completed backup {b.get('id')}: "
+                      f"{b.get('inserted_at')} "
+                      f"(physical={b.get('is_physical_backup')})\n"
+                  )
+
+          if not pitr and not completed:
+              raise SystemExit(
+                  "BLOCK: project exposes neither PITR nor a completed backup"
+              )
+
+      - name: Upload sanitized recovery receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: supabase-recovery-receipt
+          path: build/supabase-recovery-receipt.json
+          if-no-files-found: error
+          retention-days: 7
