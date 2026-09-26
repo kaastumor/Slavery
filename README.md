@@ -33,11 +33,13 @@ Durable state:
   evidence geometries / 8 voyages / 99 coverage assessments / 211 exact source
   versions / 26 research-target results;
 - independent historical review remains **0**;
-- the public UI/API has **not** moved with the release: `public_mvp_preview` still
-  points to `mvp-preview-ancient-v2`;
-- Gate 5 / #323 is the active priority: stage and verify an exact v0.7.0-derived serving
-  materialization, prove rollback, and only then decide whether to move the public
-  release channel;
+- Gate 5 passed under D-113: `public_mvp_preview` points to
+  `v0.7.0-public-mvp-v1`, an immutable non-canonical serving adapter derived only from
+  canonical v0.7.0;
+- the public Atlas at `https://kaastumor.github.io/Slavery/` serves the canonical-release
+  client; the frozen R1 technical candidate remains preserved at `r1-candidate.html`;
+- live schema head is `0034`; D-112 freezes published release-manifest metadata while
+  immutable v0.7.0 remains a schema-0033 historical package;
 - best-supported project form remains **portable reviewed evidence core + governed
   database research authority + immutable release packages + replaceable
   Atlas/map/table/API views**;
