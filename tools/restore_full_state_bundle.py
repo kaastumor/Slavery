@@ -416,7 +416,7 @@ def main() -> int:
             "bundle_schema": bundle["bundle_schema"],
             "release_version": bundle["release"]["release_version"],
             "restored": True,
-            "verification": "EXACT_DIGEST_MATCH",
+            "verification": "EXACT_OBJECT_DIGESTS_AND_PORTABLE_CARTOGRAPHY_MATCH",
             **result,
         }
         if args.receipt:
