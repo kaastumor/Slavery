@@ -3,8 +3,9 @@ name: Public Atlas Browser Review
 on:
   pull_request:
     paths:
-      - "web/scripts/run_public_atlas_browser_review.mjs"
+      - "web/scripts/run_current_candidate_browser_smoke.mjs"
       - "web/scripts/run_v070_stage_browser_review.mjs"
+      - "tests/fixtures/gate5/v070-index.html"
       - "web/src/main.ts"
       - ".github/workflows/public-atlas-browser-review.yml"
   workflow_dispatch:
@@ -66,22 +67,13 @@ jobs:
           assert "Hittite central Anatolia" in names, summary
           PY
 
-      - name: Review live public atlas
+      - name: Review current public candidate root
         working-directory: web
         shell: bash
         run: |
-          node scripts/run_public_atlas_browser_review.mjs \
+          node scripts/run_current_candidate_browser_smoke.mjs \
             https://kaastumor.github.io/Slavery/ \
-            /tmp/public-atlas-review/live
-
-      - name: Review deployed snapshot with live API blocked
-        working-directory: web
-        shell: bash
-        run: |
-          node scripts/run_public_atlas_browser_review.mjs \
-            https://kaastumor.github.io/Slavery/ \
-            /tmp/public-atlas-review/fallback \
-            --force-api-failure
+            /tmp/public-atlas-review/current-root
 
       - name: Verify immutable v0.7.0 stage API
         if: always()
@@ -124,13 +116,17 @@ jobs:
           grep -qi '^x-atlas-stage: true' \
             /tmp/public-atlas-review/stage/api-headers.txt
 
-      - name: Build web against v0.7.0 stage API
+      - name: Build isolated canonical root against v0.7.0 stage API
         if: always()
         working-directory: web
         shell: bash
         env:
           VITE_ATLAS_API_URL: https://dilnayfllygkplsdymel.supabase.co/functions/v1/atlas-data-v070-stage
-        run: npm run build
+        run: |
+          cp ../tests/fixtures/gate5/v070-index.html index.html
+          mkdir -p public/fallback
+          cp ../data/serving/v0.7.0-public-mvp-v1/atlas-data.json public/fallback/atlas-data.json
+          npm run build
 
       - name: Review v0.7.0 staged browser
         if: always()
@@ -152,7 +148,11 @@ jobs:
           test "$ok" -eq 1
           node scripts/run_v070_stage_browser_review.mjs \
             http://127.0.0.1:4173/ \
-            /tmp/public-atlas-review/stage/browser
+            /tmp/public-atlas-review/stage/browser-live
+          node scripts/run_v070_stage_browser_review.mjs \
+            http://127.0.0.1:4173/ \
+            /tmp/public-atlas-review/stage/browser-fallback \
+            --force-api-failure
 
       - name: Upload live browser evidence
         if: always()
