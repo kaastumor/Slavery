@@ -230,23 +230,6 @@ def restore_research_results(cur, bundle: dict[str, Any]) -> None:
             insert_record(cur, "audit.research_target_claim", row)
 
 
-def portable_cartography_fingerprint(data: dict[str, Any]) -> dict[str, Any]:
-    keys = (
-        "fabric_id",
-        "content_sha256",
-        "source_commit_sha",
-        "source_blob_sha",
-        "srid",
-        "geometry_type",
-        "component_count",
-        "point_count",
-        "geodesic_area_m2_rounded_3",
-        "normalized_wkb_sha256",
-        "normalized_wkb_bytes",
-    )
-    return {key: data[key] for key in keys}
-
-
 def reconcile_cartography_metadata(
     cur, bundle: dict[str, Any], fingerprint: dict[str, Any]
 ) -> dict[str, Any]:
@@ -381,33 +364,25 @@ def main() -> int:
     parser.add_argument("bundle", type=Path)
     parser.add_argument("--dsn", default=os.environ.get("DATABASE_URL"))
     parser.add_argument("--receipt", type=Path)
-    parser.add_argument("--cartography-fingerprint", type=Path, required=True)
     args = parser.parse_args()
     if not args.dsn:
         parser.error("--dsn or DATABASE_URL is required")
 
     bundle = json.loads(args.bundle.read_text(encoding="utf-8"))
-    fingerprint = json.loads(
-        args.cartography_fingerprint.read_text(encoding="utf-8")
-    )
     validate_bundle(bundle)
 
     try:
         with psycopg.connect(args.dsn, autocommit=False) as conn:
             with conn.cursor() as cur:
                 require_empty_target(cur)
-                cartography_observed = reconcile_cartography_metadata(
-                    cur, bundle, fingerprint
-                )
+                cartography_observed = reconcile_cartography_metadata(cur, bundle)
                 restore_sources(cur, bundle)
                 restore_spatial(cur, bundle)
                 restore_actors(cur, bundle)
                 restore_claims_and_voyages(cur, bundle)
                 restore_coverage(cur, bundle)
                 restore_research_results(cur, bundle)
-                result = verify_restored_state(
-                    cur, bundle, fingerprint, cartography_observed
-                )
+                result = verify_restored_state(cur, bundle, cartography_observed)
             conn.commit()
 
         receipt = {
