@@ -2834,3 +2834,49 @@ flags, P-levels, historical geometry or independent-review state.
 
 A separate Gate-5 cutover decision is still required after staging, semantic/security
 regression and rollback proof.
+
+
+## D-112 — Published release-manifest metadata is immutable
+**Date:** 2026-09-26  
+**Status:** accepted Gate-5 integrity correction; implemented by migration 0034
+
+**Evidence:** #323 Gate-5 adversarial cutover review.
+
+**Problem:** D-054 already made typed release membership and registered release artifacts
+immutable after publication, but the parent `audit.release_manifest` row itself remained
+owner-mutable. This became a serving-integrity issue in Gate 5 because D-111's public
+Edge adapter reads the selected release manifest's `serving_materialization` metadata
+to choose the exact immutable v0.7.0 payload.
+
+A mutable published manifest would therefore allow release identity/purpose, QC,
+unresolved-issues text or serving-selector metadata to change without a new release,
+even while child membership and artifact rows stayed frozen. That contradicts D-017,
+D-053, D-054 and the architecture rule:
+
+> reviewed research state → immutable portable evidence package → replaceable presentation adapters
+
+**Decision:** after a release manifest reaches `published`:
+
+1. its version, schema version, creation timestamp, changelog, QC summary,
+   unresolved-issues text and JSON manifest are immutable;
+2. arbitrary updates, no-op updates and deletion are blocked;
+3. the only permitted lifecycle transition is `published → archived`, and only when
+   every field other than `status` is identical;
+4. an `archived` manifest is fully immutable;
+5. draft/validated rows remain mutable before publication under the existing release
+   workflow;
+6. public serving promotion/rollback continues to use the D-053 compare-and-set
+   `audit.release_channel` pointer. Published manifest edits are never a serving
+   control.
+
+Migration `0034_release_manifest_immutability.sql` enforces this with a dedicated
+`BEFORE UPDATE OR DELETE` trigger. Disposable CI cleanup may bypass that trigger only
+inside an explicit transaction on the disposable test database; production semantics
+are not weakened for fixture convenience.
+
+**Release effect:** none. This decision changes no historical content, v0.7.0 package
+bytes, D-109 membership, P-level, geometry, source interpretation, claim publication
+flags or independent-review state. The public channel remains on
+`mvp-preview-ancient-v2` until Gate 5 independently passes. The live database schema
+may advance to 0034 after repository CI and migration verification; canonical v0.7.0
+remains the immutable schema-0033 historical release it already is.
