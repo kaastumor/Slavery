@@ -1,0 +1,47 @@
+{
+  "candidate_id": "post-r1-cumulative-review-v3-cross-frame",
+  "total_source_relations": 166,
+  "predecessor_source_relations": 133,
+  "new_source_relations": 33,
+  "new_by_target": {
+    "R1:P:1300:D:r1": 5,
+    "R1:N:karnak_amun_m1000": 7,
+    "R1:N:sapmi_1600": 7,
+    "R1:N:todaiji_800": 8,
+    "R1:N:trans_saharan_1300": 6
+  },
+  "reconstructibility": {
+    "missing_source_version_ref": 0,
+    "missing_independence_group": 0,
+    "missing_claim_fitness": 0,
+    "within_target_duplicate_exact_source_version": 0
+  },
+  "exact_new_vs_predecessor_overlap_count": 0,
+  "exact_cross_target_overlap_count": 2,
+  "exact_cross_target_overlaps": [
+    {
+      "source_version_ref": "doi:10.3406/asean.2013.2272:2013",
+      "targets": [
+        "R1:N:angkor_1200",
+        "R1:P:1300:F:r1"
+      ],
+      "rule": "one shared Angkor personnel source family; not independent corroboration"
+    },
+    {
+      "source_version_ref": "Freeman-Grenville:EastAfricanCoast:2ed:1975:31-32",
+      "targets": [
+        "R1:N:great_zimbabwe_1400",
+        "R1:N:swahili_1400"
+      ],
+      "rule": "one Ibn Battuta/Kilwa translation chain; not independent corroboration"
+    }
+  ],
+  "post_v2_dependency_notes": [
+    "Lithuania: Jeroschin/Peter of Dusburg one chronicle chain; VLE/Jurginis one historiographic lineage.",
+    "Karnak: Banishment Stela editions one textual family; overlapping New Kingdom Amun captive-labour syntheses preserved.",
+    "Sápmi: overlapping northern tax-history scholarship preserved; 1589 capture not converted into enslavement.",
+    "Tōdai: catalogue descriptions are not independent events; 792 Nihon Kōki event is one textual family.",
+    "Trans-Saharan: Ibn Battuta/Wright/El Hamel 1353 caravan references are one primary event chain."
+  ],
+  "rule": "Dependency/reuse affect independence only; source counts never mechanically determine prevalence, intensity or confidence."
+}
