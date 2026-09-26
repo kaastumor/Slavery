@@ -659,7 +659,14 @@ async function boot(): Promise<void> {
     if (years.length === 0) throw new Error("Published release contains no dated claims");
 
     const minYear = Math.min(...years);
-    const maxYear = Math.max(...years);
+    const hasOpenEndedClaims = places.some((place) =>
+      place.claims.some((claim) => claim.to_year === null),
+    );
+    const currentCalendarYear = new Date().getUTCFullYear();
+    const maxYear = Math.max(
+      ...years,
+      hasOpenEndedClaims ? currentCalendarYear : Number.NEGATIVE_INFINITY,
+    );
 
     slider.min = String(minYear);
     slider.max = String(maxYear);
