@@ -1,0 +1,81 @@
+{
+  "case_key": "atlas-expansion-01/neo-assyrian-nineveh/slavery-v2",
+  "spatial_entity": {
+    "canonical_name": "Neo-Assyrian Nineveh",
+    "display_name": "Neo-Assyrian Nineveh",
+    "entity_type_code": "city",
+    "from_year": -695,
+    "to_year": -695,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed Nineveh spatial identity and reviewed geometry. Claim is a bounded sale/ownership attestation, not a prevalence estimate."
+  },
+  "claim": {
+    "from_year": -695,
+    "to_year": -695,
+    "date_text_original": "696 BCE legal transaction, represented in atlas astronomical-year convention",
+    "temporal_precision": "dated_transaction",
+    "temporal_certainty": "high",
+    "spatial_precision": "city_archive_event",
+    "summary": "Neo-Assyrian legal records from Nineveh document the purchase and sale of enslaved persons, while specialist legal synthesis confirms that slaves could be owned and transferred as property within Neo-Assyrian household law. The atlas records a bounded positive slavery designation at Nineveh without converting a sale contract into a city-wide prevalence or labour-share estimate.",
+    "confidence": "high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim e8d1cf12-725b-49db-8083-5a50389a1d86. Legacy P1 is not copied into this post-M1 claim.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Direct bounded transaction plus specialist status interpretation; no prevalence inference."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "SAA 06 128. Purchase of Slaves (696-V-5)",
+        "author_or_institution": "State Archives of Assyria Online",
+        "source_type": "primary_edition",
+        "source_classification": "primary",
+        "language_code": "akk/en",
+        "geographic_scope": "Nineveh",
+        "temporal_scope": "Neo-Assyrian, 696 BCE",
+        "independence_notes": "One primary legal transaction. Other editions/transcriptions of the same tablet are the same evidence family.",
+        "reliability_limitations": "Bounded transaction evidence; does not by itself establish city-wide scale or prevalence."
+      },
+      "version": {
+        "version_label": "State Archives of Assyria Online, SAA 6 digital edition",
+        "url_or_identifier": "https://oracc.museum.upenn.edu/saao/saa06//P335531/html",
+        "accessed_at": "2026-09-27T00:35:00Z"
+      },
+      "evidence_role": "dated sale/purchase event",
+      "independence_group": "saa6-nineveh-sale-696",
+      "directness": "primary legal transaction",
+      "direction": "supports",
+      "locator": "SAA 06 128, dated 696-V-5"
+    },
+    {
+      "source": {
+        "title": "Neo-Assyrian Period",
+        "author_or_institution": "Karen Radner",
+        "source_type": "book_chapter",
+        "source_classification": "secondary",
+        "geographic_scope": "Neo-Assyrian Empire",
+        "temporal_scope": "Neo-Assyrian period",
+        "independence_notes": "Specialist legal-historical synthesis independent from the individual Nineveh transaction.",
+        "reliability_limitations": "Empire-wide legal synthesis; used to interpret alienability/ownership status, not to infer Nineveh prevalence."
+      },
+      "version": {
+        "version_label": "A History of Ancient Near Eastern Law (2003), pp. 883–910",
+        "publication_year": 2003,
+        "url_or_identifier": "https://epub.ub.uni-muenchen.de/25051/",
+        "license_status": "open_access_repository_copy",
+        "accessed_at": "2026-09-27T00:35:00Z"
+      },
+      "evidence_role": "specialist status/property interpretation",
+      "independence_group": "radner-neo-assyrian-law-2003",
+      "directness": "specialist legal synthesis",
+      "direction": "qualifies",
+      "locator": "section 4.3 Slavery"
+    }
+  ]
+}
