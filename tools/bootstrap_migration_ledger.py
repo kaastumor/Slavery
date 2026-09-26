@@ -32,7 +32,8 @@ MIGRATIONS_DIR = ROOT / "db" / "migrations"
 DEFAULT_POLICY = ROOT / "config" / "migration_ledger_exceptions.json"
 
 EXPECTED_RELEASE = "0.6.1-db-migration-candidate"
-EXPECTED_REPOSITORY_HEAD = "0030"\nEXPECTED_RELEASE_SCHEMA_HEAD = "0029"
+EXPECTED_REPOSITORY_HEAD = "0030"
+EXPECTED_RELEASE_SCHEMA_HEAD = "0029"
 EXPECTED_WORKBOOK_SHA256 = (
     "0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4"
 )
@@ -223,8 +224,8 @@ def validate_existing_ledger(
 
 def preflight(cur, policy_path: Path) -> dict[str, Any]:
     inventory = repository_inventory()
-    if len(inventory) != 29 or inventory[-1]["name"] != "0029_claim_kind_function_privileges":
-        raise BootstrapError("repository migration inventory is not the expected 0001-0029 set")
+    if len(inventory) != 30 or inventory[-1]["name"] != "0030_checksum_migration_ledger":
+        raise BootstrapError("repository migration inventory is not the expected 0001-0030 set")
 
     policy = load_policy(policy_path)
     history = platform_history(cur)
@@ -237,10 +238,12 @@ def preflight(cur, policy_path: Path) -> dict[str, Any]:
         raise BootstrapError(f"live schema sentinel failed: {sentinels}")
 
     release = release_candidate(cur)
-    if release["schema_version"] != EXPECTED_SCHEMA_HEAD:
-        raise BootstrapError(f"live release candidate schema head is {release['schema_version']!r}")
-    if release["production_schema_head"] != EXPECTED_SCHEMA_HEAD:
-        raise BootstrapError("release manifest production_schema_head is not 0029")
+    if release["schema_version"] != EXPECTED_RELEASE_SCHEMA_HEAD:
+        raise BootstrapError(
+            f"frozen v0.6.1 release candidate schema head is {release['schema_version']!r}"
+        )
+    if release["production_schema_head"] != EXPECTED_RELEASE_SCHEMA_HEAD:
+        raise BootstrapError("frozen v0.6.1 release manifest production_schema_head is not 0029")
     if release["migration_validation"] != "passed":
         raise BootstrapError("release manifest does not record migration_validation=passed")
     if release["workbook_sha256"] != EXPECTED_WORKBOOK_SHA256:
@@ -326,8 +329,8 @@ def main() -> int:
 
     if not args.dsn:
         parser.error("--dsn or DATABASE_URL is required")
-    if args.apply and args.confirm_head != EXPECTED_SCHEMA_HEAD:
-        parser.error(f"--apply requires --confirm-head {EXPECTED_SCHEMA_HEAD}")
+    if args.apply and args.confirm_head != EXPECTED_REPOSITORY_HEAD:
+        parser.error(f"--apply requires --confirm-head {EXPECTED_REPOSITORY_HEAD}")
 
     try:
         import psycopg
