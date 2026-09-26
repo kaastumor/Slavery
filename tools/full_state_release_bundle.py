@@ -649,7 +649,8 @@ def snapshot_objects(
                (to_jsonb(f)-'geom') ||
                jsonb_build_object(
                  'geom_srid',st_srid(f.geom),
-                 'geom_ewkb_hex',encode(st_asewkb(f.geom),'hex')
+                 'geom_ewkb_sha256',encode(digest(st_asewkb(f.geom),'sha256'),'hex'),
+                 'geom_ewkb_bytes',octet_length(st_asewkb(f.geom))
                )
         from cartography.land_fabric f
         where active

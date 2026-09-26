@@ -2524,3 +2524,41 @@ This decision does not:
 Gate 3 still requires live migration/application, deterministic bundle build/verify,
 security, backup/rollback and authority-cutover proof.
 
+## D-107 — Full-state bundles freeze canonical cartography by pinned source identity plus DB geometry digest
+**Date:** 2026-09-26  
+**Status:** accepted Gate-3 preservation-contract refinement
+
+**Evidence:** #313 live Gate-3 proof.
+
+The active canonical land fabric is Natural Earth `ne_10m_land` 5.1.1 pinned to:
+- upstream commit `ca96624a56bd078437bca8184e78163e5039ad19`;
+- upstream blob `2d76878175b8054acd9c5a52917ee9ea59a36fc5`;
+- source content SHA-256 `1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416`.
+
+Its current PostGIS EWKB is about 7.2 MB, which becomes roughly twice that size when
+hex-encoded into every preservation bundle.
+
+**Decision:** the Gate-3 full-state bundle does not inline the canonical land fabric's
+full EWKB. It freezes:
+- the complete `cartography.land_fabric` row except `geom`;
+- SRID;
+- exact EWKB SHA-256;
+- exact EWKB byte length.
+
+The source bytes remain independently pinned by immutable URL/commit/blob/content
+checksums and the deterministic `tools/load_land_fabric.py` transformation.
+
+The bundle verifier recomputes the EWKB SHA-256/byte length from the live DB, so any
+cartographic DB drift still fails verification. The pinned source plus deterministic
+loader remains sufficient to reconstruct and independently verify the geometry.
+
+This refinement reduces redundant release-artifact size without weakening:
+- source provenance;
+- DB-state drift detection;
+- reproducibility;
+- neutral-land continuity;
+- historical geometry separation.
+
+It does not change historical geometry, infer practice extent, move a public release
+channel or alter canonical v0.6.1.
+

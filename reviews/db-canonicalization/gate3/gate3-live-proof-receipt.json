@@ -1,0 +1,37 @@
+{
+  "proof_id": "gate3-db-authority-proof-v1",
+  "generated_date": "2026-09-26",
+  "supabase_project_ref": "dilnayfllygkplsdymel",
+  "source_git_sha": "b37864ff5f10e480c72a3cdb1296a5e2c757add5",
+  "schema_version": "0033",
+  "predecessor_manifest_version": "0.6.1-db-migration-candidate",
+  "reviewed_candidate_id": "post-r1-cumulative-review-v3-cross-frame",
+  "candidate_sha256": "3e955158ec4b5af9e70d51b2adff68bf6d7812061d24a1113617ef1f9d20041a",
+  "bundle_sha256": "e26bc9243c71226e6107162d15c44a0fa13d063ed7708bb12627e4ee8f13c54b",
+  "membership_sha256": "ebc9d32f09857744841a0cf92699c41739b624ac4bd94c43798eb1f61e3b0dd3",
+  "database_state_sha256": "31b7a7b675445e5758ffd68d64ff0f0cde83df1b0ea65f29835246deb2ae26ff",
+  "cartography_sha256": "1e9d54402c48f19a8aa73aa3489b0c5577d8e70bec39892b9d1081cc9fb8db8a",
+  "cartography_identity": {
+    "kind": "land_fabric",
+    "id": "natural-earth-ne_10m_land-v5.1.1-ca96624",
+    "source_commit_sha": "ca96624a56bd078437bca8184e78163e5039ad19",
+    "source_blob_sha": "2d76878175b8054acd9c5a52917ee9ea59a36fc5",
+    "content_sha256": "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416",
+    "geom_ewkb_sha256": "58283980d5a4522d657f6a94e9fcd067f55f850165771c8d336b40d433b9c9c1",
+    "geom_ewkb_bytes": 7227413
+  },
+  "counts": {
+    "actor_ids": 11,
+    "claim_ids": 40,
+    "coverage_assessment_ids": 99,
+    "geometry_ids": 0,
+    "research_target_result_ids": 26,
+    "source_version_ids": 211,
+    "spatial_entity_ids": 18,
+    "voyage_ids": 8
+  },
+  "bundle_contract": "historical-slavery-atlas-full-state-bundle-v2",
+  "canonical": false,
+  "public_channel_moved": false,
+  "note": "Assembled from durable live Supabase object snapshots matching tools/full_state_release_bundle.py; CI must lint the exact bundle."
+}
