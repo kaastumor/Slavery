@@ -1,0 +1,398 @@
+{
+  "2625aede-403a-578a-a7b9-13896729a058": {
+    "actor": {
+      "notes": "Evidence status: Voyage record only\nNo nationality inferred from flag, Liverpool, or surname.",
+      "to_year": null,
+      "actor_id": "2625aede-403a-578a-a7b9-13896729a058",
+      "from_year": null,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": null,
+      "display_name": "John Syers",
+      "review_status": "reviewed",
+      "canonical_name": "John Syers",
+      "actor_type_code": "person"
+    },
+    "names": [
+      {
+        "notes": null,
+        "actor_id": "2625aede-403a-578a-a7b9-13896729a058",
+        "name_text": "John Syers",
+        "name_type": "canonical",
+        "is_preferred": true,
+        "actor_name_id": "8683f462-5272-4ce8-b242-520dbefe8f65",
+        "language_code": null,
+        "source_version_id": null
+      },
+      {
+        "notes": null,
+        "actor_id": "2625aede-403a-578a-a7b9-13896729a058",
+        "name_text": "Syers, John",
+        "name_type": "source_raw",
+        "is_preferred": false,
+        "actor_name_id": "9f573fde-1cf5-4e8e-8b43-3149832634a6",
+        "language_code": null,
+        "source_version_id": "102684a1-7ff5-5d1f-be36-71154cf600f8"
+      }
+    ]
+  },
+  "50cbe83a-aa79-5935-bacb-84de9daf0997": {
+    "actor": {
+      "notes": "Evidence status: Voyage record only\nNo nationality inferred from flag, Liverpool, or surname.",
+      "to_year": null,
+      "actor_id": "50cbe83a-aa79-5935-bacb-84de9daf0997",
+      "from_year": null,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": null,
+      "display_name": "Thomas Greenup",
+      "review_status": "reviewed",
+      "canonical_name": "Thomas Greenup",
+      "actor_type_code": "person"
+    },
+    "names": [
+      {
+        "notes": null,
+        "actor_id": "50cbe83a-aa79-5935-bacb-84de9daf0997",
+        "name_text": "Thomas Greenup",
+        "name_type": "canonical",
+        "is_preferred": true,
+        "actor_name_id": "3a51aa34-f817-4dbb-a51f-013588862c0b",
+        "language_code": null,
+        "source_version_id": null
+      },
+      {
+        "notes": null,
+        "actor_id": "50cbe83a-aa79-5935-bacb-84de9daf0997",
+        "name_text": "Greenup, Thomas",
+        "name_type": "source_raw",
+        "is_preferred": false,
+        "actor_name_id": "797d64b5-d629-4c03-82ee-111c5a6fed38",
+        "language_code": null,
+        "source_version_id": "102684a1-7ff5-5d1f-be36-71154cf600f8"
+      }
+    ]
+  },
+  "6c564521-cca9-5991-8a78-c5bb1408aacd": {
+    "actor": {
+      "notes": "Evidence status: Independent commercial-role evidence\nBahia armador evidence does not by itself establish nationality/citizenship.",
+      "to_year": null,
+      "actor_id": "6c564521-cca9-5991-8a78-c5bb1408aacd",
+      "from_year": null,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": null,
+      "display_name": "Pedro de Souza Paraíso",
+      "review_status": "reviewed",
+      "canonical_name": "Pedro de Souza Paraíso",
+      "actor_type_code": "person"
+    },
+    "names": [
+      {
+        "notes": null,
+        "actor_id": "6c564521-cca9-5991-8a78-c5bb1408aacd",
+        "name_text": "Pedro de Souza Paraíso",
+        "name_type": "canonical",
+        "is_preferred": true,
+        "actor_name_id": "641ed244-62c6-49a2-bb4f-f5b5e150546d",
+        "language_code": null,
+        "source_version_id": null
+      },
+      {
+        "notes": null,
+        "actor_id": "6c564521-cca9-5991-8a78-c5bb1408aacd",
+        "name_text": "Paraíso, Pedro de Souza",
+        "name_type": "source_raw",
+        "is_preferred": false,
+        "actor_name_id": "ea035c39-be8f-47b3-be12-7a7de2860106",
+        "language_code": null,
+        "source_version_id": "ec396207-9d94-5392-92cf-24d726a8eeba"
+      }
+    ]
+  },
+  "888f5a40-a784-5af0-b103-8432fa748856": {
+    "actor": {
+      "notes": "Evidence status: Independent archival + scholarly evidence\nCorporate jurisdiction is not treated as the nationality of every director, investor, officer or crew member.",
+      "to_year": null,
+      "actor_id": "888f5a40-a784-5af0-b103-8432fa748856",
+      "from_year": null,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": null,
+      "display_name": "Guinea Company (Det Guineiske Kompagni)",
+      "review_status": "reviewed",
+      "canonical_name": "Guinea Company (Det Guineiske Kompagni)",
+      "actor_type_code": "company"
+    },
+    "names": [
+      {
+        "notes": null,
+        "actor_id": "888f5a40-a784-5af0-b103-8432fa748856",
+        "name_text": "Guinea Company (Det Guineiske Kompagni)",
+        "name_type": "canonical",
+        "is_preferred": true,
+        "actor_name_id": "1a2d393f-b57f-4d41-8d98-d461fe6536f2",
+        "language_code": null,
+        "source_version_id": null
+      },
+      {
+        "notes": null,
+        "actor_id": "888f5a40-a784-5af0-b103-8432fa748856",
+        "name_text": "Guinea Company / owner of Fredensborg",
+        "name_type": "source_raw",
+        "is_preferred": false,
+        "actor_name_id": "7360ddfd-2503-44ca-8b3d-4755e315e731",
+        "language_code": null,
+        "source_version_id": "f47651c1-34f7-5746-85eb-20e303937df2"
+      }
+    ]
+  },
+  "9b204811-95f4-5c27-938e-47534b9fb52b": {
+    "actor": {
+      "notes": "Evidence status: Voyage record only\nNo nationality inferred from flag, Liverpool, or surname.",
+      "to_year": null,
+      "actor_id": "9b204811-95f4-5c27-938e-47534b9fb52b",
+      "from_year": null,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": null,
+      "display_name": "Thomas Ball",
+      "review_status": "reviewed",
+      "canonical_name": "Thomas Ball",
+      "actor_type_code": "person"
+    },
+    "names": [
+      {
+        "notes": null,
+        "actor_id": "9b204811-95f4-5c27-938e-47534b9fb52b",
+        "name_text": "Ball, Thomas",
+        "name_type": "source_raw",
+        "is_preferred": false,
+        "actor_name_id": "087fe375-73e5-4839-b879-ad1a6b3b39dd",
+        "language_code": null,
+        "source_version_id": "102684a1-7ff5-5d1f-be36-71154cf600f8"
+      },
+      {
+        "notes": null,
+        "actor_id": "9b204811-95f4-5c27-938e-47534b9fb52b",
+        "name_text": "Thomas Ball",
+        "name_type": "canonical",
+        "is_preferred": true,
+        "actor_name_id": "60896f2f-f635-48a9-a687-7798a62afca4",
+        "language_code": null,
+        "source_version_id": null
+      }
+    ]
+  },
+  "9de3ff18-30c5-5778-ab2e-c0f0bbf2a8dc": {
+    "actor": {
+      "notes": "Evidence status: Voyage record only\nNo nationality inferred from flag, Liverpool, or surname.",
+      "to_year": null,
+      "actor_id": "9de3ff18-30c5-5778-ab2e-c0f0bbf2a8dc",
+      "from_year": null,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": null,
+      "display_name": "Richard Cribb",
+      "review_status": "reviewed",
+      "canonical_name": "Richard Cribb",
+      "actor_type_code": "person"
+    },
+    "names": [
+      {
+        "notes": null,
+        "actor_id": "9de3ff18-30c5-5778-ab2e-c0f0bbf2a8dc",
+        "name_text": "Cribb, Richard",
+        "name_type": "source_raw",
+        "is_preferred": false,
+        "actor_name_id": "52d95757-9cf0-4734-a9f6-9d3d285d9ae3",
+        "language_code": null,
+        "source_version_id": "102684a1-7ff5-5d1f-be36-71154cf600f8"
+      },
+      {
+        "notes": null,
+        "actor_id": "9de3ff18-30c5-5778-ab2e-c0f0bbf2a8dc",
+        "name_text": "Richard Cribb",
+        "name_type": "canonical",
+        "is_preferred": true,
+        "actor_name_id": "c0b70e9f-c4ae-45c8-9509-b49c301d9496",
+        "language_code": null,
+        "source_version_id": null
+      }
+    ]
+  },
+  "aae15780-2d77-5119-a19c-9b5d9b0f9af0": {
+    "actor": {
+      "notes": "Evidence status: Voyage record only\nAsterisk in source indicates additional owners/company may be present. Pre-1776 U.S.A. carrier code is not nationality evidence.",
+      "to_year": null,
+      "actor_id": "aae15780-2d77-5119-a19c-9b5d9b0f9af0",
+      "from_year": null,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": null,
+      "display_name": "Joseph Willson",
+      "review_status": "reviewed",
+      "canonical_name": "Joseph Willson",
+      "actor_type_code": "person"
+    },
+    "names": [
+      {
+        "notes": null,
+        "actor_id": "aae15780-2d77-5119-a19c-9b5d9b0f9af0",
+        "name_text": "Joseph Willson",
+        "name_type": "canonical",
+        "is_preferred": true,
+        "actor_name_id": "4e9fc27d-076c-4d98-af51-b232f5557188",
+        "language_code": null,
+        "source_version_id": null
+      },
+      {
+        "notes": null,
+        "actor_id": "aae15780-2d77-5119-a19c-9b5d9b0f9af0",
+        "name_text": "Willson, Joseph*",
+        "name_type": "source_raw",
+        "is_preferred": false,
+        "actor_name_id": "eacd95ec-6320-4d5e-af60-e5629fa4bd53",
+        "language_code": null,
+        "source_version_id": "16330648-4255-5ddc-aff2-caf85a64bc2c"
+      }
+    ]
+  },
+  "c0ef1e15-8ed2-5ca5-900e-f092b393941c": {
+    "actor": {
+      "notes": "Evidence status: Voyage record only\nDo not infer French nationality from vessel flag or Nantes construction.",
+      "to_year": null,
+      "actor_id": "c0ef1e15-8ed2-5ca5-900e-f092b393941c",
+      "from_year": null,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": null,
+      "display_name": "Chardonneau",
+      "review_status": "reviewed",
+      "canonical_name": "Chardonneau",
+      "actor_type_code": "person"
+    },
+    "names": [
+      {
+        "notes": null,
+        "actor_id": "c0ef1e15-8ed2-5ca5-900e-f092b393941c",
+        "name_text": "Chardonneau",
+        "name_type": "source_raw",
+        "is_preferred": false,
+        "actor_name_id": "069715bb-662b-41b8-89ae-30052a0b2460",
+        "language_code": null,
+        "source_version_id": "dfc154c4-f555-5518-bce0-75dffba52bf5"
+      },
+      {
+        "notes": null,
+        "actor_id": "c0ef1e15-8ed2-5ca5-900e-f092b393941c",
+        "name_text": "Chardonneau",
+        "name_type": "canonical",
+        "is_preferred": true,
+        "actor_name_id": "1381c865-0d79-44f6-adfb-15e970c40b06",
+        "language_code": null,
+        "source_version_id": null
+      }
+    ]
+  },
+  "c348a97f-0b48-5f8c-8bb3-6f480b620715": {
+    "actor": {
+      "notes": "Evidence status: Independent firm/base evidence\nNormalized as one firm to avoid inventing separate person identities/nationalities from surnames alone.",
+      "to_year": null,
+      "actor_id": "c348a97f-0b48-5f8c-8bb3-6f480b620715",
+      "from_year": null,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": null,
+      "display_name": "Coopstad & Rochussen",
+      "review_status": "reviewed",
+      "canonical_name": "Coopstad & Rochussen",
+      "actor_type_code": "partnership"
+    },
+    "names": [
+      {
+        "notes": null,
+        "actor_id": "c348a97f-0b48-5f8c-8bb3-6f480b620715",
+        "name_text": "Coopstad; Rochussen",
+        "name_type": "source_raw",
+        "is_preferred": false,
+        "actor_name_id": "3df4d448-dc14-4155-911f-a0cfb2de1d1f",
+        "language_code": null,
+        "source_version_id": "e8615b66-b3c3-5ee7-96d3-ffacc8d8d11e"
+      },
+      {
+        "notes": null,
+        "actor_id": "c348a97f-0b48-5f8c-8bb3-6f480b620715",
+        "name_text": "Coopstad & Rochussen",
+        "name_type": "canonical",
+        "is_preferred": true,
+        "actor_name_id": "9ff570e1-f7c1-4658-b942-28f31461e33c",
+        "language_code": null,
+        "source_version_id": null
+      }
+    ]
+  },
+  "cd080ca3-ec51-5aa4-84af-1232bcd4c383": {
+    "actor": {
+      "notes": "Evidence status: Independent nationality/identity evidence\nPositive control: nationality may be populated when independently supported; it is not copied from the ship's French flag.",
+      "to_year": null,
+      "actor_id": "cd080ca3-ec51-5aa4-84af-1232bcd4c383",
+      "from_year": null,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": null,
+      "display_name": "Jean-Aubin Dumoustier de Frédilly",
+      "review_status": "reviewed",
+      "canonical_name": "Jean-Aubin Dumoustier de Frédilly",
+      "actor_type_code": "person"
+    },
+    "names": [
+      {
+        "notes": null,
+        "actor_id": "cd080ca3-ec51-5aa4-84af-1232bcd4c383",
+        "name_text": "Dumoustier de Fredilly",
+        "name_type": "source_raw",
+        "is_preferred": false,
+        "actor_name_id": "3cc172ea-dc3e-4628-967b-94855f6c51a7",
+        "language_code": null,
+        "source_version_id": "6b66763e-81fc-5ce3-b9c8-e0c37cbe2213"
+      },
+      {
+        "notes": null,
+        "actor_id": "cd080ca3-ec51-5aa4-84af-1232bcd4c383",
+        "name_text": "Jean-Aubin Dumoustier de Frédilly",
+        "name_type": "canonical",
+        "is_preferred": true,
+        "actor_name_id": "a2383e39-0681-49ee-bdee-f34a63684d4b",
+        "language_code": null,
+        "source_version_id": null
+      }
+    ]
+  },
+  "cf06c139-59f5-5395-b6fb-72c0b3597b6b": {
+    "actor": {
+      "notes": "Evidence status: Voyage record only\nNo nationality inferred from flag, Liverpool, or surname.",
+      "to_year": null,
+      "actor_id": "cf06c139-59f5-5395-b6fb-72c0b3597b6b",
+      "from_year": null,
+      "created_at": "2026-09-23T13:23:37.708769+00:00",
+      "valid_years": null,
+      "display_name": "James Gildart",
+      "review_status": "reviewed",
+      "canonical_name": "James Gildart",
+      "actor_type_code": "person"
+    },
+    "names": [
+      {
+        "notes": null,
+        "actor_id": "cf06c139-59f5-5395-b6fb-72c0b3597b6b",
+        "name_text": "Gildart, James",
+        "name_type": "source_raw",
+        "is_preferred": false,
+        "actor_name_id": "09cdfb2b-2538-4959-ab2d-3b40fbaea88d",
+        "language_code": null,
+        "source_version_id": "102684a1-7ff5-5d1f-be36-71154cf600f8"
+      },
+      {
+        "notes": null,
+        "actor_id": "cf06c139-59f5-5395-b6fb-72c0b3597b6b",
+        "name_text": "James Gildart",
+        "name_type": "canonical",
+        "is_preferred": true,
+        "actor_name_id": "2a690086-8361-4038-830e-0a2cd8f06d06",
+        "language_code": null,
+        "source_version_id": null
+      }
+    ]
+  }
+}
