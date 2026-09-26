@@ -18,7 +18,7 @@ This file answers **what is justified to work on next**.
 **Current gate:** Gate 2 — v3 reviewed-evidence DB reconciliation  
 **Canonical historical data release:** `v0.6.1` unchanged  
 **Frozen reviewed input:** `post-r1-cumulative-review-v3-cross-frame`  
-**WIP:** Gate 2 mapping/ingestion design only under #300
+**WIP:** #308 — Gate 2 lossless v3 research-target/result schema + ingestion
 
 ## Gate 1 closeout
 
@@ -78,8 +78,11 @@ Must preserve:
 - unresolved geometry;
 - P-level null unless independently justified.
 
-Prefer the existing schema. Any material representational loss is a schema-decision gate,
-not a reason to bury semantics in generic notes.
+Gate-2 mapping found a real representational gap. D-103 / #308 adds the smallest
+additive research-target/result layer plus missing claim semantics already defined in
+`docs/04_DATA_MODEL.md`. Migration 0031 must pass fresh-schema CI before any live
+application. No v3 ingestion or authority flip occurs until the new layer is live and
+round-trip reconciliation passes.
 
 No DB authority flip, canonical release, public-channel move or UI cutover follows until
 Gate 2 and later gates pass.

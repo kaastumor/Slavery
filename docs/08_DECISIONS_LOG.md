@@ -2307,3 +2307,48 @@ is a schema-decision gate, not permission to flatten the evidence into notes.
 authority has not flipped; independent historical review remains 0; public preview/UI
 remain unchanged.
 
+## D-103 — v3 requires a first-class research-target/result layer; do not flatten review semantics into claims
+**Date:** 2026-09-26  
+**Status:** accepted Gate-2 schema decision
+
+**Evidence:** #308 under parent cutover gate #300.
+
+Live Gate-2 mapping showed that the existing claim/source model is strong enough for
+historical assertions but cannot losslessly represent the frozen v3 reviewed package:
+- HOLD and researched-inconclusive results may have no positive historical claim;
+- one target may contain multiple dimension-specific claims;
+- target-level source review must not automatically become claim evidence;
+- evidence locus and inference extent are documented in the canonical data model but
+  were not yet implemented live;
+- `claim_source` lacked first-class claim fitness;
+- the live territorial-practice subtype still carried legacy mandatory fields that
+  would force false classification.
+
+**Decision:** add an additive normalized research layer:
+- `audit.research_target`;
+- `audit.research_target_result`;
+- `audit.research_target_review`;
+- `audit.research_target_source`;
+- `audit.research_target_claim`.
+
+Also implement the already-documented claim semantics:
+- `temporal_applicability_mode`;
+- `claim_asserted_interval`;
+- `claim_evidence_locus`;
+- `claim_inference_extent`;
+- `claim_source.claim_fitness`;
+- territorial-practice assertion/research/classification fields;
+- typed practice-facet assertions.
+
+Legacy `practice_type_code`, `practice_level` and `coverage_state_code` may remain
+NULL for new claims when the reviewed evidence does not justify them. Inconclusive/HOLD
+must never be converted to P0 or absence.
+
+The audit research layer preserves project epistemic/review state. Historical truth
+remains in normalized `atlas.claim` structures. A research result may link to zero,
+one or many historical claims.
+
+**No effect by decision alone:** no v3 ingestion, DB authority flip, release, public
+channel, P-level, geometry promotion or UI change. Migration 0031 and live Gate-2
+reconciliation must pass separately.
+
