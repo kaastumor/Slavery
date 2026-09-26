@@ -1,0 +1,13 @@
+{
+  "release_version": "gate3-full-state-proof",
+  "schema_version": "0033",
+  "purpose": "canonical_research_state_proof",
+  "canonical": false,
+  "canonical_predecessor_version": "v0.6.1",
+  "predecessor_manifest_version": "gate3-v2-predecessor",
+  "reviewed_candidate_id": "gate3-v2-reviewed",
+  "workbook_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "changelog": "Disposable Gate-3 preservation bundle fixture.",
+  "qc_summary": "Exercises every top-level preservation object family.",
+  "unresolved_issues": "Test-only fixture."
+}
