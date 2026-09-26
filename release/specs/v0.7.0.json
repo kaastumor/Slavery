@@ -1,0 +1,90 @@
+{
+  "release_version": "v0.7.0",
+  "release_date": "2026-09-26",
+  "schema_version": "0033",
+  "purpose": "canonical_historical_release",
+  "canonical": true,
+  "canonical_predecessor": {
+    "version": "v0.6.1",
+    "filename": "Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx",
+    "sha256": "0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4"
+  },
+  "authority": {
+    "decision": "D-109",
+    "decision_commit": "295a108d9e46f0c3f0e6a867dc06cbae5eda1356",
+    "authority_release_version": "gate3-db-authority-proof-v1",
+    "membership_sha256": "ebc9d32f09857744841a0cf92699c41739b624ac4bd94c43798eb1f61e3b0dd3",
+    "database_state_sha256": "31b7a7b675445e5758ffd68d64ff0f0cde83df1b0ea65f29835246deb2ae26ff",
+    "reviewed_candidate_id": "post-r1-cumulative-review-v3-cross-frame",
+    "authority_bundle_sha256": "e26bc9243c71226e6107162d15c44a0fa13d063ed7708bb12627e4ee8f13c54b",
+    "expected_counts": {
+      "actor_ids": 11,
+      "claim_ids": 40,
+      "coverage_assessment_ids": 99,
+      "geometry_ids": 0,
+      "research_target_result_ids": 26,
+      "source_version_ids": 211,
+      "spatial_entity_ids": 18,
+      "voyage_ids": 8
+    }
+  },
+  "review": {
+    "internal_research_target_reviews": 26,
+    "independent_historical_reviews": 0,
+    "reviewed_candidate_id": "post-r1-cumulative-review-v3-cross-frame"
+  },
+  "public_channel": {
+    "current_release": "mvp-preview-ancient-v2",
+    "moved_by_release": false,
+    "gate_for_future_move": "Gate 5"
+  },
+  "methodology_references": [
+    "docs/02_METHOD_AND_ONTOLOGY.md",
+    "docs/03_SOURCE_POLICY.md",
+    "docs/04_DATA_MODEL.md",
+    "docs/05_GEOGRAPHY_AND_MAP.md",
+    "docs/07_QC_AND_VERSIONING.md",
+    "docs/08_DECISIONS_LOG.md — D-108 and D-109",
+    "docs/11_SYSTEM_ARCHITECTURE.md",
+    "reviews/db-canonicalization/gate3/GATE3_AUTHORITY_REVIEW.md"
+  ],
+  "changelog": [
+    "Moves the current research authority from workbook-led state to the D-109 governed PostgreSQL/PostGIS membership closure while retaining v0.6.1 as the immutable predecessor.",
+    "Freezes the reconciled v0.6.1 migration state together with the reviewed post-r1-cumulative-review-v3-cross-frame research target/result/source provenance.",
+    "Preserves 40 claims, 11 actors, 18 spatial entities, 8 voyages, 99 research-coverage assessments, 211 exact source versions and 26 research-target results as explicit release membership.",
+    "Preserves law, territorial practice, external/network participation, coverage and geometry as separate dimensions; this release does not calculate P-levels from record density.",
+    "Carries HOLD, researched-inconclusive and unresolved states as non-absence and retains independent historical review count at 0.",
+    "Uses D-108 portable cartography recovery semantics while keeping the neutral Natural Earth land fabric separate from historical evidence geometry.",
+    "Does not move the public UI/API release channel; public cutover remains a separate Gate-5 decision."
+  ],
+  "qc_summary": [
+    "Gate 0 migration-history reconciliation: PASS.",
+    "Gate 1 v0.6.1 semantic reconciliation and source-native lineage checks: PASS.",
+    "Gate 2 frozen-v3 exact payload round trip and representative idempotent rerun: PASS.",
+    "Gate 3 exact membership/object-digest preservation and fresh-database logical recovery: PASS.",
+    "D-108 portable cartography fingerprint reconstruction across a different PostGIS/GEOS runtime: PASS.",
+    "Private Data API boundary: PASS; anon/authenticated have no internal schema/table access in the verified live state.",
+    "Supabase security advisor at Gate 3: 0 lints.",
+    "Legacy preview/prototype rows outside D-109 membership are excluded from the canonical release closure.",
+    "Independent historical review remains exactly 0 and is not inferred from internal review."
+  ],
+  "unresolved_issues": [
+    "Fredensborg voyage 35181 retains the known 235 versus about 241 St. Croix arrival/disembarkation disagreement pending source reconciliation.",
+    "The original v0.6.1 17-row source registry omitted the exact Fredensborg SlaveVoyages voyage URL; migration preserves this as V061_SOURCE_REGISTRY_GAP and adds an explicit exact source/version rather than silently substituting a related record.",
+    "The canonical research closure contains 0 reviewed historical evidence geometries; unresolved geometry remains unresolved and neutral land must remain visible.",
+    "Independent historical review has not yet been performed; independent review count is 0."
+  ],
+  "migration_summary": [
+    "Canonical predecessor v0.6.1 is retained by immutable filename and SHA-256 and is not rewritten.",
+    "Gate 0 reconciled repository and live migration history through the schema line that later advanced to 0033.",
+    "Gate 1 reproduced v0.6.1 semantics in PostgreSQL/PostGIS while preserving raw/source-native values and unresolved cases.",
+    "Gate 2 represented the frozen v3 research package losslessly without inventing target-to-claim bridges, spatial links or independent review.",
+    "Gate 3 froze exact governed membership, composite object digests and database-state identity, then restored the closure into a fresh migrated PostgreSQL/PostGIS database.",
+    "Source-native v0.6.1 lineage remains reconstructible through the immutable predecessor artifact plus Gate-1 ingest/reconciliation tooling; authority-state.json does not replace that predecessor artifact.",
+    "The Supabase Free plan did not provide verified managed backup/PITR inventory to the project probe; the proven recovery guarantee is preservation-grade logical recovery of the governed research closure, not physical cluster/PITR recovery."
+  ],
+  "cartography_recovery": {
+    "decision": "D-108",
+    "fingerprint_sha256": "31df6f9c2dd2a53185b2363c81dfd99e0307e28ead8915c3829975a46135a197"
+  }
+}
