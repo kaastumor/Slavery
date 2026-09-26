@@ -16,6 +16,7 @@ import "./styles.css";
 setWorkerUrl(workerUrl);
 
 type SourceRef = {
+  source_version_id?: string;
   title: string;
   author_or_institution: string | null;
   source_type: string | null;
@@ -24,6 +25,10 @@ type SourceRef = {
   url: string | null;
   direction: "supports" | "challenges" | "qualifies" | "context" | string;
   locator: string | null;
+  directness?: string | null;
+  evidence_role?: string | null;
+  claim_fitness?: string | null;
+  independence_group?: string | null;
 };
 
 type Claim = {
@@ -85,6 +90,7 @@ type ApiResponse = {
   release_version: string;
   schema_version: string;
   canonical: boolean;
+  serving_materialization_id?: string;
   data_boundary: string;
   date_model: string;
   cartography: CartographyFabric | null;
@@ -247,7 +253,14 @@ function claimHtml(claim: Claim): string {
           : title;
         const details = [
           source.author_or_institution,
+          source.version_label,
           source.locator,
+        ].filter(Boolean).map((item) => escapeHtml(item)).join(" · ");
+        const provenance = [
+          source.source_version_id ? `Source version ${source.source_version_id}` : null,
+          source.source_type ? labelize(source.source_type) : null,
+          source.source_classification ? labelize(source.source_classification) : null,
+          source.independence_group ? `Source family ${source.independence_group}` : null,
         ].filter(Boolean).map((item) => escapeHtml(item)).join(" · ");
 
         return `
@@ -257,6 +270,7 @@ function claimHtml(claim: Claim): string {
               <div class="source-link">
                 ${link}
                 ${details ? `<div class="source-meta">${details}</div>` : ""}
+                ${provenance ? `<div class="source-meta">${provenance}</div>` : ""}
               </div>
             </div>
           </li>
@@ -389,7 +403,7 @@ function renderOverview(year: number): void {
     <div class="panel-header">
       <div class="panel-kicker">Year overview</div>
       <h2>${formatYear(year)}</h2>
-      <div class="panel-subhead">Published territorial-practice evidence active in the selected year.</div>
+      <div class="panel-subhead">${release?.canonical ? "Canonical-release" : "Published preview"} territorial-practice evidence active in the selected year.</div>
     </div>
 
     <div class="panel-body">
@@ -648,6 +662,9 @@ async function boot(): Promise<void> {
     releaseBadge.classList.toggle("preview", !apiResponse.canonical);
     releaseBadge.title =
       `Schema ${apiResponse.schema_version} · ${apiResponse.data_boundary}` +
+      (apiResponse.serving_materialization_id
+        ? ` · serving adapter ${apiResponse.serving_materialization_id}`
+        : "") +
       (servingMode === "static_fallback" ? " · live API unavailable; showing deployed snapshot" : "");
 
     const years = places.flatMap((place) =>
@@ -659,7 +676,14 @@ async function boot(): Promise<void> {
     if (years.length === 0) throw new Error("Published release contains no dated claims");
 
     const minYear = Math.min(...years);
-    const maxYear = Math.max(...years);
+    const hasOpenEndedClaims = places.some((place) =>
+      place.claims.some((claim) => claim.to_year === null),
+    );
+    const currentCalendarYear = new Date().getUTCFullYear();
+    const maxYear = Math.max(
+      ...years,
+      hasOpenEndedClaims ? currentCalendarYear : Number.NEGATIVE_INFINITY,
+    );
 
     slider.min = String(minYear);
     slider.max = String(maxYear);
