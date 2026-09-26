@@ -10,36 +10,70 @@ This file answers **what is justified to work on next**.
 
 ---
 
-# CURRENT MODE — MAINTENANCE / TRIGGER-BOUND REVIEW
+# CURRENT MODE — EXECUTION
 
-**Latest completed review:** #278 / PR #279 — Lithuania/Karnak post-v2 delta  
-**Latest maintenance:** #280 / PR #281 — review-only CI scope correction  
-**Latest immutable candidate:** `post-r1-cumulative-review-v2-overnight`  
-**Reviewed delta:** Lithuania 1300 + Karnak 1000 BCE, kept separate under D-099  
+**Active issue:** #285 — EXP-12 Sápmi 1600 bounded subject research  
+**Target:** `R1:N:sapmi_1600` — Sápmi / Sámi communities — 1600 CE  
+**Frame:** `region_community` — retrospective multi-community regional frame  
 **Canonical historical data release:** `v0.6.1` unchanged  
-**WIP:** none until the next D-096 mode is selected
+**WIP:** 1
 
-Current reviewed/research-ready state:
-- Lithuania 1300 — internally accepted bounded positive;
-- Karnak 1000 BCE — internally accepted researched-inconclusive;
-- Tōdai-ji 800 — `QUALIFIED_C1_READY`, subject research not yet performed;
-- Trans-Saharan trade network 1300 — `QUALIFIED_C1_READY`, subject research not yet performed;
-- Sápmi / Sámi communities 1600 — `QUALIFIED_C1_READY`, subject research not yet performed;
-- Kalabhra 500 — remains `HOLD_IDENTITY_OR_TIME`.
+EXP-10 qualification limits carried forward:
+- multiple Sámi communities/siida across northern Fennoscandia and adjacent regions;
+- overlapping/changing Swedish, Danish-Norwegian and Russian state claims;
+- no single Sámi polity or uniform community system;
+- no fixed 1600 Sápmi boundary;
+- modern Sápmi geography is not a historical jurisdiction polygon.
 
-D-099 keeps the two reviewed post-v2 rows as a durable delta rather than creating v3
-without a publication, consumer, cumulative-reconciliation or canonical-release trigger.
+Why this target now:
+- Tōdai-ji would repeat institution-specific projection problems already exercised at
+  Nālandā, Shaolin and Karnak;
+- Trans-Saharan would replay a mobile-network separation already exercised across
+  several network cases;
+- Sápmi adds the stronger untested pressure: internal community relations versus
+  overlapping external state coercion and jurisdiction.
 
-PR #281 fixed the CI-cost defect that caused review-only text changes under `reviews/`
-to start PostGIS. Review markdown/CSV/JSON/text now follows the same cheap path as other
-safe research text; executable, SQL, binary and unknown review paths remain fail-closed.
+Research question:
+> What bounded slavery/coercion interpretation, if any, is supportable for Sámi
+> communities in the Sápmi regional frame around 1600 CE?
 
-At this boundary choose the next justified D-096 mode. Sponsor continuation can
-authorize another bounded historical intake, but qualification does not require all
-three ready rows to be researched.
+Required controls:
+- state tax/service/transport/mining/church obligations != slavery by default;
+- external capture/enslavement of Sámi people != internal Sámi slavery;
+- one siida/community or one state jurisdiction != all Sápmi;
+- Swedish, Danish-Norwegian and Russian evidence remain jurisdiction-specific;
+- source count / state archive density != prevalence;
+- modern Sápmi boundary != 1600 practice extent.
 
-No automatic P-level, practice geometry, R1 mutation, schema/ontology/database/API/
-frontend change, candidate integration, canonical release or public publication follows.
+Allowed outcomes:
+`BOUNDED_SUPPORTED`, `RESEARCHED_INCONCLUSIVE`, or
+`HOLD_EVIDENCE_ACCESS_OR_SCOPE`.
+
+Current branch result: **BOUNDED_SUPPORTED — state-imposed coercive extraction;
+internal Sámi slavery unresolved**.
+
+Supported near the anchor:
+- overlapping state taxation and jurisdictional pressure;
+- Swedish punishment-backed tax-allegiance/trade enforcement;
+- bounded 1589 capture/displacement in an eastern borderland context.
+
+Not promoted:
+- taxation = slavery;
+- Crown employment = forced labour;
+- capture = enslavement;
+- internal Sámi slaveholding;
+- later seventeenth-century mining corvée at 1600;
+- Sápmi-wide uniformity or practice geometry.
+
+Internal adversarial replay passed with those dimensional limits.
+
+Next exact action: one coherent PR + normal scoped CI → merge → close #285 → return to
+the D-096 mode-selection boundary. Tōdai-ji 800 and Trans-Saharan 1300 remain
+qualified but unresearched.
+
+No P-level, practice geometry, R1 reviewed-state mutation, schema/ontology change,
+database/API/frontend work, canonical mutation, candidate integration or automatic
+publication.
 
 ## Discovery execution
 
