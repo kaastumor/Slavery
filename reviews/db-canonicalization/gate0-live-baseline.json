@@ -62,5 +62,11 @@
   },
   "canonical_release_unchanged": "v0.6.1",
   "v3_status": "internal_noncanonical_frozen_input",
-  "authority_flip_performed": false
+  "authority_flip_performed": false,
+  "repository_checksum_ledger": {
+    "expected_table": "atlas_meta.schema_migration",
+    "live_present": false,
+    "consequence": "repository migration runner must not be run in up mode against production until a verified checksum baseline is seeded"
+  },
+  "gate0_risk": "two migration-history systems are currently unreconciled: Supabase platform history is incomplete/duplicated and repository checksum ledger is absent"
 }
