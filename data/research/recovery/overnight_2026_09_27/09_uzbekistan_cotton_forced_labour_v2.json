@@ -1,0 +1,57 @@
+{
+  "case_key": "overnight-2026-09-27/uzbekistan/cotton-forced-labour-2019-v2",
+  "spatial_entity": {
+    "canonical_name": "Uzbekistan",
+    "display_name": "Uzbekistan",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed spatial identity. The entity is an indexing/context unit; the reconciled claim below is limited to the documented subnational, sectoral, institutional or observed scope and does not imply uniform practice across the whole entity."
+  },
+  "claim": {
+    "from_year": 2019,
+    "to_year": 2019,
+    "date_text_original": "2019 cotton harvest monitoring",
+    "temporal_precision": "bounded_source_interval",
+    "temporal_certainty": "high",
+    "spatial_precision": "cotton-harvest labour system and monitored recruitment; country entity is index/context, not a prevalence polygon",
+    "summary": "ILO third-party monitoring of Uzbekistan's 2019 cotton harvest found that systematic central recruitment had ended but recorded remaining forced labour and involuntary recruitment, especially at local level. The atlas therefore records a positive forced-labour claim for the 2019 cotton-harvest system while preserving the documented improvement and refusing to convert monitored counts into a national prevalence estimate.",
+    "confidence": "high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim 3b8c4fa4-8765-488c-a814-399169638bf3 into current post-M1 semantics. No new P-level is assigned. Legacy geometry 053f546e-089e-4f03-aab7-3d2187c835ce is an explicit modern/navigation proxy and is not promoted as this claim's historical/practice inference extent.",
+    "territorial_practice": {
+      "practice_type_code": "forced_labour",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Positive bounded classification only. Do not infer national prevalence, uniform territorial distribution, legal status, or a country-wide practice polygon beyond what the evidence directly supports."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "2019 Third-party monitoring of child labour and forced labour during the cotton harvest in Uzbekistan",
+        "author_or_institution": "International Labour Organization",
+        "source_type": "institutional_monitoring",
+        "source_classification": "secondary",
+        "geographic_scope": "Uzbekistan cotton harvest",
+        "temporal_scope": "2019 harvest; publication 5 February 2020",
+        "independence_notes": "ILO third-party monitoring programme. Monitoring counts and the narrative finding belong to one evidence family.",
+        "reliability_limitations": "Observed forced-labour counts are monitoring results, not a country-wide prevalence rate. The report also records major reduction and the end of systematic central recruitment."
+      },
+      "version": {
+        "version_label": "ILO third-party monitoring report, 5 February 2020",
+        "publication_year": 2020,
+        "url_or_identifier": "https://www.ilo.org/publications/2019-third-party-monitoring-child-labour-and-forced-labour-during-cotton",
+        "accessed_at": "2026-09-27T11:30:00Z"
+      },
+      "evidence_role": "third-party monitored practice evidence",
+      "independence_group": "ilo-uzbek-cotton-2019",
+      "directness": "institutional third-party monitoring",
+      "direction": "supports",
+      "locator": null
+    }
+  ]
+}
