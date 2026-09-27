@@ -1,0 +1,128 @@
+{
+  "schema": "historical-slavery-atlas-overnight-geometry-resolution-reconciliation-v1",
+  "date": "2026-09-27",
+  "source": "Geometry Resolution Hourly scheduler packets reconciled interactively",
+  "rules": {
+    "claim_and_geometry_independent": true,
+    "practice_extent_not_inferred_from_modern_jurisdiction": true,
+    "raw_geometry_preserved": true,
+    "d119_qc_required_for_polygon_promotion": true,
+    "no_release_mutation": true
+  },
+  "entries": [
+    {
+      "subject": "DPRK",
+      "spatial_entity_id": "2563a4cf-c65f-5a5b-bf58-326adb43080f",
+      "claim_id": "b78c06ce-5f27-5e85-a4d1-f8188b555820",
+      "candidate": {
+        "source": "Natural Earth Admin 0 Countries 1:10m v5.1.1",
+        "source_commit": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "expected_source_native_id": "PRK",
+        "geometry_type": "Polygon/MultiPolygon",
+        "proposed_accuracy_status": "modern_proxy",
+        "temporal_scope": "1948–open current-jurisdiction context"
+      },
+      "disposition": "CONTEXT_ONLY_PENDING_EXACT_FEATURE_EXTRACTION_AND_QC",
+      "reason": "A modern DPRK jurisdiction boundary can be useful as explicit context, but the forced-labour claim is not a whole-country prevalence polygon. Exact pinned PRK feature bytes/native identity and D-119 QC must be frozen before insertion."
+    },
+    {
+      "subject": "Shang China",
+      "spatial_entity_id": "f4266476-7403-572e-923a-65f19cfbbe70",
+      "claim_ids": [
+        "2945d4c3-d786-549a-baf9-fdfba54a978e",
+        "85ed4143-2d4a-5baf-989c-d4c94897d527"
+      ],
+      "candidate": {
+        "source": "Cliopatria v0.2.0",
+        "source_commit": "ad28a691",
+        "source_blob": "cefab0",
+        "geometry_type": "time-sliced POLITY polygon",
+        "proposed_accuracy_status": "approximate_historical",
+        "checked_years_bce": [
+          1600,
+          1550,
+          1500,
+          1450,
+          1100
+        ]
+      },
+      "disposition": "HOLD_EXACT_SOURCE_NATIVE_ROWS_REQUIRED",
+      "reason": "The scheduler established the correct source family and time-sliced polity semantics but did not freeze exact pinned source-native row IDs/intervals. No polygon is promoted from an inferred maximum extent."
+    },
+    {
+      "subject": "Carolingian Empire",
+      "spatial_entity_id": "a23451aa-c487-5f58-9993-a06282cb0baf",
+      "claim_id": "65963a31-a310-572c-9c58-2a0533f90fb5",
+      "candidate": {
+        "source": "Cliopatria v0.2.0",
+        "geometry_type": "derived time-bounded composite/component union",
+        "proposed_accuracy_status": "approximate_historical"
+      },
+      "disposition": "HOLD_RECURSIVE_COMPOSITE_RESOLUTION_REQUIRED",
+      "reason": "A valid Carolingian geometry requires exact component IDs and intervals through the Cliopatria POLITY/RELATION hierarchy. A hand-drawn or modern-France/Germany proxy is rejected."
+    },
+    {
+      "subject": "Mycenaean Greece (Pylos/Knossos)",
+      "spatial_entity_id": "4775db5e-658f-5c62-ac7d-42d6e453780f",
+      "claim_id": "8691d038-1683-5331-bccb-e7a189cdd229",
+      "candidates": [
+        {
+          "role": "evidence_locus",
+          "name": "Palace of Nestor / Pylos",
+          "source": "Wikidata",
+          "source_native_id": "Q2047396",
+          "url": "https://www.wikidata.org/wiki/Q2047396",
+          "license": "CC0 structured data",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              21.695,
+              37.027222
+            ]
+          },
+          "source_coordinate_text": "37°1′38″N, 21°41′42″E",
+          "bounded_temporal_note": "archaeological locus; palace destroyed around 1200 BCE; use only as evidence/site locator"
+        },
+        {
+          "role": "evidence_locus",
+          "name": "Knossos",
+          "source": "Wikidata",
+          "source_native_id": "Q173527",
+          "source_revision_id": "2522185606",
+          "url": "https://www.wikidata.org/wiki/Q173527",
+          "license": "CC0 structured data",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              25.163156,
+              35.297961
+            ]
+          },
+          "source_coordinate_text": "35°17′52.660″N, 25°9′47.362″E",
+          "bounded_temporal_note": "archaeological-site locator; use as evidence locus, not Mycenaean territorial polygon"
+        }
+      ],
+      "disposition": "ACCEPT_LOCUS_DESIGN_PENDING_DB_PROMOTION",
+      "reason": "Two point loci are defensible spatial anchors for the Pylos/Knossos evidence package. They must not be unioned into a territorial polygon or attached to the separate 'Mycenaean mainland Linear B archives' entity as if Knossos were mainland."
+    },
+    {
+      "subject": "Brazil",
+      "spatial_entity_id": "2e7197e4-72bc-4de2-8f58-326adb43080f",
+      "legacy_claim_id": "0f505cf4-e90d-4ce5-a07e-c06db42176f4",
+      "existing_geometry_id": "8d71c221-d188-4890-8a63-3c7f5eb8e157",
+      "candidate": {
+        "source": "Natural Earth Admin 0 Countries 1:10m v5.1.1",
+        "source_commit": "ca96624a56bd078437bca8184e78163e5039ad19",
+        "expected_source_native_id": "BRA",
+        "proposed_accuracy_status": "modern_proxy"
+      },
+      "disposition": "KEEP_CONTEXT_ONLY_DO_NOT_USE_AS_SUCCESSOR_CLAIM_EXTENT",
+      "reason": "Brazil already has an older reviewed modern-proxy geometry. The overnight evidence packet narrows practice to rural/property/enforcement contexts; the country polygon must not be promoted as the practice inference extent. Future mapping should prefer exact inspection/property loci."
+    }
+  ],
+  "retrieval_notes": [
+    "The retrievable overnight Geometry Resolution checkpoints substantively covered DPRK, Shang, Carolingian, Mycenaean loci and Brazil.",
+    "Earlier handover notes mentioned possible PRC/CShapes, Peruvian Amazon/RAISG, Hawaiʻi and Funan follow-ups, but the exact completed scheduler packets/version/licence details were not retrievable as accepted overnight checkpoints. They are therefore not silently promoted by this reconciliation."
+  ],
+  "release_effect": "None. Geometry changes require explicit database promotion and successor release selection after D-119 QC."
+}
