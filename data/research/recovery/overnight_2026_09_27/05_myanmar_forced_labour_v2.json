@@ -1,0 +1,57 @@
+{
+  "case_key": "overnight-2026-09-27/myanmar/state-forced-labour-v2",
+  "spatial_entity": {
+    "canonical_name": "Myanmar",
+    "display_name": "Myanmar",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed spatial identity. The entity is an indexing/context unit; the reconciled claim below is limited to the documented subnational, sectoral, institutional or observed scope and does not imply uniform practice across the whole entity."
+  },
+  "claim": {
+    "from_year": 1998,
+    "to_year": 1998,
+    "date_text_original": "ILO Commission of Inquiry report, August 1998",
+    "temporal_precision": "bounded_source_interval",
+    "temporal_certainty": "high",
+    "spatial_precision": "widespread/systematic state and military practice documented nationally, without converting that wording into a prevalence polygon",
+    "summary": "The ILO Commission of Inquiry concluded in 1998 that forced or compulsory labour was imposed in Myanmar in a widespread and systematic manner, particularly by government officials and the military. The atlas records a strong positive state-forced-labour claim for 1998 while preserving the distinction between the Commission's national institutional finding and any finer-grained spatial distribution.",
+    "confidence": "high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim 295db38e-3b6d-41b8-8563-721ec6757328 into current post-M1 semantics. No new P-level is assigned. Legacy geometry 26675f14-f67f-4ff4-a1e7-00c3ca71fc20 is an explicit modern/navigation proxy and is not promoted as this claim's historical/practice inference extent.",
+    "territorial_practice": {
+      "practice_type_code": "state_forced_labour",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Positive bounded classification only. Do not infer national prevalence, uniform territorial distribution, legal status, or a country-wide practice polygon beyond what the evidence directly supports."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Report of ILO Commission of Inquiry reveals widespread and systematic use of forced labour in Myanmar (Burma)",
+        "author_or_institution": "International Labour Organization",
+        "source_type": "institutional_inquiry",
+        "source_classification": "secondary",
+        "geographic_scope": "Myanmar",
+        "temporal_scope": "Commission of Inquiry report issued 1998",
+        "independence_notes": "Official ILO Commission-of-Inquiry finding. News summaries and follow-up ILO statements quoting the same Commission belong to the same evidence family.",
+        "reliability_limitations": "The Commission supports widespread/systematic state forced labour but does not provide a geometry suitable for mapping local prevalence or every affected locality."
+      },
+      "version": {
+        "version_label": "ILO News summary of Commission of Inquiry, 20 August 1998",
+        "publication_year": 1998,
+        "url_or_identifier": "https://www.ilo.org/resource/news/report-ilo-commission-inquiry-reveals-widespread-and-systematic-use-forced",
+        "accessed_at": "2026-09-27T11:30:00Z"
+      },
+      "evidence_role": "official inquiry conclusion",
+      "independence_group": "ilo-myanmar-commission-inquiry-1998",
+      "directness": "official inquiry finding",
+      "direction": "supports",
+      "locator": "Commission conclusion on widespread and systematic forced or compulsory labour"
+    }
+  ]
+}
