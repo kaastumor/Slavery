@@ -1,0 +1,53 @@
+{
+  "selection_schema": "historical-slavery-atlas-release-correction-selection-v1",
+  "release_version": "v0.8.1",
+  "authority_decision": "D-117",
+  "purpose": "bounded_historical_geometry_correction",
+  "canonical_predecessor": {
+    "version": "v0.8.0",
+    "manifest_path": "data/releases/v0.8.0/manifest.json",
+    "manifest_sha256": "c73112abea60b0b79bc3b55d9a9540eec5dd1b58e57437c55917f2f4ab808a60",
+    "authority_path": "data/releases/v0.8.0/authority-state.json",
+    "authority_bundle_sha256": "89f22a44ab70505c728f6e9c0a7d8591bd6b2b7ddd8c82b21a266c86fd265cb7",
+    "membership_sha256": "708f9f9d2a7cac185e17bfc3773fa1543d43f6fd7898529bff1583e08ffb6076",
+    "database_state_sha256": "3954fe4fb9b4e2f3d91915f90a142103963a07f12688ebebe39f91adaf3d2c89"
+  },
+  "correction": {
+    "spatial_entity_id": "ae1111c0-98bf-4bef-a1b2-98736f618aa3",
+    "spatial_entity_name": "Roman Empire — early Principate",
+    "from_year": 14,
+    "to_year": 22,
+    "remove_geometry_id": "b7c31528-ff4c-49cf-a95b-c662afab4339",
+    "remove_source_version_id": "5fc5086f-c1e7-4194-af91-f47d724842f7",
+    "add_geometry_id": "b3066705-616e-42c7-a50d-656c6926813c",
+    "add_source_version_id": "8041c6c9-52cb-4979-a2ea-c191128f047a",
+    "geometry_review_path": "data/research/geometry_reviews/rome_early_principate_ad14_awmc_v1.json",
+    "geometry_accuracy_status": "approximate_historical",
+    "source_license_status": "CC-BY-NC lineage; geometry-specific attribution/restriction retained"
+  },
+  "invariants": {
+    "claim_membership_unchanged": true,
+    "spatial_entity_membership_unchanged": true,
+    "actor_membership_unchanged": true,
+    "voyage_membership_unchanged": true,
+    "coverage_membership_unchanged": true,
+    "research_target_membership_unchanged": true,
+    "geometry_count_unchanged": true,
+    "source_version_count_unchanged": true,
+    "old_geometry_and_slice_source_removed": true,
+    "predecessor_objects_unchanged_except_explicit_geometry_and_source_substitution": true,
+    "claim_semantics_unchanged": true,
+    "p_levels_unchanged": true,
+    "public_channel_move_separate": true
+  },
+  "expected_counts": {
+    "actor_ids": 11,
+    "claim_ids": 75,
+    "coverage_assessment_ids": 99,
+    "geometry_ids": 46,
+    "research_target_result_ids": 26,
+    "source_version_ids": 294,
+    "spatial_entity_ids": 50,
+    "voyage_ids": 8
+  }
+}
