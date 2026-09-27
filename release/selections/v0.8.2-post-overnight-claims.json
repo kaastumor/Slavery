@@ -1,0 +1,144 @@
+{
+  "selection_schema": "historical-slavery-atlas-successor-claim-selection-v1",
+  "candidate_version": "v0.8.2-post-overnight",
+  "status": "CLAIMS_FROZEN_RELEASE_BLOCKED_ON_D119_GEOMETRY_REUSE_AND_PREDECESSOR_OBJECT_CORRECTION",
+  "canonical_predecessor": {
+    "version": "v0.8.1",
+    "manifest_path": "data/releases/v0.8.1/manifest.json",
+    "manifest_sha256": "773bae962e19d4674a9aab7bfe8995667db2295d3c5ddc93448d8ba48d71fc52",
+    "authority_path": "data/releases/v0.8.1/authority-state.json",
+    "authority_bundle_sha256": "0aa4d4fd9e4bacad0e359b655fbe237d1ef758b63fcb984ead9651d2c8181ea5",
+    "membership_sha256": "a2f4be081257716310bddaf357667d5b1a8a561198b8f08c6a24c95572a11462",
+    "database_state_sha256": "30f4de289c2402659a2494beb14adef1a31125d2fce4dd60344a3ca9a80460b9"
+  },
+  "claim_additions": [
+    {
+      "subject": "Bolivia",
+      "claim_id": "383ef0e4-1ee1-48ae-8ca9-261622b95e1a",
+      "spatial_entity_id": "80c3aff6-2e28-4281-a37a-33a3a02ffdcd",
+      "supersedes_legacy_claim_id": "2dcf7b77-4489-4fe5-b241-a4f61f42cb92"
+    },
+    {
+      "subject": "Brazil",
+      "claim_id": "e0ed6573-235c-423d-befb-7b75630b5c35",
+      "spatial_entity_id": "2e7197e4-72bc-4de2-8f58-326adb43080f",
+      "supersedes_legacy_claim_id": "0f505cf4-e90d-4ce5-a07e-c06db42176f4"
+    },
+    {
+      "subject": "India",
+      "claim_id": "1d707382-b0b8-479d-81e3-efcea01c4ab0",
+      "spatial_entity_id": "4c0cf106-f55e-4e98-901a-63cd5cce5bc7",
+      "supersedes_legacy_claim_id": "854c88ef-1237-4f9e-8383-0ce4c5b6e401"
+    },
+    {
+      "subject": "Mauritania",
+      "claim_id": "7f573935-45c9-4746-ac6a-6afe47bafbdd",
+      "spatial_entity_id": "0447a58f-4726-4087-a25c-34fdf244b5ce",
+      "supersedes_legacy_claim_id": "221c9e6a-07dd-4584-bc3a-08c1caaf3add"
+    },
+    {
+      "subject": "Myanmar",
+      "claim_id": "365e6258-f03f-4677-b775-cd5a9f18414a",
+      "spatial_entity_id": "91c7f969-f47a-465c-a304-57328b59d052",
+      "supersedes_legacy_claim_id": "295db38e-3b6d-41b8-8563-721ec6757328"
+    },
+    {
+      "subject": "Nepal",
+      "claim_id": "aba2e1e2-5d67-41b6-8bbe-0f9c83cbbbc3",
+      "spatial_entity_id": "49ab9c8d-e70f-4a57-9849-d9eff5583880",
+      "supersedes_legacy_claim_id": "385af068-b374-48ef-8e17-851bca2afe90"
+    },
+    {
+      "subject": "Pakistan",
+      "claim_id": "47175a77-76bb-4a92-ac3c-cb22b7a8131f",
+      "spatial_entity_id": "da4f5a3d-316b-4afb-90e3-53db83af3f10",
+      "supersedes_legacy_claim_id": "47e403f5-f44b-4ec1-a362-cdc01972dd1c"
+    },
+    {
+      "subject": "Paraguay",
+      "claim_id": "ee6bbf9e-4c51-40ca-a4c0-194087b65f11",
+      "spatial_entity_id": "c35297c4-a3bb-4cca-9ced-7d80c7f28386",
+      "supersedes_legacy_claim_id": "d22ed3c9-0c71-4569-80da-c367459c3bde"
+    },
+    {
+      "subject": "Peru",
+      "claim_id": "c66f6ef1-374a-4370-98c3-7d895bf92bfa",
+      "spatial_entity_id": "d4d123e1-92e1-49fb-a19a-0c5e719291bd",
+      "supersedes_legacy_claim_id": "ba50687c-f3c8-46b0-a7a0-7084fade88e0"
+    },
+    {
+      "subject": "Uzbekistan",
+      "claim_id": "2b456d9f-be09-4844-8899-286bd13464cb",
+      "spatial_entity_id": "8aca1e8f-3021-450d-a70e-e540ec6bd8cd",
+      "supersedes_legacy_claim_id": "3b8c4fa4-8765-488c-a814-399169638bf3"
+    },
+    {
+      "subject": "Nazi Germany",
+      "claim_id": "51063cdb-f485-47c9-9056-e374476632dd",
+      "spatial_entity_id": "aba9b942-063a-4b8b-a21b-4232056f81cf",
+      "supersedes_legacy_claim_id": "ab1f826b-aecf-4f2b-a88a-bccf1eea4f9a"
+    }
+  ],
+  "expected_claim_state": {
+    "predecessor_claims": 75,
+    "additions": 11,
+    "successor_claims": 86,
+    "predecessor_spatial_entities": 50,
+    "new_spatial_entities": 11,
+    "successor_spatial_entities": 61
+  },
+  "geometry_policy": {
+    "new_practice_extent_geometry_ids": [],
+    "claim_completeness_independent_of_geometry": true,
+    "modern_country_proxy_as_practice_extent_forbidden": true,
+    "inherited_geometry_count": 46,
+    "inherited_geometry_reuse_status": "BLOCKED_PENDING_D119_SUCCESSOR_REVIEW",
+    "corpus_polygon_count": 39,
+    "d119_hausdorff_review_trigger_count": 29,
+    "d119_component_change_count": 38,
+    "d119_symmetric_difference_over_5pct_count": 1,
+    "d119_abs_area_delta_over_2pct_count": 1,
+    "note": "New claims remain release-eligible with geometry unresolved. Existing v0.8.1 geometry is not automatically reusable in a successor merely because it is immutable and currently public."
+  },
+  "predecessor_object_correction_required": {
+    "claim_id": "8691d038-1683-5331-bccb-e7a189cdd229",
+    "subject": "Mycenaean Greece (Pylos/Knossos)",
+    "reason": "Current PostgreSQL claim object now has two reviewed claim_evidence_locus rows that were absent from the frozen v0.8.1 claim object.",
+    "released_evidence_loci_count": 0,
+    "current_evidence_loci": [
+      {
+        "spatial_entity_id": "9d0106e0-1ee1-4d29-996d-aff760af7e59",
+        "geometry_id": "824cf9ab-5bfd-4d84-8fb6-8c137033424d",
+        "source_native_id": "Q2047396",
+        "role": "evidence_locus_only"
+      },
+      {
+        "spatial_entity_id": "572179ca-bb9c-4dd9-90d8-df4dcf8c41a4",
+        "geometry_id": "78627165-cc6d-4a42-9f4c-3431944526c8",
+        "source_native_id": "Q173527",
+        "role": "evidence_locus_only"
+      }
+    ],
+    "required_action": "Use an explicit bounded claim-object augmentation/correction in successor authority or deliberately preserve the v0.8.1 claim object and defer the loci. Do not let authority freezing reinterpret this as unexplained predecessor drift."
+  },
+  "excluded_pending_reconciliation": [
+    {
+      "subject": "Mycenaean mainland Linear B archives",
+      "legacy_claim_id": "df374145-bfd5-414b-ba9f-2d85819b7626",
+      "reason": "legacy prototype dependency claim still requires current-method replay"
+    }
+  ],
+  "release_ready": false,
+  "release_blockers": [
+    "D-119 successor reuse review for inherited polygon geometry",
+    "explicit treatment of the Mycenaean Pylos/Knossos predecessor claim-object augmentation"
+  ],
+  "rules": {
+    "explicit_membership_only": true,
+    "reviewed_row_discovery_forbidden": true,
+    "no_new_p_level": true,
+    "unresolved_geometry_not_absence": true,
+    "prior_release_immutable": true,
+    "source_dependency_closure_required_at_authority_freeze": true
+  }
+}
