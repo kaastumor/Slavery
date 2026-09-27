@@ -1,0 +1,57 @@
+{
+  "case_key": "overnight-2026-09-27/mauritania/de-facto-slavery-v2",
+  "spatial_entity": {
+    "canonical_name": "Mauritania",
+    "display_name": "Mauritania",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed spatial identity. The entity is an indexing/context unit; the reconciled claim below is limited to the documented subnational, sectoral, institutional or observed scope and does not imply uniform practice across the whole entity."
+  },
+  "claim": {
+    "from_year": 2009,
+    "to_year": 2009,
+    "date_text_original": "UN Special Rapporteur country mission, 24 October–4 November 2009",
+    "temporal_precision": "bounded_source_interval",
+    "temporal_certainty": "high",
+    "spatial_precision": "country mission with victim evidence; spatial distribution not converted to a national prevalence surface",
+    "summary": "Following an official 2009 country mission, the UN Special Rapporteur on contemporary forms of slavery concluded that de facto slavery continued to exist in Mauritania despite formal abolition and criminalization. The atlas records that bounded 2009 positive slavery finding while keeping legal status and territorial prevalence analytically separate.",
+    "confidence": "high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim 221c9e6a-07dd-4584-bc3a-08c1caaf3add into current post-M1 semantics. No new P-level is assigned. Legacy geometry d966c564-f79e-4fc7-9bee-0c5ea4b935e8 is an explicit modern/navigation proxy and is not promoted as this claim's historical/practice inference extent.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Positive bounded classification only. Do not infer national prevalence, uniform territorial distribution, legal status, or a country-wide practice polygon beyond what the evidence directly supports."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Report of the Special Rapporteur on contemporary forms of slavery: Mission to Mauritania",
+        "author_or_institution": "United Nations Human Rights Council; Special Rapporteur Gulnara Shahinian",
+        "source_type": "un_special_rapporteur_report",
+        "source_classification": "secondary",
+        "geographic_scope": "Mauritania",
+        "temporal_scope": "mission 24 October–4 November 2009; report issued 24 August 2010",
+        "independence_notes": "Official UN fact-finding mission. Victim interviews and government meetings inside the mission are one institutional evidence package.",
+        "reliability_limitations": "Supports the Special Rapporteur's conclusion that de facto slavery continued, but does not establish a uniform country-wide prevalence or precise territorial extent."
+      },
+      "version": {
+        "version_label": "A/HRC/15/20/Add.2, 24 August 2010",
+        "publication_year": 2010,
+        "url_or_identifier": "https://documents.un.org/api/symbol/access?l=en&s=A%2FHRC%2F15%2F20%2FAdd.2&t=pdf",
+        "accessed_at": "2026-09-27T11:30:00Z"
+      },
+      "evidence_role": "official contemporary fact-finding and classification",
+      "independence_group": "un-sr-slavery-mauritania-2009",
+      "directness": "official country-mission report",
+      "direction": "supports",
+      "locator": "summary and mission conclusions"
+    }
+  ]
+}
