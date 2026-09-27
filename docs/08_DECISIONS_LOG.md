@@ -3146,3 +3146,65 @@ alone omitted the Roman core.
 
 **Evidence package:**  
 `data/research/geometry_reviews/rome_early_principate_ad14_awmc_v1.json`
+
+
+## D-118 — Every complete territorial entry receives an explicit geometry review outcome
+**Date:** 2026-09-27  
+**Status:** accepted sponsor-authorized cartography-completeness rule
+
+**Trigger:** after v0.8.0 went live, the sponsor requested two coupled corrections:
+(1) the coastline/source-alignment fix must apply consistently to every mapped entry,
+and (2) every complete Atlas entry should have geometry wherever a defensible geometry
+can be established.
+
+The live v0.8.0 audit contains 48 spatial subjects with territorial-practice claims.
+Sixteen have at least one overlapping resolved release geometry; 32 do not. This is a
+cartographic-coverage gap, not evidence that the historical claims are incomplete or
+that the corresponding places lacked slavery/coerced-labour practices.
+
+**Decision:**
+
+1. Every evidence-complete territorial subject must receive a geometry review outcome:
+   - reviewed resolved historical polygon/point/route;
+   - reviewed `approximate_historical` geometry;
+   - reviewed `modern_proxy` only where that proxy is methodologically appropriate and
+     explicitly labelled;
+   - or reviewed `unresolved` with a concrete reason.
+2. Geometry review follows the existing resolver hierarchy in
+   `docs/05_GEOGRAPHY_AND_MAP.md`: specialist historical geometry → pinned Cliopatria
+   POLITY baseline → nearest defensible historical geometry → explicit modern proxy →
+   unresolved.
+3. Geometry completeness does **not** mean “draw a polygon at all costs.” Multi-polity,
+   institutional, archaeological or source-corpus targets may require points,
+   multipoints, narrower time slices or continued unresolved state rather than a false
+   territorial fill.
+4. Geometry never strengthens the associated historical claim and does not determine a
+   P-level, prevalence estimate or absence state.
+5. D-116 is mandatory for every polygon: public bytes come only from
+   `publish.map_geometry` or an immutable release asset frozen from it. Raw
+   `atlas.geometry` polygons are never public display geometry.
+6. Every released resolved polygon must have a render row tied to the active canonical
+   land fabric, pass validity/QC, and have no material area outside that fabric after
+   render normalization. Tiny numerical slivers are tolerated only within explicit QC
+   tolerance.
+7. Release QC must report:
+   - territorial subjects in release;
+   - subjects with overlapping resolved geometry;
+   - subjects explicitly unresolved;
+   - resolved geometry rows lacking render normalization;
+   - render rows exceeding the off-land tolerance.
+8. Source-quality defects and coastline-render defects remain separate. If
+   land-fabric normalization fixes the coastline but the historical frontier remains
+   poor, the remedy is a better bounded historical source (as in D-117 Rome), not
+   hand-warping the frontier.
+9. The geometry backlog is part of Atlas Expansion 01 WIP (#332) and is eligible for the
+   hourly autonomous worker. Each run should complete at least one geometry review when
+   a defensible source path exists.
+
+**Initial baseline:** v0.8.0 has 48 territorial subjects: 16 with overlapping resolved
+geometry and 32 without. All 46 currently released resolved geometry rows already have
+`publish.map_geometry` rows; the worst measured residual outside the active Natural
+Earth land fabric is approximately 0.000034% (numerical/sliver scale).
+
+**Release effect:** none by itself. D-118 governs geometry review and future release
+construction. Existing immutable releases remain unchanged.
