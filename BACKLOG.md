@@ -1,10 +1,10 @@
 # Historical Slavery Atlas — Backlog
 
-**Updated:** 2026-09-26  
+**Updated:** 2026-09-27  
 **Role:** canonical execution queue only; assumptions/risks/value evidence live in `docs/25_PROJECT_HEALTH.md`  
 **Canonical research authority:** PostgreSQL/PostGIS, explicit governed membership under D-109  
-**Canonical historical data release:** `v0.7.0`  
-**Current public serving adapter:** `v0.7.0-public-mvp-v1` → canonical source `v0.7.0`  
+**Canonical historical data release:** `v0.8.0`  
+**Current public serving adapter:** `v0.8.0-public-mvp-v2` → canonical source `v0.8.0`  
 **Public Atlas:** `https://kaastumor.github.io/Slavery/`  
 **Preserved R1 technical candidate:** `r1-candidate.html` (non-canonical historical project artifact)
 
@@ -15,9 +15,9 @@ This file answers **what is justified to work on next**.
 # CURRENT MODE — EXECUTION / CONSOLIDATION — ATLAS EXPANSION 01 (#332)
 
 **Gate 0→5 canonicalization programme:** **COMPLETE**  
-**Canonical historical data release:** `v0.7.0`  
+**Canonical historical data release:** `v0.8.0`  
 **Live schema head:** `0034`  
-**Public serving adapter:** `v0.7.0-public-mvp-v1`  
+**Public serving adapter:** `v0.8.0-public-mvp-v2`  
 **Independent historical review:** 0  
 **Open delivery WIP:** **#332 — balanced claim intake + defensible mapped loci**
 
@@ -41,6 +41,28 @@ First checkpoint: formalize the reviewed `global_balance_04` weak-region cases a
 unpublished research claims, map at least one bounded locus (initially Songo Mnara),
 and prepare the next balanced intake tranche. Public v0.7.0 remains immutable until a
 separate review/release gate.
+
+## D-118 geometry-completeness campaign
+
+Sponsor direction now requires a project-wide geometry pass under the existing #332 WIP.
+
+Current v0.8.0 territorial surface:
+
+- **48** spatial subjects with territorial-practice claims;
+- **16** subjects with at least one overlapping resolved release geometry;
+- **32** subjects requiring geometry review/resolution;
+- **46** released resolved geometry rows;
+- **46/46** currently have normalized `publish.map_geometry` rows;
+- worst measured post-normalization off-land residual: approximately **0.000034%**.
+
+Execution rule: drain the 32-subject backlog using the documented geometry hierarchy.
+Resolved polygons must pass D-116 render normalization. Site/institution targets may use
+authoritative points/multipoints. Broad multi-polity or uncertain targets remain
+unresolved when a fill would overclaim.
+
+The already-reviewed v0.8.1 Rome specialist geometry correction is the first bounded
+source-quality replacement; its serving promotion remains separate from the broader
+geometry-completeness campaign.
 
 ## Previous D-096 post-cutover boundary
 
