@@ -54,6 +54,7 @@ type GeometryRecord = {
   source_native_id: string | null;
   geometry: Geometry | null;
   geometry_asset?: string | null;
+  geometry_asset_materialization_id?: string | null;
   render_ewkb_sha256?: string | null;
   source_title: string | null;
   source_version: string | null;
@@ -202,7 +203,8 @@ async function loadGeometryAsset(record: GeometryRecord): Promise<void> {
         const asset = await response.json() as RenderGeometryAsset;
         if (asset.asset_schema !== "historical-slavery-atlas-render-geometry-v1") throw new Error("unsupported render geometry asset");
         if (asset.geometry_id !== record.geometry_id) throw new Error("render geometry asset ID mismatch");
-        if (release?.serving_materialization_id && asset.materialization_id !== release.serving_materialization_id) throw new Error("render geometry materialization mismatch");
+        const expectedAssetMaterialization = record.geometry_asset_materialization_id ?? release?.serving_materialization_id;
+        if (expectedAssetMaterialization && asset.materialization_id !== expectedAssetMaterialization) throw new Error("render geometry materialization mismatch");
         if (release?.cartography?.fabric_id && asset.render_land_mask_id !== release.cartography.fabric_id) throw new Error("render geometry land-fabric mismatch");
         if (record.render_ewkb_sha256 && asset.render_ewkb_sha256 !== record.render_ewkb_sha256) throw new Error("render geometry fingerprint mismatch");
         record.geometry = asset.geometry;
