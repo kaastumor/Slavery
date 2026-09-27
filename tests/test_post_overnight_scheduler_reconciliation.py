@@ -99,6 +99,21 @@ class PostOvernightSchedulerReconciliationTests(unittest.TestCase):
         for row in rows.values():
             self.assertNotEqual(row["disposition"], "AUTO_REUSE_IN_SUCCESSOR")
 
+    def test_full_d119_envelope_is_frozen(self) -> None:
+        corpus = self.recon["qc_lane"]["corpus_wide_envelope_observation"]
+        self.assertEqual(corpus["polygon_count"], 39)
+        self.assertEqual(corpus["hard_land_residual_fail_count"], 0)
+        self.assertEqual(corpus["hausdorff_review_trigger_count"], 29)
+        self.assertEqual(corpus["hausdorff_inside_gate_count"], 10)
+        self.assertEqual(corpus["symmetric_difference_over_5pct_count"], 1)
+        self.assertEqual(corpus["absolute_area_delta_over_2pct_count"], 1)
+        self.assertEqual(corpus["component_count_change_count"], 38)
+        self.assertEqual(
+            len(corpus["successor_reuse_hausdorff_trigger_rows"]), 29
+        )
+        self.assertIn("diagnostics", corpus["interpretation"])
+        self.assertIn("not be read as 29 automatically bad", corpus["interpretation"])
+
     def test_current_release_remains_immutable(self) -> None:
         self.assertIn("No mutation of v0.8.1", self.recon["release_effect"])
 
