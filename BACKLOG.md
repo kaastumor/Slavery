@@ -1,10 +1,10 @@
 # Historical Slavery Atlas — Backlog
 
-**Updated:** 2026-09-26  
+**Updated:** 2026-09-27  
 **Role:** canonical execution queue only; assumptions/risks/value evidence live in `docs/25_PROJECT_HEALTH.md`  
 **Canonical research authority:** PostgreSQL/PostGIS, explicit governed membership under D-109  
-**Canonical historical data release:** `v0.7.0`  
-**Current public serving adapter:** `v0.7.0-public-mvp-v1` → canonical source `v0.7.0`  
+**Canonical historical data release:** `v0.8.1`  
+**Current public serving adapter:** `v0.8.1-public-mvp-v1` → canonical source `v0.8.1`  
 **Public Atlas:** `https://kaastumor.github.io/Slavery/`  
 **Preserved R1 technical candidate:** `r1-candidate.html` (non-canonical historical project artifact)
 
@@ -17,7 +17,7 @@ This file answers **what is justified to work on next**.
 **Gate 0→5 canonicalization programme:** **COMPLETE**  
 **Canonical historical data release:** `v0.7.0`  
 **Live schema head:** `0034`  
-**Public serving adapter:** `v0.7.0-public-mvp-v1`  
+**Public serving adapter:** `v0.8.1-public-mvp-v1`  
 **Independent historical review:** 0  
 **Open delivery WIP:** **#332 — balanced claim intake + defensible mapped loci**
 
@@ -37,10 +37,24 @@ The active WIP has two inseparable safeguards:
    loci and genuinely defensible historical polygons; unresolved stays unresolved.
    Geometry must never strengthen the historical claim.
 
-First checkpoint: formalize the reviewed `global_balance_04` weak-region cases as
-unpublished research claims, map at least one bounded locus (initially Songo Mnara),
-and prepare the next balanced intake tranche. Public v0.7.0 remains immutable until a
-separate review/release gate.
+Current checkpoint: canonical **v0.8.1** and public serving materialization
+**v0.8.1-public-mvp-v1** are live. The release contains 75 canonical claims / 50
+spatial entities / 46 reviewed resolved historical geometries; the public territorial
+adapter displays 53 territorial-practice claims across 48 places.
+
+D-116 now requires every public polygon to come from the reviewed render layer rather
+than raw research geometry. The v0.8.1 corpus alignment audit covers all 46 release
+geometries; all 39 polygons use the canonical Natural Earth land fabric and pass the
+outside-land tolerance. D-117 replaces only the Roman 14–22 CE slice with the reviewed
+AWMC-derived specialist geometry.
+
+Active expansion continues through #332 and the two hourly lanes:
+- evidence/entry completion;
+- geometry resolution and corpus-wide cartographic QC.
+
+Prior releases remain immutable. New complete entries and defensible geometries move
+through explicit successor release membership and serving cutover rather than mutating
+v0.8.1.
 
 ## Previous D-096 post-cutover boundary
 
@@ -187,5 +201,5 @@ The completed Gate-0→Gate-5 programme does **not** authorize:
 - higher-frequency availability automation without evidence of a user-critical SLA;
 - another experiment merely because there is no active WIP.
 
-The correct current state is **trigger-bound maintenance with no active delivery WIP**.
+The current state is **sponsor-authorized Atlas expansion with one coordinated evidence/geometry WIP (#332)**.
 
