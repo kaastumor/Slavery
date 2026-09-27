@@ -119,7 +119,7 @@ def validate_spec(spec: dict[str, Any]) -> None:
     ):
         if authority.get(key) in (None, ""):
             raise ReleaseError(f"spec.authority.{key} is required")
-    if authority["decision"] not in {"D-109", "D-115"}:
+    if authority["decision"] not in {"D-109", "D-115", "D-117"}:
         raise ReleaseError("unsupported canonical-release authority decision")
     if not isinstance(authority["expected_counts"], dict):
         raise ReleaseError("spec.authority.expected_counts must be an object")

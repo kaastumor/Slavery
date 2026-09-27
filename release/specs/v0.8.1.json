@@ -1,0 +1,90 @@
+{
+  "release_version": "v0.8.1",
+  "release_date": "2026-09-27",
+  "schema_version": "0034",
+  "purpose": "canonical_historical_release",
+  "canonical": true,
+  "canonical_predecessor": {
+    "version": "v0.8.0",
+    "filename": "data/releases/v0.8.0/manifest.json",
+    "sha256": "c73112abea60b0b79bc3b55d9a9540eec5dd1b58e57437c55917f2f4ab808a60"
+  },
+  "authority": {
+    "decision": "D-117",
+    "decision_commit": "dbb45102c5e1d810f8f7e84b628456051b12fe5e",
+    "authority_release_version": "v0.8.1-rome-geometry-authority-v1",
+    "membership_sha256": "a2f4be081257716310bddaf357667d5b1a8a561198b8f08c6a24c95572a11462",
+    "database_state_sha256": "30f4de289c2402659a2494beb14adef1a31125d2fce4dd60344a3ca9a80460b9",
+    "reviewed_candidate_id": "rome-early-principate-ad14-awmc-v1",
+    "authority_bundle_sha256": "0aa4d4fd9e4bacad0e359b655fbe237d1ef758b63fcb984ead9651d2c8181ea5",
+    "expected_counts": {
+      "actor_ids": 11,
+      "claim_ids": 75,
+      "coverage_assessment_ids": 99,
+      "geometry_ids": 46,
+      "research_target_result_ids": 26,
+      "source_version_ids": 294,
+      "spatial_entity_ids": 50,
+      "voyage_ids": 8
+    }
+  },
+  "review": {
+    "internal_research_target_reviews": 26,
+    "independent_historical_reviews": 0,
+    "reviewed_candidate_id": "rome-early-principate-ad14-awmc-v1",
+    "canonical_claim_count": 75
+  },
+  "public_channel": {
+    "current_release": "v0.8.0-public-mvp-v2",
+    "moved_by_release": false,
+    "gate_for_future_move": "v0.8.1 serving cutover"
+  },
+  "methodology_references": [
+    "docs/02_METHOD_AND_ONTOLOGY.md",
+    "docs/03_SOURCE_POLICY.md",
+    "docs/04_DATA_MODEL.md",
+    "docs/05_GEOGRAPHY_AND_MAP.md",
+    "docs/07_QC_AND_VERSIONING.md",
+    "docs/08_DECISIONS_LOG.md — D-116 and D-117",
+    "docs/11_SYSTEM_ARCHITECTURE.md",
+    "release/selections/v0.8.1-rome-geometry-correction.json",
+    "data/research/geometry_reviews/rome_early_principate_ad14_awmc_v1.json"
+  ],
+  "changelog": [
+    "Preserves all v0.8.0 claim, actor, spatial-entity, voyage, coverage and research-target membership unchanged.",
+    "Replaces only the Roman Empire — early Principate 14–22 CE Cliopatria geometry with reviewed A.D. 14 AWMC-derived specialist geometry.",
+    "Replaces only the superseded geometry's slice-specific Cliopatria source version with the exact AWMC-derived source version; source-version count remains 294.",
+    "Marks the replacement approximate_historical because an A.D. 14 specialist snapshot is used for the bounded 14–22 CE slice.",
+    "Preserves the geometry-specific CC-BY-NC lineage, attribution and redistribution restriction.",
+    "Does not change the Roman slavery claim, P-level semantics, other Roman time slices or any other historical claim."
+  ],
+  "qc_summary": [
+    "D-117 bounded specialist-geometry review: PASS.",
+    "v0.8.0 predecessor preservation outside the explicit geometry/source substitution: PASS with zero unexpected object drift.",
+    "Canonical closure remains 75 claims / 50 spatial entities / 46 geometries / 294 source versions.",
+    "Replacement source geometry valid with 6,741 points and approximately 3.46 million km² area.",
+    "Source area outside canonical Natural Earth land before render clipping: approximately 0.663%.",
+    "Land-clipped symmetric difference versus incumbent normalized Rome 14–22 CE geometry: approximately 17.32%.",
+    "Frontier sanity checks: Rome, Lutetia, Rhine/Cologne, Alexandria and Antioch inside; London, central Germania east of Rhine, Armenia interior, central Arabia and central Sahara outside.",
+    "Public render view for the new geometry is valid, uses canonical Natural Earth land_clip, and has 0.0000% area outside the land fabric.",
+    "No claim or P-level mutation."
+  ],
+  "unresolved_issues": [
+    "The replacement is an A.D. 14 specialist reconstruction used for the bounded 14–22 CE interval and therefore remains approximate_historical rather than exact.",
+    "Carthage's representative point lies about 482 metres outside the source/render polygon because of coastal underreach; no bespoke boundary warp is introduced to force the point inside.",
+    "The geometry source carries CC-BY-NC lineage; attribution and noncommercial redistribution restrictions remain geometry-specific release metadata.",
+    "Earlier Roman slices 1–13 CE remain on reviewed Cliopatria geometry pending separate source review.",
+    "Independent historical review remains 0."
+  ],
+  "migration_summary": [
+    "No schema migration is introduced; live schema remains 0034.",
+    "Canonical predecessor v0.8.0 remains immutable.",
+    "v0.8.1 performs an explicit one-for-one geometry and geometry-source-version membership substitution under D-117.",
+    "No claim membership or claim interpretation changes.",
+    "The public serving channel remains on v0.8.0-public-mvp-v2 until a separate v0.8.1 render-asset/materialization gate passes."
+  ],
+  "cartography_recovery": {
+    "decision": "D-108",
+    "fingerprint_sha256": "31df6f9c2dd2a53185b2363c81dfd99e0307e28ead8915c3829975a46135a197"
+  }
+}
