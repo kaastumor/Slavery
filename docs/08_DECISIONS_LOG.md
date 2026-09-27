@@ -3082,3 +3082,67 @@ the explicit serving-channel cutover gate.
 For v0.8.0, `v0.8.0-public-mvp-v2` supersedes the v1 serving adapter without replacing canonical release v0.8.0. To avoid embedding ~5 MB of normalized polygons in the Edge Function, v2 freezes render-normalized geometry as versioned static release assets under `web/public/release-geometries/v0.8.0-public-mvp-v2/`; the API carries exact asset IDs/fingerprints and the web client loads only geometry active in the selected year. The v1 materialization remains immutable rollback evidence.
 
 The client must verify materialization ID, geometry ID, render fingerprint and canonical land-mask identity before accepting a render asset. Missing/failed asset delivery hides the affected polygon and must not be interpreted as historical absence.
+
+
+## D-117 — Early-Principate Rome 14–22 CE uses a bounded specialist geometry replacement
+**Date:** 2026-09-27  
+**Status:** accepted geometry-correction decision; release promotion still required
+
+**Trigger:** live review of canonical v0.8.0 showed that D-116 correctly fixed the
+physical coastline-source mismatch, but the Roman Empire 14–22 CE display still had a
+materially poor inland/frontier shape. The remaining defect was therefore historical
+geometry source quality, not the Natural Earth basemap or CRS.
+
+The incumbent geometry
+`b7c31528-ff4c-49cf-a95b-c662afab4339` is the open Cliopatria fallback. Its
+render-normalized form is physically land-constrained, but D-055/D-010 explicitly allow
+a stronger bounded specialist geometry to supersede Cliopatria after source, semantic,
+temporal, licensing and geometry review.
+
+**Decision:** for **Roman Empire — early Principate, 14–22 CE**, accept the reviewed
+candidate `rome-early-principate-ad14-awmc-v1` as the next-release historical geometry
+source.
+
+The accepted source is the A.D. 14 Roman Empire political-shading extent derived from
+the Ancient World Mapping Center and preserved as GeoJSON in
+`sfsheath/roman-maps` at commit
+`33a41a0bd16fc159a19b294c5cf3072a56c77eb7`, exact source-file SHA-256
+`fddb933ecf9dce7e2a56c1ecbe051f81287890d21676e2cdbf6b47c2556bf85c`.
+
+Boundaries:
+
+1. The source is a historical-geometry reference only; it does **not** strengthen or
+   reclassify the slavery claim.
+2. Because the source is an A.D. 14 snapshot used for the bounded 14–22 CE interval,
+   the atlas geometry is `approximate_historical`, not `exact`.
+3. The source geometry remains auditable; public display still uses the canonical
+   Natural Earth render layer under D-116.
+4. The source carries **CC-BY-NC lineage** per the preserved repository/AWMC notice.
+   Attribution and the noncommercial restriction must remain attached to this geometry
+   and any redistributed derivative; this does not silently relicense unrelated atlas
+   data.
+5. The canonical v0.8.0 release remains immutable. Replacing the live geometry requires
+   a new immutable canonical release and serving materialization.
+6. The replacement is bounded to 14–22 CE. Earlier Roman slices remain unchanged until
+   separately reviewed.
+
+**Review evidence:** the candidate is valid, contains 6,741 source points, has an area
+of approximately 3.46 million km², and only 0.663% of its source area falls outside the
+canonical Natural Earth land fabric before render clipping. After land clipping it
+differs from the incumbent normalized 14–22 CE geometry by about 17.32% of incumbent
+area, demonstrating a material frontier correction rather than a cosmetic coastline
+edit.
+
+Semantic sanity checks place Rome, Lutetia/Paris, the Rhine/Cologne frontier,
+Alexandria and Antioch inside while leaving London, central Germania east of the Rhine,
+Armenia interior, central Arabia, Fezzan and central Sahara outside. Specialist
+cross-checks include the A.D. 14 Augustan map in *The Cambridge Companion to the Age of
+Augustus* and the Roman-world map in *The Cambridge Ancient History*.
+
+A permissively licensed alternative from `siriusbontea/roman-empire` was explicitly
+rejected: its combined timeline stores incremental expansion layers, so cumulative use
+at A.D. 16 preserved temporary holdings in Germania/Armenia, while the A.D. 16 layer
+alone omitted the Roman core.
+
+**Evidence package:**  
+`data/research/geometry_reviews/rome_early_principate_ad14_awmc_v1.json`
