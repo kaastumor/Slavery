@@ -1,0 +1,60 @@
+name: v0.8.2 Successor Geometry Visual Review
+
+on:
+  pull_request:
+    paths:
+      - "data/research/geometry_reviews/v082_successor_geometry_*.geojson"
+      - "data/research/geometry_reviews/v082_successor_geometry_review_input.json"
+      - ".github/workflows/v082-successor-geometry-review.yml"
+      - "tools/build_geometry_visual_review.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  LAND_URL: "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson"
+  LAND_SHA256: "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416"
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch canonical Natural Earth fabric
+        shell: bash
+        run: |
+          curl -L --fail --retry 3 "$LAND_URL" -o /tmp/ne_10m_land.geojson
+          echo "$LAND_SHA256  /tmp/ne_10m_land.geojson" | sha256sum -c -
+
+      - name: Build current-render review sheets
+        shell: bash
+        run: |
+          python3 tools/build_geometry_visual_review.py \
+            data/research/geometry_reviews/v082_successor_geometry_raw.geojson \
+            data/research/geometry_reviews/v082_successor_geometry_current.geojson \
+            /tmp/ne_10m_land.geojson \
+            data/research/geometry_reviews/v082_successor_geometry_review_input.json \
+            /tmp/v082-geometry-review/current \
+            --title "v0.8.1 current render vs raw source"
+
+      - name: Build successor-candidate review sheets
+        shell: bash
+        run: |
+          python3 tools/build_geometry_visual_review.py \
+            data/research/geometry_reviews/v082_successor_geometry_raw.geojson \
+            data/research/geometry_reviews/v082_successor_geometry_candidate.geojson \
+            /tmp/ne_10m_land.geojson \
+            data/research/geometry_reviews/v082_successor_geometry_review_input.json \
+            /tmp/v082-geometry-review/candidate \
+            --title "v0.8.2 candidate render vs raw source"
+
+      - name: Upload review sheets
+        uses: actions/upload-artifact@v4
+        with:
+          name: v082-successor-geometry-review-${{ github.sha }}
+          path: /tmp/v082-geometry-review/**
+          if-no-files-found: error
+          retention-days: 90
