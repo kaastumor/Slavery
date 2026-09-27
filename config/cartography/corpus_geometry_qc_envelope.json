@@ -1,0 +1,69 @@
+{
+  "schema_version": "historical-slavery-atlas-corpus-geometry-qc-envelope-v1",
+  "policy_id": "corpus-geometry-qc-envelope-v1",
+  "decision": "D-119",
+  "scope": "reviewed mapped geometry and render geometry considered for successor releases",
+  "principles": {
+    "independent_axes": true,
+    "weighted_overall_score_forbidden": true,
+    "source_geometry_immutable": true,
+    "render_geometry_is_derived": true,
+    "geometry_does_not_strengthen_claim": true,
+    "coastline_normalization_must_not_silently_rewrite_frontiers": true,
+    "existing_release_immutability": true
+  },
+  "hard_gates": {
+    "raw_geometry_valid": true,
+    "render_geometry_valid": true,
+    "canonical_land_mask_required_for_polygons": true,
+    "max_render_outside_land_pct": 0.0001,
+    "exact_geometry_source_version_required": true,
+    "exact_geometry_source_native_id_required_when_source_supplies_one": true,
+    "exact_render_fingerprint_required_for_public_asset": true
+  },
+  "candidate_gates": {
+    "max_hausdorff_m": 35000,
+    "max_abs_area_delta_pct": 2,
+    "max_symmetric_difference_pct": 5,
+    "visual_review_required": true,
+    "failure_rule": "quarantine_candidate_and_keep_previous_approved_render_or_unresolved_state"
+  },
+  "review_triggers": {
+    "hausdorff_m_over": 35000,
+    "symmetric_difference_pct_over": 5,
+    "abs_source_to_render_area_delta_pct_over": 5,
+    "component_count_changed": true,
+    "ring_count_changed": true,
+    "render_policy_changes_inside_temporal_family": true,
+    "abrupt_adjacent_slice_shape_change": true,
+    "source_family_or_native_id_discontinuity": true,
+    "coastline_vs_frontier_ambiguous": true,
+    "unusually_large_source_to_render_vertex_ratio": "record_and_review_in_context"
+  },
+  "required_axes": [
+    "validity",
+    "canonical_land_residual",
+    "source_to_render_hausdorff_displacement",
+    "source_to_render_symmetric_difference",
+    "signed_and_absolute_area_delta",
+    "component_and_ring_topology",
+    "source_complexity",
+    "temporal_family_consistency",
+    "source_and_render_provenance",
+    "coastline_vs_inland_frontier_visual_review"
+  ],
+  "disposition_rules": {
+    "new_candidate_exceeds_candidate_gate": "not_eligible_without_explicit_bounded_override_and_documented_visual_review",
+    "already_released_render_exceeds_review_trigger": "grandfather_current_release_but_require_comparative_re_review_before_successor_reuse",
+    "topology_change": "review_required_not_automatic_failure",
+    "one_metric_improves": "insufficient_for_replacement",
+    "unresolved_geometry": "remain_unresolved_until_independently_defensible_geometry_exists"
+  },
+  "notes": [
+    "The land-residual gate prevents basemap/coastline mismatch but cannot by itself detect displaced inland frontiers.",
+    "Hausdorff, symmetric difference and area delta are independent diagnostics; none may be hidden inside a weighted score.",
+    "Component/ring changes may be a legitimate consequence of clipping to a detailed land fabric, especially around islands and coastlines, but must be frozen and reviewed rather than ignored.",
+    "Temporal families must be compared across adjacent slices so a one-off render-policy artifact is not mistaken for historical territorial change.",
+    "Public serving must continue to use publish.map_geometry or immutable assets frozen from it, never raw atlas.geometry for polygon display."
+  ]
+}

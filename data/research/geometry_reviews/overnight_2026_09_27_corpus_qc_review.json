@@ -1,0 +1,243 @@
+{
+  "review_schema": "historical-slavery-atlas-overnight-corpus-geometry-qc-v1",
+  "date": "2026-09-27",
+  "canonical_release": "v0.8.1",
+  "source": "Atlas Geometry QC Hourly reconciliation packets plus live PostgreSQL/D-118 audit verification",
+  "conclusion": "LAND_ALIGNMENT_PASS_BUT_FRONTIER_QC_ENVELOPE_REQUIRED",
+  "corpus_facts": {
+    "resolved_geometries": 46,
+    "polygon_geometries": 39,
+    "point_or_nonpolygon_geometries": 7,
+    "maximum_rendered_outside_land_pct": 0.000032,
+    "canonical_land_mask_id": "natural-earth-ne_10m_land-v5.1.1-ca96624",
+    "public_raw_atlas_geometry_served": false
+  },
+  "envelope": {
+    "policy_file": "config/cartography/corpus_geometry_qc_envelope.json",
+    "no_weighted_score": true,
+    "independent_axes": [
+      "land residual",
+      "Hausdorff displacement",
+      "symmetric difference",
+      "signed/absolute area delta",
+      "components/rings",
+      "source complexity",
+      "temporal-family consistency",
+      "provenance/render fingerprint",
+      "coastline versus inland-frontier visual review"
+    ],
+    "observation_gap": "v0.8.1 previously froze land-alignment metrics but not a canonical per-row topology/component envelope; v081_corpus_topology_snapshot.json closes the first part of that observability gap. Ring metrics remain a required future capture axis."
+  },
+  "named_reviews": [
+    {
+      "name": "Baekje",
+      "geometry_id": "e5a720f8-9e22-45fe-a5b0-c6464686525d",
+      "interval": [
+        347,
+        391
+      ],
+      "current_policy": "cliopatria-boundary-normalization-v3",
+      "metrics": {
+        "raw_outside_land_pct": 8.706722,
+        "render_outside_land_pct": 0.000016,
+        "hausdorff_m": 12040,
+        "symmetric_difference_pct": 14.479327,
+        "smoothing_area_delta_pct": -0.968,
+        "raw_to_render_area_delta_pct": -4.4691,
+        "raw_points": 53,
+        "render_points": 1931,
+        "raw_components": 1,
+        "render_components": 24
+      },
+      "disposition": "COMPARATIVE_VISUAL_REVIEW_REQUIRED_KEEP_CURRENT",
+      "rationale": "Physical coastline alignment is excellent and displacement is below 35 km, but transformation magnitude, symmetric difference and component growth are unusually large. Keep the already released render provisionally; do not auto-replace or treat the extra detail as historical evidence."
+    },
+    {
+      "name": "Roman Empire — early Principate",
+      "geometry_id": "edb239a8-4d54-44e4-970a-affb7c9af22e",
+      "interval": [
+        6,
+        8
+      ],
+      "current_policy": "cliopatria-qgis-natural-earth-v1",
+      "metrics": {
+        "raw_outside_land_pct": 1.598359,
+        "render_outside_land_pct": 0.000018,
+        "current_hausdorff_m": 92384,
+        "current_symmetric_difference_pct": 3.790291,
+        "current_area_delta_pct": 0.356128,
+        "alternative_policy": "cliopatria-boundary-normalization-v3",
+        "alternative_hausdorff_m": 15920,
+        "alternative_symmetric_difference_pct": 3.251113,
+        "alternative_area_delta_pct": -0.004723,
+        "alternative_render_outside_land_pct": 0.000032,
+        "raw_components": 32,
+        "current_render_components": 104
+      },
+      "disposition": "SUCCESSOR_CANDIDATE_V3_REQUIRES_VISUAL_REVIEW",
+      "rationale": "Current render exceeds the 35 km displacement ceiling. The v3 alternative materially reduces displacement without a large area penalty. Preserve v0.8.1 and switch only in a successor after comparative visual/frontier review."
+    },
+    {
+      "name": "Western Han China (202 BCE–5 CE slice)",
+      "geometry_id": "81cb78c1-3b59-4c0a-b51f-f1c0d45bf866",
+      "interval": [
+        -125,
+        -110
+      ],
+      "current_policy": "cliopatria-qgis-natural-earth-v1",
+      "metrics": {
+        "raw_outside_land_pct": 0.936949,
+        "render_outside_land_pct": 0,
+        "current_hausdorff_m": 153093,
+        "current_symmetric_difference_pct": 1.168884,
+        "current_area_delta_pct": -0.920917,
+        "alternative_policy": "cliopatria-boundary-normalization-v2",
+        "alternative_hausdorff_m": 18228,
+        "alternative_symmetric_difference_pct": 1.426376,
+        "alternative_area_delta_pct": -0.010373,
+        "raw_components": 2,
+        "current_render_components": 25
+      },
+      "disposition": "COMPARATIVE_RE_REVIEW_V2_PROVISIONALLY_PREFERRED",
+      "rationale": "Current render has very high displacement despite low symmetric difference. v2 reduces displacement below the envelope ceiling with near-zero area change; successor promotion still requires visual and temporal-family review."
+    },
+    {
+      "name": "Mauryan Empire (318–185 BCE mapped slice)",
+      "geometry_id": "82b2f32f-de79-4a5a-98e0-56db15321588",
+      "interval": [
+        -290,
+        -256
+      ],
+      "current_policy": "cliopatria-qgis-natural-earth-v1",
+      "metrics": {
+        "raw_outside_land_pct": 0.734473,
+        "render_outside_land_pct": 0.000001,
+        "current_hausdorff_m": 137456,
+        "current_symmetric_difference_pct": 0.917624,
+        "current_area_delta_pct": -0.701664,
+        "v2": {
+          "hausdorff_m": 22773,
+          "symmetric_difference_pct": 1.06054,
+          "area_delta_pct": -0.017107,
+          "render_outside_land_pct": 0.000002
+        },
+        "v3": {
+          "hausdorff_m": 22771,
+          "symmetric_difference_pct": 1.095356,
+          "area_delta_pct": -0.021147,
+          "render_outside_land_pct": 0.000002
+        },
+        "v4": {
+          "hausdorff_m": 22771,
+          "symmetric_difference_pct": 1.317689,
+          "area_delta_pct": -0.021147,
+          "render_outside_land_pct": 0.000002
+        },
+        "raw_components": 3,
+        "current_render_components": 24
+      },
+      "disposition": "COMPARATIVE_RE_REVIEW_V2_PROVISIONALLY_PREFERRED",
+      "rationale": "Current render exceeds the displacement ceiling. v2/v3/v4 all reduce displacement sharply; v2 has the smallest symmetric difference among the low-displacement alternatives. Preserve current release pending comparative visual review."
+    },
+    {
+      "name": "Achaemenid Persis/Elam royal economy",
+      "geometry_ids": [
+        "f8a44a0b-f574-4c55-b5b1-b1e803f78543",
+        "34ff5048-242f-48a3-8fb2-5eca4dcd9a54"
+      ],
+      "intervals": [
+        [
+          -529,
+          -500
+        ],
+        [
+          -499,
+          -480
+        ]
+      ],
+      "current_policy": "cliopatria-qgis-natural-earth-v1",
+      "metrics": [
+        {
+          "hausdorff_m": 53502,
+          "symmetric_difference_pct": 1.067145,
+          "area_delta_pct": 0.222226,
+          "raw_outside_land_pct": 0.350081,
+          "render_outside_land_pct": 0,
+          "raw_components": 8,
+          "render_components": 23
+        },
+        {
+          "hausdorff_m": 53502,
+          "symmetric_difference_pct": 1.215739,
+          "area_delta_pct": 0.071315,
+          "raw_outside_land_pct": 0.525302,
+          "render_outside_land_pct": 0,
+          "raw_components": 9,
+          "render_components": 31
+        }
+      ],
+      "disposition": "GRANDFATHER_CURRENT_REQUIRE_COMPARATIVE_RE_REVIEW",
+      "rationale": "Both already released renders exceed the new displacement review threshold but otherwise have modest area/symmetric-difference change and excellent land alignment. Do not mutate v0.8.1; require successor-era comparative review."
+    },
+    {
+      "name": "New Kingdom Egypt",
+      "geometry_id": "d230ca36-be77-4699-b12e-77a491e58f35",
+      "interval": [
+        -1399,
+        -1300
+      ],
+      "current_policy": "cliopatria-qgis-natural-earth-v1",
+      "metrics": {
+        "hausdorff_m": 17650,
+        "symmetric_difference_pct": 2.079462,
+        "area_delta_pct": -0.186651,
+        "raw_outside_land_pct": 0.977522,
+        "render_outside_land_pct": 0,
+        "raw_components": 1,
+        "render_components": 9
+      },
+      "disposition": "KEEP_CURRENT_RENDER",
+      "rationale": "All known quantitative axes remain inside the overnight envelope. Component growth is explainable by detailed land clipping but remains frozen for visual/context review."
+    },
+    {
+      "name": "Hittite central Anatolia",
+      "geometry_id": "e813d49c-b1a1-4bf4-9df2-0c14faca31f5",
+      "interval": [
+        -1299,
+        -1240
+      ],
+      "current_policy": "cliopatria-qgis-natural-earth-v1",
+      "metrics": {
+        "hausdorff_m": 14923,
+        "symmetric_difference_pct": 1.957168,
+        "area_delta_pct": 1.304307,
+        "raw_outside_land_pct": 0.125659,
+        "render_outside_land_pct": 0,
+        "raw_components": 2,
+        "render_components": 4
+      },
+      "disposition": "KEEP_CURRENT_RENDER",
+      "rationale": "Known metrics are inside the displacement/symdiff/area envelope. Retain normal temporal-family visual QC."
+    },
+    {
+      "name": "Neo-Babylonian Babylonia",
+      "geometry_id": "cf8cc7b3-0eb8-4f67-a0c9-48c2cb2e33a9",
+      "interval": [
+        -599,
+        -550
+      ],
+      "current_policy": "cliopatria-boundary-normalization-v3",
+      "metrics": {
+        "approximate_hausdorff_m": 30270,
+        "symmetric_difference_pct": 2.184427,
+        "raw_outside_land_pct": 0.444876,
+        "render_outside_land_pct": 0.000004,
+        "raw_components": 1,
+        "render_components": 4
+      },
+      "disposition": "KEEP_PROVISIONALLY_TEMPORAL_FAMILY_REVIEW_REQUIRED",
+      "rationale": "Known displacement is below 35 km and land alignment is healthy, but the overnight packet did not freeze a complete area-delta/topology comparison against adjacent slices. Keep current render and complete family review before any policy substitution."
+    }
+  ],
+  "release_effect": "None. v0.8.1 remains immutable. Findings govern successor review and candidate selection only."
+}
