@@ -1,0 +1,891 @@
+{
+  "schema": "historical-slavery-atlas-geometry-completeness-audit-v1",
+  "release_baseline": "v0.8.0",
+  "decision": "D-118",
+  "captured_at": "2026-09-27",
+  "summary": {
+    "territorial_subjects": 48,
+    "subjects_with_resolved_geometry": 16,
+    "subjects_without_resolved_geometry": 32,
+    "release_resolved_geometry_rows": 46,
+    "normalized_render_rows": 46,
+    "missing_render_rows": 0,
+    "worst_render_outside_land_pct": 0.000034
+  },
+  "rules": {
+    "public_polygons_from_publish_map_geometry_only": true,
+    "source_geometry_immutable": true,
+    "unresolved_is_not_absence": true,
+    "geometry_does_not_strengthen_claim": true,
+    "modern_proxy_must_be_explicit": true
+  },
+  "entries": [
+    {
+      "spatial_entity_id": "037cd4aa-7cd8-432c-9fc6-b8b66278684b",
+      "canonical_name": "Achaemenid Persis/Elam royal economy",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "cfd709dd-55ad-4f92-a6ec-f6c7910b3fe1",
+        "dda25043-a5a8-4564-8531-afb1f3f57722"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 2,
+      "release_geometry_ids": [
+        "34ff5048-242f-48a3-8fb2-5eca4dcd9a54",
+        "f8a44a0b-f574-4c55-b5b1-b1e803f78543"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "28073034-dd0d-4cf5-b590-49eaad0a2e0c",
+      "canonical_name": "Aksumite kingdom (late-antique core and dependencies)",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "12befe4d-3438-4989-b576-51581c470db0"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "high",
+        "strategy": "historical_time_slices",
+        "preferred_source": "pinned Cliopatria POLITY and specialist Aksum maps",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "4fa7a54c-a0ed-56ea-9747-cca4bb7cb404",
+      "canonical_name": "Anglo-Saxon England / Northern Europe",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "450469cf-fe27-5e94-89c9-4d397be4b305"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "medium",
+        "strategy": "scope_split_or_multi_region",
+        "preferred_source": "specialist early-medieval England/Scandinavia geography",
+        "status": "needs_scope_review"
+      }
+    },
+    {
+      "spatial_entity_id": "0ea143e3-cf01-42a0-836e-352d9354d2a4",
+      "canonical_name": "Baekje",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "3b04340f-b830-48d1-9879-0f1b804e26c8"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 1,
+      "release_geometry_ids": [
+        "e5a720f8-9e22-45fe-a5b0-c6464686525d"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "be7b5f74-58c7-5125-bcde-0af4262cff41",
+      "canonical_name": "Brazil",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "b06daff8-0930-567e-980b-202df86b66ce"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "high",
+        "strategy": "modern_admin0_proxy",
+        "preferred_source": "Natural Earth 1:10m Admin 0 pinned to canonical fabric commit",
+        "status": "batch_01"
+      }
+    },
+    {
+      "spatial_entity_id": "a23451aa-c487-5f58-9993-a06282cb0baf",
+      "canonical_name": "Carolingian Empire",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "65963a31-a310-572c-9c58-2a0533f90fb5"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "high",
+        "strategy": "historical_time_slices",
+        "preferred_source": "pinned Cliopatria POLITY; specialist alternative if materially better",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "23298daf-6dbe-4f82-8ea6-dbe43bf6e548",
+      "canonical_name": "Classical Athens",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "dde79d87-898c-4c57-902a-b3d3fd65c9bb"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 1,
+      "release_geometry_ids": [
+        "21c9c493-14f8-4c13-9845-0e8a738c9110"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "2563a4cf-c65f-5a5b-bf58-926e20fe96d3",
+      "canonical_name": "DPRK",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "b78c06ce-5f27-5e85-a4d1-f8188b555820"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "high",
+        "strategy": "modern_admin0_proxy",
+        "preferred_source": "Natural Earth 1:10m Admin 0 pinned to canonical fabric commit",
+        "status": "batch_01"
+      }
+    },
+    {
+      "spatial_entity_id": "a6718e1f-5683-48f4-90fb-cc35ad263ba5",
+      "canonical_name": "Early eighth-century Sogdiana",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "63dda32b-6c3e-4b3e-9c5a-36596e6cdc1b"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "medium",
+        "strategy": "historical_region_or_evidence_loci",
+        "preferred_source": "bounded Sogdian political geography plus Samarkand/Panjikent loci",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "9f626011-5520-59f6-93d1-c3410708371f",
+      "canonical_name": "Europe and Central Asia, contemporary",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "bf9a8677-9964-563c-acd1-b5de285d3518"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "medium",
+        "strategy": "reporting_region_union",
+        "preferred_source": "ILO regional membership + Natural Earth country boundaries",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "40058995-6cfb-41d9-a196-9ae5670d5a73",
+      "canonical_name": "Funan (Chinese-source lower Mekong polity)",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "a0e592c2-aa47-4e55-8b62-c4923f7de6f2"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "medium",
+        "strategy": "bounded_specialist_historical",
+        "preferred_source": "specialist lower-Mekong/Funan historical geography; no maximum-extent proxy",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "c50a0da2-4920-478a-88bb-75e82b554805",
+      "canonical_name": "Garshana construction project (Ur III)",
+      "entity_type_code": "site",
+      "claim_ids": [
+        "ee0b6f5b-7825-4d51-a9ff-f0ca6ef522fd"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "low",
+        "strategy": "remain_unresolved_until_site_secure",
+        "preferred_source": "archaeological site identification only",
+        "status": "reviewed_unresolved"
+      }
+    },
+    {
+      "spatial_entity_id": "7224c8ef-e858-47bd-bfa9-467897068d04",
+      "canonical_name": "Hawaiian Islands (late precontact/contact-era social system)",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "60f28ab3-2f20-4490-843b-c03a727d2c1d"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "high",
+        "strategy": "physical_archipelago_proxy",
+        "preferred_source": "Natural Earth 1:10m Hawaii physical/admin geometry, restricted to relevant archipelago",
+        "status": "batch_01"
+      }
+    },
+    {
+      "spatial_entity_id": "f1b4d966-a605-459f-9d7b-8c33e75cbca3",
+      "canonical_name": "Hittite central Anatolia",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "b9e7f3bf-8182-487c-a1d3-2648eb0f0975",
+        "da121ea7-b251-42ae-bdd1-c1393a6db632"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 5,
+      "release_geometry_ids": [
+        "17a40ab9-195f-4298-bd54-0a5994743cfe",
+        "6ad53014-31f9-4076-9291-f6d161d34fce",
+        "7658b4b6-8456-4e0e-b545-02fdd9e2e844",
+        "9b32c6ca-d55d-4b7f-a4a0-46ee223fe2fc",
+        "e813d49c-b1a1-4bf4-9df2-0c14faca31f5"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "c6edcdcd-0583-5d19-a54b-a1f3e1e32ffc",
+      "canonical_name": "Iraq/Syria under ISIL, especially Yazidi population from 2014",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "88e48d2e-5b06-5b37-80bb-82e07db36a3f",
+        "b862e0a9-a857-57e0-8aa3-e37daf0844cf"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "medium",
+        "strategy": "historical_control_slices",
+        "preferred_source": "documented ISIL control-area dataset plus Yazidi evidence loci",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "d86cdc82-26ed-4fe0-b1ab-7e902bafabdf",
+      "canonical_name": "Kanesh/Kültepe Old Assyrian colony",
+      "entity_type_code": "city",
+      "claim_ids": [
+        "7b467073-fd7f-4c58-b525-0b12c93cf8b4"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 1,
+      "release_geometry_ids": [
+        "fada0ba1-143d-419a-bf84-896ce4c8538a"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "0b4c5b45-6972-44b1-8f67-d5c57733c5be",
+      "canonical_name": "Late Antique Bactria",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "b3daddee-5d65-4ef4-b3b6-b4de1f32a0d8"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "medium",
+        "strategy": "historical_region_slices",
+        "preferred_source": "specialist Bactria geography / bounded polity slices",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "b7cd8af1-2744-4653-a033-231d1b3d1929",
+      "canonical_name": "Late Period Egypt (664–330 BCE)",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "7d503f54-1342-4ff8-a44d-f6a0f243df28"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "high",
+        "strategy": "historical_time_slices",
+        "preferred_source": "pinned Cliopatria Egyptian polity slices or specialist Late Period map",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "d9296221-e69c-5516-8a9b-051bfa0f5959",
+      "canonical_name": "Late Proto-Indo-European / Early Bronze Age Europe",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "5ed542f3-bb66-567d-9e3a-1235f48e7881"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "low",
+        "strategy": "analytical_region_no_single_polygon",
+        "preferred_source": "specialist archaeological/linguistic horizon only if claim scope can be bounded",
+        "status": "needs_scope_review"
+      }
+    },
+    {
+      "spatial_entity_id": "9b0b993d-02c9-4a3e-83b9-d3bf694fe303",
+      "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "5ceb9d5c-9766-4663-a12b-d663186293dc"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 7,
+      "release_geometry_ids": [
+        "0d285ce0-adbf-45e5-a727-b5446a9c169c",
+        "204d6af3-1f0b-463c-a4a9-28c0991623f8",
+        "655c8ee3-0eb6-4706-9980-b4e0712dba84",
+        "7dc611d1-4b29-4163-b723-0a597459d298",
+        "82b2f32f-de79-4a5a-98e0-56db15321588",
+        "93c03723-d03d-45fc-8611-a08a7506974f",
+        "958fa26b-0095-4448-9a64-4b27e44efd81"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "0fa1c0a9-957d-43d4-bf0f-42c1e6183f4b",
+      "canonical_name": "Middle Ganga valley state-transition zone",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "a5d0b3fd-c20f-4f48-a84a-5ed8859bbfd0"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "medium",
+        "strategy": "analytical_region",
+        "preferred_source": "specialist middle-Ganga transition-zone geography",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "4775db5e-658f-5c62-ac7d-42d6e453780f",
+      "canonical_name": "Mycenaean Greece (Pylos/Knossos)",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "8691d038-1683-5331-bccb-e7a189cdd229"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "high",
+        "strategy": "authoritative_multipoint_loci",
+        "preferred_source": "Pylos and Knossos archaeological-site authorities",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "53c8af46-d912-44c8-a26a-122fefc36d0b",
+      "canonical_name": "Mycenaean mainland Linear B archives",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "94a4cb96-0300-4dbc-ae79-27318e71a50b"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "high",
+        "strategy": "authoritative_multipoint_loci",
+        "preferred_source": "Pylos, Tiryns, Mycenae and Thebes archive-site authorities",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "976d2f39-75d6-58a3-b945-430b216e35cd",
+      "canonical_name": "Nazi Germany and occupied Europe, 1933–1945",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "85bb684d-0aad-5410-a466-d3aad7f49c6f"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "high",
+        "strategy": "historical_control_slices",
+        "preferred_source": "specialist historical boundaries by year; do not reuse modern Germany proxy",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "6b3fd57f-4d30-44d2-9d15-427e41b6cd47",
+      "canonical_name": "Neo-Assyrian Nineveh",
+      "entity_type_code": "city",
+      "claim_ids": [
+        "8077abf3-f506-4bb1-908a-4aa5abd12369"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 1,
+      "release_geometry_ids": [
+        "65f31d95-3e05-49f6-9f74-43f2a3717728"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "dfc20c35-3467-484a-aa7d-95728f6b1b3a",
+      "canonical_name": "Neo-Babylonian Babylonia",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "a65d95f3-9681-4001-8ae3-b8bad002465f"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 3,
+      "release_geometry_ids": [
+        "62124dc0-f043-4c92-a463-e465d9fd6032",
+        "b5398faf-a447-4f67-a0c9-48c2cb2e33a9",
+        "cf8cc7b3-0eb8-4f65-8e3b-091eb88dd87c"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "2f69664e-173d-4759-8280-31ec331cfca7",
+      "canonical_name": "Neo-Babylonian temple households",
+      "entity_type_code": "other",
+      "claim_ids": [
+        "bcf72f2e-6c95-4257-8ebe-c3d459191353"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "medium",
+        "strategy": "institutional_multipoint_loci",
+        "preferred_source": "temple/archive sites actually represented in evidence package",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "d6e8bcfe-cf5f-4fdb-884d-7bb7228f43df",
+      "canonical_name": "New Kingdom Egypt",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "bcd7f1d7-a192-4bcd-880d-16a899dc11ff"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 5,
+      "release_geometry_ids": [
+        "4803a371-1de6-47e2-8eaa-f0b24a079c66",
+        "4f2ab0fb-cbfc-4160-9fbf-1fcce188ab92",
+        "587b667e-7f1f-496f-a55e-13e1aabdedfa",
+        "a72ccfe2-6dd1-4f90-96ea-257ff2fbf958",
+        "d230ca36-be77-4699-b12e-77a491e58f35"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "faaf62eb-da15-44f4-99b1-8da60b426358",
+      "canonical_name": "Old Babylonian Uruk",
+      "entity_type_code": "city",
+      "claim_ids": [
+        "e66638b2-f022-4bca-b173-5c128f3a3739"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 1,
+      "release_geometry_ids": [
+        "b81dd8d2-3956-4060-856c-7ab2ca72fde7"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "e611e914-428a-58ee-9731-cfac756dca90",
+      "canonical_name": "Ottoman Middle East",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "1420ab66-9065-58c2-a5a8-edb94ddf16f0"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "medium",
+        "strategy": "historical_time_slices",
+        "preferred_source": "pinned Cliopatria Ottoman polity slices or specialist 19th-century maps",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "d149f94d-174e-5ab4-b1f9-7635736bc034",
+      "canonical_name": "People's Republic of China, early decades",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "344f8c6d-b81f-5f2b-9c05-d764cfb25e08"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "high",
+        "strategy": "modern_admin0_proxy",
+        "preferred_source": "Natural Earth 1:10m Admin 0 pinned to canonical fabric commit",
+        "status": "batch_01"
+      }
+    },
+    {
+      "spatial_entity_id": "5b54dab9-28c9-5d39-bebd-d57f04092194",
+      "canonical_name": "Peruvian Amazon",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "fb925d85-2465-535e-9e7d-fd0c06c39e86"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "medium",
+        "strategy": "documented_region_polygon",
+        "preferred_source": "authoritative Peruvian Amazon definition/biogeographic or administrative union",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "b0c8a98a-ac45-4344-914e-f782e9a75cc1",
+      "canonical_name": "Pre-Angkor Cambodian epigraphic region (7th century)",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "8f853ded-eb39-432e-97c6-0715feaec950"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "medium",
+        "strategy": "inscription_loci_or_historical_region",
+        "preferred_source": "published inscription findspots and bounded pre-Angkor geography",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "ea501054-d38b-4147-ba02-41e1fa68598e",
+      "canonical_name": "Pre-Islamic South Arabia (first-millennium epigraphic corpus)",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "e19a68ee-d41c-4f22-b8ca-eb2b65d885ef"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "low",
+        "strategy": "multi_polity_loci_or_scope_split",
+        "preferred_source": "epigraphic findspots / narrower kingdom slices",
+        "status": "needs_scope_review"
+      }
+    },
+    {
+      "spatial_entity_id": "c6cc6f7f-d919-4bb0-93e8-3201151bc538",
+      "canonical_name": "Punic Carthage",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "70fb14f7-9fe0-4470-b53d-e42b7e98e5bd"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "high",
+        "strategy": "historical_time_slices",
+        "preferred_source": "pinned Cliopatria Carthage POLITY and specialist Punic alternatives",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "90e94c09-0463-48d6-ad26-cd7bfacc724c",
+      "canonical_name": "Qin Empire (221–209 BCE slice)",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "1f865a88-6b27-4aa6-900f-813839856e6b"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 4,
+      "release_geometry_ids": [
+        "0d0af02d-83bc-4f4e-a69d-d56d56326cd4",
+        "14edab60-6475-4699-978c-f51aaccd34d5",
+        "9abfabaa-3539-4c3e-95de-2e4452b2feb7",
+        "db0512e0-e13d-4bdd-bbcd-a68bb5f1a2c2"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "ae1111c0-98bf-4bef-a1b2-98736f618aa3",
+      "canonical_name": "Roman Empire — early Principate",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "53405178-e879-4ef2-a12d-3cfcc0ad55f6"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 4,
+      "release_geometry_ids": [
+        "7beb33fa-c063-4a12-9511-2542028730f7",
+        "b7c31528-ff4c-49cf-a95b-c662afab4339",
+        "dce21f42-3e1a-4695-b036-4d20472a6ecb",
+        "edb239a8-4d54-44e4-970a-affb7c9af22e"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "cd86a49d-66d6-4e73-8282-ee543c6f8e5e",
+      "canonical_name": "Sasanian Iran",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "be78a54f-7a2b-4e47-97db-da01818be73c"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "high",
+        "strategy": "historical_time_slices",
+        "preferred_source": "pinned Cliopatria Sasanian POLITY and specialist alternatives",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "f4266476-7403-572e-923a-65f19cfbbe70",
+      "canonical_name": "Shang China",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "2945d4c3-d786-549a-baf9-fdfba54a978e",
+        "85ed4143-2d4a-5baf-989c-d4c94897d527"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "high",
+        "strategy": "historical_time_slices",
+        "preferred_source": "pinned Cliopatria Shang POLITY or specialist archaeological polity extent",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "9b65dae3-45fe-49fb-9087-9fc74540219c",
+      "canonical_name": "Silla Village Register villages (Sŏwŏn-gyŏng area)",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "dac1fdbe-8a72-411e-a43c-6180e3d24298"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "low",
+        "strategy": "remain_unresolved_or_approx_locus",
+        "preferred_source": "specialist location analysis only; exact villages debated",
+        "status": "reviewed_unresolved"
+      }
+    },
+    {
+      "spatial_entity_id": "3ae61b11-1cf4-4fe5-9b4d-faf0ec4da757",
+      "canonical_name": "Songo Mnara (15th-century Swahili stone town)",
+      "entity_type_code": "site",
+      "claim_ids": [
+        "4897a70a-0286-4281-9b65-68901135c993"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 1,
+      "release_geometry_ids": [
+        "729a062a-7137-44ae-94f9-0b32d7b2a6d4"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "0de79e9b-3be0-4783-87bd-785259fec4ea",
+      "canonical_name": "Southern Maya Lowlands (Late Classic captive-taking corpus)",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "04cdf6ea-5b43-4f44-94a4-04b720ac7a2a"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "medium",
+        "strategy": "site_loci_or_multi_polity_slices",
+        "preferred_source": "bounded Maya sites/polities represented by captive corpus",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "82886ee2-e0d5-5b39-87fa-553e36c22d4d",
+      "canonical_name": "Soviet Kazakhstan / Central Asia",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "ef5d2b8e-2a49-53c3-94c3-d6a2e5b6fac9"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "medium",
+        "strategy": "historical_admin_region",
+        "preferred_source": "Soviet-era Kazakhstan/Central Asian administrative geometry",
+        "status": "needs_source_review"
+      }
+    },
+    {
+      "spatial_entity_id": "419fb1f9-225b-44e8-9518-acae207e82ac",
+      "canonical_name": "Tōdai-ji (Nara-period temple institution)",
+      "entity_type_code": "site",
+      "claim_ids": [
+        "687bed4f-281e-4821-bc23-1e75cb65dd99"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 1,
+      "release_geometry_ids": [
+        "4ea5165a-9bd2-4883-9cdd-4910aa491dc7"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "60e51cf6-08cd-5544-b4c2-127f8f9c3201",
+      "canonical_name": "Vedic-period South Asia",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "58d69227-01e8-5d47-aba4-f3f96cea4230"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "low",
+        "strategy": "analytical_region_no_single_polygon",
+        "preferred_source": "specialist Vedic geographic horizon only if defensibly bounded",
+        "status": "needs_scope_review"
+      }
+    },
+    {
+      "spatial_entity_id": "94c19677-c24a-4c9a-a717-d7a038a69920",
+      "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+      "entity_type_code": "polity",
+      "claim_ids": [
+        "0fa340fd-b595-4c48-aee6-71e5e235212e"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 8,
+      "release_geometry_ids": [
+        "102f2974-e240-4e23-bf91-256eee65a41d",
+        "26ccb13b-735a-43d2-b91d-dc829f124873",
+        "62dabec6-0cc5-4a9f-af7f-7a5caad1e009",
+        "81cb78c1-3b59-4c0a-b51f-f1c0d45bf866",
+        "970789fe-8b57-473d-ad82-778d441e3ae5",
+        "a00dc1d4-863d-4f85-b77f-a53a37f83b43",
+        "d1d6310e-ae50-4df4-9199-32781cfc5eb4",
+        "f739083b-53a7-4b97-aad6-b9ddaa5af490"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    },
+    {
+      "spatial_entity_id": "06d648d2-6a5b-5972-a3a4-aa9097fdb1d2",
+      "canonical_name": "Xinjiang / China",
+      "entity_type_code": "region",
+      "claim_ids": [
+        "e36cf6d2-1dbe-5879-bde2-0b5eac52b635"
+      ],
+      "geometry_status": "unresolved",
+      "overlapping_resolved_geometry_count": 0,
+      "release_geometry_ids": [],
+      "review": {
+        "priority": "high",
+        "strategy": "modern_admin1_proxy",
+        "preferred_source": "Natural Earth 1:10m Admin 1 Xinjiang pinned to canonical fabric commit",
+        "status": "batch_01"
+      }
+    },
+    {
+      "spatial_entity_id": "82d69be3-6159-4655-82a7-db3e4a5b68b6",
+      "canonical_name": "Zhengzhou Shang City (Early Shang)",
+      "entity_type_code": "site",
+      "claim_ids": [
+        "896a3720-d871-495e-b23e-c24d7dde3039",
+        "abf43c9e-4689-4620-8418-fbf92e7725cc"
+      ],
+      "geometry_status": "resolved",
+      "overlapping_resolved_geometry_count": 1,
+      "release_geometry_ids": [
+        "e8934935-2201-48d5-9308-63fa571ff860"
+      ],
+      "review": {
+        "status": "already_resolved",
+        "strategy": "preserve_and_enforce_D116",
+        "preferred_source": "existing reviewed geometry"
+      }
+    }
+  ]
+}
