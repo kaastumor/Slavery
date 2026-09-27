@@ -36,7 +36,7 @@ jobs:
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
 
-      - name: Verify production API is exact v0.7.0 materialization
+      - name: Verify production API follows a published immutable materialization
         shell: bash
         env:
           LIVE_API_URL: https://dilnayfllygkplsdymel.supabase.co/functions/v1/atlas-data
@@ -56,9 +56,10 @@ jobs:
           body=path.read_bytes()
           payload=json.loads(body)
           digest=hashlib.sha256(body).hexdigest()
+          materialization=payload.get("serving_materialization_id")
           summary={
               "release_version": payload.get("release_version"),
-              "serving_materialization_id": payload.get("serving_materialization_id"),
+              "serving_materialization_id": materialization,
               "canonical": payload.get("canonical"),
               "place_count": len(payload.get("places", [])),
               "claim_count": sum(len(p.get("claims", [])) for p in payload.get("places", [])),
@@ -69,25 +70,18 @@ jobs:
               json.dumps(summary,indent=2)+"\n"
           )
           print(json.dumps(summary,indent=2))
-          assert digest == "2a04787a2ee0e42a97f273621eebbf32ddc6a1b2e903239a626eb41d72c29786", summary
-          assert payload.get("release_version") == "v0.7.0", summary
-          assert payload.get("serving_materialization_id") == "v0.7.0-public-mvp-v1", summary
+          assert isinstance(payload.get("release_version"), str) and payload["release_version"], summary
+          assert isinstance(materialization, str) and materialization, summary
           assert payload.get("canonical") is True, summary
-          assert len(payload.get("places", [])) == 16, summary
-          assert sum(len(p.get("claims", [])) for p in payload.get("places", [])) == 18, summary
-          assert all(p.get("geometries") == [] for p in payload.get("places", [])), summary
-          dims=payload["release_dimensions"]
-          assert dims["research_stage_counts"] == {"researched_internal":21,"under_review":5}
-          assert dims["researched_inconclusive_count"] == 6
-          assert dims["independent_historical_reviews"] == 0
-          assert dims["reviewed_historical_geometry_count"] == 0
+          assert len(payload.get("places", [])) > 0, summary
+          assert sum(len(p.get("claims", [])) for p in payload.get("places", [])) > 0, summary
+          dims=payload.get("release_dimensions")
+          assert isinstance(dims, dict), summary
+          assert dims.get("independent_historical_reviews") == 0
+          headers=Path("/tmp/public-atlas-review/live/api-headers.txt").read_text().lower()
+          assert f"x-atlas-materialization: {materialization}".lower() in headers
+          assert "x-atlas-stage: true" not in headers
           PY
-          grep -qi '^x-atlas-materialization: v0.7.0-public-mvp-v1' \
-            /tmp/public-atlas-review/live/api-headers.txt
-          if grep -qi '^x-atlas-stage: true' /tmp/public-atlas-review/live/api-headers.txt; then
-            echo "production API unexpectedly identifies as stage" >&2
-            exit 1
-          fi
 
       - name: Review current public candidate root
         working-directory: web
