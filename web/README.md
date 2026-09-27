@@ -14,6 +14,18 @@ This is the durable MapLibre web client for the atlas.
 
 The frontend is intentionally not coupled to Supabase. Replacing the API host should require changing the configured URL, not the map model.
 
+## Current public release
+
+- Canonical historical release: **v0.8.1**
+- Public serving materialization: **v0.8.1-public-mvp-v1**
+- Public map geometry: immutable versioned assets derived from the reviewed render layer;
+  v0.8.1 reuses 45 unchanged v0.8.0-v2 assets and adds the D-117 specialist Rome
+  14–22 CE asset.
+- Corpus render alignment audit: all 39 polygon render geometries use the canonical
+  Natural Earth land fabric; maximum rendered outside-land residual is 0.000032%.
+- Raw historical geometry remains preserved separately and is never rewritten merely
+  to make coastlines visually match.
+
 
 ## EXP-04 research preview
 
