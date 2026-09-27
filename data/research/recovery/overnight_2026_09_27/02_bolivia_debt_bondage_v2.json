@@ -1,0 +1,57 @@
+{
+  "case_key": "overnight-2026-09-27/bolivia/debt-bondage-v2",
+  "spatial_entity": {
+    "canonical_name": "Bolivia",
+    "display_name": "Bolivia",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed spatial identity. The entity is an indexing/context unit; the reconciled claim below is limited to the documented subnational, sectoral, institutional or observed scope and does not imply uniform practice across the whole entity."
+  },
+  "claim": {
+    "from_year": 2004,
+    "to_year": 2004,
+    "date_text_original": "field research carried out in 2004; ILO publication 2005",
+    "temporal_precision": "bounded_source_interval",
+    "temporal_certainty": "high",
+    "spatial_precision": "Santa Cruz sugar harvest, northern Bolivian Amazon Brazil-nut harvest and isolated Chaco communities; country entity is index only",
+    "summary": "ILO field research documented debt bondage among predominantly Indigenous workers in the Santa Cruz sugar harvest and northern Amazon Brazil-nut harvest, and extreme forms of forced labour in isolated captive communities in the Bolivian Chaco. The atlas records a bounded 2004 debt-bondage claim across those researched settings without treating Bolivia as uniformly affected.",
+    "confidence": "high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim 2dcf7b77-4489-4fe5-b241-a4f61f42cb92 into current post-M1 semantics. No new P-level is assigned. Legacy geometry 8cff20b8-fad0-4e34-94db-b8ffb5841840 is an explicit modern/navigation proxy and is not promoted as this claim's historical/practice inference extent.",
+    "territorial_practice": {
+      "practice_type_code": "debt_bondage",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Positive bounded classification only. Do not infer national prevalence, uniform territorial distribution, legal status, or a country-wide practice polygon beyond what the evidence directly supports."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Debt Bondage and Easement in Bolivia",
+        "author_or_institution": "Alvaro Bedoya Silva-Santisteban; Eduardo Bedoya Garland",
+        "source_type": "institutional_research_report",
+        "source_classification": "secondary",
+        "geographic_scope": "Santa Cruz sugar harvest, northern Bolivian Amazon Brazil-nut harvest, Bolivian Chaco captive communities",
+        "temporal_scope": "field investigation in 2004; publication 2005",
+        "independence_notes": "Single ILO-commissioned field investigation; interview categories and secondary data inside the report are not counted as independent sources.",
+        "reliability_limitations": "The report distinguishes settings and severity. It does not justify a national prevalence estimate or a single Bolivia-wide practice polygon."
+      },
+      "version": {
+        "version_label": "ILO web publication, 3 January 2005; ISBN 92-2-316954-2 / 92-2-316955-0",
+        "publication_year": 2005,
+        "url_or_identifier": "https://www.ilo.org/publications/debt-bondage-and-easement-bolivia",
+        "accessed_at": "2026-09-27T11:30:00Z"
+      },
+      "evidence_role": "claim-specific institutional field investigation",
+      "independence_group": "ilo-bolivia-forced-labour-2004",
+      "directness": "institutional field/research synthesis",
+      "direction": "supports",
+      "locator": "publication summary and results for sugar, Brazil-nut and Chaco research settings"
+    }
+  ]
+}
