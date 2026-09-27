@@ -1,0 +1,57 @@
+{
+  "case_key": "overnight-2026-09-27/paraguay/debt-bondage-v2",
+  "spatial_entity": {
+    "canonical_name": "Paraguay",
+    "display_name": "Paraguay",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed spatial identity. The entity is an indexing/context unit; the reconciled claim below is limited to the documented subnational, sectoral, institutional or observed scope and does not imply uniform practice across the whole entity."
+  },
+  "claim": {
+    "from_year": 2005,
+    "to_year": 2005,
+    "date_text_original": "ILO Chaco investigation and publication, 2005",
+    "temporal_precision": "bounded_source_interval",
+    "temporal_certainty": "high",
+    "spatial_precision": "Paraguayan Chaco ranch contexts; country entity is index only",
+    "summary": "An ILO investigation in the Paraguayan Chaco confirmed forced labour on a minority of traditional ranches and described labour relations in many of those cases as debt bondage. The evidence is explicitly non-uniform and geographically bounded to ranch contexts in the Chaco, so the atlas records a positive debt-bondage claim for the documented 2005 investigation without extending it to Paraguay as a whole.",
+    "confidence": "high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim d22ed3c9-0c71-4569-80da-c367459c3bde into current post-M1 semantics. No new P-level is assigned. Legacy geometry b37bbfed-4916-4d94-a671-5ac3d5a21f69 is an explicit modern/navigation proxy and is not promoted as this claim's historical/practice inference extent.",
+    "territorial_practice": {
+      "practice_type_code": "debt_bondage",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Positive bounded classification only. Do not infer national prevalence, uniform territorial distribution, legal status, or a country-wide practice polygon beyond what the evidence directly supports."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Debt servitude and marginalization in the Chaco of Paraguay",
+        "author_or_institution": "Alvaro Bedoya Silva-Santisteban; Eduardo Bedoya Garland",
+        "source_type": "institutional_research_report",
+        "source_classification": "secondary",
+        "geographic_scope": "Paraguayan Chaco, especially traditional remote cattle ranches",
+        "temporal_scope": "2005 investigation/publication",
+        "independence_notes": "ILO-commissioned investigation. Treat interviews, inspector findings and report narrative as one evidence family rather than independent votes.",
+        "reliability_limitations": "The report explicitly says forced labour existed on a minority of Chaco ranches. It does not support a national prevalence estimate or a whole-country practice extent."
+      },
+      "version": {
+        "version_label": "ILO working paper / web publication, 3 January 2005; ISBN 92-2-317557-7 / 92-2-317558-5",
+        "publication_year": 2005,
+        "url_or_identifier": "https://www.ilo.org/publications/debt-servitude-and-marginalization-chaco-paraguay",
+        "accessed_at": "2026-09-27T11:30:00Z"
+      },
+      "evidence_role": "claim-specific institutional field investigation",
+      "independence_group": "ilo-paraguay-chaco-2005",
+      "directness": "institutional field/research synthesis",
+      "direction": "supports",
+      "locator": "publication summary and investigation findings on forced labour/debt bondage on traditional Chaco ranches"
+    }
+  ]
+}
