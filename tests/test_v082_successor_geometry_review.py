@@ -70,7 +70,7 @@ class V082SuccessorGeometryReviewTests(unittest.TestCase):
         disposition = self.review["successor_geometry_disposition"]
         self.assertEqual(disposition["new_evidence_locus_geometries_for_mycenaean_correction"], 2)
         self.assertEqual(disposition["practice_extent_geometries_for_new_claims"], 0)
-        self.assertIn("not", disposition["note"].lower())
+        self.assertIn("never render", disposition["note"].lower())
         self.assertIn("territorial", disposition["note"].lower())
 
 
