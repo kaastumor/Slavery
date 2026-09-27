@@ -3191,3 +3191,50 @@ rather than rewriting source geometry.
 Canonical v0.8.0, v0.8.0 serving materializations and all earlier releases remain
 immutable rollback/history. This decision changes presentation/release selection only;
 it does not strengthen any historical slavery claim or assign a new P-level.
+
+
+## D-119 — Corpus geometry QC is a multi-axis envelope, not a coastline-only pass or weighted score
+**Date:** 2026-09-27  
+**Status:** accepted for successor geometry review; no retroactive mutation of v0.8.1
+
+**Trigger:** the overnight Geometry-QC lane re-ran the v0.8.1 mapped corpus after D-116/D-118. The release correctly serves normalized render geometry against the canonical Natural Earth land fabric, and all 39 polygon renders remain within the D-118 outside-land tolerance. However, comparative checks showed that a polygon can pass coastline alignment while still having materially displaced inland/frontier geometry.
+
+Examples include:
+
+- Roman Empire 6–8 CE: incumbent QGIS render Hausdorff about 92.4 km versus about 15.9 km for the v3 alternative;
+- Western Han 125–110 BCE: about 153.1 km incumbent versus about 18.2 km for v2;
+- Mauryan 290–256 BCE: about 137.5 km incumbent versus about 22.8 km for v2;
+- Achaemenid Persis/Elam: about 53.5 km on both reviewed incumbent slices;
+- Baekje: only about 12.0 km displacement, but about 14.48% source/render symmetric difference and a 1→24 component change.
+
+**Decision:** corpus geometry QC is evaluated as independent axes. No weighted score may collapse them into one acceptance number.
+
+Required axes are:
+
+1. raw/render validity;
+2. canonical-land residual;
+3. source→render Hausdorff displacement;
+4. source→render symmetric difference;
+5. signed and absolute area delta;
+6. component/ring topology;
+7. source/render complexity;
+8. adjacent-slice temporal-family consistency;
+9. exact source/render provenance and serving fingerprint;
+10. explicit coastline-versus-inland-frontier visual review.
+
+For new generic render candidates, the working displacement ceiling is **35 km** and the existing 2% absolute-area / 5% symmetric-difference candidate gates remain applicable. Exceeding one of these gates makes a new candidate ineligible unless a bounded documented override and visual review justifies it.
+
+For geometry already present in an immutable release, a newly discovered review trigger does **not** mutate the historical release. The current render may remain grandfathered while a successor candidate is comparatively reviewed. Improvement on one metric alone is insufficient for replacement.
+
+A component/ring change is a review trigger rather than an automatic failure because clipping a coarse source polygon to a detailed physical-land fabric can legitimately split coastal/island components. Such structural changes must nevertheless be frozen and reviewed, not ignored.
+
+The accepted machine-readable envelope is:
+
+`config/cartography/corpus_geometry_qc_envelope.json`
+
+The first topology snapshot and overnight review are:
+
+- `data/research/geometry_reviews/v081_corpus_topology_snapshot.json`
+- `data/research/geometry_reviews/overnight_2026_09_27_corpus_qc_review.json`
+
+**Release effect:** none. Canonical v0.8.1 and `v0.8.1-public-mvp-v1` remain immutable. D-119 governs successor review, geometry-resolution work and future serving promotion.
