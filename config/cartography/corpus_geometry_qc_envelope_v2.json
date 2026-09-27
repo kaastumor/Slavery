@@ -1,0 +1,48 @@
+{
+  "schema_version": "historical-slavery-atlas-corpus-geometry-qc-envelope-v2",
+  "policy_id": "corpus-geometry-qc-envelope-v2",
+  "decision": "D-120",
+  "supersedes_for_successor_review": "config/cartography/corpus_geometry_qc_envelope.json",
+  "scope": "successor-release review of reviewed polygon render geometry",
+  "principles": {
+    "independent_axes": true,
+    "weighted_overall_score_forbidden": true,
+    "source_geometry_immutable": true,
+    "render_geometry_is_derived": true,
+    "geometry_does_not_strengthen_claim": true,
+    "coastline_normalization_must_not_silently_rewrite_frontiers": true,
+    "existing_release_immutability": true
+  },
+  "measurement_model": {
+    "frontier_displacement": {
+      "metric": "source_to_smoothed_boundary_hausdorff_m",
+      "implementation_reference": "cartography.render_geometry_cache.smoothing_hausdorff_m",
+      "rationale": "Measure policy-induced boundary smoothing before canonical-land clipping so coastline replacement does not masquerade as inland/frontier displacement.",
+      "max_candidate_m": 35000
+    },
+    "raw_to_final_render_hausdorff": {
+      "role": "diagnostic_only",
+      "rationale": "Final canonical-land clipping can dominate whole-geometry Hausdorff distance at coastlines and islands; it must not be compared directly with smoothing-only candidate metrics or used alone as a successor rejection gate."
+    },
+    "final_render_change": {
+      "max_symmetric_difference_pct": 5,
+      "max_abs_area_delta_pct": 2,
+      "interpretation": "Independent candidate gates; exceedance requires bounded override plus visual review."
+    },
+    "canonical_land_residual": {
+      "max_render_outside_land_pct": 0.0001,
+      "hard_gate": true
+    },
+    "topology": {
+      "component_or_ring_change": "review_trigger_not_automatic_failure",
+      "rationale": "Detailed canonical-land clipping can legitimately split coastal/island components. Review whether the change is coastal/topological rather than historical-frontier movement."
+    }
+  },
+  "successor_reuse_rules": {
+    "unchanged_predecessor_render": "May be reused after corpus/family review when corrected quantitative axes pass and no new source/policy change is introduced.",
+    "policy_substitution": "Requires exact same source geometry, candidate metrics inside gates, temporal-family comparison and visual review.",
+    "bounded_override": "Allowed only when a candidate gate is exceeded for a documented cartographic reason, the raw source remains preserved, canonical-land hard gate passes, and visual review confirms no unsupported inland/frontier rewrite.",
+    "point_or_nonpolygon_geometry": "Reuse exact reviewed source geometry; polygon envelope does not apply.",
+    "unresolved_geometry": "Remain unresolved until independently defensible geometry exists."
+  }
+}

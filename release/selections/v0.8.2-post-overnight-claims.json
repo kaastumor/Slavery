@@ -1,7 +1,7 @@
 {
   "selection_schema": "historical-slavery-atlas-successor-claim-selection-v1",
   "candidate_version": "v0.8.2-post-overnight",
-  "status": "CLAIMS_FROZEN_RELEASE_BLOCKED_ON_D119_GEOMETRY_REUSE_AND_PREDECESSOR_OBJECT_CORRECTION",
+  "status": "RELEASE_READY_PENDING_AUTHORITY_FREEZE",
   "canonical_predecessor": {
     "version": "v0.8.1",
     "manifest_path": "data/releases/v0.8.1/manifest.json",
@@ -84,21 +84,35 @@
     "additions": 11,
     "successor_claims": 86,
     "predecessor_spatial_entities": 50,
-    "new_spatial_entities": 11,
-    "successor_spatial_entities": 61
+    "new_spatial_entities": 13,
+    "successor_spatial_entities": 63
   },
   "geometry_policy": {
     "new_practice_extent_geometry_ids": [],
     "claim_completeness_independent_of_geometry": true,
     "modern_country_proxy_as_practice_extent_forbidden": true,
     "inherited_geometry_count": 46,
-    "inherited_geometry_reuse_status": "BLOCKED_PENDING_D119_SUCCESSOR_REVIEW",
+    "inherited_geometry_reuse_status": "CLEARED_BY_D120_SUCCESSOR_REVIEW",
     "corpus_polygon_count": 39,
     "d119_hausdorff_review_trigger_count": 29,
     "d119_component_change_count": 38,
     "d119_symmetric_difference_over_5pct_count": 1,
     "d119_abs_area_delta_over_2pct_count": 1,
-    "note": "New claims remain release-eligible with geometry unresolved. Existing v0.8.1 geometry is not automatically reusable in a successor merely because it is immutable and currently public."
+    "note": "New claims remain release-eligible with geometry unresolved. Existing v0.8.1 geometry is not automatically reusable in a successor merely because it is immutable and currently public.",
+    "d119_successor_review_path": "data/research/geometry_reviews/v082_successor_geometry_review.json",
+    "d120_corrected_focused_review_count": 6,
+    "d120_unchanged_polygon_reuse_count": 33,
+    "render_policy_substitutions": [
+      "f8a44a0b-f574-4c55-b5b1-b1e803f78543",
+      "34ff5048-242f-48a3-8fb2-5eca4dcd9a54",
+      "82b2f32f-de79-4a5a-98e0-56db15321588",
+      "edb239a8-4d54-44e4-970a-affb7c9af22e",
+      "81cb78c1-3b59-4c0a-b51f-f1c0d45bf866"
+    ],
+    "bounded_render_overrides": [
+      "e5a720f8-9e22-45fe-a5b0-c6464686525d"
+    ],
+    "expected_successor_geometry_membership": 48
   },
   "predecessor_object_correction_required": {
     "claim_id": "8691d038-1683-5331-bccb-e7a189cdd229",
@@ -119,7 +133,17 @@
         "role": "evidence_locus_only"
       }
     ],
-    "required_action": "Use an explicit bounded claim-object augmentation/correction in successor authority or deliberately preserve the v0.8.1 claim object and defer the loci. Do not let authority freezing reinterpret this as unexplained predecessor drift."
+    "required_action": "Use an explicit bounded claim-object augmentation/correction in successor authority or deliberately preserve the v0.8.1 claim object and defer the loci. Do not let authority freezing reinterpret this as unexplained predecessor drift.",
+    "disposition": "INCLUDE_AS_EXPLICIT_BOUNDED_SUCCESSOR_AUGMENTATION",
+    "add_spatial_entity_ids": [
+      "9d0106e0-1ee1-4d29-996d-aff760af7e59",
+      "572179ca-bb9c-4dd9-90d8-df4dcf8c41a4"
+    ],
+    "add_geometry_ids": [
+      "824cf9ab-5bfd-4d84-8fb6-8c137033424d",
+      "78627165-cc6d-4a42-9f4c-3431944526c8"
+    ],
+    "semantic_scope": "claim_evidence_locus_only_not_territorial_extent"
   },
   "excluded_pending_reconciliation": [
     {
@@ -128,17 +152,16 @@
       "reason": "legacy prototype dependency claim still requires current-method replay"
     }
   ],
-  "release_ready": false,
-  "release_blockers": [
-    "D-119 successor reuse review for inherited polygon geometry",
-    "explicit treatment of the Mycenaean Pylos/Knossos predecessor claim-object augmentation"
-  ],
+  "release_ready": true,
+  "release_blockers": [],
   "rules": {
     "explicit_membership_only": true,
     "reviewed_row_discovery_forbidden": true,
     "no_new_p_level": true,
     "unresolved_geometry_not_absence": true,
     "prior_release_immutable": true,
-    "source_dependency_closure_required_at_authority_freeze": true
+    "source_dependency_closure_required_at_authority_freeze": true,
+    "geometry_successor_review_decision": "D-120",
+    "mycenaean_locus_augmentation_explicit": true
   }
 }

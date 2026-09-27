@@ -3238,3 +3238,67 @@ The first topology snapshot and overnight review are:
 - `data/research/geometry_reviews/overnight_2026_09_27_corpus_qc_review.json`
 
 **Release effect:** none. Canonical v0.8.1 and `v0.8.1-public-mvp-v1` remain immutable. D-119 governs successor review, geometry-resolution work and future serving promotion.
+
+
+## D-120 — Successor geometry QC separates frontier displacement from canonical-land clipping
+**Date:** 2026-09-27  
+**Status:** accepted for v0.8.2 successor review
+
+**Trigger:** the D-119 overnight corpus envelope correctly identified that coastline
+alignment alone is insufficient, but its frozen 29/39 Hausdorff review count mixed two
+different quantities: raw-source → final land-clipped render Hausdorff for released
+geometry, and raw-source → smoothed-boundary displacement for candidate alternatives.
+Those values are not comparable. Canonical-land clipping can move a coastline by the
+difference between historical-source generalization and the pinned Natural Earth fabric
+without moving the intended inland/frontier boundary.
+
+**Decision:** retain D-119's independent-axis principle and correct the measurement
+contract for successor review.
+
+1. Frontier/policy displacement is measured **before canonical-land clipping**, using
+   source geometry → smoothed-boundary Hausdorff
+   (`cartography.render_geometry_cache.smoothing_hausdorff_m`). The working generic
+   candidate ceiling remains 35 km.
+2. Raw-source → final-render Hausdorff remains a diagnostic, not a standalone rejection
+   gate, because the final render intentionally inherits the canonical land coastline.
+3. Final source/render symmetric difference, signed/absolute area change, canonical-land
+   residual, topology, temporal-family consistency, exact provenance and explicit
+   visual coastline-vs-frontier review remain independent axes.
+4. Component/ring changes remain review triggers, not automatic failures.
+5. A bounded override may be accepted only when a candidate gate is exceeded for a
+   documented cartographic reason, the raw source remains immutable, the hard
+   canonical-land gate passes and comparative visual review shows no unsupported inland
+   or political-frontier rewrite.
+6. No v0.8.1 bytes are changed. This governs successor reuse/substitution only.
+
+Re-running the v0.8.1 polygon corpus under the corrected comparison reduced the focused
+successor-review set from the misleading 29/39 count to six rows. Thirty-three of 39
+polygon renders pass the corrected quantitative axes without a policy substitution.
+
+The six focused reviews are frozen in:
+
+`data/research/geometry_reviews/v082_successor_geometry_review.json`
+
+Accepted successor dispositions:
+
+- Achaemenid Persis/Elam, both slices: substitute QGIS render with
+  `cliopatria-boundary-normalization-v2`;
+- Mauryan 290–256 BCE: substitute QGIS render with v2;
+- Roman Empire 6–8 CE: substitute QGIS render with v3, matching adjacent Roman
+  temporal-family policy;
+- Western Han 125–110 BCE: substitute QGIS render with v3, matching adjacent Han
+  temporal-family policy;
+- Baekje: reuse the existing v3 render under an explicit bounded override. The large
+  source/render symmetric difference is concentrated in replacing a 53-point,
+  materially offshore source coastline with the canonical Korean land fabric; visual
+  review found no unsupported inland/frontier rewrite. The additional coastline detail
+  remains presentation geometry, not historical evidence.
+
+The associated Actions visual-review artifact is run `36341676958`, artifact
+`10939311385`, digest
+`sha256:090ee63a162d70e715bbec9d5973d9b83f37d2c12e1ace71e32a6c040b5455b4`.
+
+**Release effect:** this clears D-119 successor geometry reuse for v0.8.2. It does not
+publish v0.8.2 by itself. Raw historical geometry remains unchanged. The two new
+Mycenaean Pylos/Knossos points are evidence loci only and are not territorial practice
+extent.

@@ -1,0 +1,170 @@
+{
+  "review_schema": "historical-slavery-atlas-v082-successor-geometry-review-v1",
+  "date": "2026-09-27",
+  "decision": "D-120",
+  "canonical_predecessor": "v0.8.1",
+  "successor_candidate": "v0.8.2",
+  "policy": "config/cartography/corpus_geometry_qc_envelope_v2.json",
+  "visual_review_artifact": {
+    "workflow_run_id": 36341676958,
+    "artifact_id": 10939311385,
+    "artifact_name": "v082-successor-geometry-review-939abfc46482be5301e642a0fb396e1186346346",
+    "artifact_digest": "sha256:090ee63a162d70e715bbec9d5973d9b83f37d2c12e1ace71e32a6c040b5455b4",
+    "canonical_land_mask_id": "natural-earth-ne_10m_land-v5.1.1-ca96624",
+    "result": "SUCCESS"
+  },
+  "corpus_reassessment": {
+    "polygon_count": 39,
+    "overnight_raw_to_final_hausdorff_trigger_count": 29,
+    "corrected_rows_requiring_focused_review": 6,
+    "corrected_rows_passing_quantitative_axes_without_policy_change": 33,
+    "nonpolygon_geometry_count": 7,
+    "interpretation": "The overnight 29/39 trigger mixed raw-to-final-land-clipped Hausdorff with source-to-smoothed candidate Hausdorff. D-120 separates those axes. Thirty-three polygons require no policy substitution; existing reviewed renders are reusable after corpus/topology review. Six rows received focused visual/comparative review."
+  },
+  "focused_reviews": [
+    {
+      "geometry_id": "f8a44a0b-f574-4c55-b5b1-b1e803f78543",
+      "subject": "Achaemenid Persis/Elam royal economy",
+      "interval": [
+        -529,
+        -500
+      ],
+      "incumbent_policy": "cliopatria-qgis-natural-earth-v1",
+      "successor_policy": "cliopatria-boundary-normalization-v2",
+      "disposition": "SUBSTITUTE_RENDER_POLICY",
+      "metrics": {
+        "smoothing_hausdorff_m": 25338.3,
+        "smoothing_area_delta_pct": 0.003,
+        "final_symdiff_pct": 0.894,
+        "final_area_delta_pct": 0.004,
+        "outside_land_pct": 0.00001,
+        "raw_components": 8,
+        "candidate_components": 13,
+        "incumbent_components": 23
+      },
+      "visual_review": "PASS — candidate retains the source inland/frontier outline while reducing incumbent coastal/component inflation; canonical coastline fit remains exact enough for the hard land gate."
+    },
+    {
+      "geometry_id": "34ff5048-242f-48a3-8fb2-5eca4dcd9a54",
+      "subject": "Achaemenid Persis/Elam royal economy",
+      "interval": [
+        -499,
+        -480
+      ],
+      "incumbent_policy": "cliopatria-qgis-natural-earth-v1",
+      "successor_policy": "cliopatria-boundary-normalization-v2",
+      "disposition": "SUBSTITUTE_RENDER_POLICY",
+      "metrics": {
+        "smoothing_hausdorff_m": 25338.3,
+        "smoothing_area_delta_pct": 0.009,
+        "final_symdiff_pct": 1.041,
+        "final_area_delta_pct": -0.178,
+        "outside_land_pct": 0.000011,
+        "raw_components": 9,
+        "candidate_components": 16,
+        "incumbent_components": 31
+      },
+      "visual_review": "PASS — same-source v2 candidate preserves the visible inland frontier and materially reduces component inflation without introducing a new territorial interpretation."
+    },
+    {
+      "geometry_id": "e5a720f8-9e22-45fe-a5b0-c6464686525d",
+      "subject": "Baekje",
+      "interval": [
+        347,
+        391
+      ],
+      "incumbent_policy": "cliopatria-boundary-normalization-v3",
+      "successor_policy": "cliopatria-boundary-normalization-v3",
+      "disposition": "REUSE_WITH_BOUNDED_OVERRIDE",
+      "metrics": {
+        "smoothing_hausdorff_m": 12039.6,
+        "smoothing_area_delta_pct": -0.968,
+        "final_symdiff_pct": 14.479,
+        "final_area_delta_pct": -4.469,
+        "outside_land_pct": 0.000016,
+        "raw_components": 1,
+        "candidate_components": 24,
+        "raw_outside_land_pct": 8.706722
+      },
+      "override_reason": "The source polygon has only 53 points and places substantial coarse geometry offshore. Visual review shows the large symmetric difference is overwhelmingly coastline/island normalization; the inland/eastern/northern source frontier remains visually stable. No available alternative passes the symmetric-difference gate, and serving raw source geometry would violate the canonical-land contract.",
+      "visual_review": "PASS WITH BOUNDED OVERRIDE — retain exact v0.8.1 v3 render; do not treat added coastline detail as historical evidence."
+    },
+    {
+      "geometry_id": "82b2f32f-de79-4a5a-98e0-56db15321588",
+      "subject": "Mauryan Empire",
+      "interval": [
+        -290,
+        -256
+      ],
+      "incumbent_policy": "cliopatria-qgis-natural-earth-v1",
+      "successor_policy": "cliopatria-boundary-normalization-v2",
+      "disposition": "SUBSTITUTE_RENDER_POLICY",
+      "metrics": {
+        "smoothing_hausdorff_m": 22773.3,
+        "smoothing_area_delta_pct": -0.017,
+        "final_symdiff_pct": 1.061,
+        "final_area_delta_pct": -0.532,
+        "outside_land_pct": 0.000002,
+        "raw_components": 3,
+        "candidate_components": 22,
+        "incumbent_components": 24
+      },
+      "visual_review": "PASS — v2 is visually equivalent at the historical frontier, lowers policy displacement below the D-120 ceiling and avoids unnecessary incumbent transformation."
+    },
+    {
+      "geometry_id": "edb239a8-4d54-44e4-970a-affb7c9af22e",
+      "subject": "Roman Empire — early Principate",
+      "interval": [
+        6,
+        8
+      ],
+      "incumbent_policy": "cliopatria-qgis-natural-earth-v1",
+      "successor_policy": "cliopatria-boundary-normalization-v3",
+      "disposition": "SUBSTITUTE_RENDER_POLICY",
+      "metrics": {
+        "smoothing_hausdorff_m": 15920.5,
+        "smoothing_area_delta_pct": -0.005,
+        "final_symdiff_pct": 3.251,
+        "final_area_delta_pct": -0.41,
+        "outside_land_pct": 0.000032,
+        "raw_components": 32,
+        "candidate_components": 66,
+        "incumbent_components": 104
+      },
+      "visual_review": "PASS — v3 tracks the same raw frontier while sharply reducing displacement and component inflation; it is also temporally consistent with adjacent 1–5 and 9–13 CE v3 slices."
+    },
+    {
+      "geometry_id": "81cb78c1-3b59-4c0a-b51f-f1c0d45bf866",
+      "subject": "Western Han China",
+      "interval": [
+        -125,
+        -110
+      ],
+      "incumbent_policy": "cliopatria-qgis-natural-earth-v1",
+      "successor_policy": "cliopatria-boundary-normalization-v3",
+      "disposition": "SUBSTITUTE_RENDER_POLICY",
+      "metrics": {
+        "smoothing_hausdorff_m": 18225.3,
+        "smoothing_area_delta_pct": -0.013,
+        "final_symdiff_pct": 1.479,
+        "final_area_delta_pct": -0.666,
+        "outside_land_pct": 0,
+        "raw_components": 2,
+        "candidate_components": 21,
+        "incumbent_components": 25
+      },
+      "visual_review": "PASS — v3 follows the source frontier, lowers displacement below the ceiling and restores temporal-family consistency with adjacent Western Han v3 slices."
+    }
+  ],
+  "successor_geometry_disposition": {
+    "source_geometry_membership_v081_reused": 46,
+    "new_evidence_locus_geometries_for_mycenaean_correction": 2,
+    "total_successor_geometry_membership_expected": 48,
+    "unchanged_render_assets_reused": 41,
+    "render_policy_substitutions": 5,
+    "bounded_overrides": 1,
+    "practice_extent_geometries_for_new_claims": 0,
+    "note": "The two Mycenaean geometries are claim-evidence-locus points only and must never render as territorial practice polygons."
+  },
+  "release_effect": "Authorizes geometry reuse/substitution rules for v0.8.2 authority and serving construction. v0.8.1 remains immutable."
+}
