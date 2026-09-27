@@ -1,0 +1,57 @@
+{
+  "case_key": "overnight-2026-09-27/peru/peruvian-amazon-debt-bondage-v2",
+  "spatial_entity": {
+    "canonical_name": "Peru",
+    "display_name": "Peru",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed spatial identity. The entity is an indexing/context unit; the reconciled claim below is limited to the documented subnational, sectoral, institutional or observed scope and does not imply uniform practice across the whole entity."
+  },
+  "claim": {
+    "from_year": 2005,
+    "to_year": 2005,
+    "date_text_original": "ILO Peruvian Amazon field investigation, published 2005",
+    "temporal_precision": "bounded_source_interval",
+    "temporal_certainty": "high",
+    "spatial_precision": "illegal/informal timber extraction in multiple Peruvian Amazon basin regions; country entity is index only",
+    "summary": "ILO field research found forced or unfree labour in illegal and informal timber extraction in parts of the Peruvian Amazon, with enganche recruitment producing debt peonage or servitude. The atlas records a bounded 2005 debt-bondage claim for the researched Amazonian logging settings rather than treating the whole territory of Peru as the practice extent.",
+    "confidence": "high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim ba50687c-f3c8-46b0-a7a0-7084fade88e0 into current post-M1 semantics. No new P-level is assigned. Legacy geometry 0826761e-3c85-4281-9ac8-1af7065d8d98 is an explicit modern/navigation proxy and is not promoted as this claim's historical/practice inference extent.",
+    "territorial_practice": {
+      "practice_type_code": "debt_bondage",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Positive bounded classification only. Do not infer national prevalence, uniform territorial distribution, legal status, or a country-wide practice polygon beyond what the evidence directly supports."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Forced Labor in Timber Extraction in the Peruvian Amazon",
+        "author_or_institution": "Alvaro Bedoya Silva-Santisteban; Eduardo Bedoya Garland",
+        "source_type": "institutional_research_report",
+        "source_classification": "secondary",
+        "geographic_scope": "Peruvian Amazon basin; illegal/informal timber extraction settings",
+        "temporal_scope": "investigation published 2005",
+        "independence_notes": "ILO-commissioned field investigation based on interviews and secondary data. Treat those components as one evidence family.",
+        "reliability_limitations": "The study is geographically and sectorally bounded; it does not justify a Peru-wide prevalence estimate or use of the national boundary as practice extent."
+      },
+      "version": {
+        "version_label": "ILO web publication, 3 January 2005; ISBN 92-2-316956-9 / 92-2-316957-7",
+        "publication_year": 2005,
+        "url_or_identifier": "https://www.ilo.org/publications/forced-labor-timber-extraction-peruvian-amazon",
+        "accessed_at": "2026-09-27T11:30:00Z"
+      },
+      "evidence_role": "claim-specific institutional field investigation",
+      "independence_group": "ilo-peru-amazon-timber-2005",
+      "directness": "institutional field/research synthesis",
+      "direction": "supports",
+      "locator": null
+    }
+  ]
+}
