@@ -4,49 +4,44 @@ For current priority and mode, use repository-root `BACKLOG.md`. This file is a 
 state snapshot only and does **not** schedule work. GitHub `main`, open issues/PRs and
 current CI override this snapshot.
 
-**Status date:** 2026-09-26  
+**Status date:** 2026-09-27  
 **Canonical current research authority:** PostgreSQL/PostGIS, explicit D-109 governed closure  
-**Canonical historical data release:** v0.7.0  
+**Canonical historical data release:** v0.8.1  
 **Immutable predecessor:** v0.6.1 workbook  
-**Current public serving adapter:** `v0.7.0-public-mvp-v1` → canonical source `v0.7.0` under D-113  
+**Current public serving adapter:** `v0.8.1-public-mvp-v1` → canonical source `v0.8.1` under D-118  
 **Live schema head:** `0034`  
-**Execution state:** **MAINTENANCE / TRIGGER-BOUND — no active delivery WIP; current priority/mode is owned by `BACKLOG.md`**
+**Execution state:** **EXECUTION / CONSOLIDATION — Atlas Expansion 01 (#332); current priority/mode is owned by `BACKLOG.md`**
 
 ## Current durable state
 
-- D-109 makes PostgreSQL/PostGIS authoritative for the explicitly governed current
-  research closure, not for every physical row and not from `review_status` alone.
-- D-110 publishes `v0.7.0` as the first canonical historical release generated from
-  that DB-backed authority closure.
-- v0.7.0 freezes exactly 40 claims, 11 actors, 18 spatial entities, 0 reviewed historical
-  evidence geometries, 8 voyages, 99 research-coverage assessments, 211 exact source
-  versions and 26 research-target results.
-- Membership SHA-256:
-  `ebc9d32f09857744841a0cf92699c41739b624ac4bd94c43798eb1f61e3b0dd3`.
-- D-109 production DB-state SHA-256:
-  `31b7a7b675445e5758ffd68d64ff0f0cde83df1b0ea65f29835246deb2ae26ff`.
-- The v0.7.0 package is deterministic and carries exact authority state, exact D-108
-  portable cartography fingerprint, changelog, QC summary, unresolved issues,
-  migration/reconciliation report, manifest and checksums.
-- Published typed membership and package artifact records are immutable under existing
-  release guards; D-112 / migration 0034 additionally freezes published release-manifest
-  metadata.
-- The v0.6.1 workbook remains an immutable predecessor/source-native lineage anchor and
-  has not been overwritten.
-- Independent historical review remains 0.
-- D-113 closes Gate 5 with `CUTOVER_PUBLIC_CHANNEL_TO_V070`.
-- `public_mvp_preview` now points to `v0.7.0-public-mvp-v1`, a non-canonical serving
-  adapter derived only from canonical v0.7.0.
-- Production API, staged browser, forced static fallback and deployed Pages snapshot all
-  verified payload SHA-256
-  `2a04787a2ee0e42a97f273621eebbf32ddc6a1b2e903239a626eb41d72c29786`.
-- The public root now serves the canonical-release Atlas client; the previous R1
-  technical candidate is preserved at `r1-candidate.html`.
-- The Gate-0→Gate-5 canonicalization programme is complete.
-- The post-cutover D-096 review found no justified automatic successor: #43 remains
-  parked, weekly public-health monitoring remains sufficient absent a demonstrated
-  user-critical SLA, and no new historical/product/infrastructure horizon is active.
-- Exact current action and reopening triggers are owned by `BACKLOG.md`.
+- PostgreSQL/PostGIS remains authoritative only for explicitly governed research state;
+  physical row presence or `review_status` alone does not confer release membership.
+- Canonical historical release **v0.8.1** is an immutable D-117 correction release over
+  v0.8.0: 75 claims, 11 actors, 50 spatial entities, 46 reviewed/resolved historical
+  geometries, 8 voyages, 99 coverage assessments, 294 source versions and 26
+  research-target results.
+- v0.8.1 changes no claim semantics. It replaces only the Roman Empire — early
+  Principate 14–22 CE geometry/source pair with the reviewed A.D. 14 AWMC-derived
+  specialist reconstruction; earlier Roman slices remain separately reviewable.
+- D-116 requires public mapped polygons to use reviewed render geometry aligned to the
+  canonical Natural Earth land fabric, while preserving raw historical geometry.
+- The frozen v0.8.1 corpus render audit covers all 46 release geometries. All 39 polygon
+  render geometries pass the land-fabric contract; maximum rendered outside-land
+  residual is 0.000032%.
+- D-118 moves `public_mvp_preview` to **v0.8.1-public-mvp-v1**. Its immutable payload
+  SHA-256 is
+  `56cb29dfd8fcb968d08ae3a7fa0bd8b11af44e15c03facc7ee2c6b27cae49347`.
+- The public territorial adapter displays 53 territorial-practice claims across 48
+  places and 46 resolved geometry assets. Claims with unresolved geometry remain
+  visible as evidence rather than being rendered as absence.
+- The adapter reuses 45 exact immutable v0.8.0-v2 geometry assets and adds one v0.8.1
+  Rome asset; the browser validates the owning asset materialization, geometry ID,
+  render fingerprint and land-mask identity.
+- Published typed membership, release artifacts and manifest metadata remain immutable
+  under the existing release guards / migration 0034.
+- Independent historical review remains **0**.
+- Sponsor-authorized Atlas Expansion 01 (#332) is active, with evidence-completion and
+  geometry-resolution work continuing in parallel under one governed expansion horizon.
 
 ## Recently completed
 
