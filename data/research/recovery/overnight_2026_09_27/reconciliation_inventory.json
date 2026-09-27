@@ -1,0 +1,86 @@
+{
+  "schema": "historical-slavery-atlas-overnight-evidence-reconciliation-v1",
+  "date": "2026-09-27",
+  "source": "Atlas Hourly Expansion scheduler packets reconciled interactively",
+  "completed_packets": [
+    {
+      "subject": "Paraguay",
+      "legacy_claim_id": "d22ed3c9-0c71-4569-80da-c367459c3bde",
+      "legacy_proxy_geometry_id": "b37bbfed-4916-4d94-a671-5ac3d5a21f69",
+      "successor_case": "01_paraguay_debt_bondage_v2.json"
+    },
+    {
+      "subject": "Bolivia",
+      "legacy_claim_id": "2dcf7b77-4489-4fe5-b241-a4f61f42cb92",
+      "legacy_proxy_geometry_id": "8cff20b8-fad0-4e34-94db-b8ffb5841840",
+      "successor_case": "02_bolivia_debt_bondage_v2.json"
+    },
+    {
+      "subject": "India",
+      "legacy_claim_id": "854c88ef-1237-4f9e-8383-0ce4c5b6e401",
+      "legacy_proxy_geometry_id": "d8f804ee-9f3e-4784-90aa-f9fa5203fc79",
+      "successor_case": "03_india_bonded_labour_v2.json"
+    },
+    {
+      "subject": "Mauritania",
+      "legacy_claim_id": "221c9e6a-07dd-4584-bc3a-08c1caaf3add",
+      "legacy_proxy_geometry_id": "d966c564-f79e-4fc7-9bee-0c5ea4b935e8",
+      "successor_case": "04_mauritania_slavery_v2.json"
+    },
+    {
+      "subject": "Myanmar",
+      "legacy_claim_id": "295db38e-3b6d-41b8-8563-721ec6757328",
+      "legacy_proxy_geometry_id": "26675f14-f67f-4ff4-a1e7-00c3ca71fc20",
+      "successor_case": "05_myanmar_forced_labour_v2.json"
+    },
+    {
+      "subject": "Nepal",
+      "legacy_claim_id": "385af068-b374-48ef-8e17-851bca2afe90",
+      "legacy_proxy_geometry_id": "27f8a04b-b694-43b7-b824-e7365bf23ccb",
+      "successor_case": "06_nepal_kamaiya_v2.json"
+    },
+    {
+      "subject": "Pakistan",
+      "legacy_claim_id": "47e403f5-f44b-4ec1-a362-cdc01972dd1c",
+      "legacy_proxy_geometry_id": "5aebf61e-cd1f-44e9-9495-b6f7969eeaeb",
+      "successor_case": "07_pakistan_bonded_labour_v2.json"
+    },
+    {
+      "subject": "Peru",
+      "legacy_claim_id": "ba50687c-f3c8-46b0-a7a0-7084fade88e0",
+      "legacy_proxy_geometry_id": "0826761e-3c85-4281-9ac8-1af7065d8d98",
+      "successor_case": "08_peru_amazon_debt_bondage_v2.json"
+    },
+    {
+      "subject": "Uzbekistan",
+      "legacy_claim_id": "3b8c4fa4-8765-488c-a814-399169638bf3",
+      "legacy_proxy_geometry_id": "053f546e-089e-4f03-aab7-3d2187c835ce",
+      "successor_case": "09_uzbekistan_cotton_forced_labour_v2.json"
+    },
+    {
+      "subject": "Brazil",
+      "legacy_claim_id": "0f505cf4-e90d-4ce5-a07e-c06db42176f4",
+      "legacy_proxy_geometry_id": "8d71c221-d188-4890-8a63-3c7f5eb8e157",
+      "successor_case": "10_brazil_rural_debt_bondage_v2.json"
+    }
+  ],
+  "geometry_disposition": {
+    "rule": "Legacy modern-country polygons remain historical MVP/navigation lineage only and are not selected as practice inference extent for these successor claims.",
+    "all_successor_claims_geometry_state": "unresolved_pending_bounded_geometry",
+    "peru_note": "Peruvian Amazon regional geometry remains a candidate only; exact source version/licence must be resolved before promotion.",
+    "brazil_note": "Property/inspection loci may later be mapped if exact administrative source/version data is acquired; national BRA polygon is not practice extent."
+  },
+  "unprocessed_legacy_prototypes": [
+    {
+      "subject": "Mycenaean mainland Linear B archives",
+      "legacy_claim_id": "df374145-bfd5-414b-ba9f-2d85819b7626",
+      "reason": "No completed overnight expansion evidence packet. A separate current reviewed disputed slavery claim already exists; reconcile dependency claim deliberately rather than guessing."
+    },
+    {
+      "subject": "Nazi Germany",
+      "legacy_claim_id": "ab1f826b-aecf-4f2b-a88a-bccf1eea4f9a",
+      "reason": "No completed overnight expansion evidence packet; requires current-method replay."
+    }
+  ],
+  "release_effect": "None until reviewed packages are ingested and an explicit successor release selection passes preservation/release QC."
+}

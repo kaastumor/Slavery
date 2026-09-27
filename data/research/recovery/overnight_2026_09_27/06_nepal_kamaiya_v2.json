@@ -1,0 +1,80 @@
+{
+  "case_key": "overnight-2026-09-27/nepal/kamaiya-debt-bondage-v2",
+  "spatial_entity": {
+    "canonical_name": "Nepal",
+    "display_name": "Nepal",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed spatial identity. The entity is an indexing/context unit; the reconciled claim below is limited to the documented subnational, sectoral, institutional or observed scope and does not imply uniform practice across the whole entity."
+  },
+  "claim": {
+    "from_year": 1998,
+    "to_year": 2001,
+    "date_text_original": "ILO Kamaiya research documented in 1998 and 2001",
+    "temporal_precision": "bounded_multi_source_window",
+    "temporal_certainty": "high",
+    "spatial_precision": "Kamaiya households and far/mid-western research areas; country entity is index only",
+    "summary": "ILO research in 1998 analyzed the Kamaiya bonded-labour system, and a 2001 rapid assessment documented bonded child labour among Kamaiya households in Nepal's far and mid-western districts. The atlas records a positive debt-bondage claim over this documented 1998–2001 evidence window without implying uniform practice across Nepal.",
+    "confidence": "high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim 385af068-b374-48ef-8e17-851bca2afe90 into current post-M1 semantics. No new P-level is assigned. Legacy geometry 27f8a04b-b694-43b7-b824-e7365bf23ccb is an explicit modern/navigation proxy and is not promoted as this claim's historical/practice inference extent.",
+    "territorial_practice": {
+      "practice_type_code": "debt_bondage",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Positive bounded classification only. Do not infer national prevalence, uniform territorial distribution, legal status, or a country-wide practice polygon beyond what the evidence directly supports."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "The kamaiya system in Nepal",
+        "author_or_institution": "Shiva Sharma; Devendra Chhetri; Manasa Thakurathi; Kumar Joshi",
+        "source_type": "institutional_research_report",
+        "source_classification": "secondary",
+        "geographic_scope": "Nepal; Kamaiya bonded-labour system",
+        "temporal_scope": "published 1998",
+        "independence_notes": "ILO South Asia working paper. Distinct research product from the later ILO/IPEC child-labour rapid assessment, though both address the same system.",
+        "reliability_limitations": "System-focused study; does not imply equal incidence throughout Nepal."
+      },
+      "version": {
+        "version_label": "SAAT working paper, New Delhi, 1998; record 995321029402676",
+        "publication_year": 1998,
+        "url_or_identifier": "https://researchrepository.ilo.org/esploro/outputs/encyclopediaEntry/The-kamaiya-system-in-Nepal/995321029402676",
+        "accessed_at": "2026-09-27T11:30:00Z"
+      },
+      "evidence_role": "specialist/institutional system analysis",
+      "independence_group": "ilo-nepal-kamaiya-1998",
+      "directness": "institutional field/research synthesis",
+      "direction": "supports",
+      "locator": null
+    },
+    {
+      "source": {
+        "title": "Nepal: bonded child labour among child workers of the Kamaiya System: a rapid assessment",
+        "author_or_institution": "Shiva Sharma; Bijendra Basnyat; P. Moshi",
+        "source_type": "institutional_research_report",
+        "source_classification": "secondary",
+        "geographic_scope": "Kamaiya households in far and mid-western districts of Nepal",
+        "temporal_scope": "published 2001",
+        "independence_notes": "Separate ILO rapid assessment with distinct field/question focus; shares institutional context with the 1998 study and should not be treated as fully independent for all claims.",
+        "reliability_limitations": "Focused on bonded child labour among Kamaiya households, not national prevalence."
+      },
+      "version": {
+        "version_label": "ILO Investigating the worst forms of child labour no. 5, 2001; record 995675441302676",
+        "publication_year": 2001,
+        "url_or_identifier": "https://researchrepository.ilo.org/esploro/outputs/report/Nepal-bonded-child-labour-among-child/995675441302676",
+        "accessed_at": "2026-09-27T11:30:00Z"
+      },
+      "evidence_role": "bounded child-bondage corroboration",
+      "independence_group": "ilo-nepal-kamaiya-child-assessment-2001",
+      "directness": "institutional field/research synthesis",
+      "direction": "supports",
+      "locator": null
+    }
+  ]
+}
