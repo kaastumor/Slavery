@@ -268,3 +268,36 @@ The atlas should prefer widely used, well-documented GIS components so future de
 - **Larger-data delivery:** vector tiles via Tippecanoe/Martin or equivalent, rather than shipping ever larger GeoJSON collections.
 
 This separation is deliberate: Natural Earth answers “where is physical land/water for this map scale?”, while historical datasets answer “what historical extent is being claimed?”. The render preprocessing stage reconciles only the physical shoreline and known cartographic artifacts; it must not manufacture certainty in inland historical frontiers.
+
+
+## Corpus-wide geometry QC envelope
+
+D-119 adds a corpus-level acceptance envelope above the ordinary render-candidate
+pipeline. Passing the canonical-land/coastline check is necessary but is not enough to
+show that a rendered historical frontier is acceptable.
+
+Every successor-release polygon should be reviewed across independent axes:
+
+- raw and rendered validity;
+- rendered residual outside the canonical land fabric;
+- source-to-render Hausdorff displacement;
+- source-to-render symmetric difference;
+- signed and absolute area delta;
+- component and ring-count changes;
+- source/render vertex complexity;
+- consistency with adjacent temporal slices from the same historical source family;
+- exact source version/native ID, render policy, land mask and public asset fingerprint;
+- visual separation of physical-coastline normalization from inland-frontier change.
+
+Do **not** combine these into a weighted score. A low symmetric difference can coexist
+with a badly displaced frontier, and a large component increase can be legitimate when
+a coarse source polygon is intersected with detailed islands/coastlines.
+
+Working new-candidate thresholds are recorded in
+`config/cartography/corpus_geometry_qc_envelope.json`. In particular, generic
+source-to-render Hausdorff displacement above 35 km requires comparative re-review.
+Existing immutable releases are not rewritten when later QC reveals a review trigger;
+the incumbent may remain as rollback/history while a successor candidate is evaluated.
+
+The v0.8.1 topology snapshot and overnight review freeze the first corpus-level
+observability baseline. Ring-count capture remains required for future snapshots.
