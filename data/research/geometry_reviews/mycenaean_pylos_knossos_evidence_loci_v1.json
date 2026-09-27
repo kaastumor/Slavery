@@ -1,0 +1,95 @@
+{
+  "schema": "historical-slavery-atlas-evidence-locus-review-v1",
+  "candidate_id": "mycenaean-pylos-knossos-evidence-loci-v1",
+  "target": {
+    "spatial_entity_id": "4775db5e-658f-5c62-ac7d-42d6e453780f",
+    "canonical_name": "Mycenaean Greece (Pylos/Knossos)",
+    "claim_id": "8691d038-1683-5331-bccb-e7a189cdd229"
+  },
+  "semantic_scope": {
+    "role": "claim_evidence_locus",
+    "territorial_extent": false,
+    "inference_extent": false,
+    "notes": "These points locate two archaeological/archive contexts relevant to the broad Pylos/Knossos evidence package. They do not define Mycenaean territorial extent and must not be rendered as a filled practice polygon."
+  },
+  "loci": [
+    {
+      "locus_canonical_name": "Palace of Nestor / Pylos archaeological locus",
+      "entity_type_code": "site",
+      "from_year": -1299,
+      "to_year": -1199,
+      "accuracy_status": "modern_proxy",
+      "source_native_id": "Q2047396",
+      "resolution_method": "Wikidata CC0 point for the enduring archaeological site of the Palace of Nestor (ancient Pylos). Used only as an evidence-locus locator for the Mycenaean evidence package; not a polity boundary or practice extent.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.695,
+          37.027222
+        ]
+      },
+      "source": {
+        "title": "Palace of Nestor (Q2047396)",
+        "author_or_institution": "Wikidata",
+        "source_type": "community_knowledge_graph",
+        "source_classification": "geometry_reference",
+        "geographic_scope": "Palace of Nestor / ancient Pylos archaeological site, Messenia, Greece",
+        "temporal_scope": "Modern coordinate for enduring archaeological site; Mycenaean use bounded here to approximately 1300–1200 BCE",
+        "independence_notes": "Geometry-only locator. It is independent of the historical labour-status classification and must not be counted as historical evidence for slavery/dependency.",
+        "reliability_limitations": "Coordinate is a modern archaeological-site locator imported into Wikidata; it does not define the historical settlement, palace domain, polity boundary or territorial extent."
+      },
+      "version": {
+        "version_label": "Wikidata Q2047396 revision 2485117208",
+        "url_or_identifier": "https://www.wikidata.org/w/index.php?title=Q2047396&oldid=2485117208",
+        "accessed_at": "2026-09-27T11:40:00Z",
+        "license_status": "CC0 structured data",
+        "redistribution_status": "coordinate and entity ID may be redistributed under CC0"
+      }
+    },
+    {
+      "locus_canonical_name": "Knossos archaeological locus",
+      "entity_type_code": "site",
+      "from_year": -1449,
+      "to_year": -1299,
+      "accuracy_status": "modern_proxy",
+      "source_native_id": "Q173527",
+      "resolution_method": "Wikidata/Nomisma-supported CC0 point for the enduring Knossos archaeological site. Used only as an evidence-locus locator for the Mycenaean evidence package; not a territorial boundary or practice extent.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.163156,
+          35.297961
+        ]
+      },
+      "source": {
+        "title": "Knossos (Q173527)",
+        "author_or_institution": "Wikidata",
+        "source_type": "community_knowledge_graph",
+        "source_classification": "geometry_reference",
+        "geographic_scope": "Knossos archaeological site, Crete, Greece",
+        "temporal_scope": "Modern coordinate for enduring archaeological site; Mycenaean archive context bounded here to approximately 1450–1300 BCE",
+        "independence_notes": "Geometry-only locator. The precise coordinate has Nomisma references in the pinned Wikidata revision; it is independent of the labour-status classification.",
+        "reliability_limitations": "Point locates the archaeological site and does not define the Bronze Age city, palace territory, political boundary or territorial extent."
+      },
+      "version": {
+        "version_label": "Wikidata Q173527 revision 2522185606",
+        "url_or_identifier": "https://www.wikidata.org/w/index.php?title=Q173527&oldid=2522185606",
+        "accessed_at": "2026-09-27T11:40:00Z",
+        "license_status": "CC0 structured data",
+        "redistribution_status": "coordinate and entity ID may be redistributed under CC0"
+      }
+    }
+  ],
+  "qc": {
+    "srid": 4326,
+    "geometry_types": [
+      "Point",
+      "Point"
+    ],
+    "d119_polygon_envelope_applicable": false,
+    "visual_rule": "Point loci only; no fill, polygon union, buffer or inferred corridor.",
+    "mainland_warning": "Do not attach the Knossos point to the separate 'Mycenaean mainland Linear B archives' spatial entity."
+  },
+  "review_status": "reviewed",
+  "release_effect": "None until DB promotion and explicit successor release selection."
+}
