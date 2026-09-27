@@ -3146,3 +3146,48 @@ alone omitted the Roman core.
 
 **Evidence package:**  
 `data/research/geometry_reviews/rome_early_principate_ad14_awmc_v1.json`
+
+
+## D-118 — v0.8.1 specialist Rome correction is the active public serving release
+**Date:** 2026-09-27  
+**Status:** accepted and cut over
+
+**Trigger:** D-117 froze and published a bounded canonical correction for the Roman
+Empire — early Principate 14–22 CE geometry, while D-116 already required public
+polygon rendering to use the reviewed render layer aligned to the canonical land
+fabric. The canonical v0.8.1 package was therefore complete but the public channel
+still served v0.8.0-public-mvp-v2.
+
+**Decision:** publish immutable serving materialization
+`v0.8.1-public-mvp-v1` and move `public_mvp_preview` to it by compare-and-set from
+`v0.8.0-public-mvp-v2`.
+
+Frozen serving facts:
+
+- canonical source release: `v0.8.1`;
+- payload SHA-256:
+  `56cb29dfd8fcb968d08ae3a7fa0bd8b11af44e15c03facc7ee2c6b27cae49347`;
+- 53 displayed territorial-practice claims;
+- 48 displayed places;
+- 46 reviewed/resolved geometry records;
+- rollback target: `v0.8.0-public-mvp-v2`;
+- Rome 14–22 CE geometry:
+  `b3066705-616e-42c7-a50d-656c6926813c`;
+- new Rome render EWKB SHA-256:
+  `a2715545afca5f04972d35585beff549b6445f0a6458ca4354e9f84d17eeca22`.
+
+To avoid duplicating unchanged multi-megabyte geometry, v0.8.1 explicitly reuses 45
+immutable v0.8.0-v2 render assets and adds one new v0.8.1 Rome asset. Each geometry
+record carries the materialization identity that owns its immutable asset bytes; the
+browser verifies that identity plus geometry ID, render fingerprint and land-mask ID.
+
+A corpus-wide D-116 audit was frozen before cutover. Across all 46 v0.8.1 release
+geometries, all 39 polygon render geometries use
+`natural-earth-ne_10m_land-v5.1.1-ca96624`; maximum rendered area outside that land
+fabric is 0.000032%. Raw source polygons differ much more (up to 8.706722% outside the
+fabric), confirming that render normalization must remain a derived cartographic layer
+rather than rewriting source geometry.
+
+Canonical v0.8.0, v0.8.0 serving materializations and all earlier releases remain
+immutable rollback/history. This decision changes presentation/release selection only;
+it does not strengthen any historical slavery claim or assign a new P-level.
