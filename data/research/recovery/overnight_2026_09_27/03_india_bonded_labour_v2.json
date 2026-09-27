@@ -1,0 +1,80 @@
+{
+  "case_key": "overnight-2026-09-27/india/bonded-labour-v2",
+  "spatial_entity": {
+    "canonical_name": "India",
+    "display_name": "India",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed spatial identity. The entity is an indexing/context unit; the reconciled claim below is limited to the documented subnational, sectoral, institutional or observed scope and does not imply uniform practice across the whole entity."
+  },
+  "claim": {
+    "from_year": 2003,
+    "to_year": 2005,
+    "date_text_original": "HRW field report 2003 and ILO national review 2005",
+    "temporal_precision": "bounded_multi_source_window",
+    "temporal_certainty": "high",
+    "spatial_precision": "multiple states/sectors with independently documented bounded examples; no national prevalence surface",
+    "summary": "A 2005 ILO review found bonded labour persisting across many sectors and Indian states despite legal abolition, while independent Human Rights Watch field research documented bonded child labour in the silk industry in Karnataka, Tamil Nadu and Uttar Pradesh. The atlas records a positive debt-bondage claim for this 2003–2005 evidence window while preserving strong regional, sectoral and population heterogeneity.",
+    "confidence": "high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim 854c88ef-1237-4f9e-8383-0ce4c5b6e401 into current post-M1 semantics. No new P-level is assigned. Legacy geometry d8f804ee-9f3e-4784-90aa-f9fa5203fc79 is an explicit modern/navigation proxy and is not promoted as this claim's historical/practice inference extent.",
+    "territorial_practice": {
+      "practice_type_code": "debt_bondage",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Positive bounded classification only. Do not infer national prevalence, uniform territorial distribution, legal status, or a country-wide practice polygon beyond what the evidence directly supports."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Bonded Labour in India: its Incidence and Pattern",
+        "author_or_institution": "Ravi S. Srivastava",
+        "source_type": "institutional_research_report",
+        "source_classification": "secondary",
+        "geographic_scope": "India; multiple states and economic sectors",
+        "temporal_scope": "review published 2005",
+        "independence_notes": "ILO review synthesizing academic, governmental, NHRC, NGO and press material; underlying cited sources must not be mechanically counted as independent of the synthesis.",
+        "reliability_limitations": "Review shows wide persistence but emphasizes sector/state variation; it is not a defensible national prevalence surface."
+      },
+      "version": {
+        "version_label": "ILO working paper, 6 January 2005; ISBN 92-2-117322-4",
+        "publication_year": 2005,
+        "url_or_identifier": "https://www.ilo.org/publications/bonded-labour-india-its-incidence-and-pattern",
+        "accessed_at": "2026-09-27T11:30:00Z"
+      },
+      "evidence_role": "national specialist/institutional synthesis",
+      "independence_group": "ilo-india-bonded-labour-2005",
+      "directness": "institutional field/research synthesis",
+      "direction": "supports",
+      "locator": null
+    },
+    {
+      "source": {
+        "title": "Small Change: Bonded Child Labor in India's Silk Industry",
+        "author_or_institution": "Human Rights Watch",
+        "source_type": "human_rights_field_report",
+        "source_classification": "secondary",
+        "geographic_scope": "Silk industry in Karnataka, Tamil Nadu and Uttar Pradesh",
+        "temporal_scope": "fieldwork 2002; report 2003",
+        "independence_notes": "Independent human-rights field investigation, separate from the ILO review.",
+        "reliability_limitations": "Focused on bonded child labour in selected silk-industry settings; not an exhaustive survey of bonded labour throughout India."
+      },
+      "version": {
+        "version_label": "Human Rights Watch report, 22 January 2003",
+        "publication_year": 2003,
+        "url_or_identifier": "https://www.hrw.org/report/2003/01/22/small-change/bonded-child-labor-indias-silk-industry",
+        "accessed_at": "2026-09-27T11:30:00Z"
+      },
+      "evidence_role": "independent bounded corroboration",
+      "independence_group": "hrw-india-silk-bonded-child-labour-2003",
+      "directness": "human-rights field investigation",
+      "direction": "supports",
+      "locator": null
+    }
+  ]
+}
