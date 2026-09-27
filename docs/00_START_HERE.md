@@ -52,29 +52,27 @@ A missing claim must never be rendered as a historical negative.
 
 ## Canonical current state
 
-- Current canonical **historical data release:** `v0.7.0`, preserved in
-  `data/releases/v0.7.0/` under D-110.
-- Canonical **current research authority:** the explicitly governed PostgreSQL/PostGIS
-  closure under D-109; physical row presence or `review_status` alone does not confer
-  authority.
-- Repository/live schema head is `0034`; immutable canonical release `v0.7.0` remains a schema-0033 historical package.
-- The v0.6.1 workbook remains the immutable canonical predecessor and source-native
-  lineage anchor:
-  `Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx`, SHA-256
-  `0a38e4eb6f63c3bb4ce9543be379605d24dd9ff1c1cea1e0a49c0c3db7ba17d4`.
-- v0.7.0 freezes 40 claims, 11 actors, 18 spatial entities, 0 reviewed historical
-  evidence geometries, 8 voyages, 99 coverage assessments, 211 source versions and
-  26 research-target results.
+- Current canonical historical data release: **v0.8.1**, preserved immutably in
+  `data/releases/v0.8.1/`.
+- Current public serving materialization: **v0.8.1-public-mvp-v1**, selected through
+  `audit.release_channel.public_mvp_preview`.
+- Canonical current research authority remains governed PostgreSQL/PostGIS state;
+  release membership is explicit and never inferred from all reviewed rows.
+- Repository/live schema head remains `0034`.
+- v0.8.1 contains 75 claims, 11 actors, 50 spatial entities, 46 reviewed/resolved
+  historical geometries, 8 voyages, 99 coverage assessments, 294 exact source versions
+  and 26 research-target results.
+- The public territorial-practice adapter renders 53 claims across 48 places. Missing
+  geometry remains an explicit unresolved state and never means historical absence.
+- D-116 separates raw/source historical geometry from public render geometry. Public
+  polygon assets use the canonical Natural Earth land fabric; raw geometry is preserved.
+- D-117 replaces only the Roman 14–22 CE slice with the reviewed AWMC-derived A.D. 14
+  specialist geometry. Earlier Roman slices are not silently changed.
+- D-118 completes the v0.8.1 serving cutover. Payload SHA-256:
+  `56cb29dfd8fcb968d08ae3a7fa0bd8b11af44e15c03facc7ee2c6b27cae49347`.
 - Independent historical review remains **0**.
-- `public_mvp_preview` now points to **`v0.7.0-public-mvp-v1`**, the D-111/D-113
-  non-canonical serving adapter derived only from canonical v0.7.0. The default public
-  root is the canonical-release Atlas client; the prior R1 candidate is preserved at
-  `r1-candidate.html`.
-- The repository contains the MapLibre web MVP and release-gated API, but public
-  services must consume reviewed/published release materializations rather than
-  unrestricted research tables.
-- Global research baseline and older R1/EXP/COV results remain preserved as historical
-  project evidence. Current priority and mode are owned only by root `BACKLOG.md`.
+- The v0.6.1 workbook and all later canonical releases remain immutable lineage.
+- Current expansion priority is owned by root `BACKLOG.md` / issue #332.
 
 ## Active-continuity rule
 
