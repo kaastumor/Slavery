@@ -1,0 +1,221 @@
+{
+  "schema": "historical-slavery-atlas-post-overnight-scheduler-reconciliation-v1",
+  "date": "2026-09-27",
+  "canonical_release": "v0.8.1",
+  "source": "Scheduled Atlas Hourly Expansion + Geometry Resolution + Geometry QC packets produced after overnight PRs #349–#351",
+  "evidence_lane": [
+    {
+      "target": "Nazi Germany",
+      "legacy_claim_id": "ab1f826b-aecf-4f2b-a88a-bccf1eea4f9a",
+      "disposition": "ACCEPT_CURRENT_METHOD_SUCCESSOR_PACKAGE",
+      "package_path": "data/research/recovery/post_overnight_2026_09_27/nazi_germany_state_forced_labour_v2.json",
+      "scope": "1942–1944 centrally directed, racially differentiated state forced-labour system",
+      "practice_level": null,
+      "geometry": "unresolved_at_practice_extent; authoritative site loci eligible; generic Reich/modern-country practice polygon rejected",
+      "release_action": "eligible for explicit successor release selection after DB ingest and exact release QC"
+    },
+    {
+      "target": "Funan",
+      "current_case_key": "atlas-expansion-01/funan/enslavement-v1",
+      "scheduler_packet": "funan-fifth-century-raiding-enslavement",
+      "disposition": "NO_DUPLICATE_CLAIM_KEEP_CURRENT_PACKAGE_PENDING_PRIMARY_LOCATOR_REPLAY",
+      "reason": "Scheduler narrowed a useful late-fifth-century Nan Qi Shu route, but exact juan/passage provenance remained unresolved. Current reviewed Funan package already exists and remains geometry-unresolved; do not mint a duplicate until the exact primary locator/dependency relation is frozen."
+    },
+    {
+      "target": "Southern Maya Lowlands",
+      "current_case_key": "atlas-expansion-01/late-classic-maya/captive-dependency-v1",
+      "scheduler_packet": "southern-maya-lowlands-classic-captive-taking",
+      "disposition": "NO_DUPLICATE_CLAIM_KEEP_CURRENT_PACKAGE_PENDING_MONUMENT_PROVENANCE",
+      "reason": "Scheduler confirmed recurrent captive-taking but explicitly left slavery equivalence unresolved and required exact monument provenance. Current reviewed captive-taking package is already correctly non-slavery-specific and geometry-unresolved."
+    },
+    {
+      "target": "Hawaiian Islands",
+      "current_case_key": "atlas-expansion-01/hawaii/kauwa-dependency-v1",
+      "scheduler_packet": "hawaiian-islands-pre1819-kauwa-hereditary-dependency",
+      "disposition": "NO_DUPLICATE_CLAIM_CURRENT_PACKAGE_REMAINS_VALID",
+      "reason": "Scheduler confirmed hereditary kauwā dependency and disputed one-to-one slavery equivalence. Current package already uses other_servile_dependency, practice_level=NULL and unresolved geometry. Extending the endpoint to 1819 requires a dedicated source-bounded temporal replay rather than silent widening."
+    }
+  ],
+  "geometry_resolution_lane": [
+    {
+      "target": "Tōdai-ji",
+      "existing_geometry_id": "4ea5165a-9bd2-4883-9cdd-4910aa491dc7",
+      "source_native_id": "UNESCO-WHC-870-001",
+      "disposition": "KEEP_REVIEWED_POINT",
+      "reason": "Current authoritative UNESCO point is defensible as an institutional/evidence locus. A 68.9-ha specialist polygon may be reconsidered only if exact reproducible geometry and redistribution terms are verified; the 1,311.2-ha buffer is excluded."
+    },
+    {
+      "target": "Opone (Ras Hafun identification)",
+      "package_path": "data/research/ancient_expansion_03/external_01_opone_slave_export.json",
+      "pleiades_place_id": "39403",
+      "proposed_representation": "specialist Point evidence/network locus",
+      "disposition": "HOLD_EXACT_PLEIADES_LOCATION_RESOURCE_REQUIRED",
+      "reason": "Pleiades place identity and Ras Hafun identification are strong, but the scheduled packet correctly requires the exact Pleiades location-resource ID/coordinates and frozen snapshot/version. A representative centroid or modern substitute must not be promoted as if it were the source-native location."
+    },
+    {
+      "target": "Garshana construction project (Ur III)",
+      "package_path": "data/research/ancient_expansion_01/01_ur_iii_garshana_slavery.json",
+      "disposition": "REMAIN_UNRESOLVED",
+      "reason": "CDLI/Assyriological evidence constrains Garshana to Umma province but the exact site is unknown. No point, polygon, modern proxy or rendered geometry is defensible. A supported relation to Umma may be modeled separately without inventing a site coordinate."
+    },
+    {
+      "target": "Mycenaean Greece (Pylos/Knossos)",
+      "claim_id": "8691d038-1683-5331-bccb-e7a189cdd229",
+      "disposition": "DB_PROMOTED_REVIEWED_EVIDENCE_LOCI",
+      "loci": [
+        {
+          "name": "Palace of Nestor / Pylos archaeological locus",
+          "geometry_id": "824cf9ab-5bfd-4d84-8fb6-8c137033424d",
+          "source_native_id": "Q2047396"
+        },
+        {
+          "name": "Knossos archaeological locus",
+          "geometry_id": "78627165-cc6d-4a42-9f4c-3431944526c8",
+          "source_native_id": "Q173527"
+        }
+      ],
+      "reason": "Two reviewed CC0 point loci are now present in PostgreSQL and linked through atlas.claim_evidence_locus. They are not territorial/practice polygons; Knossos is not attached to the separate mainland-only entity."
+    }
+  ],
+  "qc_lane": {
+    "governing_policy": "config/cartography/corpus_geometry_qc_envelope.json",
+    "decision": "D-119",
+    "rule": "v0.8.1 remains immutable; released outliers are grandfathered only for the current release and require comparative re-review before successor reuse",
+    "verified_followups": [
+      {
+        "target": "Hittite central Anatolia late family",
+        "geometry_ids": [
+          "17a40ab9-195f-4298-bd54-0a5994743cfe",
+          "9b32c6ca-d55d-4b7f-a4a0-46ee223fe2fc",
+          "7658b4b6-8456-4e0e-b545-02fdd9e2e844"
+        ],
+        "source_native_ids": [
+          "15031",
+          "15035",
+          "15037"
+        ],
+        "current_policy": "cliopatria-boundary-normalization-v3",
+        "metrics": [
+          {
+            "hausdorff_m": 32278.4,
+            "symdiff_pct": 2.623889,
+            "area_delta_pct": 1.334804,
+            "raw_components": 2,
+            "render_components": 1
+          },
+          {
+            "hausdorff_m": 32278.4,
+            "symdiff_pct": 2.712033,
+            "area_delta_pct": 1.277574,
+            "raw_components": 2,
+            "render_components": 1
+          },
+          {
+            "hausdorff_m": 32278.4,
+            "symdiff_pct": 2.712033,
+            "area_delta_pct": 1.277574,
+            "raw_components": 2,
+            "render_components": 1
+          }
+        ],
+        "disposition": "KEEP_CURRENT_RELEASE_COMPONENT_REVIEW_REQUIRED",
+        "reason": "Quantitative displacement/symdiff/area gates pass, but all three late slices collapse from two raw components to one rendered component. D-119 topology trigger requires focused component-level visual review before successor reuse."
+      },
+      {
+        "target": "Qin Empire family",
+        "geometry_ids": [
+          "14edab60-6475-4699-978c-f51aaccd34d5",
+          "db0512e0-e13d-4bdd-bbcd-a68bb5f1a2c2",
+          "0d0af02d-83bc-4f4e-a69d-d56d56326cd4",
+          "9abfabaa-3539-4c3e-95de-2e4452b2feb7"
+        ],
+        "source_native_ids": [
+          "15778",
+          "15789",
+          "15821",
+          "15830"
+        ],
+        "current_policy": "cliopatria-boundary-normalization-v3",
+        "metrics": [
+          {
+            "hausdorff_m": 153093,
+            "symdiff_pct": 1.44739,
+            "area_delta_pct": -0.446517,
+            "raw_components": 1,
+            "render_components": 10
+          },
+          {
+            "hausdorff_m": 153093,
+            "symdiff_pct": 1.61346,
+            "area_delta_pct": -0.858427,
+            "raw_components": 1,
+            "render_components": 11
+          },
+          {
+            "hausdorff_m": 153093,
+            "symdiff_pct": 1.691557,
+            "area_delta_pct": -0.855273,
+            "raw_components": 2,
+            "render_components": 22
+          },
+          {
+            "hausdorff_m": 153093,
+            "symdiff_pct": 1.90251,
+            "area_delta_pct": -0.884864,
+            "raw_components": 2,
+            "render_components": 57
+          }
+        ],
+        "disposition": "SUCCESSOR_REVIEW_REQUIRED_KEEP_V081",
+        "reason": "All four slices exceed the D-119 35 km displacement trigger despite small area/symmetric-difference changes. Component growth is substantial, especially native 15830. Do not reuse automatically in a successor."
+      },
+      {
+        "target": "Western Han China",
+        "geometry_id": "81cb78c1-3b59-4c0a-b51f-f1c0d45bf866",
+        "source_native_id": "16040",
+        "interval": [
+          -125,
+          -110
+        ],
+        "current_policy": "cliopatria-qgis-natural-earth-v1",
+        "metrics": {
+          "hausdorff_m": 153093,
+          "symdiff_pct": 1.168884,
+          "area_delta_pct": -0.922094,
+          "raw_components": 2,
+          "render_components": 25
+        },
+        "scheduler_alternative": {
+          "policy": "cliopatria-boundary-normalization-v2",
+          "approx_hausdorff_m": 18200
+        },
+        "disposition": "COMPARATIVE_RE_REVIEW_V2_PROVISIONALLY_PREFERRED",
+        "reason": "Current QGIS render is a severe displacement outlier. Scheduler comparison found v2 near 18.2 km; successor substitution still requires visual/temporal-family review, especially Yellow Sea/Bohai and Korean-facing/lower-Yangtze coasts."
+      },
+      {
+        "target": "Roman Empire — early Principate 6–8 CE",
+        "geometry_id": "edb239a8-4d54-44e4-970a-affb7c9af22e",
+        "source_native_id": "16269",
+        "interval": [
+          6,
+          8
+        ],
+        "current_policy": "cliopatria-qgis-natural-earth-v1",
+        "metrics": {
+          "hausdorff_m": 92383.7,
+          "symdiff_pct": 3.790291,
+          "area_delta_pct": 0.354087,
+          "raw_components": 32,
+          "render_components": 104
+        },
+        "scheduler_alternative": {
+          "policy": "cliopatria-boundary-normalization-v3",
+          "approx_hausdorff_m": 15920
+        },
+        "disposition": "SUCCESSOR_CANDIDATE_V3_REQUIRES_COMPARATIVE_VISUAL_REVIEW",
+        "reason": "This is a two-axis outlier: displacement exceeds D-119 and topology spikes to 104 components. Neighboring v3 slices are materially less displaced; preserve v0.8.1 and review v3 in a successor."
+      }
+    ]
+  },
+  "release_effect": "No mutation of v0.8.1. Complete successor claims may enter an explicit post-v0.8.1 release candidate; QC outliers require successor comparison before geometry reuse."
+}
