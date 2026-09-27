@@ -1,0 +1,117 @@
+{
+  "review_schema": "historical-slavery-atlas-v082-successor-geometry-visual-review-input-v1",
+  "decision": "D-119 successor review",
+  "canonical_predecessor": "v0.8.1",
+  "candidate_release": "v0.8.2",
+  "canonical_land_mask_id": "natural-earth-ne_10m_land-v5.1.1-ca96624",
+  "features": [
+    {
+      "geometry_id": "f8a44a0b-f574-4c55-b5b1-b1e803f78543",
+      "name": "Achaemenid Persis/Elam royal economy",
+      "status": "review_pending",
+      "current_policy": "cliopatria-qgis-natural-earth-v1",
+      "candidate_policy": "cliopatria-boundary-normalization-v2",
+      "metrics": {
+        "smoothing_hausdorff_m": 25338.3,
+        "smoothing_area_delta_pct": 0.003,
+        "symmetric_difference_pct": 0.894,
+        "area_delta_pct": 0.004,
+        "outside_land_pct": 0.00001,
+        "raw_components": 8,
+        "current_components": 23,
+        "candidate_components": 13
+      },
+      "reasons": []
+    },
+    {
+      "geometry_id": "34ff5048-242f-48a3-8fb2-5eca4dcd9a54",
+      "name": "Achaemenid Persis/Elam royal economy",
+      "status": "review_pending",
+      "current_policy": "cliopatria-qgis-natural-earth-v1",
+      "candidate_policy": "cliopatria-boundary-normalization-v2",
+      "metrics": {
+        "smoothing_hausdorff_m": 25338.3,
+        "smoothing_area_delta_pct": 0.009,
+        "symmetric_difference_pct": 1.041,
+        "area_delta_pct": -0.178,
+        "outside_land_pct": 0.000011,
+        "raw_components": 9,
+        "current_components": 31,
+        "candidate_components": 16
+      },
+      "reasons": []
+    },
+    {
+      "geometry_id": "e5a720f8-9e22-45fe-a5b0-c6464686525d",
+      "name": "Baekje",
+      "status": "review_pending",
+      "current_policy": "cliopatria-boundary-normalization-v3",
+      "candidate_policy": "cliopatria-boundary-normalization-v3",
+      "metrics": {
+        "smoothing_hausdorff_m": 12039.6,
+        "smoothing_area_delta_pct": -0.968,
+        "symmetric_difference_pct": 14.479,
+        "area_delta_pct": -4.469,
+        "outside_land_pct": 0.000016,
+        "raw_components": 1,
+        "current_components": 24,
+        "candidate_components": 24
+      },
+      "reasons": []
+    },
+    {
+      "geometry_id": "82b2f32f-de79-4a5a-98e0-56db15321588",
+      "name": "Mauryan Empire (318–185 BCE mapped slice)",
+      "status": "review_pending",
+      "current_policy": "cliopatria-qgis-natural-earth-v1",
+      "candidate_policy": "cliopatria-boundary-normalization-v2",
+      "metrics": {
+        "smoothing_hausdorff_m": 22773.3,
+        "smoothing_area_delta_pct": -0.017,
+        "symmetric_difference_pct": 1.061,
+        "area_delta_pct": -0.532,
+        "outside_land_pct": 0.000002,
+        "raw_components": 3,
+        "current_components": 24,
+        "candidate_components": 22
+      },
+      "reasons": []
+    },
+    {
+      "geometry_id": "edb239a8-4d54-44e4-970a-affb7c9af22e",
+      "name": "Roman Empire — early Principate",
+      "status": "review_pending",
+      "current_policy": "cliopatria-qgis-natural-earth-v1",
+      "candidate_policy": "cliopatria-boundary-normalization-v3",
+      "metrics": {
+        "smoothing_hausdorff_m": 15920.5,
+        "smoothing_area_delta_pct": -0.005,
+        "symmetric_difference_pct": 3.251,
+        "area_delta_pct": -0.41,
+        "outside_land_pct": 0.000032,
+        "raw_components": 32,
+        "current_components": 104,
+        "candidate_components": 66
+      },
+      "reasons": []
+    },
+    {
+      "geometry_id": "81cb78c1-3b59-4c0a-b51f-f1c0d45bf866",
+      "name": "Western Han China (202 BCE–5 CE slice)",
+      "status": "review_pending",
+      "current_policy": "cliopatria-qgis-natural-earth-v1",
+      "candidate_policy": "cliopatria-boundary-normalization-v3",
+      "metrics": {
+        "smoothing_hausdorff_m": 18225.3,
+        "smoothing_area_delta_pct": -0.013,
+        "symmetric_difference_pct": 1.479,
+        "area_delta_pct": -0.666,
+        "outside_land_pct": 0,
+        "raw_components": 2,
+        "current_components": 25,
+        "candidate_components": 21
+      },
+      "reasons": []
+    }
+  ]
+}
