@@ -113,6 +113,12 @@ Conceptual layers:
 
 Do not let voyage density recolor territorial practice.
 
+## Public serving geometry invariant
+
+Canonical research geometry and public display geometry are deliberately different layers. Release/public adapters must obtain mapped polygon bytes from `publish.map_geometry` (or an immutable release asset frozen from that view), **never directly from `atlas.geometry`**. The latter preserves historical-source geometry; the former applies the reviewed render policy against the canonical land fabric. Serving raw research polygons alongside the Natural Earth basemap recreates the coastline mismatch that D-038/D-044 were designed to prevent.
+
+Large render-normalized geometry may be delivered as versioned static release assets and loaded on demand. Such assets must be tied to an immutable serving materialization by exact geometry ID, render fingerprint and land-mask identity. Failure to load an asset means geometry unavailable, not historical absence.
+
 ## Web-map delivery
 
 The map client should not dictate the research data model.

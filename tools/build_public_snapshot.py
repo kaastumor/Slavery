@@ -83,7 +83,7 @@ def build_snapshot(
         1
         for place in places
         for geometry in place["geometries"]
-        if isinstance(geometry, dict) and geometry.get("geometry") is not None
+        if isinstance(geometry, dict) and (geometry.get("geometry") is not None or geometry.get("geometry_asset"))
     )
 
     manifest = {

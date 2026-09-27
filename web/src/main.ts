@@ -53,6 +53,8 @@ type GeometryRecord = {
   resolution_method: string;
   source_native_id: string | null;
   geometry: Geometry | null;
+  geometry_asset?: string | null;
+  render_ewkb_sha256?: string | null;
   source_title: string | null;
   source_version: string | null;
   source_url: string | null;
@@ -135,6 +137,8 @@ let places: Place[] = [];
 let selectedPlaceId: string | null = null;
 let release: ApiResponse | null = null;
 let servingMode: "live" | "static_fallback" = "live";
+let geometryLoadGeneration = 0;
+const geometryAssetLoads = new Map<string, Promise<void>>();
 
 const hoverPopup = new Popup({
   closeButton: false,
@@ -174,6 +178,80 @@ function labelize(value: string): string {
 
 function activeClaims(place: Place, year: number): Claim[] {
   return place.claims.filter((claim) => activeInYear(claim.from_year, claim.to_year, year));
+}
+
+type RenderGeometryAsset = GeometryRecord & {
+  asset_schema: "historical-slavery-atlas-render-geometry-v1";
+  materialization_id: string;
+  render_ewkb_sha256: string;
+  render_points: number;
+  geometry: Geometry;
+};
+
+async function loadGeometryAsset(record: GeometryRecord): Promise<void> {
+  if (record.geometry !== null || !record.geometry_asset) return;
+  let pending = geometryAssetLoads.get(record.geometry_id);
+  if (!pending) {
+    pending = (async () => {
+      const controller = new AbortController();
+      const timer = window.setTimeout(() => controller.abort(), 10000);
+      try {
+        const url = new URL(record.geometry_asset!, document.baseURI).toString();
+        const response = await fetch(url, { signal: controller.signal });
+        if (!response.ok) throw new Error(`render geometry ${record.geometry_id} returned ${response.status}`);
+        const asset = await response.json() as RenderGeometryAsset;
+        if (asset.asset_schema !== "historical-slavery-atlas-render-geometry-v1") throw new Error("unsupported render geometry asset");
+        if (asset.geometry_id !== record.geometry_id) throw new Error("render geometry asset ID mismatch");
+        if (release?.serving_materialization_id && asset.materialization_id !== release.serving_materialization_id) throw new Error("render geometry materialization mismatch");
+        if (release?.cartography?.fabric_id && asset.render_land_mask_id !== release.cartography.fabric_id) throw new Error("render geometry land-fabric mismatch");
+        if (record.render_ewkb_sha256 && asset.render_ewkb_sha256 !== record.render_ewkb_sha256) throw new Error("render geometry fingerprint mismatch");
+        record.geometry = asset.geometry;
+        record.render_transform = asset.render_transform;
+        record.render_land_mask_id = asset.render_land_mask_id;
+        record.render_policy_id = asset.render_policy_id;
+        record.render_coastal_recovery_m = asset.render_coastal_recovery_m;
+        record.render_smoothing_iterations = asset.render_smoothing_iterations;
+        record.render_qc = asset.render_qc;
+      } finally {
+        window.clearTimeout(timer);
+      }
+    })().catch((error) => {
+      geometryAssetLoads.delete(record.geometry_id);
+      throw error;
+    });
+    geometryAssetLoads.set(record.geometry_id, pending);
+  }
+  await pending;
+}
+
+async function ensureGeometryAssetsForYear(year: number): Promise<void> {
+  const needed = places.flatMap((place) => {
+    if (activeClaims(place, year).length === 0) return [];
+    return place.geometries.filter((geometry) =>
+      geometry.geometry === null &&
+      Boolean(geometry.geometry_asset) &&
+      geometry.accuracy_status !== "unresolved" &&
+      activeInYear(geometry.from_year, geometry.to_year, year),
+    );
+  });
+  await Promise.all(needed.map(loadGeometryAsset));
+}
+
+async function updateMapForYear(year: number): Promise<void> {
+  const generation = ++geometryLoadGeneration;
+  yearLabel.value = formatYear(year);
+  yearLabel.textContent = formatYear(year);
+  try {
+    await ensureGeometryAssetsForYear(year);
+    if (generation !== geometryLoadGeneration) return;
+    updateMap(year);
+  } catch (error) {
+    console.error("Failed to load release render geometry", error);
+    if (generation !== geometryLoadGeneration) return;
+    mapWarning.textContent = "Some release geometry could not be loaded. Evidence remains available, but affected map polygons are hidden.";
+    mapWarning.hidden = false;
+    updateMap(year);
+  }
 }
 
 function geometryForYear(place: Place, year: number): GeometryRecord | null {
@@ -716,6 +794,8 @@ async function boot(): Promise<void> {
       paint: { "line-color": "#777e78", "line-width": 0.75 },
     });
 
+    await ensureGeometryAssetsForYear(currentYear());
+
     const initialCollections = buildEvidenceCollections(currentYear());
 
     map.addSource("evidence-polygons", {
@@ -776,8 +856,11 @@ async function boot(): Promise<void> {
     attachLayerInteraction("evidence-polygons");
     attachLayerInteraction("evidence-points");
 
-    slider.addEventListener("input", () => updateMap(currentYear()));
-    fitActiveButton.addEventListener("click", () => fitActiveEvidence(currentYear()));
+    slider.addEventListener("input", () => { void updateMapForYear(currentYear()); });
+    fitActiveButton.addEventListener("click", () => {
+      const year = currentYear();
+      void ensureGeometryAssetsForYear(year).then(() => fitActiveEvidence(year));
+    });
     fitWorldButton.addEventListener("click", resetWorldView);
 
     updateMap(currentYear());

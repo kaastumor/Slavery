@@ -2,6 +2,7 @@ import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import postgres from "https://deno.land/x/postgresjs@v3.4.5/mod.js";
 import { V070_MATERIALIZATION_ID, V070_PAYLOAD, V070_PAYLOAD_SHA256 } from "./v070_payload.ts";
 import { V080_MATERIALIZATION_ID, V080_PAYLOAD, V080_PAYLOAD_SHA256 } from "./v080_payload.ts";
+import { V080_V2_MATERIALIZATION_ID, V080_V2_PAYLOAD, V080_V2_PAYLOAD_SHA256 } from "./v080_v2_payload.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -36,6 +37,12 @@ Deno.serve(async (req) => {
     const release = releases[0];
 
     const servingMaterialization = release.manifest?.serving_materialization;
+    if (servingMaterialization?.materialization_id === V080_V2_MATERIALIZATION_ID) {
+      if (servingMaterialization.canonical_source_release !== "v0.8.0" || servingMaterialization.payload_sha256 !== V080_V2_PAYLOAD_SHA256) {
+        return new Response(JSON.stringify({ error: "Serving materialization metadata does not match deployed immutable v0.8 v2 payload" }), { status: 503, headers: { ...corsHeaders, "content-type": "application/json; charset=utf-8" } });
+      }
+      return new Response(V080_V2_PAYLOAD, { headers: { ...corsHeaders, "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=60", "etag": `"${V080_V2_PAYLOAD_SHA256}"`, "x-atlas-materialization": V080_V2_MATERIALIZATION_ID } });
+    }
     if (servingMaterialization?.materialization_id === V080_MATERIALIZATION_ID) {
       if (
         servingMaterialization.canonical_source_release !== "v0.8.0" ||

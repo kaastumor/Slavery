@@ -3070,3 +3070,15 @@ With v0.7.0 predecessor membership this yields a 75-claim / 50-spatial-entity /
 This decision authorizes candidate construction and release review. It does not bypass
 preservation-grade authority freezing, publication QC, immutable release creation, or
 the explicit serving-channel cutover gate.
+
+## D-116 — Public mapped geometry must use the render layer, never raw research geometry
+**Date:** 2026-09-27  
+**Status:** accepted corrective serving decision
+
+**Trigger:** v0.8.0-public-mvp-v1 embedded the canonical raw `atlas.geometry` GeoJSON in the serving payload while the neutral land layer used the Natural Earth 1:10m canonical fabric. This bypassed the already-reviewed `publish.map_geometry` render pipeline and reintroduced visible coastline/source mismatch. The Roman Empire 9–13 CE slice demonstrated the defect: raw geometry extended about 54,388 km² outside the canonical land fabric, whereas the reviewed render geometry is land-constrained (rounding residual only) and records the canonical land-mask identity.
+
+**Decision:** canonical research geometry remains immutable and unchanged. Public mapped polygon bytes must come from the reviewed render layer (`publish.map_geometry`) or from immutable release assets derived from that layer. A public serving adapter must never serialize raw `atlas.geometry` as display geometry merely because the raw geometry is canonical research evidence.
+
+For v0.8.0, `v0.8.0-public-mvp-v2` supersedes the v1 serving adapter without replacing canonical release v0.8.0. To avoid embedding ~5 MB of normalized polygons in the Edge Function, v2 freezes render-normalized geometry as versioned static release assets under `web/public/release-geometries/v0.8.0-public-mvp-v2/`; the API carries exact asset IDs/fingerprints and the web client loads only geometry active in the selected year. The v1 materialization remains immutable rollback evidence.
+
+The client must verify materialization ID, geometry ID, render fingerprint and canonical land-mask identity before accepting a render asset. Missing/failed asset delivery hides the affected polygon and must not be interpreted as historical absence.
