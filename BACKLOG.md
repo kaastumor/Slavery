@@ -48,13 +48,30 @@ geometries; all 39 polygons use the canonical Natural Earth land fabric and pass
 outside-land tolerance. D-117 replaces only the Roman 14–22 CE slice with the reviewed
 AWMC-derived specialist geometry.
 
-Active expansion continues through #332 and the two hourly lanes:
-- evidence/entry completion;
-- geometry resolution and corpus-wide cartographic QC.
+Active expansion continues through #332 and the hourly evidence/geometry lanes.
+
+**2026-09-27 scheduler reconciliation checkpoint:**
+- the 10 current-method successor packages from the overnight evidence worker are merged
+  and present in PostgreSQL as reviewed/unpublished claims; none is silently added to
+  immutable v0.8.1;
+- reviewed Pylos and Knossos point geometries are now promoted to PostgreSQL as
+  `claim_evidence_locus` records for the Mycenaean Pylos/Knossos claim, not as
+  territorial/practice polygons;
+- the remaining Nazi Germany legacy prototype now has a current-method successor package
+  on the active reconciliation WIP;
+- Funan, Southern Maya and Hawaiian scheduler packets do not create duplicate claims:
+  their existing current-method packages remain authoritative pending the stated bounded
+  source/temporal follow-ups;
+- Opone remains on exact-Pleiades-location HOLD, Garshana remains unresolved, and the
+  reviewed Tōdai-ji UNESCO point remains the accepted locus;
+- D-119 corpus-wide QC is now binding for successor geometry reuse. Late Hittite
+  component collapse, the Qin family, Western Han native 16040 and Roman native 16269
+  require explicit successor-era comparative/visual review rather than automatic reuse.
 
 Prior releases remain immutable. New complete entries and defensible geometries move
 through explicit successor release membership and serving cutover rather than mutating
-v0.8.1.
+v0.8.1. A successor selection must therefore be claim-explicit **and** D-119-aware; it
+must not simply sweep every reviewed off-release row or grandfathered v0.8.1 geometry.
 
 ## Previous D-096 post-cutover boundary
 
