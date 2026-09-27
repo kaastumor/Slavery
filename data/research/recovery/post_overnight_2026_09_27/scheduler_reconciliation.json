@@ -215,7 +215,285 @@
         "disposition": "SUCCESSOR_CANDIDATE_V3_REQUIRES_COMPARATIVE_VISUAL_REVIEW",
         "reason": "This is a two-axis outlier: displacement exceeds D-119 and topology spikes to 104 components. Neighboring v3 slices are materially less displaced; preserve v0.8.1 and review v3 in a successor."
       }
-    ]
+    ],
+    "corpus_wide_envelope_observation": {
+      "release": "v0.8.1",
+      "polygon_count": 39,
+      "hard_land_residual_fail_count": 0,
+      "maximum_render_outside_land_pct": 0.000032,
+      "hausdorff_review_trigger_count": 29,
+      "hausdorff_inside_gate_count": 10,
+      "max_hausdorff_m": 153203.2,
+      "symmetric_difference_over_5pct_count": 1,
+      "max_symmetric_difference_pct": 14.479327,
+      "absolute_area_delta_over_2pct_count": 1,
+      "max_absolute_area_delta_pct": 4.469099,
+      "component_count_change_count": 38,
+      "interpretation": "D-119 axes are diagnostics, not a weighted score. Existing v0.8.1 remains grandfathered. The widespread Hausdorff/component triggers show that successor reuse needs source-family/temporal-family and visual comparison; they must not be read as 29 automatically bad historical polygons. Baekje is the only frozen v0.8.1 polygon exceeding both the 5% symmetric-difference trigger and 2% absolute area-delta candidate gate.",
+      "successor_reuse_hausdorff_trigger_rows": [
+        {
+          "canonical_name": "Achaemenid Persis/Elam royal economy",
+          "geometry_id": "f8a44a0b-f574-4c55-b5b1-b1e803f78543",
+          "from_year": -529,
+          "to_year": -500,
+          "geometry_source_native_id": "15232",
+          "render_policy_id": "cliopatria-qgis-natural-earth-v1",
+          "hausdorff_m": "53501.7"
+        },
+        {
+          "canonical_name": "Achaemenid Persis/Elam royal economy",
+          "geometry_id": "34ff5048-242f-48a3-8fb2-5eca4dcd9a54",
+          "from_year": -499,
+          "to_year": -480,
+          "geometry_source_native_id": "15250",
+          "render_policy_id": "cliopatria-qgis-natural-earth-v1",
+          "hausdorff_m": "53501.7"
+        },
+        {
+          "canonical_name": "Baekje",
+          "geometry_id": "e5a720f8-9e22-45fe-a5b0-c6464686525d",
+          "from_year": 347,
+          "to_year": 391,
+          "geometry_source_native_id": "16698",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "49245.7"
+        },
+        {
+          "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+          "geometry_id": "93c03723-d03d-45fc-8611-a08a7506974f",
+          "from_year": -317,
+          "to_year": -315,
+          "geometry_source_native_id": "15465",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "137456.2"
+        },
+        {
+          "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+          "geometry_id": "958fa26b-0095-4448-9a64-4b27e44efd81",
+          "from_year": -314,
+          "to_year": -301,
+          "geometry_source_native_id": "15477",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "137456.2"
+        },
+        {
+          "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+          "geometry_id": "655c8ee3-0eb6-4706-9980-b4e0712dba84",
+          "from_year": -300,
+          "to_year": -291,
+          "geometry_source_native_id": "15505",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "137456.2"
+        },
+        {
+          "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+          "geometry_id": "82b2f32f-de79-4a5a-98e0-56db15321588",
+          "from_year": -290,
+          "to_year": -256,
+          "geometry_source_native_id": "15520",
+          "render_policy_id": "cliopatria-qgis-natural-earth-v1",
+          "hausdorff_m": "137456.2"
+        },
+        {
+          "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+          "geometry_id": "7dc611d1-4b29-4163-b723-0a597459d298",
+          "from_year": -255,
+          "to_year": -225,
+          "geometry_source_native_id": "15654",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "137024.2"
+        },
+        {
+          "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+          "geometry_id": "0d285ce0-adbf-45e5-a727-b5446a9c169c",
+          "from_year": -224,
+          "to_year": -188,
+          "geometry_source_native_id": "15743",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "61071.4"
+        },
+        {
+          "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+          "geometry_id": "204d6af3-1f0b-463c-a4a9-28c0991623f8",
+          "from_year": -187,
+          "to_year": -170,
+          "geometry_source_native_id": "15965",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "61071.4"
+        },
+        {
+          "canonical_name": "Neo-Babylonian Babylonia",
+          "geometry_id": "cf8cc7b3-0eb8-4f65-8e3b-091eb88dd87c",
+          "from_year": -599,
+          "to_year": -550,
+          "geometry_source_native_id": "15178",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "53501.7"
+        },
+        {
+          "canonical_name": "Neo-Babylonian Babylonia",
+          "geometry_id": "b5398faf-a447-4f67-a0c9-48c2cb2e33a9",
+          "from_year": -549,
+          "to_year": -540,
+          "geometry_source_native_id": "15219",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "53501.7"
+        },
+        {
+          "canonical_name": "Neo-Babylonian Babylonia",
+          "geometry_id": "62124dc0-f043-4c92-a463-e465d9fd6032",
+          "from_year": -539,
+          "to_year": -530,
+          "geometry_source_native_id": "15223",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "53501.7"
+        },
+        {
+          "canonical_name": "Qin Empire (221–209 BCE slice)",
+          "geometry_id": "14edab60-6475-4699-978c-f51aaccd34d5",
+          "from_year": -221,
+          "to_year": -218,
+          "geometry_source_native_id": "15778",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Qin Empire (221–209 BCE slice)",
+          "geometry_id": "db0512e0-e13d-4bdd-bbcd-a68bb5f1a2c2",
+          "from_year": -217,
+          "to_year": -212,
+          "geometry_source_native_id": "15789",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Qin Empire (221–209 BCE slice)",
+          "geometry_id": "0d0af02d-83bc-4f4e-a69d-d56d56326cd4",
+          "from_year": -211,
+          "to_year": -210,
+          "geometry_source_native_id": "15821",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Qin Empire (221–209 BCE slice)",
+          "geometry_id": "9abfabaa-3539-4c3e-95de-2e4452b2feb7",
+          "from_year": -209,
+          "to_year": -208,
+          "geometry_source_native_id": "15830",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Roman Empire — early Principate",
+          "geometry_id": "dce21f42-3e1a-4695-b036-4d20472a6ecb",
+          "from_year": 1,
+          "to_year": 5,
+          "geometry_source_native_id": "16261",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "92383.7"
+        },
+        {
+          "canonical_name": "Roman Empire — early Principate",
+          "geometry_id": "edb239a8-4d54-44e4-970a-affb7c9af22e",
+          "from_year": 6,
+          "to_year": 8,
+          "geometry_source_native_id": "16269",
+          "render_policy_id": "cliopatria-qgis-natural-earth-v1",
+          "hausdorff_m": "92383.7"
+        },
+        {
+          "canonical_name": "Roman Empire — early Principate",
+          "geometry_id": "7beb33fa-c063-4a12-9511-2542028730f7",
+          "from_year": 9,
+          "to_year": 13,
+          "geometry_source_native_id": "16272",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "92383.7"
+        },
+        {
+          "canonical_name": "Roman Empire — early Principate",
+          "geometry_id": "b3066705-616e-42c7-a50d-656c6926813c",
+          "from_year": 14,
+          "to_year": 22,
+          "geometry_source_native_id": "AWMC-ROMAN-EMPIRE-AD14-EXTENT",
+          "render_policy_id": null,
+          "hausdorff_m": "78136.3"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "26ccb13b-735a-43d2-b91d-dc829f124873",
+          "from_year": -201,
+          "to_year": -197,
+          "geometry_source_native_id": "15925",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "970789fe-8b57-473d-ad82-778d441e3ae5",
+          "from_year": -196,
+          "to_year": -126,
+          "geometry_source_native_id": "15942",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "81cb78c1-3b59-4c0a-b51f-f1c0d45bf866",
+          "from_year": -125,
+          "to_year": -110,
+          "geometry_source_native_id": "16040",
+          "render_policy_id": "cliopatria-qgis-natural-earth-v1",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "62dabec6-0cc5-4a9f-af7f-7a5caad1e009",
+          "from_year": -109,
+          "to_year": -91,
+          "geometry_source_native_id": "16064",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153203.2"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "102f2974-e240-4e23-bf91-256eee65a41d",
+          "from_year": -90,
+          "to_year": -77,
+          "geometry_source_native_id": "16073",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "f739083b-53a7-4b97-aad6-b9ddaa5af490",
+          "from_year": -76,
+          "to_year": -50,
+          "geometry_source_native_id": "16123",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "d1d6310e-ae50-4df4-9199-32781cfc5eb4",
+          "from_year": -49,
+          "to_year": -36,
+          "geometry_source_native_id": "16165",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "a00dc1d4-863d-4f85-b77f-a53a37f83b43",
+          "from_year": -35,
+          "to_year": 5,
+          "geometry_source_native_id": "16206",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        }
+      ]
+    }
   },
   "release_effect": "No mutation of v0.8.1. Complete successor claims may enter an explicit post-v0.8.1 release candidate; QC outliers require successor comparison before geometry reuse."
 }
