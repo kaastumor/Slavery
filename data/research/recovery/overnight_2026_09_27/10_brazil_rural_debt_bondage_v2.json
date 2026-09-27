@@ -1,0 +1,80 @@
+{
+  "case_key": "overnight-2026-09-27/brazil/rural-debt-bondage-2003-2005-v2",
+  "spatial_entity": {
+    "canonical_name": "Brazil",
+    "display_name": "Brazil",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed spatial identity. The entity is an indexing/context unit; the reconciled claim below is limited to the documented subnational, sectoral, institutional or observed scope and does not imply uniform practice across the whole entity."
+  },
+  "claim": {
+    "from_year": 2003,
+    "to_year": 2005,
+    "date_text_original": "ILO rural forced-labour evidence and enforcement reporting, 2003–2005",
+    "temporal_precision": "bounded_multi_source_window",
+    "temporal_certainty": "high",
+    "spatial_precision": "remote rural/agricultural labour settings and enforcement cases; no Brazil-wide practice polygon",
+    "summary": "ILO documentation in 2004 described rural forced labour in Brazil as involving debt bondage and coercion in remote agricultural settings, while the ILO's 2005 Global Report documented national enforcement activity against forced labour. The atlas records a bounded 2003–2005 debt-bondage/forced-labour evidence window without converting estimates, rescues or administrative proceedings into prevalence, and without treating Brazil's national boundary as the practice extent.",
+    "confidence": "high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim 0f505cf4-e90d-4ce5-a07e-c06db42176f4 into current post-M1 semantics. No new P-level is assigned. Legacy geometry 8d71c221-d188-4890-8a63-3c7f5eb8e157 is an explicit modern/navigation proxy and is not promoted as this claim's historical/practice inference extent.",
+    "territorial_practice": {
+      "practice_type_code": "debt_bondage",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Positive bounded classification only. Do not infer national prevalence, uniform territorial distribution, legal status, or a country-wide practice polygon beyond what the evidence directly supports."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Waiting in Correntes: Forced labour in Brazil",
+        "author_or_institution": "International Labour Organization",
+        "source_type": "institutional_field_synthesis",
+        "source_classification": "secondary",
+        "geographic_scope": "Brazil; remote rural/agricultural forced-labour settings including Correntes/Piauí examples",
+        "temporal_scope": "published 1 March 2004",
+        "independence_notes": "ILO report/feature drawing on the Brazilian forced-labour programme and government/worker evidence. Do not count cited national estimates as independent prevalence evidence.",
+        "reliability_limitations": "Uses illustrative cases and cites uncertain estimates. Explicitly says exact numbers are unknown; unsuitable for a national prevalence surface."
+      },
+      "version": {
+        "version_label": "ILO web publication, 1 March 2004",
+        "publication_year": 2004,
+        "url_or_identifier": "https://www.ilo.org/publications/waiting-correntes-forced-labour-brazil",
+        "accessed_at": "2026-09-27T11:30:00Z"
+      },
+      "evidence_role": "bounded rural debt-bondage/forced-labour evidence",
+      "independence_group": "ilo-brazil-forced-labour-programme-2004",
+      "directness": "institutional field/programme synthesis",
+      "direction": "supports",
+      "locator": null
+    },
+    {
+      "source": {
+        "title": "A global alliance against forced labour - Global Report on Forced Labour 2005",
+        "author_or_institution": "International Labour Organization",
+        "source_type": "institutional_global_report",
+        "source_classification": "secondary",
+        "geographic_scope": "Global report with country examples including Brazil",
+        "temporal_scope": "published 2005",
+        "independence_notes": "Same ILO institutional ecosystem as Waiting in Correntes; useful for contemporaneous enforcement context, not an independent vote on the same underlying Brazilian cases.",
+        "reliability_limitations": "Global synthesis. Enforcement/rescue/administrative counts indicate detection and response, not underlying prevalence."
+      },
+      "version": {
+        "version_label": "Global Report under the Follow-up to the ILO Declaration, 2005; ISBN 9221153606",
+        "publication_year": 2005,
+        "url_or_identifier": "https://www.ilo.org/publications/global-alliance-against-forced-labour-global-report-forced-labour-2005",
+        "accessed_at": "2026-09-27T11:30:00Z"
+      },
+      "evidence_role": "contemporaneous enforcement/context qualifier",
+      "independence_group": "ilo-brazil-forced-labour-programme-2004",
+      "directness": "institutional field/research synthesis",
+      "direction": "qualifies",
+      "locator": "Brazil enforcement discussion; counts treated as detection/response observations, not prevalence"
+    }
+  ]
+}
