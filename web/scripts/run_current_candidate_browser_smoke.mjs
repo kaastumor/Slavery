@@ -23,37 +23,42 @@ async function main() {
 
     const badge = (await page.locator("#release-badge").innerText()).trim();
     const status = (await page.locator("#status").innerText()).trim();
-    if (!badge.includes("candidate") || !badge.includes("non-canonical")) {
-      failures.push("current root no longer exposes its candidate/non-canonical boundary: " + badge);
+    if (!badge.includes("v0.8.0")) {
+      failures.push("current canonical root does not expose v0.8.0 release identity: " + badge);
     }
-    if (!status.includes("frozen targets")) {
-      failures.push("current root no longer exposes frozen-target candidate status: " + status);
+    if (badge.includes("candidate") || badge.includes("non-canonical") || badge.includes("preview")) {
+      failures.push("current canonical root still presents a candidate/preview boundary: " + badge);
+    }
+    if (!/claim/.test(status) || !/place/.test(status)) {
+      failures.push("current canonical root status no longer exposes claim/place counts: " + status);
     }
     if (await page.locator("#map-warning").isVisible()) {
       failures.push("current candidate map warning is visible");
     }
 
-    const firstTarget = page.locator("[data-target-id]").first();
-    await firstTarget.waitFor({ state: "visible", timeout: 10_000 });
-    const targetLabel = ((await firstTarget.locator(".place-card-name").textContent()) || "").trim();
-    await firstTarget.click();
+    const firstPlace = page.locator("[data-place-id]").first();
+    await firstPlace.waitFor({ state: "visible", timeout: 10_000 });
+    const placeLabel = ((await firstPlace.locator(".place-card-name").textContent()) || "").trim();
+    await firstPlace.click();
     await page.waitForTimeout(250);
     const panel = (await page.locator("#panel").innerText()).trim();
-    if (!targetLabel || !panel.includes(targetLabel)) {
-      failures.push("candidate evidence-register navigation did not open the selected target");
+    if (!placeLabel || !panel.includes(placeLabel)) {
+      failures.push("canonical year-overview navigation did not open the selected place");
     }
-    const panelLower = panel.toLowerCase();
-    if (!panelLower.includes("independent review") && !panelLower.includes("independent historical review")) {
-      failures.push("candidate detail no longer exposes the independent-review boundary");
+    if (!panel.includes("Historical geometry")) {
+      failures.push("canonical place detail no longer exposes historical geometry state");
+    }
+    if (!panel.includes("Evidence")) {
+      failures.push("canonical place detail no longer exposes claim-specific evidence");
     }
 
-    const screenshot = path.join(outputDir, "current-candidate.png");
+    const screenshot = path.join(outputDir, "current-canonical.png");
     await page.screenshot({ path: screenshot, fullPage: true });
     const summary = {
       base_url: baseUrl,
       release_badge: badge,
       status,
-      selected_target: targetLabel,
+      selected_place: placeLabel,
       page_errors: pageErrors,
       failures,
       checked_at: new Date().toISOString(),
