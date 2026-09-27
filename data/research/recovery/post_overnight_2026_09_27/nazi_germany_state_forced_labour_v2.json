@@ -1,0 +1,124 @@
+{
+  "case_key": "post-overnight-2026-09-27/nazi-germany/state-forced-labour-1942-1944-v2",
+  "spatial_entity": {
+    "canonical_name": "Nazi Germany",
+    "display_name": "Nazi Germany",
+    "entity_type_code": "polity",
+    "from_year": 1933,
+    "to_year": 1945,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed polity identity. The successor claim is bounded to the 1942–1944 state-directed labour-deployment system and does not treat any modern-country polygon as a practice prevalence surface."
+  },
+  "claim": {
+    "from_year": 1942,
+    "to_year": 1944,
+    "date_text_original": "Sauckel centralization decree of 21 March 1942 through the August 1944 peak of registered non-German labour in the Reich",
+    "temporal_precision": "bounded_institutional_wartime_interval",
+    "temporal_certainty": "high",
+    "spatial_precision": "state-directed system with heterogeneous sites, populations and occupied-territory linkages",
+    "summary": "From 1942 through 1944, Nazi Germany operated a centrally directed, racially differentiated forced-labour system drawing on deported foreign civilians, prisoners of war, concentration-camp prisoners and other persecuted groups. The 21 March 1942 decree centralized labour deployment under Fritz Sauckel, specialist scholarship documents the mass foreign-labour regime, and USHMM synthesis records more than 7.5 million non-German workers registered in the Reich in August 1944, the overwhelming majority forced labourers. The atlas records a strong positive state-forced-labour claim without converting workforce totals into territorial prevalence or equating every coerced status with chattel slavery.",
+    "confidence": "high",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy research-prototype claim ab1f826b-aecf-4f2b-a88a-bccf1eea4f9a into current post-M1 semantics. Related broader workbook-migrated claim 85bb684d-0aad-5410-a466-d3aad7f49c6f remains separate lineage. No new P-level is assigned. Generic Reich/modern-country practice polygon is rejected; authoritative forced-labour sites are eligible as evidence loci and historically dated jurisdiction geometry requires separate review.",
+    "territorial_practice": {
+      "practice_type_code": "state_forced_labour",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Positive bounded classification for a centrally organized wartime forced-labour system. Do not infer uniform territorial prevalence, a single labour status, or one practice polygon from aggregate worker counts."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Hitler's Foreign Workers: Enforced Foreign Labor in Germany Under the Third Reich",
+        "author_or_institution": "Ulrich Herbert",
+        "source_type": "book",
+        "source_classification": "secondary",
+        "geographic_scope": "Nazi Germany / Third Reich",
+        "temporal_scope": "Foreign labour deployment under National Socialism, especially wartime",
+        "independence_notes": "Major specialist monograph based on extensive archival research. Independent of USHMM synthesis and the Nuremberg primary decree.",
+        "reliability_limitations": "System-level history; quantitative totals and categories vary by date and administrative definition and should not be turned into a territorial prevalence surface."
+      },
+      "version": {
+        "version_label": "Cambridge University Press English edition, 1997",
+        "publication_year": 1997,
+        "url_or_identifier": "https://books.google.com/books/about/Hitler_s_Foreign_Workers.html?id=uifw3BgBDU4C",
+        "accessed_at": "2026-09-27T16:55:00Z"
+      },
+      "evidence_role": "specialist structural interpretation of the Nazi foreign forced-labour regime",
+      "independence_group": "herbert-nazi-foreign-workers",
+      "directness": "specialist monograph",
+      "direction": "supports",
+      "locator": "chapters on foreign labour deployment in 1942, wartime practice and final phase; bibliographic edition ISBN 0521470005"
+    },
+    {
+      "source": {
+        "title": "Forced Labor: In Depth",
+        "author_or_institution": "United States Holocaust Memorial Museum",
+        "source_type": "specialist_museum_synthesis",
+        "source_classification": "secondary",
+        "geographic_scope": "Nazi Germany and occupied Europe",
+        "temporal_scope": "Second World War",
+        "independence_notes": "Institutional historical synthesis drawing on Holocaust and wartime documentation; separate evidence family from Herbert and the primary legal decree.",
+        "reliability_limitations": "Overview synthesis; aggregate labour counts do not map local prevalence and encompass heterogeneous legal/coercive categories."
+      },
+      "version": {
+        "version_label": "Holocaust Encyclopedia web version accessed 2026-09-27",
+        "url_or_identifier": "https://encyclopedia.ushmm.org/content/en/article/forced-labor-in-depth",
+        "accessed_at": "2026-09-27T16:55:00Z"
+      },
+      "evidence_role": "specialist synthesis and 1944 scale/context",
+      "independence_group": "ushmm-nazi-forced-labor-synthesis",
+      "directness": "specialist institutional synthesis",
+      "direction": "supports",
+      "locator": "discussion of 1940–1944 civilian deportation, POW labour and August 1944 registration of more than 7.5 million non-German workers"
+    },
+    {
+      "source": {
+        "title": "Decree appointing Fritz Sauckel as Plenipotentiary General for the Utilization of Labor (PS-1666 / USA-208)",
+        "author_or_institution": "Reich Legal Gazette; digitized by Harvard Law School Library Nuremberg Trials Project",
+        "source_type": "primary_legal_document",
+        "source_classification": "primary",
+        "geographic_scope": "Greater German Reich, Protectorate, General Government and occupied territories",
+        "temporal_scope": "21 March 1942 decree and 27 March 1942 implementing ordinance",
+        "independence_notes": "Primary state legal/administrative evidence for centralization of labour deployment. Multiple digitizations/translations of PS-1666 are the same evidence family.",
+        "reliability_limitations": "Establishes administrative authority and mobilization scope, not by itself the coercive status of every worker or the spatial distribution of forced labour."
+      },
+      "version": {
+        "version_label": "Harvard Nuremberg Trials Project, HLSL Item 3775, PS-1666",
+        "publication_year": 1942,
+        "url_or_identifier": "https://nuremberg.law.harvard.edu/documents/3775-decree-appointing-fritz-sauckel",
+        "accessed_at": "2026-09-27T16:55:00Z"
+      },
+      "evidence_role": "primary legal evidence for centralized wartime labour deployment",
+      "independence_group": "nuremberg-ps1666-sauckel-decree",
+      "directness": "primary decree",
+      "direction": "supports",
+      "locator": "21 March 1942 decree; PS-1666; Reichsgesetzblatt I, p. 179"
+    },
+    {
+      "source": {
+        "title": "History of the historic site — GBI camp 75/76 Schöneweide",
+        "author_or_institution": "Nazi Forced Labour Documentation Centre / Topography of Terror Foundation",
+        "source_type": "institutional_site_history",
+        "source_classification": "secondary",
+        "geographic_scope": "Berlin-Schöneweide",
+        "temporal_scope": "1942–1945",
+        "independence_notes": "Site-level documentation independent of national totals; useful for bounded spatial evidence-locus eligibility.",
+        "reliability_limitations": "One preserved Berlin camp does not represent the complete national system and must not be generalized into a Reich-wide polygon."
+      },
+      "version": {
+        "version_label": "Documentation Centre web history accessed 2026-09-27",
+        "url_or_identifier": "https://www.ns-zwangsarbeit.de/en/forced-labour-in-the-daily-round/topics/history-of-the-historic-site",
+        "accessed_at": "2026-09-27T16:55:00Z"
+      },
+      "evidence_role": "bounded site-level corroboration and future evidence-locus source",
+      "independence_group": "ns-zwangsarbeit-schoeneweide-site",
+      "directness": "specialist institutional site history",
+      "direction": "qualifies",
+      "locator": "GBI camp 75/76 timeline, 1942–1945"
+    }
+  ]
+}
