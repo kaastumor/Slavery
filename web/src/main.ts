@@ -138,7 +138,7 @@ let selectedPlaceId: string | null = null;
 let release: ApiResponse | null = null;
 let servingMode: "live" | "static_fallback" = "live";
 let geometryLoadGeneration = 0;
-const geometryAssetLoads = new Map<string, Promise<void>>();
+const geometryAssetLoads = new globalThis.Map<string, Promise<void>>();
 
 const hoverPopup = new Popup({
   closeButton: false,
