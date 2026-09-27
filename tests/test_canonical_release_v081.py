@@ -49,7 +49,6 @@ class CanonicalReleaseV081Tests(unittest.TestCase):
                 encoding="utf-8"
             )
         )
-        selection = json.loads(SELECTION.read_text(encoding="utf-8")) if False else None
         self.assertEqual(len(current["membership"]["claim_ids"]), 75)
         self.assertEqual(current["membership"]["claim_ids"], previous["membership"]["claim_ids"])
         self.assertEqual(
