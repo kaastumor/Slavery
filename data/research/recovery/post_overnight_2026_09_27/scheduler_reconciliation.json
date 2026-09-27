@@ -1,0 +1,499 @@
+{
+  "schema": "historical-slavery-atlas-post-overnight-scheduler-reconciliation-v1",
+  "date": "2026-09-27",
+  "canonical_release": "v0.8.1",
+  "source": "Scheduled Atlas Hourly Expansion + Geometry Resolution + Geometry QC packets produced after overnight PRs #349–#351",
+  "evidence_lane": [
+    {
+      "target": "Nazi Germany",
+      "legacy_claim_id": "ab1f826b-aecf-4f2b-a88a-bccf1eea4f9a",
+      "disposition": "ACCEPT_CURRENT_METHOD_SUCCESSOR_PACKAGE",
+      "package_path": "data/research/recovery/post_overnight_2026_09_27/nazi_germany_state_forced_labour_v2.json",
+      "scope": "1942–1944 centrally directed, racially differentiated state forced-labour system",
+      "practice_level": null,
+      "geometry": "unresolved_at_practice_extent; authoritative site loci eligible; generic Reich/modern-country practice polygon rejected",
+      "release_action": "eligible for explicit successor release selection after DB ingest and exact release QC"
+    },
+    {
+      "target": "Funan",
+      "current_case_key": "atlas-expansion-01/funan/enslavement-v1",
+      "scheduler_packet": "funan-fifth-century-raiding-enslavement",
+      "disposition": "NO_DUPLICATE_CLAIM_KEEP_CURRENT_PACKAGE_PENDING_PRIMARY_LOCATOR_REPLAY",
+      "reason": "Scheduler narrowed a useful late-fifth-century Nan Qi Shu route, but exact juan/passage provenance remained unresolved. Current reviewed Funan package already exists and remains geometry-unresolved; do not mint a duplicate until the exact primary locator/dependency relation is frozen."
+    },
+    {
+      "target": "Southern Maya Lowlands",
+      "current_case_key": "atlas-expansion-01/late-classic-maya/captive-dependency-v1",
+      "scheduler_packet": "southern-maya-lowlands-classic-captive-taking",
+      "disposition": "NO_DUPLICATE_CLAIM_KEEP_CURRENT_PACKAGE_PENDING_MONUMENT_PROVENANCE",
+      "reason": "Scheduler confirmed recurrent captive-taking but explicitly left slavery equivalence unresolved and required exact monument provenance. Current reviewed captive-taking package is already correctly non-slavery-specific and geometry-unresolved."
+    },
+    {
+      "target": "Hawaiian Islands",
+      "current_case_key": "atlas-expansion-01/hawaii/kauwa-dependency-v1",
+      "scheduler_packet": "hawaiian-islands-pre1819-kauwa-hereditary-dependency",
+      "disposition": "NO_DUPLICATE_CLAIM_CURRENT_PACKAGE_REMAINS_VALID",
+      "reason": "Scheduler confirmed hereditary kauwā dependency and disputed one-to-one slavery equivalence. Current package already uses other_servile_dependency, practice_level=NULL and unresolved geometry. Extending the endpoint to 1819 requires a dedicated source-bounded temporal replay rather than silent widening."
+    }
+  ],
+  "geometry_resolution_lane": [
+    {
+      "target": "Tōdai-ji",
+      "existing_geometry_id": "4ea5165a-9bd2-4883-9cdd-4910aa491dc7",
+      "source_native_id": "UNESCO-WHC-870-001",
+      "disposition": "KEEP_REVIEWED_POINT",
+      "reason": "Current authoritative UNESCO point is defensible as an institutional/evidence locus. A 68.9-ha specialist polygon may be reconsidered only if exact reproducible geometry and redistribution terms are verified; the 1,311.2-ha buffer is excluded."
+    },
+    {
+      "target": "Opone (Ras Hafun identification)",
+      "package_path": "data/research/ancient_expansion_03/external_01_opone_slave_export.json",
+      "pleiades_place_id": "39403",
+      "proposed_representation": "specialist Point evidence/network locus",
+      "disposition": "HOLD_EXACT_PLEIADES_LOCATION_RESOURCE_REQUIRED",
+      "reason": "Pleiades place identity and Ras Hafun identification are strong, but the scheduled packet correctly requires the exact Pleiades location-resource ID/coordinates and frozen snapshot/version. A representative centroid or modern substitute must not be promoted as if it were the source-native location."
+    },
+    {
+      "target": "Garshana construction project (Ur III)",
+      "package_path": "data/research/ancient_expansion_01/01_ur_iii_garshana_slavery.json",
+      "disposition": "REMAIN_UNRESOLVED",
+      "reason": "CDLI/Assyriological evidence constrains Garshana to Umma province but the exact site is unknown. No point, polygon, modern proxy or rendered geometry is defensible. A supported relation to Umma may be modeled separately without inventing a site coordinate."
+    },
+    {
+      "target": "Mycenaean Greece (Pylos/Knossos)",
+      "claim_id": "8691d038-1683-5331-bccb-e7a189cdd229",
+      "disposition": "DB_PROMOTED_REVIEWED_EVIDENCE_LOCI",
+      "loci": [
+        {
+          "name": "Palace of Nestor / Pylos archaeological locus",
+          "geometry_id": "824cf9ab-5bfd-4d84-8fb6-8c137033424d",
+          "source_native_id": "Q2047396"
+        },
+        {
+          "name": "Knossos archaeological locus",
+          "geometry_id": "78627165-cc6d-4a42-9f4c-3431944526c8",
+          "source_native_id": "Q173527"
+        }
+      ],
+      "reason": "Two reviewed CC0 point loci are now present in PostgreSQL and linked through atlas.claim_evidence_locus. They are not territorial/practice polygons; Knossos is not attached to the separate mainland-only entity."
+    }
+  ],
+  "qc_lane": {
+    "governing_policy": "config/cartography/corpus_geometry_qc_envelope.json",
+    "decision": "D-119",
+    "rule": "v0.8.1 remains immutable; released outliers are grandfathered only for the current release and require comparative re-review before successor reuse",
+    "verified_followups": [
+      {
+        "target": "Hittite central Anatolia late family",
+        "geometry_ids": [
+          "17a40ab9-195f-4298-bd54-0a5994743cfe",
+          "9b32c6ca-d55d-4b7f-a4a0-46ee223fe2fc",
+          "7658b4b6-8456-4e0e-b545-02fdd9e2e844"
+        ],
+        "source_native_ids": [
+          "15031",
+          "15035",
+          "15037"
+        ],
+        "current_policy": "cliopatria-boundary-normalization-v3",
+        "metrics": [
+          {
+            "hausdorff_m": 32278.4,
+            "symdiff_pct": 2.623889,
+            "area_delta_pct": 1.334804,
+            "raw_components": 2,
+            "render_components": 1
+          },
+          {
+            "hausdorff_m": 32278.4,
+            "symdiff_pct": 2.712033,
+            "area_delta_pct": 1.277574,
+            "raw_components": 2,
+            "render_components": 1
+          },
+          {
+            "hausdorff_m": 32278.4,
+            "symdiff_pct": 2.712033,
+            "area_delta_pct": 1.277574,
+            "raw_components": 2,
+            "render_components": 1
+          }
+        ],
+        "disposition": "KEEP_CURRENT_RELEASE_COMPONENT_REVIEW_REQUIRED",
+        "reason": "Quantitative displacement/symdiff/area gates pass, but all three late slices collapse from two raw components to one rendered component. D-119 topology trigger requires focused component-level visual review before successor reuse."
+      },
+      {
+        "target": "Qin Empire family",
+        "geometry_ids": [
+          "14edab60-6475-4699-978c-f51aaccd34d5",
+          "db0512e0-e13d-4bdd-bbcd-a68bb5f1a2c2",
+          "0d0af02d-83bc-4f4e-a69d-d56d56326cd4",
+          "9abfabaa-3539-4c3e-95de-2e4452b2feb7"
+        ],
+        "source_native_ids": [
+          "15778",
+          "15789",
+          "15821",
+          "15830"
+        ],
+        "current_policy": "cliopatria-boundary-normalization-v3",
+        "metrics": [
+          {
+            "hausdorff_m": 153093,
+            "symdiff_pct": 1.44739,
+            "area_delta_pct": -0.446517,
+            "raw_components": 1,
+            "render_components": 10
+          },
+          {
+            "hausdorff_m": 153093,
+            "symdiff_pct": 1.61346,
+            "area_delta_pct": -0.858427,
+            "raw_components": 1,
+            "render_components": 11
+          },
+          {
+            "hausdorff_m": 153093,
+            "symdiff_pct": 1.691557,
+            "area_delta_pct": -0.855273,
+            "raw_components": 2,
+            "render_components": 22
+          },
+          {
+            "hausdorff_m": 153093,
+            "symdiff_pct": 1.90251,
+            "area_delta_pct": -0.884864,
+            "raw_components": 2,
+            "render_components": 57
+          }
+        ],
+        "disposition": "SUCCESSOR_REVIEW_REQUIRED_KEEP_V081",
+        "reason": "All four slices exceed the D-119 35 km displacement trigger despite small area/symmetric-difference changes. Component growth is substantial, especially native 15830. Do not reuse automatically in a successor."
+      },
+      {
+        "target": "Western Han China",
+        "geometry_id": "81cb78c1-3b59-4c0a-b51f-f1c0d45bf866",
+        "source_native_id": "16040",
+        "interval": [
+          -125,
+          -110
+        ],
+        "current_policy": "cliopatria-qgis-natural-earth-v1",
+        "metrics": {
+          "hausdorff_m": 153093,
+          "symdiff_pct": 1.168884,
+          "area_delta_pct": -0.922094,
+          "raw_components": 2,
+          "render_components": 25
+        },
+        "scheduler_alternative": {
+          "policy": "cliopatria-boundary-normalization-v2",
+          "approx_hausdorff_m": 18200
+        },
+        "disposition": "COMPARATIVE_RE_REVIEW_V2_PROVISIONALLY_PREFERRED",
+        "reason": "Current QGIS render is a severe displacement outlier. Scheduler comparison found v2 near 18.2 km; successor substitution still requires visual/temporal-family review, especially Yellow Sea/Bohai and Korean-facing/lower-Yangtze coasts."
+      },
+      {
+        "target": "Roman Empire — early Principate 6–8 CE",
+        "geometry_id": "edb239a8-4d54-44e4-970a-affb7c9af22e",
+        "source_native_id": "16269",
+        "interval": [
+          6,
+          8
+        ],
+        "current_policy": "cliopatria-qgis-natural-earth-v1",
+        "metrics": {
+          "hausdorff_m": 92383.7,
+          "symdiff_pct": 3.790291,
+          "area_delta_pct": 0.354087,
+          "raw_components": 32,
+          "render_components": 104
+        },
+        "scheduler_alternative": {
+          "policy": "cliopatria-boundary-normalization-v3",
+          "approx_hausdorff_m": 15920
+        },
+        "disposition": "SUCCESSOR_CANDIDATE_V3_REQUIRES_COMPARATIVE_VISUAL_REVIEW",
+        "reason": "This is a two-axis outlier: displacement exceeds D-119 and topology spikes to 104 components. Neighboring v3 slices are materially less displaced; preserve v0.8.1 and review v3 in a successor."
+      }
+    ],
+    "corpus_wide_envelope_observation": {
+      "release": "v0.8.1",
+      "polygon_count": 39,
+      "hard_land_residual_fail_count": 0,
+      "maximum_render_outside_land_pct": 0.000032,
+      "hausdorff_review_trigger_count": 29,
+      "hausdorff_inside_gate_count": 10,
+      "max_hausdorff_m": 153203.2,
+      "symmetric_difference_over_5pct_count": 1,
+      "max_symmetric_difference_pct": 14.479327,
+      "absolute_area_delta_over_2pct_count": 1,
+      "max_absolute_area_delta_pct": 4.469099,
+      "component_count_change_count": 38,
+      "interpretation": "D-119 axes are diagnostics, not a weighted score. Existing v0.8.1 remains grandfathered. The widespread Hausdorff/component triggers show that successor reuse needs source-family/temporal-family and visual comparison; they must not be read as 29 automatically bad historical polygons. Baekje is the only frozen v0.8.1 polygon exceeding both the 5% symmetric-difference trigger and 2% absolute area-delta candidate gate.",
+      "successor_reuse_hausdorff_trigger_rows": [
+        {
+          "canonical_name": "Achaemenid Persis/Elam royal economy",
+          "geometry_id": "f8a44a0b-f574-4c55-b5b1-b1e803f78543",
+          "from_year": -529,
+          "to_year": -500,
+          "geometry_source_native_id": "15232",
+          "render_policy_id": "cliopatria-qgis-natural-earth-v1",
+          "hausdorff_m": "53501.7"
+        },
+        {
+          "canonical_name": "Achaemenid Persis/Elam royal economy",
+          "geometry_id": "34ff5048-242f-48a3-8fb2-5eca4dcd9a54",
+          "from_year": -499,
+          "to_year": -480,
+          "geometry_source_native_id": "15250",
+          "render_policy_id": "cliopatria-qgis-natural-earth-v1",
+          "hausdorff_m": "53501.7"
+        },
+        {
+          "canonical_name": "Baekje",
+          "geometry_id": "e5a720f8-9e22-45fe-a5b0-c6464686525d",
+          "from_year": 347,
+          "to_year": 391,
+          "geometry_source_native_id": "16698",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "49245.7"
+        },
+        {
+          "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+          "geometry_id": "93c03723-d03d-45fc-8611-a08a7506974f",
+          "from_year": -317,
+          "to_year": -315,
+          "geometry_source_native_id": "15465",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "137456.2"
+        },
+        {
+          "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+          "geometry_id": "958fa26b-0095-4448-9a64-4b27e44efd81",
+          "from_year": -314,
+          "to_year": -301,
+          "geometry_source_native_id": "15477",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "137456.2"
+        },
+        {
+          "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+          "geometry_id": "655c8ee3-0eb6-4706-9980-b4e0712dba84",
+          "from_year": -300,
+          "to_year": -291,
+          "geometry_source_native_id": "15505",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "137456.2"
+        },
+        {
+          "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+          "geometry_id": "82b2f32f-de79-4a5a-98e0-56db15321588",
+          "from_year": -290,
+          "to_year": -256,
+          "geometry_source_native_id": "15520",
+          "render_policy_id": "cliopatria-qgis-natural-earth-v1",
+          "hausdorff_m": "137456.2"
+        },
+        {
+          "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+          "geometry_id": "7dc611d1-4b29-4163-b723-0a597459d298",
+          "from_year": -255,
+          "to_year": -225,
+          "geometry_source_native_id": "15654",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "137024.2"
+        },
+        {
+          "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+          "geometry_id": "0d285ce0-adbf-45e5-a727-b5446a9c169c",
+          "from_year": -224,
+          "to_year": -188,
+          "geometry_source_native_id": "15743",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "61071.4"
+        },
+        {
+          "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+          "geometry_id": "204d6af3-1f0b-463c-a4a9-28c0991623f8",
+          "from_year": -187,
+          "to_year": -170,
+          "geometry_source_native_id": "15965",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "61071.4"
+        },
+        {
+          "canonical_name": "Neo-Babylonian Babylonia",
+          "geometry_id": "cf8cc7b3-0eb8-4f65-8e3b-091eb88dd87c",
+          "from_year": -599,
+          "to_year": -550,
+          "geometry_source_native_id": "15178",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "53501.7"
+        },
+        {
+          "canonical_name": "Neo-Babylonian Babylonia",
+          "geometry_id": "b5398faf-a447-4f67-a0c9-48c2cb2e33a9",
+          "from_year": -549,
+          "to_year": -540,
+          "geometry_source_native_id": "15219",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "53501.7"
+        },
+        {
+          "canonical_name": "Neo-Babylonian Babylonia",
+          "geometry_id": "62124dc0-f043-4c92-a463-e465d9fd6032",
+          "from_year": -539,
+          "to_year": -530,
+          "geometry_source_native_id": "15223",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "53501.7"
+        },
+        {
+          "canonical_name": "Qin Empire (221–209 BCE slice)",
+          "geometry_id": "14edab60-6475-4699-978c-f51aaccd34d5",
+          "from_year": -221,
+          "to_year": -218,
+          "geometry_source_native_id": "15778",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Qin Empire (221–209 BCE slice)",
+          "geometry_id": "db0512e0-e13d-4bdd-bbcd-a68bb5f1a2c2",
+          "from_year": -217,
+          "to_year": -212,
+          "geometry_source_native_id": "15789",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Qin Empire (221–209 BCE slice)",
+          "geometry_id": "0d0af02d-83bc-4f4e-a69d-d56d56326cd4",
+          "from_year": -211,
+          "to_year": -210,
+          "geometry_source_native_id": "15821",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Qin Empire (221–209 BCE slice)",
+          "geometry_id": "9abfabaa-3539-4c3e-95de-2e4452b2feb7",
+          "from_year": -209,
+          "to_year": -208,
+          "geometry_source_native_id": "15830",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Roman Empire — early Principate",
+          "geometry_id": "dce21f42-3e1a-4695-b036-4d20472a6ecb",
+          "from_year": 1,
+          "to_year": 5,
+          "geometry_source_native_id": "16261",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "92383.7"
+        },
+        {
+          "canonical_name": "Roman Empire — early Principate",
+          "geometry_id": "edb239a8-4d54-44e4-970a-affb7c9af22e",
+          "from_year": 6,
+          "to_year": 8,
+          "geometry_source_native_id": "16269",
+          "render_policy_id": "cliopatria-qgis-natural-earth-v1",
+          "hausdorff_m": "92383.7"
+        },
+        {
+          "canonical_name": "Roman Empire — early Principate",
+          "geometry_id": "7beb33fa-c063-4a12-9511-2542028730f7",
+          "from_year": 9,
+          "to_year": 13,
+          "geometry_source_native_id": "16272",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "92383.7"
+        },
+        {
+          "canonical_name": "Roman Empire — early Principate",
+          "geometry_id": "b3066705-616e-42c7-a50d-656c6926813c",
+          "from_year": 14,
+          "to_year": 22,
+          "geometry_source_native_id": "AWMC-ROMAN-EMPIRE-AD14-EXTENT",
+          "render_policy_id": null,
+          "hausdorff_m": "78136.3"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "26ccb13b-735a-43d2-b91d-dc829f124873",
+          "from_year": -201,
+          "to_year": -197,
+          "geometry_source_native_id": "15925",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "970789fe-8b57-473d-ad82-778d441e3ae5",
+          "from_year": -196,
+          "to_year": -126,
+          "geometry_source_native_id": "15942",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "81cb78c1-3b59-4c0a-b51f-f1c0d45bf866",
+          "from_year": -125,
+          "to_year": -110,
+          "geometry_source_native_id": "16040",
+          "render_policy_id": "cliopatria-qgis-natural-earth-v1",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "62dabec6-0cc5-4a9f-af7f-7a5caad1e009",
+          "from_year": -109,
+          "to_year": -91,
+          "geometry_source_native_id": "16064",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153203.2"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "102f2974-e240-4e23-bf91-256eee65a41d",
+          "from_year": -90,
+          "to_year": -77,
+          "geometry_source_native_id": "16073",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "f739083b-53a7-4b97-aad6-b9ddaa5af490",
+          "from_year": -76,
+          "to_year": -50,
+          "geometry_source_native_id": "16123",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "d1d6310e-ae50-4df4-9199-32781cfc5eb4",
+          "from_year": -49,
+          "to_year": -36,
+          "geometry_source_native_id": "16165",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        },
+        {
+          "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+          "geometry_id": "a00dc1d4-863d-4f85-b77f-a53a37f83b43",
+          "from_year": -35,
+          "to_year": 5,
+          "geometry_source_native_id": "16206",
+          "render_policy_id": "cliopatria-boundary-normalization-v3",
+          "hausdorff_m": "153093.0"
+        }
+      ]
+    }
+  },
+  "release_effect": "No mutation of v0.8.1. Complete successor claims may enter an explicit post-v0.8.1 release candidate; QC outliers require successor comparison before geometry reuse."
+}
