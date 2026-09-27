@@ -1,0 +1,57 @@
+{
+  "case_key": "overnight-2026-09-27/pakistan/bonded-labour-v2",
+  "spatial_entity": {
+    "canonical_name": "Pakistan",
+    "display_name": "Pakistan",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Reuses the existing reviewed spatial identity. The entity is an indexing/context unit; the reconciled claim below is limited to the documented subnational, sectoral, institutional or observed scope and does not imply uniform practice across the whole entity."
+  },
+  "claim": {
+    "from_year": 1990,
+    "to_year": 1999,
+    "date_text_original": "1990s evidence synthesized in ILO working paper published 2001",
+    "temporal_precision": "bounded_source_interval",
+    "temporal_certainty": "high",
+    "spatial_precision": "documented sectors including agriculture and brick kilns; country entity is index only",
+    "summary": "An ILO working paper documented continuing debt bondage in Pakistan during the 1990s despite national legislation banning the practice, including evidence from agriculture and brick kilns. The atlas records a positive debt-bondage claim for the 1990s without inferring a uniform national prevalence or practice polygon.",
+    "confidence": "high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Reconciles legacy claim 47e403f5-f44b-4ec1-a362-cdc01972dd1c into current post-M1 semantics. No new P-level is assigned. Legacy geometry 5aebf61e-cd1f-44e9-9495-b6f7969eeaeb is an explicit modern/navigation proxy and is not promoted as this claim's historical/practice inference extent.",
+    "territorial_practice": {
+      "practice_type_code": "debt_bondage",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_reconciled_post_m1",
+      "notes": "Positive bounded classification only. Do not infer national prevalence, uniform territorial distribution, legal status, or a country-wide practice polygon beyond what the evidence directly supports."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Bonded labour in Pakistan",
+        "author_or_institution": "Aly Ercelawn; Muhammad Nauman",
+        "source_type": "institutional_research_report",
+        "source_classification": "secondary",
+        "geographic_scope": "Pakistan; especially agriculture and brick-kiln bonded labour",
+        "temporal_scope": "1990s evidence; publication 2001",
+        "independence_notes": "ILO working paper synthesizing the continuing bonded-labour problem and legal framework; its internal examples are one evidence package for this claim.",
+        "reliability_limitations": "Supports persistence during the 1990s but not a uniform national prevalence estimate."
+      },
+      "version": {
+        "version_label": "ILO Working Paper no. 1, 2001; record 995328546502676",
+        "publication_year": 2001,
+        "url_or_identifier": "https://researchrepository.ilo.org/esploro/outputs/encyclopediaEntry/Bonded-labour-in-Pakistan/995328546502676",
+        "accessed_at": "2026-09-27T11:30:00Z"
+      },
+      "evidence_role": "claim-specific institutional research synthesis",
+      "independence_group": "ilo-pakistan-bonded-labour-2001",
+      "directness": "institutional field/research synthesis",
+      "direction": "supports",
+      "locator": null
+    }
+  ]
+}
