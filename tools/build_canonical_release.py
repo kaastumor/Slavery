@@ -119,8 +119,8 @@ def validate_spec(spec: dict[str, Any]) -> None:
     ):
         if authority.get(key) in (None, ""):
             raise ReleaseError(f"spec.authority.{key} is required")
-    if authority["decision"] != "D-109":
-        raise ReleaseError("Gate-4 release must be rooted in D-109 authority")
+    if authority["decision"] not in {"D-109", "D-115"}:
+        raise ReleaseError("unsupported canonical-release authority decision")
     if not isinstance(authority["expected_counts"], dict):
         raise ReleaseError("spec.authority.expected_counts must be an object")
 
@@ -178,8 +178,10 @@ def validate_authority(spec: dict[str, Any], path: Path) -> dict[str, Any]:
             release.get("canonical_predecessor_version"),
             spec["canonical_predecessor"]["version"],
         ),
-        "workbook_sha256": (
-            release.get("workbook_sha256"),
+        "canonical_predecessor_artifact_sha256": (
+            release.get("workbook_sha256")
+            if release.get("workbook_sha256") is not None
+            else release.get("canonical_predecessor_artifact_sha256"),
             spec["canonical_predecessor"]["sha256"],
         ),
         "reviewed_candidate_id": (
@@ -283,6 +285,67 @@ def release_md(spec: dict[str, Any], authority: dict[str, Any]) -> str:
     p = spec["canonical_predecessor"]
     a = spec["authority"]
     channel = spec["public_channel"]
+    if a["decision"] != "D-109":
+        return f"""# Historical Slavery Atlas data release {spec['release_version']}
+
+**Release contract:** {PACKAGE_CONTRACT}
+
+This directory contains the exact immutable package approved for canonical historical
+release. Canonical publication is recorded by the Decisions Log and
+`audit.release_manifest`; promotion must use these exact bytes without rewriting the
+package.
+
+## Authority
+
+The release is derived from the explicit {a['decision']} reviewed authority closure,
+not from every row currently present in PostgreSQL and not from `review_status` alone.
+
+- Authority decision: {a['decision']}
+- Authority decision commit: `{a['decision_commit']}`
+- Authority snapshot release: `{a['authority_release_version']}`
+- Schema head: `{spec['schema_version']}`
+- Membership SHA-256: `{a['membership_sha256']}`
+- Database-state SHA-256: `{a['database_state_sha256']}`
+- Authority bundle SHA-256: `{a['authority_bundle_sha256']}`
+
+Membership counts:
+
+- claims: {counts['claim_ids']}
+- actors: {counts['actor_ids']}
+- spatial entities: {counts['spatial_entity_ids']}
+- reviewed historical geometries: {counts['geometry_ids']}
+- voyages: {counts['voyage_ids']}
+- coverage assessments: {counts['coverage_assessment_ids']}
+- source versions: {counts['source_version_ids']}
+- research-target results: {counts['research_target_result_ids']}
+
+## Predecessor
+
+Canonical predecessor: `{p['version']}`
+
+Artifact: `{p['filename']}`
+
+SHA-256: `{p['sha256']}`
+
+The predecessor release remains immutable and is not overwritten by this release.
+
+## Review and publication boundary
+
+Internal research-target reviews represented: {spec['review']['internal_research_target_reviews']}.
+
+Independent historical reviews: **{spec['review']['independent_historical_reviews']}**.
+
+Creating this package does not move the public UI/API release channel. It remains
+`{channel['current_release']}` until a separate serving cutover passes.
+
+`authority-state.json` is a byte-for-byte preservation copy of the reviewed authority
+snapshot. `cartography-recovery-fingerprint.json` carries the D-108 portable
+cartography reconstruction invariant. These are preservation evidence and do not imply
+that unresolved geometry has become mapped.
+
+See `manifest.json`, `SHA256SUMS.txt`, the QC/unresolved-issues documents and the
+migration/reconciliation report for the complete release contract.
+"""
     return f"""# Historical Slavery Atlas data release {spec['release_version']}
 
 **Release contract:** {PACKAGE_CONTRACT}

@@ -1,0 +1,92 @@
+{
+  "release_version": "v0.8.0",
+  "release_date": "2026-09-27",
+  "schema_version": "0034",
+  "purpose": "canonical_historical_release",
+  "canonical": true,
+  "canonical_predecessor": {
+    "version": "v0.7.0",
+    "filename": "data/releases/v0.7.0/manifest.json",
+    "sha256": "f65964221cbe2045d75303a5940c75f4526e9110a2b2cf323a9d0979e2f5e57a"
+  },
+  "authority": {
+    "decision": "D-115",
+    "decision_commit": "66fe05593e25cf2793c16172534a4ef07a775909",
+    "authority_release_version": "v0.8.0-expansion-02-authority-v1",
+    "membership_sha256": "708f9f9d2a7cac185e17bfc3773fa1543d43f6fd7898529bff1583e08ffb6076",
+    "database_state_sha256": "3954fe4fb9b4e2f3d91915f90a142103963a07f12688ebebe39f91adaf3d2c89",
+    "reviewed_candidate_id": "atlas-expansion-01-complete-entry-selection",
+    "authority_bundle_sha256": "89f22a44ab70505c728f6e9c0a7d8591bd6b2b7ddd8c82b21a266c86fd265cb7",
+    "expected_counts": {
+      "actor_ids": 11,
+      "claim_ids": 75,
+      "coverage_assessment_ids": 99,
+      "geometry_ids": 46,
+      "research_target_result_ids": 26,
+      "source_version_ids": 294,
+      "spatial_entity_ids": 50,
+      "voyage_ids": 8
+    }
+  },
+  "review": {
+    "internal_research_target_reviews": 26,
+    "independent_historical_reviews": 0,
+    "reviewed_candidate_id": "atlas-expansion-01-complete-entry-selection",
+    "canonical_claim_count": 75
+  },
+  "public_channel": {
+    "current_release": "v0.7.0-public-mvp-v1",
+    "moved_by_release": false,
+    "gate_for_future_move": "v0.8.0 serving cutover"
+  },
+  "methodology_references": [
+    "docs/02_METHOD_AND_ONTOLOGY.md",
+    "docs/03_SOURCE_POLICY.md",
+    "docs/04_DATA_MODEL.md",
+    "docs/05_GEOGRAPHY_AND_MAP.md",
+    "docs/07_QC_AND_VERSIONING.md",
+    "docs/08_DECISIONS_LOG.md — D-108, D-114 and D-115",
+    "docs/11_SYSTEM_ARCHITECTURE.md",
+    "release/selections/v0.8.0-expansion-02.json"
+  ],
+  "changelog": [
+    "Extends canonical v0.7.0 by exact predecessor union rather than reviewed-row discovery.",
+    "Adds 35 complete reviewed territorial-practice claim states, bringing canonical membership to 75 total claims and 50 spatial entities.",
+    "Adds 46 exact reviewed and resolved historical geometry records while preserving unresolved geometry as explicit non-mapped state.",
+    "Includes reviewed disputed and date-disputed interpretations explicitly rather than silently normalizing disagreement away.",
+    "Preserves post-M1 practice_level as NULL; legacy P-levels remain historical compatibility metadata only on predecessor/direct-recovery rows.",
+    "Expands exact source-version closure from 211 to 294 while preserving claim-specific provenance and source-family dependence.",
+    "Retains the 12 unreconciled legacy research_prototype_reviewed rows outside this release until replayed under the current method.",
+    "Does not move the public UI/API release channel; serving cutover is a separate step."
+  ],
+  "qc_summary": [
+    "D-115 explicit complete-entry selection: PASS after correction of three reviewed-but-unresolved geometry placeholders.",
+    "Preservation-grade authority bundle validation: PASS.",
+    "v0.7.0 predecessor membership/object preservation: PASS with zero object drift.",
+    "Selected additions: 35 claims / 32 added spatial entities / 46 reviewed resolved geometries.",
+    "Canonical closure: 75 claims / 50 spatial entities / 46 geometries / 294 exact source versions.",
+    "All selected claims are reviewed territorial-practice claims with claim-level source evidence.",
+    "Post-M1 selected claims assign no new P0–P4 practice level.",
+    "Reviewed disputes/date disputes remain explicit classification state.",
+    "Unresolved geometry does not block complete claims and is not converted to an invented polygon.",
+    "Independent historical review remains exactly 0."
+  ],
+  "unresolved_issues": [
+    "Independent historical review has not yet been performed; independent review count remains 0.",
+    "Twelve legacy research_prototype_reviewed claims remain outside v0.8.0 pending current-method replay: Bolivia, Brazil, India, Mauritania, Myanmar, Mycenaean servile dependency, Nazi Germany, Nepal, Pakistan, Paraguay, Peru and Uzbekistan.",
+    "Some included complete claims retain unresolved historical geometry; these are released as evidence with geometry unresolved rather than mapped by proxy.",
+    "Legacy direct-recovery rows may retain historical P-level values from the pre-M1 model; v0.8.0 does not newly infer or recalculate those ordinals."
+  ],
+  "migration_summary": [
+    "No schema migration is introduced by v0.8.0; live schema remains 0034.",
+    "Canonical predecessor v0.7.0 remains immutable and is identified by exact manifest SHA-256.",
+    "The D-115 authority is an explicit union of immutable v0.7.0 membership plus exact selected additions and deterministic source/spatial dependency closure.",
+    "No reviewed-row query is used to discover release membership.",
+    "Historical geometry is release membership only when separately reviewed and resolved; unresolved geometry remains explicit research state.",
+    "Public serving promotion remains a separate compare-and-set release-channel operation after release and serving QC."
+  ],
+  "cartography_recovery": {
+    "decision": "D-108",
+    "fingerprint_sha256": "31df6f9c2dd2a53185b2363c81dfd99e0307e28ead8915c3829975a46135a197"
+  }
+}
