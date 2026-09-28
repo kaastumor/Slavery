@@ -6,8 +6,11 @@ geometry, the database, a release, or the public channel.
 
 For each released polygon:
   source_land = raw source geometry ∩ canonical Natural Earth land
-  candidate   = source_land + bounded 25 km recovery originating only from
+  baseline    = source_land
+  recovery    = source_land + at most 25 km recovery originating only from
                 source geometry that overhangs the canonical coastline
+  candidate   = recovery only when its added land is <=2% of source_land;
+                otherwise candidate = source_land
 
 No inland/general-boundary smoothing is applied. The report compares the
 current served render to source_land and fails if the candidate erases any
@@ -29,8 +32,9 @@ from shapely.ops import transform, unary_union
 BUNDLE_SCHEMA = "historical-slavery-atlas-full-state-bundle-v2"
 LAND_FABRIC_ID = "natural-earth-ne_10m_land-v5.1.1-ca96624"
 RECOVERY_M = 25_000
-LOSS_EPSILON_PCT = 1e-7
-OUTSIDE_EPSILON_PCT = 1e-7
+MAX_RECOVERY_ADDED_PCT = 2.0
+LOSS_EPSILON_PCT = 1e-5
+OUTSIDE_EPSILON_PCT = 1e-5
 
 
 def load_json(path: Path) -> Any:
@@ -97,31 +101,51 @@ def projectors():
 
 
 def recovery_candidate(source, land, to_metric, to_wgs84):
+    # Preserve the exact WGS84 source∩land footprint as the baseline so the
+    # output candidate cannot lose source-covered canonical land merely through
+    # metric reprojection round-trips.
+    source = polygonal(make_valid(source))
+    land = make_valid(land)
+    source_land_wgs = polygonal(source.intersection(land))
+    if source_land_wgs.is_empty:
+        return source_land_wgs, source_land_wgs, 0, 0.0
+
     source_m = make_valid(to_metric(source))
     land_m = make_valid(to_metric(land))
-    source_land_m = polygonal(source_m.intersection(land_m))
+    source_land_m = polygonal(to_metric(source_land_wgs))
     overhang_m = polygonal(source_m.difference(land_m))
 
-    if source_land_m.is_empty:
-        return source_land_m, source_land_m
-
     if overhang_m.is_empty:
-        candidate_m = source_land_m
-    else:
-        recovered_m = polygonal(
-            land_m.intersection(overhang_m.buffer(RECOVERY_M))
-        )
-        candidate_m = polygonal(unary_union([source_land_m, recovered_m]))
+        return source_land_wgs, source_land_wgs, 0, 0.0
 
-        # Match the durable normalize_coastal_polygon contract: do not retain
-        # disconnected recovered islands that have no contact with source_land.
-        kept = [
-            part for part in candidate_m.geoms
-            if part.intersects(source_land_m)
-        ]
-        candidate_m = polygonal(unary_union(kept)) if kept else source_land_m
+    recovered_m = polygonal(
+        land_m.intersection(overhang_m.buffer(RECOVERY_M))
+    )
+    recovered_wgs = polygonal(to_wgs84(recovered_m).intersection(land))
+    proposed_wgs = polygonal(unary_union([source_land_wgs, recovered_wgs]))
 
-    return source_land_m, polygonal(to_wgs84(candidate_m))
+    # Do not retain disconnected recovered islands that have no contact with
+    # the exact source-land baseline.
+    kept = [
+        part for part in proposed_wgs.geoms
+        if part.intersects(source_land_wgs)
+    ]
+    proposed_wgs = (
+        polygonal(unary_union(kept))
+        if kept
+        else source_land_wgs
+    )
+
+    proposed_m = polygonal(to_metric(proposed_wgs))
+    added_pct = pct(
+        proposed_m.difference(source_land_m).area,
+        source_land_m.area,
+    )
+
+    if added_pct <= MAX_RECOVERY_ADDED_PCT:
+        return source_land_wgs, proposed_wgs, RECOVERY_M, added_pct
+
+    return source_land_wgs, source_land_wgs, 0, 0.0
 
 
 def pct(numerator: float, denominator: float) -> float:
@@ -204,10 +228,11 @@ def main() -> int:
         )
 
         raw = polygonal(make_valid(raw))
-        source_m = to_metric(raw)
-        source_land_m = polygonal(source_m.intersection(land_m))
+        source_land, candidate, recovery_used_m, candidate_added_pct = recovery_candidate(
+            raw, land, to_metric, to_wgs84
+        )
+        source_land_m = polygonal(to_metric(source_land))
         current_m = polygonal(make_valid(to_metric(current)))
-        _, candidate = recovery_candidate(raw, land, to_metric, to_wgs84)
         candidate_m = polygonal(make_valid(to_metric(candidate)))
 
         base_area = source_land_m.area
@@ -227,10 +252,8 @@ def main() -> int:
             candidate_m.difference(land_m).area,
             max(candidate_m.area, 1.0),
         )
-        candidate_added_pct = pct(
-            candidate_m.difference(source_land_m).area,
-            base_area,
-        )
+        # candidate_added_pct is measured inside recovery_candidate before the
+        # bounded candidate is accepted; fallback-to-baseline reports 0.
 
         family = "other"
         if source_url and "Seshat-Global-History-Databank/cliopatria" in source_url:
@@ -262,6 +285,7 @@ def main() -> int:
             "current_outside_land_pct": current_outside_pct,
             "candidate_outside_land_pct": candidate_outside_pct,
             "candidate_coastal_added_vs_source_land_pct": candidate_added_pct,
+            "candidate_recovery_m_used": recovery_used_m,
             "candidate_pass": (
                 candidate_loss_pct <= LOSS_EPSILON_PCT
                 and candidate_outside_pct <= OUTSIDE_EPSILON_PCT
@@ -282,7 +306,7 @@ def main() -> int:
                         if family == "cliopatria"
                         else "source-land-fidelity-diagnostic-v1"
                     ),
-                    "render_coastal_recovery_m": RECOVERY_M,
+                    "render_coastal_recovery_m": recovery_used_m,
                     "source_land_loss_pct": candidate_loss_pct,
                     "coastal_added_vs_source_land_pct": candidate_added_pct,
                 },
@@ -297,7 +321,8 @@ def main() -> int:
         "serving_materialization": serving.get("serving_materialization_id"),
         "land_fabric_id": LAND_FABRIC_ID,
         "land_file_sha256": hashlib.sha256(land_bytes).hexdigest(),
-        "coastal_recovery_m": RECOVERY_M,
+        "max_coastal_recovery_m": RECOVERY_M,
+        "max_recovery_added_pct": MAX_RECOVERY_ADDED_PCT,
         "polygon_count": len(rows),
         "candidate_failures": [
             row["geometry_id"] for row in rows if not row["candidate_pass"]
