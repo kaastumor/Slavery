@@ -22,9 +22,13 @@ async function main() {
     await page.locator("#release-badge").waitFor({ state: "visible", timeout: 15_000 });
 
     const badge = (await page.locator("#release-badge").innerText()).trim();
+    const badgeTitle = (await page.locator("#release-badge").getAttribute("title")) || "";
     const status = (await page.locator("#status").innerText()).trim();
-    if (!badge.includes("v0.8.0")) {
-      failures.push("current canonical root does not expose v0.8.0 release identity: " + badge);
+    if (badge !== "v0.8.1") {
+      failures.push("current canonical root does not expose exact v0.8.1 release identity: " + badge);
+    }
+    if (!badgeTitle.split(" · ").includes("serving adapter v0.8.1-public-mvp-v1")) {
+      failures.push("current canonical root does not expose v0.8.1-public-mvp-v1 serving adapter: " + badgeTitle);
     }
     if (badge.includes("candidate") || badge.includes("non-canonical") || badge.includes("preview")) {
       failures.push("current canonical root still presents a candidate/preview boundary: " + badge);
