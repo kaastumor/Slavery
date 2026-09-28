@@ -1,0 +1,243 @@
+{
+  "schema": "historical-slavery-atlas-overnight-2026-09-28-reconciliation-v1",
+  "date": "2026-09-28",
+  "canonical_at_start": {
+    "github_main_head": "bb781d660c679366cc3a5a59bec22485e6c83b7c",
+    "canonical_release": "v0.8.1",
+    "public_serving": "v0.8.1-public-mvp-v1",
+    "live_research_state": {
+      "claims": 104,
+      "spatial_entities": 63,
+      "resolved_geometries": 60,
+      "ingested_research_cases": 22
+    }
+  },
+  "workers": {
+    "expansion": {
+      "automation": "Atlas Hourly Expansion",
+      "last_run_utc": "2026-09-28T09:45:33.536812Z",
+      "enabled": true
+    },
+    "geometry_resolution": {
+      "automation": "Atlas Geometry Resolution Hourly",
+      "last_run_utc": "2026-09-28T08:59:26.029033Z",
+      "enabled": true
+    },
+    "geometry_qc": {
+      "automation": "Atlas Geometry QC Hourly",
+      "last_run_utc": "2026-09-28T09:52:44.120405Z",
+      "enabled": true
+    }
+  },
+  "already_reconciled_before_this_inventory": {
+    "prs": [
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355
+    ],
+    "geometry_qc_decisions": [
+      "D-119",
+      "D-120"
+    ],
+    "successor_claim_selection": "release/selections/v0.8.2-post-overnight-claims.json",
+    "note": "These PRs reconcile the earlier overnight and post-overnight packets through the D-120 successor-geometry review. This inventory captures later scheduler work not yet landed on main."
+  },
+  "pending_expansion_packets": [
+    {
+      "target": "Tōdai-ji",
+      "disposition": "REVIEW_EXISTING_PACKAGE_ONLY",
+      "summary": "751/756 nuhi register packet confirms the existing reviewed institution-level claim and UNESCO 870-001 point; no duplicate claim."
+    },
+    {
+      "target": "Aksum / ʿEzana",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "slug": "aksum-ezana-fourth-century-captivity-resettlement",
+      "summary": "Fourth-century war captivity/coerced resettlement; RIÉ 188 and RIÉ 185/185bis plus specialist synthesis; slavery equivalence qualified; territorial extent unresolved."
+    },
+    {
+      "target": "Meroitic Kush / Hamadab",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "slug": "meroitic-kush-hamadab-late-first-century-bce-war-captivity",
+      "summary": "Late-first-century-BCE war-captivity evidence; REM 1003/EA1650 secure captive evidence, REM 1039 enslavement reading conditional; no Kush-wide polygon."
+    },
+    {
+      "target": "Goryeo",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "summary": "956–987 nobi status regulation; current-method classification required; geometry independent."
+    },
+    {
+      "target": "Old Kingdom Egypt / Sneferu",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "summary": "Nubian captives in Sneferu-period royal-annal context, ca. 26th century BCE; bounded captivity evidence."
+    },
+    {
+      "target": "Dahomey / Abomey–Ouidah",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "summary": "ca. 1715–1850 captive supply/slave trade; territorial practice, external network and loci must remain separate."
+    },
+    {
+      "target": "Mexica / Aztec tlacotin",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "summary": "ca. 1450–1521 slavery/unfreedom; terminology and status category require qualified mapping."
+    },
+    {
+      "target": "Asante",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "summary": "1807–1896 internal slavery/pawnship labour-system evidence; territorial geometry unresolved."
+    },
+    {
+      "target": "Angkorian Khmer",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "summary": "ca. 900–1250 khñum temple dependency/slavery; category equivalence qualified; territorial extent unresolved."
+    },
+    {
+      "target": "Mali under Mansa Sulayman",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "summary": "1352–1353 court slavery and approximately 300 enslaved military retainers; court locus unresolved."
+    },
+    {
+      "target": "Taghaza",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "summary": "1352 enslaved Massufa salt-mining labour; site locus strongly resolvable, exact geometry pending."
+    },
+    {
+      "target": "Inca / Tawantinsuyu",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "summary": "yana/yanacona permanent/asymmetric dependency; one-to-one slavery equivalence disputed; Machu Picchu locus eligible, territorial extent unresolved."
+    },
+    {
+      "target": "Chosŏn Korea",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "summary": "nobi 1731–1801; strong severe dependency/slavery evidence with qualified equivalence; 1731 maternal-status reform and 1801 government-nobi emancipation; geometry unresolved."
+    },
+    {
+      "target": "Ngāpuhi / Bay of Islands",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "summary": "ca. 1814–1837 taurekareka war-captive slavery and 1820s commercial intensification; regional extent unresolved."
+    },
+    {
+      "target": "Bukhara",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "summary": "ca. 1820 Persian/Shiʿi slavery, urban market/labour and wider network; exact Meyendorff edition/market locus unresolved; UNESCO city locus context only."
+    },
+    {
+      "target": "Sitka / Tlingit",
+      "disposition": "NEW_CURRENT_METHOD_EVIDENCE_PACKET",
+      "summary": "April–May 1886 Sah Quah case; individual enslavement and local institution supported by In re Sah Quah; Sitka event/custody locus resolvable; territorial extent unresolved."
+    }
+  ],
+  "pending_geometry_resolution_packets": [
+    {
+      "target": "Silla four-village register",
+      "disposition": "PARTIAL_LOCUS_RESOLUTION_ONLY",
+      "summary": "Aggregate remains unresolved; candidate village/locality loci A–D identified, with Chojŏng-ri/Naesu-eup strongest for D. No aggregate polygon."
+    },
+    {
+      "target": "Middle Ganga Valley",
+      "disposition": "REMAIN_UNRESOLVED",
+      "summary": "Analytical region; no polity, modern-state, basin, bounding-box or hand-drawn proxy justified."
+    },
+    {
+      "target": "Sasanian Iran",
+      "disposition": "SOURCE_FAMILY_REVIEWED_PENDING_EXACT_ROW_FREEZE",
+      "summary": "Pinned Cliopatria POLITY time-slices identified; exact source-native rows and successor QC required before geometry promotion."
+    },
+    {
+      "target": "Aksum",
+      "disposition": "SOURCE_FAMILY_REVIEWED_PENDING_EXACT_ROW_FREEZE",
+      "summary": "Cliopatria POLITY source family and Seshat chronology cross-check identified; modern Ethiopia/Eritrea proxy rejected."
+    },
+    {
+      "target": "Punic/Carthage",
+      "disposition": "SOURCE_FAMILY_REVIEWED_PENDING_EXACT_ROW_FREEZE",
+      "summary": "Historical polity geometry candidate; exact source-native identity and temporal fit must be frozen before use."
+    },
+    {
+      "target": "Late-antique Bactria",
+      "disposition": "SOURCE_FAMILY_REVIEWED_PENDING_EXACT_ROW_FREEZE",
+      "summary": "Historical geometry candidate under pinned source family; exact row/temporal QC pending."
+    },
+    {
+      "target": "Sogdiana",
+      "disposition": "SOURCE_FAMILY_REVIEWED_PENDING_EXACT_ROW_FREEZE",
+      "summary": "Historical geometry candidate under pinned source family; exact row/temporal QC pending."
+    },
+    {
+      "target": "Saite Egypt / Twenty-Sixth Dynasty",
+      "disposition": "BOUNDED_POLITY_CANDIDATE",
+      "summary": "Pinned Cliopatria POLITY candidate for 664–525 BCE; broader Late Period aggregate must not be collapsed into one polygon."
+    },
+    {
+      "target": "Pre-Angkor Cambodia / Chenla",
+      "disposition": "SITE_LOCUS_ELIGIBLE_TERRITORY_UNRESOLVED",
+      "summary": "Sambor Prei Kuk / Ishanapura UNESCO WHC 1532 archaeological locus; Chenla territorial polygon unresolved."
+    },
+    {
+      "target": "Pre-Islamic South Arabia",
+      "disposition": "SITE_LOCUS_ELIGIBLE_REGION_UNRESOLVED",
+      "summary": "Sirwah UNESCO WHC 1700-007 locus for RES 3945; regional aggregate unresolved."
+    },
+    {
+      "target": "Zaghāwa",
+      "disposition": "REMAIN_UNRESOLVED",
+      "summary": "Eighth-century captive-export network/aggregate region; no defensible territorial polygon."
+    },
+    {
+      "target": "Neo-Babylonian temple households",
+      "disposition": "INSTITUTIONAL_LOCI_CONDITIONAL",
+      "summary": "Institutional context unresolved at aggregate level; Sippar/Uruk loci only if directly supported by the claim source."
+    },
+    {
+      "target": "Opone",
+      "disposition": "APPROXIMATE_HISTORICAL_POINT_CANDIDATE",
+      "summary": "Schoff 1912 Periplus §13 gives 10°25′N 51°25′E = POINT(51.4166667 10.4166667); network/port node only, not territorial extent."
+    },
+    {
+      "target": "Garshana construction project",
+      "disposition": "REMAIN_UNRESOLVED",
+      "summary": "Exact site unknown; constrained to Umma province west of Umma and probably nearer Zabalam. No point/polygon/proxy."
+    }
+  ],
+  "corpus_wide_qc_followup": {
+    "governing_decisions": [
+      "D-119",
+      "D-120"
+    ],
+    "accepted_successor_geometry_review": {
+      "polygon_count": 39,
+      "corrected_rows_requiring_focused_review": 6,
+      "unchanged_polygon_reuse_count": 33,
+      "substitutions": [
+        "Achaemenid Persis/Elam slice f8a44a0b-f574-4c55-b5b1-b1e803f78543 -> boundary-normalization-v2",
+        "Achaemenid Persis/Elam slice 34ff5048-242f-48a3-8fb2-5eca4dcd9a54 -> boundary-normalization-v2",
+        "Mauryan slice 82b2f32f-de79-4a5a-98e0-56db15321588 -> boundary-normalization-v2",
+        "Roman Empire 6–8 CE edb239a8-4d54-44e4-970a-affb7c9af22e -> boundary-normalization-v3",
+        "Western Han 125–110 BCE 81cb78c1-3b59-4c0a-b51f-f1c0d45bf866 -> boundary-normalization-v3"
+      ],
+      "bounded_override": "Baekje e5a720f8-9e22-45fe-a5b0-c6464686525d retains v3 under documented coastline/topology override"
+    },
+    "overnight_additional_findings": {
+      "temporal_transition_audit": "30/30 published multi-slice transitions contiguous; 0 gaps and 0 overlaps.",
+      "native_to_atlas_translation": "10/10 mechanically recoverable native intervals translated correctly; no demonstrated date-shift errors.",
+      "source_binding_audit": "38 released Cliopatria polygons checked; no demonstrated wrong-feature attachment or misbinding.",
+      "remaining_provenance_gaps": [
+        "source-feature/native-ID uniqueness is not yet frozen/enforced corpus-wide",
+        "exact raw-record/row ordinal and feature checksum binding is not frozen for all Cliopatria geometries",
+        "structured source-native interval bounds are incomplete for some rows even though current translated intervals tested correctly"
+      ],
+      "required_processing_disposition": "Do not mutate v0.8.1. Extend successor QC/provenance contract before v0.8.2 authority freeze so each reused/substituted Cliopatria geometry is bound to exact source feature identity and source-native interval provenance."
+    }
+  },
+  "processing_order": [
+    "1. Canonicalize this inventory and freeze the pending packet set so no scheduled work is lost or duplicated.",
+    "2. Convert complete expansion packets into current-method reviewed/unpublished packages, deduplicating against existing Aksum/Tōdai-ji and other accepted state.",
+    "3. Resolve only defensible geometry candidates; keep analytical aggregates and uncertain sites unresolved.",
+    "4. Extend the successor geometry QC/provenance envelope for exact source-feature identity and native temporal provenance before v0.8.2 authority freeze.",
+    "5. Re-run source/dependency/geometry/serving QC, then supersede the current v0.8.2 selection only with exact accepted additions."
+  ],
+  "release_effect": "None yet. v0.8.1 and its public serving materialization remain immutable while this overnight tranche is reconciled."
+}
