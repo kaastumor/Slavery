@@ -1,0 +1,53 @@
+name: source-land-fidelity
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - tools/build_source_land_fidelity_candidates.py
+      - db/migrations/0035_cliopatria_source_land_fidelity_render.sql
+      - .github/workflows/source-land-fidelity.yml
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install geometry dependencies
+        run: python -m pip install "shapely==2.1.2" "pyproj==3.7.2"
+      - name: Download exact canonical Natural Earth land fabric
+        run: |
+          python - <<'PY'
+          import hashlib
+          import urllib.request
+          from pathlib import Path
+
+          url="https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson"
+          out=Path("/tmp/ne_10m_land.geojson")
+          urllib.request.urlretrieve(url,out)
+          digest=hashlib.sha256(out.read_bytes()).hexdigest()
+          expected="1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416"
+          print("land sha256",digest)
+          assert digest == expected, (digest,expected)
+          PY
+      - name: Build source-land fidelity candidates
+        run: |
+          python tools/build_source_land_fidelity_candidates.py \
+            --land /tmp/ne_10m_land.geojson \
+            --output-dir /tmp/source-land-fidelity
+      - name: Upload review evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-land-fidelity-${{ github.sha }}
+          path: /tmp/source-land-fidelity/**
+          if-no-files-found: error
+          retention-days: 14
