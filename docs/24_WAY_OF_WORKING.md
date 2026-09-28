@@ -105,8 +105,8 @@ A delivery item is done when:
 - relevant focused tests and sanitation pass;
 - normal CI is green;
 - provenance/reproducibility metadata is preserved where material;
-- PR is merged with explicit scoped authorization; otherwise the worker reports READY_FOR_REVIEW and issue acceptance remains pending;
-- issue is closed;
+- PR is merged with explicit scoped authorization; otherwise the worker reports READY_FOR_REVIEW and delivery acceptance remains pending;
+- the owning issue reflects its own acceptance state; a partial delivery may merge while the issue remains open;
 - canonical project state is reconciled only when evidence actually changed it;
 - `BACKLOG.md` and the active checkpoint agree before merge when priority/progress changed;
 - summary files are updated only for a material milestone and link back to the canonical owner rather than duplicating the exact next action.
@@ -451,9 +451,11 @@ do not return full worker transcripts to the coordinator.
 - Use one retry for a transient operation (two attempts total), within the same timebox.
   Missing permissions/tools/required evidence stop that operation immediately. Inspect
   durable state before retrying an ambiguous write. Never repeat an impossible operation.
-- Repeated identical failure on two successive runs blocks that lane pending a changed
-  prerequisite; emit one actionable notice. Record the block in durable state so future
-  invocations do only the eligibility check. Do not autonomously rewrite/disable schedules.
+- A known non-transient prerequisite blocks its operation immediately. Use a permitted
+  handoff or separately eligible work if available; otherwise block the lane until the
+  prerequisite changes. Two identical initially ambiguous failures on successive runs
+  also block the lane. Emit one actionable notice and record the block in durable state
+  so future invocations do only the eligibility check. Do not autonomously rewrite/disable schedules.
 - Before new intake, inspect pending results and consumer acknowledgments. Deduplicate
   on repository, lane, task ID, input revision and contract version, with a separate attempt
   ID. Revalidate stale inputs before application. Unknown pending state is a recovery gate,

@@ -61,8 +61,10 @@ constraints and exact filled contract. A link alone is insufficient if files are
 8. Checkpoint before the timebox expires. Report partial work, unavailable access, skipped
    checks and usage uncertainty honestly. Time spent does not prove progress.
 9. At most one retry for transient failures; no retry for missing permission or prerequisite.
-   Inspect state before retrying ambiguous writes. The same failure on two consecutive runs
-   blocks the lane until a prerequisite changes; record it and notify once.
+   Inspect state before retrying ambiguous writes. A known non-transient prerequisite blocks
+   its operation immediately. Use a permitted handoff or separately eligible work; if none
+   remains, block the lane until it changes. Two identical initially ambiguous failures on
+   successive runs also block the lane; record the block and notify once.
 10. Return a bounded completion receipt with evidence, verification, input/output refs,
     limitations, actual elapsed/usage (UNKNOWN if unavailable), disposition and next step.
     A pending handoff is not canonical acceptance. Use completion notices, not worker polling.
