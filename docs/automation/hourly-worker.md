@@ -14,12 +14,39 @@ authorization; a green PR is READY_FOR_REVIEW, not automatic permission to merge
 Repository: `kaastumor/Slavery`. Active issue and next action: root `BACKLOG.md`.
 WIP: one active priority across workers. Operating rules: D-090, D-091, D-092, D-096.
 
+## Verified autonomous handoff
+
+Use one designated executor for the current WIP. Prefer that executor to read the
+input, execute the bounded task, save the result and verify its durable receipt.
+Separate producers require a working consumer and approved delivery route first.
+Keep issues/PRs/BACKLOG as owners; do not introduce another queue.
+
+A comment/readback test proves only that operation. Verify branch/PR writes, local
+execution, browser observations and private persistence when the selected task
+requires them. A prompt cannot grant access, select a model or enforce a budget.
+Test one real existing-result handoff and one substantive recovery cycle before
+claiming end-to-end operation. Use the scheduled-task contract for activation and
+cost review; timer activation alone is not acceptance.
+
+A new explicit sponsor-authorized contract may replace a historical campaign's
+read-only envelope. Actual permission or automatic-approval denial still stops the
+affected operation: never switch tools, credentials or destinations to evade it.
+Without a permitted durable route, stop new intake and report the capability gap.
+
+Resume pending results before producing another. Record exact task/input/output
+revision and a separate attempt identity; verify saved bytes or readback and the
+consumer disposition. Receipt is not substantive acceptance. Default new
+unacknowledged-output capacity is one; unknown legacy backlog blocks new intake,
+not explicitly selected recovery of an existing item. Inspect open work and its
+latest checkpoint before treating stale main/PR text as unfinished execution.
+
 ## Scheduled execution boundary
 
 Scheduled workers treat GitHub as read-only whenever their execution credential cannot
 write. If an approved durable packet route is available, they may complete bounded
 research, reconciliation or QC and emit one `GITHUB_RECONCILIATION_PENDING` packet
-instead of repeatedly attempting the same impossible mutation. If no durable route is
+instead of repeatedly attempting the same impossible mutation. This fallback is
+valid only when a designated permitted consumer can actually process the route. If no durable route is
 available, stop new intake and report that prerequisite; do not treat missing GitHub
 write permission alone as a substantive project block.
 
@@ -34,9 +61,12 @@ to verify and land it without reconstructing chat or scheduler history:
 - intended repository/database changes, checks and release effect;
 - a stable packet identity or content fingerprint when available.
 
-Interactive reconciliation owns any repository, database, release or public-channel
-mutation. It must compare the packet with current `main`, open work and live authority,
-then apply ordinary evidence/review gates. Already-complete pending packets are not
+The designated consumer owns reconciliation. With explicit scoped sponsor
+authorization and verified capability, it may be interactive or scheduled for
+repository evidence and reviewable PR work. It must compare the packet with current
+`main`, open work and live authority, then apply ordinary evidence/review gates.
+Database, release and public-channel mutations retain their separate authorization
+gates; receipt alone never authorizes them. Already-complete pending packets are not
 reissued or reprocessed merely because the scheduled worker runs again. A genuine
 evidence, source, credential or safety gate may still be reported as `BLOCKED`; lack of
 scheduled GitHub write permission alone may not.
