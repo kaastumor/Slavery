@@ -1,6 +1,6 @@
 # Historical Slavery Atlas — Backlog
 
-**Updated:** 2026-09-27  
+**Updated:** 2026-09-28
 **Role:** canonical execution queue only; assumptions/risks/value evidence live in `docs/25_PROJECT_HEALTH.md`  
 **Canonical research authority:** PostgreSQL/PostGIS, explicit governed membership under D-109  
 **Canonical historical data release:** `v0.8.1`  
@@ -15,7 +15,7 @@ This file answers **what is justified to work on next**.
 # CURRENT MODE — EXECUTION / CONSOLIDATION — ATLAS EXPANSION 01 (#332)
 
 **Gate 0→5 canonicalization programme:** **COMPLETE**  
-**Canonical historical data release:** `v0.7.0`  
+**Canonical historical data release:** `v0.8.1`
 **Live schema head:** `0034`  
 **Public serving adapter:** `v0.8.1-public-mvp-v1`  
 **Independent historical review:** 0  
@@ -49,6 +49,23 @@ outside-land tolerance. D-117 replaces only the Roman 14–22 CE slice with the 
 AWMC-derived specialist geometry.
 
 Active expansion continues through #332 and the hourly evidence/geometry lanes.
+
+**2026-09-28 successor authority checkpoint:**
+- the v0.8.2 selection is `HOLD_PENDING_D121_PROVENANCE_CLOSURE` in
+  [the frozen successor selection](release/selections/v0.8.2-post-overnight-claims.json);
+- Gate A requires both an authorized database-read/export path and D-121 exact
+  source-feature/native-ID plus source-native temporal provenance closure for
+  inherited/reused structured geometry;
+- the one-shot authority freeze (Actions run 36410710261) stopped with HTTP 403
+  `Missing required permission(s): database_read`; no authority bundle was produced;
+- D-120 cartographic acceptance remains intact, but it does not satisfy D-121;
+- #360 owns post-v0.8.2 scheduled-candidate intake planning and remains dependent on
+  this gate; #332 remains the sole active priority.
+
+This checkpoint reconciles the accepted D-121 decision and the latest #332 result.
+It does not widen credentials, clear either gate, publish a successor, or change
+PostgreSQL, immutable v0.8.1, or the public serving channel.
+
 
 **2026-09-27 scheduler reconciliation checkpoint:**
 - the 10 current-method successor packages from the overnight evidence worker are merged
@@ -219,4 +236,3 @@ The completed Gate-0→Gate-5 programme does **not** authorize:
 - another experiment merely because there is no active WIP.
 
 The current state is **sponsor-authorized Atlas expansion with one coordinated evidence/geometry WIP (#332)**.
-
