@@ -3,6 +3,32 @@
 Repository: `kaastumor/Slavery`. Active issue and next action: root `BACKLOG.md`.
 WIP: one active priority across workers. Operating rules: D-090, D-091, D-092, D-096.
 
+## Scheduled execution boundary
+
+Scheduled workers treat GitHub as read-only whenever their execution credential cannot
+write. They still complete the bounded research, reconciliation or QC task and emit one
+complete `GITHUB_RECONCILIATION_PENDING` packet instead of repeatedly attempting the
+same impossible mutation, disabling productive work or treating permission failure as
+a substantive project block.
+
+Each pending packet must preserve enough information for an interactive Codex session
+to verify and land it without reconstructing chat or scheduler history:
+
+- worker lane, run time and canonical Git head/release observed at start;
+- exact target, temporal/spatial scope and proposed disposition;
+- exact sources/versions/locators and dependency or independence notes;
+- claim, geometry and publication boundaries, including uncertainty/HOLD state;
+- deduplication comparison against accepted repository and database state;
+- intended repository/database changes, checks and release effect;
+- a stable packet identity or content fingerprint when available.
+
+Interactive reconciliation owns any repository, database, release or public-channel
+mutation. It must compare the packet with current `main`, open work and live authority,
+then apply ordinary evidence/review gates. Already-complete pending packets are not
+reissued or reprocessed merely because the scheduled worker runs again. A genuine
+evidence, source, credential or safety gate may still be reported as `BLOCKED`; lack of
+scheduled GitHub write permission alone may not.
+
 ## Entry and execution
 
 1. Inspect current main, open PRs/issues and CI. Resume existing work before opening

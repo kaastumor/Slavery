@@ -55,9 +55,14 @@ def load_selection(path: Path) -> dict[str, Any]:
     data = load_json(path)
     if data.get("selection_schema") != SELECTION_SCHEMA:
         raise SuccessorAuthorityError("unsupported successor selection schema")
+    blockers = data.get("release_blockers")
     if data.get("status") != "RELEASE_READY_PENDING_AUTHORITY_FREEZE":
-        raise SuccessorAuthorityError("selection is not ready for authority freeze")
-    if data.get("release_ready") is not True or data.get("release_blockers") != []:
+        detail = "; ".join(str(item) for item in blockers or [])
+        suffix = f": {detail}" if detail else ""
+        raise SuccessorAuthorityError(
+            f"selection is not ready for authority freeze{suffix}"
+        )
+    if data.get("release_ready") is not True or blockers != []:
         raise SuccessorAuthorityError("selection still has release blockers")
 
     predecessor = data.get("canonical_predecessor")
@@ -88,9 +93,19 @@ def load_selection(path: Path) -> dict[str, Any]:
     if geometry_policy.get("modern_country_proxy_as_practice_extent_forbidden") is not True:
         raise SuccessorAuthorityError("modern country proxy practice extent is not forbidden")
     if geometry_policy.get("inherited_geometry_reuse_status") != (
-        "CLEARED_BY_D120_SUCCESSOR_REVIEW"
+        "CLEARED_BY_D121_EXACT_PROVENANCE_REVIEW"
     ):
-        raise SuccessorAuthorityError("D-120 successor geometry review is not cleared")
+        raise SuccessorAuthorityError(
+            "D-121 exact geometry provenance review is not cleared"
+        )
+    if geometry_policy.get("d121_provenance_policy_path") != (
+        "config/cartography/corpus_geometry_qc_envelope_v3.json"
+    ):
+        raise SuccessorAuthorityError("D-121 provenance policy path is not pinned")
+    if geometry_policy.get("d121_provenance_status") != (
+        "CLOSED_EXACT_SOURCE_FEATURE_AND_NATIVE_TIME_BINDING"
+    ):
+        raise SuccessorAuthorityError("D-121 provenance closure is not recorded")
 
     correction = data.get("predecessor_object_correction_required")
     if not isinstance(correction, dict):
@@ -129,6 +144,10 @@ def load_selection(path: Path) -> dict[str, Any]:
     ):
         if rules.get(key) is not True:
             raise SuccessorAuthorityError(f"selection rule {key} is not asserted")
+    if rules.get("geometry_successor_review_decision") != "D-120":
+        raise SuccessorAuthorityError("D-120 geometry review decision is not pinned")
+    if rules.get("geometry_successor_provenance_decision") != "D-121":
+        raise SuccessorAuthorityError("D-121 provenance decision is not pinned")
     return data
 
 
@@ -429,7 +448,8 @@ def build_authority(
         "qc_summary": (
             "Explicit membership only; selected claims are reviewed, source-backed, "
             "unpublished research rows with practice_level=NULL; no new practice-extent "
-            "geometry is inferred; D-120 successor geometry review is cleared; "
+            "geometry is inferred; D-120 cartographic review and D-121 exact geometry "
+            "provenance review are cleared; "
             "predecessor objects are byte/semantic-equal except the explicitly bounded "
             "Mycenaean evidence-locus augmentation; canonical cartography is unchanged."
         ),

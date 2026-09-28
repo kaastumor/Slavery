@@ -29,10 +29,10 @@ PREDECESSOR = (
 class V082SuccessorAuthorityContractTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.selection = load_selection(SELECTION)
+        cls.selection = json.loads(SELECTION.read_text(encoding="utf-8"))
         cls.predecessor = load_predecessor(cls.selection, PREDECESSOR)
 
-    def test_frozen_selection_is_release_ready_and_explicit(self) -> None:
+    def test_frozen_selection_is_explicit_but_held_by_d121(self) -> None:
         self.assertEqual(len(self.selection["claim_additions"]), 11)
         self.assertEqual(
             self.selection["expected_claim_state"]["successor_claims"], 86
@@ -50,6 +50,25 @@ class V082SuccessorAuthorityContractTests(unittest.TestCase):
             self.selection["geometry_policy"]["new_practice_extent_geometry_ids"],
             [],
         )
+        self.assertFalse(self.selection["release_ready"])
+        self.assertEqual(len(self.selection["release_blockers"]), 1)
+        self.assertEqual(
+            self.selection["rules"]["geometry_successor_provenance_decision"],
+            "D-121",
+        )
+        with self.assertRaises(SuccessorAuthorityError):
+            load_selection(SELECTION)
+
+    def test_ready_selection_must_close_d121_provenance(self) -> None:
+        candidate = copy.deepcopy(self.selection)
+        candidate["release_ready"] = True
+        candidate["release_blockers"] = []
+        candidate["status"] = "RELEASE_READY_PENDING_AUTHORITY_FREEZE"
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "selection.json"
+            path.write_text(json.dumps(candidate), encoding="utf-8")
+            with self.assertRaisesRegex(SuccessorAuthorityError, "D-121"):
+                load_selection(path)
 
     def test_predecessor_authority_is_exact_v081(self) -> None:
         self.assertEqual(
@@ -62,6 +81,15 @@ class V082SuccessorAuthorityContractTests(unittest.TestCase):
 
     def test_load_selection_rejects_reviewed_row_discovery(self) -> None:
         candidate = copy.deepcopy(self.selection)
+        candidate["release_ready"] = True
+        candidate["release_blockers"] = []
+        candidate["status"] = "RELEASE_READY_PENDING_AUTHORITY_FREEZE"
+        candidate["geometry_policy"]["inherited_geometry_reuse_status"] = (
+            "CLEARED_BY_D121_EXACT_PROVENANCE_REVIEW"
+        )
+        candidate["geometry_policy"]["d121_provenance_status"] = (
+            "CLOSED_EXACT_SOURCE_FEATURE_AND_NATIVE_TIME_BINDING"
+        )
         candidate["rules"]["reviewed_row_discovery_forbidden"] = False
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "selection.json"
@@ -71,6 +99,15 @@ class V082SuccessorAuthorityContractTests(unittest.TestCase):
 
     def test_load_selection_rejects_proxy_practice_extent(self) -> None:
         candidate = copy.deepcopy(self.selection)
+        candidate["release_ready"] = True
+        candidate["release_blockers"] = []
+        candidate["status"] = "RELEASE_READY_PENDING_AUTHORITY_FREEZE"
+        candidate["geometry_policy"]["inherited_geometry_reuse_status"] = (
+            "CLEARED_BY_D121_EXACT_PROVENANCE_REVIEW"
+        )
+        candidate["geometry_policy"]["d121_provenance_status"] = (
+            "CLOSED_EXACT_SOURCE_FEATURE_AND_NATIVE_TIME_BINDING"
+        )
         candidate["geometry_policy"]["new_practice_extent_geometry_ids"] = [
             "00000000-0000-0000-0000-000000000001"
         ]

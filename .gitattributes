@@ -9,3 +9,4 @@
 *.xlsx binary
 *.zip binary
 *.dump binary
+*.bundle.json binary

@@ -1,0 +1,68 @@
+{
+  "schema_version": "historical-slavery-atlas-corpus-geometry-qc-envelope-v3",
+  "policy_id": "corpus-geometry-qc-envelope-v3",
+  "decision": "D-121",
+  "supersedes_for_successor_review": "config/cartography/corpus_geometry_qc_envelope_v2.json",
+  "scope": "successor-release review of reviewed geometry, with exact source-feature and temporal-provenance binding",
+  "principles": {
+    "independent_axes": true,
+    "weighted_overall_score_forbidden": true,
+    "source_geometry_immutable": true,
+    "render_geometry_is_derived": true,
+    "geometry_does_not_strengthen_claim": true,
+    "coastline_normalization_must_not_silently_rewrite_frontiers": true,
+    "exact_source_feature_identity_required": true,
+    "source_native_time_provenance_required": true,
+    "existing_release_immutability": true
+  },
+  "inherited_measurement_contract": {
+    "frontier_displacement_metric": "source_to_smoothed_boundary_hausdorff_m",
+    "max_candidate_frontier_displacement_m": 35000,
+    "raw_to_final_render_hausdorff_role": "diagnostic_only",
+    "max_final_symmetric_difference_pct": 5,
+    "max_abs_final_area_delta_pct": 2,
+    "max_render_outside_land_pct": 0.0001,
+    "topology_change": "review_trigger_not_automatic_failure"
+  },
+  "provenance_hard_gates": {
+    "exact_geometry_source_version_required": true,
+    "exact_geometry_source_native_id_required_when_source_supplies_one": true,
+    "exact_source_feature_binding_required_for_structured_geometry_sources": true,
+    "acceptable_feature_binding_fields": [
+      "source_feature_id_or_native_id",
+      "source_dataset_version_or_commit",
+      "source_asset_or_blob_identity",
+      "source_row_or_feature_ordinal_when_needed_to_disambiguate",
+      "source_feature_sha256_or_equivalent_content_fingerprint"
+    ],
+    "source_native_temporal_provenance_required": true,
+    "acceptable_temporal_provenance_fields": [
+      "source_native_from",
+      "source_native_to",
+      "source_native_calendar_or_convention",
+      "documented_translation_to_atlas_years",
+      "translation_rule_or_parser_version"
+    ],
+    "no_inferred_feature_binding": true,
+    "no_inferred_native_dates": true
+  },
+  "corpus_findings_2026_09_28": {
+    "published_multi_slice_transitions_checked": 30,
+    "transition_gap_count": 0,
+    "transition_overlap_count": 0,
+    "mechanically_recoverable_native_interval_checks": 10,
+    "demonstrated_date_shift_errors": 0,
+    "released_cliopatria_polygons_audited": 38,
+    "demonstrated_wrong_feature_bindings": 0,
+    "remaining_gap": "Current geometry appears correctly attached, but exact feature uniqueness/checksum binding and structured native-date provenance are not frozen for every Cliopatria row. Successor authority must close this provenance gap rather than infer correctness from successful display."
+  },
+  "successor_rules": {
+    "existing_v081_release": "immutable",
+    "d120_substitutions": "remain accepted subject to exact feature/time provenance binding",
+    "unchanged_reuse": "allowed only after source-feature and native-time provenance gates pass",
+    "missing_feature_binding": "hold successor reuse for that geometry; do not mutate predecessor",
+    "missing_native_time_provenance": "hold successor reuse or preserve predecessor object explicitly; do not silently reconstruct dates",
+    "unresolved_geometry": "remain unresolved until independently defensible geometry exists",
+    "points_and_nonpolygons": "retain exact reviewed source geometry; provenance gates still apply when source provides stable native identity"
+  }
+}

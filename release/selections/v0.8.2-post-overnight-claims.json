@@ -1,7 +1,7 @@
 {
   "selection_schema": "historical-slavery-atlas-successor-claim-selection-v1",
   "candidate_version": "v0.8.2-post-overnight",
-  "status": "RELEASE_READY_PENDING_AUTHORITY_FREEZE",
+  "status": "HOLD_PENDING_D121_PROVENANCE_CLOSURE",
   "canonical_predecessor": {
     "version": "v0.8.1",
     "manifest_path": "data/releases/v0.8.1/manifest.json",
@@ -92,7 +92,7 @@
     "claim_completeness_independent_of_geometry": true,
     "modern_country_proxy_as_practice_extent_forbidden": true,
     "inherited_geometry_count": 46,
-    "inherited_geometry_reuse_status": "CLEARED_BY_D120_SUCCESSOR_REVIEW",
+    "inherited_geometry_reuse_status": "CARTOGRAPHICALLY_CLEARED_BY_D120_PROVENANCE_HOLD_BY_D121",
     "corpus_polygon_count": 39,
     "d119_hausdorff_review_trigger_count": 29,
     "d119_component_change_count": 38,
@@ -100,6 +100,8 @@
     "d119_abs_area_delta_over_2pct_count": 1,
     "note": "New claims remain release-eligible with geometry unresolved. Existing v0.8.1 geometry is not automatically reusable in a successor merely because it is immutable and currently public.",
     "d119_successor_review_path": "data/research/geometry_reviews/v082_successor_geometry_review.json",
+    "d121_provenance_policy_path": "config/cartography/corpus_geometry_qc_envelope_v3.json",
+    "d121_provenance_status": "HOLD_PENDING_EXACT_SOURCE_FEATURE_AND_NATIVE_TIME_BINDING",
     "d120_corrected_focused_review_count": 6,
     "d120_unchanged_polygon_reuse_count": 33,
     "render_policy_substitutions": [
@@ -152,8 +154,10 @@
       "reason": "legacy prototype dependency claim still requires current-method replay"
     }
   ],
-  "release_ready": true,
-  "release_blockers": [],
+  "release_ready": false,
+  "release_blockers": [
+    "D-121 exact source-feature and source-native temporal provenance is not yet frozen for every inherited/reused structured geometry."
+  ],
   "rules": {
     "explicit_membership_only": true,
     "reviewed_row_discovery_forbidden": true,
@@ -162,6 +166,7 @@
     "prior_release_immutable": true,
     "source_dependency_closure_required_at_authority_freeze": true,
     "geometry_successor_review_decision": "D-120",
+    "geometry_successor_provenance_decision": "D-121",
     "mycenaean_locus_augmentation_explicit": true
   }
 }

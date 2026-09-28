@@ -2,7 +2,7 @@
 
 Public repository preserving the Historical Slavery Atlas's global, time-aware historical-evidence methodology, research/release artifacts, adversarial fixtures and experimental atlas/query work for slavery and related coerced-labour/dependency systems.
 
-The repository is the canonical source of truth for project implementation, methodology and operating state. PostgreSQL/PostGIS is the governed current research authority under D-109, while immutable release packages own citable historical release identity. The current canonical historical release is v0.7.0; v0.6.1 remains its immutable predecessor.
+The repository is the canonical source of truth for project implementation, methodology and operating state. PostgreSQL/PostGIS is the governed current research authority under D-109, while immutable release packages own citable historical release identity. The current canonical historical release is v0.8.1; v0.6.1 remains its immutable predecessor.
 
 ## Start here
 
@@ -27,15 +27,14 @@ does not own the next action.
 Durable state:
 - canonical current research authority: explicit D-109 PostgreSQL/PostGIS membership
   closure;
-- canonical historical data release: **`v0.7.0`** under D-110;
+- canonical historical data release: **`v0.8.1`** under D-117;
 - immutable canonical predecessor: `v0.6.1` workbook and exact checksum lineage;
-- v0.7.0 preserves 40 claims / 11 actors / 18 spatial entities / 0 reviewed historical
-  evidence geometries / 8 voyages / 99 coverage assessments / 211 exact source
+- v0.8.1 preserves 75 claims / 11 actors / 50 spatial entities / 46 reviewed historical
+  evidence geometries / 8 voyages / 99 coverage assessments / 294 exact source
   versions / 26 research-target results;
 - independent historical review remains **0**;
-- Gate 5 passed under D-113: `public_mvp_preview` points to
-  `v0.7.0-public-mvp-v1`, an immutable non-canonical serving adapter derived only from
-  canonical v0.7.0;
+- D-118 moved `public_mvp_preview` to `v0.8.1-public-mvp-v1`, an immutable serving
+  materialization derived only from canonical v0.8.1;
 - the public Atlas at `https://kaastumor.github.io/Slavery/` serves the canonical-release
   client; the frozen R1 technical candidate remains preserved at `r1-candidate.html`;
 - live schema head is `0034`; D-112 freezes published release-manifest metadata while
