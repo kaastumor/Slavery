@@ -3388,8 +3388,10 @@ The first candidate policy is
 1. no Chaikin or other inland/general-boundary smoothing;
 2. preserve the exact source geometry unchanged in the research layer;
 3. intersect with the exact canonical Natural Earth land fabric;
-4. allow the existing bounded 25 km overhang-based coastal recovery only as an additive
-   display operation;
+4. use zero coastal recovery as the baseline; test at most a 25 km overhang-based
+   recovery candidate and accept it only when the additional canonical land is <=2% of
+   the zero-recovery source-land baseline; otherwise retain the exact source-land
+   baseline;
 5. require directional source-land-loss QC, not only symmetric difference, total area
    delta or whole-geometry Hausdorff distance;
 6. treat component/ring inflation and interior-hole creation as explicit review triggers;
