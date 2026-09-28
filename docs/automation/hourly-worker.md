@@ -1,5 +1,16 @@
 # Autonomous evidence worker
 
+This runbook does not enable or change a schedule. Before each saved-task migration,
+use [SCHEDULED_TASK_TEMPLATE.md](SCHEDULED_TASK_TEMPLATE.md); repeat the project's
+critical constraints in the saved prompt. New scheduled research defaults to **20 minutes,
+one bounded item**, followed by an honest checkpoint. Existing saved tasks require
+separate manual testing and approval before configuration changes.
+
+Use [TASK_TEMPLATE.md](TASK_TEMPLATE.md) and [VERIFICATION.md](VERIFICATION.md).
+The canonical operating policy owns routing, retry, deduplication, memory and authorization.
+Merge/deploy/publication and other consequential actions require explicit scoped sponsor
+authorization; a green PR is READY_FOR_REVIEW, not automatic permission to merge.
+
 Repository: `kaastumor/Slavery`. Active issue and next action: root `BACKLOG.md`.
 WIP: one active priority across workers. Operating rules: D-090, D-091, D-092, D-096.
 
@@ -42,7 +53,7 @@ scheduled GitHub write permission alone may not.
    New permanent abstractions require existing-class/external-baseline first refusal
    and a meaningful negative boundary before adoption.
 4. Preserve an honest checkpoint, reconcile the next action, and batch a coherent PR.
-   A partial packet can merge while the active issue remains open. Close an issue
+   A partial packet can merge with explicit scoped authorization while the active issue remains open. Close an issue
    only when its own acceptance criteria are met.
 
 ## Continuity and boundaries
@@ -51,7 +62,8 @@ After a bounded item completes, reconcile it and select the next justified **mod
 under D-096: discovery, execution, consolidation, review/release, maintenance, or no
 justified work. WIP=1 does not require another experiment. Do not invent work if the
 useful modes are complete, blocked or unjustified. Evidence quality, focus, review
-capacity and complexity take priority; elapsed time alone is not a stop rule.
+capacity and complexity take priority. A timebox ends this run with a checkpoint;
+elapsed time alone does not terminate the research question or project.
 
 Historical source/method constraints in `docs/PROJECT_INSTRUCTIONS.md` remain binding.
 Internal critique is not independent review. Green CI is not historical/editorial
