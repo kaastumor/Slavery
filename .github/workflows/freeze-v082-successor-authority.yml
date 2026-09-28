@@ -1,0 +1,71 @@
+name: Freeze v0.8.2 Successor Authority
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: freeze-v082-successor-authority
+  cancel-in-progress: false
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SUPABASE_MANAGEMENT_TOKEN: ${{ secrets.SUPABASE_MANAGEMENT_TOKEN }}
+      PROJECT_REF: dilnayfllygkplsdymel
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Require scoped management credential
+        shell: bash
+        run: test -n "$SUPABASE_MANAGEMENT_TOKEN"
+
+      - name: Verify production project is healthy
+        shell: bash
+        run: |
+          set -euo pipefail
+          body=$(curl -fsS --max-time 15 \
+            -H "Authorization: Bearer $SUPABASE_MANAGEMENT_TOKEN" \
+            "https://api.supabase.com/v1/projects/$PROJECT_REF")
+          status=$(python3 -c 'import json,sys; print(json.load(sys.stdin).get("status", ""))' <<< "$body")
+          test "$status" = "ACTIVE_HEALTHY" || {
+            echo "BLOCK: Supabase project status is $status"
+            exit 1
+          }
+
+      - name: Freeze exact v0.8.2 successor authority
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build
+          python3 tools/build_successor_authority.py build \
+            release/selections/v0.8.2-post-overnight-claims.json \
+            data/release_candidates/v0.8.1-rome-geometry-authority.bundle.json \
+            build/v0.8.2-post-overnight-authority.bundle.json \
+            --project-ref "$PROJECT_REF" \
+            --management-token "$SUPABASE_MANAGEMENT_TOKEN" \
+            --source-git-sha "$GITHUB_SHA"
+
+      - name: Re-read production and verify frozen authority
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/build_successor_authority.py verify \
+            release/selections/v0.8.2-post-overnight-claims.json \
+            data/release_candidates/v0.8.1-rome-geometry-authority.bundle.json \
+            build/v0.8.2-post-overnight-authority.bundle.json \
+            --project-ref "$PROJECT_REF" \
+            --management-token "$SUPABASE_MANAGEMENT_TOKEN"
+
+      - name: Upload immutable candidate authority
+        uses: actions/upload-artifact@v4
+        with:
+          name: v0.8.2-post-overnight-authority-${{ github.sha }}
+          path: build/v0.8.2-post-overnight-authority.bundle.json
+          if-no-files-found: error
+          retention-days: 30
