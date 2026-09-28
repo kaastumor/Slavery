@@ -1,0 +1,10 @@
+{
+  "request_schema": "historical-slavery-atlas-successor-authority-freeze-request-v1",
+  "candidate_release_version": "v0.8.2",
+  "selection": "release/selections/v0.8.2-post-overnight-claims.json",
+  "predecessor_authority": "data/release_candidates/v0.8.1-rome-geometry-authority.bundle.json",
+  "issue": 332,
+  "apply": false,
+  "requested_at": "2026-09-28",
+  "purpose": "One-shot read-only production authority freeze after D-120 successor geometry review and fail-closed successor authority tooling."
+}

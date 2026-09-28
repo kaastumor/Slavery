@@ -2,6 +2,11 @@ name: Freeze v0.8.2 Successor Authority
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "release/selections/v0.8.2-freeze-request.json"
 
 permissions:
   contents: read
