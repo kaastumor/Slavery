@@ -57,18 +57,32 @@ class ClaimFidelityTests(unittest.TestCase):
         }
         rows = build_payload({"release_version": "v0.8.2", "schema_version": "fixture"}, authority)["places"][0]["claims"]
         by_id = {row["claim_id"]: row for row in rows}
-        self.assertEqual(by_id["broad"]["temporal_precision"], "multi_attestation_broad_range")
+        self.assertEqual(by_id["broad"]["temporal_precision"], "source_context_only")
         self.assertEqual(by_id["broad"]["date_text_original"], broad["date_text_original"])
         self.assertEqual(by_id["exact"]["temporal_precision"], "exact_event")
         old = build_payload({"release_version": "v0.7.0", "schema_version": "fixture"}, authority)["places"][0]["claims"]
         self.assertTrue(all("temporal_precision" not in row for row in old))
 
+    def test_funan_does_not_invent_event_or_geometry_interval(self) -> None:
+        spec = json.loads((INTAKE / "01_funan_enslavement.json").read_text(encoding="utf-8"))
+        self.assertIsNone(spec["claim"]["from_year"])
+        self.assertIsNone(spec["claim"]["to_year"])
+        self.assertEqual(spec["claim"]["temporal_precision"], "source_context_only")
+        self.assertIsNone(spec["geometry"]["from_year"])
+        self.assertIsNone(spec["geometry"]["to_year"])
+        self.assertIsNone(spec["geometry"]["geojson"])
+
     def test_future_projection_preserves_source_date_meaning_without_changing_v070(self) -> None:
         broad = json.loads((INTAKE / "01_funan_enslavement.json").read_text())["claim"]
         expected = {
-            "date_text_original": "Chinese accounts from the third through fifth centuries CE",
-            "temporal_precision": "multi_attestation_broad_range",
-            "temporal_certainty": "approximate",
+            "date_text_original": (
+                "Enslavement description preserved in Nan Qi Shu (History of the Southern Qi), "
+                "compiled in the early sixth century; in the Funan biography the description "
+                "follows Jayavarman's 484 CE embassy material, but the underlying observation "
+                "date of the passage is not securely recoverable."
+            ),
+            "temporal_precision": "source_context_only",
+            "temporal_certainty": "uncertain",
         }
         self.assertEqual(temporal_fields_for_serving(broad, "v0.8.2"), expected)
         self.assertEqual(temporal_fields_for_serving(broad, "v0.7.0"), {})
