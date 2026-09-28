@@ -29,6 +29,9 @@ SERVED = Path(
     "web/public/release-geometries/v0.8.1-public-mvp-v1/"
     "b3066705-616e-42c7-a50d-656c6926813c.json"
 )
+D117_REVIEW = Path(
+    "data/research/geometry_reviews/rome_early_principate_ad14_awmc_v1.json"
+)
 
 CONTROL_POINTS = {
     # stable core / provincial centers
@@ -174,6 +177,70 @@ def score(matrix: dict[str, bool]) -> dict:
     }
 
 
+def active_polities_covering_point(
+    features: list[dict],
+    year: int,
+    point: tuple[float, float],
+) -> list[dict]:
+    rows = []
+    for ordinal, feature in enumerate(features, start=1):
+        props = feature.get("properties") or {}
+        if props.get("Type") != "POLITY":
+            continue
+        start, end = props.get("FromYear"), props.get("ToYear")
+        if not isinstance(start, int) or not isinstance(end, int):
+            continue
+        if not (start <= year <= end):
+            continue
+        if covers(point, feature.get("geometry")):
+            rows.append(
+                {
+                    "source_row_ordinal_1_based": ordinal,
+                    "name": props.get("Name"),
+                    "seshat_id": props.get("SeshatID"),
+                    "source_native_from": start,
+                    "source_native_to": end,
+                    "member_of": props.get("MemberOf"),
+                }
+            )
+    return rows
+
+
+def classify_gap(
+    *,
+    point_name: str,
+    point: tuple[float, float],
+    source_geometry: dict,
+    served_geometry: dict,
+    features: list[dict],
+    year: int,
+) -> dict:
+    in_source = covers(point, source_geometry)
+    in_served = covers(point, served_geometry)
+    other_polities = [
+        row
+        for row in active_polities_covering_point(features, year, point)
+        if row["name"] != "Roman Empire"
+    ]
+    if in_source and not in_served:
+        disposition = "RENDER_LOSS"
+    elif not in_source and other_polities:
+        disposition = "OTHER_ACTIVE_POLITY_CONTEXT"
+    elif not in_source:
+        disposition = "SOURCE_DOES_NOT_COVER"
+    else:
+        disposition = "RETAINED"
+    return {
+        "point": point_name,
+        "coordinates": list(point),
+        "year": year,
+        "source_covers": in_source,
+        "served_covers": in_served,
+        "other_active_polities": other_polities,
+        "disposition": disposition,
+    }
+
+
 def main() -> int:
     features = load_asset()
     roman = []
@@ -240,6 +307,19 @@ def main() -> int:
 
     served = json.loads(SERVED.read_text(encoding="utf-8"))
     served_matrix = control_matrix(served["geometry"])
+    d117_review = json.loads(D117_REVIEW.read_text(encoding="utf-8"))
+    d117_source_geometry = d117_review["proposed_geometry"]["geojson"]
+    gap_attribution_14 = [
+        classify_gap(
+            point_name=name,
+            point=point,
+            source_geometry=d117_source_geometry,
+            served_geometry=served["geometry"],
+            features=features,
+            year=14,
+        )
+        for name, point in CONTROL_POINTS.items()
+    ]
     report = {
         "schema": "atlas-rome-map-completeness-diagnostic-v1",
         "issue": 365,
@@ -253,6 +333,7 @@ def main() -> int:
             {k: v for k, v in row.items() if k != "feature"} for row in roman
         ],
         "frontier_related_source_rows_1_60_ce": frontier_rows,
+        "gap_attribution_14_ce": gap_attribution_14,
         "served_14_22": {
             "geometry_id": served.get("geometry_id"),
             "from_year": served.get("from_year"),
