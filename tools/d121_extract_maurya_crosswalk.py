@@ -98,6 +98,8 @@ def load_features(data: bytes) -> tuple[str, list[dict]]:
             name
             for name in archive.namelist()
             if name.lower().endswith(".geojson")
+            and not name.startswith("__MACOSX/")
+            and not name.rsplit("/", 1)[-1].startswith("._")
         ]
         if len(members) != 1:
             raise SystemExit(f"Expected one GeoJSON member, found {members!r}")
