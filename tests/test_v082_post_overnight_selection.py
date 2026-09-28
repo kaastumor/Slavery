@@ -24,14 +24,18 @@ class PostOvernightV082SelectionTests(unittest.TestCase):
             self.selection["expected_claim_state"]["successor_spatial_entities"], 63
         )
 
-    def test_geometry_is_independently_gated_and_cleared(self) -> None:
+    def test_geometry_is_independently_gated_with_d121_hold(self) -> None:
         geometry = self.selection["geometry_policy"]
         self.assertEqual(geometry["new_practice_extent_geometry_ids"], [])
         self.assertTrue(geometry["claim_completeness_independent_of_geometry"])
         self.assertTrue(geometry["modern_country_proxy_as_practice_extent_forbidden"])
         self.assertEqual(
             geometry["inherited_geometry_reuse_status"],
-            "CLEARED_BY_D120_SUCCESSOR_REVIEW",
+            "CARTOGRAPHICALLY_CLEARED_BY_D120_PROVENANCE_HOLD_BY_D121",
+        )
+        self.assertEqual(
+            geometry["d121_provenance_status"],
+            "HOLD_PENDING_EXACT_SOURCE_FEATURE_AND_NATIVE_TIME_BINDING",
         )
         self.assertEqual(geometry["d120_corrected_focused_review_count"], 6)
         self.assertEqual(geometry["d120_unchanged_polygon_reuse_count"], 33)
@@ -61,14 +65,18 @@ class PostOvernightV082SelectionTests(unittest.TestCase):
             "claim_evidence_locus_only_not_territorial_extent",
         )
 
-    def test_candidate_is_release_ready_for_authority_freeze(self) -> None:
-        self.assertTrue(self.selection["release_ready"])
-        self.assertEqual(self.selection["release_blockers"], [])
+    def test_candidate_is_held_until_d121_provenance_closes(self) -> None:
+        self.assertFalse(self.selection["release_ready"])
+        self.assertEqual(len(self.selection["release_blockers"]), 1)
         self.assertEqual(
-            self.selection["status"], "RELEASE_READY_PENDING_AUTHORITY_FREEZE"
+            self.selection["status"], "HOLD_PENDING_D121_PROVENANCE_CLOSURE"
         )
         self.assertEqual(
             self.selection["rules"]["geometry_successor_review_decision"], "D-120"
+        )
+        self.assertEqual(
+            self.selection["rules"]["geometry_successor_provenance_decision"],
+            "D-121",
         )
         self.assertTrue(
             self.selection["rules"]["mycenaean_locus_augmentation_explicit"]

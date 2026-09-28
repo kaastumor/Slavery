@@ -1,6 +1,8 @@
 {
   "schema": "historical-slavery-atlas-overnight-2026-09-28-reconciliation-v1",
   "date": "2026-09-28",
+  "status": "FROZEN_RECONCILIATION_INPUT",
+  "canonicality_note": "This preserves scheduled-worker findings for interactive reconciliation. It is not canonical historical data, database authority or release membership. Issue #360 owns post-v0.8.2 intake planning.",
   "canonical_at_start": {
     "github_main_head": "bb781d660c679366cc3a5a59bec22485e6c83b7c",
     "canonical_release": "v0.8.1",
@@ -236,7 +238,7 @@
     "1. Canonicalize this inventory and freeze the pending packet set so no scheduled work is lost or duplicated.",
     "2. Convert complete expansion packets into current-method reviewed/unpublished packages, deduplicating against existing Aksum/Tōdai-ji and other accepted state.",
     "3. Resolve only defensible geometry candidates; keep analytical aggregates and uncertain sites unresolved.",
-    "4. Extend the successor geometry QC/provenance envelope for exact source-feature identity and native temporal provenance before v0.8.2 authority freeze.",
+    "4. Close D-121 exact source-feature identity and native temporal provenance before retrying the v0.8.2 authority freeze.",
     "5. Re-run source/dependency/geometry/serving QC, then supersede the current v0.8.2 selection only with exact accepted additions."
   ],
   "release_effect": "None yet. v0.8.1 and its public serving materialization remain immutable while this overnight tranche is reconciled."

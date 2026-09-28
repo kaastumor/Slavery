@@ -15,6 +15,20 @@ uses `automation/hourly-worker.md`. The model setting does not alter evidence ga
 
 Before data/schema/methodology changes, also read the relevant canonical method/source/data/geography/decision/architecture documents.
 
+## Operator boundary
+
+Accepted project truth is the state reconciled into this repository, normally on
+`main`. Codex is the primary environment for repository-native implementation,
+verification and pull-request work. ChatGPT may support sponsor discussion,
+exploration, research and strategic reasoning, but a conclusion reached in a
+conversation remains advisory/pending until it passes the repository's ordinary
+evidence, review and CI gates. The same rule applies to scheduled-worker output.
+
+Move durable outcomes from either environment into the existing repository owner for
+that information. Do not create a parallel chat history, memory ledger, backlog or
+decision system, and do not treat a persuasive summary as accepted state merely
+because it is newer than a repository document.
+
 ## Durable methodological constraints
 
 - Preserve the current canonical data release unless explicitly creating and validating a new version. Do not overwrite historical releases.

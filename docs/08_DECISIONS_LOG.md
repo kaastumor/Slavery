@@ -3305,7 +3305,7 @@ extent.
 
 
 ## D-121 — Successor geometry requires exact source-feature and source-native temporal provenance
-**Date:** 2026-09-28  
+**Date:** 2026-09-28
 **Status:** accepted for successor geometry review; no retroactive mutation of v0.8.1
 
 **Trigger:** the overnight Geometry-QC worker extended the D-119/D-120 corpus review
@@ -3349,3 +3349,10 @@ audited with no demonstrated misbinding.
 
 **Release effect:** none. Canonical/public v0.8.1 remains immutable. D-121 governs
 v0.8.2 authority freeze and later successor geometry reuse.
+
+**Reconciliation against current main:** PRs #357–#359 added the fail-closed v0.8.2
+authority builder and ran a one-shot production freeze after this overnight work was
+prepared. That run produced no bundle because the credential lacked `database_read`.
+The frozen v0.8.2 selection is now also held until D-121 provenance closure is recorded;
+the builder rejects a release-ready selection unless the v3 policy and exact provenance
+closure are pinned. Neither gate mutates PostgreSQL, v0.8.1 or the public channel.

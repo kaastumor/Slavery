@@ -1,7 +1,10 @@
 # System Architecture
 
-**Architecture status:** approved research/curation target; presentation/release boundary simplified after EXP-02; not yet the canonical data implementation  
-**Canonical data remains:** `Historical_Slavery_Atlas_v0.6.1_Controlled_Atlantic_Ingestion.xlsx`
+**Architecture status:** implemented governed research/curation authority; presentation/release boundary simplified after EXP-02
+
+**Canonical current research authority:** PostgreSQL/PostGIS under D-109
+
+**Canonical historical release:** v0.8.1; the v0.6.1 workbook remains its immutable lineage predecessor
 
 ## 1. Architectural goal
 
@@ -13,7 +16,7 @@ After EXP-02, the preferred release boundary is:
 
 > **reviewed research state → immutable portable evidence package → replaceable presentation adapters**
 
-PostgreSQL/PostGIS remains the working research/curation target. The portable package is a release/interchange boundary, not a replacement canonical schema.
+PostgreSQL/PostGIS is the governed current research/curation authority. The portable package is a release/interchange boundary, not a replacement canonical schema; immutable packages own citable historical release identity.
 
 The architecture must support:
 
@@ -84,9 +87,9 @@ This supports the following architecture policy:
 
 The EXP-02 artifact is evidence for this boundary, not a canonical replacement data model.
 
-## 3. Canonical database target
+## 3. Canonical database implementation
 
-The migration target is PostgreSQL with PostGIS.
+The governed current research authority is PostgreSQL with PostGIS under D-109.
 
 Reasons:
 
@@ -97,7 +100,9 @@ Reasons:
 - support for views/materialized views for publication
 - mature tooling for migrations, backups and read-only publication access
 
-The workbook remains canonical until a database migration has passed reconciliation and QC.
+That authority cutover passed reconciliation and QC under D-109. The v0.6.1 workbook
+remains immutable as the predecessor and source-native lineage anchor; it is not the
+current research authority.
 
 ## 4. Historical time model
 
@@ -368,11 +373,12 @@ Migration mappings are explicit:
 - `POLITY` -> `SPATIAL_ENTITY` subtype/specialization
 - `VOYAGE_OWNER` remains an explicit ownership relationship using `actor_id`
 
-Canonical v0.6.1 stays unchanged until the migrated database reproduces its meaning and passes QC.
+Canonical v0.6.1 stayed unchanged through migration. D-109 records the completed
+cutover after the migrated database reproduced its meaning and passed QC.
 
-## 15. Immediate architecture milestone
+## 15. Database-foundation milestone — completed
 
-Before further bulk ingestion:
+The D-109 authority cutover completed the following foundation sequence:
 
 1. finalize the relational schema from `schema_draft.yaml`
 2. create PostgreSQL/PostGIS migrations
@@ -380,7 +386,10 @@ Before further bulk ingestion:
 4. reconcile every migrated value against the workbook
 5. execute the rollback-only non-Atlantic acceptance fixtures so the schema is not accidentally optimized only for SlaveVoyages
 6. build one thin technical map slice: neutral land + selected-year geometry + one practice claim + evidence click-through
-7. only then resume financier/port expansion and larger data ingestion
+7. only then resume separately authorized expansion
+
+Current priority and mode are owned by repository-root `BACKLOG.md`; this historical
+foundation checklist is not a live task queue.
 
 ## 16. Development and deployment environments
 
