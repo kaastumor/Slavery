@@ -105,8 +105,8 @@ A delivery item is done when:
 - relevant focused tests and sanitation pass;
 - normal CI is green;
 - provenance/reproducibility metadata is preserved where material;
-- PR is merged;
-- issue is closed;
+- PR is merged with explicit scoped authorization; otherwise the worker reports READY_FOR_REVIEW and delivery acceptance remains pending;
+- the owning issue reflects its own acceptance state; a partial delivery may merge while the issue remains open;
 - canonical project state is reconciled only when evidence actually changed it;
 - `BACKLOG.md` and the active checkpoint agree before merge when priority/progress changed;
 - summary files are updated only for a material milestone and link back to the canonical owner rather than duplicating the exact next action.
@@ -337,7 +337,7 @@ After a coherent batch, stop adding cases long enough to reconcile it:
 4. update the canonical backlog/checkpoint owners;
 5. assess whether available review/reconciliation capacity can support further intake;
 6. choose the next **mode** under D-096;
-7. run one relevant sanitation/CI cycle and merge before continuing from fresh main.
+7. run one relevant sanitation/CI cycle; prepare a reviewable PR. Merge only with explicit scoped authorization, then resume dependent work from fresh main. Until then preserve the pending checkpoint and do not open competing WIP.
 
 **Cross-batch reconciliation is required before sustained scaling or release.**
 Experiment-local artifacts may remain useful without automatically becoming one
@@ -376,3 +376,130 @@ Periodically attack the project-management system itself.
 Delete or simplify governance, workflows and experiments that become duplicated, ceremonial, stale or more expensive than the failure they prevent. The repository-root `BACKLOG.md` remains the execution queue; GitHub issues hold durable task evidence; `docs/08_DECISIONS_LOG.md` remains the decision record; `docs/25_PROJECT_HEALTH.md` remains the assumptions/risk/value/health owner.
 
 Do not create parallel systems merely to match a template.
+
+## Bounded autonomous execution and usage
+
+Continue within the accepted mandate without asking the sponsor to invent routine
+tasks. At each entry inspect live main, open work, active ownership and the existing
+BACKLOG/checkpoint. Resume recoverable work before selecting another question. Use
+the project's existing allocation and evidence gates; autonomy does not earn new scope.
+
+One run owns one bounded item. At completion, verify, preserve negative/null evidence,
+reconcile once in the existing owner, and identify the next eligible action. Start a
+fresh bounded task/context for an independently reviewable chunk; pass a compact
+[task capsule](automation/TASK_TEMPLATE.md), not the conversation. Fresh context
+is a context-management technique, not proof of independent scientific review.
+
+### Authority and acceptance
+
+Autonomous authority covers in-scope research, analysis, drafts, focused checks and
+authorized branch/PR preparation. Merging, deploying, publishing, deleting information,
+changing production settings, rotating credentials, purchasing, contacting external
+parties, changing the charter/evaluation criteria or creating/changing schedules requires
+explicit sponsor authorization for that action or a recorded standing scope.
+A general "continue", passing CI or an older generic merge instruction is insufficient.
+Do not ask again when valid explicit authorization already covers the action.
+
+A worker may finish at `READY_FOR_REVIEW`, `RECONCILIATION_PENDING`,
+`CHECKPOINTED` or `BLOCKED`; none means accepted/merged. Keep the owning issue open
+until its acceptance criteria are met. Do not advance a dependent implementation from
+unmerged assumptions or open competing WIP. A blocked item may yield to a separately
+eligible, nonconflicting alternative under the existing allocation rules; record why.
+If none exists, record the missing prerequisite and re-entry trigger, then stop the run.
+
+Repeat critical scope, privacy, evidence and authorization constraints in every capsule.
+Before returning, review the actual output/diff against them. AGENTS instructions are
+guidance, not an enforced permission boundary; use actual tool permissions and existing
+CI/review gates. Never claim that writing this policy configured the runtime.
+
+### Surface and model routing
+
+Select the project mode under D-096. Choose the execution surface and model/effort
+separately; record the run's disposition separately from all three. These are routing
+recommendations, not configured runtime settings or evidence that a schedule exists.
+
+| Work | Execution surface |
+| --- | --- |
+| Requirements, task design, prioritization, critique, short answers | Ordinary Chat |
+| Substantial research, connected-app work, finished non-code deliverables | Work |
+| Primary result is repository inspection/change, tests, review, commit or PR | Codex |
+
+| Work | Model/effort recommendation |
+| --- | --- |
+| Narrow repeatable work with objective verification | GPT-6 Luna |
+| Normal bounded multi-step execution and allocation | GPT-6 Sol Medium |
+| Difficult interpretation, architecture, debugging or weak verification | Sol High |
+| Exceptional ambiguity, security/concurrency risk or critical review | Sol XHigh when justified |
+| Hard decision/review where expected value exceeds additional usage | Astra, explicitly justified |
+
+Choose using ambiguity, blast radius, reversibility, privacy and verification strength,
+not task size alone. Record requested and actual model/effort (or `UNKNOWN`). A prompt
+cannot switch models: report a mismatch before implementation; do not silently claim
+a substitution. Missing access is not a reason to buy more reasoning. Prefer a deterministic
+script for mechanical work; do not use Chat to circumvent Work/Codex usage limits.
+
+No permanent expensive supervisor. When work is delegated, a short-lived coordinator
+can select and accept work using durable state; this policy creates no dispatcher.
+Workers keep implementation detail outside that context. Use subagents
+only for genuinely independent bounded work or validation; no role-play hierarchy or
+recursive delegation by default. One writer per overlapping scope. Use completion
+signals/long waits, not repeated polling. Summarize material results and artifact refs;
+do not return full worker transcripts to the coordinator.
+
+### Budgets, recovery and memory
+
+- New scheduled research tasks default to **20 minutes and one bounded item per run**.
+  Reserve time to checkpoint; at the limit persist partial work and the next exact action.
+  The timebox ends execution, not the hypothesis or project. Do not stretch it by spawning
+  workers or starting a second run. Other task types require an explicit timebox in their
+  approved capsule; do not infer unlimited execution.
+- This document does not change existing saved schedules. Before activation, verify that
+  their saved prompts, access and runtime settings implement the approved contract.
+  If the runtime cannot enforce a limit, label it advisory and test checkpointing.
+- Use one retry for a transient operation (two attempts total), within the same timebox.
+  Missing permissions/tools/required evidence stop that operation immediately. Inspect
+  durable state before retrying an ambiguous write. Never repeat an impossible operation.
+- A known non-transient prerequisite blocks its operation immediately. Permitted review,
+  reconciliation, read-only handoff and separately eligible nonconflicting work may continue.
+  If none remains, report the re-entry trigger and stop this run. Two identical
+  initially ambiguous failures on successive runs also block the affected operation.
+  Emit one actionable notice and record that block in durable state when available.
+  If storage is unavailable, stop new intake until it recovers. Future invocations check
+  eligibility before retrying the affected operation. Do not autonomously rewrite/disable schedules.
+- Before new intake, inspect pending results and consumer acknowledgments. Deduplicate
+  on repository, lane, task ID, input revision and contract version, with a separate attempt
+  ID. Revalidate stale inputs before application. Unknown pending state is a recovery gate,
+  not permission to generate another packet. Review debt takes priority over new intake.
+- Keep existing backlog/issues/PRs as owners, not a new shadow task database. Scheduled
+  state must have an approved durable location, a pending-item cap and a bounded resume
+  summary (default at most 8 KiB and 20 recent receipt references). Preserve unresolved
+  receipts and scientific evidence in the appropriate archive before compacting the index;
+  if safe compaction is unavailable, stop intake rather than discard them.
+- Store full logs outside the coordinator context in a durable, privacy-appropriate place.
+  A receipt records task/input refs, status, output ref, verification, consumer acknowledgment,
+  next action, elapsed time and actual usage if exposed. Unknown usage stays `UNKNOWN`;
+  label estimates separately. Never put protected source identifiers in public receipts.
+- No monetary/credit ceiling is presumed approved. Obtain it before enabling new recurring
+  paid work; do not silently buy credits, increase limits or add API services. Account for
+  retries, review and repair when assessing cost per verified useful outcome. Operator
+  efficiency anecdotes are hypotheses, not promised savings or measured billing reductions.
+- No meaningful delta means the defined `NO_CHANGE` result and no discretionary notice.
+  Notify for reviewable completion, an actionable blocker, budget exhaustion or a material
+  contradiction; do not promise silence if the host always delivers task results.
+
+Use [verification guidance](automation/VERIFICATION.md) for proportionate checks.
+Use the [scheduled-task contract](automation/SCHEDULED_TASK_TEMPLATE.md) for manual
+testing, approval and the first-three-run calibration. This policy creates no schedules.
+
+### Atlas authority and evidence boundary
+
+GitHub main owns accepted repository/control state. The governed Postgres/PostGIS
+research database owns canonical research data; immutable release packages own published
+versions. A Git packet or source summary cannot replace database verification or publication
+approval. Missing database_read/source-native provenance remains a named gate.
+
+Keep historical claims, source evaluation, ontology, time, geometry and publication tier
+separate. Preserve conflicting sources and dependent evidence. Geometry is not historical
+proof. Parallel claim/geometry preparation may produce candidates only, followed by the
+existing QC, reconciliation and promotion gates. Never synthesize a missing provenance
+locator or convert unknown/held data into absence or acceptance.
