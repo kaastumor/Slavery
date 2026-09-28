@@ -16,7 +16,7 @@
     "temporal_precision": "archaeological_period",
     "temporal_certainty": "high",
     "spatial_precision": "multi_polity_regional_corpus",
-    "summary": "Late Classic Maya monuments, texts, and specialist synthesis document recurrent wartime captive-taking and asymmetrical dependency. Captives appear widely in elite representations, but specialist scholarship stresses that prisoners had varied fates and that captive imagery cannot be translated mechanically into enslavement or sacrifice. The atlas therefore records recurrent captive-taking/incorporation at P2 rather than a blanket regional slavery classification.",
+    "summary": "Late Classic Maya monuments, texts, and specialist synthesis document recurrent wartime captive-taking and asymmetrical dependency. Captives appear widely in elite representations, but specialist scholarship stresses that prisoners had varied fates and that captive imagery cannot be translated mechanically into enslavement or sacrifice. The atlas records recurrent captive-taking/incorporation without assigning a P-level or making a blanket regional slavery classification.",
     "confidence": "moderate_high",
     "review_status": "reviewed",
     "publication_status": "unpublished",
@@ -25,7 +25,7 @@
       "practice_level": null,
       "coverage_state_code": "classified",
       "classification_status": "reviewed",
-      "notes": "P2 records repeated captive-taking across the Late Classic corpus. It explicitly does not assert that every captive became enslaved, that captive imagery measures prevalence, or that tributary/corvée relationships are slavery."
+      "notes": "The repeated captive-taking across the Late Classic corpus does not establish a practice level. This claim does not assert that every captive became enslaved, that captive imagery measures prevalence, or that tributary/corvée relationships are slavery."
     },
     "notes": "Atlas Expansion 01 post-M1 intake derived from preserved data/research/cases/global_04_late_classic_maya_captive_dependency.json. The preserved pre-M1 research fixture carried legacy P2; that ordinal is not promoted into this new research claim."
   },

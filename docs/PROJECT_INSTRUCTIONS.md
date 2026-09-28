@@ -47,6 +47,6 @@ because it is newer than a repository document.
 
 ## Operating rule
 
-Use the evidence loop in `24_WAY_OF_WORKING.md`. Prefer the smallest useful experiment that materially changes belief. **Do not optimize for returning to idle.** After each bounded horizon, reconcile evidence and select one next high-information research/discovery experiment under WIP=1. Treat failure, simplification, redirection or stopping as valid experiment outcomes, but not as the default scheduling state. Scheduled execution must stop at its approved timebox and preserve a checkpoint under `24_WAY_OF_WORKING.md`. Elapsed time alone does not reject a hypothesis or terminate the project; evidence quality, focus and project complexity govern substantive continuation.
+Use the evidence loop in `24_WAY_OF_WORKING.md`. After each bounded horizon, reconcile evidence and select the next justified mode under D-096 and `24_WAY_OF_WORKING.md` within WIP=1. Discovery, execution, consolidation, review/release, maintenance and a legitimate no-work state retain their existing gates. Scheduled execution must stop at its approved timebox and preserve a checkpoint under `24_WAY_OF_WORKING.md`. Elapsed time alone does not reject a hypothesis or terminate the project; evidence quality, focus and project complexity govern substantive continuation.
 
 Do not create a second backlog, risk register, roadmap or decision system beside the canonical repository structures.

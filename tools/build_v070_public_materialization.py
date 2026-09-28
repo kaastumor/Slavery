@@ -158,6 +158,22 @@ def source_ref(
     }
 
 
+def temporal_fields_for_serving(
+    claim: dict[str, Any], release_version: str,
+) -> dict[str, Any]:
+    """Keep the frozen v0.7.0 projection stable; carry existing date meaning forward.
+
+    The full-state authority projects atlas.claim with to_jsonb(c), so these
+    values come from the governed record, never from inferred year endpoints.
+    """
+    if release_version == "v0.7.0":
+        return {}
+    return {
+        key: claim.get(key)
+        for key in ("date_text_original", "temporal_precision", "temporal_certainty")
+    }
+
+
 def build_payload(
     release_manifest: dict[str, Any],
     authority: dict[str, Any],
@@ -214,6 +230,7 @@ def build_payload(
         claims_by_spatial[spatial_id].append(
             {
                 "claim_id": claim["claim_id"],
+                **temporal_fields_for_serving(claim, release_manifest["release_version"]),
                 "from_year": claim.get("from_year"),
                 "to_year": claim.get("to_year"),
                 "summary": claim.get("summary"),

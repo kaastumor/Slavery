@@ -16,7 +16,7 @@
     "temporal_precision": "approximate_range",
     "temporal_certainty": "moderate",
     "spatial_precision": "archipelago_social_system",
-    "summary": "Indigenous Hawaiian historical traditions and later specialist scholarship describe kauwā as a small, hereditary and strongly segregated status group within late precontact Hawaiian society. Accounts describe endogamy, stigma, separate landholding or residence, subordination to masters, and selection of kauwā for ritual sacrifice. Because Hawaiian uses of kauwā are context-sensitive and the surviving detailed descriptions were recorded in the nineteenth century, the atlas classifies this as institutional other servile dependency at P3 rather than assuming that every occurrence of kauwā is equivalent to chattel slavery.",
+    "summary": "Indigenous Hawaiian historical traditions and later specialist scholarship describe kauwā as a small, hereditary and strongly segregated status group within late precontact Hawaiian society. Accounts describe endogamy, stigma, separate landholding or residence, subordination to masters, and selection of kauwā for ritual sacrifice. Because Hawaiian uses of kauwā are context-sensitive and the surviving detailed descriptions were recorded in the nineteenth century, the atlas records this as other servile dependency without assigning a P-level or assuming that every occurrence of kauwā is equivalent to chattel slavery.",
     "confidence": "moderate",
     "review_status": "reviewed",
     "publication_status": "unpublished",
@@ -25,7 +25,7 @@
       "practice_level": null,
       "coverage_state_code": "classified",
       "classification_status": "reviewed",
-      "notes": "P3 reflects a hereditary, socially structured status category, not demographic prevalence. Modern scholarship describes the class as very small. The classification deliberately retains the indigenous term and avoids treating all Hawaiian service relationships or all uses of kauwā as slavery."
+      "notes": "The hereditary, socially structured status category does not establish demographic prevalence or a practice level. Modern scholarship describes the class as very small. The classification deliberately retains the indigenous term and avoids treating all Hawaiian service relationships or all uses of kauwā as slavery."
     },
     "notes": "Atlas Expansion 01 post-M1 intake derived from preserved data/research/cases/global_04_hawaii_kauwa_dependency.json. The preserved pre-M1 research fixture carried legacy P3; that ordinal is not promoted into this new research claim."
   },

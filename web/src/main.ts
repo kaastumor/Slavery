@@ -12,6 +12,7 @@ import type { Feature, FeatureCollection, Geometry } from "geojson";
 import "maplibre-gl/dist/maplibre-gl.css";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import "./styles.css";
+import { claimDateDetail } from "./claim-date";
 
 setWorkerUrl(workerUrl);
 
@@ -35,6 +36,9 @@ type Claim = {
   claim_id: string;
   from_year: number | null;
   to_year: number | null;
+  date_text_original?: string | null;
+  temporal_precision?: string | null;
+  temporal_certainty?: string | null;
   summary: string;
   review_status: string;
   publication_status: string;
@@ -325,6 +329,7 @@ function directionTag(direction: string): string {
 }
 
 function claimHtml(claim: Claim): string {
+  const dateDetail = claimDateDetail(claim);
   const sourceItems = claim.sources.length
     ? claim.sources.map((source) => {
         const title = escapeHtml(source.title);
@@ -374,7 +379,10 @@ function claimHtml(claim: Claim): string {
           : ""}
       </div>
 
-      <div class="claim-date">${formatInterval(claim.from_year, claim.to_year)}</div>
+      <div class="claim-date">${escapeHtml(formatInterval(claim.from_year, claim.to_year))}</div>
+      ${dateDetail.sourceDate ? `<div class="claim-date">Source date: ${escapeHtml(dateDetail.sourceDate)}</div>` : ""}
+      ${dateDetail.qualifier ? `<div class="claim-date">${escapeHtml(dateDetail.qualifier)}</div>` : ""}
+      ${dateDetail.selectionNote ? `<div class="claim-date">${escapeHtml(dateDetail.selectionNote)}</div>` : ""}
       <p class="claim-summary">${escapeHtml(claim.summary)}</p>
 
       <div class="evidence-title">Evidence</div>

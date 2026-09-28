@@ -16,7 +16,7 @@
     "temporal_precision": "multi_attestation_broad_range",
     "temporal_certainty": "approximate",
     "spatial_precision": "polity_as_described_in_external_texts",
-    "summary": "Chinese accounts of Funan repeatedly describe coercive capture and enslavement of people from neighboring communities. K'ang T'ai's third-century report, preserved through later Chinese textual traditions, states that inhabitants of towns refusing homage could be abducted and made slaves; later dynastic material repeats coercive enslavement in descriptions of Funan. Specialist archaeological source criticism treats these texts as important but exogenous evidence whose political-geographic claims cannot simply be read as a precise territorial map. The atlas therefore records recurrent enslavement at P2 while preserving the dependence and geographic uncertainty of the textual tradition.",
+    "summary": "Chinese accounts of Funan repeatedly describe coercive capture and enslavement of people from neighboring communities. K'ang T'ai's third-century report, preserved through later Chinese textual traditions, states that inhabitants of towns refusing homage could be abducted and made slaves; later dynastic material repeats coercive enslavement in descriptions of Funan. Specialist archaeological source criticism treats these texts as important but exogenous evidence whose political-geographic claims cannot simply be read as a precise territorial map. The atlas records these accounts of recurrent enslavement while preserving the dependence and geographic uncertainty of the textual tradition; no P-level is assigned to this claim.",
     "confidence": "moderate",
     "review_status": "reviewed",
     "publication_status": "unpublished",
@@ -25,7 +25,7 @@
       "practice_level": null,
       "coverage_state_code": "classified",
       "classification_status": "reviewed",
-      "notes": "P2 reflects repeated textual attestation across the Chinese Funan tradition, not a claim about population share or uniform prevalence. The exogenous sources may partly depend on one another and must not be counted mechanically as independent votes."
+      "notes": "The repeated textual attestations across the Chinese Funan tradition do not establish population share or uniform prevalence. The exogenous sources may partly depend on one another and must not be counted mechanically as independent votes. The practice level remains unassigned."
     },
     "notes": "Atlas Expansion 01 post-M1 intake derived from preserved data/research/cases/global_04_funan_enslavement.json. The preserved pre-M1 research fixture carried legacy P2; that ordinal is not promoted into this new research claim."
   },

@@ -323,7 +323,7 @@ A health check must ask:
 
 Then explicitly choose **continue / simplify / redirect / stop**.
 
-If continuing, define one discriminating next horizon/experiment and a kill rule. Under D-088, completion of a horizon triggers **selection** of the next high-information bounded experiment; it does not authorize arbitrary implementation or scope expansion.
+If continuing, select the next justified mode under D-096 and the current BACKLOG owner. When the mode is discovery, define a discriminating experiment and its stop rule. D-088 does not authorize arbitrary implementation or scope expansion.
 
 Record decisions and deltas, not meeting transcripts.
 
