@@ -414,11 +414,18 @@ CI/review gates. Never claim that writing this policy configured the runtime.
 
 ### Surface and model routing
 
-| Work | Surface / recommendation |
+Select the project mode under D-096. Choose the execution surface and model/effort
+separately; record the run's disposition separately from all three. These are routing
+recommendations, not configured runtime settings or evidence that a schedule exists.
+
+| Work | Execution surface |
 | --- | --- |
 | Requirements, task design, prioritization, critique, short answers | Ordinary Chat |
 | Substantial research, connected-app work, finished non-code deliverables | Work |
 | Primary result is repository inspection/change, tests, review, commit or PR | Codex |
+
+| Work | Model/effort recommendation |
+| --- | --- |
 | Narrow repeatable work with objective verification | GPT-6 Luna |
 | Normal bounded multi-step execution and allocation | GPT-6 Sol Medium |
 | Difficult interpretation, architecture, debugging or weak verification | Sol High |
@@ -431,8 +438,9 @@ cannot switch models: report a mismatch before implementation; do not silently c
 a substitution. Missing access is not a reason to buy more reasoning. Prefer a deterministic
 script for mechanical work; do not use Chat to circumvent Work/Codex usage limits.
 
-No permanent expensive supervisor. A short coordinator selects and accepts work using
-durable state; workers keep implementation detail outside that context. Use subagents
+No permanent expensive supervisor. When work is delegated, a short-lived coordinator
+can select and accept work using durable state; this policy creates no dispatcher.
+Workers keep implementation detail outside that context. Use subagents
 only for genuinely independent bounded work or validation; no role-play hierarchy or
 recursive delegation by default. One writer per overlapping scope. Use completion
 signals/long waits, not repeated polling. Summarize material results and artifact refs;
@@ -451,11 +459,13 @@ do not return full worker transcripts to the coordinator.
 - Use one retry for a transient operation (two attempts total), within the same timebox.
   Missing permissions/tools/required evidence stop that operation immediately. Inspect
   durable state before retrying an ambiguous write. Never repeat an impossible operation.
-- A known non-transient prerequisite blocks its operation immediately. Use a permitted
-  handoff or separately eligible work if available; otherwise block the lane until the
-  prerequisite changes. Two identical initially ambiguous failures on successive runs
-  also block the lane. Emit one actionable notice and record the block in durable state
-  so future invocations do only the eligibility check. Do not autonomously rewrite/disable schedules.
+- A known non-transient prerequisite blocks its operation immediately. Permitted review,
+  reconciliation, read-only handoff and separately eligible nonconflicting work may continue.
+  If none remains, report the re-entry trigger and stop this run. Two identical
+  initially ambiguous failures on successive runs also block the affected operation.
+  Emit one actionable notice and record that block in durable state when available.
+  If storage is unavailable, stop new intake until it recovers. Future invocations check
+  eligibility before retrying the affected operation. Do not autonomously rewrite/disable schedules.
 - Before new intake, inspect pending results and consumer acknowledgments. Deduplicate
   on repository, lane, task ID, input revision and contract version, with a separate attempt
   ID. Revalidate stale inputs before application. Unknown pending state is a recovery gate,

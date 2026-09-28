@@ -17,10 +17,11 @@ WIP: one active priority across workers. Operating rules: D-090, D-091, D-092, D
 ## Scheduled execution boundary
 
 Scheduled workers treat GitHub as read-only whenever their execution credential cannot
-write. They still complete the bounded research, reconciliation or QC task and emit one
-complete `GITHUB_RECONCILIATION_PENDING` packet instead of repeatedly attempting the
-same impossible mutation, disabling productive work or treating permission failure as
-a substantive project block.
+write. If an approved durable packet route is available, they may complete bounded
+research, reconciliation or QC and emit one `GITHUB_RECONCILIATION_PENDING` packet
+instead of repeatedly attempting the same impossible mutation. If no durable route is
+available, stop new intake and report that prerequisite; do not treat missing GitHub
+write permission alone as a substantive project block.
 
 Each pending packet must preserve enough information for an interactive Codex session
 to verify and land it without reconstructing chat or scheduler history:

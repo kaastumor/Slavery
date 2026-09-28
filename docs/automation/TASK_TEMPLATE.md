@@ -24,6 +24,7 @@ pending PR/checkpoint. Repeat critical rules in the capsule even when AGENTS con
 ## Execution envelope
 
 - Task ID, contract version, input revision, lane and current owner:
+- Project mode and accepted mandate (separate from surface, model and run status):
 - Requested / actual model and effort (UNKNOWN if unavailable):
 - Timebox; maximum items; usage ceiling and telemetry availability:
 - Durable output/checkpoint location and privacy classification:
