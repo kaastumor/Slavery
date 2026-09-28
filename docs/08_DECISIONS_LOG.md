@@ -3358,7 +3358,7 @@ the builder rejects a release-ready selection unless the v3 policy and exact pro
 closure are pinned. Neither gate mutates PostgreSQL, v0.8.1 or the public channel.
 
 
-## D-122 — Cliopatria public rendering is source-land preserving before cosmetic generalization
+## D-122 — Historical polygon rendering preserves source-covered canonical land
 **Date:** 2026-09-29  
 **Status:** proposed / implementation candidate under P0 #365; no release effect yet
 
@@ -3373,7 +3373,7 @@ recovery and Natural Earth clipping. D-120 already records topology inflation fo
 **Decision candidate:** treat fidelity to the exact source footprint on canonical land as
 a hard render invariant.
 
-For a Cliopatria-derived polygon and the active canonical land fabric:
+For any reviewed historical polygon used by a public serving adapter and the active canonical land fabric:
 
 `source_land = source_geometry ∩ canonical_land`
 
@@ -3382,8 +3382,7 @@ coastline correction may add bounded canonical land where the coarse source clea
 overhangs the coastline, but it may not move or erase the source's inland historical
 frontier merely to obtain a smoother picture.
 
-The first candidate policy is
-`cliopatria-source-land-fidelity-v1`:
+The first database policy is `cliopatria-source-land-fidelity-v1`; the same directional source-land invariant also applies to reviewed specialist substitutions such as the D-117 AWMC Roman polygon without changing that specialist source choice:
 
 1. no Chaikin or other inland/general-boundary smoothing;
 2. preserve the exact source geometry unchanged in the research layer;
@@ -3397,8 +3396,7 @@ The first candidate policy is
 6. treat component/ring inflation and interior-hole creation as explicit review triggers;
 7. compare representative Atlas output against the upstream Cliopatria/Seshat display
    before accepting a serving artifact;
-8. specialist source substitutions remain separate D-055 historical decisions and are
-   not silently forced back to Cliopatria.
+8. specialist source substitutions remain separate D-055 historical decisions and are not silently forced back to Cliopatria; their public render may use the same source-land-fidelity invariant under a source-appropriate policy ID.
 
 **Why:** symmetric-difference and area gates can pass while a derived render removes
 locally conspicuous pieces of land. A directional preservation test matches the actual

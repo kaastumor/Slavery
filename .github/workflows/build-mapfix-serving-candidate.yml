@@ -1,0 +1,64 @@
+name: build-mapfix-serving-candidate
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - tools/build_v081_mapfix_materialization.py
+      - tools/build_source_land_fidelity_candidates.py
+      - tests/test_v081_mapfix_candidate.py
+      - docs/08_DECISIONS_LOG.md
+      - .github/workflows/build-mapfix-serving-candidate.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'fix/p0-map-geometry-completeness'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install geometry dependencies
+        run: python -m pip install "shapely==2.1.2" "pyproj==3.7.2"
+      - name: Download exact canonical Natural Earth land fabric
+        run: |
+          python - <<'PY'
+          import hashlib
+          import urllib.request
+          from pathlib import Path
+          url="https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson"
+          out=Path("/tmp/ne_10m_land.geojson")
+          urllib.request.urlretrieve(url,out)
+          digest=hashlib.sha256(out.read_bytes()).hexdigest()
+          assert digest == "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416", digest
+          PY
+      - name: Build immutable map-fix candidate
+        run: |
+          python tools/build_v081_mapfix_materialization.py \
+            --land /tmp/ne_10m_land.geojson \
+            --write
+      - name: Run candidate contract tests
+        run: python -m unittest tests.test_v081_mapfix_candidate -v
+      - name: Commit generated candidate
+        run: |
+          git config user.name "atlas-mapfix-bot"
+          git config user.email "atlas-mapfix-bot@users.noreply.github.com"
+          git add \
+            data/serving/v0.8.1-public-mvp-v2 \
+            web/public/release-geometries/v0.8.1-public-mvp-v2 \
+            supabase/functions/atlas-data/v081_v2_payload.ts
+          if git diff --cached --quiet; then
+            echo "Generated candidate already matches."
+            exit 0
+          fi
+          git commit -m "Generate immutable v0.8.1 map-fix serving candidate"
+          git push origin "HEAD:${{ github.head_ref }}"
