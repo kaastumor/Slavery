@@ -1,15 +1,11 @@
 name: p0-map-coastal-recovery
 
 on:
-  pull_request:
-    branches:
-      - main
-    paths:
-      - tools/qgis_render_pipeline.sh
-      - tools/qgis_render_pipeline_adaptive.sh
-      - tools/select_adaptive_qgis_coastal_candidate.py
-      - .github/workflows/p0-map-coastal-recovery.yml
-      - data/research/geometry_reviews/rome_early_principate_ad14_awmc_v1.json
+  workflow_dispatch:
+
+# Expensive diagnostic only. The P0 production candidate is gated by the
+# source-land-fidelity policy and foundation/browser tests; do not rerun this
+# multi-QGIS tolerance sweep on every PR synchronization.
 
 permissions:
   contents: read
