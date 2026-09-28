@@ -49,6 +49,7 @@ jobs:
           path: |
             rome-map-completeness-report.json
             rome-cliopatria-ad14-candidate.geojson
+            rome-annexation-17-source-features.geojson
             /tmp/rome-map-completeness/**
           if-no-files-found: error
           retention-days: 7
