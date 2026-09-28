@@ -33,8 +33,8 @@ BUNDLE_SCHEMA = "historical-slavery-atlas-full-state-bundle-v2"
 LAND_FABRIC_ID = "natural-earth-ne_10m_land-v5.1.1-ca96624"
 RECOVERY_M = 25_000
 MAX_RECOVERY_ADDED_PCT = 2.0
-LOSS_EPSILON_PCT = 1e-5
-OUTSIDE_EPSILON_PCT = 1e-5
+LOSS_EPSILON_PCT = 0.001
+OUTSIDE_EPSILON_PCT = 0.0001
 
 
 def load_json(path: Path) -> Any:
@@ -323,6 +323,8 @@ def main() -> int:
         "land_file_sha256": hashlib.sha256(land_bytes).hexdigest(),
         "max_coastal_recovery_m": RECOVERY_M,
         "max_recovery_added_pct": MAX_RECOVERY_ADDED_PCT,
+        "source_land_loss_epsilon_pct": LOSS_EPSILON_PCT,
+        "outside_land_epsilon_pct": OUTSIDE_EPSILON_PCT,
         "polygon_count": len(rows),
         "candidate_failures": [
             row["geometry_id"] for row in rows if not row["candidate_pass"]
