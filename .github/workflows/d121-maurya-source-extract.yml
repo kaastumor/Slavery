@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
 
 jobs:
   extract:
@@ -26,10 +27,80 @@ jobs:
           python tools/d121_extract_maurya_crosswalk.py \
             --output d121-maurya-15654-crosswalk.json
 
+      - name: Prepare durable public-safe receipt
+        env:
+          RUN_SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          report = json.loads(Path("d121-maurya-15654-crosswalk.json").read_text())
+          marker = f"D121_MAURYA_EXTRACT:{os.environ['RUN_SHA']}"
+          lines = [
+              "### D-121 Maurya 15654 exact pinned-source diagnostic",
+              "",
+              marker,
+              "",
+              f"Disposition: `{report['disposition']}`.",
+              "",
+              "Exact source asset verified before extraction:",
+              f"- commit: `{report['source_asset']['commit']}`",
+              f"- Git blob SHA-1: `{report['source_asset']['git_blob_sha1']}`",
+              f"- SHA-256: `{report['source_asset']['sha256']}`",
+              f"- features: {report['source_asset']['feature_count']}",
+              "",
+              "Pinned Maurya rows overlapping the historical API interval:",
+          ]
+          for row in report["candidate_rows"]:
+              lines.append(
+                  "- ordinal {ordinal}; feature id `{feature_id}`; "
+                  "native interval `{start}..{end}`; feature SHA-256 "
+                  "`{feature_sha}`; geometry MD5 `{geom_md5}`; "
+                  "legacy-shape match={match}".format(
+                      ordinal=row["source_row_ordinal_1_based"],
+                      feature_id=row["source_feature_id"],
+                      start=row["source_native_from"],
+                      end=row["source_native_to"],
+                      feature_sha=row["feature_sha256"],
+                      geom_md5=row["geometry_python_default_md5"],
+                      match=str(row["matches_legacy_raw_geometry_md5"]).lower(),
+                  )
+              )
+          lines += [
+              "",
+              f"Expected split present: `{str(report['expected_split_present']).lower()}`; "
+              f"contiguous: `{str(report['candidate_intervals_contiguous']).lower()}`; "
+              f"legacy geometry matches: `{report['legacy_geometry_match_count']}`.",
+              "",
+              "Interpretation boundary: this is a read-only crosswalk diagnostic. "
+              "It does not recreate the missing 2026-09-19 API response, close D-121 by itself, "
+              "change PostgreSQL, mutate v0.8.1, merge #363, publish v0.8.2, or activate #360.",
+          ]
+          Path("d121-maurya-15654-receipt.md").write_text(
+              "\n".join(lines) + "\n", encoding="utf-8"
+          )
+          PY
+
+      - name: Post idempotent receipt to active WIP
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MARKER: D121_MAURYA_EXTRACT:${{ github.sha }}
+        run: |
+          if gh api "repos/$GITHUB_REPOSITORY/issues/332/comments?per_page=100" \
+              --paginate --jq '.[].body' | grep -Fq "$MARKER"; then
+            echo "Receipt already exists; NO_CHANGE"
+            exit 0
+          fi
+          gh issue comment 332 --body-file d121-maurya-15654-receipt.md
+
       - name: Upload bounded diagnostic
         uses: actions/upload-artifact@v4
         with:
           name: d121-maurya-15654-crosswalk
-          path: d121-maurya-15654-crosswalk.json
+          path: |
+            d121-maurya-15654-crosswalk.json
+            d121-maurya-15654-receipt.md
           if-no-files-found: error
           retention-days: 7
