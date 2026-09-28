@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - tools/audit_rome_map_completeness.py
+      - web/scripts/capture_rome_map_completeness.mjs
       - .github/workflows/rome-map-completeness.yml
 
 permissions:
@@ -14,14 +15,33 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Run Rome completeness audit
         run: python tools/audit_rome_map_completeness.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install browser dependency
+        working-directory: web
+        run: |
+          npm ci
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Capture live Rome 9 CE vs 14 CE
+        working-directory: web
+        run: |
+          node scripts/capture_rome_map_completeness.mjs             https://kaastumor.github.io/Slavery/             /tmp/rome-map-completeness
+
       - name: Upload diagnostic
         uses: actions/upload-artifact@v4
         with:
@@ -29,5 +49,6 @@ jobs:
           path: |
             rome-map-completeness-report.json
             rome-cliopatria-ad14-candidate.geojson
+            /tmp/rome-map-completeness/**
           if-no-files-found: error
           retention-days: 7
