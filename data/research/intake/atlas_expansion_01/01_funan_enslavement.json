@@ -16,7 +16,7 @@
     "temporal_precision": "multi_attestation_broad_range",
     "temporal_certainty": "approximate",
     "spatial_precision": "polity_as_described_in_external_texts",
-    "summary": "Chinese accounts of Funan repeatedly describe coercive capture and enslavement of people from neighboring communities. K'ang T'ai's third-century report, preserved through later Chinese textual traditions, states that inhabitants of towns refusing homage could be abducted and made slaves; later dynastic material repeats coercive enslavement in descriptions of Funan. Specialist archaeological source criticism treats these texts as important but exogenous evidence whose political-geographic claims cannot simply be read as a precise territorial map. The atlas records these accounts of recurrent enslavement while preserving the dependence and geographic uncertainty of the textual tradition; no P-level is assigned to this claim.",
+    "summary": "Pelliot's translation of the Southern Qi account of Funan describes the capture and enslavement of people from neighboring communities refusing homage. The date and transmission of this information remain uncertain. This external account does not establish prevalence, continuous practice, or territorial extent. No P-level is assigned to this claim.",
     "confidence": "moderate",
     "review_status": "reviewed",
     "publication_status": "unpublished",
@@ -25,9 +25,9 @@
       "practice_level": null,
       "coverage_state_code": "classified",
       "classification_status": "reviewed",
-      "notes": "The repeated textual attestations across the Chinese Funan tradition do not establish population share or uniform prevalence. The exogenous sources may partly depend on one another and must not be counted mechanically as independent votes. The practice level remains unassigned."
+      "notes": "The located enslavement passage is one transmitted textual account, not a demonstrated series of independent attestations. It does not establish population share or uniform prevalence. The practice level remains unassigned."
     },
-    "notes": "Atlas Expansion 01 post-M1 intake derived from preserved data/research/cases/global_04_funan_enslavement.json. The preserved pre-M1 research fixture carried legacy P2; that ordinal is not promoted into this new research claim."
+    "notes": "Atlas Expansion 01 post-M1 intake derived from preserved data/research/cases/global_04_funan_enslavement.json. The preserved pre-M1 research fixture carried legacy P2; that ordinal is not promoted into this new research claim. The inherited 228-500 selection envelope and third-through-fifth-century date label remain under temporal review, not a continuous-practice claim."
   },
   "evidence": [
     {
@@ -47,11 +47,11 @@
         "url_or_identifier": "https://doi.org/10.2307/j.ctv2jhjvtv.11",
         "accessed_at": "2026-09-20T21:40:00Z"
       },
-      "evidence_role": "specialist source criticism and quoted Funan testimony",
-      "independence_group": "funan_chinese_textual_tradition_stark",
-      "directness": "specialist synthesis quoting early Chinese accounts",
-      "direction": "supports",
-      "locator": "discussion of K'ang T'ai/Zhuying's third-century Funan account and the treatment of neighboring communities"
+      "evidence_role": "specialist source criticism and quotation of the same transmitted Funan passage",
+      "independence_group": "funan_southern_qi_transmitted_account",
+      "directness": "specialist synthesis quoting a Chinese account through Coedès and Pelliot",
+      "direction": "qualifies",
+      "locator": "p. 309, 'Cambodia's Origins and External Documentary Evidence,' paragraph introducing Kangtai and Zhuying and following quotation; pp. 310-312 on political-geographic interpretation"
     },
     {
       "source": {
@@ -71,11 +71,11 @@
         "url_or_identifier": "https://doi.org/10.3406/befeo.1903.1216",
         "accessed_at": "2026-09-20T21:40:00Z"
       },
-      "evidence_role": "scholarly edition/translation of Chinese Funan testimony",
-      "independence_group": "funan_chinese_textual_tradition_pelliot",
+      "evidence_role": "scholarly translation of the Southern Qi account's capture-and-enslavement passage",
+      "independence_group": "funan_southern_qi_transmitted_account",
       "directness": "translated historical source corpus",
-      "direction": "qualifies",
-      "locator": "passages concerning early Chinese descriptions of Funan society and relations with neighboring populations"
+      "direction": "supports",
+      "locator": "section V, p. 261, lower paragraph beginning 'Les gens du Fou-nan'; p. 262, continuation and footnote 2 on compilation from different dates and sources"
     }
   ],
   "geometry": {
@@ -87,3 +87,4 @@
     "review_status": "reviewed"
   }
 }
+
