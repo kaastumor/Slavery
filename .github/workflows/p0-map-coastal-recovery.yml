@@ -1,0 +1,155 @@
+name: p0-map-coastal-recovery
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - tools/qgis_render_pipeline.sh
+      - tools/qgis_render_pipeline_adaptive.sh
+      - tools/select_adaptive_qgis_coastal_candidate.py
+      - .github/workflows/p0-map-coastal-recovery.yml
+      - data/research/geometry_reviews/rome_early_principate_ad14_awmc_v1.json
+
+permissions:
+  contents: read
+
+jobs:
+  rome-ad14:
+    runs-on: ubuntu-latest
+    container:
+      image: qgis/qgis:stable
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install QC Python dependencies
+        shell: bash
+        run: |
+          apt-get update -qq
+          apt-get install -y -qq python3-shapely python3-pyproj
+
+      - name: Build exact D-117 source fixture
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          review = json.loads(
+              Path("data/research/geometry_reviews/rome_early_principate_ad14_awmc_v1.json").read_text()
+          )
+          payload = {
+              "type": "FeatureCollection",
+              "features": [{
+                  "type": "Feature",
+                  "properties": {
+                      "candidate_id": review["candidate_id"],
+                      "source_native_id": review["proposed_geometry"]["source_native_id"],
+                  },
+                  "geometry": review["proposed_geometry"]["geojson"],
+              }],
+          }
+          Path("/tmp/rome-ad14-source.geojson").write_text(json.dumps(payload))
+          PY
+
+      - name: Download pinned Natural Earth land fabric
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import urllib.request
+          from pathlib import Path
+
+          url="https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson"
+          out=Path("/tmp/ne_10m_land.geojson")
+          urllib.request.urlretrieve(url, out)
+          digest=hashlib.sha256(out.read_bytes()).hexdigest()
+          print("Natural Earth SHA256", digest)
+          PY
+
+      - name: Build bounded adaptive QGIS render
+        shell: bash
+        run: |
+          bash tools/qgis_render_pipeline_adaptive.sh \
+            /tmp/rome-ad14-source.geojson \
+            /tmp/ne_10m_land.geojson \
+            /tmp/rome-ad14-adaptive.geojson \
+            /tmp/rome-ad14-adaptive-report.json
+
+      - name: Verify Roman semantic coverage
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          payload=json.loads(Path("/tmp/rome-ad14-adaptive.geojson").read_text())
+          geoms=[f["geometry"] for f in payload["features"] if f.get("geometry")]
+
+          def in_ring(point, ring):
+              x,y=point
+              inside=False
+              j=len(ring)-1
+              for i in range(len(ring)):
+                  xi,yi=ring[i][:2]
+                  xj,yj=ring[j][:2]
+                  if ((yi>y)!=(yj>y)) and x < (xj-xi)*(y-yi)/((yj-yi) or 1e-15)+xi:
+                      inside=not inside
+                  j=i
+              return inside
+
+          def covers(point):
+              for geom in geoms:
+                  polys=[geom["coordinates"]] if geom["type"]=="Polygon" else geom["coordinates"]
+                  for poly in polys:
+                      if poly and in_ring(point,poly[0]) and not any(in_ring(point,h) for h in poly[1:]):
+                          return True
+              return False
+
+          expected_in={
+              "Rome":(12.4964,41.9028),
+              "Lyon":(4.8357,45.7640),
+              "Tarragona":(1.2445,41.1189),
+              "Carthage":(10.3230,36.8529),
+              "Corinth":(22.9322,37.9386),
+              "Thessaloniki":(22.9444,40.6401),
+              "Ephesus":(27.3410,37.9390),
+              "Antioch":(36.1600,36.2000),
+              "Caesarea":(34.8900,32.5000),
+              "Jerusalem":(35.2137,31.7683),
+              "Alexandria":(29.9187,31.2001),
+              "Memphis":(31.2500,29.8500),
+              "Aswan":(32.8998,24.0889),
+              "Cyrene":(21.8570,32.8250),
+              "Leptis_Magna":(14.2930,32.6380),
+          }
+          expected_out={
+              "London":(-0.1276,51.5072),
+              "Central_Germania":(10.0,51.0),
+              "Armenia_interior":(44.5,40.2),
+              "Central_Arabia":(42.0,25.0),
+              "Central_Sahara":(10.0,25.0),
+          }
+
+          matrix={name:covers(point) for name,point in {**expected_in,**expected_out}.items()}
+          missing=[name for name in expected_in if not matrix[name]]
+          unexpected=[name for name in expected_out if matrix[name]]
+          summary={"matrix":matrix,"missing_expected":missing,"unexpected_inside":unexpected}
+          Path("/tmp/rome-ad14-semantic-qc.json").write_text(json.dumps(summary,indent=2)+"\n")
+          print(json.dumps(summary,indent=2))
+          assert not missing, summary
+          assert not unexpected, summary
+          PY
+
+      - name: Upload Rome repair candidate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p0-rome-ad14-coastal-recovery
+          path: |
+            /tmp/rome-ad14-adaptive.geojson
+            /tmp/rome-ad14-adaptive-report.json
+            /tmp/rome-ad14-semantic-qc.json
+          if-no-files-found: warn
+          retention-days: 14
