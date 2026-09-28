@@ -27,16 +27,16 @@ INSERT INTO cartography.geometry_render_policy(
 ) VALUES (
     'cliopatria-source-land-fidelity-v1',
     'https://github.com/Seshat-Global-History-Databank/cliopatria',
-    25000,
-    25000,
     0,
+    25000,
+    2.0000,
     0,
     0,
     0,
     0,
     true,
     'postgis',
-    'D-122 candidate: preserve exact Cliopatria source footprint on the canonical land fabric; no Chaikin/inland-boundary smoothing. normalize_coastal_polygon may add bounded canonical coastal land from source overhang, but the source∩land footprint must never be erased. Cache/promotion remains explicit and reviewed.'
+    'D-122 candidate: preserve exact Cliopatria source footprint on canonical land; no Chaikin/inland-boundary smoothing. Baseline recovery is 0 m. A 25 km overhang-derived recovery candidate is accepted only when added canonical land is <=2% of the zero-recovery source-land baseline; otherwise baseline is retained. Cache/promotion remains explicit and reviewed.'
 )
 ON CONFLICT (policy_id) DO UPDATE SET
     source_url_prefix=EXCLUDED.source_url_prefix,
