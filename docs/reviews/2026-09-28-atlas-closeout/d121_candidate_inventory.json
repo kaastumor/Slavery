@@ -1,0 +1,2003 @@
+{
+  "schema": "atlas-d121-candidate-provenance-inventory-v1",
+  "status": "HOLD_NOT_CLEARED",
+  "basis": {
+    "repository_commit": "d0d16ac2b1580bfb4907446a77ee7c11a0a81d25",
+    "frozen_v081_authority_sha256": "0aa4d4fd9e4bacad0e359b655fbe237d1ef758b63fcb984ead9651d2c8181ea5",
+    "scope": "46 frozen v0.8.1 release geometry objects; live database read-only metadata matched all 46"
+  },
+  "checks": {
+    "cliopatria_zip_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+    "cliopatria_zip_git_blob_sha1": "cefab0f4b622e2e7fb3daf68d4f461f83991204c",
+    "zip_features": 13765,
+    "zip_exact_name_interval_candidates": 37,
+    "zip_missing_exact_name_interval": 1,
+    "zip_frozen_coordinate_order_exact_match": 7,
+    "zip_frozen_coordinate_order_not_exact": 31,
+    "awmc_sha256": "fddb933ecf9dce7e2a56c1ecbe051f81287890d21676e2cdbf6b47c2556bf85c",
+    "awmc_git_blob_sha1": "1229c07850753cc28dec1e222469201728c5af46",
+    "awmc_source_features": 109
+  },
+  "counts": {
+    "HOLD_API_RECORD_ASSET_UNPINNED": 37,
+    "HOLD_POINT_SOURCE_NATIVE_TIME_REVIEW": 7,
+    "HOLD_NO_UNIQUE_ZIP_COMPARATOR": 1,
+    "CANDIDATE_FEATURE_BOUND_TEMPORAL_PROXY_REVIEW": 1
+  },
+  "geometry_rows": [
+    {
+      "geometry_id": "f8a44a0b-f574-4c55-b5b1-b1e803f78543",
+      "display_name": "Achaemenid Persis/Elam royal economy",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -529,
+      "to_year": -500,
+      "geometry_source_native_id": "15232",
+      "version_label": "Cliopatria v0.2.0-duplicate via Seshat API; Achaemenid Empire record 15232; source-native interval -530..-501",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -530,
+          -501
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 282,
+            "source_name": "Achaemenid Empire",
+            "source_native_from": -530,
+            "source_native_to": -501,
+            "source_seshat_id": "ir_achaemenid_emp",
+            "feature_sha256": "884b2a4fa26e6f3192f964c7bb23cc8c1ab6166dda926ed8fdc2fcbd14e5488b"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "34ff5048-242f-48a3-8fb2-5eca4dcd9a54",
+      "display_name": "Achaemenid Persis/Elam royal economy",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -499,
+      "to_year": -480,
+      "geometry_source_native_id": "15250",
+      "version_label": "Cliopatria v0.2.0-duplicate via Seshat API; Achaemenid Empire record 15250; source-native interval -500..-481",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -500,
+          -481
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 299,
+            "source_name": "Achaemenid Empire",
+            "source_native_from": -500,
+            "source_native_to": -481,
+            "source_seshat_id": "ir_achaemenid_emp",
+            "feature_sha256": "c833c794cb8fc54dd4449f3c06947fc5ec80e74a08d189f8043365780f6c33c4"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "e5a720f8-9e22-45fe-a5b0-c6464686525d",
+      "display_name": "Baekje",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": 347,
+      "to_year": 391,
+      "geometry_source_native_id": "16698",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          347,
+          391
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 1477,
+            "source_name": "Baekje",
+            "source_native_from": 347,
+            "source_native_to": 391,
+            "source_seshat_id": "",
+            "feature_sha256": "70908093653f7d143196ad4b1d02329ceb01d04cc617564a65432c0bcee09d8f"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          true
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "21c9c493-14f8-4c13-9845-0e8a738c9110",
+      "display_name": "Classical Athens",
+      "geom_type": "ST_Point",
+      "from_year": -749,
+      "to_year": 640,
+      "geometry_source_native_id": "579885",
+      "version_label": "Pleiades 579885 Athenae; representative point 23.723974151,37.9716610082",
+      "source_family": "point_locus",
+      "gate": "HOLD_POINT_SOURCE_NATIVE_TIME_REVIEW",
+      "gate_reason": "Stable source native ID exists in DB, but source-native temporal scope and Atlas locus-year rationale require source-specific review."
+    },
+    {
+      "geometry_id": "6ad53014-31f9-4076-9291-f6d161d34fce",
+      "display_name": "Hittite central Anatolia",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -1399,
+      "to_year": -1300,
+      "geometry_source_native_id": "15016",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -1400,
+          -1301
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 70,
+            "source_name": "Hittites",
+            "source_native_from": -1400,
+            "source_native_to": -1301,
+            "source_seshat_id": "tr_hatti_new_k",
+            "feature_sha256": "57c4ea92c86b6acafee6bfbe1b7d9735bcbb83d52d086821fe43e6cabbc6c4bd"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          true
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "e813d49c-b1a1-4bf4-9df2-0c14faca31f5",
+      "display_name": "Hittite central Anatolia",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -1299,
+      "to_year": -1240,
+      "geometry_source_native_id": "15023",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -1300,
+          -1241
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 77,
+            "source_name": "Hittites",
+            "source_native_from": -1300,
+            "source_native_to": -1241,
+            "source_seshat_id": "tr_hatti_new_k",
+            "feature_sha256": "596ef3ce9923c4e10d20632fa2df8d6e0194872b3fbdef823aa34cc3ba2e0ec4"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "17a40ab9-195f-4298-bd54-0a5994743cfe",
+      "display_name": "Hittite central Anatolia",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -1239,
+      "to_year": -1220,
+      "geometry_source_native_id": "15031",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -1240,
+          -1221
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 86,
+            "source_name": "Hittites",
+            "source_native_from": -1240,
+            "source_native_to": -1221,
+            "source_seshat_id": "tr_hatti_new_k",
+            "feature_sha256": "ba497fce68514c31d568692870417e8ae9be5e507cd21b610487d790c2821ce6"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "9b32c6ca-d55d-4b7f-a4a0-46ee223fe2fc",
+      "display_name": "Hittite central Anatolia",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -1219,
+      "to_year": -1200,
+      "geometry_source_native_id": "15035",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -1220,
+          -1201
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 91,
+            "source_name": "Hittites",
+            "source_native_from": -1220,
+            "source_native_to": -1201,
+            "source_seshat_id": "tr_hatti_new_k",
+            "feature_sha256": "74fa95a3edd7cd57b9a5296e6752c1598eaea55141ae26082234ef92a0924a97"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "7658b4b6-8456-4e0e-b545-02fdd9e2e844",
+      "display_name": "Hittite central Anatolia",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -1199,
+      "to_year": -1150,
+      "geometry_source_native_id": "15037",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -1200,
+          -1151
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 93,
+            "source_name": "Hittites",
+            "source_native_from": -1200,
+            "source_native_to": -1151,
+            "source_seshat_id": "tr_hatti_new_k",
+            "feature_sha256": "2472a1d34d9f7fd313b0e32937c2bf22d4f478b3bdd94b5f9b59384017512006"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "fada0ba1-143d-419a-bf84-896ce4c8538a",
+      "display_name": "Kanesh / Kültepe",
+      "geom_type": "ST_Point",
+      "from_year": -1999,
+      "to_year": -1700,
+      "geometry_source_native_id": "291",
+      "version_label": "CDLI provenience record 291",
+      "source_family": "point_locus",
+      "gate": "HOLD_POINT_SOURCE_NATIVE_TIME_REVIEW",
+      "gate_reason": "Stable source native ID exists in DB, but source-native temporal scope and Atlas locus-year rationale require source-specific review."
+    },
+    {
+      "geometry_id": "93c03723-d03d-45fc-8611-a08a7506974f",
+      "display_name": "Mauryan Empire",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -317,
+      "to_year": -315,
+      "geometry_source_native_id": "15465",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -318,
+          -316
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 497,
+            "source_name": "Maurya Empire",
+            "source_native_from": -318,
+            "source_native_to": -316,
+            "source_seshat_id": "in_mauryan_emp",
+            "feature_sha256": "ea442162989c86bd898a352e671f657949ef68c7717fd58a2e52b742be61822d"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          true
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "958fa26b-0095-4448-9a64-4b27e44efd81",
+      "display_name": "Mauryan Empire",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -314,
+      "to_year": -301,
+      "geometry_source_native_id": "15477",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -315,
+          -302
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 507,
+            "source_name": "Maurya Empire",
+            "source_native_from": -315,
+            "source_native_to": -302,
+            "source_seshat_id": "in_mauryan_emp",
+            "feature_sha256": "9b0884427198d78f8380a8d89142683aed36826872dc5dc503cc7bef0e3ca8b4"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          true
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "655c8ee3-0eb6-4706-9980-b4e0712dba84",
+      "display_name": "Mauryan Empire",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -300,
+      "to_year": -291,
+      "geometry_source_native_id": "15505",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -301,
+          -292
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 526,
+            "source_name": "Maurya Empire",
+            "source_native_from": -301,
+            "source_native_to": -292,
+            "source_seshat_id": "in_mauryan_emp",
+            "feature_sha256": "0466d576bd4b2b55992cb163367820cddbeee366e2c87a0a8db7e633da65e64c"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "82b2f32f-de79-4a5a-98e0-56db15321588",
+      "display_name": "Mauryan Empire",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -290,
+      "to_year": -256,
+      "geometry_source_native_id": "15520",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -291,
+          -257
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 537,
+            "source_name": "Maurya Empire",
+            "source_native_from": -291,
+            "source_native_to": -257,
+            "source_seshat_id": "in_mauryan_emp",
+            "feature_sha256": "0a3de84a504d223af07b3cf5201b4a95f91de3c695326fd64a7514854a261cf4"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "7dc611d1-4b29-4163-b723-0a597459d298",
+      "display_name": "Mauryan Empire",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -255,
+      "to_year": -225,
+      "geometry_source_native_id": "15654",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_NO_UNIQUE_ZIP_COMPARATOR",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -256,
+          -226
+        ],
+        "candidate_count": 0,
+        "candidates": [],
+        "frozen_coordinate_order_exact_match": [],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "0d285ce0-adbf-45e5-a727-b5446a9c169c",
+      "display_name": "Mauryan Empire",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -224,
+      "to_year": -188,
+      "geometry_source_native_id": "15743",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -225,
+          -189
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 698,
+            "source_name": "Maurya Empire",
+            "source_native_from": -225,
+            "source_native_to": -189,
+            "source_seshat_id": "in_mauryan_emp",
+            "feature_sha256": "ec1316ab2483a673e6d2d5c5e5707b67d58ac0aa7db246967d2b08d2d4340edb"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          true
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "204d6af3-1f0b-463c-a4a9-28c0991623f8",
+      "display_name": "Mauryan Empire",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -187,
+      "to_year": -170,
+      "geometry_source_native_id": "15965",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -188,
+          -171
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 860,
+            "source_name": "Maurya Empire",
+            "source_native_from": -188,
+            "source_native_to": -171,
+            "source_seshat_id": "in_mauryan_emp",
+            "feature_sha256": "9bcf89249f4ea643c8bd0655cddc79f98264c322f67c9bca9b6f8f326828224d"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "65f31d95-3e05-49f6-9f74-43f2a3717728",
+      "display_name": "Neo-Assyrian Nineveh",
+      "geom_type": "ST_Point",
+      "from_year": -695,
+      "to_year": -695,
+      "geometry_source_native_id": "874621",
+      "version_label": "ORACC Geonames / Pleiades 874621; representative point 43.151937,36.358684",
+      "source_family": "point_locus",
+      "gate": "HOLD_POINT_SOURCE_NATIVE_TIME_REVIEW",
+      "gate_reason": "Stable source native ID exists in DB, but source-native temporal scope and Atlas locus-year rationale require source-specific review."
+    },
+    {
+      "geometry_id": "cf8cc7b3-0eb8-4f65-8e3b-091eb88dd87c",
+      "display_name": "Neo-Babylonian Babylonia",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -599,
+      "to_year": -550,
+      "geometry_source_native_id": "15178",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -600,
+          -551
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 235,
+            "source_name": "Neo-Babylonian Empire",
+            "source_native_from": -600,
+            "source_native_to": -551,
+            "source_seshat_id": "iq_neo_babylonian_emp",
+            "feature_sha256": "cc254c394dc1c559738a2c3d47e7e8652258bc747edc8c05b1b605a4de0274dc"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "b5398faf-a447-4f67-a0c9-48c2cb2e33a9",
+      "display_name": "Neo-Babylonian Babylonia",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -549,
+      "to_year": -540,
+      "geometry_source_native_id": "15219",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -550,
+          -541
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 271,
+            "source_name": "Neo-Babylonian Empire",
+            "source_native_from": -550,
+            "source_native_to": -541,
+            "source_seshat_id": "iq_neo_babylonian_emp",
+            "feature_sha256": "be6c333c06a138a013e7dad39cca25d5ab104a3aff25540cdc1d7ddd3b8807ec"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "62124dc0-f043-4c92-a463-e465d9fd6032",
+      "display_name": "Neo-Babylonian Babylonia",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -539,
+      "to_year": -530,
+      "geometry_source_native_id": "15223",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -540,
+          -531
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 274,
+            "source_name": "Neo-Babylonian Empire",
+            "source_native_from": -540,
+            "source_native_to": -531,
+            "source_seshat_id": "iq_neo_babylonian_emp",
+            "feature_sha256": "59517350dcb33a698832bf422e9ffbccd7f793fe39e524d0ea77dda2dbefe460"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "4803a371-1de6-47e2-8eaa-f0b24a079c66",
+      "display_name": "New Kingdom Egypt",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -1499,
+      "to_year": -1400,
+      "geometry_source_native_id": "15012",
+      "version_label": "Cliopatria v0.2.0-duplicate via Seshat API; record 15012; source-native interval -1500..-1401",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -1500,
+          -1401
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 66,
+            "source_name": "New Kingdom of Egypt",
+            "source_native_from": -1500,
+            "source_native_to": -1401,
+            "source_seshat_id": "eg_new_k_1",
+            "feature_sha256": "44b68b9a6b7a72297a04304d563faad1899d2f63bec53bf45059625a7fc1a1be"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          true
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "d230ca36-be77-4699-b12e-77a491e58f35",
+      "display_name": "New Kingdom Egypt",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -1399,
+      "to_year": -1300,
+      "geometry_source_native_id": "15020",
+      "version_label": "Cliopatria v0.2.0-duplicate via Seshat API; record 15020; source-native interval -1400..-1301",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -1400,
+          -1301
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 74,
+            "source_name": "New Kingdom of Egypt",
+            "source_native_from": -1400,
+            "source_native_to": -1301,
+            "source_seshat_id": "eg_new_k_1",
+            "feature_sha256": "019206b785951a215f9a1fd704eaeae17c33f85c95f833df20006eb4e5adcb7a"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "a72ccfe2-6dd1-4f90-96ea-257ff2fbf958",
+      "display_name": "New Kingdom Egypt",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -1299,
+      "to_year": -1240,
+      "geometry_source_native_id": "15027",
+      "version_label": "Cliopatria v0.2.0-duplicate via Seshat API; record 15027; source-native interval -1300..-1241",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -1300,
+          -1241
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 82,
+            "source_name": "New Kingdom of Egypt",
+            "source_native_from": -1300,
+            "source_native_to": -1241,
+            "source_seshat_id": "eg_new_k_1",
+            "feature_sha256": "3ceb88d771325b61370daac6f2caf30aaa421d7137f383a24eb08088516e6d1b"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "587b667e-7f1f-496f-a55e-13e1aabdedfa",
+      "display_name": "New Kingdom Egypt",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -1239,
+      "to_year": -1150,
+      "geometry_source_native_id": "15028",
+      "version_label": "Cliopatria v0.2.0-duplicate via Seshat API; record 15028; source-native interval -1240..-1151",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -1240,
+          -1151
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 83,
+            "source_name": "New Kingdom of Egypt",
+            "source_native_from": -1240,
+            "source_native_to": -1151,
+            "source_seshat_id": "eg_new_k_2",
+            "feature_sha256": "970a41ae5cdac5271256a16e865d9aa9e8e84985b70c3189477afb695ecb5a4b"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "4f2ab0fb-cbfc-4160-9fbf-1fcce188ab92",
+      "display_name": "New Kingdom Egypt",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -1149,
+      "to_year": -1000,
+      "geometry_source_native_id": "15041",
+      "version_label": "Cliopatria v0.2.0-duplicate via Seshat API; record 15041; source-native interval -1150..-1001",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -1150,
+          -1001
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 98,
+            "source_name": "New Kingdom of Egypt",
+            "source_native_from": -1150,
+            "source_native_to": -1001,
+            "source_seshat_id": "eg_new_k_2",
+            "feature_sha256": "bad8a9d8e08970854b335e55fe7ba2e756c5b62242b9099cdf8a3256e5866d0e"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          true
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "b81dd8d2-3956-4060-856c-7ab2ca72fde7",
+      "display_name": "Old Babylonian Uruk",
+      "geom_type": "ST_Point",
+      "from_year": -1741,
+      "to_year": -1739,
+      "geometry_source_native_id": "912986",
+      "version_label": "ORACC Geonames / Pleiades 912986; representative point 45.638752,31.32446",
+      "source_family": "point_locus",
+      "gate": "HOLD_POINT_SOURCE_NATIVE_TIME_REVIEW",
+      "gate_reason": "Stable source native ID exists in DB, but source-native temporal scope and Atlas locus-year rationale require source-specific review."
+    },
+    {
+      "geometry_id": "14edab60-6475-4699-978c-f51aaccd34d5",
+      "display_name": "Qin Empire",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -221,
+      "to_year": -218,
+      "geometry_source_native_id": "15778",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -222,
+          -219
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 722,
+            "source_name": "Qin",
+            "source_native_from": -222,
+            "source_native_to": -219,
+            "source_seshat_id": "",
+            "feature_sha256": "54096e8d5b7747011f6ddcb1b95f08f7f3c51715959528ccc674845e8965d824"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "db0512e0-e13d-4bdd-bbcd-a68bb5f1a2c2",
+      "display_name": "Qin Empire",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -217,
+      "to_year": -212,
+      "geometry_source_native_id": "15789",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -218,
+          -213
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 730,
+            "source_name": "Qin Dynasty",
+            "source_native_from": -218,
+            "source_native_to": -213,
+            "source_seshat_id": "cn_qin_emp",
+            "feature_sha256": "f4e438d1a45e89d87d65ddfc05e3f8bcafe60708416200211ee3ccc2a87ec2ee"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "0d0af02d-83bc-4f4e-a69d-d56d56326cd4",
+      "display_name": "Qin Empire",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -211,
+      "to_year": -210,
+      "geometry_source_native_id": "15821",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -212,
+          -211
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 748,
+            "source_name": "Qin Dynasty",
+            "source_native_from": -212,
+            "source_native_to": -211,
+            "source_seshat_id": "cn_qin_emp",
+            "feature_sha256": "449dd02e5519cefb8bc39ad3f8a15f306666f307681cd8daf2d89a157dbb711b"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "9abfabaa-3539-4c3e-95de-2e4452b2feb7",
+      "display_name": "Qin Empire",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -209,
+      "to_year": -208,
+      "geometry_source_native_id": "15830",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -210,
+          -209
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 755,
+            "source_name": "Qin Dynasty",
+            "source_native_from": -210,
+            "source_native_to": -209,
+            "source_seshat_id": "cn_qin_emp",
+            "feature_sha256": "d8a16e6312c200b70c927c3a3ad363218344772644d5c54ccd560a2baa1db920"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "dce21f42-3e1a-4695-b036-4d20472a6ecb",
+      "display_name": "Roman Empire — early Principate",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": 1,
+      "to_year": 5,
+      "geometry_source_native_id": "16261",
+      "version_label": "Cliopatria v0.2.0-duplicate via Seshat API; Roman Empire record 16261; source-native interval 1..5",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          1,
+          5
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 1111,
+            "source_name": "Roman Empire",
+            "source_native_from": 1,
+            "source_native_to": 5,
+            "source_seshat_id": "it_roman_principate",
+            "feature_sha256": "3237077933d7039cc95c7f1e562a5a8919d049682b8d3be57f5fbb5f89d706db"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "edb239a8-4d54-44e4-970a-affb7c9af22e",
+      "display_name": "Roman Empire — early Principate",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": 6,
+      "to_year": 8,
+      "geometry_source_native_id": "16269",
+      "version_label": "Cliopatria v0.2.0-duplicate via Seshat API; Roman Empire record 16269; source-native interval 6..8",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          6,
+          8
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 1118,
+            "source_name": "Roman Empire",
+            "source_native_from": 6,
+            "source_native_to": 8,
+            "source_seshat_id": "it_roman_principate",
+            "feature_sha256": "d6abeac3994acf577a16183e6c6bdfcda9c6f0c78ad9ab5f8df6c3bfd980c3ce"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "7beb33fa-c063-4a12-9511-2542028730f7",
+      "display_name": "Roman Empire — early Principate",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": 9,
+      "to_year": 13,
+      "geometry_source_native_id": "16272",
+      "version_label": "Cliopatria v0.2.0-duplicate via Seshat API; Roman Empire record 16272; source-native interval 9..13",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          9,
+          13
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 1121,
+            "source_name": "Roman Empire",
+            "source_native_from": 9,
+            "source_native_to": 13,
+            "source_seshat_id": "it_roman_principate",
+            "feature_sha256": "9875bac9bbe7a9c143e15cde9a6a65e97f36ea8f108bbbc616ee9d777f4392e3"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "b3066705-616e-42c7-a50d-656c6926813c",
+      "display_name": "Roman Empire — early Principate",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": 14,
+      "to_year": 22,
+      "geometry_source_native_id": "AWMC-ROMAN-EMPIRE-AD14-EXTENT",
+      "version_label": "sfsheath/roman-maps commit 33a41a0bd16fc159a19b294c5cf3072a56c77eb7; file blob 1229c07850753cc28dec1e222469201728c5af46",
+      "source_family": "awmc_derived_snapshot",
+      "gate": "CANDIDATE_FEATURE_BOUND_TEMPORAL_PROXY_REVIEW",
+      "gate_reason": "Pinned source is A.D. 14 only; Atlas 14–22 CE is a reviewed nearest-snapshot approximation, not native interval translation."
+    },
+    {
+      "geometry_id": "729a062a-7137-44ae-94f9-0b32d7b2a6d4",
+      "display_name": "Songo Mnara",
+      "geom_type": "ST_Point",
+      "from_year": 1400,
+      "to_year": 1499,
+      "geometry_source_native_id": "UNESCO-WHC-144-002",
+      "version_label": "World Heritage List 144, component 144-002, maps/geographical data",
+      "source_family": "point_locus",
+      "gate": "HOLD_POINT_SOURCE_NATIVE_TIME_REVIEW",
+      "gate_reason": "Stable source native ID exists in DB, but source-native temporal scope and Atlas locus-year rationale require source-specific review."
+    },
+    {
+      "geometry_id": "4ea5165a-9bd2-4883-9cdd-4910aa491dc7",
+      "display_name": "Tōdai-ji",
+      "geom_type": "ST_Point",
+      "from_year": 751,
+      "to_year": 792,
+      "geometry_source_native_id": "UNESCO-WHC-870-001",
+      "version_label": "World Heritage List 870, component 870-001, geographical data",
+      "source_family": "point_locus",
+      "gate": "HOLD_POINT_SOURCE_NATIVE_TIME_REVIEW",
+      "gate_reason": "Stable source native ID exists in DB, but source-native temporal scope and Atlas locus-year rationale require source-specific review."
+    },
+    {
+      "geometry_id": "26ccb13b-735a-43d2-b91d-dc829f124873",
+      "display_name": "Western Han China",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -201,
+      "to_year": -197,
+      "geometry_source_native_id": "15925",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -202,
+          -198
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 824,
+            "source_name": "Han Dynasty",
+            "source_native_from": -202,
+            "source_native_to": -198,
+            "source_seshat_id": "cn_western_han_dyn",
+            "feature_sha256": "5264ab6a3af27f31fc2d5876b9e11a2b8f6c4e99279eaa42c17f488d0e893593"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "970789fe-8b57-473d-ad82-778d441e3ae5",
+      "display_name": "Western Han China",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -196,
+      "to_year": -126,
+      "geometry_source_native_id": "15942",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -197,
+          -127
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 842,
+            "source_name": "Han Dynasty",
+            "source_native_from": -197,
+            "source_native_to": -127,
+            "source_seshat_id": "cn_western_han_dyn",
+            "feature_sha256": "d622f95b5deb67e6929778df1877c4d2751b05f048af1b97d49354b5985b606a"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "81cb78c1-3b59-4c0a-b51f-f1c0d45bf866",
+      "display_name": "Western Han China",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -125,
+      "to_year": -110,
+      "geometry_source_native_id": "16040",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -126,
+          -111
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 924,
+            "source_name": "Han Dynasty",
+            "source_native_from": -126,
+            "source_native_to": -111,
+            "source_seshat_id": "cn_western_han_dyn",
+            "feature_sha256": "b926dbc28ee600f563d383967a8bfac791b19d8b6fcc1d06e31ec1271462ae2e"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "62dabec6-0cc5-4a9f-af7f-7a5caad1e009",
+      "display_name": "Western Han China",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -109,
+      "to_year": -91,
+      "geometry_source_native_id": "16064",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -110,
+          -92
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 937,
+            "source_name": "Han Dynasty",
+            "source_native_from": -110,
+            "source_native_to": -92,
+            "source_seshat_id": "cn_western_han_dyn",
+            "feature_sha256": "a02e902035937da747ce66440fb7eb149ebae6091fe13b9979a9693d186d96ec"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "102f2974-e240-4e23-bf91-256eee65a41d",
+      "display_name": "Western Han China",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -90,
+      "to_year": -77,
+      "geometry_source_native_id": "16073",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -91,
+          -78
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 953,
+            "source_name": "Han Dynasty",
+            "source_native_from": -91,
+            "source_native_to": -78,
+            "source_seshat_id": "cn_western_han_dyn",
+            "feature_sha256": "9f55cac4b2d32ce46d9a5e69c9e83ec6c756d94d46e9e410a37cca64e1d00b4d"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "f739083b-53a7-4b97-aad6-b9ddaa5af490",
+      "display_name": "Western Han China",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -76,
+      "to_year": -50,
+      "geometry_source_native_id": "16123",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -77,
+          -51
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 986,
+            "source_name": "Han Dynasty",
+            "source_native_from": -77,
+            "source_native_to": -51,
+            "source_seshat_id": "cn_western_han_dyn",
+            "feature_sha256": "20713527fe9d59a706d8861c604110d2c576171766950425deb931bc50ad1e42"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "d1d6310e-ae50-4df4-9199-32781cfc5eb4",
+      "display_name": "Western Han China",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -49,
+      "to_year": -36,
+      "geometry_source_native_id": "16165",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -50,
+          -37
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 1031,
+            "source_name": "Han Dynasty",
+            "source_native_from": -50,
+            "source_native_to": -37,
+            "source_seshat_id": "cn_western_han_dyn",
+            "feature_sha256": "8a2fe32c77dcc2e77bda9d0919fc6c6720751c8ed43351cb327c95a65fe51b5a"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "a00dc1d4-863d-4f85-b77f-a53a37f83b43",
+      "display_name": "Western Han China",
+      "geom_type": "ST_MultiPolygon",
+      "from_year": -35,
+      "to_year": 5,
+      "geometry_source_native_id": "16206",
+      "version_label": "v0.2.0-duplicate, queried via Seshat API 2026-09-19",
+      "source_family": "cliopatria_api_queried_2026_09_19",
+      "gate": "HOLD_API_RECORD_ASSET_UNPINNED",
+      "gate_reason": "The Atlas numeric source-native ID belongs to Seshat API response; pinned zip features have no numeric API record ID. A matching name/interval is only a candidate, never source-feature identity.",
+      "zip_comparator": {
+        "asset_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+        "asset_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+        "derived_expected_source_year_bounds": [
+          -36,
+          5
+        ],
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ordinal_zero_based": 1065,
+            "source_name": "Han Dynasty",
+            "source_native_from": -36,
+            "source_native_to": 5,
+            "source_seshat_id": "cn_western_han_dyn",
+            "feature_sha256": "6af533127e3cbe511cde4e94c36b08fc22c110f41a1762e0efda0bbe90162655"
+          }
+        ],
+        "frozen_coordinate_order_exact_match": [
+          false
+        ],
+        "qualification": "Comparator candidates only; the API native record ID is absent from ZIP rows and frozen-shape equality cannot infer historical API feature binding."
+      }
+    },
+    {
+      "geometry_id": "e8934935-2201-48d5-9308-63fa571ff860",
+      "display_name": "Zhengzhou Shang City (Early Shang)",
+      "geom_type": "ST_Point",
+      "from_year": -1629,
+      "to_year": -1399,
+      "geometry_source_native_id": "Q203132",
+      "version_label": "Wikidata Q203132 representative archaeological-site coordinate 113.6831,34.7453",
+      "source_family": "point_locus",
+      "gate": "HOLD_POINT_SOURCE_NATIVE_TIME_REVIEW",
+      "gate_reason": "Stable source native ID exists in DB, but source-native temporal scope and Atlas locus-year rationale require source-specific review."
+    }
+  ],
+  "awmc_candidate": {
+    "source_commit": "33a41a0bd16fc159a19b294c5cf3072a56c77eb7",
+    "source_asset_git_blob_sha1": "1229c07850753cc28dec1e222469201728c5af46",
+    "source_asset_sha256": "fddb933ecf9dce7e2a56c1ecbe051f81287890d21676e2cdbf6b47c2556bf85c",
+    "source_temporal_label": "A.D. 14 snapshot",
+    "atlas_interval": [
+      14,
+      22
+    ],
+    "translation": "nearest specialist snapshot applied as bounded approximate_historical proxy; no annual source interval or interpolation",
+    "features": [
+      {
+        "ordinal_zero_based": 0,
+        "objectid": 2,
+        "feature_sha256": "4a28dcc4e58ad6c2b4184efdc5f41d6da6ae45d5c76e5446053e50024fc668a8"
+      },
+      {
+        "ordinal_zero_based": 1,
+        "objectid": 3,
+        "feature_sha256": "3429ab03325b69cb20c113f267120cb74677afb32bc3be5836e4ed0e23732632"
+      },
+      {
+        "ordinal_zero_based": 2,
+        "objectid": 4,
+        "feature_sha256": "1d5eaeb66dbea6c3aac01ea805a82c5b39e3ecddacc4ab06200618a71690dcdd"
+      },
+      {
+        "ordinal_zero_based": 3,
+        "objectid": 5,
+        "feature_sha256": "67b79871a96c0d82eea2582ed97cee9b98e8ccf07c3d80f0c6c2c9f78d78135e"
+      },
+      {
+        "ordinal_zero_based": 4,
+        "objectid": 6,
+        "feature_sha256": "6f37e05d4e97c77a4c800508ee85798ed7c1919cbad8497ea0d8b0d3780a74be"
+      },
+      {
+        "ordinal_zero_based": 5,
+        "objectid": 7,
+        "feature_sha256": "d3dd89ad65e30395d60e360dde8775d15197d0779178e6506d2faeeb675a4c20"
+      },
+      {
+        "ordinal_zero_based": 6,
+        "objectid": 9,
+        "feature_sha256": "1879224209822ee36d8d64a8f9eaf273e7d2ca0bde084aa6d149666c1c0f794a"
+      },
+      {
+        "ordinal_zero_based": 7,
+        "objectid": 10,
+        "feature_sha256": "ba6801a54665f2dfa4efd3117ceb4c41a43e8d8fe5f99cf5da8f35bb3ce9a108"
+      },
+      {
+        "ordinal_zero_based": 8,
+        "objectid": 11,
+        "feature_sha256": "acac9b286b89ad464fa3d8dd493836edbad7f06cc373847e17629bb4796c6570"
+      },
+      {
+        "ordinal_zero_based": 9,
+        "objectid": 12,
+        "feature_sha256": "8282621ee24039d9d8c43b65e2e9d9515c5edcff0e59f446d699e61e480abd07"
+      },
+      {
+        "ordinal_zero_based": 10,
+        "objectid": 13,
+        "feature_sha256": "4a679621bf58a195a47bb8210eae2ef6b7e65a9eb718284772b94c5d1853ef05"
+      },
+      {
+        "ordinal_zero_based": 11,
+        "objectid": 14,
+        "feature_sha256": "301c8698161b09e290f22a6b0667641c06133f44d50f954aa1eab3284af18fca"
+      },
+      {
+        "ordinal_zero_based": 12,
+        "objectid": 15,
+        "feature_sha256": "9a10f83f8c676c856eb562573ecf94d382555b7c7a2315683ce2aa2a637b6b45"
+      },
+      {
+        "ordinal_zero_based": 13,
+        "objectid": 16,
+        "feature_sha256": "487ec31f7e5675d457648eff255665f441f9d9a1fba77d87112186990902c3b2"
+      },
+      {
+        "ordinal_zero_based": 14,
+        "objectid": 17,
+        "feature_sha256": "094d47de39fab53387d40f78a606564abd3c85a3fc1330029159088d4b5978f8"
+      },
+      {
+        "ordinal_zero_based": 15,
+        "objectid": 18,
+        "feature_sha256": "5a57fb83c05722acae15773a5e7bae26732ac76e50c91433186a941624dad885"
+      },
+      {
+        "ordinal_zero_based": 16,
+        "objectid": 19,
+        "feature_sha256": "e6a6aff39b70549e740d1618265f3e80f8939a5693c10ce0233d73d0b4bac885"
+      },
+      {
+        "ordinal_zero_based": 17,
+        "objectid": 20,
+        "feature_sha256": "f67fba47d9c015adc848b91aec1470052ce66215b7c2e2cdcc82e83cd29440f8"
+      },
+      {
+        "ordinal_zero_based": 18,
+        "objectid": 21,
+        "feature_sha256": "f5b7e0693f45d917155adc9dd76be04c0daff705459b7e7348f25a70442a4a35"
+      },
+      {
+        "ordinal_zero_based": 19,
+        "objectid": 22,
+        "feature_sha256": "cbba97fb0640d6b25628a0068f439cf414747daef6b7a135eb9d8fc3ce76bd4f"
+      },
+      {
+        "ordinal_zero_based": 20,
+        "objectid": 23,
+        "feature_sha256": "ce397429fc7d997b2775eb46791aa83b05f9221640a4c0f8deff397ef8f6ac5b"
+      },
+      {
+        "ordinal_zero_based": 21,
+        "objectid": 24,
+        "feature_sha256": "b08abb4e40c3b9df9ec6dc9ff51ca93537cb6b7cf10ff1ebb873ae0ee52bd8dd"
+      },
+      {
+        "ordinal_zero_based": 22,
+        "objectid": 25,
+        "feature_sha256": "517cb6ccabff4255a57a823be012ff16d62d45eaec2f307cadac6fd3947c236a"
+      },
+      {
+        "ordinal_zero_based": 23,
+        "objectid": 26,
+        "feature_sha256": "86f1ba258d62e1ae70998bda7668d2fb9e703f7fd8f408df6ef3b9ef412dd5b0"
+      },
+      {
+        "ordinal_zero_based": 24,
+        "objectid": 27,
+        "feature_sha256": "e92d87c9a50ad75d005793101d3f81b569034948c5e61f6e4237e846bd0180b6"
+      },
+      {
+        "ordinal_zero_based": 25,
+        "objectid": 28,
+        "feature_sha256": "37b567b3c154e2ee2f699ed45af90ddd9cc99b9dd08341d03811b8f5ef3730b7"
+      },
+      {
+        "ordinal_zero_based": 26,
+        "objectid": 29,
+        "feature_sha256": "ca4079c3b691b46e92ec362a16880593a535b764a4c82ebd2d9af728e6def39f"
+      },
+      {
+        "ordinal_zero_based": 27,
+        "objectid": 30,
+        "feature_sha256": "83453218f5545add3ad9baa94864595234450b814ff165ec47b73d8fc7caea5e"
+      },
+      {
+        "ordinal_zero_based": 28,
+        "objectid": 31,
+        "feature_sha256": "5f8b983f17237c2bc10413590656ad54be5ff152e519dcca2381db211c81d582"
+      },
+      {
+        "ordinal_zero_based": 29,
+        "objectid": 32,
+        "feature_sha256": "3c79a1f4a1a309261fa98218bbdfe60b1d09f183b2a9bdcc7e91540bda4a1d83"
+      },
+      {
+        "ordinal_zero_based": 30,
+        "objectid": 33,
+        "feature_sha256": "35fda494e00e80ab7b9a6b9c5074e5f367c78d5771c8990453e7515b4b7b51a4"
+      },
+      {
+        "ordinal_zero_based": 31,
+        "objectid": 34,
+        "feature_sha256": "00edcc1de622b60cdf73b2702e1dabbf03c3f91c71991f2509d67870b3cceb9d"
+      },
+      {
+        "ordinal_zero_based": 32,
+        "objectid": 35,
+        "feature_sha256": "4c82ee4389092b8960133b206a8da526fed0d5859ef712b65030e2e36c42a4a3"
+      },
+      {
+        "ordinal_zero_based": 33,
+        "objectid": 36,
+        "feature_sha256": "bc8d278b5a59616d1603f135e4ac9aec8644d3ef2f0ed8b93411d7ed7f35991b"
+      },
+      {
+        "ordinal_zero_based": 34,
+        "objectid": 37,
+        "feature_sha256": "287f679d90effed335c38b359b2a299ec5c13e331327f57798ea938d9eda0358"
+      },
+      {
+        "ordinal_zero_based": 35,
+        "objectid": 38,
+        "feature_sha256": "3750e801e730c970caeec58c3714d58030ad1c9ce7cbebfc0a4fff6abd1fe95f"
+      },
+      {
+        "ordinal_zero_based": 36,
+        "objectid": 39,
+        "feature_sha256": "fcb454297e8b6bf5ad1770ebbd5658448882d2738b2cc3e5d952d62f8edd88aa"
+      },
+      {
+        "ordinal_zero_based": 37,
+        "objectid": 40,
+        "feature_sha256": "cf0785278db79917bd641958b6f0e7a4d4823cf9610de58ea1645fd96e047a87"
+      },
+      {
+        "ordinal_zero_based": 38,
+        "objectid": 41,
+        "feature_sha256": "72d0e4d314f09dcd7bcf63978474301baad8af7ef505aaecff0f4584d10bf87b"
+      },
+      {
+        "ordinal_zero_based": 39,
+        "objectid": 42,
+        "feature_sha256": "782fd7eb9fc6638edd7e9901d02535da249fef4b5e6bf47b72419576930f225c"
+      },
+      {
+        "ordinal_zero_based": 40,
+        "objectid": 43,
+        "feature_sha256": "c8259cae4326faead7372db3489565c9b0430c8f2f1e5ddf1539c100eb4d31ad"
+      },
+      {
+        "ordinal_zero_based": 41,
+        "objectid": 44,
+        "feature_sha256": "a80c9ffdbdfa246cf55d0b1c264ad9b8fb86cbb1a401c882064c5751d55edb1f"
+      },
+      {
+        "ordinal_zero_based": 42,
+        "objectid": 45,
+        "feature_sha256": "a350fa986b3ce3b58396c17c7c98502d359a65cfa5dc3a6cc545c5dbcb30bd52"
+      },
+      {
+        "ordinal_zero_based": 43,
+        "objectid": 47,
+        "feature_sha256": "b7d413df62e99d91cb4dbf3887642c90234ec33e6f893edd7e101854e046933b"
+      },
+      {
+        "ordinal_zero_based": 44,
+        "objectid": 48,
+        "feature_sha256": "eeb2d1505a3836626accb1d74de407645f4b3943b6647fdfe1269c19b7dec59e"
+      },
+      {
+        "ordinal_zero_based": 45,
+        "objectid": 49,
+        "feature_sha256": "fcc74fb50bba9652acd9544884be7355906236fd63fdc01644b01f38e779dd49"
+      },
+      {
+        "ordinal_zero_based": 46,
+        "objectid": 50,
+        "feature_sha256": "bf83e49c54bf6a1a38e6895e00a2f7000f083f9cb8c772583bdefa6730e0c235"
+      },
+      {
+        "ordinal_zero_based": 47,
+        "objectid": 51,
+        "feature_sha256": "2e04e0aa6c29b3f2d33111bbba4480b204664cb08a4f86ca67598c97fbebd03a"
+      },
+      {
+        "ordinal_zero_based": 48,
+        "objectid": 52,
+        "feature_sha256": "dc1ab03c24a757bcd4fb47d73e640a4793ea77086135d93a528e65c3d5c10896"
+      },
+      {
+        "ordinal_zero_based": 49,
+        "objectid": 53,
+        "feature_sha256": "71695b82bc7149dc2c81bed8dc48a77abe5d8b90a1bdf7438aa43d711207f3b2"
+      },
+      {
+        "ordinal_zero_based": 50,
+        "objectid": 54,
+        "feature_sha256": "3ecb2b647833df3802a7b80165c00ee2284934f9cdeb0689ddb1619aef03d1a9"
+      },
+      {
+        "ordinal_zero_based": 51,
+        "objectid": 55,
+        "feature_sha256": "9e7220f7540fbbfd884af2d44b411ab347276ac4baf54dff632226d431f88b10"
+      },
+      {
+        "ordinal_zero_based": 52,
+        "objectid": 56,
+        "feature_sha256": "a98d6c923026b1d47c5887e74812e8890bd9fa6d6ebeba45d6d3758e119f5598"
+      },
+      {
+        "ordinal_zero_based": 53,
+        "objectid": 57,
+        "feature_sha256": "1634731f06173fe32b767fcba867312ab63576011ad31895bace190d456592fc"
+      },
+      {
+        "ordinal_zero_based": 54,
+        "objectid": 58,
+        "feature_sha256": "8522065f586b895d32654cd4fcbe0f76e5f1ea5367f2c6e2a9a2e6569a48430b"
+      },
+      {
+        "ordinal_zero_based": 55,
+        "objectid": 59,
+        "feature_sha256": "3460bb1c21134435d73ecef9ee74001a82d4444524583fd9fa0ad96e3ec29f83"
+      },
+      {
+        "ordinal_zero_based": 56,
+        "objectid": 60,
+        "feature_sha256": "87b01b1fcac7132316f447afdd43785035000f99e809be69f047bfd83c777542"
+      },
+      {
+        "ordinal_zero_based": 57,
+        "objectid": 61,
+        "feature_sha256": "10b3b40f238bbcd68d02975a394a7b96bc308f95f9c5db0251a543beefe965f9"
+      },
+      {
+        "ordinal_zero_based": 58,
+        "objectid": 62,
+        "feature_sha256": "733c2fa7722b74e92770bfbab29c13d77a4222fe8681fe0909034c4faaa8c6df"
+      },
+      {
+        "ordinal_zero_based": 59,
+        "objectid": 63,
+        "feature_sha256": "bc68ee6a1b864f5906e431c3594b35c6c10848b175c5d5da22bdff4744694357"
+      },
+      {
+        "ordinal_zero_based": 60,
+        "objectid": 64,
+        "feature_sha256": "d2a8a3bfcda3f3a78d57f569e4380af833b81b669ed921b922cd9058bef4f2a2"
+      },
+      {
+        "ordinal_zero_based": 61,
+        "objectid": 65,
+        "feature_sha256": "4c73a330a288ea62474acb3757192f3e06fe80f1068349c1bdb5b37e6a025d12"
+      },
+      {
+        "ordinal_zero_based": 62,
+        "objectid": 66,
+        "feature_sha256": "6e790782166535462917305b4baa49209a0e85f4bd5d65a488c9a9d6efb49c3c"
+      },
+      {
+        "ordinal_zero_based": 63,
+        "objectid": 68,
+        "feature_sha256": "b4c480c69fc0e89969bebf9e5e97c05611256301aa98157351063037319bda42"
+      },
+      {
+        "ordinal_zero_based": 64,
+        "objectid": 69,
+        "feature_sha256": "6bdfa3ad51f82b9483a6c0b402044ddc49ac49619f3da494a7d196dde47b60aa"
+      },
+      {
+        "ordinal_zero_based": 65,
+        "objectid": 70,
+        "feature_sha256": "3b6696dc4ed52488a49d70905fdcba3a6c385114b555890f3ef732d71fa47a49"
+      },
+      {
+        "ordinal_zero_based": 66,
+        "objectid": 71,
+        "feature_sha256": "defaf6d53231b875e1800b8b6bf663d957c6d13d0cee85dd2afc101a37793288"
+      },
+      {
+        "ordinal_zero_based": 67,
+        "objectid": 72,
+        "feature_sha256": "6c9f8ddf309f4e2a9e18950d0710e00aa9116ccb3cb7bbe7798a25e5f034aaf9"
+      },
+      {
+        "ordinal_zero_based": 68,
+        "objectid": 73,
+        "feature_sha256": "6248e1ba0a89809ccb998c0e7a949b21f8df840a1ff2c6dc08e01a50d83b16fa"
+      },
+      {
+        "ordinal_zero_based": 69,
+        "objectid": 74,
+        "feature_sha256": "ad1bfae0881ff120d349951d51476404dc3379bc7ef623a4f6f41f361f299059"
+      },
+      {
+        "ordinal_zero_based": 70,
+        "objectid": 77,
+        "feature_sha256": "65ef8ba9d11a19e5b3e6c1c91ead61e174d951d5704d496c18b89dab3381f5ab"
+      },
+      {
+        "ordinal_zero_based": 71,
+        "objectid": 78,
+        "feature_sha256": "7ef297cb5adf4107ba2810845c5e1514469ff50448d6bcb19088e02416ae3a97"
+      },
+      {
+        "ordinal_zero_based": 72,
+        "objectid": 79,
+        "feature_sha256": "4b77a2b365be5c83ba57115933777657a45dcaf4bf4166d6ad10423d5c43bb6b"
+      },
+      {
+        "ordinal_zero_based": 73,
+        "objectid": 80,
+        "feature_sha256": "c9f63d3fb451fe2df6b58e3ee22d866df62e75f6c67cec661b1edcc6bd56b6b1"
+      },
+      {
+        "ordinal_zero_based": 74,
+        "objectid": 81,
+        "feature_sha256": "864d7acd60f86530747818086dc687ad9649a8c59fc1d0a96a3f4ab59c651d5f"
+      },
+      {
+        "ordinal_zero_based": 75,
+        "objectid": 82,
+        "feature_sha256": "bc0fac42f1e44240e63c3edc5cd8ee3d1d3e6a79aa880c2d40fc096faf83e132"
+      },
+      {
+        "ordinal_zero_based": 76,
+        "objectid": 83,
+        "feature_sha256": "c5d397c280f6816ac28dbcb01f4e96c085d01afc68e9a58d0d8f04c2ac505038"
+      },
+      {
+        "ordinal_zero_based": 77,
+        "objectid": 84,
+        "feature_sha256": "ea4bb03ac6eada0ca9188c6b1bed18b4441980ad99e73b878d3edcc8e3ab2180"
+      },
+      {
+        "ordinal_zero_based": 78,
+        "objectid": 85,
+        "feature_sha256": "2dbd1333835918d79ddd1ce2909e65c816d26c205800ea64b68e3f352f5a5e04"
+      },
+      {
+        "ordinal_zero_based": 79,
+        "objectid": 86,
+        "feature_sha256": "e3b3907d43ad3541ace4a337b5b9babb9f68a745057a316f2a87a7a0ebe4872d"
+      },
+      {
+        "ordinal_zero_based": 80,
+        "objectid": 87,
+        "feature_sha256": "878342bade57c3959d1865d02422676390e1379df1fa31cb59c6aea8b3f17df4"
+      },
+      {
+        "ordinal_zero_based": 81,
+        "objectid": 88,
+        "feature_sha256": "e60f4228d5121819fa9da0ed587c889bce3b763b6ece8aa7d6124e790f74a719"
+      },
+      {
+        "ordinal_zero_based": 82,
+        "objectid": 89,
+        "feature_sha256": "b0e4c16fb1880fe6f1ec5bfe7eb0bb538c086cd07208b6b9008e5d5e0a0d60a8"
+      },
+      {
+        "ordinal_zero_based": 83,
+        "objectid": 90,
+        "feature_sha256": "b440e458afa0a2e745c33edd45f72ffbdba70ad5ba4dd21b082d5611ded76ca3"
+      },
+      {
+        "ordinal_zero_based": 84,
+        "objectid": 91,
+        "feature_sha256": "fae520828ffecdad391ca238433aa2b1d46f7646666c7bf6f75cc0ce668c8a90"
+      },
+      {
+        "ordinal_zero_based": 85,
+        "objectid": 92,
+        "feature_sha256": "dcff502fec041e9416781029329cd9f4373e197e8762bb8dd1a918c34bd77564"
+      },
+      {
+        "ordinal_zero_based": 86,
+        "objectid": 93,
+        "feature_sha256": "0cfb55be52bdafeca017a3a64398eb31c72174bb1a079bdd642bce66fbfefd77"
+      },
+      {
+        "ordinal_zero_based": 87,
+        "objectid": 94,
+        "feature_sha256": "348fd0bb538c027d46dd69c29a366f0086b5f487d5cb5707948aa02e7f98419c"
+      },
+      {
+        "ordinal_zero_based": 88,
+        "objectid": 95,
+        "feature_sha256": "1bb2e94a73e1a32fc69118da3065eee2a173d8ed98e8c64c71b91857d5f263e4"
+      },
+      {
+        "ordinal_zero_based": 89,
+        "objectid": 96,
+        "feature_sha256": "3afb2325820d7f53a4572071c08ed5e754e9232e75012bfeaf4b91308997dc0c"
+      },
+      {
+        "ordinal_zero_based": 90,
+        "objectid": 97,
+        "feature_sha256": "9f5ba15dbec468660f2b3a7dff72f509a496c2d5c1a2b88f1cb7cfedbf4e94a3"
+      },
+      {
+        "ordinal_zero_based": 91,
+        "objectid": 98,
+        "feature_sha256": "2af106a4d93e7604fbfc6080810dabeb9af8dac5473ac80d1e72368b73dcbecb"
+      },
+      {
+        "ordinal_zero_based": 92,
+        "objectid": 99,
+        "feature_sha256": "b1f1cb8620ccfd57a800b709bf047613fb831df0512e726ce6e009d09b3305fd"
+      },
+      {
+        "ordinal_zero_based": 93,
+        "objectid": 100,
+        "feature_sha256": "9cc07f9443f1884a67c61859792983c26d06e5a89120cb8181299b1ea5a50c1d"
+      },
+      {
+        "ordinal_zero_based": 94,
+        "objectid": 101,
+        "feature_sha256": "1d8746150c994dec72d374e35e8203bcd4aa989abdd3b4f61b4f5214bbf27eba"
+      },
+      {
+        "ordinal_zero_based": 95,
+        "objectid": 102,
+        "feature_sha256": "1b5d9f7f34eec143431d71e83545a0e06ca137103c2ce00ba06163fc06061c64"
+      },
+      {
+        "ordinal_zero_based": 96,
+        "objectid": 103,
+        "feature_sha256": "c2efa74b2175444aa6c8ffb1619101f2a8ae97477e2b9d5a4423ee32b08efc39"
+      },
+      {
+        "ordinal_zero_based": 97,
+        "objectid": 104,
+        "feature_sha256": "cdb6a16490eaa08b2b2e69ee1a2bc8fe36ca15aeb961ba9c54fc6b24a75a74f5"
+      },
+      {
+        "ordinal_zero_based": 98,
+        "objectid": 105,
+        "feature_sha256": "6b6b9d8f48b32cb3744e70381915f9f54b757ce44e8b3a935d62c27ff1f6f16c"
+      },
+      {
+        "ordinal_zero_based": 99,
+        "objectid": 106,
+        "feature_sha256": "4f1a6981ef9d87b59c6252a97a749c0182f2b9d0f35d7dc39161c627c3678828"
+      },
+      {
+        "ordinal_zero_based": 100,
+        "objectid": 107,
+        "feature_sha256": "8858704e80d5579806b43762ff25c94d49fb7a5b1567b0062fe11bf820ceb906"
+      },
+      {
+        "ordinal_zero_based": 101,
+        "objectid": 108,
+        "feature_sha256": "093e2be20a595d3f43f24e0a6de1d0be050d5b6b506b62414d70aa9808116078"
+      },
+      {
+        "ordinal_zero_based": 102,
+        "objectid": 109,
+        "feature_sha256": "f8c82b4a028bdf6bb8af837ee66c2ff074b2674d3e821de9f420936c28f7d06c"
+      },
+      {
+        "ordinal_zero_based": 103,
+        "objectid": 111,
+        "feature_sha256": "c9ffcbc724b9e7412b4227f100fce412fadb840b47ddeafce399c4b74e43a408"
+      },
+      {
+        "ordinal_zero_based": 104,
+        "objectid": 112,
+        "feature_sha256": "70087d91235bd3c0621d1a68368af31fa54c64b4b5c895fc551352728f9dc3ca"
+      },
+      {
+        "ordinal_zero_based": 105,
+        "objectid": 113,
+        "feature_sha256": "65847e602f3908636087d89c6b0e4bee72c77c85dc961d4419775051196f76eb"
+      },
+      {
+        "ordinal_zero_based": 106,
+        "objectid": 115,
+        "feature_sha256": "b41ba62360a4684f0f475ec62ba9f09474f87eb9892aa504d3e06f45d9426ef2"
+      },
+      {
+        "ordinal_zero_based": 107,
+        "objectid": 116,
+        "feature_sha256": "766721f7931caa3f460582553360c2b9a28c25b8b309b8a0fb01f7b3018140fc"
+      },
+      {
+        "ordinal_zero_based": 108,
+        "objectid": 120,
+        "feature_sha256": "c888cdeddbb8acfe1ba06e86bb121db2dd2968953cf3631e3def7e413b1805a9"
+      }
+    ]
+  },
+  "interpretation": "No D-121 closure is asserted. ZIP shape diagnostics do not prove or disprove API-sourced identity; source-date bounds computed from Atlas are candidate search keys, not independent native-date evidence."
+}
