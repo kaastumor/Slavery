@@ -10,13 +10,13 @@
     "review_status": "reviewed"
   },
   "claim": {
-    "from_year": 228,
-    "to_year": 500,
-    "date_text_original": "Chinese accounts from the third through fifth centuries CE",
-    "temporal_precision": "multi_attestation_broad_range",
-    "temporal_certainty": "approximate",
+    "from_year": null,
+    "to_year": null,
+    "date_text_original": "Enslavement description preserved in Nan Qi Shu (History of the Southern Qi), compiled in the early sixth century; in the Funan biography the description follows Jayavarman's 484 CE embassy material, but the underlying observation date of the passage is not securely recoverable.",
+    "temporal_precision": "source_context_only",
+    "temporal_certainty": "uncertain",
     "spatial_precision": "polity_as_described_in_external_texts",
-    "summary": "Pelliot's translation of the Southern Qi account of Funan describes the capture and enslavement of people from neighboring communities refusing homage. The date and transmission of this information remain uncertain. This external account does not establish prevalence, continuous practice, or territorial extent. No P-level is assigned to this claim.",
+    "summary": "Pelliot's translation of the Southern Qi account of Funan describes the capture and enslavement of people from neighboring communities refusing homage. The passage is securely attested in the Nan Qi Shu textual tradition, but its underlying observation date is not securely recoverable. Later specialist source criticism cautions that Chinese dynastic histories can preserve and recombine material of different ages, and Pelliot's final dating of the third-century Kang Tai/Zhu Ying mission was 245–250 rather than the 228 date used by Stark. This evidence does not establish prevalence, continuous practice, or territorial extent. No P-level is assigned to this claim.",
     "confidence": "moderate",
     "review_status": "reviewed",
     "publication_status": "unpublished",
@@ -25,9 +25,9 @@
       "practice_level": null,
       "coverage_state_code": "classified",
       "classification_status": "reviewed",
-      "notes": "The located enslavement passage is one transmitted textual account, not a demonstrated series of independent attestations. It does not establish population share or uniform prevalence. The practice level remains unassigned."
+      "notes": "The located enslavement passage is one transmitted textual account, not a demonstrated series of independent attestations. Its placement in Nan Qi Shu gives secure textual context but not a secure event date for the described practice. It does not establish population share or uniform prevalence. The practice level remains unassigned."
     },
-    "notes": "Atlas Expansion 01 post-M1 intake derived from preserved data/research/cases/global_04_funan_enslavement.json. The preserved pre-M1 research fixture carried legacy P2; that ordinal is not promoted into this new research claim. The inherited 228-500 selection envelope and third-through-fifth-century date label remain under temporal review, not a continuous-practice claim."
+    "notes": "Atlas Expansion 01 post-M1 intake derived from preserved data/research/cases/global_04_funan_enslavement.json. The preserved pre-M1 research fixture carried legacy P2; that ordinal is not promoted into this new research claim. The inherited 228-500 selection envelope is not retained as an event interval: Stark's 228 attribution is treated as a secondary attribution rather than a secure date for this passage, while Vickery notes Pelliot's final 245-250 dating of the Kang Tai/Zhu Ying mission and cautions that later Chinese histories preserve material of different ages. Source context remains explicit in date_text_original; the historical event interval remains unresolved pending stronger evidence."
   },
   "evidence": [
     {
@@ -76,15 +76,36 @@
       "directness": "translated historical source corpus",
       "direction": "supports",
       "locator": "section V, p. 261, lower paragraph beginning 'Les gens du Fou-nan'; p. 262, continuation and footnote 2 on compilation from different dates and sources"
+    },
+    {
+      "source": {
+        "title": "Funan Reviewed: Deconstructing the Ancients",
+        "author_or_institution": "Michael Vickery",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "geographic_scope": "Funan / early mainland Southeast Asia",
+        "temporal_scope": "Chinese textual traditions concerning Funan, including third-century reports preserved in later histories",
+        "independence_notes": "Independent historiographical source criticism of the Pelliot/Coedès reconstruction and the transmission of Chinese Funan material.",
+        "reliability_limitations": "Vickery explicitly states that he is not a Sinologist. Used here to qualify transmission and dating claims and to document Pelliot's revised mission chronology, not as an independent translation of the enslavement passage."
+      },
+      "version": {
+        "version_label": "Bulletin de l'École française d'Extrême-Orient 90-91 (2003), pp. 101-143",
+        "publication_year": 2003,
+        "url_or_identifier": "https://doi.org/10.3406/befeo.2003.3609"
+      },
+      "evidence_role": "historiographical source criticism qualifying attribution and date of the transmitted Funan account",
+      "independence_group": "funan_chinese_source_transmission_critique",
+      "directness": "specialist historiographical reassessment of Pelliot/Coedès and the Chinese textual strata",
+      "direction": "qualifies",
+      "locator": "pp. 105-106, discussion of Kang Tai/Zhu Ying, distinction between envoy observations and later-preserved traditions; note 22 on Pelliot's final 245-250 mission dating"
     }
   ],
   "geometry": {
-    "from_year": 228,
-    "to_year": 500,
+    "from_year": null,
+    "to_year": null,
     "accuracy_status": "unresolved",
-    "resolution_method": "Funan's extent, political unity, and center are debated and the claim derives from exogenous texts across several centuries. Do not substitute modern Cambodia/Vietnam borders or a maximum-extent Funan reconstruction. Resolve narrower time slices only after a bounded specialist-geometry comparison under D-055.",
+    "resolution_method": "Funan's extent, political unity, and center are debated, and the enslavement passage's underlying observation date is unresolved. Do not substitute modern Cambodia/Vietnam borders, a maximum-extent Funan reconstruction, or the inherited 228-500 interval as if it were an event date. Resolve a bounded historical geometry only after the claim's temporal scope and a specialist geometry can be defended independently under D-055.",
     "geojson": null,
     "review_status": "reviewed"
   }
 }
-
