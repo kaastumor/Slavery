@@ -205,6 +205,7 @@ def main() -> int:
         "cappad", "commag", "juda", "jude", "mauretan", "thrac", "nabat", "armenia"
     )
     frontier_rows = []
+    annexation17_features = []
     for ordinal, feature in enumerate(features, start=1):
         props = feature.get("properties") or {}
         name = str(props.get("Name") or "")
@@ -215,6 +216,12 @@ def main() -> int:
             continue
         if end < 1 or start > 60:
             continue
+        if (
+            name in {"Kingdom of Cappadocia", "Kingdom of Commagene"}
+            and start <= 17 <= end
+        ):
+            annexation17_features.append(feature)
+
         frontier_rows.append({
             "source_row_ordinal_1_based": ordinal,
             "name": name,
@@ -273,6 +280,19 @@ def main() -> int:
             if candidate["control_score"]["pass"]
             else "BLOCK_PINNED_SOURCE_SEMANTIC_FAILURE"
         )
+
+    Path("rome-annexation-17-source-features.geojson").write_text(
+        json.dumps(
+            {
+                "type": "FeatureCollection",
+                "features": annexation17_features,
+            },
+            ensure_ascii=False,
+            sort_keys=True,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
 
     Path("rome-map-completeness-report.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
