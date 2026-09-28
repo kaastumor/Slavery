@@ -3302,3 +3302,50 @@ The associated Actions visual-review artifact is run `36341676958`, artifact
 publish v0.8.2 by itself. Raw historical geometry remains unchanged. The two new
 Mycenaean Pylos/Knossos points are evidence loci only and are not territorial practice
 extent.
+
+
+## D-121 — Successor geometry requires exact source-feature and source-native temporal provenance
+**Date:** 2026-09-28  
+**Status:** accepted for successor geometry review; no retroactive mutation of v0.8.1
+
+**Trigger:** the overnight Geometry-QC worker extended the D-119/D-120 corpus review
+beyond render-shape metrics. It found that all 30 published multi-slice transitions
+tested are contiguous with zero gaps/overlaps, and all 10 mechanically recoverable
+source-native intervals tested translate correctly into Atlas years. A separate lineage
+audit of 38 released Cliopatria polygons found no demonstrated wrong-feature
+attachment.
+
+Those are positive checks, but they also expose a preservation gap: for every
+Cliopatria-derived geometry the repository does not yet freeze enough structured data
+to prove source-feature uniqueness and source-native temporal translation independently
+of the current database/display result.
+
+**Decision:** D-120 remains the geometric measurement contract and is extended for
+successor authority by the following provenance hard gates:
+
+1. every structured geometry source must be bound to the exact source feature using the
+   stable native/feature ID plus pinned dataset version/commit and asset/blob identity;
+2. where a native ID is not globally unique inside the pinned source, preserve the row
+   or feature ordinal needed to disambiguate it;
+3. preserve a source-feature content fingerprint (SHA-256 or equivalent) when the
+   source format permits deterministic feature hashing;
+4. preserve source-native temporal bounds/convention and the documented translation
+   into Atlas astronomical years, including parser/rule identity;
+5. never infer source-feature binding or native dates from the already-loaded Atlas row;
+6. a missing binding/provenance field holds successor reuse for that geometry; it does
+   not invalidate or mutate an immutable predecessor release;
+7. D-120's five accepted render-policy substitutions and Baekje bounded override remain
+   cartographically accepted, but successor authority must also satisfy these exact
+   provenance gates.
+
+The machine-readable successor envelope is:
+
+`config/cartography/corpus_geometry_qc_envelope_v3.json`
+
+**Evidence:** overnight 2026-09-28 temporal and Cliopatria lineage audits:
+30/30 multi-slice transitions contiguous; 0 gaps; 0 overlaps; 10/10 mechanically
+recoverable native intervals translated correctly; 38 released Cliopatria polygons
+audited with no demonstrated misbinding.
+
+**Release effect:** none. Canonical/public v0.8.1 remains immutable. D-121 governs
+v0.8.2 authority freeze and later successor geometry reuse.
