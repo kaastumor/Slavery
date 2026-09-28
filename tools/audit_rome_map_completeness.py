@@ -201,6 +201,36 @@ def main() -> int:
             "feature": feature,
         })
 
+    frontier_keywords = (
+        "cappad", "commag", "juda", "jude", "mauretan", "thrac", "nabat", "armenia"
+    )
+    frontier_rows = []
+    for ordinal, feature in enumerate(features, start=1):
+        props = feature.get("properties") or {}
+        name = str(props.get("Name") or "")
+        if not any(key in name.lower() for key in frontier_keywords):
+            continue
+        start, end = props.get("FromYear"), props.get("ToYear")
+        if not isinstance(start, int) or not isinstance(end, int):
+            continue
+        if end < 1 or start > 60:
+            continue
+        frontier_rows.append({
+            "source_row_ordinal_1_based": ordinal,
+            "name": name,
+            "type": props.get("Type"),
+            "source_native_from": start,
+            "source_native_to": end,
+            "member_of": props.get("MemberOf"),
+            "components": props.get("Components"),
+            "seshat_id": props.get("SeshatID"),
+            "wikidata": props.get("Wikidata"),
+            "feature_sha256": hashlib.sha256(
+                canonical_json(feature).encode("utf-8")
+            ).hexdigest(),
+            "geometry_summary": geometry_summary(feature["geometry"]),
+        })
+
     served = json.loads(SERVED.read_text(encoding="utf-8"))
     served_matrix = control_matrix(served["geometry"])
     report = {
@@ -215,6 +245,7 @@ def main() -> int:
         "roman_source_rows_1_22_ce": [
             {k: v for k, v in row.items() if k != "feature"} for row in roman
         ],
+        "frontier_related_source_rows_1_60_ce": frontier_rows,
         "served_14_22": {
             "geometry_id": served.get("geometry_id"),
             "from_year": served.get("from_year"),
