@@ -40,6 +40,26 @@ unacknowledged-output capacity is one; unknown legacy backlog blocks new intake,
 not explicitly selected recovery of an existing item. Inspect open work and its
 latest checkpoint before treating stale main/PR text as unfinished execution.
 
+## Delegated trial and successor selection
+
+When a current sponsor contract explicitly delegates autonomous follow-up, use its
+recorded scope and expiry, including ordinary next-task selection within the charter.
+For the authorized trial see [native-trial-2026-09-29.md](native-trial-2026-09-29.md).
+The issue authorization and saved task are operational authority for that trial;
+this pending documentation is not a claim that a PR has merged.
+
+Reconcile primary evidence, disposition and next action before producing another
+output. The one-output cap covers unprocessed output, not every open PR. Processing
+does not grant merge, scientific/source acceptance or human approval. If the current
+WIP is blocked, retain its re-entry condition and explicitly suspend it before one
+earned nonconflicting alternative; do not accumulate blocked successors.
+
+Broad opportunity selection runs at most once per local day or on materially changed
+evidence, requirements or capability. Compare at most three candidates and select one;
+task-driven research for active development is not restricted to that daily scan.
+A new hourly invocation is not a new evidence trigger. No valuable executable option
+means a cheap NO_CHANGE, not another audit or manufactured task.
+
 ## Scheduled execution boundary
 
 Scheduled workers treat GitHub as read-only whenever their execution credential cannot
@@ -50,7 +70,7 @@ valid only when a designated permitted consumer can actually process the route. 
 available, stop new intake and report that prerequisite; do not treat missing GitHub
 write permission alone as a substantive project block.
 
-Each pending packet must preserve enough information for an interactive Codex session
+Each pending packet must preserve enough information for the designated authorized consumer
 to verify and land it without reconstructing chat or scheduler history:
 
 - worker lane, run time and canonical Git head/release observed at start;
