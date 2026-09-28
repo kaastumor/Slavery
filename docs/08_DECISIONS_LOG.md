@@ -3411,3 +3411,50 @@ a new immutable serving materialization or later successor release; never by rep
 existing release bytes in place.
 
 Refs #365, PR #366, D-055, D-116, D-119, D-120, D-121.
+
+
+## D-123 — Neutral historical-polity context is not slavery evidence
+**Date:** 2026-09-29  
+**Status:** proposed / bounded prototype under P0 #365; no public release effect yet
+
+**Trigger:** P0 map review separated two visually similar failure classes. Some neutral land is
+created by render transformation and is governed by D-122. Other neutral regions are legitimate
+contemporaneous polities present in the same pinned Cliopatria source but absent from the Atlas
+display because the public adapter currently draws only spatial entities with active
+territorial-practice claims. At 14 CE, for example, the pinned source independently returns the
+Kingdom of Cappadocia, Kingdom of Commagene and Kingdom of Armenia as top-level POLITY rows.
+Seshat's own default world-map mode renders active top-level polity shapes, so these regions read
+as political context rather than unexplained holes.
+
+**Decision candidate:** historical political context is a separate cartographic layer.
+
+1. Historical-context geometry never creates, strengthens, weakens or negates a slavery,
+   coerced-labour, legal-status, network-participation or research-coverage claim.
+2. The initial source is the exact pinned Cliopatria asset already used by the project. Every
+   emitted context feature preserves the pinned commit/blob/asset identity, source row ordinal,
+   deterministic feature SHA-256 and source-native temporal bounds.
+3. Selected-year translation follows D-059. The default polity-context view mirrors Seshat's
+   ordinary "one color per polity" semantics: active `Type=POLITY` rows with empty
+   `MemberOf`; RELATION rows and component-only views are not silently mixed into it.
+4. Context geometry is clipped only to the same canonical Natural Earth land fabric. Raw source
+   geometry remains unchanged. No source count, context coverage or polygon area may influence
+   territorial-practice intensity or P-level.
+5. The context layer must render beneath evidence geometry in a visually neutral style and be
+   explicitly labelled as historical-polity context. Evidence geometry and evidence colors
+   always take precedence.
+6. Clicking or inspecting context must say that it is cartographic context only and does not
+   indicate slavery presence, absence, prevalence or research status.
+7. Missing context is not historical absence. Source disagreements or known coarse temporal
+   slices remain visible as source limitations; they are not silently corrected by the UI.
+8. A specialist political-boundary substitution may override a context feature only through an
+   explicit reviewed, time-bounded provenance decision. It does not inherit authority from a
+   slavery claim.
+9. Production delivery must use a reviewed/published materialization or equivalent published
+   view. Raw staging tables are never exposed directly. The bounded prototype may emit
+   review-only selected-year GeoJSON snapshots; scalable production delivery may later use
+   vector tiles/PMTiles or a bounded published API without changing the semantic separation.
+
+**Release effect:** none at proposal stage. The prototype is cartographic review material only.
+v0.8.1 and `v0.8.1-public-mvp-v1` remain immutable.
+
+Refs #365, PR #366, D-016, D-036, D-046, D-059, D-116, D-122.

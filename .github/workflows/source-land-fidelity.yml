@@ -1,13 +1,10 @@
 name: source-land-fidelity
 
 on:
-  pull_request:
-    branches:
-      - main
-    paths:
-      - tools/build_source_land_fidelity_candidates.py
-      - db/migrations/0035_cliopatria_source_land_fidelity_render.sql
-      - .github/workflows/source-land-fidelity.yml
+  workflow_dispatch:
+
+# The full P0 corpus gate passed on run 36499729557. Keep this relatively
+# expensive reproducibility audit manual-only after the frozen acceptance run.
 
 permissions:
   contents: read
