@@ -1,0 +1,35 @@
+name: d121-maurya-source-extract
+
+on:
+  push:
+    branches:
+      - audit/d121-maurya-15654-source-extract
+
+permissions:
+  contents: read
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Extract exact pinned Maurya source evidence
+        run: |
+          python tools/d121_extract_maurya_crosswalk.py \
+            --output d121-maurya-15654-crosswalk.json
+
+      - name: Upload bounded diagnostic
+        uses: actions/upload-artifact@v4
+        with:
+          name: d121-maurya-15654-crosswalk
+          path: d121-maurya-15654-crosswalk.json
+          if-no-files-found: error
+          retention-days: 7
