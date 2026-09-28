@@ -3356,3 +3356,56 @@ prepared. That run produced no bundle because the credential lacked `database_re
 The frozen v0.8.2 selection is now also held until D-121 provenance closure is recorded;
 the builder rejects a release-ready selection unless the v3 policy and exact provenance
 closure are pinned. Neither gate mutates PostgreSQL, v0.8.1 or the public channel.
+
+
+## D-122 — Cliopatria public rendering is source-land preserving before cosmetic generalization
+**Date:** 2026-09-29  
+**Status:** proposed / implementation candidate under P0 #365; no release effect yet
+
+**Trigger:** sponsor visual review found neutral land gaps and fragmented/unmarked areas
+inside otherwise coherent historical map coverage after D-116 solved ocean overflow.
+Upstream implementation review established that Seshat's world map renders its stored
+Cliopatria geometry directly for the selected year, while Atlas may transform the same
+source family through Chaikin smoothing, external standard-GIS preprocessing, coastal
+recovery and Natural Earth clipping. D-120 already records topology inflation for Roman
+6–8 CE (32 raw components versus 104 incumbent render components).
+
+**Decision candidate:** treat fidelity to the exact source footprint on canonical land as
+a hard render invariant.
+
+For a Cliopatria-derived polygon and the active canonical land fabric:
+
+`source_land = source_geometry ∩ canonical_land`
+
+A normal render-only transformation must not materially remove `source_land`. Physical
+coastline correction may add bounded canonical land where the coarse source clearly
+overhangs the coastline, but it may not move or erase the source's inland historical
+frontier merely to obtain a smoother picture.
+
+The first candidate policy is
+`cliopatria-source-land-fidelity-v1`:
+
+1. no Chaikin or other inland/general-boundary smoothing;
+2. preserve the exact source geometry unchanged in the research layer;
+3. intersect with the exact canonical Natural Earth land fabric;
+4. allow the existing bounded 25 km overhang-based coastal recovery only as an additive
+   display operation;
+5. require directional source-land-loss QC, not only symmetric difference, total area
+   delta or whole-geometry Hausdorff distance;
+6. treat component/ring inflation and interior-hole creation as explicit review triggers;
+7. compare representative Atlas output against the upstream Cliopatria/Seshat display
+   before accepting a serving artifact;
+8. specialist source substitutions remain separate D-055 historical decisions and are
+   not silently forced back to Cliopatria.
+
+**Why:** symmetric-difference and area gates can pass while a derived render removes
+locally conspicuous pieces of land. A directional preservation test matches the actual
+render contract: Natural Earth owns physical land/water, while Cliopatria owns the
+historical inland footprint unless a reviewed specialist source supersedes it.
+
+**Release effect:** none at proposal stage. v0.8.1 and
+`v0.8.1-public-mvp-v1` remain immutable. A validated correction should be delivered as
+a new immutable serving materialization or later successor release; never by replacing
+existing release bytes in place.
+
+Refs #365, PR #366, D-055, D-116, D-119, D-120, D-121.
