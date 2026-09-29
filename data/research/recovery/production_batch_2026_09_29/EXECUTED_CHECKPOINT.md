@@ -63,3 +63,10 @@ production IDs. It fixes the successor-release information that can be known
 before ingestion and lists the post-ingest authority, QC, D-121, changelog,
 unresolved-issue, map-preview, rollback and cutover inputs that must be supplied
 before a successor release can be selected.
+
+
+## Production ingest committed — sponsor-authorized
+
+The sponsor explicitly authorized the production write. The 12 accepted cases were inserted atomically into live PostgreSQL/PostGIS from the reviewed #367 authority. Exact tracked-table deltas matched the rehearsal: +12 spatial entities, +12 claims, +28 source/source-version rows after the expected Angkor reuse, +20 claim-source links, +10 geometry rows, and the expected Goryeo research-target package. All 12 claims remain unpublished, all territorial candidates retain NULL P-level, nine geometry rows are non-null modern-proxy navigation/context points, and release membership plus serving-channel deltas are zero.
+
+Generated production IDs and the fresh authority snapshot are frozen in `production_ingest_receipt.json`. The populated post-ingest successor skeleton remains a preparation artifact only. Existing v0.8.2 D-121 provenance HOLD and the separate public cutover gate remain in force.
