@@ -203,3 +203,12 @@ istanbul_counts=$(docker compose exec -T db sh -lc "psql -At -F '|' -U \"$POSTGR
 \"")
 test "$istanbul_counts" = "1|1|1"
 echo "Batch 5 Istanbul candidate ingestion passed: bounded archival urban claim idempotent with modern-proxy navigation point and no P-level."
+
+
+# #370: rehearse three reviewed case-linked mapped representations only after
+# the full #367 population set exists in this disposable database. The tool
+# has no production commit path and rolls back all closure amendments.
+docker compose run --rm -e CI=true tooling \
+  python tools/rehearse_geometry_closure_tranche_01.py --apply --disposable-test-db
+
+echo "100/100 geometry closure tranche 1 rehearsal passed: Goryeo, Jakin/Godomey and Taghaza mapped roles are idempotent and rolled back."
