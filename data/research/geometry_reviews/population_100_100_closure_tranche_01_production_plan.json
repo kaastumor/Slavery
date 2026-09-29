@@ -1,0 +1,71 @@
+{
+  "record_kind": "geometry_closure_tranche_01_production_plan",
+  "version": 1,
+  "issue": 370,
+  "parent_issue": 369,
+  "status": "READY_FOR_EXPLICIT_PRODUCTION_WRITE_GATE_AFTER_PLAN_CI",
+  "review_path": "data/research/geometry_reviews/population_100_100_closure_tranche_01.json",
+  "rehearsal_receipt": "data/research/geometry_reviews/population_100_100_closure_tranche_01_rehearsal_receipt.json",
+  "rehearsal_run_id": 36639243352,
+  "reviewed_base_main_sha": "7c7165c61c8baaed618354658fc9f5611b2e9672",
+  "production_cases": [
+    {
+      "case_key": "production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1",
+      "production_claim_id": "9f5397c7-8b7b-4218-ad10-b85abf56eae8",
+      "production_spatial_entity_id": "02a48a15-b2f8-4694-84d5-aae8fcb664c0",
+      "action": "ADD_MODERN_PROXY_NAVIGATION_CONTEXT_GEOMETRY"
+    },
+    {
+      "case_key": "production-batch-2026-09-29/dahomey/royal-captive-allocation-sale-1727-v1",
+      "production_claim_id": "1567b140-eeba-4b32-b37d-f31dcb35e1dd",
+      "production_spatial_entity_id": "1b61fd28-d089-4941-a203-13fcebb4e807",
+      "action": "ADD_JAKIN_SITE_MODERN_PROXY_PLUS_CLAIM_EVIDENCE_LOCUS_AND_CONTEXT_SOURCE"
+    },
+    {
+      "case_key": "production-batch-2026-09-29/taghaza/slave-salt-mining-1352-v1",
+      "production_claim_id": "9d1ccd8e-ba6d-4dbe-aea8-6d3f2b98942c",
+      "production_spatial_entity_id": "6e4f7762-de45-4dcb-a179-2d5cb16ec39a",
+      "action": "ADD_MODERN_PROXY_NAVIGATION_CONTEXT_GEOMETRY"
+    }
+  ],
+  "fresh_live_preflight": {
+    "observed_at": "2026-09-29T22:26:28.95549+00:00",
+    "jakin_entity_hits": 0,
+    "closure_source_url_hits": 0,
+    "goryeo_geometry_hits": 0,
+    "taghaza_geometry_hits": 0,
+    "dahomey_locus_links": 0,
+    "dahomey_unresolved_geometry_rows": 1,
+    "serving_channel": "v0.8.1-public-mvp-v2"
+  },
+  "expected_live_delta": {
+    "atlas.spatial_entity": 1,
+    "atlas.source": 4,
+    "atlas.source_version": 4,
+    "atlas.geometry": 3,
+    "atlas.claim_source": 1,
+    "atlas.claim_evidence_locus": 1,
+    "atlas.claim": 0,
+    "audit.release_claim": 0,
+    "audit.release_channel": 0
+  },
+  "production_apply_requirements": [
+    "explicit sponsor authorization specifically for #370 live geometry closure",
+    "ATLAS_GEOMETRY_WRITE_AUTHORIZED=1",
+    "--production-write-authorized ISSUE-370-EXPLICIT",
+    "fresh --expected-main-sha equal to the exact checked-out main revision",
+    "fresh live collision preflight remains clean",
+    "the three prerequisite production case identities remain reviewed/unpublished",
+    "existing Dahomey unresolved target geometry remains present and untouched"
+  ],
+  "post_write_receipt_required": [
+    "generated Goryeo and Taghaza geometry IDs",
+    "generated Jakin spatial-entity and geometry IDs",
+    "generated Dahomey claim-evidence-locus linkage",
+    "source/source-version IDs and exact before/after counts",
+    "zero claim/release/channel/publication/P-level change",
+    "explicit confirmation that all three representations remain non-practice-extent roles"
+  ],
+  "release_boundary": "Production geometry closure is not release membership or public serving authorization.",
+  "strategic_effect_if_successful": "The newly ingested 12-case batch becomes provisional 12/12 candidate case-linked mapped representations under #369; release qualification remains separate."
+}
