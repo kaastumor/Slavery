@@ -1,0 +1,199 @@
+{
+  "schema": "historical-slavery-atlas-100-100-geometry-closure-review-v1",
+  "issue": 370,
+  "parent_issue": 369,
+  "production_batch_issue": 360,
+  "reviewed_against_main": "740e378d379c3165d9129bc47d4cf6a6f231fabb",
+  "status": "INTERNAL_REVIEW_COMPLETE_READY_FOR_DISPOSABLE_REHEARSAL",
+  "review_scope": "geometry/navigation-context only; no historical-claim strengthening and no production write",
+  "candidates": [
+    {
+      "target": "Goryeo — 956 nobi status-review legal event",
+      "case_key": "production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1",
+      "claim_id": "9f5397c7-8b7b-4218-ad10-b85abf56eae8",
+      "target_spatial_entity_id": "02a48a15-b2f8-4694-84d5-aae8fcb664c0",
+      "disposition": "ACCEPT_FOR_DISPOSABLE_REHEARSAL",
+      "semantic_role": "jurisdiction_navigation_context_only",
+      "database_model": "add reviewed modern_proxy geometry to existing Goryeo spatial entity; do not create claim_evidence_locus",
+      "geometry": {
+        "from_year": 956,
+        "to_year": 956,
+        "accuracy_status": "modern_proxy",
+        "source_native_id": "UNESCO WHC 1278rev-001",
+        "resolution_method": "Use the reviewed UNESCO Manwoldae & Kaesong Chomsongdae component point as a royal-capital/navigation proxy for the Goryeo jurisdiction in 956. Manwoldae was the Goryeo royal palace from 919 and Kaesong was the ruling base. The 956 nobi-status record does not state a physical event locus, so the point is not an event locus, practice extent, or prevalence indicator.",
+        "geojson": {
+          "type": "Point",
+          "coordinates": [
+            126.5424430556,
+            37.9859111111
+          ]
+        },
+        "review_status": "reviewed"
+      },
+      "geometry_source": {
+        "title": "Historic Monuments and Sites in Kaesong — Maps",
+        "author_or_institution": "UNESCO World Heritage Centre",
+        "source_type": "world_heritage_component_geometry",
+        "source_classification": "geometry_reference",
+        "version_label": "WHC property 1278rev, component 1278rev-001, accessed 2026-09-29",
+        "url_or_identifier": "https://whc.unesco.org/en/list/1278/maps/",
+        "license_status": "UNESCO site terms; coordinate used as reference",
+        "redistribution_status": "reference coordinate only"
+      },
+      "temporal_identity_check": {
+        "source": "National Research Institute of Cultural Heritage / Kaesong heritage knowledge portal",
+        "url": "https://portal.nrich.go.kr/kor/gaesongView.do?idx=16&menuIdx=",
+        "finding": "Manwoldae is identified as the Goryeo royal palace site, founded in 919 and used through the dynasty; therefore a 956 capital-context use does not back-project a later-only site."
+      },
+      "abstentions": [
+        "do not assert the 956 order was physically issued at Manwoldae",
+        "do not treat a palace point as Goryeo territorial extent",
+        "do not infer territorial practice or prevalence from the navigation point"
+      ]
+    },
+    {
+      "target": "Dahomey — April 1727 captive-allocation / slave-sale process",
+      "case_key": "production-batch-2026-09-29/dahomey/royal-captive-allocation-sale-1727-v1",
+      "claim_id": "1567b140-eeba-4b32-b37d-f31dcb35e1dd",
+      "target_spatial_entity_id": "1b61fd28-d089-4941-a203-13fcebb4e807",
+      "disposition": "ACCEPT_FOR_DISPOSABLE_REHEARSAL",
+      "semantic_role": "claim_evidence_locus_transaction_node_modern_proxy",
+      "database_model": "retain the existing unresolved Dahomey target geometry; create a separate Jakin (Godomey) site spatial entity with modern_proxy point and link it to the claim through atlas.claim_evidence_locus",
+      "new_locus_entity": {
+        "canonical_name": "Jakin (Godomey)",
+        "display_name": "Jakin (modern Godomè/Godomey proxy)",
+        "entity_type_code": "site",
+        "from_year": null,
+        "to_year": null,
+        "review_status": "reviewed",
+        "notes": "Historical Jakin/Jaquin transaction-node identity. Modern Godomè point is navigation context only and does not define the historical port footprint or Dahomey territorial extent."
+      },
+      "geometry": {
+        "from_year": 1727,
+        "to_year": 1727,
+        "accuracy_status": "modern_proxy",
+        "source_native_id": "GeoNames 2394092",
+        "resolution_method": "Use the modern GeoNames Godomè/Godomey populated-place coordinate as a navigation proxy for historical Jakin after specialist place-identity reconciliation. Historical Jakin is explicitly identified as Jakin [Godomey] by Robin Law and as Jaquin/Jakri/Godomey/Jakin by the Atlas of Mutual Heritage. The point is not the unidentified royal camp, a historical port polygon, or Dahomey practice extent.",
+        "geojson": {
+          "type": "Point",
+          "coordinates": [
+            2.34581,
+            6.389484
+          ]
+        },
+        "review_status": "reviewed"
+      },
+      "geometry_source": {
+        "title": "Godomè (GeoNames 2394092)",
+        "author_or_institution": "GeoNames",
+        "source_type": "modern_gazetteer",
+        "source_classification": "geometry_reference",
+        "version_label": "GeoNames feature 2394092, accessed 2026-09-29",
+        "url_or_identifier": "https://www.geonames.org/2394092/godome.html",
+        "license_status": "GeoNames CC BY 4.0 database",
+        "redistribution_status": "coordinate with attribution"
+      },
+      "historical_identity_source": {
+        "title": "Between the Sea and the Lagoons: The Interaction of Maritime and Inland Navigation on the Precolonial Slave Coast",
+        "author_or_institution": "Robin Law",
+        "source_type": "peer_reviewed_journal_article",
+        "source_classification": "secondary",
+        "version_label": "Cahiers d'Études africaines 29(114), 1989, pp. 209-237",
+        "url_or_identifier": "https://www.persee.fr/doc/cea_0008-0055_1989_num_29_114_1643",
+        "evidence_role": "historical_place_identity_context",
+        "direction": "context",
+        "locator": "p. 210: Allada had ports at 'Jakin [Godomey]' in the west; Jakin was destroyed by Dahomey in 1732.",
+        "claim_fitness": "Supports historical Jakin↔Godomey identity and transaction-node geography only; not slavery prevalence."
+      },
+      "corroborating_identity_source": {
+        "title": "Jaquim",
+        "author_or_institution": "Atlas of Mutual Heritage",
+        "url": "https://www.atlasofmutualheritage.nl/page/6758/jaquim",
+        "finding": "Historical titles explicitly list Jaquin, Jakri, Godomey and Jakin."
+      },
+      "locus_link": {
+        "role_text": "historical transaction node; modern Godomey navigation proxy only",
+        "notes": "The accepted 1727 claim explicitly includes enslaved people supplied for sale to Snelgrave at Jakin. This link locates that named transaction node only; the royal camp remains unresolved."
+      },
+      "abstentions": [
+        "do not replace the existing unresolved Dahomey target geometry",
+        "do not treat modern Godomey boundaries as historical Jakin extent",
+        "do not use this point for the unidentified royal camp",
+        "do not infer Dahomey-wide practice from the transaction node"
+      ]
+    },
+    {
+      "target": "Taghaza — 1352 enslaved salt-mining labour",
+      "case_key": "production-batch-2026-09-29/taghaza/slave-salt-mining-1352-v1",
+      "claim_id": "9d1ccd8e-ba6d-4dbe-aea8-6d3f2b98942c",
+      "target_spatial_entity_id": "6e4f7762-de45-4dcb-a179-2d5cb16ec39a",
+      "disposition": "ACCEPT_FOR_DISPOSABLE_REHEARSAL",
+      "semantic_role": "site_navigation_modern_proxy",
+      "database_model": "add reviewed modern_proxy geometry to existing Taghaza site spatial entity",
+      "geometry": {
+        "from_year": 1352,
+        "to_year": 1352,
+        "accuracy_status": "modern_proxy",
+        "source_native_id": "NGA UFI -1075410 / UNI -1595671; GeoNames cross-check 2449909",
+        "resolution_method": "Use the NGA-derived Teghaza/Tghâza modern gazetteer coordinate as a navigation proxy for the named Taghaza locality. GeoNames independently exposes the same 23.6101 N, 4.9939 W coordinate and aliases Teghaza/Tghaza/Tghâza. Because prior modern-coordinate sources conflict materially, retain modern_proxy accuracy: this point is not claimed as a surveyed medieval mine/settlement centroid or the exact 1352 worker locus.",
+        "geojson": {
+          "type": "Point",
+          "coordinates": [
+            -4.9939,
+            23.6101
+          ]
+        },
+        "review_status": "reviewed"
+      },
+      "geometry_source": {
+        "title": "Teghaza, Mali — NGA Geographic Names record",
+        "author_or_institution": "National Geospatial-Intelligence Agency data mirrored by geographic.org",
+        "source_type": "government_gazetteer_record",
+        "source_classification": "geometry_reference",
+        "version_label": "NGA geographic-name record, modify date 2008-01-14; accessed 2026-09-29",
+        "url_or_identifier": "https://geographic.org/geographic_names/name.php?c=mali&fid=3915&uni=-1595671",
+        "license_status": "source attribution retained; redistribution status not assumed",
+        "redistribution_status": "reference coordinate only"
+      },
+      "crosscheck": {
+        "source": "GeoNames",
+        "url": "https://www.geonames.org/advanced-search.html?country=ML&featureClass=H&q=&startRow=250",
+        "finding": "Tghâza entry lists Teghaza/Tghaza/Tghâza aliases at 23.6101, -4.9939."
+      },
+      "uncertainty": {
+        "status": "MATERIAL_MODERN_COORDINATE_CONFLICT_RETAINED",
+        "note": "Earlier candidate review recorded materially displaced alternative modern coordinates. This review does not average them or promote the chosen point above modern_proxy accuracy."
+      },
+      "abstentions": [
+        "do not call this exact medieval archaeological geometry",
+        "do not infer the extent of the salt workings",
+        "do not infer the exact 1352 worker locus",
+        "do not strengthen the slavery classification from geometry"
+      ]
+    }
+  ],
+  "qc": {
+    "srid": 4326,
+    "candidate_geometry_types": [
+      "Point",
+      "Point",
+      "Point"
+    ],
+    "historical_practice_polygons_added": 0,
+    "target_geometry_overwrites": 0,
+    "unresolved_rows_deleted": 0,
+    "expected_if_later_applied": {
+      "spatial_entity_delta": 1,
+      "geometry_delta": 3,
+      "claim_evidence_locus_delta": 1,
+      "claim_source_context_delta": 1,
+      "source_version_delta_expected": 4,
+      "release_claim_delta": 0,
+      "publication_status_changes": 0,
+      "p_level_changes": 0
+    },
+    "next_gate": "DISPOSABLE_POSTGIS_REHEARSAL_THEN_SEPARATE_PRODUCTION_WRITE_AUTHORIZATION"
+  },
+  "review_status": "internal_review_complete",
+  "release_effect": "none"
+}
