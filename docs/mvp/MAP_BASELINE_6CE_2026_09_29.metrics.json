@@ -1,0 +1,46 @@
+{
+  "baseline_features_equal_source": true,
+  "rome_authority_equals_original": false,
+  "original": {
+    "components": 32,
+    "holes": 0,
+    "vertices": 1256,
+    "valid": true
+  },
+  "source_intersect_land": {
+    "components": 96,
+    "holes": 0,
+    "vertices": 10067,
+    "valid": true
+  },
+  "published_v2": {
+    "components": 67,
+    "holes": 8,
+    "vertices": 21401,
+    "valid": true
+  },
+  "published_policy": "cliopatria-source-land-fidelity-v1",
+  "published_qc": {
+    "coastal_added_vs_source_land_pct": 1.7127721915733967,
+    "generator_kind": "offline_geos_source_land_fidelity",
+    "outside_land_pct": 1.1503485565154369e-06,
+    "predecessor_asset_materialization_id": "v0.8.0-public-mvp-v2",
+    "predecessor_render_policy_id": "cliopatria-qgis-natural-earth-v1",
+    "render_npoints": 21401,
+    "source_land_loss_pct": 5.237699295287161e-05,
+    "source_npoints": 1325
+  },
+  "stored_api_source": {
+    "components": 32,
+    "holes": 13,
+    "vertices": 1325,
+    "valid": true
+  },
+  "stored_api_intersect_land": {
+    "components": 94,
+    "holes": 1,
+    "vertices": 10008,
+    "valid": true
+  },
+  "stored_baseline_coordinates_equal_authority": true
+}

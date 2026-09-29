@@ -1,0 +1,19 @@
+{
+  "purpose": "raw-source inspection; no historical claim or release promotion",
+  "source_commit": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+  "source_archive_sha256": "d01ae3a20d358cc5d54f69d9d725d390767d9c8759ac89ad6f90c58d106f3370",
+  "source_native_year": 6,
+  "selection": "FromYear <= year <= ToYear; MemberOf empty (upstream notebook)",
+  "feature_count": 46,
+  "geometry_operations": [],
+  "features_sha256": "8cb3b8d0458a1b3d3ac485a83466bb75d4e2cf28669b10f76af49e8e4af18df1",
+  "stored_rome": {
+    "geometry_id": "edb239a8-4d54-44e4-970a-affb7c9af22e",
+    "source_native_id": "16269",
+    "authority_sha256": "0aa4d4fd9e4bacad0e359b655fbe237d1ef758b63fcb984ead9651d2c8181ea5",
+    "source_ewkb_sha256": "cdaeac64d5931efcc98761141bab3d0bb3846faf84dfc6bb44c705e13ab49a53",
+    "geojson_sha256": "cc9ab6a24e6bebf7e14321d665288399369a23f13e1f9d5eec4c063784b40dc0",
+    "geometry_operations": [],
+    "serialization": "EWKB to GeoJSON; no rounding or spatial transformations"
+  }
+}
