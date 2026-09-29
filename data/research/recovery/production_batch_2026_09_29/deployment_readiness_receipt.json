@@ -4,12 +4,15 @@
   "issue": 360,
   "pr": 367,
   "prepared_on": "2026-09-29",
-  "status": "DEPLOYMENT_INGEST_READY_AWAITING_EXPLICIT_PRODUCTION_WRITE_APPROVAL",
+  "status": "DEPLOYMENT_INGEST_READY_ATOMIC_REHEARSAL_PASS_AWAITING_EXPLICIT_PRODUCTION_WRITE_APPROVAL",
   "repository": {
     "main_sha": "09f5d77fb21f451d855c5df4a0b442469eaf422b",
     "pr_head_sha": "0cd33bf80c6e3f90022fccc8b3130e38607e8eb6",
     "exact_head_ci_run_id": 36606730574,
-    "exact_head_ci_result": "PASS"
+    "exact_head_ci_result": "PASS",
+    "atomic_packaging_head_sha": "bf4af1617e95f461f9a26e81d49bbdec60e31b3b",
+    "atomic_packaging_ci_run_id": 36627296372,
+    "atomic_packaging_ci_result": "PASS"
   },
   "scope": {
     "planning_targets": 23,
@@ -120,8 +123,23 @@
     "live_collision_checks": "PASS_NO_CASE_OR_ENTITY_COLLISION_OBSERVED_FOR_NEW_ACCEPTED_CANDIDATES_AT_RECORDED_PREFLIGHT_TIMES",
     "production_writes": 0,
     "release_membership_changes": 0,
-    "serving_channel_changes": 0
+    "serving_channel_changes": 0,
+    "atomic_full_subset_rehearsal": "PASS_12_FIRST_INSERT_12_SECOND_NOOP_ROLLBACK",
+    "atomic_full_subset_run_id": 36627296372,
+    "atomic_full_subset_head_sha": "bf4af1617e95f461f9a26e81d49bbdec60e31b3b",
+    "atomic_full_subset_claim_delta": 12,
+    "atomic_full_subset_claim_source_delta": 20,
+    "atomic_full_subset_geometry_delta": 10,
+    "atomic_full_subset_resolved_geometry_count": 9,
+    "atomic_full_subset_release_claim_delta": 0,
+    "atomic_full_subset_serving_channel_delta": 0,
+    "atomic_full_subset_publication_changes": 0,
+    "atomic_full_subset_rollback_restored_counts": true,
+    "disposable_source_version_delta_note": "Clean disposable CI created 29 source/source-version rows because it did not preload the one Angkor source version observed live. The reviewed live preflight expects 28 net new source/source-version rows after that exact reuse."
   },
   "release_boundary": "Production ingest remains separate from release membership and public serving. After ingest, generated IDs must be captured and an immutable successor selection/materialization must pass changelog, QC, unresolved-issues and rollback gates.",
-  "sponsor_gate_required": "EXPLICIT_PRODUCTION_WRITE_APPROVAL"
+  "sponsor_gate_required": "EXPLICIT_PRODUCTION_WRITE_APPROVAL",
+  "production_write_tool": "tools/ingest_population_subset.py",
+  "production_write_plan": "data/research/recovery/production_batch_2026_09_29/production_ingest_plan.json",
+  "post_ingest_release_skeleton": "data/research/recovery/production_batch_2026_09_29/post_ingest_release_candidate_skeleton.json"
 }
