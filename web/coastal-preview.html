@@ -21,14 +21,15 @@
     <p>Rome fitted to the displayed coastline. Compare the proposed view with the original sources or published v2. <a href="./raw-baseline.html">Untouched baseline</a> · <a href="./index.html">Evidence app</a> · <a href="./index.html?coastal-preview=1">Evidence app with local coast fit</a></p>
     <p><strong>Unreleased presentation experiment:</strong> the constrained fit excludes added overlap with neighbouring source polygons and land components without Roman source coverage. It still exceeds the prior 2% area policy and uses a source variant different from the stored API record. It is not a released territory claim.</p>
     <p id="status" role="status">Loading the pinned source…</p>
-    <nav aria-label="Inspection areas"><button id="med">Mediterranean</button> <button id="greece">Greece</button> <button id="north">North Sea</button></nav>
+    <nav aria-label="Inspection areas"><button id="med">Mediterranean</button> <button id="greece">Greece</button> <button id="north">North Sea</button> <button id="east">Eastern Mediterranean</button> <button id="africa">North Africa</button></nav>
   </header>
   <div id="map" aria-label="Original Cliopatria geometry at 6 CE"></div>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
     // Local comparison only: no changes to canonical data or public release.
     const map = L.map('map', {zoomAnimation: false, fadeAnimation: false}).setView([40, 15], 5);
-    const scenes = {med: [[29, -11], [56, 43]], greece: [[36, 20], [40, 25]], north: [[48, -5], [57, 10]]};
+    const scenes = {med: [[29, -11], [56, 43]], greece: [[36, 20], [40, 25]], north: [[48, -5], [57, 10]],
+      east: [[30, 29], [43, 42]], africa: [[29, -10], [39, 20]]};
     for (const [id, bounds] of Object.entries(scenes)) document.getElementById(id).onclick = () => map.fitBounds(bounds, {animate: false});
     const tiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
       attribution: 'Tiles &copy; Esri — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community', maxZoom: 18

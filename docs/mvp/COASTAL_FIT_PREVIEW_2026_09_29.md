@@ -115,7 +115,10 @@ constrained candidate adds about 92,477 km² (2.576% of source-covered land),
 after excluding about 9,183 km² of the earlier additions. The repeat audit
 finds zero added neighbor overlap and zero newly colored unsupported land
 components within this 6 CE source selection. Both candidates remain selectable
-on `web/coastal-preview.html`; the constrained version is the default.
+on `web/coastal-preview.html`; the constrained version is the default. Browser
+spot checks covered Greece, the North Sea, the eastern Mediterranean and the
+North African coast. The detailed eastern view still has uncoloured Aegean
+islands; visual appearance alone does not resolve their historical status.
 
 `tools/audit_coastal_strip_intervals.py` screened the adjacent pinned Roman
 source intervals using the same local land crop. The raw 25 km method would add
