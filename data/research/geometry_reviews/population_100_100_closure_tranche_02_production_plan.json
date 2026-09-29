@@ -1,0 +1,87 @@
+{
+  "record_kind": "geometry_closure_tranche_02_production_plan",
+  "version": 1,
+  "issue": 374,
+  "parent_issue": 369,
+  "status": "READY_FOR_EXPLICIT_PRODUCTION_WRITE_GATE_AFTER_PLAN_CI",
+  "reviewed_base_main_sha": "9c1f64f98695c412e06d2540aa283ab789a5466f",
+  "rehearsal_run_id": 36641129910,
+  "review_path": "data/research/geometry_reviews/population_100_100_closure_tranche_02.json",
+  "rehearsal_receipt": "data/research/geometry_reviews/population_100_100_closure_tranche_02_rehearsal_receipt.json",
+  "production_cases": [
+    {
+      "case_key": "overnight-2026-09-27/india/bonded-labour-v2",
+      "claim_id": "1d707382-b0b8-479d-81e3-efcea01c4ab0",
+      "spatial_entity_id": "4c0cf106-f55e-4e98-901a-63cd5cce5bc7",
+      "action": "ADD_RAMANAGARAM_EVIDENCE_LOCUS_MODERN_PROXY"
+    },
+    {
+      "case_key": "overnight-2026-09-27/myanmar/state-forced-labour-v2",
+      "claim_id": "365e6258-f03f-4677-b775-cd5a9f18414a",
+      "spatial_entity_id": "91c7f969-f47a-465c-a304-57328b59d052",
+      "action": "ADD_SHADAW_TESTIMONY_CONTEXT_MODERN_PROXY_PLUS_CONTEXT_SOURCE"
+    },
+    {
+      "case_key": "overnight-2026-09-27/pakistan/bonded-labour-v2",
+      "claim_id": "47175a77-76bb-4a92-ac3c-cb22b7a8131f",
+      "spatial_entity_id": "da4f5a3d-316b-4afb-90e3-53db83af3f10",
+      "action": "ADD_LAHORE_OUTSKIRTS_EVIDENCE_CONTEXT_MODERN_PROXY_PLUS_CONTEXT_SOURCE"
+    },
+    {
+      "case_key": "post-overnight-2026-09-27/nazi-germany/state-forced-labour-1942-1944-v2",
+      "claim_id": "51063cdb-f485-47c9-9056-e374476632dd",
+      "spatial_entity_id": "aba9b942-063a-4b8b-a21b-4232056f81cf",
+      "action": "ADD_SCHOENEWEIDE_HISTORIC_SITE_EVIDENCE_LOCUS"
+    }
+  ],
+  "held_exclusions": [
+    {
+      "case_key": "overnight-2026-09-27/brazil/rural-debt-bondage-2003-2005-v2",
+      "disposition": "HOLD_PLACE_IDENTITY_BEFORE_GEOMETRY",
+      "reason": "source-native Correntes vs official Corrente (PI) identity not frozen"
+    }
+  ],
+  "fresh_live_preflight": {
+    "observed_at": "2026-09-29T22:45:18.656312+00:00",
+    "case_identity_mismatches": 0,
+    "candidate_identity_hits": 0,
+    "new_source_url_hits": 0,
+    "existing_locus_links": 0,
+    "release_membership_hits": 0,
+    "non_null_p_levels": 0,
+    "india_hrw_reused_source_version_id": "43eaef18-4b5e-489c-84a5-5c035d433cfc",
+    "serving_channel": "v0.8.1-public-mvp-v2"
+  },
+  "expected_live_delta": {
+    "atlas.spatial_entity": 4,
+    "atlas.source": 6,
+    "atlas.source_version": 6,
+    "atlas.geometry": 4,
+    "atlas.claim_source": 2,
+    "atlas.claim_evidence_locus": 4,
+    "atlas.claim": 0,
+    "audit.release_claim": 0,
+    "audit.release_channel": 0
+  },
+  "production_apply_requirements": [
+    "explicit sponsor authorization specifically for #374 live geometry closure",
+    "ATLAS_GEOMETRY_WRITE_AUTHORIZED=1",
+    "--production-write-authorized ISSUE-374-EXPLICIT",
+    "fresh --expected-main-sha matching checked-out main",
+    "successful disposable rehearsal receipt remains exact",
+    "all four production case IDs remain reviewed/unpublished with NULL P-levels",
+    "Brazil remains excluded",
+    "fresh live candidate identity/source/locus collision preflight remains clean"
+  ],
+  "post_write_receipt_required": [
+    "four generated locus spatial-entity IDs",
+    "four generated geometry IDs",
+    "four claim-evidence-locus links",
+    "Myanmar and Pakistan contextual claim-source IDs",
+    "source/source-version reuse versus creation",
+    "exact before/after counts",
+    "zero claim/release/channel/publication/P-level change",
+    "Brazil HOLD unchanged"
+  ],
+  "release_boundary": "Production locus closure is not successor release membership or public serving authorization."
+}
