@@ -1,0 +1,225 @@
+{
+  "record_kind": "production_population_accepted_subset_manifest",
+  "version": 1,
+  "issue": 360,
+  "pr": 367,
+  "status": "READY_FOR_EXPLICIT_PRODUCTION_INGEST_APPROVAL_NOT_RELEASE_APPROVAL",
+  "prepared_on": "2026-09-29",
+  "authority": {
+    "github_main_sha": "09f5d77fb21f451d855c5df4a0b442469eaf422b",
+    "population_pr_head_verified": "066f13bc3b6ce0f68f6ec46628ce0b22b86d2662",
+    "exact_head_ci": {
+      "run_id": 36596741744,
+      "conclusion": "success"
+    },
+    "live_preflight_observed_at": "2026-09-29T16:20:19.934488+00:00",
+    "immutable_release": "v0.8.1",
+    "public_serving": "v0.8.1-public-mvp-v2"
+  },
+  "live_collision_preflight": {
+    "spatial_entity_hits": 0,
+    "research_case_ingest_hits": 0,
+    "source_version_url_hits": 0,
+    "goryeo_research_target_hits": 0,
+    "release_claim_hits": 0,
+    "interpretation": "No live identity/case/source URL collision was observed for this exact two-candidate subset. Re-run immediately before any production write.",
+    "angkor": {
+      "spatial_entity_hits": 0,
+      "research_case_ingest_hits": 0,
+      "exact_source_version_url_hits": 1,
+      "reused_source_version_id": "2b8ab305-7d31-5da1-ba73-d66e8e4a48d3",
+      "reused_source_version_url": "https://ignca.gov.in/Asi_data/51727.pdf",
+      "release_claim_hits": 0,
+      "note": "Chakravarti/IGNCA source version is reused; Zhou translation and UNESCO geometry source are new if ingested."
+    },
+    "asante": {
+      "spatial_entity_hits": 0,
+      "research_case_ingest_hits": 0,
+      "exact_source_version_url_hits": 0,
+      "release_claim_hits": 0,
+      "note": "Read-only connected Supabase preflight checked Asante/Ashanti aliases, exact case key, two evidence URLs and Seshat geometry-source URL."
+    }
+  },
+  "accepted": [
+    {
+      "target": "Goryeo",
+      "case_key": "production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/01_goryeo_0956_legal_event.json",
+      "content_sha256": "9c3f370965766c0d870bb5d280fb09e5c1861638dd9135acbbf880c7622dfce0",
+      "importer": "tools/add_legal_event_case.py",
+      "claim_kind": "legal_event",
+      "interval": [
+        956,
+        956
+      ],
+      "evidence_sources": 2,
+      "geometry_role": "none",
+      "expected_map_visibility": "none",
+      "production_action": "INSERT_NEW_UNPUBLISHED_AFTER_EXPLICIT_APPROVAL",
+      "publication_action": "HOLD",
+      "safeguards": [
+        "retain nobi source term",
+        "no abolition inference",
+        "no prevalence inference",
+        "no territorial-practice geometry",
+        "no P-level"
+      ]
+    },
+    {
+      "target": "Dahomey",
+      "case_key": "production-batch-2026-09-29/dahomey/royal-captive-allocation-sale-1727-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/02_dahomey_1727_sale_process.json",
+      "content_sha256": "15a33bba6c4da44c9156310ba13a41455746b18aba2fb4e88a1da87227b62084",
+      "importer": "tools/add_research_case.py",
+      "claim_kind": "territorial_practice",
+      "practice_type": "slave_trade_sale_purchase",
+      "interval": [
+        1727,
+        1727
+      ],
+      "evidence_sources": 3,
+      "geometry_role": "unresolved",
+      "expected_map_visibility": "none",
+      "production_action": "INSERT_NEW_UNPUBLISHED_AFTER_EXPLICIT_APPROVAL",
+      "publication_action": "HOLD",
+      "safeguards": [
+        "bounded 1727 process only",
+        "no polity-wide prevalence",
+        "no inferred sold-versus-retained split",
+        "no resolved geometry",
+        "no P-level"
+      ]
+    },
+    {
+      "target": "Angkor",
+      "case_key": "production-batch-2026-09-29/angkor/household-slavery-1296-1297-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/04_angkor_1296_1297_household_slavery.json",
+      "content_sha256": "b68b7ddb993faba2424a2bb4b66010e97a01bb23f821fd5fd4f568ded8666ddd",
+      "importer": "tools/add_research_case.py",
+      "claim_kind": "territorial_practice",
+      "practice_type": "slavery_enslavement",
+      "interval": [
+        1296,
+        1297
+      ],
+      "evidence_sources": 2,
+      "geometry_role": "modern_proxy_point_navigation_and_evidence_locus_only",
+      "geometry_source_native_id": "668-001",
+      "expected_map_visibility": "one site point if selected into a future release/materialization",
+      "production_action": "INSERT_NEW_UNPUBLISHED_AFTER_EXPLICIT_APPROVAL",
+      "publication_action": "HOLD",
+      "safeguards": [
+        "capital/core observation only",
+        "UNESCO point is not historical practice extent",
+        "no empire-wide prevalence",
+        "no P-level",
+        "no modern ethnicity inference from Zhou's outsider categories"
+      ]
+    },
+    {
+      "target": "Asante",
+      "case_key": "production-batch-2026-09-29/asante/slavery-1807-1895-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/05_asante_1807_1895_slavery.json",
+      "content_sha256": "1dec2f1f89ee9726b1432021acaa52906a3be00af9420d4318d596ff194f0a5b",
+      "importer": "tools/add_research_case.py",
+      "claim_kind": "territorial_practice",
+      "practice_type": "slavery_enslavement",
+      "interval": [
+        1807,
+        1895
+      ],
+      "evidence_sources": 2,
+      "geometry_role": "modern_proxy_capital_navigation_only",
+      "geometry_source_native_id": "gh_ashanti_emp:capital:Kumase:208",
+      "expected_map_visibility": "one Kumasi navigation point if selected into a future release/materialization",
+      "production_action": "INSERT_NEW_UNPUBLISHED_AFTER_EXPLICIT_APPROVAL",
+      "publication_action": "HOLD",
+      "safeguards": [
+        "specialist polity-level synthesis supports slavery without uniform locality inference",
+        "pawnship remains distinct from slavery",
+        "Kumasi point is not practice extent or historical polity boundary",
+        "exact pinned Cliopatria polygon not yet frozen",
+        "no P-level"
+      ]
+    }
+  ],
+  "held_exclusions": [
+    {
+      "target": "Meroitic Kush / Hamadab",
+      "disposition": "HOLD_SOURCE_DIRECTION_AND_RILLY_READING_UNVERIFIED"
+    },
+    {
+      "target": "Mexica / Aztec tlacotin",
+      "case_key": "production-batch-2026-09-29/mexica/exchangeable-tlacotli-tlatelolco-late-precontact-v0",
+      "disposition": "HOLD_NUMERIC_TIME_IDENTITY_AND_CATEGORY_ACCEPTANCE"
+    },
+    {
+      "target": "Bagan / Pagan",
+      "disposition": "HOLD_EXACT_INSCRIPTION_SOURCE_AND_SCOPE_UNRESOLVED"
+    }
+  ],
+  "existing_claim_lane": {
+    "count": 11,
+    "action": "REUSE_EXISTING_CLAIM_IDS_DO_NOT_REINSERT",
+    "packet_integrity": "PASS_11_OF_11",
+    "disposable_replay": "PASS_11_INSERTIONS_11_NOOPS_ROLLBACK",
+    "source_amendments": "SEPARATE_PENDING_RECONCILIATION"
+  },
+  "expected_database_delta_if_explicitly_ingested": {
+    "spatial_entity": 4,
+    "claim": 4,
+    "legal_event": 1,
+    "territorial_practice_claim": 3,
+    "source": 10,
+    "source_version": 10,
+    "claim_source": 9,
+    "geometry_rows": 3,
+    "resolved_geometry": 2,
+    "research_target": 1,
+    "research_target_result": 1,
+    "research_target_source": 2,
+    "research_target_claim": 1,
+    "research_target_review": 1,
+    "research_case_ingest": 4,
+    "release_claim": 0,
+    "publication_status_changes": 0
+  },
+  "replay_evidence": {
+    "run_id": 36581157387,
+    "result": "PASS",
+    "goryeo_first_insert": true,
+    "goryeo_second_noop": true,
+    "dahomey_first_insert": true,
+    "dahomey_second_noop": true,
+    "dahomey_resolved_geometry_count": 0,
+    "production_writes": 0,
+    "angkor_run_id": 36595321724,
+    "angkor_first_insert": true,
+    "angkor_second_noop": true,
+    "angkor_modern_proxy_point_count": 1,
+    "asante_run_id": 36596741744,
+    "asante_first_insert": true,
+    "asante_second_noop": true,
+    "asante_modern_proxy_point_count": 1
+  },
+  "map_coverage_effect": {
+    "visible_geometry_additions": 2,
+    "visible_targets": [
+      "Angkor",
+      "Asante"
+    ],
+    "note": "Angkor and Asante each have one reviewed modern_proxy point used for navigation only. Goryeo has no practice geometry and Dahomey remains unresolved. No shaded historical practice polygon is added."
+  },
+  "pre_write_gates": [
+    "Re-read current main, PR head, live collision preflight, and source-version reuse immediately before production ingest.",
+    "Require explicit sponsor authorization for production write.",
+    "Capture generated live claim/spatial/source IDs and exact before/after counts in a deployment receipt.",
+    "Do not add release membership or move a serving channel in the ingestion transaction."
+  ],
+  "post_ingest_release_gates": [
+    "Historical release selection remains separate.",
+    "Only published/reviewed materialization may serve public data.",
+    "A visible map addition requires separately accepted geometry/locus semantics.",
+    "Release requires changelog, QC summary, unresolved issues and rollback."
+  ]
+}

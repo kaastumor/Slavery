@@ -1,0 +1,139 @@
+{
+  "record_kind": "population_claim_source_amendment_proposal",
+  "version": 1,
+  "issue": 360,
+  "reviewed_on": "2026-09-29",
+  "status": "SOURCE_TEXT_CHECKED_AMENDMENTS_PENDING_ACCEPTANCE",
+  "release_ready": false,
+  "database_writes": 0,
+  "historical_packets_overwritten": false,
+  "application_contract": "Preserve the original packet and ingestion digest. Reconcile each proposed amendment against the existing claim/source relation by ID and exact input identity; do not replay changed content under an already ingested case key or create duplicate claims. This document is not an executable production command.",
+  "summary": {
+    "original_blank_locator_fields": 8,
+    "original_affected_cases": 6,
+    "blank_locator_fields_with_source_checked_proposals": 4,
+    "cases_with_proposals": 3,
+    "remaining_blank_locator_fields_without_proposals": 4,
+    "source_checked_does_not_mean_claim_release_ready": true
+  },
+  "source_access": [
+    {
+      "key": "india_ilo_2005",
+      "title": "Bonded Labour in India: its Incidence and Pattern",
+      "author": "Ravi S. Srivastava",
+      "edition": "ILO Declaration Working Paper 43, 2005",
+      "original_source_url": "https://www.ilo.org/publications/bonded-labour-india-its-incidence-and-pattern",
+      "official_catalogue_url": "https://researchrepository.ilo.org/esploro/outputs/encyclopediaEntry/Bonded-labour-in-India-its-incidence/995328403902676",
+      "full_text_read_url": "https://www.files.ethz.ch/isn/44729/2005_WP43_Bonded%20Labour%20in%20India.pdf",
+      "access_method": "Full authored paper, parsed PDF text via institutional mirror; printed page labels used. No archive-byte fingerprint claimed.",
+      "asset_sha256": null,
+      "locators_checked": ["Foreword, printed pp. vi-vii (PDF pages 9-10)", "Silk reeling and weaving, printed pp. 30-31 (PDF pages 45-46)"]
+    },
+    {
+      "key": "india_hrw_2003",
+      "title": "Small Change: Bonded Child Labor in India's Silk Industry",
+      "author": "Human Rights Watch",
+      "edition": "Report dated 22 January 2003",
+      "original_source_url": "https://www.hrw.org/report/2003/01/22/small-change/bonded-child-labor-indias-silk-industry",
+      "full_text_read_url": "https://www.hrw.org/report/2003/01/22/small-change/bonded-child-labor-indias-silk-industry",
+      "access_method": "Full publisher HTML report; section headings used as stable locators.",
+      "asset_sha256": null,
+      "locators_checked": ["I, Scope and Methodology", "IV, debt-bondage subsections for silk reeling/twisting and silk weaving"]
+    },
+    {
+      "key": "brazil_ilo_2004",
+      "title": "Waiting in Correntes: Forced labour in Brazil",
+      "author": "International Labour Organization",
+      "edition": "Web publication dated 1 March 2004",
+      "original_source_url": "https://www.ilo.org/publications/waiting-correntes-forced-labour-brazil",
+      "full_text_read_url": "https://www.ilo.org/publications/waiting-correntes-forced-labour-brazil",
+      "access_method": "Complete publisher text returned through web search; direct page open failed. No saved-byte identity claimed.",
+      "asset_sha256": null,
+      "locators_checked": ["Debt Bondage, paragraphs 1-5", "Responding to the challenges, paragraph 3"]
+    },
+    {
+      "key": "uzbekistan_ilo_2019",
+      "title": "2019 Third-party monitoring of child labour and forced labour during the cotton harvest in Uzbekistan",
+      "author": "International Labour Organization",
+      "edition": "2020 report; web PDF ISBN 9789220318485",
+      "original_source_url": "https://www.ilo.org/publications/2019-third-party-monitoring-child-labour-and-forced-labour-during-cotton",
+      "official_catalogue_url": "https://researchrepository.ilo.org/esploro/outputs/book/Third-party-monitoring-of-child-labour-and/995219268902676",
+      "full_text_read_url": "https://researchrepository.ilo.org/view/pdfCoverPage?download=true&filePid=13100894290002676&instCode=41ILO_INST",
+      "access_method": "Official repository full PDF text; printed page labels used. No archive-byte fingerprint claimed.",
+      "asset_sha256": null,
+      "locators_checked": ["Executive Summary, p. 4", "2.1, Duration of the monitoring, p. 22", "3.1, Sampling and data collection in the quantitative phase, p. 29"]
+    }
+  ],
+  "amendments": [
+    {
+      "amendment_key": "india-source-followup-20260929",
+      "existing_claim_id": "1d707382-b0b8-479d-81e3-efcea01c4ab0",
+      "case_key": "overnight-2026-09-27/india/bonded-labour-v2",
+      "input_packet_path": "data/research/recovery/overnight_2026_09_27/03_india_bonded_labour_v2.json",
+      "input_revision": "af6a6ec57e55c3032b5ac31417c2cca58766cf33",
+      "input_canonical_content_sha256": "85588cbf6b3c895b89171b774e102a5f3ad32516cde422c10106cb1aa16bd10b",
+      "locator_changes": [
+        {"source_key": "india_ilo_2005", "evidence_index": 0, "expected_old_value": null, "proposed_value": "Foreword, pp. vi-vii; section 5.7, Silk reeling and weaving, pp. 30-31."},
+        {"source_key": "india_hrw_2003", "evidence_index": 1, "expected_old_value": null, "proposed_value": "I, Scope and Methodology; IV, the subsections on the structure of bondage in silk reeling/twisting and silk weaving."}
+      ],
+      "findings": [
+        {"source_key": "india_ilo_2005", "locator": "pp. 30-31", "finding": "The silk discussion explicitly cites HRW 2003. Do not count those repeated observations as independent corroboration; the broader synthesis has additional sources."},
+        {"source_key": "india_hrw_2003", "locator": "Scope and Methodology", "finding": "Fieldwork was March-April 2002, followed by remote inquiries, not first observed in publication year 2003. The three-state silk inquiry is not a national prevalence survey."},
+        {"source_key": "india_ilo_2005", "locator": "pp. vi-vii", "finding": "Literature work occurred in mid-2004 without state field travel; the foreword is dated June 2005. Retain the landing-page date 6 January 2005 as conflicting source metadata, not a verified field date."}
+      ],
+      "proposed_interpretive_change": "Replace blanket independent-corroboration wording with claim-specific dependence. Distinguish observation dates, synthesis dates and publication dates before deciding the asserted practice interval. Do not silently convert the existing 2003-2005 indexing window into continuous practice.",
+      "disposition": "LOCATORS_ESTABLISHED_DEPENDENCY_AND_TEMPORAL_AMENDMENT_REVIEW_REQUIRED",
+      "practice_level_change": null,
+      "geometry_created": false
+    },
+    {
+      "amendment_key": "brazil-source-followup-20260929",
+      "existing_claim_id": "e0ed6573-235c-423d-befb-7b75630b5c35",
+      "case_key": "overnight-2026-09-27/brazil/rural-debt-bondage-2003-2005-v2",
+      "input_packet_path": "data/research/recovery/overnight_2026_09_27/10_brazil_rural_debt_bondage_v2.json",
+      "input_revision": "af6a6ec57e55c3032b5ac31417c2cca58766cf33",
+      "input_canonical_content_sha256": "6c8b54296d4b3faf83af3723b8bb1b4d9b4aa2d8886cd5f489f92fa509925ba3",
+      "locator_changes": [
+        {"source_key": "brazil_ilo_2004", "evidence_index": 0, "expected_old_value": null, "proposed_value": "Debt Bondage, paragraphs 1-5; Responding to the challenges, paragraph 3 (inspection/rescue context only)."}
+      ],
+      "findings": [
+        {"source_key": "brazil_ilo_2004", "locator": "Debt Bondage, paragraphs 1-5", "finding": "The feature describes recruitment advances, accumulated travel/lodging debts and employer-controlled charges in remote agricultural work."},
+        {"source_key": "brazil_ilo_2004", "locator": "opening and Responding to the challenges, paragraph 3", "finding": "The text combines a MARABA dateline with Correntes/Piaui wording. Preserve that ambiguity; do not derive a precise workplace point from it. Inspection/rescue totals describe enforcement, not prevalence."}
+      ],
+      "remaining_source_review": "The 2005 Global Report relation still has only a thematic locator; its exact passage was not established in this pass.",
+      "disposition": "FIRST_LOCATOR_ESTABLISHED_SECOND_SOURCE_AND_GEOGRAPHY_STILL_PENDING",
+      "practice_level_change": null,
+      "geometry_created": false
+    },
+    {
+      "amendment_key": "uzbekistan-source-followup-20260929",
+      "existing_claim_id": "2b456d9f-be09-4844-8899-286bd13464cb",
+      "case_key": "overnight-2026-09-27/uzbekistan/cotton-forced-labour-2019-v2",
+      "input_packet_path": "data/research/recovery/overnight_2026_09_27/09_uzbekistan_cotton_forced_labour_v2.json",
+      "input_revision": "af6a6ec57e55c3032b5ac31417c2cca58766cf33",
+      "input_canonical_content_sha256": "1efd71038f7049947a70d9a462acb68de33d6073557d3353e1bd7146219669ab",
+      "locator_changes": [
+        {"source_key": "uzbekistan_ilo_2019", "evidence_index": 0, "expected_old_value": null, "proposed_value": "Executive Summary, p. 4; section 2.1, monitoring duration, p. 22; section 3.1, quantitative sampling, p. 29."}
+      ],
+      "findings": [
+        {"source_key": "uzbekistan_ilo_2019", "locator": "pp. 4, 22, 29", "finding": "The report distinguishes declining/systematic recruitment from residual coercion. Data collection was September-December 2019. Its survey-based estimate concerns cotton pickers, not all residents or a uniform territorial surface."}
+      ],
+      "proposed_interpretive_change": "Retain the reported harvest-specific statistical estimate and its methodology as source evidence rather than describing it as merely administrative counts. Do not extrapolate it to all residents, an intensity score or each mapped location. Preserve the 2019 observation / 2020 publication distinction.",
+      "disposition": "LOCATOR_ESTABLISHED_STATISTICAL_SCOPE_QUALIFICATION_PROPOSED",
+      "practice_level_change": null,
+      "geometry_created": false
+    }
+  ],
+  "remaining_blank_locator_work": [
+    {"case": "Nepal", "fields": 2},
+    {"case": "Pakistan", "fields": 1},
+    {"case": "Peru", "fields": 1}
+  ],
+  "limits": [
+    "This is same-agent source review, not independent specialist review.",
+    "No original source file bytes were archived by this review; version identity rests on retrieved publisher/full-text bibliographic evidence.",
+    "No source count sets prevalence or a P-level.",
+    "None of these source amendments supplies a practice-extent polygon.",
+    "Original packets, live claims, release membership and public serving remain unchanged."
+  ]
+}

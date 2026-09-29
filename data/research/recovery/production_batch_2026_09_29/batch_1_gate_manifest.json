@@ -1,0 +1,141 @@
+{
+  "record_kind": "population_batch_gate_manifest",
+  "version": 1,
+  "issue": 360,
+  "pr": 367,
+  "as_of": "2026-09-29",
+  "authority": {
+    "github_main_sha": "09f5d77fb21f451d855c5df4a0b442469eaf422b",
+    "input_pr_head_sha": "281bd460d2cb34b12df22d84a766203aec3317b6",
+    "live_research_state": "separate governed PostgreSQL/PostGIS authority; read-only checks only",
+    "immutable_release": "v0.8.1",
+    "public_serving": "v0.8.1-public-mvp-v2",
+    "live_preflight_observed_at": "2026-09-29T15:55:03.576502+00:00",
+    "live_preflight": {
+      "candidate_entity_hits": 0,
+      "candidate_case_ingest_hits": 0,
+      "candidate_source_version_hits": 0,
+      "goryeo_research_target_hits": 0,
+      "release_claim_hits": 0,
+      "note": "Read-only connected Supabase preflight against exact candidate names, case keys, source URLs and Goryeo research target."
+    }
+  },
+  "batch": 1,
+  "live_name_check": {
+    "method": "read-only atlas.spatial_entity canonical-name regex for the five target names and aliases",
+    "matching_rows": 0,
+    "limit": "A name miss does not prove entity or claim absence; exact identity and claim-level reconciliation are still required."
+  },
+  "accepted_candidate_case_keys": [
+    "production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1",
+    "production-batch-2026-09-29/dahomey/royal-captive-allocation-sale-1727-v1"
+  ],
+  "accepted_claim_ids": [],
+  "exact_import_manifest_ready": true,
+  "expected_production_delta": {
+    "spatial_entities": 2,
+    "claims": 2,
+    "legal_events": 1,
+    "territorial_practice_claims": 1,
+    "sources": 5,
+    "source_versions": 5,
+    "claim_sources": 5,
+    "geometry_rows": 1,
+    "resolved_geometries": 0,
+    "research_targets": 1,
+    "research_target_results": 1,
+    "research_target_sources": 2,
+    "research_target_claims": 1,
+    "research_target_reviews": 1,
+    "research_case_ingests": 2,
+    "release_memberships": 0,
+    "publication_changes": 0,
+    "visible_map_geometries": 0
+  },
+  "targets": [
+    {
+      "target": "Meroitic Kush / Hamadab",
+      "old_worker_slug": "meroitic-kush-hamadab-late-first-century-bce-war-captivity",
+      "old_worker_packet_revision": null,
+      "old_worker_packet_sha256": null,
+      "proposed_claim_scope": "late first century BCE Hamadab war-captivity testimony; no Kush-wide practice inference",
+      "prior_review": "data/research/ancient_expansion_03/candidate_review_notes.json: Kush/Meroe deferred; captive iconography alone does not establish enslaved status",
+      "source_check": "Claude Rilly's REM 1039 reading, as summarized in https://lanfrica.com/en/record/fragments-of-the-meroitic-report-of-the-war-between-rome-and-meroe, describes the Tmey (Romans) enslaving Meroitic men, women, girls and boys. If accepted, its direction is Roman action against Meroites, not proof of Meroitic territorial enslavement practice. REM 1003/EA1650 depicts bound prisoners but does not by itself establish their legal or labour status.",
+      "disposition": "HOLD_PRIOR_REVIEW_CONFLICT_AND_SOURCE_DIRECTION",
+      "needed": "Inspect Rilly's full REM 1039 reading, source-language uncertainty and REM 1003/EA1650 separately. Resolve agent, victim and geography of any enslavement proposition against the prior review before intake."
+    },
+    {
+      "target": "Goryeo",
+      "old_worker_packet_revision": null,
+      "old_worker_packet_sha256": null,
+      "proposed_claim_scope": "956 and 987 nobi status legislation; legal status and actual practice must be assessed separately",
+      "source_lead": "https://encykorea.aks.ac.kr/Article/E0012757",
+      "source_check": "The Academy of Korean Studies account identifies the 956 emancipation review and 987 re-enslavement rule for some freed nobi; the National Institute of Korean History corroborates those dated laws at https://contents.history.go.kr/front/tg/view.do?ganada=%EC%A0%84%EC%B2%B4&levelId=tg_002_0350&pageUnit=50&treeId=0209. These are discrete legal-status events, not evidence of continuous uniform practice from 956 through 987.",
+      "disposition": "INTERNAL_REVIEW_ADMIT_BOUNDED_956_LEGAL_EVENT_ONLY",
+      "needed": "Run exact-head disposable legal-event/research-result idempotency rehearsal. Broader nobi territorial-practice classification and geometry remain HOLD.",
+      "materialized_candidate_path": "data/research/recovery/production_batch_2026_09_29/candidates/01_goryeo_0956_legal_event.json",
+      "candidate_case_key": "production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1"
+    },
+    {
+      "target": "Dahomey / Abomey-Ouidah",
+      "old_worker_packet_revision": null,
+      "old_worker_packet_sha256": null,
+      "proposed_claim_scope": "ca. 1715-1850 captive supply and trade; distinct territorial, network and site claims",
+      "source_check": "Robin Law's 1989 specialist study distinguishes royal raiding, inland purchase and private merchants; it also discusses nineteenth-century palm-oil production using enslaved labour (https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/slaveraiders-and-middlemen-monopolists-and-freetraders-the-supply-of-slaves-for-the-atlantic-trade-in-dahomey-c-17151850/25FD3A6506F945524A260237736CA0BB). His 1977 study rejects a blanket royal-monopoly account and distinguishes private merchants from royal control of army captives (https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/royal-monopoly-and-private-enterprise-in-the-atlantic-trade-the-case-of-dahomey1/885FB97D2FA6B22C2C762862DD6DB609). Both are one author's related interpretation, not independent corroboration. Publisher abstracts are leads; exact passage/version and claim-level locators remain to be checked.",
+      "disposition": "INTERNAL_REVIEW_ADMIT_BOUNDED_1727_SALE_PROCESS_CANDIDATE_GEOMETRY_HOLD",
+      "needed": "Run exact-head disposable importer/idempotency rehearsal; historical Jakin/royal-camp geometry stays unresolved and no polity-wide extent is admitted.",
+      "materialized_candidate_path": "data/research/recovery/production_batch_2026_09_29/candidates/02_dahomey_1727_sale_process.json",
+      "candidate_case_key": "production-batch-2026-09-29/dahomey/royal-captive-allocation-sale-1727-v1"
+    },
+    {
+      "target": "Mexica / Aztec tlacotin",
+      "old_worker_packet_revision": null,
+      "old_worker_packet_sha256": null,
+      "proposed_claim_scope": "ca. 1450-1521 tlacotin status and terminology require category-specific review",
+      "source_check": "Camilla Townsend's specialist chapter warns that coerced community labour in Mesoamerican agricultural states should not all be classified as slavery and distinguishes war-captive and domestic enslavement (https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/slavery-in-precontact-america/090D3E244D8E3F465822F387EFED7122). The publisher summary alone does not verify the worker packet's particular tlacotin debt or self-sale assertions. Those propositions need exact category-specific passages and source dependence review.",
+      "disposition": "MATERIALIZED_REVIEW_PROPOSAL_HOLD_NUMERIC_TIME_IDENTITY_AND_CATEGORY_ACCEPTANCE",
+      "needed": "Keep distinct Nahua categories; accept only after identity/numeric applicability/category review, then run importer replay.",
+      "materialized_candidate_path": "data/research/recovery/production_batch_2026_09_29/candidates/03_mexica_exchangeable_tlacotli.json",
+      "candidate_case_key": "production-batch-2026-09-29/mexica/exchangeable-tlacotli-tlatelolco-late-precontact-v0"
+    },
+    {
+      "target": "Bagan / Pagan",
+      "old_worker_packet_revision": null,
+      "old_worker_packet_sha256": null,
+      "proposed_claim_scope": null,
+      "source_check": "Public-safe issue review did not recover an exact dated inscription identifier or line sufficient for admission. Bagan remains unresolved; missing recovery is not evidence of historical absence.",
+      "disposition": "HOLD_SOURCE_AND_SCOPE_UNRESOLVED",
+      "needed": "Identify exact dated inscription identifiers and lines, source-native status terms, specialist interpretation and claim locus; assess historical geometry separately."
+    }
+  ],
+  "replay": {
+    "existing_eleven": "PASS at PR head d6934dc131fcc00e546d809dd186a4d3bd7ccb1b; see replay_result_20260929.json",
+    "batch_one_new_subjects": "PASS at PR head 281bd460d2cb34b12df22d84a766203aec3317b6; Goryeo legal event and Dahomey bounded process each inserted once and replayed unchanged as no-op in disposable PostGIS.",
+    "idempotent_production_replay": "NOT_RUN_NO_PRODUCTION_WRITE"
+  },
+  "release_gate": "HOLD_NO_RELEASE_SELECTION_NO_PUBLICATION",
+  "notes": [
+    "Name/alias absence is a preliminary check, not exhaustive entity or claim identity resolution.",
+    "The 2026-09-28 planning inventory is not admission authority; issue-owned source-gate results remain subject to claim/source verification.",
+    "Do not promote a source lead, site point, polity shape or war-captive depiction into a territorial slavery polygon.",
+    "The existing eleven reviewed/unpublished claims keep their original production IDs; source locator proposals are separate and do not replay their packets.",
+    "Goryeo and Dahomey are internally reviewed candidates only; no production IDs or release membership exist until governed admission. Mexica is materialized but remains a draft HOLD.",
+    "The accepted staging subset adds reviewed data but zero resolved/visible map geometries. It must not be described as map-population coverage until a separately reviewed locus/extent becomes publishable."
+  ],
+  "internally_reviewed_candidate_case_keys": [
+    "production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1",
+    "production-batch-2026-09-29/dahomey/royal-captive-allocation-sale-1727-v1"
+  ],
+  "materialized_review_candidate_case_keys": [
+    "production-batch-2026-09-29/mexica/exchangeable-tlacotli-tlatelolco-late-precontact-v0"
+  ],
+  "candidate_rehearsal_status": "PASS_EXACT_HEAD_CI_36581157387",
+  "claim_id_assignment": "New claim UUIDs are database-assigned on governed production ingest and must be captured in the deployment receipt; none exist in live state at the frozen preflight.",
+  "accepted_subset_manifest": "data/research/recovery/production_batch_2026_09_29/accepted_subset_manifest.json",
+  "staging_gate": "READY_FOR_EXPLICIT_PRODUCTION_INGEST_APPROVAL",
+  "source_gate_recovery": {
+    "status": "PUBLIC_SAFE_ISSUE_RECEIPTS_ONLY",
+    "source": "Issue #360 source-gate checkpoints and source URLs/locators independently rechecked before candidate materialization",
+    "limit": "No private chat transcript, thread/message identifiers, or rendered-text digests are retained in this reviewable Git history. Missing original scheduler packet revisions remain unknown."
+  }
+}

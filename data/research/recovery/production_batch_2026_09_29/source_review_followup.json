@@ -1,0 +1,94 @@
+{
+  "record_kind": "population_claim_source_amendment_followup",
+  "version": 1,
+  "issue": 360,
+  "reviewed_on": "2026-09-29",
+  "status": "PROPOSALS_AND_EXPLICIT_HOLDS_PENDING_ACCEPTANCE",
+  "database_writes": 0,
+  "historical_packets_overwritten": false,
+  "application_contract": "Recheck exact live claim_source ID, source_version ID, old locator, packet revision and canonical ingestion hash before any governed amendment. Do not replay modified packets under an ingested case key. No proposal changes release membership or publication status.",
+  "proposals": [
+    {
+      "case": "Nepal",
+      "claim_id": "aba2e1e2-5d67-41b6-8bbe-0f9c83cbbbc3",
+      "claim_source_id": "cf65f670-1260-4cd1-a515-bf57fd1dc0e9",
+      "source_version_id": "14dd3f81-1e61-468d-be29-1b3894e13d9e",
+      "source_url": "https://researchrepository.ilo.org/esploro/outputs/encyclopediaEntry/The-kamaiya-system-in-Nepal/995321029402676",
+      "source_pdf_url": "https://researchrepository.ilo.org/view/pdfCoverPage?download=true&filePid=13117092780002676&instCode=41ILO_INST",
+      "input_packet_path": "data/research/recovery/overnight_2026_09_27/06_nepal_kamaiya_v2.json",
+      "input_revision": "af6a6ec57e55c3032b5ac31417c2cca58766cf33",
+      "input_canonical_content_sha256": "dce5fe6f0f75d31bcf6eaecd087c2ad56edd0305f245699bdd33b81b23919e16",
+      "evidence_index": 0,
+      "expected_old_locator": null,
+      "proposed_locator": "Preface, PDF page 3 (zero-indexed PDF page 2); printed pagination to confirm on page image.",
+      "source_check": "The ILO-hosted 82-page PDF was read at its preface. It describes Kamaiya as a permanent farm-labour arrangement and says some labourers and family members were bound through debt and compelled labour. It distinguishes the system from universal bondage. The cover names Shiva Sharma and five collaborators, while the repository catalog lists four creators; retain both raw descriptions pending bibliographic reconciliation.",
+      "disposition": "PINPOINT_PREFACE_PROPOSAL_BIBLIOGRAPHIC_REVIEW_REQUIRED"
+    },
+    {
+      "case": "Pakistan",
+      "claim_id": "47175a77-76bb-4a92-ac3c-cb22b7a8131f",
+      "claim_source_id": "73e61657-f19a-40b9-aa22-868007ce013b",
+      "source_version_id": "3bf6ff6c-2543-48ad-865c-34c4a600d050",
+      "source_url": "https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@ed_norm/@declaration/documents/publication/wcms_096991.pdf",
+      "input_packet_path": "data/research/recovery/overnight_2026_09_27/07_pakistan_bonded_labour_v2.json",
+      "input_revision": "af6a6ec57e55c3032b5ac31417c2cca58766cf33",
+      "input_canonical_content_sha256": "847972aeef0cbdd44ca42679f9fa7deb705c048d3fe7c6bd4dbd89456a6f94a0",
+      "evidence_index": 0,
+      "expected_old_locator": null,
+      "proposed_locator": "Foreword, p. iii; section 1, Introduction, pp. 1-2.",
+      "source_check": "Publisher PDF, foreword and introduction read. The authors state the report was largely completed in July 2000; the rapid survey covers formerly bonded sharecropper families in Sindh, while brick-kiln workers were not systematically interviewed. Report publication is 2001. The introduction explicitly cautions against a national prevalence estimate.",
+      "disposition": "LOCATOR_PROPOSED_TEMPORAL_AND_SAMPLING_REVIEW_REQUIRED"
+    },
+    {
+      "case": "Peru",
+      "claim_id": "c66f6ef1-374a-4370-98c3-7d895bf92bfa",
+      "claim_source_id": "4b07c93e-7c5a-41b0-8bc2-bb43f0a29565",
+      "source_version_id": "f8259d71-ea27-4658-a2d0-2bae202e2eb7",
+      "source_url": "https://www.ilo.org/publications/forced-labor-timber-extraction-peruvian-amazon",
+      "input_packet_path": "data/research/recovery/overnight_2026_09_27/08_peru_amazon_debt_bondage_v2.json",
+      "input_revision": "af6a6ec57e55c3032b5ac31417c2cca58766cf33",
+      "input_canonical_content_sha256": "6c30592b35a88738414b905c1376dc16d2b57b310e11c6258d216c99b9f89229",
+      "evidence_index": 0,
+      "expected_old_locator": null,
+      "proposed_locator": "ILO publisher summary, paragraphs 1-3 (study method, illegal/informal logging, and enganche recruitment). Full-report page locator pending.",
+      "source_check": "The publisher summary identifies interviews plus secondary material, illegal/informal timber settings in multiple Peruvian Amazon regions, and enganche advances leading to debt peonage or servitude. The 3 January 2005 date is publication metadata; the fieldwork date was not established.",
+      "disposition": "PUBLISHER_SUMMARY_LOCATOR_ONLY_FULL_REPORT_AND_FIELD_DATE_HOLD"
+    },
+    {
+      "case": "Brazil",
+      "claim_id": "e0ed6573-235c-423d-befb-7b75630b5c35",
+      "claim_source_id": "105cb4dd-993e-4180-bbc7-cace150791a8",
+      "source_version_id": "3e592a2e-04ec-4d47-80f9-e3f9d721732b",
+      "source_url": "https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@ed_norm/@declaration/documents/publication/wcms_081882.pdf",
+      "input_packet_path": "data/research/recovery/overnight_2026_09_27/10_brazil_rural_debt_bondage_v2.json",
+      "input_revision": "af6a6ec57e55c3032b5ac31417c2cca58766cf33",
+      "input_canonical_content_sha256": "6c8b54296d4b3faf83af3723b8bb1b4d9b4aa2d8886cd5f489f92fa509925ba3",
+      "evidence_index": 1,
+      "expected_old_locator": "Brazil enforcement discussion; counts treated as detection/response observations, not prevalence",
+      "proposed_locator": "Part II, chapter 2, paragraphs 89-91 (law and enforcement); Part II, Latin America: Focus on debt bondage and indigenous peoples, paragraphs 189-193 (rural debt bondage and response).",
+      "source_check": "The 2005 ILO report distinguishes Brazilian rural debt bondage from legal and inspection response. Its estimate in paragraph 190 is not a mapped prevalence measure; workers freed and proceedings in paragraph 91 measure enforcement. The report and the 2004 ILO feature share an institutional evidence ecosystem.",
+      "disposition": "PINPOINT_LOCATOR_PROPOSED_SOURCE_DEPENDENCE_RETAINED"
+    }
+  ],
+  "holds": [
+    {
+      "case": "Nepal",
+      "claim_id": "aba2e1e2-5d67-41b6-8bbe-0f9c83cbbbc3",
+      "claim_source_id": "ed3aeaec-8ef5-48c8-b6f5-7bda99b0bc01",
+      "source_version_id": "3f31b860-9097-4382-b1f8-a8bd91e459e2",
+      "source_url": "https://researchrepository.ilo.org/esploro/outputs/report/Nepal-bonded-child-labour-among-child/995675441302676",
+      "input_packet_path": "data/research/recovery/overnight_2026_09_27/06_nepal_kamaiya_v2.json",
+      "input_revision": "af6a6ec57e55c3032b5ac31417c2cca58766cf33",
+      "input_canonical_content_sha256": "dce5fe6f0f75d31bcf6eaecd087c2ad56edd0305f245699bdd33b81b23919e16",
+      "expected_old_locator": null,
+      "finding": "ILO repository dates this 55-page rapid assessment 2001 and lists P. Moshi as third author. Search-indexed publisher PDF cover and an ILO bibliography instead identify Ganesh G.C.; the ILO public publication page has a 2002 date. The full PDF needs direct inspection to resolve author/version identity and exact report locator before amendment.",
+      "disposition": "HOLD_AUTHOR_VERSION_AND_EXACT_REPORT_LOCATOR"
+    }
+  ],
+  "limits": [
+    "These are source review proposals, not accepted historical amendments or database updates.",
+    "Original ingested packet bytes, case keys and claim IDs remain unchanged.",
+    "No estimate, inspection count or country indexing entity is a territorial practice polygon.",
+    "No source file byte fingerprint or independent specialist review is claimed."
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "case_key": "production-batch-2026-09-29/asante/slavery-1807-1895-v1",
+  "spatial_entity": {
+    "canonical_name": "Asante",
+    "display_name": "Asante (Ashanti Empire)",
+    "entity_type_code": "polity",
+    "from_year": 1701,
+    "to_year": 1895,
+    "review_status": "reviewed",
+    "notes": "Historical polity identity aligned to Seshat gh_ashanti_emp, which records the Ashanti Empire from 1701 to 1895 and Asante as an alternative name. The attached Kumasi point is navigation only, not the polity or practice extent."
+  },
+  "claim": {
+    "from_year": 1807,
+    "to_year": 1895,
+    "date_text_original": "Austin's specialist synthesis covers Asante slavery and pawnship, 1807-1896; normalized here to the independently reviewed polity interval ending 1895.",
+    "temporal_precision": "broad_specialist_period_intersected_with_polity_duration",
+    "temporal_certainty": "high_for_period_level_specialist_synthesis",
+    "spatial_precision": "Asante polity-level specialist synthesis; not uniformity at every locality",
+    "summary": "Specialist economic history concludes that slavery and slave trading were widespread in nineteenth-century Asante and that enslaved labour was a major input across productive activities. The atlas records slavery as a reviewed polity-level practice in Asante from 1807 through the end of the independent Ashanti Empire in 1895, while keeping pawnship as a distinct coercive institution rather than merging it into the slavery category.",
+    "confidence": "high_specialist_synthesis",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "This is a broad period-level synthesis, not an inference from archive counts or a single event. Austin's chapter also treats pawnship; this claim does not collapse pawns into enslaved status. No P-level or population share is assigned.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_specialist_polity_level_slavery",
+      "notes": "Supports polity-level presence and widespread institutional use during the reviewed period without asserting uniform local prevalence or deriving intensity from source density."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Labour, Land and Capital in Ghana: From Slavery to Free Labour in Asante, 1807-1956",
+        "author_or_institution": "Gareth Austin",
+        "source_type": "specialist_historical_monograph",
+        "source_classification": "secondary",
+        "language_code": "en",
+        "geographic_scope": "Asante",
+        "temporal_scope": "1807-1956, with precolonial slavery/pawnship analysis focused on 1807-1896",
+        "independence_notes": "Major specialist economic-history synthesis drawing on archival, ethnographic and historical evidence. Internal citations are not counted as independent attestations merely because they are numerous.",
+        "reliability_limitations": "Treats several forms of coerced and dependent labour. Slavery, slave trading and pawnship must remain analytically distinct; chapter-level statements do not imply identical practice at every locality."
+      },
+      "version": {
+        "version_label": "Boydell & Brewer / University of Rochester Press, print 2005; chapter 8, pp. 155-170",
+        "publication_year": 2005,
+        "url_or_identifier": "https://www.cambridge.org/core/books/abs/labour-land-and-capital-in-ghana/factor-markets-without-free-labour-the-nieboer-hypothesis-and-asante-slavery-and-pawnship-18071896/4EADF8D543992C87CF561E3D1F9A9194",
+        "accessed_at": "2026-09-29T16:35:00Z"
+      },
+      "evidence_role": "principal specialist synthesis for polity-level slavery classification",
+      "independence_group": "austin-asante-labour-monograph",
+      "directness": "specialist historical synthesis",
+      "direction": "supports",
+      "locator": "Chapter 8, pp. 155-170, especially the opening synthesis stating that slavery, slave trading and pawning were widespread in nineteenth-century Asante and major inputs into productive activities.",
+      "notes": "Use the slavery-specific proposition for this claim. Pawnship remains a separate category."
+    },
+    {
+      "source": {
+        "title": "Accumulation, wealth and belief in Asante history: I. To the close of the nineteenth century",
+        "author_or_institution": "T. C. McCaskie",
+        "source_type": "peer_reviewed_journal_article",
+        "source_classification": "secondary",
+        "language_code": "en",
+        "geographic_scope": "Asante",
+        "temporal_scope": "Asante to the close of the nineteenth century",
+        "independence_notes": "Independent specialist interpretation of Asante social and economic history; used as contextual corroboration rather than a second prevalence count.",
+        "reliability_limitations": "The article's primary purpose is wealth, accumulation and belief, not a dedicated quantitative history of slavery."
+      },
+      "version": {
+        "version_label": "Africa 53(1), 1983, pp. 23-43",
+        "publication_year": 1983,
+        "url_or_identifier": "https://doi.org/10.2307/1159772",
+        "accessed_at": "2026-09-29T16:35:00Z"
+      },
+      "evidence_role": "independent specialist social-economic context",
+      "independence_group": "mccaskie-asante-wealth-1983",
+      "directness": "specialist historical analysis",
+      "direction": "context",
+      "locator": "pp. 23-43; Asante accumulation, social formation and labour/wealth context.",
+      "notes": "Context only; the Austin monograph remains the principal classification source."
+    }
+  ],
+  "geometry": {
+    "from_year": 1807,
+    "to_year": 1895,
+    "accuracy_status": "modern_proxy",
+    "resolution_method": "Current Seshat records identify Kumasi/Kumase as capital of the Ashanti Empire throughout 1701-1895 and provide a current point near -1.69, 6.69. The point is used only as a navigation proxy until an exact pinned Cliopatria polity row is frozen; it is not the slavery inference extent or a substitute for the historical Asante boundary.",
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        -1.69,
+        6.69
+      ]
+    },
+    "source": {
+      "title": "Seshat Global History Databank — Ashanti Empire polity and capital records",
+      "author_or_institution": "Seshat Global History Databank",
+      "source_type": "historical_polity_dataset_web_view",
+      "source_classification": "methodology",
+      "geographic_scope": "Ashanti Empire / Kumasi",
+      "temporal_scope": "Ashanti Empire 1701-1895"
+    },
+    "version": {
+      "version_label": "Seshat polity gh_ashanti_emp / capital record 208, accessed 2026-09-29",
+      "url_or_identifier": "https://www.seshat-db.com/core/polity/114",
+      "accessed_at": "2026-09-29T16:35:00Z",
+      "notes": "Polity page records Ashanti Empire 1701-1895 and Kumasi/Kumase as capital; current capital registry gives approximately (-1.69, 6.69). Exact pinned Cliopatria row remains a future geometry-resolution task."
+    },
+    "source_native_id": "gh_ashanti_emp:capital:Kumase:208",
+    "review_status": "reviewed",
+    "notes": "Navigation proxy only. Do not render this point as the territorial extent of slavery or the historical polity."
+  }
+}

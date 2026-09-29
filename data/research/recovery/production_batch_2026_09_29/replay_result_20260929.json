@@ -1,0 +1,48 @@
+{
+  "record_kind": "population_verification_execution_receipt",
+  "version": 1,
+  "issue": 360,
+  "verified_on": "2026-09-29",
+  "population_head": "d6934dc131fcc00e546d809dd186a4d3bd7ccb1b",
+  "tested_merge_commit": "7794d8fc84478f37b403e2acbe6e2c1df6dd808e",
+  "tested_base_commit": "09f5d77fb21f451d855c5df4a0b442469eaf422b",
+  "workflow_run_id": 36565586256,
+  "workflow_url": "https://github.com/kaastumor/Slavery/actions/runs/36565586256",
+  "checks_job_id": 109396573950,
+  "foundation_job_id": 109396709097,
+  "conclusion": "success",
+  "sanitation": "PASS",
+  "python_tests_run": 393,
+  "python_tests_skipped": 2,
+  "exact_packet_integrity": {
+    "expected_packets": 11,
+    "verified_commit_path_packets": 11,
+    "canonical_ingest_hash_matches": 11,
+    "current_checkout_content_matches": 11,
+    "raw_file_hash_is_distinct_from_canonical_json_hash": true,
+    "original_blank_locator_fields": 8,
+    "cases_with_blank_locator_fields": 6
+  },
+  "disposable_database_replay": {
+    "scope": "DISPOSABLE_CI_DATABASE_NOT_PRODUCTION",
+    "first_pass_inserted": 11,
+    "second_pass_noops": 11,
+    "evidence_links_inserted": 17,
+    "changed_content_rejected": true,
+    "claim_and_evidence_field_roundtrip": true,
+    "rollback_restored_tracked_table_counts": true,
+    "geometry_rows_inserted": 0,
+    "release_claim_count_delta": 0,
+    "release_channel_count_delta": 0,
+    "production_writes": 0
+  },
+  "source_review_amendments_in_this_receipt": false,
+  "release_ready": false,
+  "limits": [
+    "This receipt records the named tested commit; later changes require their own checks.",
+    "Source amendment proposals were prepared after this execution and were not tested by this run.",
+    "The database was a disposable fixture, not production; existing live claim IDs must be reused.",
+    "Rollback verification compared tracked table counts, not a full database-state digest.",
+    "The rehearsal verifies imported base claim and evidence-link fields, not all post-M1 annotations or historical acceptance."
+  ]
+}

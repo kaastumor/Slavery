@@ -1,0 +1,121 @@
+{
+  "case_key": "production-batch-2026-09-29/dahomey/royal-captive-allocation-sale-1727-v1",
+  "spatial_entity": {
+    "canonical_name": "Dahomey",
+    "display_name": "Kingdom of Dahomey",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Identity for a bounded April 1727 claim concerning the royal administration. This does not approve a polity-wide practice polygon."
+  },
+  "claim": {
+    "from_year": 1727,
+    "to_year": 1727,
+    "date_text_original": "April 1727",
+    "temporal_precision": "month_bounded_episode",
+    "temporal_certainty": "high_for_snelgrave_visit_and_transaction_sequence",
+    "spatial_precision": "royal administration with evidence at the royal camp and Jakin/Jaqueen; exact geometry unresolved",
+    "summary": "In April 1727, Dahomey's royal administration received war captives from soldiers, retained or allocated some captives for royal and court use, and supplied enslaved people for sale to the European slave trader William Snelgrave at Jakin. The evidence establishes a bounded state-organized captive-allocation and slave-sale process, not continuous polity-wide prevalence.",
+    "confidence": "moderate_high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Snelgrave was a participant in the slave trade and his broader conquest narrative is contested. This claim uses his dated court observation and transaction sequence, constrained by specialist source criticism. The sold-versus-retained split and wider prevalence are not inferred.",
+    "territorial_practice": {
+      "practice_type_code": "slave_trade_sale_purchase",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_bounded_process",
+      "notes": "No P-level, population share, continuous 1715-1850 interval, uniform territorial extent, or practice polygon is inferred. Captive-taking and retention remain analytically distinct from the sale/purchase process."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "A New Account of Guinea, and the Slave-Trade",
+        "author_or_institution": "William Snelgrave",
+        "source_type": "published_travel_and_trade_account",
+        "source_classification": "primary_participant_account",
+        "language_code": "en",
+        "geographic_scope": "Dahomey royal camp and Jakin/Jaqueen",
+        "temporal_scope": "April 1727",
+        "independence_notes": "First-person participant account by a European slave trader who met Agaja's court and purchased enslaved people supplied under royal authority.",
+        "reliability_limitations": "Commercial/apologetic interests and later source criticism materially limit the broader conquest narrative; only bounded observed/transactional passages are used here."
+      },
+      "version": {
+        "version_label": "London 1754 edition; Project Gutenberg transcription from Internet Archive/Wellcome images; work first published 1734",
+        "publication_or_creation_date_text": "First published 1734; inspected 1754 text",
+        "publication_year": 1754,
+        "url_or_identifier": "https://www.gutenberg.org/cache/epub/75052/pg75052-images.html",
+        "accessed_at": "2026-09-29T13:35:00Z",
+        "license_status": "public_domain",
+        "redistribution_status": "public_text"
+      },
+      "evidence_role": "dated court observation and slave-sale transaction sequence",
+      "independence_group": "snelgrave-1727-account",
+      "directness": "participant eyewitness account",
+      "direction": "supports",
+      "locator": "Book I, printed pp. 37-40: captives received from soldiers, some kept for slaves or sale, payments by officers, and at least 200 captives presented; printed pp. 82-83: 15-17 April, enslaved people sent by the king for Snelgrave to choose.",
+      "notes": "Use only the bounded court/transaction observations, not Snelgrave's campaign causation or general characterizations."
+    },
+    {
+      "source": {
+        "title": "Dahomey and the Slave Trade: Reflections on the Historiography of the Rise of Dahomey",
+        "author_or_institution": "Robin Law",
+        "source_type": "journal_article",
+        "source_classification": "secondary",
+        "language_code": "en",
+        "geographic_scope": "Dahomey and the Slave Coast",
+        "temporal_scope": "Rise of Dahomey, including 1727",
+        "independence_notes": "Specialist analysis of the primary source tradition; not an independent eyewitness to the 1727 transaction.",
+        "reliability_limitations": "Used to interpret and constrain primary evidence, not to derive a population share or territorial extent."
+      },
+      "version": {
+        "version_label": "The Journal of African History 27(2), 1986, pp. 237-267",
+        "publication_year": 1986,
+        "url_or_identifier": "https://doi.org/10.1017/S0021853700036665",
+        "accessed_at": "2026-09-29T13:35:00Z"
+      },
+      "evidence_role": "specialist interpretation and uncertainty bound",
+      "independence_group": "law-dahomey-historiography",
+      "directness": "specialist source criticism",
+      "direction": "qualifies",
+      "locator": "pp. 259-260 and notes 126-128: 1727 captive payments and uncertainty over the sold-versus-retained split",
+      "notes": "Do not treat this secondary discussion as an independent occurrence count."
+    },
+    {
+      "source": {
+        "title": "A Neglected Account of the Dahomian Conquest of Whydah (1727): The Relation de la Guerre de Juda of the Sieur Ringard of Nantes",
+        "author_or_institution": "Robin Law",
+        "source_type": "journal_article_and_primary_text_edition",
+        "source_classification": "secondary_with_primary_text",
+        "language_code": "en",
+        "geographic_scope": "Whydah and Dahomey campaign",
+        "temporal_scope": "1727 conquest",
+        "independence_notes": "Separate eyewitness source tradition edited and compared by the same modern specialist.",
+        "reliability_limitations": "Used only as adverse source criticism of Snelgrave's broader campaign narrative, not as direct evidence for the court transaction."
+      },
+      "version": {
+        "version_label": "History in Africa 15 (1988), pp. 321-338",
+        "publication_year": 1988,
+        "url_or_identifier": "https://www.jstor.org/stable/3171865",
+        "accessed_at": "2026-09-29T13:35:00Z"
+      },
+      "evidence_role": "adverse source criticism",
+      "independence_group": "law-ringard-source-critique",
+      "directness": "specialist source comparison",
+      "direction": "qualifies",
+      "locator": "Source-comparison discussion; use to limit reliance on Snelgrave's conquest narrative.",
+      "notes": "Same specialist author as the 1986 article; not counted as an independent modern interpretation."
+    }
+  ],
+  "geometry": {
+    "from_year": 1727,
+    "to_year": 1727,
+    "accuracy_status": "unresolved",
+    "resolution_method": "The inspected evidence identifies a royal camp and Jakin/Jaqueen but does not yet freeze an exact reviewed geometry. Do not substitute modern Benin, Abomey, Ouidah, or a Dahomey realm polygon.",
+    "geojson": null,
+    "review_status": "reviewed",
+    "notes": "Geometry is explicitly held without weakening the bounded positive process claim."
+  }
+}
