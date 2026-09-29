@@ -18,8 +18,8 @@
 <body>
   <header>
     <h1>6 CE · coastal alignment preview</h1>
-    <p>Rome fitted to the displayed coastline. Compare the proposed view with the original sources or published v2. <a href="./raw-baseline.html">Untouched baseline</a> · <a href="./index.html">Evidence app</a> · <a href="./index.html?coastal-preview=1">Evidence app with local coast fit</a></p>
-    <p><strong>Unreleased presentation experiment:</strong> the constrained fit excludes added overlap with neighbouring source polygons and land components without Roman source coverage. It still exceeds the prior 2% area policy and uses a source variant different from the stored API record. It is not a released territory claim.</p>
+    <p>Rome fitted to the displayed coastline. Compare the temporary map fill with the original sources or published v2. <a href="./raw-baseline.html">Untouched baseline</a> · <a href="./index.html?year=6">Evidence app at 6 CE</a> · <a href="./index.html?coastal-fit=off&amp;year=6">Released geometry at 6 CE</a></p>
+    <p><strong>Temporary presentation fit:</strong> the constrained fit excludes added overlap with neighbouring source polygons and land components without Roman source coverage. It still exceeds the prior 2% area policy and uses a source variant different from the stored API record. It is not a released territory claim.</p>
     <p id="status" role="status">Loading the pinned source…</p>
     <nav aria-label="Inspection areas"><button id="med">Mediterranean</button> <button id="greece">Greece</button> <button id="north">North Sea</button> <button id="east">Eastern Mediterranean</button> <button id="africa">North Africa</button></nav>
   </header>
@@ -83,7 +83,7 @@
       }, {collapsed: false}).addTo(map);
       map.fitBounds(scenes.med, {animate: false});
       const parts = roman[0].geometry.type === 'MultiPolygon' ? roman[0].geometry.coordinates.length : 1;
-      document.querySelector('#status').textContent = 'Local preview · 25 km coastal strip · 2.576% added area after exclusions · source records unchanged';
+      document.querySelector('#status').textContent = 'Comparison · 25 km coastal strip · 2.576% added area after exclusions · source records unchanged';
     }
     load().catch(error => { document.querySelector('#status').textContent = error.message; });
   </script>

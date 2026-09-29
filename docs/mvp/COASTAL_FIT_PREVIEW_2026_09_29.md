@@ -130,18 +130,28 @@ to the GitHub features. The 14–22 CE release uses specialist AWMC geometry, so
 the GitHub interval is not a candidate replacement for it. This is a source-level
 screen, not visual acceptance or release source-to-record reconciliation.
 
-The evidence application can also show this local candidate at
-`web/index.html?coastal-preview=1`. That opt-in affects only the 6–8 CE Roman
-map fill when the served release is v0.8.1 and its land hash matches the pinned
-fabric. The release geometry record, evidence panel, default map, source data
-and immutable artifacts remain unchanged. A visible notice identifies the
-display experiment; failed or mismatched preview loading falls back to released
-geometry.
+The initial evidence-app integration exposed the candidate at
+`web/index.html?coastal-preview=1` while leaving the default map unchanged.
+That step established the 6–8 CE geometry-ID guard and verified the released
+9–13 CE record still appeared at 9 CE. It preceded the temporary live decision
+below.
 
 The earlier 2% limit still is not met. The sponsor's local-candidate authorization
 does not promote the GitHub variant or the 25 km rule to released/canonical
 status. Broader dates, other regions, historical island/border review and the
 normal release gate remain open.
+
+### Temporary live presentation decision
+
+The sponsor subsequently authorized shipping the **best temporary map fix live**
+while reserving a fuller solution for later work. The web client now selects the
+constrained 6–8 CE Roman fill by default only when the API reports v0.8.1 and
+the pinned land hash. A visible notice identifies the 2.576% presentation
+addition and links to `?coastal-fit=off&year=6` for the released geometry.
+Dates outside 6–8 CE, missing assets, and mismatched release/land metadata use
+the released geometry. No API, canonical source, or immutable release asset is
+changed. This is a scoped temporary exception to the prior 2% presentation
+limit, not a new general coastal-fitting policy or a historical review decision.
 
 Rebuild:
 
