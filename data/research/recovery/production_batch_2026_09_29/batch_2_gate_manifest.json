@@ -1,0 +1,61 @@
+{
+  "record_kind": "population_batch_gate_manifest",
+  "version": 1,
+  "issue": 360,
+  "pr": 367,
+  "batch": 2,
+  "as_of": "2026-09-29",
+  "status": "THREE_ACCEPTED_TWO_HELD_PENDING_EXACT_HEAD_CI",
+  "targets": [
+    {
+      "target": "Old Kingdom Egypt / Sneferu",
+      "disposition": "HOLD_SLAVERY_CATEGORY_REVIEW_CAPTIVE_TAKING_EVIDENCED",
+      "source_check": "UCLA Encyclopedia of Egyptology specialist synthesis states Old Kingdom foreign prisoners of war (sqrw-anx) and evidence from Sneferu for expeditions abducting Nubians or Libyans for labor or specialized military service.",
+      "needed": "Preserve prisoners-of-war/captive-taking terminology and decide whether a bounded captive_taking_incorporation claim is warranted; do not automatically classify sqrw-anx as slavery_enslavement or infer Old Kingdom-wide prevalence."
+    },
+    {
+      "target": "Asante",
+      "disposition": "ACCEPTED_STAGING",
+      "case_key": "production-batch-2026-09-29/asante/slavery-1807-1895-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/05_asante_1807_1895_slavery.json"
+    },
+    {
+      "target": "Angkorian Khmer / Angkor",
+      "disposition": "ACCEPTED_STAGING_BOUNDED_SITE_LEVEL",
+      "case_key": "production-batch-2026-09-29/angkor/household-slavery-1296-1297-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/04_angkor_1296_1297_household_slavery.json"
+    },
+    {
+      "target": "Inca / Tawantinsuyu",
+      "disposition": "HOLD_SLAVERY_CATEGORY_DISPUTED_SERVILE_DEPENDENCY",
+      "source_check": "Noack and Nowack (2023) conclude that yanacona show strong asymmetric dependency but cannot be treated as slaves under European historiographical models; status positions varied and categories overlapped.",
+      "needed": "Do not admit a slavery_enslavement claim. Consider a separately reviewed other_servile_dependency or researched-inconclusive slavery target only if it adds value; no Machu Picchu locus without claim-specific evidence."
+    },
+    {
+      "target": "Sitka",
+      "disposition": "ACCEPTED_STAGING_BOUNDED_LOCAL_CASE",
+      "case_key": "production-batch-2026-09-29/sitka/sah-quah-slavery-1886-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/06_sitka_sah_quah_1886_slavery.json"
+    }
+  ],
+  "accepted_case_keys": [
+    "production-batch-2026-09-29/asante/slavery-1807-1895-v1",
+    "production-batch-2026-09-29/angkor/household-slavery-1296-1297-v1",
+    "production-batch-2026-09-29/sitka/sah-quah-slavery-1886-v1"
+  ],
+  "held_targets": [
+    "Old Kingdom Egypt / Sneferu",
+    "Inca / Tawantinsuyu"
+  ],
+  "expected_new_source_versions_for_batch2_accepted": 8,
+  "expected_new_claims_for_batch2_accepted": 3,
+  "expected_resolved_navigation_points": 3,
+  "expected_release_membership_changes": 0,
+  "rules": [
+    "No P-levels",
+    "Modern proxy points are navigation/evidence-locus context only",
+    "Captivity is not automatically slavery",
+    "Yanacona is not automatically translated to slavery",
+    "Release/publication remains separate"
+  ]
+}

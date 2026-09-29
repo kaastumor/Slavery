@@ -1,0 +1,117 @@
+{
+  "case_key": "production-batch-2026-09-29/sitka/sah-quah-slavery-1886-v1",
+  "spatial_entity": {
+    "canonical_name": "Sitka",
+    "display_name": "Sitka",
+    "entity_type_code": "city",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Local indexing identity for the 1886 Sah Quah proceeding. The attached current Census point is navigation only; it is not the historical court location, Tlingit territory, or a regional slavery extent."
+  },
+  "claim": {
+    "from_year": 1886,
+    "to_year": 1886,
+    "date_text_original": "Habeas corpus proceeding in Sitka, April-May 1886; decision 8 May 1886",
+    "temporal_precision": "bounded_legal_case_event",
+    "temporal_certainty": "high_for_case_date",
+    "spatial_precision": "Sitka local/court context; no Tlingit-wide or Alaska-wide practice inference",
+    "summary": "The 1886 Sah Quah habeas corpus proceeding at Sitka documented a man whom the respondent claimed to hold as a slave and chattel. The published decision records Sah Quah's testimony that he had been captured and sold as a boy and that others appropriated his labor, and it ordered his release. The atlas records a bounded local slavery-status/practice claim for the Sitka case without adopting the court's sweeping descriptions as a prevalence claim for Tlingit society.",
+    "confidence": "high_for_bounded_case_moderate_for_social_relationship_interpretation",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "The Federal Reporter decision is direct legal evidence for the case and release order, but Sidney Harring's specialist legal history shows the litigation was a deliberately framed assimilationist test case and that Sah Quah's testimony complicated the asserted owner-slave relationship. Preserve that qualification; do not generalize one case into regional prevalence or universal Tlingit practice.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_bounded_local_case",
+      "notes": "Bounded case-level classification only. No P-level, population share, continuous interval, Tlingit-wide inference, Alaska-wide inference, or regional practice polygon."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "In re Sah Quah, 31 F. 327",
+        "author_or_institution": "United States District Court, District of Alaska; Federal Reporter",
+        "source_type": "published_court_decision",
+        "source_classification": "primary_source_edition",
+        "language_code": "en",
+        "geographic_scope": "District of Alaska; Sitka proceeding",
+        "temporal_scope": "Decision 8 May 1886",
+        "independence_notes": "Published legal record of the habeas corpus case. Allegations, respondent return, testimony and judicial findings are different parts of one case record and must not be counted as independent attestations.",
+        "reliability_limitations": "The judge's broad characterizations of Alaska Native/Tlingit society reflect nineteenth-century legal and assimilationist assumptions. Use the record for the bounded case, not as an uncritical ethnographic prevalence source."
+      },
+      "version": {
+        "version_label": "Federal Reporter vol. 31, pp. 327-331; digitized reporter text",
+        "publication_or_creation_date_text": "8 May 1886 decision",
+        "publication_year": 1886,
+        "url_or_identifier": "https://law.resource.org/pub/us/case/reporter/F/0031/0031.f.0327.html",
+        "accessed_at": "2026-09-29T16:50:00Z",
+        "license_status": "public_domain",
+        "redistribution_status": "public_text"
+      },
+      "evidence_role": "bounded legal-case evidence for claimed slave status, prior capture/sale, labor appropriation and release",
+      "independence_group": "sah-quah-1886-court-record",
+      "directness": "published court decision",
+      "direction": "supports",
+      "locator": "31 F. 327-331, especially pp. 327-328 (petition and respondent return) and p. 331 (capture/sale testimony and release order).",
+      "notes": "Do not treat the court's general ethnographic assertions as a second evidence family."
+    },
+    {
+      "source": {
+        "title": "The Incorporation of Alaskan Natives Under American Law: United States and Tlingit Sovereignty, 1867-1900",
+        "author_or_institution": "Sidney L. Harring",
+        "source_type": "peer_reviewed_law_review_article",
+        "source_classification": "secondary",
+        "language_code": "en",
+        "geographic_scope": "Alaska, with detailed Sitka/Tlingit legal history",
+        "temporal_scope": "1867-1900",
+        "independence_notes": "Specialist legal-historical interpretation of the case and archival transcript. It is not an independent occurrence witness to Sah Quah's alleged status.",
+        "reliability_limitations": "Used to qualify the adversarial quality and assimilationist framing of the reported case, not to negate the existence of the proceeding or create a different prevalence estimate."
+      },
+      "version": {
+        "version_label": "Arizona Law Review 31 (1989), pp. 279-327",
+        "publication_year": 1989,
+        "url_or_identifier": "https://journals.librarypublishing.arizona.edu/arizlrev/article/8427/galley/7807/download/",
+        "accessed_at": "2026-09-29T16:50:00Z"
+      },
+      "evidence_role": "specialist source criticism and social/legal qualification",
+      "independence_group": "harring-alaska-tlingit-1989",
+      "directness": "specialist legal history using court and archival records",
+      "direction": "qualifies",
+      "locator": "pp. 311-313, discussion of In re Sah Quah, the test-case framing, hearing transcript and ambiguity in Sah Quah's description of the alleged owner relationship.",
+      "notes": "Preserves the distinction between the court's legal classification and the more complicated relationship described in the hearing record."
+    }
+  ],
+  "geometry": {
+    "from_year": 1886,
+    "to_year": 1886,
+    "accuracy_status": "modern_proxy",
+    "resolution_method": "Current U.S. Census TIGERweb internal point for Sitka city and borough is used only as a navigation proxy for the named local case context. It is not the 1886 courtroom, historic settlement boundary, Tlingit territory, or practice inference extent.",
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        -135.3673965,
+        57.1932044
+      ]
+    },
+    "source": {
+      "title": "U.S. Census Bureau TIGERweb — Alaska Incorporated Places",
+      "author_or_institution": "U.S. Census Bureau, Geography Division",
+      "source_type": "official_modern_geographic_registry",
+      "source_classification": "methodology",
+      "geographic_scope": "Sitka city and borough, Alaska",
+      "temporal_scope": "Current/ACS26 geographic file"
+    },
+    "version": {
+      "version_label": "Current/ACS26, data as of January 1, 2026; Sitka GEOID 0270540 / PLACE 70540; internal point +57.1932044 -135.3673965",
+      "url_or_identifier": "https://tigerweb.geo.census.gov/tigerwebmain/Files/acs26/tigerweb_acs26_incplace_ak.html",
+      "accessed_at": "2026-09-29T16:50:00Z",
+      "notes": "Current administrative geography; used as explicit modern proxy only."
+    },
+    "source_native_id": "GEOID 0270540 / PLACE 70540",
+    "review_status": "reviewed",
+    "notes": "Navigation point only. Do not render as historical practice extent."
+  }
+}

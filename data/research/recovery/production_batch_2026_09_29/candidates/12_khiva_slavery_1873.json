@@ -1,0 +1,86 @@
+{
+  "case_key": "production-batch-2026-09-29/khiva/slavery-1873-v1",
+  "spatial_entity": {
+    "canonical_name": "Khiva",
+    "display_name": "Khiva",
+    "entity_type_code": "city",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "City-level bounded end-of-regime observation. Itchan Kala point is modern navigation/context only and not the historical slave-market location or Khanate extent."
+  },
+  "claim": {
+    "from_year": 1873,
+    "to_year": 1873,
+    "date_text_original": "Russian conquest and emancipation, 1873",
+    "temporal_precision": "bounded_year",
+    "temporal_certainty": "high_for_emancipation_year",
+    "spatial_precision": "Khiva city/slave-market context; wider Khanate distribution not encoded",
+    "summary": "Specialist reference synthesis records enslaved Persian and Russian captives in Khiva, employed in domestic and agricultural labour, and states that remaining enslaved people were liberated following the Russian conquest in 1873. The atlas records a bounded 1873 slavery context immediately around that emancipation transition without treating earlier estimates as prevalence scores.",
+    "confidence": "high_for_presence_and_1873_transition",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Earlier slave-number estimates and capture flows are contextual, not converted into prevalence. This bounded claim does not imply a uniform Khanate-wide spatial extent.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_bounded_transition",
+      "notes": "Positive bounded city/context classification at the 1873 transition. Capture networks and state/legal abolition are separate dimensions. No P-level."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Khiva",
+        "author_or_institution": "Encyclopaedia Iranica",
+        "source_type": "specialist_reference_article",
+        "source_classification": "secondary_specialist_synthesis",
+        "language_code": "en",
+        "geographic_scope": "Khiva and Khanate of Khiva",
+        "temporal_scope": "early modern through Russian conquest",
+        "independence_notes": "Specialist reference synthesis drawing on Persian, Khorezmian and Russian historical sources; not an independent occurrence count for each cited estimate.",
+        "reliability_limitations": "Numeric slave estimates vary by source and must not be treated as prevalence. The article spans city and khanate contexts."
+      },
+      "version": {
+        "version_label": "Encyclopaedia Iranica online article 'Khiva', accessed 2026-09-29",
+        "url_or_identifier": "https://www.iranicaonline.org/articles/khiva/",
+        "accessed_at": "2026-09-29T17:33:00Z"
+      },
+      "evidence_role": "specialist synthesis for slavery presence, labour uses and 1873 emancipation transition",
+      "independence_group": "iranica-khiva-reference",
+      "directness": "specialist reference synthesis",
+      "direction": "supports",
+      "locator": "Section discussing slaves captured/sold in Khiva, domestic/agricultural employment, 1740 emancipation, replenishment, and liberation after the Russian conquest in 1873."
+    }
+  ],
+  "geometry": {
+    "from_year": 1873,
+    "to_year": 1873,
+    "accuracy_status": "modern_proxy",
+    "resolution_method": "UNESCO Itchan Kala coordinate used only as a navigation/context point for Khiva. It is not the historical slave market, a household/worksite locus, or Khanate practice extent.",
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        60.36025,
+        41.37809
+      ]
+    },
+    "source_native_id": "UNESCO WHC 543",
+    "review_status": "reviewed",
+    "source": {
+      "title": "Itchan Kala — geographical data",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "source_type": "official_heritage_geodata",
+      "source_classification": "geometry_context",
+      "geographic_scope": "Khiva, Uzbekistan",
+      "temporal_scope": "modern heritage property coordinate"
+    },
+    "version": {
+      "version_label": "UNESCO WHC 543 maps/geographical data, accessed 2026-09-29",
+      "url_or_identifier": "https://whc.unesco.org/en/list/543/maps/",
+      "accessed_at": "2026-09-29T17:33:00Z"
+    },
+    "notes": "Navigation proxy only; no historical market or polity-boundary inference."
+  }
+}

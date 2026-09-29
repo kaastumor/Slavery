@@ -1,0 +1,53 @@
+{
+  "record_kind": "deployment_population_preflight",
+  "version": 1,
+  "issue": 360,
+  "input_repository_commit": "d0d16ac2b1580bfb4907446a77ee7c11a0a81d25",
+  "publication_state": "preparation_only_not_release_ready",
+  "ready_for_deployment": false,
+  "observed_at": "2026-09-29T00:19:14.861838+00:00",
+  "claim_census_at": "2026-09-29T00:16:50.946387+00:00",
+  "observation_method": "Connected Supabase execute_sql; explicit BEGIN READ ONLY / COMMIT",
+  "live_schema_head": "0034_release_manifest_immutability.sql",
+  "live_serving_materialization": "v0.8.1-public-mvp-v1",
+  "canonical_release": "v0.8.1",
+  "database_writes": 0,
+  "map_candidate": {"pr": 366, "head": "ecbc0e19aa4ac5d254e261d85f708879b8b9a983", "sponsor_acceptance": "ACCEPTED_WITH_KNOWN_LIMITATIONS", "remaining_visual_work": "DEFERRED", "deployment_verified": false},
+  "existing_claims_contract": {
+    "selection": "research_case_ingest JOIN territorial_practice_claim; exclude explicit v0.8.1 release_claim membership",
+    "observed_count": 11,
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "practice_level": null,
+    "overlapping_target_geometry_count_per_claim": 0,
+    "action": "REUSE_EXISTING_CLAIM_DO_NOT_REINSERT",
+    "digest_limit": "Recorded content SHA-256 is copied from the live ingest ledger, not an independent byte-readback verification.",
+    "geometry_limit": "Direct target geometry was checked; separate evidence-locus relations were not evaluated."
+  },
+  "existing_claim_columns": ["name", "claim_id", "from_year", "to_year", "packet_filename", "recorded_ingest_content_sha256", "missing_locator_count"],
+  "existing_claims": [
+    ["Paraguay", "ee6bbf9e-4c51-40ca-a4c0-194087b65f11", 2005, 2005, "01_paraguay_debt_bondage_v2.json", "60188bd8415bd350aa842aa3fe69d669180e4810b105f1da318307ed17571cde", 0],
+    ["Bolivia", "383ef0e4-1ee1-48ae-8ca9-261622b95e1a", 2004, 2004, "02_bolivia_debt_bondage_v2.json", "f14f3253791f8b2ddb13db8d3e210fd301eb3b85ee21f9dd7437100b46b704db", 0],
+    ["India", "1d707382-b0b8-479d-81e3-efcea01c4ab0", 2003, 2005, "03_india_bonded_labour_v2.json", "85588cbf6b3c895b89171b774e102a5f3ad32516cde422c10106cb1aa16bd10b", 2],
+    ["Mauritania", "7f573935-45c9-4746-ac6a-6afe47bafbdd", 2009, 2009, "04_mauritania_slavery_v2.json", "bd29fcf524a597f281ba5818489c1e4e2f7ac7003a7c035e695e5c2fe48e03a2", 0],
+    ["Myanmar", "365e6258-f03f-4677-b775-cd5a9f18414a", 1998, 1998, "05_myanmar_forced_labour_v2.json", "82659c6fbdafb1489f7d4b7dce910b47d2d53fc114774a9ca5223f2739e93fd2", 0],
+    ["Nepal", "aba2e1e2-5d67-41b6-8bbe-0f9c83cbbbc3", 1998, 2001, "06_nepal_kamaiya_v2.json", "dce5fe6f0f75d31bcf6eaecd087c2ad56edd0305f245699bdd33b81b23919e16", 2],
+    ["Pakistan", "47175a77-76bb-4a92-ac3c-cb22b7a8131f", 1990, 1999, "07_pakistan_bonded_labour_v2.json", "847972aeef0cbdd44ca42679f9fa7deb705c048d3fe7c6bd4dbd89456a6f94a0", 1],
+    ["Peru", "c66f6ef1-374a-4370-98c3-7d895bf92bfa", 2005, 2005, "08_peru_amazon_debt_bondage_v2.json", "6c30592b35a88738414b905c1376dc16d2b57b310e11c6258d216c99b9f89229", 1],
+    ["Uzbekistan", "2b456d9f-be09-4844-8899-286bd13464cb", 2019, 2019, "09_uzbekistan_cotton_forced_labour_v2.json", "1efd71038f7049947a70d9a462acb68de33d6073557d3353e1bd7146219669ab", 1],
+    ["Brazil", "e0ed6573-235c-423d-befb-7b75630b5c35", 2003, 2005, "10_brazil_rural_debt_bondage_v2.json", "6c8b54296d4b3faf83af3723b8bb1b4d9b4aa2d8886cd5f489f92fa509925ba3", 1],
+    ["Nazi Germany", "51063cdb-f485-47c9-9056-e374476632dd", 1942, 1944, "nazi_germany_state_forced_labour_v2.json", "6e65efb4561e9b9f8a9dc0021c4b0281a1ad87bb7317993180a4a6236117f7fd", 0]
+  ],
+  "packet_path_rule": {"default_prefix": "data/research/recovery/overnight_2026_09_27/", "default_recorded_git_revision": "af6a6ec57e55c3032b5ac31417c2cca58766cf33", "Nazi Germany": {"prefix": "data/research/recovery/post_overnight_2026_09_27/", "recorded_git_revision": "3a857bc8f6724fd2e507c43a752c14bfb46c4bf2"}},
+  "new_subject_batches": [
+    ["Meroitic Kush / Hamadab", "Goryeo", "Dahomey", "Mexica", "Bagan / Pagan"],
+    ["Old Kingdom Egypt", "Asante", "Angkorian Khmer", "Inca", "Sitka"],
+    ["Mali", "Taghaza", "Chosŏn", "Ngāpuhi", "Bukhara"],
+    ["Ayutthaya", "Imerina / Merina", "Northern Haudenosaunee", "Zanzibar / Unguja"],
+    ["Istanbul", "Kongo", "Khiva / Khwarazm", "Tonga"]
+  ],
+  "new_subject_status": {"name_matches_under_checked_aliases": 0, "identity_resolution_complete": false, "complete_packets_recovered_in_this_pass": false, "expected_insert_count": null, "ready_for_deployment": false},
+  "summary": {"new_subject_targets": 23, "existing_tracked_unreleased_claims": 11, "existing_claims_with_blank_locator_fields": 6, "new_claims_admitted": 0, "release_ready_claims_established_by_this_preflight": 0},
+  "limits": ["A name-match miss is not exhaustive identity resolution.", "A reviewed row is not automatically release-ready.", "Blank locator fields require source review, not automatic historical rejection.", "No claim, geometry, release or serving-channel write was performed.", "Complete new-subject packets were not recovered by the Library searches or limited Drive reads in this pass."],
+  "remaining_release_gates": ["Exact source/packet recovery and review", "Defensible geometry role and temporal fit", "D-121 successor provenance where required", "Dependency closure, dry-run and idempotent replay", "Immutable selection, serving cutover and rollback"]
+}

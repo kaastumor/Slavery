@@ -1,0 +1,72 @@
+# Population batch — executed checkpoint, 29 September 2026
+
+Map refinement stays deferred. This checkpoint advances population preparation;
+it does not declare the complete batch deployable or publish it.
+
+## Completed
+
+The existing foundation workflow ran the actual eleven-packet import/replay.
+`replay_result_20260929.json` pins the population head, tested merge/base and run.
+All eleven exact committed packets matched the ingestion ledger's canonical-JSON
+digests. Raw-file hashes are different serialization identities, not evidence of
+corruption. The replay inserted eleven claims and seventeen evidence links into
+the disposable database, repeated as eleven no-ops, rejected changed same-key
+content, and rolled back to the original tracked table counts.
+
+`source_review_amendments.json` supplies four source-checked locator proposals
+for three existing claims. It includes exact input hashes and source URLs, not
+changes to the already-ingested original packets. It records the observed
+source-dependence, dating and statistical-scope qualifications rather than
+silently strengthening the claims. Complete retrieved passages were used where
+specified; no archival byte checksums or independent review are claimed.
+
+## Remaining work to deploy
+
+1. Finish the four remaining blank locator fields in Nepal, Pakistan and Peru,
+   and replace the thematic second Brazil reference with an exact passage.
+2. Reconcile the proposed claim-specific amendments, asserted time applicability,
+   and spatial roles with live IDs and the existing importer/annotation contract.
+3. Resolve defensible map representations without treating national indexing
+   entities as nationwide practice surfaces. Build and inspect the resulting
+   population preview; imported records alone are not mapped coverage.
+4. Recover/research and review the twenty-three prospective historical subjects
+   separately from these eleven existing claims. Missing old packets must not be
+   reconstructed from a title and represented as authentic saved output.
+5. Complete the governed successor provenance, dependency, release and serving
+   gates. No unrestricted draft tables or old immutable release bytes change.
+
+No new workflow, schedule, infrastructure or production write was added. The
+source amendments are pending acceptance, not a request to reopen cartography.
+
+
+## Deployment-ingest readiness checkpoint
+
+The 23-subject production register is now fully dispositioned: 12 accepted staging candidates and 11 explicit HOLDs. Exact-head CI run 36606730574 passes the final batch-4/5 disposable insert/no-op checks. Combined expected production delta for the accepted new subset is 12 claims (1 legal event, 11 territorial practice), 12 spatial identities, 28 new source versions after observed reuse, 10 geometry rows of which 9 are reviewed modern-proxy points, and zero release membership or publication changes.
+
+This reaches the explicit production-write gate. It does **not** authorize the write, immutable release selection, or serving-channel movement.
+
+
+## Atomic production-ingest packaging checkpoint
+
+The accepted 12-case subset now has a single-transaction ingestion driver,
+`tools/ingest_population_subset.py`. Its default mode is read-only planning.
+CI may use only the explicit disposable mode, which inserts all 12 candidates,
+verifies exact table deltas and unchanged replay/no-op behavior, then rolls back.
+
+The production code path is fail-closed behind a separate environment gate,
+literal issue-scoped authorization token, and expected main/PR-head identities.
+It still does not create release membership, publish claims, or move a serving
+channel. `production_ingest_plan.json` records the contract.
+
+`post_ingest_release_candidate_skeleton.json` deliberately contains no invented
+production IDs. It fixes the successor-release information that can be known
+before ingestion and lists the post-ingest authority, QC, D-121, changelog,
+unresolved-issue, map-preview, rollback and cutover inputs that must be supplied
+before a successor release can be selected.
+
+
+## Production ingest committed — sponsor-authorized
+
+The sponsor explicitly authorized the production write. The 12 accepted cases were inserted atomically into live PostgreSQL/PostGIS from the reviewed #367 authority. Exact tracked-table deltas matched the rehearsal: +12 spatial entities, +12 claims, +28 source/source-version rows after the expected Angkor reuse, +20 claim-source links, +10 geometry rows, and the expected Goryeo research-target package. All 12 claims remain unpublished, all territorial candidates retain NULL P-level, nine geometry rows are non-null modern-proxy navigation/context points, and release membership plus serving-channel deltas are zero.
+
+Generated production IDs and the fresh authority snapshot are frozen in `production_ingest_receipt.json`. The populated post-ingest successor skeleton remains a preparation artifact only. Existing v0.8.2 D-121 provenance HOLD and the separate public cutover gate remain in force.

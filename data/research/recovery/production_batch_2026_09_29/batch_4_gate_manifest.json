@@ -1,0 +1,72 @@
+{
+  "record_kind": "population_batch_gate_manifest",
+  "version": 1,
+  "issue": 360,
+  "pr": 367,
+  "batch": 4,
+  "as_of": "2026-09-29",
+  "status": "TWO_ACCEPTED_TWO_HELD_EXACT_HEAD_CI_PASS",
+  "targets": [
+    {
+      "target": "Ayutthaya",
+      "disposition": "HOLD_CAPTIVE_SLAVERY_CORVEE_CATEGORY_AND_EXACT_SOURCE",
+      "source_check": "Comparative specialist literature identifies warfare, slave capture and large-scale resettlement in Ayutthaya alongside a distinct corvée system.",
+      "needed": "Bind an exact Ayutthaya-specific specialist passage and source-native evidence before deciding among captive-taking, slavery and corvée. Do not merge those categories or infer a polity-wide practice polygon."
+    },
+    {
+      "target": "Imerina / Merina",
+      "disposition": "ACCEPTED_STAGING",
+      "case_key": "production-batch-2026-09-29/imerina/slavery-1790-1861-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/09_imerina_slavery_1790_1861.json",
+      "geometry_status": "modern_proxy_navigation_context_only",
+      "content_sha256": "55e38197272c300482df37fb84e16c5d31f18c0f6cf37b866d1d507471a6a1de"
+    },
+    {
+      "target": "Northern Haudenosaunee",
+      "disposition": "HOLD_SPECIFIC_IDENTITY_CAPTIVITY_AND_SLAVERY_CLASSIFICATION",
+      "source_check": "General North American scholarship confirms that capture, adoption and enslavement coexisted, but the reviewed material did not establish a sufficiently bounded Northern Haudenosaunee proposition.",
+      "needed": "Recover Haudenosaunee-specific specialist evidence fixing nation/confederacy, period, captive disposition and slavery-versus-adoption classification. No generic North American substitution."
+    },
+    {
+      "target": "Zanzibar / Unguja",
+      "disposition": "ACCEPTED_STAGING",
+      "case_key": "production-batch-2026-09-29/zanzibar/slave-based-plantation-production-1859-1871-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/10_zanzibar_slave_based_production_1859_1871.json",
+      "geometry_status": "modern_proxy_navigation_context_only",
+      "content_sha256": "5cd2b5188c1440431134feb43f3acc889f18379f4afede8cf0e4995624946f86"
+    }
+  ],
+  "accepted_case_keys": [
+    "production-batch-2026-09-29/imerina/slavery-1790-1861-v1",
+    "production-batch-2026-09-29/zanzibar/slave-based-plantation-production-1859-1871-v1"
+  ],
+  "held_targets": [
+    "Ayutthaya",
+    "Northern Haudenosaunee"
+  ],
+  "live_preflight": {
+    "observed_at": "2026-09-29T17:33:31.360322+00:00",
+    "spatial_entity_hits": 0,
+    "research_case_ingest_hits": 0,
+    "exact_source_version_url_hits": 0,
+    "release_claim_hits": 0,
+    "note": "The shared preflight also checked Kongo/Khiva batch-5 candidates; this manifest preserves the original 5/5/5/4/4 planning grouping."
+  },
+  "expected_new_claims_for_batch4_accepted": 2,
+  "expected_new_source_versions_for_batch4_accepted": 4,
+  "expected_resolved_navigation_points": 2,
+  "expected_release_membership_changes": 0,
+  "rules": [
+    "No P-levels",
+    "Fanompoana remains distinct from slavery",
+    "Ayutthaya corvée/captive-taking/slavery remain distinct",
+    "Generic Native American evidence cannot substitute for Haudenosaunee-specific evidence",
+    "Navigation points are not practice extents",
+    "Release/publication remains separate"
+  ],
+  "exact_head_ci": {
+    "run_id": 36606730574,
+    "head_sha": "0cd33bf80c6e3f90022fccc8b3130e38607e8eb6",
+    "result": "PASS"
+  }
+}

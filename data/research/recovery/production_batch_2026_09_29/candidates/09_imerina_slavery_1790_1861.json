@@ -1,0 +1,87 @@
+{
+  "case_key": "production-batch-2026-09-29/imerina/slavery-1790-1861-v1",
+  "spatial_entity": {
+    "canonical_name": "Imerina",
+    "display_name": "Imerina (Merina kingdom)",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Historical polity identity for a specialist-synthesis claim. The attached Ambohimanga point is navigation/context only and is not the practice extent."
+  },
+  "claim": {
+    "from_year": 1790,
+    "to_year": 1861,
+    "date_text_original": "Imerina forced-labour structure, 1790–1861",
+    "temporal_precision": "broad_specialist_synthesis_interval",
+    "temporal_certainty": "moderate_high",
+    "spatial_precision": "Imerina polity-level specialist synthesis; locality distribution not uniform",
+    "summary": "Specialist synthesis for Imerina between 1790 and 1861 confirms slavery as part of the labour system while rejecting the stronger claim that the imperial economy became wholly dependent on slave labour. It distinguishes enslaved labour from fanompoana compulsory service and emphasizes changing social distribution of slaveholding.",
+    "confidence": "high_for_presence_qualified_for_structure_and_prevalence",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Do not collapse fanompoana into slavery, infer universal slaveholding, or convert the specialist debate over economic structure into an intensity score.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_specialist_synthesis",
+      "notes": "Positive polity-level presence/classification with explicit structural and prevalence qualification. Fanompoana remains analytically separate. No P-level."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Slavery and Fanompoana: the Structure of Forced Labour in Imerina (Madagascar), 1790–1861",
+        "author_or_institution": "Gwyn Campbell",
+        "source_type": "peer_reviewed_journal_article",
+        "source_classification": "secondary_specialist_synthesis",
+        "language_code": "en",
+        "geographic_scope": "Imerina, Madagascar",
+        "temporal_scope": "1790–1861",
+        "independence_notes": "Specialist synthesis. Its discussion of prior scholarship is not counted as multiple independent attestations.",
+        "reliability_limitations": "Explicitly disputes claims of total economic dependence on slave labour and stresses fanompoana as a distinct compulsory-labour institution."
+      },
+      "version": {
+        "version_label": "Journal of African History 29(3), 1988, pp. 463–486; Cambridge online record",
+        "publication_year": 1988,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/slavery-and-fanompoana-the-structure-of-forced-labour-in-imerina-madagascar-179018611/87DF59AEF981939AF860D864DA5D3F3A",
+        "accessed_at": "2026-09-29T17:33:00Z"
+      },
+      "evidence_role": "specialist classification and structural qualification",
+      "independence_group": "campbell-imerina-forced-labour-1988",
+      "directness": "specialist historical synthesis",
+      "direction": "supports",
+      "locator": "Article extract and argument for Imerina 1790–1861; especially distinction between slavery and fanompoana and critique of total slave-labour dependence."
+    }
+  ],
+  "geometry": {
+    "from_year": 1790,
+    "to_year": 1861,
+    "accuracy_status": "modern_proxy",
+    "resolution_method": "UNESCO Royal Hill of Ambohimanga coordinate used only as a reviewed navigation/context point for Imerina. It is not a historical polity boundary, locality-wide practice extent, or claim of slavery at every point in Imerina.",
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        47.56278,
+        -18.75917
+      ]
+    },
+    "source_native_id": "UNESCO WHC 950",
+    "review_status": "reviewed",
+    "source": {
+      "title": "Royal Hill of Ambohimanga — geographical data",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "source_type": "official_heritage_geodata",
+      "source_classification": "geometry_context",
+      "geographic_scope": "Ambohimanga, Madagascar",
+      "temporal_scope": "modern heritage property coordinate"
+    },
+    "version": {
+      "version_label": "UNESCO WHC 950 maps/geographical data, accessed 2026-09-29",
+      "url_or_identifier": "https://whc.unesco.org/en/list/950/maps/",
+      "accessed_at": "2026-09-29T17:33:00Z"
+    },
+    "notes": "Navigation proxy only; no historical practice-extent inference."
+  }
+}

@@ -1,238 +1,57 @@
 # Historical Slavery Atlas — Backlog
 
-**Updated:** 2026-09-28
-**Role:** canonical execution queue only; assumptions/risks/value evidence live in `docs/25_PROJECT_HEALTH.md`  
-**Canonical research authority:** PostgreSQL/PostGIS, explicit governed membership under D-109  
-**Canonical historical data release:** `v0.8.1`  
-**Current public serving adapter:** `v0.8.1-public-mvp-v1` → canonical source `v0.8.1`  
-**Public Atlas:** `https://kaastumor.github.io/Slavery/`  
-**Preserved R1 technical candidate:** `r1-candidate.html` (non-canonical historical project artifact)
+**Updated:** 2026-09-29
+**Role:** canonical execution queue only; methodology, risks and value evidence remain in the existing project documents.
+**Canonical research authority:** governed PostgreSQL/PostGIS under D-109.
+**Canonical historical release:** `v0.8.1`, unchanged.
+**Observed live serving adapter:** `v0.8.1-public-mvp-v1`, unchanged at 2026-09-29 00:16 UTC.
+**Observed live schema head:** `0034`.
 
-This file answers **what is justified to work on next**.
+# CURRENT MODE — EXECUTION / CONSOLIDATION — DEPLOYMENT-READY POPULATION (#360)
 
----
+**WIP = 1: #360 — prepare the major evidence-backed production population batch.**
 
-# CURRENT MODE — EXECUTION / CONSOLIDATION — ATLAS EXPANSION 01 (#332)
+The sponsor explicitly accepts the current map candidate as good enough to proceed and defers remaining visual defects to a later Astra review. This supersedes the previous ordering that required further map refinement before batch preparation.
 
-**Gate 0→5 canonicalization programme:** **COMPLETE**  
-**Canonical historical data release:** `v0.8.1`
-**Live schema head:** `0034`  
-**Public serving adapter:** `v0.8.1-public-mvp-v1`  
-**Independent historical review:** 0  
-**Open delivery WIP:** **#332 — balanced claim intake + defensible mapped loci**
+- #366 head `ecbc0e19aa4ac5d254e261d85f708879b8b9a983`: sponsor acceptance **ACCEPTED WITH KNOWN LIMITATIONS**; moved out of draft. Acceptance receipt: https://github.com/kaastumor/Slavery/pull/366#issuecomment-5881152185.
+- #365: remaining cartographic defects are **deferred**, not declared fixed. Do not resume snapping, smoothing, context-layer expansion or source-substitution experiments under this batch.
+- Technical merge/deployment checks remain distinct from visual acceptance. The generated-head workflows reported `action_required`; no passing check, merge, public cutover or exact screenshot/deployment identity is implied by sponsor acceptance.
+- #332 / #363 / D-121: existing source, claim and successor-authority prerequisites remain dependencies of publication, not reasons to postpone read-only batch preparation. Do not clear or close them by this priority change.
 
-## Sponsor-authorized D-096 reopening trigger
+## Current population preparation checkpoint
 
-On 2026-09-26 the sponsor explicitly authorized historical intake to begin filling the
-Atlas in both claims and mapped coverage. This activates D-096 mode
-**execution / consolidation**. It does not authorize automatic publication, P-level
-inference, indiscriminate geometry, or source-density-driven case selection.
+Read `data/research/recovery/production_batch_2026_09_29/preflight.json` and issue #360.
 
-The active WIP has two inseparable safeguards:
+A connected, explicitly read-only Supabase census succeeded on 2026-09-29. The prior Management-API `database_read` failure must not be generalized to this interactive connector. This does not attest scheduled-worker or Actions access, full authority export or write permissions.
 
-1. **Claim lane:** admit reviewed evidence packages only at their defensible temporal,
-   spatial and categorical scope. Start with already-reviewed weak-region research
-   before returning to source-dense Atlantic/Mediterranean defaults.
-2. **Geometry lane:** resolve geometry independently. Prefer exact/authoritative site
-   loci and genuinely defensible historical polygons; unresolved stays unresolved.
-   Geometry must never strengthen the historical claim.
+The census identified 11 tracked current-method territorial claims outside v0.8.1 membership. All are reviewed/unpublished with NULL practice level. Reuse their existing claim IDs rather than reinserting them. All 11 currently lack non-null, time-overlapping geometry directly attached to their target spatial entity. Separate evidence-locus relations were not tested by that count.
 
-Current checkpoint: canonical **v0.8.1** and public serving materialization
-**v0.8.1-public-mvp-v1** are live. The release contains 75 canonical claims / 50
-spatial entities / 46 reviewed resolved historical geometries; the public territorial
-adapter displays 53 territorial-practice claims across 48 places.
+The 23 proposed new historical subjects have no canonical-name/display-name match under the explicitly checked aliases. This is not exhaustive identity resolution and does not establish that their complete packets are production-ready.
 
-D-116 now requires every public polygon to come from the reviewed render layer rather
-than raw research geometry. The v0.8.1 corpus alignment audit covers all 46 release
-geometries; all 39 polygons use the canonical Natural Earth land fabric and pass the
-outside-land tolerance. D-117 replaces only the Roman 14–22 CE slice with the reviewed
-AWMC-derived specialist geometry.
+## Execution order and deliverables
 
-Active expansion continues through #332 and the hourly evidence/geometry lanes.
+1. Recover the complete first mixed five-subject packet set: Meroitic Kush/Hamadab, Goryeo, Dahomey, Mexica and Bagan/Pagan. Revalidate source editions, locators, dependencies, category and temporal/spatial scope. A fresh reconstruction must be labelled as new research, not the original lost packet.
+2. Reconcile the existing tracked claim packages and the 27 geometry-resolution targets against actual live identities. Do not add overlapping inventories together as new map coverage. Complete defensible geometry or evidence loci where that makes accepted evidence usable; unknown geometry remains unknown.
+3. Assemble explicit candidate IDs, exact source/packet fingerprints, geometry roles and expected database deltas. Report new claims, geometry-enriched existing claims, locus-only records, no-ops and held records separately.
+4. Run disposable-database dry-run and idempotent replay with dependency closure and exact before/after checks. Build a candidate map with working sources and evidence panels, not merely political background fill.
+5. Prepare immutable release/serving artifacts, changelog, QC summary, unresolved-issues register, staged rollout and rollback. Live admission/publication must satisfy the existing historical, provenance and technical gates; never select all reviewed rows.
 
-**2026-09-28 successor authority checkpoint:**
-- the v0.8.2 selection is `HOLD_PENDING_D121_PROVENANCE_CLOSURE` in
-  [the frozen successor selection](release/selections/v0.8.2-post-overnight-claims.json);
-- Gate A requires both an authorized database-read/export path and D-121 exact
-  source-feature/native-ID plus source-native temporal provenance closure for
-  inherited/reused structured geometry;
-- the one-shot authority freeze (Actions run 36410710261) stopped with HTTP 403
-  `Missing required permission(s): database_read`; no authority bundle was produced;
-- D-120 cartographic acceptance remains intact, but it does not satisfy D-121;
-- #360 owns post-v0.8.2 scheduled-candidate intake planning and remains dependent on
-  this gate; #332 remains the sole active priority.
+Remaining new-subject batches retain #360's 5/5/5/4/4 grouping. Batch size is a planning target, not permission to lower per-claim review requirements or pad accepted counts.
 
-This checkpoint reconciles the accepted D-121 decision and the latest #332 result.
-It does not widen credentials, clear either gate, publish a successor, or change
-PostgreSQL, immutable v0.8.1, or the public serving channel.
+## Boundaries
 
+No new post-M1 P-levels, source-density prevalence, inferred nationality, false absence, unsupported modern proxies or evidence-locus-to-territory conversion. Preserve all canonical releases and source-native values. Public services consume reviewed/published materializations, not unrestricted drafts.
 
-**2026-09-27 scheduler reconciliation checkpoint:**
-- the 10 current-method successor packages from the overnight evidence worker are merged
-  and present in PostgreSQL as reviewed/unpublished claims; none is silently added to
-  immutable v0.8.1;
-- reviewed Pylos and Knossos point geometries are now promoted to PostgreSQL as
-  `claim_evidence_locus` records for the Mycenaean Pylos/Knossos claim, not as
-  territorial/practice polygons;
-- the remaining Nazi Germany legacy prototype now has a current-method successor package
-  on the active reconciliation WIP;
-- Funan, Southern Maya and Hawaiian scheduler packets do not create duplicate claims:
-  their existing current-method packages remain authoritative pending the stated bounded
-  source/temporal follow-ups;
-- Opone remains on exact-Pleiades-location HOLD, Garshana remains unresolved, and the
-  reviewed Tōdai-ji UNESCO point remains the accepted locus;
-- D-119 corpus-wide QC is now binding for successor geometry reuse. Late Hittite
-  component collapse, the Qin family, Western Han native 16040 and Roman native 16269
-  require explicit successor-era comparative/visual review rather than automatic reuse.
+No new schema, scheduled worker, credential expansion, paid service, parallel research horizon or generic platform work is authorized by this priority change. Preserve existing saved schedules and recovery mode. No background execution is implied by this queue.
 
-Prior releases remain immutable. New complete entries and defensible geometries move
-through explicit successor release membership and serving cutover rather than mutating
-v0.8.1. A successor selection must therefore be claim-explicit **and** D-119-aware; it
-must not simply sweep every reviewed off-release row or grandfathered v0.8.1 geometry.
+## Actions budget and standing protocols
 
-## Previous D-096 post-cutover boundary
+Batch one coherent checkpoint per PR. Run the smallest relevant local checks and sanitation first. Do not rerun unchanged successful jobs or add heavy geometry sweeps. Public health remains weekly/manual. Use `AGENTS.md`, `docs/PROJECT_INSTRUCTIONS.md`, `docs/24_WAY_OF_WORKING.md`, the existing task/verification contracts and D-096. Discovery follows `docs/discovery/DISCOVERY_EXECUTION.md` and `RUN_PROMPT.md` only when a concrete evidence/representation question justifies it.
 
-The post-cutover whole-project review found **no justified automatic successor** before
-the sponsor-authorized intake trigger.
+# PARKED / trigger-bound
 
-Why:
+#43 protected staging/production administration and paid backup infrastructure remain trigger-bound. #26 remains historical/closed. Independent expert outreach remains separately authorized; independent historical review is not increased by this checkpoint. Richer UI, PMTiles, search/graph infrastructure and new automation are not the active horizon.
 
-- the canonicalization/release/cutover programme is complete and production verification
-  is green;
-- no unresolved historical-method question currently blocks routine use of the accepted
-  evidence contract;
-- no coherent unreleased candidate currently requires a release gate;
-- no observed public-serving defect, security lint or payload drift requires repair;
-- bespoke Atlas expansion remains unsupported by the earlier value evidence;
-- new historical intake is not authorized merely because capacity exists;
-- #43's remaining protected-environment / paid-staging work did not cause a demonstrated
-  Gate-5 failure and has no active production-promotion task to serve.
+## Preserved predecessor checkpoint
 
-This is **not** a claim that the project is finished forever. D-096 explicitly permits a
-no-active-work boundary when all useful modes are complete, unjustified or trigger-bound.
-
-The standing weekly public-health monitor remains ordinary maintenance. Static fallback
-and exact release identity reduce outage risk; no user-critical SLA has been demonstrated
-that would justify higher-frequency monitoring.
-
-## Reopening triggers
-
-Choose one new WIP only when a concrete trigger occurs:
-
-1. **maintenance** — public API/site failure, release-byte mismatch, security regression,
-   migration/recovery defect, or a demonstrated released-data correction;
-2. **execution / consolidation** — sponsor-authorized historical intake, changed evidence,
-   or a recorded HOLD/accepted-row reopen condition;
-3. **review/release** — a coherent reviewed candidate plus a concrete publication need;
-4. **discovery** — a material unresolved method/value/representation question tied to a
-   real task rather than adjacency or unused capacity;
-5. **#43 infrastructure** — a future approved production mutation/release specifically
-   requires protected environments, durable least-privilege write credentials, or a
-   real staging target that the current bounded manual process cannot safely provide;
-6. **independent review** — only when an actual external-review horizon is explicitly
-   authorized.
-
-Until one trigger is present, do not manufacture a research tranche, UI redesign,
-infrastructure project or discovery experiment.
-
-# Discovery execution
-
-Use `docs/discovery/DISCOVERY_EXECUTION.md` and `docs/discovery/RUN_PROMPT.md`.
-D-091/D-092 govern execution discipline; neither changes EXP-08's frozen sample,
-historical acceptance criteria or release boundary.
-
-## Actions budget
-
-Batch one coherent checkpoint per PR. Run Python tests/sanitation locally first.
-Normal PR checks run sanitation and Python regressions; PostGIS runs for changes
-outside known documentation/research text paths, or on manual dispatch. No duplicate
-foundation run on merge. Public Atlas health remains weekly/manual, not every push.
-Do not skip required relevant checks or rerun unchanged successful jobs.
-
-## Continuation rule
-
-D-096 governs continuation.
-
-At a boundary choose the next justified **mode**:
-1. discovery;
-2. execution;
-3. consolidation;
-4. review/release;
-5. maintenance;
-6. no justified work.
-
-WIP = one active priority, not one mandatory experiment.
-
-Choose by:
-1. evidence quality;
-2. decision importance / project goal;
-3. focus;
-4. review/reconciliation capacity;
-5. whole-project complexity;
-6. only then execution convenience.
-
-Elapsed time alone is not a stop rule, and unused capacity is not a reason to invent
-another experiment.
-
-Accepted methods may be used within their declared operational scope without re-proving
-their value. Reopen them only on a concrete trigger recorded in D-096.
-
----
-
-# PARKED / trigger-bound operational debt
-
-These remain trigger-bound and are not the default horizon.
-
-## #43 — protected staging / release-promotion administration
-
-**Parked after the Gate-5 review.** Gate 5 completed with an immutable staged
-materialization, production CAS/rollback proof, manifest immutability and successful
-post-deploy verification. No release incident demonstrated that paid Supabase staging
-or protected GitHub deployment administration is currently necessary.
-
-Reopen #43 only for a future approved production mutation/release when the current
-bounded manual promotion path is insufficient or a durable least-privilege automated
-write boundary is concretely required. Do not create paid staging or credential
-infrastructure merely to make the issue disappear.
-
-## #26 — migration-history reconciliation
-
-**Closed / historical.** Gate 0 passed `MIGRATION_HISTORY_RECONCILED`. Do not reopen the
-old mismatch as active work unless a new concrete migration-history inconsistency is
-observed.
-
-## Managed backup/PITR
-
-Current Supabase Free-plan recovery evidence is logical/preservation-grade rather than
-physical managed backup/PITR. Revisit if plan/capabilities change or operational
-durability becomes a release requirement; do not require a paid temporary branch merely
-for process ceremony.
-
-## Repository administration
-
-- `main` currently reports unprotected;
-- historical remote topic branches remain;
-- current integration lacks some repository-admin capability.
-
-Handle when it materially blocks evidence/release work; do not turn administration into
-the project horizon.
-
----
-
-# Explicitly NOT the current horizon
-
-The completed Gate-0→Gate-5 programme does **not** authorize:
-
-- automatic new historical subject research;
-- richer frontend/application expansion;
-- automatic P-level inference;
-- inferred historical-practice geometry;
-- PMTiles/vector-tile infrastructure expansion;
-- new search, graph, vector-store/RAG or generic platform infrastructure;
-- contributor/peer-review platform work;
-- external recruitment/review without an explicit horizon;
-- paid staging/protected-environment administration without a concrete release need;
-- higher-frequency availability automation without evidence of a user-critical SLA;
-- another experiment merely because there is no active WIP.
-
-The current state is **sponsor-authorized Atlas expansion with one coordinated evidence/geometry WIP (#332)**.
+The complete prior queue, Gate-0→5 history, D-119/D-120 dispositions, D-121 HOLD and earlier scheduler reconciliations remain preserved at `git:d0d16ac2b1580bfb4907446a77ee7c11a0a81d25:BACKLOG.md`. This update changes active priority and records a scoped read-only observation; it does not rewrite those historical findings or clear the held v0.8.2 selection.

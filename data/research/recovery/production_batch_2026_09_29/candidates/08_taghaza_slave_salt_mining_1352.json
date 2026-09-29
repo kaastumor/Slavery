@@ -1,0 +1,83 @@
+{
+  "case_key": "production-batch-2026-09-29/taghaza/slave-salt-mining-1352-v1",
+  "spatial_entity": {
+    "canonical_name": "Taghaza",
+    "display_name": "Taghaza",
+    "entity_type_code": "site",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Historical salt-mining settlement/site identity. Exact reviewed site geometry is unresolved because modern coordinate sources disagree materially; no point is inserted."
+  },
+  "claim": {
+    "from_year": 1352,
+    "to_year": 1352,
+    "date_text_original": "Ibn Battuta visit to Taghaza, AH 753 / 1352 CE",
+    "temporal_precision": "bounded_travel_observation",
+    "temporal_certainty": "high_for_visit_year",
+    "spatial_precision": "Taghaza salt-mining settlement/site only",
+    "summary": "During his 1352 crossing of the Sahara, Ibn Battuta described Taghaza as inhabited by enslaved people of the Massufa who dug the salt. The atlas records a bounded site-level slavery-and-mining-labor observation for 1352, without extending it to the Massufa as a whole, the trans-Saharan network as a territorial practice surface, or an indefinite period.",
+    "confidence": "moderate_high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "The English translation uses 'slaves' for the workers. The Atlas preserves the bounded translated testimony and specialist reuse of the passage, but does not infer ownership structure, exact worker counts, hereditary status, or continuous practice beyond the observed context.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_bounded_site_observation",
+      "notes": "Site-level 1352 classification only. No P-level, population estimate, continuous duration, Massufa-wide prevalence, or network-derived territorial polygon."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "The Travels of Ibn Battuta — West Africa / Taghaza excerpt",
+        "author_or_institution": "Ibn Battuta; English translation excerpt hosted by Fordham University Internet History Sourcebooks",
+        "source_type": "travel_account_source_edition",
+        "source_classification": "primary_source_edition",
+        "language_code": "en",
+        "geographic_scope": "Taghaza and western Sahara route",
+        "temporal_scope": "Visit in 1352 CE",
+        "independence_notes": "One travel-account testimony. Details within the passage are not separate independent attestations.",
+        "reliability_limitations": "Outsider travel narrative in translation; supports a bounded observation but not a census, exact institutional structure, or continuous chronology."
+      },
+      "version": {
+        "version_label": "Internet History Sourcebooks excerpt from Ibn Battuta, Travels, West Africa, pp. 317-323 context",
+        "url_or_identifier": "https://sourcebooks.web.fordham.edu/source/1354-ibnbattuta.asp",
+        "accessed_at": "2026-09-29T17:00:00Z"
+      },
+      "evidence_role": "direct translated observation of enslaved salt-mine workers at Taghaza",
+      "independence_group": "ibn-battuta-taghaza-1352",
+      "directness": "translated primary travel testimony",
+      "direction": "supports",
+      "locator": "section 'The saltworks at the oasis of Taghaza': statement that no one lives there except the slaves of the Massufa who dig for salt.",
+      "notes": "Preserve as one translated source family."
+    },
+    {
+      "source": {
+        "title": "The Salt-Gold Alchemy in the Eighteenth and Nineteenth Century Mande World: If Men are Its Salt, Women are Its Gold",
+        "author_or_institution": "B. Marie Perinbam",
+        "source_type": "peer_reviewed_journal_article",
+        "source_classification": "secondary",
+        "language_code": "en",
+        "geographic_scope": "Mande world and trans-Saharan salt-gold trade",
+        "temporal_scope": "Historical synthesis with discussion of Ibn Battuta's Taghaza testimony",
+        "independence_notes": "Modern specialist reuse/interpretation of Ibn Battuta; not an independent occurrence witness.",
+        "reliability_limitations": "Article's main focus is later Mande salt/gold symbolism and economy; Taghaza is contextualized rather than independently documented."
+      },
+      "version": {
+        "version_label": "History in Africa 23 (1996), pp. 257-278",
+        "publication_year": 1996,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/history-in-africa/article/abs/saltgold-alchemy-in-the-eighteenth-and-nineteenth-century-mande-world-if-men-are-its-salt-women-are-its-gold/86BC5A15F4A9AC65A0072C3FC0673A6A",
+        "accessed_at": "2026-09-29T17:00:00Z"
+      },
+      "evidence_role": "specialist contextualization of Ibn Battuta's Taghaza slave-labor passage",
+      "independence_group": "perinbam-taghaza-context",
+      "directness": "specialist historical synthesis",
+      "direction": "qualifies",
+      "locator": "opening historical discussion citing Ibn Battuta's Taghaza inhabitants as 'slaves of the Masufa' within the salt-gold trade.",
+      "notes": "Not counted as independent corroboration of the same passage."
+    }
+  ]
+}

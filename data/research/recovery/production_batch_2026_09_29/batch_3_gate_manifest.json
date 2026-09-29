@@ -1,0 +1,63 @@
+{
+  "record_kind": "population_batch_gate_manifest",
+  "version": 1,
+  "issue": 360,
+  "pr": 367,
+  "batch": 3,
+  "as_of": "2026-09-29",
+  "status": "TWO_ACCEPTED_THREE_HELD_PENDING_EXACT_HEAD_CI",
+  "targets": [
+    {
+      "target": "Mali under Mansa Sulayman",
+      "disposition": "HOLD_COURT_EVENT_LOCUS_AND_SOURCE_DEPENDENCE",
+      "source_check": "Ibn Battuta's Mali court account describes three hundred armed slaves in the sultan's ceremonial retinue.",
+      "needed": "Bind the exact source edition/locator and determine whether this is a bounded court slavery claim, military slavery category, or court-status evidence; do not infer Mali-wide prevalence or invent a capital point."
+    },
+    {
+      "target": "Taghaza",
+      "disposition": "ACCEPTED_STAGING_BOUNDED_SITE_OBSERVATION",
+      "case_key": "production-batch-2026-09-29/taghaza/slave-salt-mining-1352-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/08_taghaza_slave_salt_mining_1352.json",
+      "geometry_status": "unresolved"
+    },
+    {
+      "target": "Choson Korea",
+      "disposition": "HOLD_NOBI_CATEGORY_AND_TEMPORAL_SCOPE",
+      "source_check": "Specialist scholarship characterizes Korean nobi within a history of slavery while also documenting substantial variation in residence, property and dependency; Korean institutional sources record the 1731 maternal-status rule and 1801 public-nobi emancipation.",
+      "needed": "Choose claim-specific status/practice propositions and intervals; do not flatten all nobi relations into one invariant slavery category or use legal reform dates as continuous-practice proof."
+    },
+    {
+      "target": "Ngapuhi / Bay of Islands",
+      "disposition": "HOLD_ROUTE_TO_EXTERNAL_PARTICIPATION_OR_CAPTIVE_PROCESS",
+      "source_check": "Te Ara documents Ngapuhi raiding parties returning with captured slaves and specific 1820s campaigns enslaving captives.",
+      "needed": "Do not convert raids and captives taken elsewhere into a Ngapuhi home-territory practice polygon. Route through a reviewed captive-taking/external-participation claim model before admission."
+    },
+    {
+      "target": "Bukhara",
+      "disposition": "ACCEPTED_STAGING_BOUNDED_1820_CONTEXT",
+      "case_key": "production-batch-2026-09-29/bukhara/persian-slavery-1820-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/07_bukhara_persian_slavery_1820.json",
+      "geometry_status": "modern_proxy_navigation_point"
+    }
+  ],
+  "accepted_case_keys": [
+    "production-batch-2026-09-29/taghaza/slave-salt-mining-1352-v1",
+    "production-batch-2026-09-29/bukhara/persian-slavery-1820-v1"
+  ],
+  "held_targets": [
+    "Mali under Mansa Sulayman",
+    "Choson Korea",
+    "Ngapuhi / Bay of Islands"
+  ],
+  "expected_new_claims": 2,
+  "expected_new_source_versions": 5,
+  "expected_resolved_navigation_points": 1,
+  "expected_release_membership_changes": 0,
+  "rules": [
+    "No P-levels",
+    "Source estimates are not prevalence scores",
+    "Translated primary testimony remains one evidence family",
+    "Modern proxy points are not historical practice extents",
+    "External/captive-taking evidence is not silently territorialized"
+  ]
+}

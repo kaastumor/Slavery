@@ -1,0 +1,113 @@
+{
+  "case_key": "production-batch-2026-09-29/angkor/household-slavery-1296-1297-v1",
+  "spatial_entity": {
+    "canonical_name": "Angkor",
+    "display_name": "Angkor (Yasodharapura capital-core)",
+    "entity_type_code": "site",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Site-level identity for the 1296-1297 eyewitness claim. The modern UNESCO Angkor reference point is a navigation/evidence-locus proxy only; it is not the historical labor-system extent or the political extent of the Khmer Empire."
+  },
+  "claim": {
+    "from_year": 1296,
+    "to_year": 1297,
+    "date_text_original": "Zhou Daguan's approximately eleven-month residence at Angkor, 1296-1297",
+    "temporal_precision": "bounded_observation_window",
+    "temporal_certainty": "high_for_visit_window",
+    "spatial_precision": "Angkor/Yasodharapura capital-core eyewitness observation; no empire-wide inference",
+    "summary": "During his 1296-1297 residence at Angkor, Zhou Daguan described household slaves who were purchased, valued, used in domestic service, punished after escape, and whose children through enslaved mothers inherited slave status. The atlas records a bounded household-slavery claim for the Angkor capital-core during this observation window, without converting Zhou's household generalizations into an empire-wide prevalence estimate.",
+    "confidence": "high_bounded",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Derived from the internally reviewed EXP-06 Khmer 1300 synthesis. The claim is limited to the capital/core and the observed period. No P-level, population share, source-region nationality, or full Khmer Empire practice polygon is inferred.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_bounded_capital_core_household_slavery",
+      "notes": "Concrete purchase, coercion, runaway punishment and hereditary-status features support slavery at the Angkor capital/core. Zhou's prevalence impressions are not census evidence and are not converted into map intensity."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "A Record of Cambodia: The Land and Its People",
+        "author_or_institution": "Zhou Daguan; translated by Peter Harris",
+        "source_type": "translated_eyewitness_account",
+        "source_classification": "primary_translation",
+        "language_code": "en-zh",
+        "geographic_scope": "Angkor / Yasodharapura and surrounding Cambodian court society",
+        "temporal_scope": "Eyewitness residence 1296-1297",
+        "independence_notes": "One eyewitness textual chain. Later translations, quotations and publisher summaries are not independent observations.",
+        "reliability_limitations": "Foreign observer using outsider social and ethnic categories; surviving text transmitted through later editions. Household-frequency statements are observational generalizations, not a census."
+      },
+      "version": {
+        "version_label": "Silkworm Books English translation, 2007, ISBN 9789749511244",
+        "publication_year": 2007,
+        "url_or_identifier": "ISBN 9789749511244",
+        "accessed_at": "2026-09-29T16:10:00Z"
+      },
+      "evidence_role": "near-anchor eyewitness description of household slavery",
+      "independence_group": "zhou-daguan-angkor-1296-1297",
+      "directness": "translated eyewitness account",
+      "direction": "supports",
+      "locator": "Chapter 9, 'Slaves': purchase/value, domestic service, runaway punishment and hereditary status through enslaved mothers.",
+      "notes": "Use for bounded capital-core presence and institution features, not empire-wide prevalence or modern ethnic identification."
+    },
+    {
+      "source": {
+        "title": "Sources of Slavery in Ancient Cambodia",
+        "author_or_institution": "Adhir K. Chakravarti",
+        "source_type": "specialist_book_chapter",
+        "source_classification": "secondary",
+        "language_code": "en",
+        "geographic_scope": "Ancient Cambodia",
+        "temporal_scope": "Long-run epigraphic and textual evidence, including late Angkorian sources",
+        "independence_notes": "Specialist synthesis of inscriptions and Chinese textual evidence. It is an interpretive layer, not an independent eyewitness for Zhou's 1296-1297 observation.",
+        "reliability_limitations": "Broad diachronic synthesis; it must not be used to project one legal/status pattern uniformly across periods or places."
+      },
+      "version": {
+        "version_label": "In D. C. Sircar (ed.), Social Life in Ancient India, University of Calcutta, 1971, pp. 121-142; digitized ASI/IGNCA scan",
+        "publication_year": 1971,
+        "url_or_identifier": "https://ignca.gov.in/Asi_data/51727.pdf",
+        "accessed_at": "2026-09-29T16:10:00Z"
+      },
+      "evidence_role": "specialist classification and acquisition/status context",
+      "independence_group": "chakravarti-ancient-cambodia-slavery-synthesis",
+      "directness": "specialist synthesis",
+      "direction": "qualifies",
+      "locator": "Chapter XIV, pp. 121-142; source pathways into slavery and late-Cambodian contextual discussion.",
+      "notes": "Supports claim-level slavery interpretation while retaining period/source distinctions."
+    }
+  ],
+  "geometry": {
+    "from_year": 1296,
+    "to_year": 1297,
+    "accuracy_status": "modern_proxy",
+    "resolution_method": "UNESCO World Heritage component 668-001 reference coordinate is used only as a modern navigation/evidence-locus proxy for Angkor. It is not the historical practice extent, metropolitan boundary, or Khmer political extent.",
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        103.8677777778,
+        13.4388888889
+      ]
+    },
+    "source": {
+      "title": "Angkor - Maps - UNESCO World Heritage Centre",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "source_type": "official_site_registry",
+      "source_classification": "methodology",
+      "geographic_scope": "Angkor World Heritage property, Cambodia",
+      "temporal_scope": "Current site registry"
+    },
+    "version": {
+      "version_label": "World Heritage property 668, component 668-001, coordinates N13 26 20.00 E103 52 4.00",
+      "url_or_identifier": "https://whc.unesco.org/en/list/0668/maps/",
+      "accessed_at": "2026-09-29T16:10:00Z"
+    },
+    "source_native_id": "668-001",
+    "review_status": "reviewed",
+    "notes": "Point proxy only. Do not render the UNESCO property boundary as slavery/practice extent."
+  }
+}

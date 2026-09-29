@@ -1,0 +1,87 @@
+{
+  "case_key": "production-batch-2026-09-29/zanzibar/slave-based-plantation-production-1859-1871-v1",
+  "spatial_entity": {
+    "canonical_name": "Zanzibar Islands (Unguja and Pemba)",
+    "display_name": "Zanzibar (Unguja and Pemba)",
+    "entity_type_code": "region",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Historical island production context. Stone Town point is a modern navigation proxy on Unguja, not the plantation distribution or polity boundary."
+  },
+  "claim": {
+    "from_year": 1859,
+    "to_year": 1871,
+    "date_text_original": "available export/production data, 1859–1870/71",
+    "temporal_precision": "source_data_interval",
+    "temporal_certainty": "high_for_source_period",
+    "spatial_precision": "Unguja and Pemba island production system; plantation distribution not encoded as a polygon",
+    "summary": "Specialist economic history identifies slave-based production of cloves, coconuts and sugar on Unguja and Pemba and links that production system to the slave trade during the nineteenth-century Zanzibar commercial economy. The 1859–1870/71 interval is used as a bounded source-data window, not as a universal prevalence surface.",
+    "confidence": "high_for_slave_based_production_system",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Do not convert export-value shares into prevalence of slavery, and do not infer that every locality or resident on the islands participated in the system.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_specialist_synthesis",
+      "notes": "Positive island production-system classification; trade/network finance remains a separate analytical dimension. No P-level."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Slaves, Spices and Ivory in Zanzibar: Integration of an East African Commercial Empire into the World Economy, 1770–1873",
+        "author_or_institution": "Abdul Sheriff",
+        "source_type": "specialist_monograph",
+        "source_classification": "secondary_specialist_synthesis",
+        "language_code": "en",
+        "geographic_scope": "Zanzibar, Unguja and Pemba with mainland commercial connections",
+        "temporal_scope": "1770–1873; chapter data include 1859–1870/71",
+        "independence_notes": "Single specialist synthesis; quantitative tables and narrative are one evidentiary family.",
+        "reliability_limitations": "Commercial/export evidence describes an island production system and wider commercial empire; it is not a locality-level prevalence map."
+      },
+      "version": {
+        "version_label": "Boydell & Brewer 1987; Cambridge Core online chapter/listing",
+        "publication_year": 1987,
+        "url_or_identifier": "https://www.cambridge.org/core/books/slaves-spices-and-ivory-in-zanzibar/8BBA2BA56875E3637C05D875E04280CD/listing",
+        "accessed_at": "2026-09-29T17:33:00Z"
+      },
+      "evidence_role": "specialist synthesis of slave-based island production",
+      "independence_group": "sheriff-zanzibar-commercial-empire-1987",
+      "directness": "specialist economic history",
+      "direction": "supports",
+      "locator": "Chapter 'The Structure of the Commercial Empire', pp. 116–154; discussion of slave-based production on Unguja and Pemba and 1859–1870/71 export data."
+    }
+  ],
+  "geometry": {
+    "from_year": 1859,
+    "to_year": 1871,
+    "accuracy_status": "modern_proxy",
+    "resolution_method": "UNESCO Stone Town of Zanzibar coordinate used only as a navigation/context point on Unguja. It is not a slave-market point, plantation distribution, island-wide practice extent, or historical sovereignty boundary.",
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        39.18917,
+        -6.16306
+      ]
+    },
+    "source_native_id": "UNESCO WHC 173rev",
+    "review_status": "reviewed",
+    "source": {
+      "title": "Stone Town of Zanzibar — geographical data",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "source_type": "official_heritage_geodata",
+      "source_classification": "geometry_context",
+      "geographic_scope": "Stone Town, Unguja",
+      "temporal_scope": "modern heritage property coordinate"
+    },
+    "version": {
+      "version_label": "UNESCO WHC 173rev maps/geographical data, accessed 2026-09-29",
+      "url_or_identifier": "https://whc.unesco.org/en/list/173/maps/",
+      "accessed_at": "2026-09-29T17:33:00Z"
+    },
+    "notes": "Navigation proxy only; no practice-extent inference."
+  }
+}

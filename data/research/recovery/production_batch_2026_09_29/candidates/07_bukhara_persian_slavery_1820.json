@@ -1,0 +1,113 @@
+{
+  "case_key": "production-batch-2026-09-29/bukhara/persian-slavery-1820-v1",
+  "spatial_entity": {
+    "canonical_name": "Bukhara",
+    "display_name": "Bukhara",
+    "entity_type_code": "city",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Urban indexing identity for an early nineteenth-century Bukhara slavery claim. The UNESCO point is a modern heritage-property navigation proxy, not an Emirate boundary or practice extent."
+  },
+  "claim": {
+    "from_year": 1820,
+    "to_year": 1820,
+    "date_text_original": "Meyendorff mission/observation window, 1820",
+    "temporal_precision": "bounded_source_year",
+    "temporal_certainty": "high_for_observation_year",
+    "spatial_precision": "Bukhara urban/polity context; no Emirate-wide prevalence surface",
+    "summary": "Specialist scholarship using Meyendorff's 1820 account documents Persian slaves in large numbers in Bukharan territories, with sale prices and household ownership, while Encyclopaedia Iranica describes Persian slaves in Bukhara as household servants and bodyguards. The atlas records a bounded 1820 slavery-practice claim for the Bukhara context without treating the reported population estimates as an exact prevalence measure or a uniform Emirate-wide distribution.",
+    "confidence": "moderate_high_for_practice_low_for_numeric_prevalence",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "The numerical estimates attributed to Meyendorff are preserved as reported observations, not converted into prevalence. The city point is navigation only. No inference is made from Shi'i identity itself; the sources document capture/enslavement and contemporary legal rationalization separately.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_bounded_1820_context",
+      "notes": "Positive slavery classification in the bounded Bukhara context; no P-level, no exact population share, no continuous nineteenth-century interval, and no Emirate-wide practice polygon."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Race, Sex and Slavery: 'Forced Labour' in Central Asia and Afghanistan in the Early 19th Century",
+        "author_or_institution": "Jonathan L. Lee",
+        "source_type": "peer_reviewed_journal_article",
+        "source_classification": "secondary",
+        "language_code": "en",
+        "geographic_scope": "Central Asia and Afghanistan, including Bukhara",
+        "temporal_scope": "Early nineteenth century",
+        "independence_notes": "Specialist synthesis citing Meyendorff/Scheidler's 1820 Bukhara account. The reported numbers and prices remain one underlying observation family.",
+        "reliability_limitations": "Meyendorff's numerical estimates are contemporary estimates and should not be treated as a census or spatial prevalence surface."
+      },
+      "version": {
+        "version_label": "Modern Asian Studies 41(3), 2007",
+        "publication_year": 2007,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/race-sex-and-slavery-forced-labour-in-central-asia-and-afghanistan-in-the-early-19th-century1/0A561B64835BB7E5F112451C5A43B2CA",
+        "accessed_at": "2026-09-29T16:59:00Z"
+      },
+      "evidence_role": "specialist synthesis of 1820 slavery observations and reported prices",
+      "independence_group": "meyendorff-1820-bukhara-observation-family",
+      "directness": "specialist synthesis of contemporary travel account",
+      "direction": "supports",
+      "locator": "discussion around notes 43-45, citing Scheidler/Meyendorff, A Journey from Orenburg to Bokhara in the Year 1820, pp. 61-62.",
+      "notes": "Do not turn reported totals or owner averages into an Atlas prevalence score."
+    },
+    {
+      "source": {
+        "title": "BUKHARA iv. Khanate of Bukhara and Khorasan",
+        "author_or_institution": "Encyclopaedia Iranica",
+        "source_type": "specialist_reference_article",
+        "source_classification": "secondary",
+        "language_code": "en",
+        "geographic_scope": "Bukhara Khanate and Khorasan",
+        "temporal_scope": "Early modern and nineteenth century",
+        "independence_notes": "Specialist synthesis drawing on Persian, Russian and Central Asian source traditions; partly overlaps the wider historiography but is not another occurrence count.",
+        "reliability_limitations": "Broad historical synthesis; used for institutional/contextual characterization, not an exact 1820 count."
+      },
+      "version": {
+        "version_label": "Encyclopaedia Iranica, Bukhara iv., online edition",
+        "url_or_identifier": "https://www.iranicaonline.org/articles/bukhara-iv/",
+        "accessed_at": "2026-09-29T16:59:00Z"
+      },
+      "evidence_role": "specialist context for Persian slavery in Bukhara and documented functions",
+      "independence_group": "iranica-bukhara-khorasan-synthesis",
+      "directness": "specialist historical synthesis",
+      "direction": "supports",
+      "locator": "paragraph discussing Persian captives/slaves in Bukhara, household servants, khan's bodyguards, and Turkmen supply routes.",
+      "notes": "Legal rationalization of enslaving Shi'i Persians is recorded as historical context, not adopted by the Atlas."
+    }
+  ],
+  "geometry": {
+    "from_year": 1820,
+    "to_year": 1820,
+    "accuracy_status": "modern_proxy",
+    "resolution_method": "UNESCO World Heritage Centre coordinate for the Historic Centre of Bukhara is used only as a navigation proxy for the named urban context. It is not the 1820 slave market, a household location, an Emirate boundary, or the practice inference extent.",
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        64.42861,
+        39.77472
+      ]
+    },
+    "source": {
+      "title": "Historic Centre of Bukhara - Maps",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "source_type": "official_heritage_geographic_registry",
+      "source_classification": "methodology",
+      "geographic_scope": "Historic Centre of Bukhara",
+      "temporal_scope": "modern World Heritage property"
+    },
+    "version": {
+      "version_label": "World Heritage property 602bis geographic data; N39 46 28.992 E64 25 42.996",
+      "url_or_identifier": "https://whc.unesco.org/en/list/602/maps/",
+      "accessed_at": "2026-09-29T16:59:00Z",
+      "notes": "Modern heritage-property coordinate; explicit navigation proxy only."
+    },
+    "source_native_id": "UNESCO WHC 602bis",
+    "review_status": "reviewed",
+    "notes": "Navigation point only; no historical practice extent."
+  }
+}

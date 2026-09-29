@@ -1,0 +1,64 @@
+{
+  "record_kind": "production_population_ingest_plan",
+  "version": 1,
+  "issue": 360,
+  "pr": 367,
+  "status": "READY_FOR_EXPLICIT_PRODUCTION_WRITE_GATE",
+  "input_manifest": "data/research/recovery/production_batch_2026_09_29/accepted_subset_manifest.json",
+  "accepted_cases": 12,
+  "held_exclusions": 11,
+  "execution_contract": {
+    "single_transaction": true,
+    "first_pass_insertions": 12,
+    "unchanged_replay_expected_noops": 12,
+    "fail_on_existing_case_key": true,
+    "fail_on_existing_canonical_spatial_name": true,
+    "all_inserted_claims_unpublished": true,
+    "new_p_levels_forbidden": true,
+    "release_membership_mutation_forbidden": true,
+    "serving_channel_mutation_forbidden": true
+  },
+  "tool": "tools/ingest_population_subset.py",
+  "dry_run_command": "python tools/ingest_population_subset.py",
+  "disposable_rehearsal_command": "CI=true python tools/ingest_population_subset.py --apply --disposable-test-db",
+  "production_apply_requirements": [
+    "explicit sponsor production-write authorization",
+    "ATLAS_PRODUCTION_WRITE_AUTHORIZED=1",
+    "--production-write-authorized ISSUE-360-EXPLICIT",
+    "refreshed --expected-main-sha matching the reviewed manifest authority",
+    "refreshed --expected-pr-head-sha matching the reviewed manifest input",
+    "current live database collision preflight still clean"
+  ],
+  "expected_live_delta": {
+    "spatial_entity": 12,
+    "claim": 12,
+    "legal_event": 1,
+    "territorial_practice_claim": 11,
+    "source_version": 28,
+    "claim_source": 20,
+    "geometry_rows": 10,
+    "resolved_geometry": 9,
+    "research_target": 1,
+    "research_target_result": 1,
+    "research_target_source": 2,
+    "research_target_claim": 1,
+    "research_target_review": 1,
+    "research_case_ingest": 12,
+    "release_claim": 0,
+    "publication_status_changes": 0
+  },
+  "post_write_receipt_required": [
+    "generated claim IDs by case key",
+    "generated spatial/source/geometry IDs",
+    "exact before/after table counts",
+    "source-version reuse versus creation",
+    "zero release membership delta",
+    "zero serving-channel delta",
+    "zero publication-status changes",
+    "exact repository and database observation revisions"
+  ],
+  "rollback": {
+    "pre_commit_failure": "transaction rollback",
+    "post_commit_error": "do not delete historical records ad hoc; use governed supersession/correction and preserve ingest lineage"
+  }
+}

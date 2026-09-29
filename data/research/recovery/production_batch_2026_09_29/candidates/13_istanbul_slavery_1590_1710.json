@@ -1,0 +1,87 @@
+{
+  "case_key": "production-batch-2026-09-29/istanbul/slavery-1590-1710-v1",
+  "spatial_entity": {
+    "canonical_name": "Istanbul",
+    "display_name": "Istanbul",
+    "entity_type_code": "city",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "City-level early modern Ottoman slavery claim. UNESCO historic-area point is a modern navigation proxy, not a slave-market or household/worksite extent."
+  },
+  "claim": {
+    "from_year": 1590,
+    "to_year": 1710,
+    "date_text_original": "greater Istanbul freedom-suit sample, ca. 1590–1710",
+    "temporal_precision": "archival_sample_interval",
+    "temporal_certainty": "high_for_study_scope",
+    "spatial_precision": "greater Istanbul court and market context; no citywide prevalence surface",
+    "summary": "Archival specialist research on greater Istanbul between about 1590 and 1710 documents slavery as a legal and social institution, an active urban slave market, and freedom suits involving people who were legally or illegally held and sold. The candidate records a bounded urban slavery context without treating the lawsuit sample as a prevalence estimate.",
+    "confidence": "high_for_institution_and_urban_market_presence",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Freedom-suit success rates and case counts are litigation evidence, not estimates of the share of Istanbul residents enslaved. Legal protections and illegal enslavement remain distinct.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_archival_specialist_synthesis",
+      "notes": "Positive bounded urban classification. Market activity, household slavery, state slavery and illegal enslavement are not collapsed into one prevalence measure. No P-level."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Slavery, Freedom Suits, and Legal Praxis in the Ottoman Empire, ca. 1590–1710",
+        "author_or_institution": "Joshua M. White",
+        "source_type": "peer_reviewed_journal_article",
+        "source_classification": "secondary_specialist_archival_study",
+        "language_code": "en",
+        "geographic_scope": "Greater Istanbul with Ottoman legal context",
+        "temporal_scope": "ca. 1590–1710",
+        "independence_notes": "One specialist archival study using greater Istanbul court registers; the seventy-nine-suit sample is one research corpus, not seventy-nine independent prevalence votes.",
+        "reliability_limitations": "Freedom-suit records overrepresent litigated disputes and successful plaintiffs. They demonstrate institution and legal praxis but not population prevalence."
+      },
+      "version": {
+        "version_label": "Comparative Studies in Society and History 65(3), 2023, pp. 526–556",
+        "publication_year": 2023,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/comparative-studies-in-society-and-history/article/slavery-freedom-suits-and-legal-praxis-in-the-ottoman-empire-ca-15901710/521E723F33DA929F836C7CF7D7E313F9",
+        "accessed_at": "2026-09-29T17:40:00Z"
+      },
+      "evidence_role": "specialist archival evidence for urban slavery and legal praxis",
+      "independence_group": "white-istanbul-freedom-suits-2023",
+      "directness": "specialist archival synthesis",
+      "direction": "supports",
+      "locator": "Article pp. 526–556; greater Istanbul sample of 79 freedom suits and discussion of urban slave markets, legal status and illegal enslavement."
+    }
+  ],
+  "geometry": {
+    "from_year": 1590,
+    "to_year": 1710,
+    "accuracy_status": "modern_proxy",
+    "resolution_method": "UNESCO Sultanahmet Historic Areas coordinate used only as a modern navigation/context point for Istanbul. It is not the historic slave-market location, court locus, household/worksite distribution, or territorial practice extent.",
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        28.98333,
+        41.00833
+      ]
+    },
+    "source_native_id": "UNESCO WHC 356bis-001",
+    "review_status": "reviewed",
+    "source": {
+      "title": "Historic Areas of Istanbul — geographical data",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "source_type": "official_heritage_geodata",
+      "source_classification": "geometry_context",
+      "geographic_scope": "Historic Peninsula, Istanbul",
+      "temporal_scope": "modern heritage property coordinate"
+    },
+    "version": {
+      "version_label": "UNESCO WHC 356 maps/geographical data, accessed 2026-09-29",
+      "url_or_identifier": "https://whc.unesco.org/en/list/356/maps/",
+      "accessed_at": "2026-09-29T17:40:00Z"
+    },
+    "notes": "Navigation proxy only; no historical slavery-extent inference."
+  }
+}

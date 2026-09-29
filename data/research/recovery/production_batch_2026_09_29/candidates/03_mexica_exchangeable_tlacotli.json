@@ -1,0 +1,94 @@
+{
+  "case_key": "production-batch-2026-09-29/mexica/exchangeable-tlacotli-tlatelolco-late-precontact-v0",
+  "spatial_entity": {
+    "canonical_name": "Mexica",
+    "display_name": "Mexica (Tenochtitlan-Tlatelolco)",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "draft",
+    "notes": "Exact governed identity and the relationship between Mexica, Tenochtitlan, and Tlatelolco require review. Tlatelolco is an evidence locus, not territorial extent."
+  },
+  "claim": {
+    "from_year": null,
+    "to_year": null,
+    "date_text_original": "Late precontact Mexica society; exact numeric interval unresolved",
+    "temporal_precision": "period_only_no_numeric_interval",
+    "temporal_certainty": "moderate_for_precontact_social_context_low_for_exact_interval",
+    "spatial_precision": "Mexica social organization with named market evidence at Tlatelolco; broader extent unresolved",
+    "summary": "Documentary evidence concerning precontact Mexica society indicates differentiated tlacotli statuses and narrower exchangeable subcategories associated with named markets including Tlatelolco. The candidate does not treat every tlacotli, war captive (malli), centlacotli, or ritually prepared tlaaltilli as the same category.",
+    "confidence": "moderate",
+    "review_status": "draft",
+    "publication_status": "unpublished",
+    "notes": "The Spanish Florentine Codex layer uses esclavo across non-identical Nahua categories. Classification is restricted to the specialist-supported exchangeable subcategory; numeric applicability remains unresolved.",
+    "territorial_practice": {
+      "practice_type_code": "slave_trade_sale_purchase",
+      "practice_level": null,
+      "coverage_state_code": "source_identified",
+      "classification_status": "candidate_exchangeable_tlacotli_subcategory_only",
+      "notes": "No prevalence, continuous duration, hereditary-status, population-share, or polity-wide geometry claim."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Florentine Codex, Book 10",
+        "author_or_institution": "Bernardino de Sahagún with Nahua elders, authors, scribes, and artists",
+        "source_type": "sixteenth_century_bilingual_ethnographic_manuscript",
+        "source_classification": "primary_documentary_tradition_with_colonial_mediation",
+        "language_code": "nah-spa",
+        "geographic_scope": "Central Mexico; compilation at Tlatelolco",
+        "temporal_scope": "Completed 1577 from information gathered over prior decades",
+        "independence_notes": "Same Florentine Codex source family as companion passages; not multiple independent witnesses.",
+        "reliability_limitations": "Spanish and Nahuatl layers are not category-equivalent, and manuscript date is not a practice-date interval."
+      },
+      "version": {
+        "version_label": "Digital Florentine Codex, Book 10, folio 41v",
+        "publication_or_creation_date_text": "Manuscript completed 1577; digital edition 2023",
+        "publication_year": 2023,
+        "url_or_identifier": "https://florentinecodex.getty.edu/en/book/10/folio/41v",
+        "accessed_at": "2026-09-29T13:35:00Z"
+      },
+      "evidence_role": "source-term and merchant-specialization anchor",
+      "independence_group": "florentine-codex-sahagun-nahua-collaboration",
+      "directness": "primary documentary tradition",
+      "direction": "supports",
+      "locator": "Book 10, fol. 41v, Tecoani, tealtiani; compare Spanish and Nahuatl/English layers."
+    },
+    {
+      "source": {
+        "title": "Tlacotli: nuevos apuntes para la definición de una categoría nahua",
+        "author_or_institution": "Óscar Salazar Delgado, Universidad Nacional Autónoma de México",
+        "source_type": "peer_reviewed_journal_article",
+        "source_classification": "secondary_passage_specific_category_analysis",
+        "language_code": "es",
+        "geographic_scope": "Mexica society and central Mexico",
+        "temporal_scope": "Precontact Mexica society interpreted through sixteenth- and seventeenth-century documentary sources",
+        "independence_notes": "Specialist category analysis partly dependent on the Florentine Codex and other early documentary traditions.",
+        "reliability_limitations": "Supports category distinctions but does not by itself fix a numeric interval or territorial polygon."
+      },
+      "version": {
+        "version_label": "Estudios de Cultura Náhuatl 69, pp. 139-174",
+        "publication_or_creation_date_text": "Published 2024-12-11",
+        "publication_year": 2024,
+        "url_or_identifier": "https://doi.org/10.22201/iih.30618002e.2025.69.78710",
+        "accessed_at": "2026-09-29T13:35:00Z",
+        "license_status": "CC_BY_NC_ND_4_0",
+        "redistribution_status": "citation_and_link"
+      },
+      "evidence_role": "specialist category analysis preserving distinct Nahua status terms",
+      "independence_group": "salazar-delgado-tlacotli-category-analysis",
+      "directness": "specialist linguistic-historical synthesis",
+      "direction": "qualifies",
+      "locator": "pp. 139-174; category distinctions, acquisition/transfer conditions, and Mexica social context."
+    }
+  ],
+  "geometry": {
+    "from_year": null,
+    "to_year": null,
+    "accuracy_status": "unresolved",
+    "resolution_method": "Tlatelolco is an evidence locus only. Do not substitute modern Mexico City, modern Mexico, or an empire polygon before identity, geometry role, and temporal applicability review.",
+    "geojson": null,
+    "review_status": "draft"
+  }
+}

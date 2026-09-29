@@ -1,0 +1,127 @@
+{
+  "case_key": "production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1",
+  "spatial_entity": {
+    "canonical_name": "Goryeo",
+    "display_name": "Goryeo",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Jurisdiction identity for the bounded 956 legal event. This candidate does not freeze a polity geometry or turn the legal event into territorial-practice prevalence."
+  },
+  "claim": {
+    "from_year": 956,
+    "to_year": 956,
+    "date_text_original": "Gwangjong year 7 (956); month unknown",
+    "temporal_precision": "year_only",
+    "temporal_certainty": "high_for_chronicle_date",
+    "spatial_precision": "royal jurisdiction; the surviving passage does not state an event locus or territorial practice extent",
+    "summary": "In 956, Gwangjong ordered detailed examination of nobi status to determine right and wrong. The surviving chronicle reports extensive departures from masters, elite resentment, and an unsuccessful remonstrance by the queen.",
+    "confidence": "high_for_order_moderate_for_implementation_scope",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Bounded legal/status-review event only. It is not an abolition claim, a prevalence estimate, or evidence that every relation described by the source term nobi maps to one modern slavery category."
+  },
+  "legal_event": {
+    "event_type": "status_review_order",
+    "legal_status_after": "individual status outcomes not specified in the surviving 956 passage",
+    "instrument_name": "Nobi An'geom order (奴婢按檢)",
+    "scope": "Persons whose nobi status was ordered examined; implementation scale and individual outcomes are not quantified by the 956 record.",
+    "effective_date_text": "956; month unknown",
+    "notes": "The stronger reconstruction that originally free people had been unlawfully reduced to nobi is supported by later retrospective evidence and specialist synthesis and is not silently inserted into the wording of the one-line order."
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Goryeosa Jeolyo, vol. 2 — Gwangjong year 7: order to examine nobi status",
+        "author_or_institution": "National Institute of Korean History digital source edition",
+        "source_type": "historical_chronicle_source_edition",
+        "source_classification": "primary_source_edition",
+        "language_code": "ko-lzh",
+        "geographic_scope": "Goryeo royal record",
+        "temporal_scope": "Record indexed to 956, month unknown",
+        "independence_notes": "The chronicle record is the claim anchor. Later modern summaries that quote or interpret it are not independent observations.",
+        "reliability_limitations": "The surviving entry is brief and the chronicle was compiled later; it does not specify implementation detail, population scale, event locus, or a modern analytic category for all nobi."
+      },
+      "version": {
+        "version_label": "Goryeosa Jeolyo vol. 2, Gwangjong year 7, HOI kj_002r_0030_0080_0010_0030; NIKH digital edition",
+        "url_or_identifier": "https://db.history.go.kr/goryeo/level.do?levelId=kj_002r_0030_0080_0010_0030&types=r",
+        "accessed_at": "2026-09-29T13:35:00Z"
+      },
+      "evidence_role": "exact source record for the 956 royal order",
+      "independence_group": "goryeosa-jeolyo-nobi-0956",
+      "directness": "source-edition record",
+      "direction": "supports",
+      "locator": "Goryeosa Jeolyo vol. 2; Gwangjong year 7; 956, month unknown; HOI kj_002r_0030_0080_0010_0030",
+      "claim_fitness": "Direct support for existence/date/basic content of the status-review order; weak for implementation scale or social classification."
+    },
+    {
+      "source": {
+        "title": "Nobi An'geom Law (노비안검법): source-critical review",
+        "author_or_institution": "National Institute of Korean History",
+        "source_type": "specialist_institutional_synthesis",
+        "source_classification": "secondary",
+        "language_code": "ko",
+        "geographic_scope": "Goryeo",
+        "temporal_scope": "956 order with later retrospective evidence",
+        "independence_notes": "Modern synthesis of Goryeosa/Goryeosa Jeolyo and later memorial evidence; interpretive rather than an independent contemporary witness.",
+        "reliability_limitations": "Explicitly emphasizes sparse surviving evidence and limited knowledge of implementation details and outcome scale."
+      },
+      "version": {
+        "version_label": "Korean History Chronology / source-critical article, accessed 2026-09-29",
+        "url_or_identifier": "https://contents.history.go.kr/mobile/kc/view.do?code=kc_age_20&levelId=kc_i200500",
+        "accessed_at": "2026-09-29T13:35:00Z"
+      },
+      "evidence_role": "specialist interpretation and uncertainty boundary",
+      "independence_group": "nikh-goryeo-nobi-specialist",
+      "directness": "specialist synthesis",
+      "direction": "qualifies",
+      "locator": "Sections 1-2, especially the discussion of 956 and the limited surviving source record",
+      "claim_fitness": "Supports the bounded legal-event interpretation and the abstention from prevalence, implementation scale, or automatic category equivalence."
+    }
+  ],
+  "research_target": {
+    "target_key": "production-batch-2026-09-29/goryeo/nobi-0956",
+    "target_label": "Goryeo — 956 nobi status review",
+    "anchor_label": "956 royal order to examine nobi status",
+    "anchor_year": 956,
+    "frame_class": "legal_status_event",
+    "origin": "#360 production population batch 1",
+    "review_status": "reviewed",
+    "result": {
+      "research_stage": "review_complete",
+      "research_outcome": "bounded_legal_event_supported_broader_nobi_practice_classification_held",
+      "bounded_proposition": "A 956 royal order directed examination of nobi status to determine valid and invalid status claims.",
+      "required_abstention": "Do not infer abolition, continuous practice, prevalence, a P-level, a polity-wide practice polygon, or one universal modern translation of nobi.",
+      "evidence_locus_summary": "The evidence is a royal chronicle record; no physical event locus is specified.",
+      "inference_extent_summary": "Legal jurisdiction/event only. No territorial-practice inference extent is admitted.",
+      "temporal_state": "Single year 956; month unknown. Later retrospective evidence is context, not extension of the asserted interval.",
+      "law_practice_note": "A legal/status-review order is independent of the prevalence or territorial distribution of the underlying social statuses.",
+      "network_territorial_note": "Not applicable; no trade/network inference is made.",
+      "historical_terms": "奴婢 / nobi retained as the source term.",
+      "category_mapping_status": "broader_nobi_slavery_mapping_held",
+      "category_mapping_note": "The bounded event is accepted without deciding that every nobi relation constitutes the same slavery category.",
+      "language_access_limitations": "Uses NIKH Literary Chinese source text with modern Korean translation and Korean specialist synthesis.",
+      "coverage_confidence": "high_for_order_and_date_limited_for_implementation_and_social_scope",
+      "geometry_resolved_form": null,
+      "geometry_claim_role": null,
+      "geometry_unresolved_note": "No event point or practice polygon is justified by the inspected record.",
+      "source_blob_ref": null,
+      "review_status": "reviewed"
+    },
+    "internal_review": {
+      "review_disposition": "ADMIT_BOUNDED_956_LEGAL_EVENT_ONLY",
+      "admitted": true,
+      "review_reason": "Exact source-edition record fixes the 956 order; specialist synthesis supports the narrow interpretation and explicitly limits implementation inference.",
+      "failure_guards": [
+        "no automatic translation of nobi to one modern slavery category",
+        "no abolition inference",
+        "no prevalence inference",
+        "no territorial-practice geometry",
+        "no P-level"
+      ],
+      "dependency_or_scope_note": "Broader Goryeo territorial-practice classification remains a separate HOLD.",
+      "notes": "Same-agent internal review; publication and release membership remain separate gates."
+    }
+  }
+}
