@@ -24,6 +24,12 @@ echo "Research case idempotency passed: one ledger row, one claim, retry was a n
 docker compose run --rm -e CI=true tooling \
   python tools/test_population_replay.py --disposable-test-db
 
+# #360: rehearse the full accepted 12-case subset as one atomic transaction.
+# In disposable mode the tool always rolls back after verifying exact deltas.
+docker compose run --rm -e CI=true tooling \
+  python tools/ingest_population_subset.py --apply --disposable-test-db
+
+
 goryeo="data/research/recovery/production_batch_2026_09_29/candidates/01_goryeo_0956_legal_event.json"
 legal_key="production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1"
 legal_first=$(docker compose run --rm tooling python tools/add_legal_event_case.py "$goryeo" --apply)

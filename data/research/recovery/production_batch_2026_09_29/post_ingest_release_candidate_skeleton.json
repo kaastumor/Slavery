@@ -1,0 +1,57 @@
+{
+  "record_kind": "population_successor_release_candidate_skeleton",
+  "version": 1,
+  "issue": 360,
+  "pr": 367,
+  "status": "POST_INGEST_IDS_REQUIRED_NOT_A_RELEASE_SELECTION",
+  "canonical_predecessor": "v0.8.1",
+  "public_serving_at_preparation": "v0.8.1-public-mvp-v2",
+  "accepted_case_keys_source": "data/research/recovery/production_batch_2026_09_29/accepted_subset_manifest.json",
+  "predecessor_release_immutable": true,
+  "publication_gate_open": false,
+  "release_membership_gate_open": false,
+  "serving_cutover_gate_open": false,
+  "claim_membership": {
+    "new_claim_ids": [],
+    "required_after_ingest": 12,
+    "existing_11_reconciled_claim_ids": "retain separate successor-selection decision; do not silently add here"
+  },
+  "geometry_membership": {
+    "new_geometry_ids": [],
+    "expected_after_ingest": 10,
+    "resolved_modern_proxy_navigation_points": 9,
+    "unresolved_candidates": ["Dahomey", "Taghaza"],
+    "rule": "navigation/context points are not territorial practice extents"
+  },
+  "held_exclusions": [
+    "Meroitic Kush / Hamadab",
+    "Mexica / Aztec tlacotin",
+    "Bagan / Pagan",
+    "Old Kingdom Egypt / Sneferu",
+    "Inca / Tawantinsuyu",
+    "Mali under Mansa Sulayman",
+    "Choson Korea",
+    "Ngapuhi / Bay of Islands",
+    "Ayutthaya",
+    "Northern Haudenosaunee",
+    "Tonga"
+  ],
+  "required_post_ingest_inputs": [
+    "production ingest receipt with generated IDs",
+    "fresh database authority snapshot",
+    "exact source-version dependency closure",
+    "D-121 disposition for any inherited structured geometry included by successor selection",
+    "changelog",
+    "QC summary",
+    "unresolved-issues register",
+    "release-candidate map/evidence-panel verification",
+    "rollback and staged-cutover plan"
+  ],
+  "forbidden_shortcuts": [
+    "do not treat accepted staging as published release membership",
+    "do not infer practice extent from modern proxy points",
+    "do not add held targets to improve coverage counts",
+    "do not mutate v0.8.1",
+    "do not move public serving without separate explicit cutover approval"
+  ]
+}

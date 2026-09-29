@@ -44,3 +44,22 @@ source amendments are pending acceptance, not a request to reopen cartography.
 The 23-subject production register is now fully dispositioned: 12 accepted staging candidates and 11 explicit HOLDs. Exact-head CI run 36606730574 passes the final batch-4/5 disposable insert/no-op checks. Combined expected production delta for the accepted new subset is 12 claims (1 legal event, 11 territorial practice), 12 spatial identities, 28 new source versions after observed reuse, 10 geometry rows of which 9 are reviewed modern-proxy points, and zero release membership or publication changes.
 
 This reaches the explicit production-write gate. It does **not** authorize the write, immutable release selection, or serving-channel movement.
+
+
+## Atomic production-ingest packaging checkpoint
+
+The accepted 12-case subset now has a single-transaction ingestion driver,
+`tools/ingest_population_subset.py`. Its default mode is read-only planning.
+CI may use only the explicit disposable mode, which inserts all 12 candidates,
+verifies exact table deltas and unchanged replay/no-op behavior, then rolls back.
+
+The production code path is fail-closed behind a separate environment gate,
+literal issue-scoped authorization token, and expected main/PR-head identities.
+It still does not create release membership, publish claims, or move a serving
+channel. `production_ingest_plan.json` records the contract.
+
+`post_ingest_release_candidate_skeleton.json` deliberately contains no invented
+production IDs. It fixes the successor-release information that can be known
+before ingestion and lists the post-ingest authority, QC, D-121, changelog,
+unresolved-issue, map-preview, rollback and cutover inputs that must be supplied
+before a successor release can be selected.
