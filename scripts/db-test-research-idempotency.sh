@@ -118,3 +118,34 @@ sitka_counts=$(docker compose exec -T db sh -lc "psql -At -F '|' -U \"$POSTGRES_
 test "$sitka_counts" = "1|1|1|1|1"
 
 echo "Sitka candidate ingestion passed: bounded Sah Quah 1886 claim idempotent with one modern-proxy navigation point and no P-level."
+
+
+bukhara="data/research/recovery/production_batch_2026_09_29/candidates/07_bukhara_persian_slavery_1820.json"
+bukhara_key="production-batch-2026-09-29/bukhara/persian-slavery-1820-v1"
+bukhara_first=$(docker compose run --rm tooling python tools/add_research_case.py "$bukhara" --apply)
+printf '%s\n' "$bukhara_first"
+bukhara_second=$(docker compose run --rm tooling python tools/add_research_case.py "$bukhara" --apply)
+printf '%s\n' "$bukhara_second"
+grep -q "NO-OP: research case already applied unchanged" <<<"$bukhara_second"
+bukhara_counts=$(docker compose exec -T db sh -lc "psql -At -F '|' -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\" -c \"select
+ (select count(*) from audit.research_case_ingest where case_key='$bukhara_key'),
+ (select count(*) from atlas.territorial_practice_claim t join audit.research_case_ingest r using(claim_id) where r.case_key='$bukhara_key' and t.practice_level is null),
+ (select count(*) from atlas.geometry g join atlas.territorial_practice_claim t using(spatial_entity_id) join audit.research_case_ingest r on r.claim_id=t.claim_id where r.case_key='$bukhara_key' and g.geom is not null and GeometryType(g.geom)='POINT' and g.accuracy_status='modern_proxy');
+\"")
+test "$bukhara_counts" = "1|1|1"
+
+taghaza="data/research/recovery/production_batch_2026_09_29/candidates/08_taghaza_slave_salt_mining_1352.json"
+taghaza_key="production-batch-2026-09-29/taghaza/slave-salt-mining-1352-v1"
+taghaza_first=$(docker compose run --rm tooling python tools/add_research_case.py "$taghaza" --apply)
+printf '%s\n' "$taghaza_first"
+taghaza_second=$(docker compose run --rm tooling python tools/add_research_case.py "$taghaza" --apply)
+printf '%s\n' "$taghaza_second"
+grep -q "NO-OP: research case already applied unchanged" <<<"$taghaza_second"
+taghaza_counts=$(docker compose exec -T db sh -lc "psql -At -F '|' -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\" -c \"select
+ (select count(*) from audit.research_case_ingest where case_key='$taghaza_key'),
+ (select count(*) from atlas.territorial_practice_claim t join audit.research_case_ingest r using(claim_id) where r.case_key='$taghaza_key' and t.practice_level is null),
+ (select count(*) from atlas.geometry g join atlas.territorial_practice_claim t using(spatial_entity_id) join audit.research_case_ingest r on r.claim_id=t.claim_id where r.case_key='$taghaza_key');
+\"")
+test "$taghaza_counts" = "1|1|0"
+
+echo "Batch 3 candidate ingestion passed: Bukhara modern-proxy point + Taghaza unresolved site claim are idempotent with no P-levels."

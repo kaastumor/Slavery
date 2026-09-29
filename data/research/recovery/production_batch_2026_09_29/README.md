@@ -88,3 +88,20 @@ explicit modern navigation proxy only. It is not the 1886 courtroom, historic
 settlement boundary, Tlingit territory, or practice extent. Live read-only
 preflight found no exact entity/case/source-version/release collision. Production
 ingest, release membership and serving remain separate gates.
+
+
+## Batch 3 accepted staging additions
+
+Bukhara and Taghaza are added as bounded reviewed staging candidates. Bukhara
+uses specialist synthesis of the 1820 Meyendorff observation family and a UNESCO
+historic-centre coordinate only as a modern navigation proxy; reported slave
+totals and prices are not converted into prevalence. Taghaza records Ibn
+Battuta's 1352 translated observation of enslaved Massufa salt-mine workers and
+a dependent specialist reuse of the same passage. Taghaza geometry remains
+unresolved because modern site coordinates conflict materially.
+
+Mali remains held pending a defensible court/event locus and source-dependence
+review; Choson remains held for claim-level nobi classification and temporal
+scope; Ngapuhi evidence of raiding/captive enslavement belongs in an
+external-participation/captive-taking lane and is not inserted as home-territory
+practice merely to add map coverage.

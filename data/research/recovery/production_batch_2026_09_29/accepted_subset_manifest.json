@@ -9,13 +9,14 @@
     "github_main_sha": "09f5d77fb21f451d855c5df4a0b442469eaf422b",
     "population_pr_head_verified": "066f13bc3b6ce0f68f6ec46628ce0b22b86d2662",
     "exact_head_ci": {
-      "status": "PENDING_FOR_SITKA_ADDITION",
-      "base_clean_head_run_id": 36599902519
+      "status": "PENDING_FOR_BATCH3_ADDITIONS",
+      "last_green_head": "bc21eb82bb440a170280c3d218147dc07842d991",
+      "last_green_run_id": 36601344628
     },
-    "live_preflight_observed_at": "2026-09-29T16:49:08.411131+00:00",
+    "live_preflight_observed_at": "2026-09-29T17:00:49.657588+00:00",
     "immutable_release": "v0.8.1",
     "public_serving": "v0.8.1-public-mvp-v2",
-    "population_pr_head_input": "adb9582fe90522f7d8a7ada3fff9b7c2d207e800"
+    "population_pr_head_input": "bc21eb82bb440a170280c3d218147dc07842d991"
   },
   "live_collision_preflight": {
     "spatial_entity_hits": 0,
@@ -47,6 +48,22 @@
       "exact_source_version_url_hits": 0,
       "release_claim_hits": 0,
       "note": "Read-only connected Supabase preflight checked Sitka/Tlingit aliases, exact case key, Federal Reporter, Harring and Census TIGERweb source-version URLs."
+    },
+    "bukhara": {
+      "observed_at": "2026-09-29T16:59:32.775299+00:00",
+      "spatial_entity_hits": 0,
+      "research_case_ingest_hits": 0,
+      "exact_source_version_url_hits": 0,
+      "release_claim_hits": 0,
+      "note": "Checked Bukhara/Bokhara aliases, exact case key, two specialist evidence URLs and UNESCO geometry URL."
+    },
+    "taghaza": {
+      "observed_at": "2026-09-29T17:00:49.657588+00:00",
+      "spatial_entity_hits": 0,
+      "research_case_ingest_hits": 0,
+      "exact_source_version_url_hits": 0,
+      "release_claim_hits": 0,
+      "note": "Checked Taghaza/Taghazza/Teghaza aliases, exact case key and both evidence URLs. No geometry URL is admitted."
     }
   },
   "accepted": [
@@ -176,6 +193,56 @@
         "Sitka point is not 1886 courtroom or practice extent",
         "no P-level"
       ]
+    },
+    {
+      "target": "Bukhara",
+      "case_key": "production-batch-2026-09-29/bukhara/persian-slavery-1820-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/07_bukhara_persian_slavery_1820.json",
+      "content_sha256": "5b9a1d0ce2781013ecd63859d0c5a13a8c3cf79e04cfa5e3c13d62ab94ec6379",
+      "importer": "tools/add_research_case.py",
+      "claim_kind": "territorial_practice",
+      "practice_type": "slavery_enslavement",
+      "interval": [
+        1820,
+        1820
+      ],
+      "evidence_sources": 2,
+      "geometry_role": "modern_proxy_historic_city_navigation_only",
+      "geometry_source_native_id": "UNESCO WHC 602bis",
+      "expected_map_visibility": "one Bukhara navigation point if selected into a future release/materialization",
+      "production_action": "INSERT_NEW_UNPUBLISHED_AFTER_EXPLICIT_APPROVAL",
+      "publication_action": "HOLD",
+      "safeguards": [
+        "reported Meyendorff totals are not prevalence scores",
+        "no inference from Shi'i identity itself",
+        "UNESCO point is not slave-market location or Emirate extent",
+        "no P-level"
+      ]
+    },
+    {
+      "target": "Taghaza",
+      "case_key": "production-batch-2026-09-29/taghaza/slave-salt-mining-1352-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/08_taghaza_slave_salt_mining_1352.json",
+      "content_sha256": "cdde04f46665311bdf5731b791537d8a696de6e09a9fc0f7d2b731b902713bed",
+      "importer": "tools/add_research_case.py",
+      "claim_kind": "territorial_practice",
+      "practice_type": "slavery_enslavement",
+      "interval": [
+        1352,
+        1352
+      ],
+      "evidence_sources": 2,
+      "geometry_role": "unresolved",
+      "expected_map_visibility": "none until separate site-geometry review resolves conflicting modern coordinates",
+      "production_action": "INSERT_NEW_UNPUBLISHED_AFTER_EXPLICIT_APPROVAL",
+      "publication_action": "HOLD",
+      "safeguards": [
+        "single bounded translated observation",
+        "specialist reuse is not independent corroboration",
+        "no Massufa-wide or network-derived territorial inference",
+        "no exact worker count",
+        "no P-level"
+      ]
     }
   ],
   "held_exclusions": [
@@ -201,21 +268,21 @@
     "source_amendments": "SEPARATE_PENDING_RECONCILIATION"
   },
   "expected_database_delta_if_explicitly_ingested": {
-    "spatial_entity": 5,
-    "claim": 5,
+    "spatial_entity": 7,
+    "claim": 7,
     "legal_event": 1,
-    "territorial_practice_claim": 4,
-    "source": 13,
-    "source_version": 13,
-    "claim_source": 11,
-    "geometry_rows": 4,
-    "resolved_geometry": 3,
+    "territorial_practice_claim": 6,
+    "source": 18,
+    "source_version": 18,
+    "claim_source": 15,
+    "geometry_rows": 5,
+    "resolved_geometry": 4,
     "research_target": 1,
     "research_target_result": 1,
     "research_target_source": 2,
     "research_target_claim": 1,
     "research_target_review": 1,
-    "research_case_ingest": 5,
+    "research_case_ingest": 7,
     "release_claim": 0,
     "publication_status_changes": 0
   },
@@ -236,19 +303,26 @@
     "asante_first_insert": true,
     "asante_second_noop": true,
     "asante_modern_proxy_point_count": 1,
-    "sitka_run_id": null,
-    "sitka_first_insert": "PENDING_EXACT_HEAD_CI",
-    "sitka_second_noop": "PENDING_EXACT_HEAD_CI",
-    "sitka_modern_proxy_point_count": 1
+    "sitka_run_id": 36601344628,
+    "sitka_first_insert": true,
+    "sitka_second_noop": true,
+    "sitka_modern_proxy_point_count": 1,
+    "bukhara_run_id": null,
+    "bukhara_first_insert": "PENDING_EXACT_HEAD_CI",
+    "bukhara_second_noop": "PENDING_EXACT_HEAD_CI",
+    "taghaza_run_id": null,
+    "taghaza_first_insert": "PENDING_EXACT_HEAD_CI",
+    "taghaza_second_noop": "PENDING_EXACT_HEAD_CI"
   },
   "map_coverage_effect": {
-    "visible_geometry_additions": 3,
+    "visible_geometry_additions": 4,
     "visible_targets": [
       "Angkor",
       "Asante",
-      "Sitka"
+      "Sitka",
+      "Bukhara"
     ],
-    "note": "Angkor, Asante and Sitka each have one reviewed modern_proxy point used for navigation/evidence-locus context only. Goryeo has no practice geometry and Dahomey remains unresolved. No new shaded historical practice polygon is added."
+    "note": "Angkor, Asante, Sitka and Bukhara each have one reviewed modern_proxy point used for navigation/evidence-locus context only. Goryeo has no practice geometry; Dahomey and Taghaza remain unresolved. No new shaded historical practice polygon is added."
   },
   "pre_write_gates": [
     "Re-read current main, PR head, live collision preflight, and source-version reuse immediately before production ingest.",

@@ -77,6 +77,27 @@ class ProductionBatchCandidateTests(unittest.TestCase):
         self.assertIn("not the 1886 courtroom", spec["geometry"]["resolution_method"])
         self.assertIn("test case", spec["claim"]["notes"].lower())
 
+    def test_bukhara_is_bounded_1820_claim_with_navigation_proxy(self):
+        spec = load_territorial(CAND / "07_bukhara_persian_slavery_1820.json", require_case_key=True)
+        plan = territorial_plan(spec)
+        self.assertEqual(plan["claim_interval"], [1820, 1820])
+        self.assertEqual(plan["practice_type"], "slavery_enslavement")
+        self.assertIsNone(plan["practice_level"])
+        self.assertEqual(plan["geometry_accuracy"], "modern_proxy")
+        self.assertEqual(spec["geometry"]["geojson"]["type"], "Point")
+        self.assertIn("not the 1820 slave market", spec["geometry"]["resolution_method"])
+        self.assertIn("not converted into prevalence", spec["claim"]["notes"].lower())
+
+    def test_taghaza_is_bounded_1352_site_claim_with_no_geometry(self):
+        spec = load_territorial(CAND / "08_taghaza_slave_salt_mining_1352.json", require_case_key=True)
+        plan = territorial_plan(spec)
+        self.assertEqual(plan["claim_interval"], [1352, 1352])
+        self.assertEqual(plan["practice_type"], "slavery_enslavement")
+        self.assertIsNone(plan["practice_level"])
+        self.assertIsNone(plan["geometry_accuracy"])
+        self.assertNotIn("geometry", spec)
+        self.assertIn("single", spec["claim"]["territorial_practice"]["notes"].lower())
+
     def test_candidate_case_keys_are_unique(self):
         specs = [
             json.loads(p.read_text(encoding="utf-8"))
@@ -98,6 +119,8 @@ class ProductionBatchCandidateTests(unittest.TestCase):
                 "production-batch-2026-09-29/angkor/household-slavery-1296-1297-v1",
                 "production-batch-2026-09-29/asante/slavery-1807-1895-v1",
                 "production-batch-2026-09-29/sitka/sah-quah-slavery-1886-v1",
+                "production-batch-2026-09-29/bukhara/persian-slavery-1820-v1",
+                "production-batch-2026-09-29/taghaza/slave-salt-mining-1352-v1",
             ],
         )
         goryeo = load_legal(CAND / "01_goryeo_0956_legal_event.json", require_case_key=True)
@@ -111,11 +134,15 @@ class ProductionBatchCandidateTests(unittest.TestCase):
         self.assertEqual(manifest["accepted"][3]["content_sha256"], case_content_sha256(asante))
         sitka = load_territorial(CAND / "06_sitka_sah_quah_1886_slavery.json", require_case_key=True)
         self.assertEqual(manifest["accepted"][4]["content_sha256"], case_content_sha256(sitka))
-        self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["claim"], 5)
-        self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["source_version"], 13)
+        bukhara = load_territorial(CAND / "07_bukhara_persian_slavery_1820.json", require_case_key=True)
+        taghaza = load_territorial(CAND / "08_taghaza_slave_salt_mining_1352.json", require_case_key=True)
+        self.assertEqual(manifest["accepted"][5]["content_sha256"], case_content_sha256(bukhara))
+        self.assertEqual(manifest["accepted"][6]["content_sha256"], case_content_sha256(taghaza))
+        self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["claim"], 7)
+        self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["source_version"], 18)
         self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["release_claim"], 0)
-        self.assertEqual(manifest["map_coverage_effect"]["visible_geometry_additions"], 3)
-        self.assertEqual(manifest["map_coverage_effect"]["visible_targets"], ["Angkor", "Asante", "Sitka"])
+        self.assertEqual(manifest["map_coverage_effect"]["visible_geometry_additions"], 4)
+        self.assertEqual(manifest["map_coverage_effect"]["visible_targets"], ["Angkor", "Asante", "Sitka", "Bukhara"])
         self.assertEqual(len(manifest["held_exclusions"]), 3)
 
 
