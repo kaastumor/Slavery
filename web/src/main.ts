@@ -111,7 +111,7 @@ const yearLabel = document.querySelector<HTMLOutputElement>("#year-label")!;
 const timelineRange = document.querySelector<HTMLElement>("#timeline-range")!;
 const releaseBadge = document.querySelector<HTMLElement>("#release-badge")!;
 const mapWarning = document.querySelector<HTMLElement>("#map-warning")!;
-const coastalPreviewNote = document.querySelector<HTMLElement>("#coastal-preview-note")!;
+const coastalPreviewNote = document.querySelector<HTMLElement>("#coastal-preview-note");
 const fitActiveButton = document.querySelector<HTMLButtonElement>("#fit-active")!;
 const fitWorldButton = document.querySelector<HTMLButtonElement>("#fit-world")!;
 
@@ -175,6 +175,7 @@ async function loadCoastalPreview(apiResponse: ApiResponse): Promise<void> {
 }
 
 function updateCoastalFitNotice(year: number): void {
+  if (!coastalPreviewNote) return;
   const inScope = year >= 6 && year <= 8;
   const active = inScope && coastalPreviewGeometry !== null;
   releaseBadge.textContent = releaseBadgeBase + (active ? " · temporary coast fit" : "");
