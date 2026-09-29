@@ -326,21 +326,17 @@ def main() -> int:
         auth = manifest["authority"]
         if args.expected_main_sha != auth["github_main_sha"]:
             raise IngestError("expected main SHA does not match reviewed manifest authority")
-        if args.expected_pr_head_sha != manifest["authority"]["population_pr_head_input"]:
-            raise IngestError("expected PR head SHA does not match reviewed manifest input")
+        if args.expected_pr_head_sha != args.git_revision:
+            raise IngestError("production git revision must equal the explicitly refreshed PR head")
 
     import psycopg
     with psycopg.connect(args.dsn, autocommit=False) as conn:
         try:
-            with conn.transaction():
-                receipt = run(
-                    conn,
-                    manifest,
-                    git_revision=args.git_revision,
-                    rollback=(mode == "disposable_rollback"),
-                )
-                if mode == "disposable_rollback":
-                    conn.rollback()
+            if mode == "disposable_rollback":
+                receipt = run(conn, manifest, git_revision=args.git_revision, rollback=True)
+            else:
+                receipt = run(conn, manifest, git_revision=args.git_revision, rollback=False)
+                conn.commit()
         except Exception:
             conn.rollback()
             raise
