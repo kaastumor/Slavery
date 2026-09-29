@@ -813,7 +813,8 @@ async function boot(): Promise<void> {
 
     slider.min = String(minYear);
     slider.max = String(maxYear);
-    slider.value = String(-499 >= minYear && -499 <= maxYear ? -499 : maxYear);
+    const defaultYear = -499 >= minYear && -499 <= maxYear ? -499 : maxYear;
+    slider.value = String(coastalPreviewRequested && 6 >= minYear && 6 <= maxYear ? 6 : defaultYear);
     timelineRange.innerHTML =
       `<span>${formatYear(minYear)}</span><span>${formatYear(maxYear)}</span>`;
 
