@@ -7,6 +7,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         atlas: fileURLToPath(new URL("./index.html", import.meta.url)),
+        coastalPreview: fileURLToPath(new URL("./coastal-preview.html", import.meta.url)),
         rawBaseline: fileURLToPath(new URL("./raw-baseline.html", import.meta.url)),
         r1Candidate: fileURLToPath(new URL("./r1-candidate.html", import.meta.url)),
         researchPreview: fileURLToPath(new URL("./research-preview.html", import.meta.url)),

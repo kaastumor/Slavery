@@ -1,87 +1,42 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6 CE — coastal alignment preview</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <style>
-    html, body { height: 100%; margin: 0; font: 15px system-ui, sans-serif; }
-    body { display: flex; flex-direction: column; }
-    header { padding: 12px 18px; background: #fff; border-bottom: 1px solid #bbb; }
-    h1 { margin: 0 0 6px; font-size: 20px; }
-    p { margin: 5px 0; }
-    #map { flex: 1; min-height: 400px; background: #cedee2; }
-    #status { font-size: 13px; color: #444; }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>6 CE · coastal alignment preview</h1>
-    <p>Rome fitted to the displayed coastline. Compare the proposed view with the original sources or published v2. <a href="./raw-baseline.html">Untouched baseline</a></p>
-    <p id="status" role="status">Loading the pinned source…</p>
-    <nav aria-label="Inspection areas"><button id="med">Mediterranean</button> <button id="greece">Greece</button> <button id="north">North Sea</button></nav>
-  </header>
-  <div id="map" aria-label="Original Cliopatria geometry at 6 CE"></div>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script>
-    // Local comparison only: no changes to canonical data or public release.
-    const map = L.map('map', {zoomAnimation: false, fadeAnimation: false}).setView([40, 15], 5);
-    const scenes = {med: [[29, -11], [56, 43]], greece: [[36, 20], [40, 25]], north: [[48, -5], [57, 10]]};
-    for (const [id, bounds] of Object.entries(scenes)) document.getElementById(id).onclick = () => map.fitBounds(bounds, {animate: false});
-    const tiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-      attribution: 'Tiles &copy; Esri — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community', maxZoom: 18
-    });
-    async function load() {
-      const response = await fetch('./source-baseline/features.geojson');
-      if (!response.ok) throw new Error('Source returned ' + response.status);
-      const data = await response.json();
-      const storedResponse = await fetch('./source-baseline/stored-rome.geojson');
-      if (!storedResponse.ok) throw new Error('Stored source returned ' + storedResponse.status);
-      const stored = await storedResponse.json();
-      const paths = ['./source-baseline/land.geojson', './source-baseline/coastal-fit.geojson',
-        './source-baseline/published-v2.geojson'];
-      const [land, fitted, published] = await Promise.all(paths.map(async path => {
-        const result = await fetch(path);
-        if (!result.ok) throw new Error('Could not load ' + path);
-        return result.json();
-      }));
-      map.createPane('land'); map.getPane('land').style.zIndex = 190;
-      map.createPane('coastline'); map.getPane('coastline').style.zIndex = 450;
-      L.geoJSON(land, {pane: 'land', style: {fillColor: '#eee8dc', fillOpacity: 1, weight: 0}}).addTo(map);
-      L.geoJSON(land, {pane: 'coastline', interactive: false,
-        style: {fill: false, color: '#64736d', opacity: 0.65, weight: 0.65}}).addTo(map);
-      const roman = data.features.filter(f => f.properties.Name === 'Roman Empire');
-      if (roman.length !== 1) throw new Error('Expected one Roman Empire feature at 6 CE');
-      function layer(features, color) {
-        return L.geoJSON({type: 'FeatureCollection', features}, {
-          style: {color, weight: 0, fillColor: color, fillOpacity: 0.7},
-          onEachFeature: (feature, item) => {
-            const label = document.createElement('span');
-            label.textContent = feature.properties.Name + ' · ' + feature.properties.FromYear + '–' + feature.properties.ToYear;
-            item.bindPopup(label);
-          }
-        });
-      }
-      const rome = layer([stored], '#91473e');
-      const githubRome = layer(roman, '#91473e');
-      const proposed = layer([fitted], '#91473e').addTo(map);
-      const live = layer([published], '#91473e');
-      const neighbours = layer(data.features.filter(f => f.properties.Name !== 'Roman Empire'), '#527f8a');
-      L.control.layers({
-        'Proposed: GitHub + coastal strip': proposed,
-        'Published v2': live,
-        'Stored Seshat API geometry (record 16269)': rome,
-        'GitHub source geometry': githubRome
-      }, {
-        'Esri World Imagery (Seshat default)': tiles,
-        'Other original top-level features': neighbours
-      }, {collapsed: false}).addTo(map);
-      map.fitBounds(scenes.med, {animate: false});
-      const parts = roman[0].geometry.type === 'MultiPolygon' ? roman[0].geometry.coordinates.length : 1;
-      document.querySelector('#status').textContent = 'Local preview · 25 km coastal strip · inland borders beyond the strip preserved · source records unchanged';
-    }
-    load().catch(error => { document.querySelector('#status').textContent = error.message; });
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d211f" />
+    <meta name="description" content="Historical Slavery Atlas: a time-aware evidence synthesis of slavery, coerced labour and servile dependency." />
+    <link rel="stylesheet" href="/src/evidence-dimensions.css" />
+    <link rel="stylesheet" href="/src/accessibility.css" />
+    <title>Historical Slavery Atlas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#panel">Skip map and go to evidence</a>
+    <div id="app">
+      <header class="appbar">
+        <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><div class="eyebrow">Historical evidence atlas</div><h1>Historical Slavery Atlas</h1></div></div>
+        <div class="timeline"><div class="timeline-topline"><label class="timeline-label" for="year">Year</label><output id="year-label" for="year" aria-live="polite">Loading…</output></div><input id="year" type="range" step="1" aria-label="Historical year" aria-describedby="timeline-help" /><div id="timeline-range" class="timeline-range"></div><span id="timeline-help" class="visually-hidden">Use the arrow keys to change the selected year. Claim intervals and geometry availability are evaluated independently.</span></div>
+        <div class="app-status"><div id="release-badge" class="release-badge">Loading release…</div><div id="status" class="status" role="status">Loading evidence…</div></div>
+      </header>
+      <main class="workspace">
+        <section class="map-shell" aria-label="Historical map">
+          <div id="map" aria-label="Interactive historical map. Equivalent evidence is available in the adjacent evidence panel."></div>
+          <div id="map-warning" class="map-warning" role="alert" hidden>MapLibre reported a rendering error. Check the browser console for details.</div>
+          <div class="map-toolbar" aria-label="Map view controls"><button id="fit-active" type="button" title="Fit all active evidence">Active evidence</button><button id="fit-world" type="button" title="Reset to world view">World</button></div>
+          <details class="legend">
+            <summary>Legend &amp; evidence layers</summary>
+            <div class="legend-body">
+              <div class="legend-section-title">Territorial practice · map fill</div>
+              <div class="legend-row legend-levels"><span class="legend-chip p1">P1</span><span class="legend-chip p2">P2</span><span class="legend-chip p3">P3</span><span class="legend-chip p4">P4</span></div>
+              <div class="legend-row"><span class="legend-dot disputed" aria-hidden="true"></span><span>Genuinely disputed classification</span></div>
+              <div class="legend-section-title">Independent evidence dimensions</div>
+              <div class="legend-dimensions"><span class="dimension-key territorial">Territorial practice</span><span class="dimension-key legal">Legal / state regime</span><span class="dimension-key external">External / network participation</span><span class="dimension-key coverage">Research coverage</span><span class="dimension-key geometry">Historical geometry</span></div>
+              <div class="legend-note">Only territorial-practice claims are rendered by this map adapter. Legal status, external/network participation, research coverage and geometry remain separate dimensions. Missing evidence, under-review state and unresolved geometry are not historical absence.</div>
+            </div>
+          </details>
+        </section>
+        <aside id="panel" class="panel" aria-label="Canonical release evidence for selected year" aria-live="polite" tabindex="-1"><div class="panel-loading">Loading canonical release evidence…</div></aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>

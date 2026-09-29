@@ -1,0 +1,24 @@
+{
+  "status": "local presentation candidate; not released historical authority",
+  "scope": "Roman Empire 6..8 CE only",
+  "source_features_sha256": "8cb3b8d0458a1b3d3ac485a83466bb75d4e2cf28669b10f76af49e8e4af18df1",
+  "base_fit_sha256": "963e7365cd73fb288499c4b327158f34267e093b389267594cd11f8f2c462d7a",
+  "output_sha256": "f5215defe2ea5fa4d3ea98d15268f4d9bc034179c47e17b69c43500ce1dc917c",
+  "checks": {
+    "valid": true,
+    "outside_land_degrees2": 0.0,
+    "lost_source_land_degrees2": 8.232767104956713e-17,
+    "added_neighbor_overlap_degrees2": 0.0,
+    "added_unsupported_land_degrees2": 0.0,
+    "original_additions_km2": 101659.2,
+    "accepted_additions_km2": 92476.58,
+    "excluded_additions_km2": 9182.58,
+    "accepted_additions_pct_of_source_land": 2.576
+  },
+  "limits": [
+    "Other dates source-screened only; regional visual and release matching pending",
+    "Source-to-record difference unresolved",
+    "Historical island and border review pending",
+    "Prior 2% policy exception pending release review"
+  ]
+}

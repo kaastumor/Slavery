@@ -2,11 +2,12 @@
 
 ## Outcome
 
-The local map now compares a coastal-fit candidate with published v2 and both
-original source variants. The previous raw baseline remains available through
-its link. Fixed Greece, Mediterranean and North Sea views make comparisons
-repeatable. This is a presentation experiment for the 6–8 CE Roman slice, not a
-new canonical release or a replacement of the evidence application.
+The local `web/coastal-preview.html` compares a coastal-fit candidate with
+published v2 and both original source variants. The raw baseline remains at
+`web/raw-baseline.html`; `web/index.html` again opens the evidence application.
+Fixed Greece, Mediterranean and North Sea views make comparisons repeatable.
+This is a presentation experiment for the 6–8 CE Roman slice, not a new
+canonical release or a replacement of the evidence application.
 
 ## Existing approach adopted
 
@@ -86,10 +87,60 @@ integration into the evidence application, required release checks, and scoped
 publication authorization. No merge, deployment or public-channel update was
 performed in this task.
 
+### Follow-up adversarial audit
+
+`tools/audit_coastal_strip_preview.py` checks the same pinned 46-feature 6 CE
+selection against the exported fitted polygon. In an equal-area projection, the
+candidate adds about 101,659 km². About 4,934 km² of those additions overlap
+five other top-level source polygons: Nabataeans (1,787 km²), Thracian Kingdom
+(1,536 km²), Kingdom of Pontus (674 km²), Mauretania (659 km²), and Greek
+City-States (278 km²). These are added overlaps, not necessarily new conflicts
+in the source corpus. Separately, 151 land components with no original Roman
+source coverage gain about 4,388 km² of fill. The count is a geometry signal,
+not evidence that any specific island was or was not Roman.
+
+This audit does not validate other dates, source-to-record identity, or reviewed
+neighbor boundaries. The pinned GitHub polygon is still known to differ from
+the stored Seshat API record. The candidate therefore has **not** passed the
+integration gate. The evidence application continues to consume the unchanged
+released geometry; the fitted version remains a separately labeled preview.
+
+### Constrained local candidate and adjacent-interval screen
+
+With sponsor authorization for a **local presentation candidate only**,
+`tools/constrain_coastal_strip_preview.py` now removes additions that overlap
+other pinned top-level 6 CE source polygons or lie on a land component with no
+original Roman source coverage. It never removes source-covered land. The
+constrained candidate adds about 92,477 km² (2.576% of source-covered land),
+after excluding about 9,183 km² of the earlier additions. The repeat audit
+finds zero added neighbor overlap and zero newly colored unsupported land
+components within this 6 CE source selection. Both candidates remain selectable
+on `web/coastal-preview.html`; the constrained version is the default.
+
+`tools/audit_coastal_strip_intervals.py` screened the adjacent pinned Roman
+source intervals using the same local land crop. The raw 25 km method would add
+2.796% at 1–5 CE, 2.832% at 6–8 CE, and 2.893% at 9–13 CE. Each raw slice also
+adds thousands of square kilometres over other top-level source polygons and
+onto land components without Roman source coverage. The corresponding stored
+authority records (native IDs 16261, 16269 and 16272) are **not exactly equal**
+to the GitHub features. The 14–22 CE release uses specialist AWMC geometry, so
+the GitHub interval is not a candidate replacement for it. This is a source-level
+screen, not visual acceptance or release source-to-record reconciliation.
+
+The earlier 2% limit still is not met. The sponsor's local-candidate authorization
+does not promote the GitHub variant or the 25 km rule to released/canonical
+status. Broader dates, other regions, historical island/border review and the
+normal release gate remain open; the evidence application has no geometry
+substitution.
+
 Rebuild:
 
 ```powershell
 python tools/build_coastal_strip_preview.py <pinned-ne_10m_land.geojson>
+python tools/audit_coastal_strip_preview.py
+python tools/constrain_coastal_strip_preview.py
+python tools/audit_coastal_strip_preview.py --candidate coastal-fit-constrained.geojson
+python tools/audit_coastal_strip_intervals.py <pinned-cliopatria-archive.zip>
 python -m unittest discover -s tests -p test_coastal_strip_preview.py -v
 cd web
 npm run build

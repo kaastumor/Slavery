@@ -1,9 +1,10 @@
 # 6 CE map reset and structural investigation
 
-Follow-up: the untouched reset is now at `web/raw-baseline.html`. After the
-sponsor requested a solution, the local root became the comparison described in
-[the coastal fitting preview](COASTAL_FIT_PREVIEW_2026_09_29.md). The investigation
-below records the preceding reset phase.
+Follow-up: the untouched reset is now at `web/raw-baseline.html`. The coastal
+comparison is at `web/coastal-preview.html`; the local root again serves the
+evidence application. See [the coastal fitting preview](COASTAL_FIT_PREVIEW_2026_09_29.md)
+for the candidate and its subsequent adversarial audit. The investigation below
+records the preceding reset phase.
 
 ## Scope and status
 
