@@ -3359,7 +3359,7 @@ closure are pinned. Neither gate mutates PostgreSQL, v0.8.1 or the public channe
 
 
 ## D-122 — Historical polygon rendering preserves source-covered canonical land
-**Date:** 2026-09-29  
+**Date:** 2026-09-29
 **Status:** proposed / implementation candidate under P0 #365; no release effect yet
 
 **Trigger:** sponsor visual review found neutral land gaps and fragmented/unmarked areas
@@ -3412,7 +3412,7 @@ Refs #365, PR #366, D-055, D-116, D-119, D-120, D-121.
 
 
 ## D-123 — Neutral historical-polity context is not slavery evidence
-**Date:** 2026-09-29  
+**Date:** 2026-09-29
 **Status:** proposed / bounded prototype under P0 #365; no public release effect yet
 
 **Trigger:** P0 map review separated two visually similar failure classes. Some neutral land is

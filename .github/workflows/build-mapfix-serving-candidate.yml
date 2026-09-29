@@ -9,10 +9,13 @@ on:
       - tools/build_source_land_fidelity_candidates.py
       - tests/test_v081_mapfix_candidate.py
       - docs/08_DECISIONS_LOG.md
+      - data/serving/v0.8.1-public-mvp-v2/**
+      - web/public/release-geometries/v0.8.1-public-mvp-v2/**
+      - supabase/functions/atlas-data/v081_v2_payload.ts
       - .github/workflows/build-mapfix-serving-candidate.yml
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   build:
@@ -22,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
@@ -41,24 +44,23 @@ jobs:
           digest=hashlib.sha256(out.read_bytes()).hexdigest()
           assert digest == "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416", digest
           PY
-      - name: Build immutable map-fix candidate
+      - name: Rebuild immutable map-fix candidate at the exact PR head
         run: |
           python tools/build_v081_mapfix_materialization.py \
             --land /tmp/ne_10m_land.geojson \
             --write
       - name: Run candidate contract tests
         run: python -m unittest tests.test_v081_mapfix_candidate -v
-      - name: Commit generated candidate
+      - name: Verify committed candidate matches rebuilt bytes
         run: |
-          git config user.name "atlas-mapfix-bot"
-          git config user.email "atlas-mapfix-bot@users.noreply.github.com"
-          git add \
-            data/serving/v0.8.1-public-mvp-v2 \
-            web/public/release-geometries/v0.8.1-public-mvp-v2 \
+          paths=(
+            data/serving/v0.8.1-public-mvp-v2
+            web/public/release-geometries/v0.8.1-public-mvp-v2
             supabase/functions/atlas-data/v081_v2_payload.ts
-          if git diff --cached --quiet; then
-            echo "Generated candidate already matches."
-            exit 0
+          )
+          if [ -n "$(git status --porcelain -- "${paths[@]}")" ]; then
+            git status --short -- "${paths[@]}"
+            git diff --stat -- "${paths[@]}"
+            echo "Committed map-fix candidate differs from the exact-head rebuild."
+            exit 1
           fi
-          git commit -m "Generate immutable v0.8.1 map-fix serving candidate"
-          git push origin "HEAD:${{ github.head_ref }}"
