@@ -8,8 +8,11 @@ R1_CANDIDATE = ROOT / "web" / "r1-candidate.html"
 
 
 class Gate5WebEntrypointTests(unittest.TestCase):
-    def test_public_root_is_exact_staged_canonical_entrypoint(self) -> None:
-        self.assertEqual(PUBLIC_ROOT.read_bytes(), CANONICAL_STAGE.read_bytes())
+    def test_public_root_preserves_staged_entrypoint_with_temporary_notice(self) -> None:
+        html = PUBLIC_ROOT.read_text(encoding="utf-8")
+        notice = '          <div id="coastal-preview-note" class="map-preview-note" hidden></div>\n'
+        self.assertEqual(html.count(notice), 1)
+        self.assertEqual(html.replace(notice, ""), CANONICAL_STAGE.read_text(encoding="utf-8"))
 
     def test_historical_r1_candidate_remains_available_off_root(self) -> None:
         html = R1_CANDIDATE.read_text(encoding="utf-8")
