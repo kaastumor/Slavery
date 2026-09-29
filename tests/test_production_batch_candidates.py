@@ -96,7 +96,8 @@ class ProductionBatchCandidateTests(unittest.TestCase):
         self.assertIsNone(plan["practice_level"])
         self.assertIsNone(plan["geometry_accuracy"])
         self.assertNotIn("geometry", spec)
-        self.assertIn("site-level 1352", spec["claim"]["territorial_practice"]["notes"].lower())\n        self.assertIn("no p-level", spec["claim"]["territorial_practice"]["notes"].lower())
+        self.assertIn("site-level 1352", spec["claim"]["territorial_practice"]["notes"].lower())
+        self.assertIn("no p-level", spec["claim"]["territorial_practice"]["notes"].lower())
 
     def test_candidate_case_keys_are_unique(self):
         specs = [
