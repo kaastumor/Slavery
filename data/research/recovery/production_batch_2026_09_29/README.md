@@ -150,3 +150,23 @@ All 23 planned new historical subjects are now explicitly accounted for: **12 ac
 Exact-head foundation CI run **36606730574** passed the batch-4/5 additions: Imerina, Zanzibar, Kongo, Khiva and Istanbul each inserted once into disposable PostGIS and replayed unchanged as a no-op, with NULL P-levels and modern-proxy navigation points only. Together with the earlier green candidate runs, all 12 accepted staging cases now have deterministic disposable ingestion evidence.
 
 `deployment_readiness_receipt.json` freezes the current staging gate. The next operation is a consequential production database write and therefore remains an explicit sponsor gate. Production ingestion would still create only reviewed, unpublished research rows; release membership and public serving remain separate.
+
+
+## Atomic ingest and successor-release preparation
+
+The accepted 12-case subset now has a single-transaction driver:
+`tools/ingest_population_subset.py`. Its default behavior is plan-only.
+CI uses only the explicit disposable mode, which inserts the complete subset,
+checks structural deltas, replays all twelve case keys as no-ops, verifies nine
+resolved navigation/context geometries, and rolls the transaction back.
+
+The production path is intentionally harder to invoke: it requires an explicit
+issue-scoped authorization token, a separate environment gate, and reviewed
+main/PR-head identities. It still cannot publish claims, add release membership,
+or move a serving channel.
+
+`production_ingest_plan.json` records the exact pre-write/post-write contract.
+`post_ingest_release_candidate_skeleton.json` deliberately leaves generated
+production IDs empty until an authorized write actually creates them. Release
+selection, changelog/QC, unresolved-issue closure, map/evidence-panel review,
+rollback and public cutover remain later gates.
