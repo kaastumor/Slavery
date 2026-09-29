@@ -1,5 +1,10 @@
 # 6 CE map reset and structural investigation
 
+Follow-up: the untouched reset is now at `web/raw-baseline.html`. After the
+sponsor requested a solution, the local root became the comparison described in
+[the coastal fitting preview](COASTAL_FIT_PREVIEW_2026_09_29.md). The investigation
+below records the preceding reset phase.
+
 ## Scope and status
 
 Requested outcome: remove the accumulated custom fixes from the working map,
@@ -84,6 +89,41 @@ have 32 components, but the stored API geometry has 13 interior rings whereas
 the GitHub feature has none. Their exact historical/version relationship has
 not been established; the GitHub export must not silently replace the stored
 authority as if it were byte-equivalent.
+
+### Screenshot follow-up: Gulf of Corinth
+
+The user's second close-up selects the stored Seshat API geometry; the third
+selects the GitHub geometry. The angular cutouts around the Gulf of Corinth are
+present in the stored source and absent from the GitHub feature.
+
+Follow-up retrieval of [Seshat API record 16269](https://seshat-db.com/api/core/cliopatria-shapefiles/16269/)
+on 2026-09-29 established that **both `geom` and `simplified_geom` exactly match
+the stored geometry**, coordinate for coordinate (`equals_exact(..., 0)`). Both
+contain 32 components, 13 interior rings and 1,325 vertices. Thus these cutouts
+are already present in the upstream API response; the local import, Leaflet,
+and the later Atlas clipping are not their point of introduction.
+
+Six of the API interior rings lie in the Gulf of Corinth region (approximately
+22.20–23.06 E, 37.96–38.42 N). The largest has about 1,400 square kilometres of
+area; five smaller rings are about 49 square kilometres each (EPSG:6933
+equal-area calculation). These are geometric cutouts, not evidence of historical
+exclusions. Their provenance/intent has not been established.
+
+The source variants also differ in their outer boundaries: removing interior
+rings for analysis does not make their shapes equal. Stored-source outer rings
+have 1,252 vertices versus GitHub's 1,256. This rules out treating the entire
+difference as merely missing hole handling in the viewer.
+
+Metadata differs too: the API record has `member_of: "(Roman Empire)"`, whereas
+the pinned GitHub feature has empty `MemberOf`. Searching the complete pinned
+archive finds only one Roman Empire feature covering 6 CE, at zero-based ordinal
+1118 (6–8 CE). No alternative Roman component in that archive explains the API
+record. The exact upstream version/processing relationship remains unresolved.
+
+The GitHub view visibly fills across the gulf's water as well as eliminating
+the angular gaps. It is a useful clean source comparison, but its smoother
+appearance alone does not establish coastline alignment or justify promotion.
+This follow-up changed documentation only; no geometry correction was applied.
 
 | Geometry inspected | Components | Interior rings | Vertices |
 | --- | ---: | ---: | ---: |
