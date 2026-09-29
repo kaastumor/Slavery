@@ -23,8 +23,8 @@ async function main() {
 
     const badge = (await page.locator("#release-badge").innerText()).trim();
     const status = (await page.locator("#status").innerText()).trim();
-    if (!badge.includes("v0.8.0")) {
-      failures.push("current canonical root does not expose v0.8.0 release identity: " + badge);
+    if (!badge.startsWith("v0.8.1")) {
+      failures.push("current canonical root does not expose v0.8.1 release identity: " + badge);
     }
     if (badge.includes("candidate") || badge.includes("non-canonical") || badge.includes("preview")) {
       failures.push("current canonical root still presents a candidate/preview boundary: " + badge);

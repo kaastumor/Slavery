@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6 CE — original Cliopatria baseline</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    html, body { height: 100%; margin: 0; font: 15px system-ui, sans-serif; }
+    body { display: flex; flex-direction: column; }
+    header { padding: 12px 18px; background: #fff; border-bottom: 1px solid #bbb; }
+    h1 { margin: 0 0 6px; font-size: 20px; }
+    p { margin: 5px 0; }
+    #map { flex: 1; min-height: 400px; background: #fff; }
+    #status { font-size: 13px; color: #444; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>6 CE · original Cliopatria baseline</h1>
+    <p>Original source geometry over Seshat’s imagery. Switch between our stored Seshat API source and the GitHub export.</p>
+    <p id="status" role="status">Loading the pinned source…</p>
+  </header>
+  <div id="map" aria-label="Original Cliopatria geometry at 6 CE"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // Clean baseline: no Atlas API, render assets, clipping, recovery or smoothing.
+    const map = L.map('map').setView([40, 15], 5);
+    const tiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community', maxZoom: 18
+    }).addTo(map);
+    async function load() {
+      const response = await fetch('./source-baseline/features.geojson');
+      if (!response.ok) throw new Error('Source returned ' + response.status);
+      const data = await response.json();
+      const storedResponse = await fetch('./source-baseline/stored-rome.geojson');
+      if (!storedResponse.ok) throw new Error('Stored source returned ' + storedResponse.status);
+      const stored = await storedResponse.json();
+      const roman = data.features.filter(f => f.properties.Name === 'Roman Empire');
+      if (roman.length !== 1) throw new Error('Expected one Roman Empire feature at 6 CE');
+      function layer(features, color) {
+        return L.geoJSON({type: 'FeatureCollection', features}, {
+          style: {color, weight: 0, fillColor: color, fillOpacity: 0.7},
+          onEachFeature: (feature, item) => {
+            const label = document.createElement('span');
+            label.textContent = feature.properties.Name + ' · ' + feature.properties.FromYear + '–' + feature.properties.ToYear;
+            item.bindPopup(label);
+          }
+        });
+      }
+      const rome = layer([stored], '#91473e').addTo(map);
+      const githubRome = layer(roman, '#91473e');
+      const neighbours = layer(data.features.filter(f => f.properties.Name !== 'Roman Empire'), '#527f8a');
+      L.control.layers({
+        'Stored Seshat API geometry (record 16269)': rome,
+        'GitHub source geometry': githubRome
+      }, {
+        'Esri World Imagery (Seshat default)': tiles,
+        'Other original top-level features': neighbours
+      }, {collapsed: false}).addTo(map);
+      map.fitBounds(rome.getBounds(), {padding: [20, 20]});
+      const parts = roman[0].geometry.type === 'MultiPolygon' ? roman[0].geometry.coordinates.length : 1;
+      document.querySelector('#status').textContent = 'Rome: 6–8 CE · GitHub: ' + parts + ' components · stored API: ' + stored.geometry.coordinates.length + ' components · clipping, recovery and smoothing: off';
+    }
+    load().catch(error => { document.querySelector('#status').textContent = error.message; });
+  </script>
+</body>
+</html>

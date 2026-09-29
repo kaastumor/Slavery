@@ -111,6 +111,7 @@ const yearLabel = document.querySelector<HTMLOutputElement>("#year-label")!;
 const timelineRange = document.querySelector<HTMLElement>("#timeline-range")!;
 const releaseBadge = document.querySelector<HTMLElement>("#release-badge")!;
 const mapWarning = document.querySelector<HTMLElement>("#map-warning")!;
+const coastalPreviewNote = document.querySelector<HTMLElement>("#coastal-preview-note");
 const fitActiveButton = document.querySelector<HTMLButtonElement>("#fit-active")!;
 const fitWorldButton = document.querySelector<HTMLButtonElement>("#fit-world")!;
 
@@ -140,6 +141,56 @@ let release: ApiResponse | null = null;
 let servingMode: "live" | "static_fallback" = "live";
 let geometryLoadGeneration = 0;
 const geometryAssetLoads = new globalThis.Map<string, Promise<void>>();
+const mapParams = new URLSearchParams(window.location.search);
+const coastalPreviewRequested = mapParams.get("coastal-preview") === "1";
+const coastalFitEnabled = mapParams.get("coastal-fit") !== "off";
+const coastalPreviewGeometryId = "edb239a8-4d54-44e4-970a-affb7c9af22e";
+const coastalPreviewLandSha256 = "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416";
+let coastalPreviewGeometry: Geometry | null = null;
+let coastalFitUnavailable: string | null = null;
+let releaseBadgeBase = "";
+
+async function loadCoastalPreview(apiResponse: ApiResponse): Promise<void> {
+  if (!coastalFitEnabled) return;
+  if (apiResponse.release_version !== "v0.8.1" ||
+      apiResponse.cartography?.content_sha256 !== coastalPreviewLandSha256) {
+    coastalFitUnavailable = "Temporary coast fit unavailable for this release or land fabric; showing released geometry.";
+    return;
+  }
+  try {
+    const response = await fetch(new URL("./source-baseline/coastal-fit-constrained.geojson", document.baseURI));
+    if (!response.ok) throw new Error(`coastal preview returned ${response.status}`);
+    const candidate = await response.json() as Feature;
+    if (candidate.properties?.Name !== "Roman Empire" ||
+        candidate.properties?.FromYear !== 6 || candidate.properties?.ToYear !== 8 ||
+        candidate.properties?.method !== "coastal-strip-fit-constrained" ||
+        !candidate.geometry || !["Polygon", "MultiPolygon"].includes(candidate.geometry.type)) {
+      throw new Error("coastal preview metadata mismatch");
+    }
+    coastalPreviewGeometry = candidate.geometry;
+  } catch (error) {
+    console.error("Local coastal preview unavailable", error);
+    coastalFitUnavailable = "Temporary coast fit could not load; showing released geometry.";
+  }
+}
+
+function updateCoastalFitNotice(year: number): void {
+  if (!coastalPreviewNote) return;
+  const inScope = year >= 6 && year <= 8;
+  const active = inScope && coastalPreviewGeometry !== null;
+  releaseBadge.textContent = releaseBadgeBase + (active ? " · temporary coast fit" : "");
+  releaseBadge.classList.toggle("preview", !release?.canonical || active);
+  if (active) {
+    coastalPreviewNote.innerHTML = "Temporary 6–8 CE map fit: pinned GitHub source plus a constrained 25 km coastal strip (2.576% added area). Historical borders and islands remain under review. Released evidence is unchanged. ";
+    const link = document.createElement("a");
+    link.href = `./index.html?coastal-fit=off&year=${year}`;
+    link.textContent = "View released geometry";
+    coastalPreviewNote.append(link);
+  } else {
+    coastalPreviewNote.textContent = inScope && coastalFitUnavailable ? coastalFitUnavailable : "";
+  }
+  coastalPreviewNote.hidden = !active && !(inScope && coastalFitUnavailable);
+}
 
 const hoverPopup = new Popup({
   closeButton: false,
@@ -262,6 +313,12 @@ function geometryForYear(place: Place, year: number): GeometryRecord | null {
   ) ?? null;
 }
 
+function displayGeometry(record: GeometryRecord | null, year: number): Geometry | null {
+  if (!record?.geometry) return null;
+  return coastalPreviewGeometry && record.geometry_id === coastalPreviewGeometryId &&
+    year >= 6 && year <= 8 ? coastalPreviewGeometry : record.geometry;
+}
+
 function unresolvedGeometryForYear(place: Place, year: number): GeometryRecord | null {
   return place.geometries.find(
     (geometry) =>
@@ -290,11 +347,12 @@ function buildEvidenceCollections(year: number): { polygons: FeatureCollection; 
     if (claims.length === 0) continue;
 
     const geometry = geometryForYear(place, year);
-    if (!geometry?.geometry) continue;
+    const shown = displayGeometry(geometry, year);
+    if (!geometry || !shown) continue;
 
     const feature: Feature = {
       type: "Feature",
-      geometry: geometry.geometry,
+      geometry: shown,
       properties: {
         spatial_entity_id: place.spatial_entity_id,
         name: place.display_name || place.name,
@@ -304,9 +362,9 @@ function buildEvidenceCollections(year: number): { polygons: FeatureCollection; 
       },
     };
 
-    if (geometry.geometry.type === "Polygon" || geometry.geometry.type === "MultiPolygon") {
+    if (shown.type === "Polygon" || shown.type === "MultiPolygon") {
       polygons.push(feature);
-    } else if (geometry.geometry.type === "Point" || geometry.geometry.type === "MultiPoint") {
+    } else if (shown.type === "Point" || shown.type === "MultiPoint") {
       points.push(feature);
     }
   }
@@ -419,6 +477,9 @@ function renderPlace(place: Place, year: number): void {
       <details class="geometry-details">
         <summary>Historical geometry</summary>
         <div class="geometry-body">
+          ${coastalPreviewGeometry && geometry?.geometry_id === coastalPreviewGeometryId && year >= 6 && year <= 8
+            ? `<div class="source-meta">The map fill uses a temporary coastal display fit. The geometry status and source details below describe the unchanged released record.</div>`
+            : ""}
           ${escapeHtml(
             geometry?.resolution_method ??
             unresolved?.resolution_method ??
@@ -550,7 +611,7 @@ function boundsForGeometry(geometry: Geometry): LngLatBounds | null {
 }
 
 function focusPlace(place: Place, year: number): void {
-  const geometry = geometryForYear(place, year)?.geometry;
+  const geometry = displayGeometry(geometryForYear(place, year), year);
   if (!geometry) return;
 
   if (geometry.type === "Point") {
@@ -575,7 +636,7 @@ function fitActiveEvidence(year: number): void {
   for (const place of places) {
     if (activeClaims(place, year).length === 0) continue;
 
-    const geometry = geometryForYear(place, year)?.geometry;
+    const geometry = displayGeometry(geometryForYear(place, year), year);
     if (!geometry) continue;
 
     visitCoordinates(geometry, (lng, lat) => {
@@ -596,6 +657,7 @@ function resetWorldView(): void {
 function updateMap(year: number): void {
   yearLabel.value = formatYear(year);
   yearLabel.textContent = formatYear(year);
+  updateCoastalFitNotice(year);
 
   const collections = buildEvidenceCollections(year);
   const polygonSource = map.getSource("evidence-polygons") as GeoJSONSource | undefined;
@@ -737,8 +799,8 @@ async function boot(): Promise<void> {
     release = apiResponse;
     places = apiResponse.places;
 
-    releaseBadge.textContent =
-      `${apiResponse.release_version}${apiResponse.canonical ? "" : " · preview"}${servingMode === "static_fallback" ? " · static fallback" : ""}`;
+    releaseBadgeBase = `${apiResponse.release_version}${apiResponse.canonical ? "" : " · preview"}${servingMode === "static_fallback" ? " · static fallback" : ""}`;
+    releaseBadge.textContent = releaseBadgeBase;
     releaseBadge.classList.toggle("preview", !apiResponse.canonical);
     releaseBadge.title =
       `Schema ${apiResponse.schema_version} · ${apiResponse.data_boundary}` +
@@ -746,6 +808,7 @@ async function boot(): Promise<void> {
         ? ` · serving adapter ${apiResponse.serving_materialization_id}`
         : "") +
       (servingMode === "static_fallback" ? " · live API unavailable; showing deployed snapshot" : "");
+    await loadCoastalPreview(apiResponse);
 
     const years = places.flatMap((place) =>
       place.claims.flatMap((claim) =>
@@ -767,7 +830,11 @@ async function boot(): Promise<void> {
 
     slider.min = String(minYear);
     slider.max = String(maxYear);
-    slider.value = String(-499 >= minYear && -499 <= maxYear ? -499 : maxYear);
+    const defaultYear = -499 >= minYear && -499 <= maxYear ? -499 : maxYear;
+    const requestedYear = mapParams.has("year") ? Number(mapParams.get("year")) : null;
+    slider.value = String(requestedYear !== null && Number.isInteger(requestedYear) &&
+      requestedYear >= minYear && requestedYear <= maxYear ? requestedYear :
+      coastalPreviewRequested && 6 >= minYear && 6 <= maxYear ? 6 : defaultYear);
     timelineRange.innerHTML =
       `<span>${formatYear(minYear)}</span><span>${formatYear(maxYear)}</span>`;
 

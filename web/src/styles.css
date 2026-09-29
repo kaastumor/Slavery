@@ -173,6 +173,21 @@ h1 {
   line-height: 1.4;
 }
 
+.map-preview-note {
+  position: absolute;
+  z-index: 12;
+  top: 54px;
+  left: 14px;
+  max-width: min(460px, calc(100% - 28px));
+  padding: 8px 11px;
+  color: #42382f;
+  background: rgba(255,247,224,.96);
+  border: 1px solid #bea16d;
+  border-radius: 6px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
 .map-toolbar {
   position: absolute;
   z-index: 11;

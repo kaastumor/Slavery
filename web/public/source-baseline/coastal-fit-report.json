@@ -1,0 +1,27 @@
+{
+  "status": "local presentation preview; not historical authority or published release",
+  "approach_reference": "https://github.com/laurencefwhite/history-atlas#coastlines",
+  "implementation": "independent; reference code unavailable",
+  "projection": "EPSG:8857",
+  "coastal_strip_m": 25000,
+  "source": "Pinned Cliopatria GitHub feature, Roman Empire, 6..8 CE",
+  "land_sha256": "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416",
+  "checks": {
+    "valid": true,
+    "outside_land_m2": 0.0,
+    "lost_source_land_m2": 1.1479583011573483e-07,
+    "added_beyond_coastal_strip_m2": 0.0,
+    "added_beyond_source_distance_m2": 0.0,
+    "added_land_km2": 101674.93862235387,
+    "added_land_pct": 2.8319174768109714,
+    "final_valid": true,
+    "final_outside_land_degrees2": 0.0,
+    "final_lost_source_land_degrees2": 1.5112454636274454e-15,
+    "final_change_outside_strip_degrees2": 5.28892700892946e-11
+  },
+  "output_sha256": {
+    "coastal-fit.geojson": "963e7365cd73fb288499c4b327158f34267e093b389267594cd11f8f2c462d7a",
+    "land.geojson": "c5e8959f80f1c3012c9416f8fcac35f1563ad2d142b0e40d4dd6e0f1d7d4e070",
+    "published-v2.geojson": "a0ebae9572e46a30483307f3dfae4b3d6b4f7c3dfc851b3b9b9c52ebea79d322"
+  }
+}
