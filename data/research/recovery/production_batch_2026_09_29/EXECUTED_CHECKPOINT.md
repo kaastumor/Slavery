@@ -37,3 +37,10 @@ specified; no archival byte checksums or independent review are claimed.
 
 No new workflow, schedule, infrastructure or production write was added. The
 source amendments are pending acceptance, not a request to reopen cartography.
+
+
+## Deployment-ingest readiness checkpoint
+
+The 23-subject production register is now fully dispositioned: 12 accepted staging candidates and 11 explicit HOLDs. Exact-head CI run 36606730574 passes the final batch-4/5 disposable insert/no-op checks. Combined expected production delta for the accepted new subset is 12 claims (1 legal event, 11 territorial practice), 12 spatial identities, 28 new source versions after observed reuse, 10 geometry rows of which 9 are reviewed modern-proxy points, and zero release membership or publication changes.
+
+This reaches the explicit production-write gate. It does **not** authorize the write, immutable release selection, or serving-channel movement.

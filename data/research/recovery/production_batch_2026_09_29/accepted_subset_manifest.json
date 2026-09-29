@@ -7,16 +7,16 @@
   "prepared_on": "2026-09-29",
   "authority": {
     "github_main_sha": "09f5d77fb21f451d855c5df4a0b442469eaf422b",
-    "population_pr_head_verified": "066f13bc3b6ce0f68f6ec46628ce0b22b86d2662",
+    "population_pr_head_verified": "0cd33bf80c6e3f90022fccc8b3130e38607e8eb6",
     "exact_head_ci": {
-      "status": "PENDING_FOR_BATCH3_ADDITIONS",
-      "last_green_head": "bc21eb82bb440a170280c3d218147dc07842d991",
-      "last_green_run_id": 36601344628
+      "status": "PASS",
+      "last_green_head": "0cd33bf80c6e3f90022fccc8b3130e38607e8eb6",
+      "last_green_run_id": 36606730574
     },
-    "live_preflight_observed_at": "2026-09-29T17:00:49.657588+00:00",
+    "live_preflight_observed_at": "2026-09-29T17:40:10.598322+00:00",
     "immutable_release": "v0.8.1",
     "public_serving": "v0.8.1-public-mvp-v2",
-    "population_pr_head_input": "bc21eb82bb440a170280c3d218147dc07842d991"
+    "population_pr_head_input": "0cd33bf80c6e3f90022fccc8b3130e38607e8eb6"
   },
   "live_collision_preflight": {
     "spatial_entity_hits": 0,
@@ -64,6 +64,23 @@
       "exact_source_version_url_hits": 0,
       "release_claim_hits": 0,
       "note": "Checked Taghaza/Taghazza/Teghaza aliases, exact case key and both evidence URLs. No geometry URL is admitted."
+    },
+    "batch4": {
+      "observed_at": "2026-09-29T17:33:31.360322+00:00",
+      "spatial_entity_hits": 0,
+      "research_case_ingest_hits": 0,
+      "exact_source_version_url_hits": 0,
+      "release_claim_hits": 0,
+      "note": "Checked Imerina/Merina and Zanzibar/Unguja aliases plus exact case keys and evidence/geometry URLs; Kongo and Khiva were checked in the same read-only query but belong to batch 5."
+    },
+    "batch5": {
+      "shared_observed_at": "2026-09-29T17:33:31.360322+00:00",
+      "istanbul_observed_at": "2026-09-29T17:40:10.598322+00:00",
+      "spatial_entity_hits": 0,
+      "research_case_ingest_hits": 0,
+      "exact_source_version_url_hits": 0,
+      "release_claim_hits": 0,
+      "note": "Checked Kongo/Mbanza Kongo, Khiva/Khwarazm/Khorezm and Istanbul/Constantinople aliases plus exact case keys and candidate evidence/geometry URLs."
     }
   },
   "accepted": [
@@ -243,6 +260,131 @@
         "no exact worker count",
         "no P-level"
       ]
+    },
+    {
+      "target": "Imerina (Merina kingdom)",
+      "case_key": "production-batch-2026-09-29/imerina/slavery-1790-1861-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/09_imerina_slavery_1790_1861.json",
+      "content_sha256": "55e38197272c300482df37fb84e16c5d31f18c0f6cf37b866d1d507471a6a1de",
+      "importer": "tools/add_research_case.py",
+      "claim_kind": "territorial_practice",
+      "practice_type": "slavery_enslavement",
+      "interval": [
+        1790,
+        1861
+      ],
+      "evidence_sources": 1,
+      "geometry_role": "modern_proxy_navigation_only",
+      "geometry_source_native_id": "UNESCO WHC 950",
+      "expected_map_visibility": "one Ambohimanga navigation/context point if selected into a future release/materialization",
+      "production_action": "INSERT_NEW_UNPUBLISHED_AFTER_EXPLICIT_APPROVAL",
+      "publication_action": "HOLD",
+      "safeguards": [
+        "fanompoana remains distinct from slavery",
+        "no universal slaveholding or total-dependence inference",
+        "navigation point is not practice extent",
+        "no P-level"
+      ]
+    },
+    {
+      "target": "Zanzibar (Unguja and Pemba)",
+      "case_key": "production-batch-2026-09-29/zanzibar/slave-based-plantation-production-1859-1871-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/10_zanzibar_slave_based_production_1859_1871.json",
+      "content_sha256": "5cd2b5188c1440431134feb43f3acc889f18379f4afede8cf0e4995624946f86",
+      "importer": "tools/add_research_case.py",
+      "claim_kind": "territorial_practice",
+      "practice_type": "slavery_enslavement",
+      "interval": [
+        1859,
+        1871
+      ],
+      "evidence_sources": 1,
+      "geometry_role": "modern_proxy_navigation_only",
+      "geometry_source_native_id": "UNESCO WHC 173rev",
+      "expected_map_visibility": "one Stone Town navigation/context point if selected into a future release/materialization",
+      "production_action": "INSERT_NEW_UNPUBLISHED_AFTER_EXPLICIT_APPROVAL",
+      "publication_action": "HOLD",
+      "safeguards": [
+        "export values do not set prevalence",
+        "trade/network finance remains separate",
+        "navigation point is not plantation distribution or practice extent",
+        "no P-level"
+      ]
+    },
+    {
+      "target": "Kingdom of Kongo",
+      "case_key": "production-batch-2026-09-29/kongo/slavery-transformation-1491-1800-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/11_kongo_slavery_transformation_1491_1800.json",
+      "content_sha256": "9656ea4c65d12dc03ad7a2bbe9531356fd1b8fa16344769afdbcb91b52a4ac2a",
+      "importer": "tools/add_research_case.py",
+      "claim_kind": "territorial_practice",
+      "practice_type": "slavery_enslavement",
+      "interval": [
+        1491,
+        1800
+      ],
+      "evidence_sources": 1,
+      "geometry_role": "modern_proxy_navigation_only",
+      "geometry_source_native_id": "UNESCO WHC 1511",
+      "expected_map_visibility": "one Mbanza Kongo navigation/context point if selected into a future release/materialization",
+      "production_action": "INSERT_NEW_UNPUBLISHED_AFTER_EXPLICIT_APPROVAL",
+      "publication_action": "HOLD",
+      "safeguards": [
+        "changing enslavement eligibility is not constant intensity",
+        "Atlantic export/network participation remains separate",
+        "capital point is not polity or practice extent",
+        "no P-level"
+      ]
+    },
+    {
+      "target": "Khiva",
+      "case_key": "production-batch-2026-09-29/khiva/slavery-1873-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/12_khiva_slavery_1873.json",
+      "content_sha256": "17c63f8f46a153a24426b0e8827c790400c743c1fb5943d337c13377d4975b66",
+      "importer": "tools/add_research_case.py",
+      "claim_kind": "territorial_practice",
+      "practice_type": "slavery_enslavement",
+      "interval": [
+        1873,
+        1873
+      ],
+      "evidence_sources": 1,
+      "geometry_role": "modern_proxy_navigation_only",
+      "geometry_source_native_id": "UNESCO WHC 543",
+      "expected_map_visibility": "one Khiva navigation/context point if selected into a future release/materialization",
+      "production_action": "INSERT_NEW_UNPUBLISHED_AFTER_EXPLICIT_APPROVAL",
+      "publication_action": "HOLD",
+      "safeguards": [
+        "bounded 1873 transition",
+        "historic slave estimates are not prevalence",
+        "city point is not slave-market or Khanate extent",
+        "no P-level"
+      ]
+    },
+    {
+      "target": "Istanbul",
+      "case_key": "production-batch-2026-09-29/istanbul/slavery-1590-1710-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/13_istanbul_slavery_1590_1710.json",
+      "content_sha256": "08ccb416871d5ce452c1ed7a85be1b9047ce44da99f0ddf5a635ae8defe8e856",
+      "importer": "tools/add_research_case.py",
+      "claim_kind": "territorial_practice",
+      "practice_type": "slavery_enslavement",
+      "interval": [
+        1590,
+        1710
+      ],
+      "evidence_sources": 1,
+      "geometry_role": "modern_proxy_navigation_only",
+      "geometry_source_native_id": "UNESCO WHC 356bis-001",
+      "expected_map_visibility": "one Istanbul historic-peninsula navigation/context point if selected into a future release/materialization",
+      "production_action": "INSERT_NEW_UNPUBLISHED_AFTER_EXPLICIT_APPROVAL",
+      "publication_action": "HOLD",
+      "safeguards": [
+        "freedom-suit counts are litigation evidence not prevalence",
+        "legal and illegal enslavement remain distinct",
+        "navigation point is not slave-market or practice extent",
+        "no P-level"
+      ]
     }
   ],
   "held_exclusions": [
@@ -258,6 +400,38 @@
     {
       "target": "Bagan / Pagan",
       "disposition": "HOLD_EXACT_INSCRIPTION_SOURCE_AND_SCOPE_UNRESOLVED"
+    },
+    {
+      "target": "Old Kingdom Egypt / Sneferu",
+      "disposition": "HOLD_SLAVERY_CATEGORY_REVIEW_CAPTIVE_TAKING_EVIDENCED"
+    },
+    {
+      "target": "Inca / Tawantinsuyu",
+      "disposition": "HOLD_SLAVERY_CATEGORY_DISPUTED_SERVILE_DEPENDENCY"
+    },
+    {
+      "target": "Mali under Mansa Sulayman",
+      "disposition": "HOLD_COURT_EVENT_LOCUS_AND_SOURCE_DEPENDENCE"
+    },
+    {
+      "target": "Choson Korea",
+      "disposition": "HOLD_NOBI_CATEGORY_AND_TEMPORAL_SCOPE"
+    },
+    {
+      "target": "Ngapuhi / Bay of Islands",
+      "disposition": "HOLD_ROUTE_TO_EXTERNAL_PARTICIPATION_OR_CAPTIVE_PROCESS"
+    },
+    {
+      "target": "Ayutthaya",
+      "disposition": "HOLD_CAPTIVE_SLAVERY_CORVEE_CATEGORY_AND_EXACT_SOURCE"
+    },
+    {
+      "target": "Northern Haudenosaunee",
+      "disposition": "HOLD_SPECIFIC_IDENTITY_CAPTIVITY_AND_SLAVERY_CLASSIFICATION"
+    },
+    {
+      "target": "Tonga",
+      "disposition": "HOLD_SERVITUDE_CATEGORY_NOT_SLAVERY_ADMISSION"
     }
   ],
   "existing_claim_lane": {
@@ -268,21 +442,21 @@
     "source_amendments": "SEPARATE_PENDING_RECONCILIATION"
   },
   "expected_database_delta_if_explicitly_ingested": {
-    "spatial_entity": 7,
-    "claim": 7,
+    "spatial_entity": 12,
+    "claim": 12,
     "legal_event": 1,
-    "territorial_practice_claim": 6,
-    "source": 18,
-    "source_version": 18,
-    "claim_source": 15,
-    "geometry_rows": 5,
-    "resolved_geometry": 4,
+    "territorial_practice_claim": 11,
+    "source": 28,
+    "source_version": 28,
+    "claim_source": 20,
+    "geometry_rows": 10,
+    "resolved_geometry": 9,
     "research_target": 1,
     "research_target_result": 1,
     "research_target_source": 2,
     "research_target_claim": 1,
     "research_target_review": 1,
-    "research_case_ingest": 7,
+    "research_case_ingest": 12,
     "release_claim": 0,
     "publication_status_changes": 0
   },
@@ -307,27 +481,46 @@
     "sitka_first_insert": true,
     "sitka_second_noop": true,
     "sitka_modern_proxy_point_count": 1,
-    "bukhara_run_id": null,
-    "bukhara_first_insert": "PENDING_EXACT_HEAD_CI",
-    "bukhara_second_noop": "PENDING_EXACT_HEAD_CI",
-    "taghaza_run_id": null,
-    "taghaza_first_insert": "PENDING_EXACT_HEAD_CI",
-    "taghaza_second_noop": "PENDING_EXACT_HEAD_CI"
+    "bukhara_run_id": 36602868946,
+    "bukhara_first_insert": true,
+    "bukhara_second_noop": true,
+    "taghaza_run_id": 36602868946,
+    "taghaza_first_insert": true,
+    "taghaza_second_noop": true,
+    "batch45_run_id": 36606730574,
+    "batch45_exact_head": "0cd33bf80c6e3f90022fccc8b3130e38607e8eb6",
+    "batch45_result": "PASS",
+    "imerina_first_insert": true,
+    "imerina_second_noop": true,
+    "zanzibar_first_insert": true,
+    "zanzibar_second_noop": true,
+    "kongo_first_insert": true,
+    "kongo_second_noop": true,
+    "khiva_first_insert": true,
+    "khiva_second_noop": true,
+    "istanbul_first_insert": true,
+    "istanbul_second_noop": true,
+    "batch45_modern_proxy_points": 5
   },
   "map_coverage_effect": {
-    "visible_geometry_additions": 4,
+    "visible_geometry_additions": 9,
     "visible_targets": [
       "Angkor",
       "Asante",
       "Sitka",
-      "Bukhara"
+      "Bukhara",
+      "Imerina",
+      "Zanzibar (Unguja and Pemba)",
+      "Kingdom of Kongo",
+      "Khiva",
+      "Istanbul"
     ],
-    "note": "Angkor, Asante, Sitka and Bukhara each have one reviewed modern_proxy point used for navigation/evidence-locus context only. Goryeo has no practice geometry; Dahomey and Taghaza remain unresolved. No new shaded historical practice polygon is added."
+    "note": "Nine accepted candidates carry reviewed modern_proxy navigation/context points. These points do not define historical practice extents. Goryeo has no practice geometry; Dahomey and Taghaza remain unresolved. No new shaded historical practice polygon is added."
   },
   "pre_write_gates": [
     "Re-read current main, PR head, live collision preflight, and source-version reuse immediately before production ingest.",
     "Require explicit sponsor authorization for production write.",
-    "Capture generated live claim/spatial/source IDs and exact before/after counts in a deployment receipt.",
+    "Capture generated live claim/spatial/source/geometry IDs and exact before/after counts in a deployment receipt.",
     "Do not add release membership or move a serving channel in the ingestion transaction."
   ],
   "post_ingest_release_gates": [
@@ -335,5 +528,18 @@
     "Only published/reviewed materialization may serve public data.",
     "A visible map addition requires separately accepted geometry/locus semantics.",
     "Release requires changelog, QC summary, unresolved issues and rollback."
-  ]
+  ],
+  "register_accounting": {
+    "planning_targets": 23,
+    "accepted_staging": 12,
+    "held_exclusions": 11,
+    "unaccounted_targets": 0,
+    "batch_distribution": {
+      "batch_1": "2 accepted / 3 held",
+      "batch_2": "3 accepted / 2 held",
+      "batch_3": "2 accepted / 3 held",
+      "batch_4": "2 accepted / 2 held",
+      "batch_5": "3 accepted / 1 held"
+    }
+  }
 }

@@ -171,6 +171,11 @@ class ProductionBatchCandidateTests(unittest.TestCase):
                 "production-batch-2026-09-29/sitka/sah-quah-slavery-1886-v1",
                 "production-batch-2026-09-29/bukhara/persian-slavery-1820-v1",
                 "production-batch-2026-09-29/taghaza/slave-salt-mining-1352-v1",
+                "production-batch-2026-09-29/imerina/slavery-1790-1861-v1",
+                "production-batch-2026-09-29/zanzibar/slave-based-plantation-production-1859-1871-v1",
+                "production-batch-2026-09-29/kongo/slavery-transformation-1491-1800-v1",
+                "production-batch-2026-09-29/khiva/slavery-1873-v1",
+                "production-batch-2026-09-29/istanbul/slavery-1590-1710-v1",
             ],
         )
         goryeo = load_legal(CAND / "01_goryeo_0956_legal_event.json", require_case_key=True)
@@ -188,12 +193,12 @@ class ProductionBatchCandidateTests(unittest.TestCase):
         taghaza = load_territorial(CAND / "08_taghaza_slave_salt_mining_1352.json", require_case_key=True)
         self.assertEqual(manifest["accepted"][5]["content_sha256"], case_content_sha256(bukhara))
         self.assertEqual(manifest["accepted"][6]["content_sha256"], case_content_sha256(taghaza))
-        self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["claim"], 7)
-        self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["source_version"], 18)
+        self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["claim"], 12)
+        self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["source_version"], 28)
         self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["release_claim"], 0)
-        self.assertEqual(manifest["map_coverage_effect"]["visible_geometry_additions"], 4)
-        self.assertEqual(manifest["map_coverage_effect"]["visible_targets"], ["Angkor", "Asante", "Sitka", "Bukhara"])
-        self.assertEqual(len(manifest["held_exclusions"]), 3)
+        self.assertEqual(manifest["map_coverage_effect"]["visible_geometry_additions"], 9)
+        self.assertEqual(manifest["map_coverage_effect"]["visible_targets"], ["Angkor", "Asante", "Sitka", "Bukhara", "Imerina", "Zanzibar (Unguja and Pemba)", "Kingdom of Kongo", "Khiva", "Istanbul"])
+        self.assertEqual(len(manifest["held_exclusions"]), 11)
 
 
 if __name__ == "__main__":

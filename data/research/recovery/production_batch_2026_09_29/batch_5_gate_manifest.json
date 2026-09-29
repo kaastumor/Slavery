@@ -5,7 +5,7 @@
   "pr": 367,
   "batch": 5,
   "as_of": "2026-09-29",
-  "status": "THREE_ACCEPTED_ONE_HELD_PENDING_EXACT_HEAD_CI",
+  "status": "THREE_ACCEPTED_ONE_HELD_EXACT_HEAD_CI_PASS",
   "targets": [
     {
       "target": "Istanbul",
@@ -13,21 +13,24 @@
       "case_key": "production-batch-2026-09-29/istanbul/slavery-1590-1710-v1",
       "path": "data/research/recovery/production_batch_2026_09_29/candidates/13_istanbul_slavery_1590_1710.json",
       "geometry_status": "modern_proxy_navigation_context_only",
-      "live_preflight_observed_at": "2026-09-29T17:40:10.598322+00:00"
+      "live_preflight_observed_at": "2026-09-29T17:40:10.598322+00:00",
+      "content_sha256": "08ccb416871d5ce452c1ed7a85be1b9047ce44da99f0ddf5a635ae8defe8e856"
     },
     {
       "target": "Kongo",
       "disposition": "ACCEPTED_STAGING",
       "case_key": "production-batch-2026-09-29/kongo/slavery-transformation-1491-1800-v1",
       "path": "data/research/recovery/production_batch_2026_09_29/candidates/11_kongo_slavery_transformation_1491_1800.json",
-      "geometry_status": "modern_proxy_navigation_context_only"
+      "geometry_status": "modern_proxy_navigation_context_only",
+      "content_sha256": "9656ea4c65d12dc03ad7a2bbe9531356fd1b8fa16344769afdbcb91b52a4ac2a"
     },
     {
       "target": "Khiva / Khwarazm",
       "disposition": "ACCEPTED_STAGING_BOUNDED_1873_TRANSITION",
       "case_key": "production-batch-2026-09-29/khiva/slavery-1873-v1",
       "path": "data/research/recovery/production_batch_2026_09_29/candidates/12_khiva_slavery_1873.json",
-      "geometry_status": "modern_proxy_navigation_context_only"
+      "geometry_status": "modern_proxy_navigation_context_only",
+      "content_sha256": "17c63f8f46a153a24426b0e8827c790400c743c1fb5943d337c13377d4975b66"
     },
     {
       "target": "Tonga",
@@ -64,5 +67,10 @@
     "Tongan vassalage/serfdom is not automatically slavery",
     "Navigation points are not practice extents",
     "Release/publication remains separate"
-  ]
+  ],
+  "exact_head_ci": {
+    "run_id": 36606730574,
+    "head_sha": "0cd33bf80c6e3f90022fccc8b3130e38607e8eb6",
+    "result": "PASS"
+  }
 }

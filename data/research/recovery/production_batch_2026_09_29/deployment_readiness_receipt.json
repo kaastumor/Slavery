@@ -1,0 +1,127 @@
+{
+  "record_kind": "production_population_deployment_readiness_receipt",
+  "version": 1,
+  "issue": 360,
+  "pr": 367,
+  "prepared_on": "2026-09-29",
+  "status": "DEPLOYMENT_INGEST_READY_AWAITING_EXPLICIT_PRODUCTION_WRITE_APPROVAL",
+  "repository": {
+    "main_sha": "09f5d77fb21f451d855c5df4a0b442469eaf422b",
+    "pr_head_sha": "0cd33bf80c6e3f90022fccc8b3130e38607e8eb6",
+    "exact_head_ci_run_id": 36606730574,
+    "exact_head_ci_result": "PASS"
+  },
+  "scope": {
+    "planning_targets": 23,
+    "accepted_staging": 12,
+    "held": 11,
+    "existing_reviewed_unreleased_claims_reused": 11
+  },
+  "accepted_case_keys": [
+    "production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1",
+    "production-batch-2026-09-29/dahomey/royal-captive-allocation-sale-1727-v1",
+    "production-batch-2026-09-29/angkor/household-slavery-1296-1297-v1",
+    "production-batch-2026-09-29/asante/slavery-1807-1895-v1",
+    "production-batch-2026-09-29/sitka/sah-quah-slavery-1886-v1",
+    "production-batch-2026-09-29/bukhara/persian-slavery-1820-v1",
+    "production-batch-2026-09-29/taghaza/slave-salt-mining-1352-v1",
+    "production-batch-2026-09-29/imerina/slavery-1790-1861-v1",
+    "production-batch-2026-09-29/zanzibar/slave-based-plantation-production-1859-1871-v1",
+    "production-batch-2026-09-29/kongo/slavery-transformation-1491-1800-v1",
+    "production-batch-2026-09-29/khiva/slavery-1873-v1",
+    "production-batch-2026-09-29/istanbul/slavery-1590-1710-v1"
+  ],
+  "held_targets": [
+    {
+      "target": "Meroitic Kush / Hamadab",
+      "disposition": "HOLD_SOURCE_DIRECTION_AND_RILLY_READING_UNVERIFIED"
+    },
+    {
+      "target": "Mexica / Aztec tlacotin",
+      "case_key": "production-batch-2026-09-29/mexica/exchangeable-tlacotli-tlatelolco-late-precontact-v0",
+      "disposition": "HOLD_NUMERIC_TIME_IDENTITY_AND_CATEGORY_ACCEPTANCE"
+    },
+    {
+      "target": "Bagan / Pagan",
+      "disposition": "HOLD_EXACT_INSCRIPTION_SOURCE_AND_SCOPE_UNRESOLVED"
+    },
+    {
+      "target": "Old Kingdom Egypt / Sneferu",
+      "disposition": "HOLD_SLAVERY_CATEGORY_REVIEW_CAPTIVE_TAKING_EVIDENCED"
+    },
+    {
+      "target": "Inca / Tawantinsuyu",
+      "disposition": "HOLD_SLAVERY_CATEGORY_DISPUTED_SERVILE_DEPENDENCY"
+    },
+    {
+      "target": "Mali under Mansa Sulayman",
+      "disposition": "HOLD_COURT_EVENT_LOCUS_AND_SOURCE_DEPENDENCE"
+    },
+    {
+      "target": "Choson Korea",
+      "disposition": "HOLD_NOBI_CATEGORY_AND_TEMPORAL_SCOPE"
+    },
+    {
+      "target": "Ngapuhi / Bay of Islands",
+      "disposition": "HOLD_ROUTE_TO_EXTERNAL_PARTICIPATION_OR_CAPTIVE_PROCESS"
+    },
+    {
+      "target": "Ayutthaya",
+      "disposition": "HOLD_CAPTIVE_SLAVERY_CORVEE_CATEGORY_AND_EXACT_SOURCE"
+    },
+    {
+      "target": "Northern Haudenosaunee",
+      "disposition": "HOLD_SPECIFIC_IDENTITY_CAPTIVITY_AND_SLAVERY_CLASSIFICATION"
+    },
+    {
+      "target": "Tonga",
+      "disposition": "HOLD_SERVITUDE_CATEGORY_NOT_SLAVERY_ADMISSION"
+    }
+  ],
+  "expected_database_delta": {
+    "spatial_entity": 12,
+    "claim": 12,
+    "legal_event": 1,
+    "territorial_practice_claim": 11,
+    "source": 28,
+    "source_version": 28,
+    "claim_source": 20,
+    "geometry_rows": 10,
+    "resolved_geometry": 9,
+    "research_target": 1,
+    "research_target_result": 1,
+    "research_target_source": 2,
+    "research_target_claim": 1,
+    "research_target_review": 1,
+    "research_case_ingest": 12,
+    "release_claim": 0,
+    "publication_status_changes": 0
+  },
+  "map_preview_effect": {
+    "visible_geometry_additions": 9,
+    "visible_targets": [
+      "Angkor",
+      "Asante",
+      "Sitka",
+      "Bukhara",
+      "Imerina",
+      "Zanzibar (Unguja and Pemba)",
+      "Kingdom of Kongo",
+      "Khiva",
+      "Istanbul"
+    ],
+    "note": "Nine accepted candidates carry reviewed modern_proxy navigation/context points. These points do not define historical practice extents. Goryeo has no practice geometry; Dahomey and Taghaza remain unresolved. No new shaded historical practice polygon is added."
+  },
+  "verification": {
+    "existing_11_packet_integrity": "PASS_11_OF_11",
+    "existing_11_disposable_replay": "PASS_11_FIRST_INSERT_11_SECOND_NOOP_ROLLBACK",
+    "new_12_disposable_replay": "PASS_EACH_FIRST_INSERT_AND_UNCHANGED_SECOND_NOOP_ACROSS_EXACT_HEAD_RUNS",
+    "exact_head_batch45": "PASS_RUN_36606730574",
+    "live_collision_checks": "PASS_NO_CASE_OR_ENTITY_COLLISION_OBSERVED_FOR_NEW_ACCEPTED_CANDIDATES_AT_RECORDED_PREFLIGHT_TIMES",
+    "production_writes": 0,
+    "release_membership_changes": 0,
+    "serving_channel_changes": 0
+  },
+  "release_boundary": "Production ingest remains separate from release membership and public serving. After ingest, generated IDs must be captured and an immutable successor selection/materialization must pass changelog, QC, unresolved-issues and rollback gates.",
+  "sponsor_gate_required": "EXPLICIT_PRODUCTION_WRITE_APPROVAL"
+}

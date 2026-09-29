@@ -141,3 +141,12 @@ urban slave-market/legal praxis. Lawsuit counts and success rates are not used
 as prevalence. A UNESCO historic-area coordinate is navigation context only.
 Tonga remains held because the reviewed 1862 reform evidence concerns
 serfdom/vassalage and does not by itself justify a slavery classification.
+
+
+## Full 23-target disposition and deployment-ingest gate
+
+All 23 planned new historical subjects are now explicitly accounted for: **12 accepted staging candidates and 11 evidence/category/scope HOLDs**. No target is silently dropped and no HOLD is represented as historical absence.
+
+Exact-head foundation CI run **36606730574** passed the batch-4/5 additions: Imerina, Zanzibar, Kongo, Khiva and Istanbul each inserted once into disposable PostGIS and replayed unchanged as a no-op, with NULL P-levels and modern-proxy navigation points only. Together with the earlier green candidate runs, all 12 accepted staging cases now have deterministic disposable ingestion evidence.
+
+`deployment_readiness_receipt.json` freezes the current staging gate. The next operation is a consequential production database write and therefore remains an explicit sponsor gate. Production ingestion would still create only reviewed, unpublished research rows; release membership and public serving remain separate.

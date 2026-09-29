@@ -5,7 +5,7 @@
   "pr": 367,
   "batch": 4,
   "as_of": "2026-09-29",
-  "status": "TWO_ACCEPTED_TWO_HELD_PENDING_EXACT_HEAD_CI",
+  "status": "TWO_ACCEPTED_TWO_HELD_EXACT_HEAD_CI_PASS",
   "targets": [
     {
       "target": "Ayutthaya",
@@ -18,7 +18,8 @@
       "disposition": "ACCEPTED_STAGING",
       "case_key": "production-batch-2026-09-29/imerina/slavery-1790-1861-v1",
       "path": "data/research/recovery/production_batch_2026_09_29/candidates/09_imerina_slavery_1790_1861.json",
-      "geometry_status": "modern_proxy_navigation_context_only"
+      "geometry_status": "modern_proxy_navigation_context_only",
+      "content_sha256": "55e38197272c300482df37fb84e16c5d31f18c0f6cf37b866d1d507471a6a1de"
     },
     {
       "target": "Northern Haudenosaunee",
@@ -31,7 +32,8 @@
       "disposition": "ACCEPTED_STAGING",
       "case_key": "production-batch-2026-09-29/zanzibar/slave-based-plantation-production-1859-1871-v1",
       "path": "data/research/recovery/production_batch_2026_09_29/candidates/10_zanzibar_slave_based_production_1859_1871.json",
-      "geometry_status": "modern_proxy_navigation_context_only"
+      "geometry_status": "modern_proxy_navigation_context_only",
+      "content_sha256": "5cd2b5188c1440431134feb43f3acc889f18379f4afede8cf0e4995624946f86"
     }
   ],
   "accepted_case_keys": [
@@ -61,5 +63,10 @@
     "Generic Native American evidence cannot substitute for Haudenosaunee-specific evidence",
     "Navigation points are not practice extents",
     "Release/publication remains separate"
-  ]
+  ],
+  "exact_head_ci": {
+    "run_id": 36606730574,
+    "head_sha": "0cd33bf80c6e3f90022fccc8b3130e38607e8eb6",
+    "result": "PASS"
+  }
 }
