@@ -1,0 +1,301 @@
+{
+  "schema": "historical-slavery-atlas-100-100-geometry-closure-review-v1",
+  "issue": 374,
+  "parent_issue": 369,
+  "reviewed_against_main": "521ae2d9b5d3e31390d7025492bb18335752c6df",
+  "observed_live_preflight_at": "2026-09-29T22:35:23.281238+00:00",
+  "status": "INTERNAL_REVIEW_COMPLETE_4_ACCEPT_1_HOLD_READY_FOR_DISPOSABLE_REHEARSAL_DESIGN",
+  "scope": "case-linked evidence/navigation loci only; no practice-extent or claim-strength inflation",
+  "live_preflight": {
+    "release_membership_hits": 0,
+    "existing_locus_links": 0,
+    "candidate_identity_hits": 0,
+    "candidate_source_hits": [
+      {
+        "url": "https://www.hrw.org/report/2003/01/22/small-change/bonded-child-labor-indias-silk-industry",
+        "source_version_id": "43eaef18-4b5e-489c-84a5-5c035d433cfc",
+        "interpretation": "exact India HRW source version already exists and must be reused"
+      }
+    ],
+    "serving_channel": "v0.8.1-public-mvp-v2"
+  },
+  "candidates": [
+    {
+      "target": "India — bonded labour, 2003–2005",
+      "case_key": "overnight-2026-09-27/india/bonded-labour-v2",
+      "claim_id": "1d707382-b0b8-479d-81e3-efcea01c4ab0",
+      "target_spatial_entity_id": "4c0cf106-f55e-4e98-901a-63cd5cce5bc7",
+      "disposition": "ACCEPT_FOR_DISPOSABLE_REHEARSAL",
+      "semantic_role": "claim_evidence_locus_modern_city_proxy",
+      "rationale": "The accepted HRW source explicitly says field investigations were carried out in Karnataka, Tamil Nadu and Uttar Pradesh and specifically that HRW visited Ramanagaram and Channapatna; Ramanagaram is therefore a direct source-grounded fieldwork locus rather than a generic India navigation point.",
+      "new_locus_entity": {
+        "canonical_name": "Ramanagaram",
+        "display_name": "Ramanagaram silk-reeling fieldwork locus",
+        "entity_type_code": "city",
+        "review_status": "reviewed",
+        "notes": "Modern city identity for an HRW fieldwork/evidence locus. It does not define the geographic extent of bonded labour in India or even all silk-industry bondage."
+      },
+      "geometry": {
+        "accuracy_status": "modern_proxy",
+        "source_native_id": "GeoNames 1258744",
+        "resolution_method": "Use the modern Ramanagaram/Closepet populated-place point as navigation geometry for the HRW fieldwork locus. HRW explicitly visited Ramanagaram; the point does not locate each workshop or define a practice extent.",
+        "geojson": {
+          "type": "Point",
+          "coordinates": [
+            77.281493,
+            12.721809
+          ]
+        },
+        "review_status": "reviewed"
+      },
+      "geometry_source": {
+        "title": "Closepet / Ramanagaram",
+        "author_or_institution": "GeoNames",
+        "source_type": "modern_gazetteer",
+        "source_classification": "geometry_reference",
+        "version_label": "GeoNames 1258744, accessed 2026-09-29",
+        "url_or_identifier": "https://www.geonames.org/1258744/closepet.html",
+        "license_status": "GeoNames CC BY 4.0 database",
+        "redistribution_status": "coordinate with attribution"
+      },
+      "evidence_source_reuse": {
+        "source_version_id": "43eaef18-4b5e-489c-84a5-5c035d433cfc",
+        "url": "https://www.hrw.org/report/2003/01/22/small-change/bonded-child-labor-indias-silk-industry",
+        "locator": "Areas Covered by this Report; Karnataka: HRW visited Ramanagaram and Channapatna; report also documents bonded children in those silk contexts."
+      },
+      "locus_link": {
+        "role_text": "HRW silk-industry fieldwork locus; modern Ramanagaram point only",
+        "notes": "Evidence locus for one bounded component of the India claim; not India-wide inference extent."
+      },
+      "abstentions": [
+        "do not treat Ramanagaram as the only Indian evidence locus",
+        "do not infer every silk workplace is at the city point",
+        "do not turn the point into national practice extent or prevalence"
+      ]
+    },
+    {
+      "target": "Myanmar — state forced labour, 1998",
+      "case_key": "overnight-2026-09-27/myanmar/state-forced-labour-v2",
+      "claim_id": "365e6258-f03f-4677-b775-cd5a9f18414a",
+      "target_spatial_entity_id": "91c7f969-f47a-465c-a304-57328b59d052",
+      "disposition": "ACCEPT_FOR_DISPOSABLE_REHEARSAL",
+      "semantic_role": "claim_evidence_context_modern_admin_proxy",
+      "rationale": "The ILO Commission testimony is explicitly anchored to Daw Taku, Shadaw Township, and describes forced labour before and after forced relocation to Shadaw. Exact Daw Taku geometry is not frozen, so the township reference is accepted only as modern testimony/navigation context.",
+      "new_locus_entity": {
+        "canonical_name": "Shadaw Township — Daw Taku testimony context",
+        "display_name": "Shadaw Township (Daw Taku testimony context)",
+        "entity_type_code": "region",
+        "review_status": "reviewed",
+        "notes": "Modern administrative context for ILO witness 101 from Daw Taku, Shadaw Township. The geometry is not an exact Daw Taku village point and not a nationwide forced-labour extent."
+      },
+      "geometry": {
+        "accuracy_status": "modern_proxy",
+        "source_native_id": "GeoNames 11154185",
+        "resolution_method": "Use the modern Shadaw Township reference coordinate as navigation/testimony context because the ILO source fixes the witness to Daw Taku within Shadaw Township but exact Daw Taku geometry is not independently frozen. The point is not an incident centroid or national practice surface.",
+        "geojson": {
+          "type": "Point",
+          "coordinates": [
+            97.6391812845,
+            19.5032048539
+          ]
+        },
+        "review_status": "reviewed"
+      },
+      "geometry_source": {
+        "title": "Shadaw Township",
+        "author_or_institution": "GeoNames",
+        "source_type": "modern_gazetteer",
+        "source_classification": "geometry_reference",
+        "version_label": "GeoNames 11154185, accessed 2026-09-29",
+        "url_or_identifier": "https://www.geonames.org/11154185/shadaw.html",
+        "license_status": "GeoNames CC BY 4.0 database",
+        "redistribution_status": "coordinate with attribution"
+      },
+      "new_context_source": {
+        "title": "Forced labour in Myanmar (Burma) — Commission of Inquiry, Appendix VII, witness 101",
+        "author_or_institution": "International Labour Organization",
+        "source_type": "official_commission_testimony",
+        "source_classification": "primary_testimony_in_official_inquiry",
+        "version_label": "ILO Governing Body GB.273/MYANMA8C; 2 July 1998",
+        "url_or_identifier": "https://files.ilo.org/public/english/standards/relm/gb/docs/gb273/myanma8c.htm",
+        "evidence_role": "claim-specific testimony locus/context",
+        "independence_group": "ilo-coi-myanmar-witness-101",
+        "directness": "official recorded witness testimony",
+        "direction": "supports",
+        "locator": "Witness 101: from Daw Taku, Shadaw township, Kayah State; forced labour before and after relocation to Shadaw; two battalions at Shadaw.",
+        "claim_fitness": "Direct support for bounded forced-labour testimony and location context; not a national prevalence estimate."
+      },
+      "locus_link": {
+        "role_text": "ILO witness-101 testimony context; Shadaw Township modern proxy, not exact Daw Taku",
+        "notes": "Evidence context only. The Commission's national systemic conclusion remains analytically separate."
+      },
+      "abstentions": [
+        "do not call township reference the exact Daw Taku village point",
+        "do not conflate relocation site, witness origin and every forced-labour incident",
+        "do not use this point as Myanmar-wide practice extent"
+      ]
+    },
+    {
+      "target": "Pakistan — bonded labour, 1990s",
+      "case_key": "overnight-2026-09-27/pakistan/bonded-labour-v2",
+      "claim_id": "47175a77-76bb-4a92-ac3c-cb22b7a8131f",
+      "target_spatial_entity_id": "da4f5a3d-316b-4afb-90e3-53db83af3f10",
+      "disposition": "ACCEPT_FOR_DISPOSABLE_REHEARSAL",
+      "semantic_role": "claim_evidence_context_modern_city_proxy",
+      "rationale": "Independent HRW field investigation interviewed bonded labourers at brick-kilns on Lahore's outskirts, including a detailed bonded-family case. The kiln itself is unnamed, so Lahore can serve only as a modern navigation anchor for the bounded outskirts context.",
+      "new_locus_entity": {
+        "canonical_name": "Lahore outskirts brick-kiln evidence context",
+        "display_name": "Lahore outskirts brick-kiln evidence context",
+        "entity_type_code": "city",
+        "review_status": "reviewed",
+        "notes": "Bounded modern navigation identity for HRW's Lahore-outskirts brick-kiln evidence. It is not an exact kiln location and not Pakistan-wide practice extent."
+      },
+      "geometry": {
+        "accuracy_status": "modern_proxy",
+        "source_native_id": "GeoNames Lahore",
+        "resolution_method": "Use the modern Lahore city point only as a navigation proxy for HRW's explicitly described brick-kilns on the outskirts of Lahore. Exact kiln coordinates are not supplied by the report.",
+        "geojson": {
+          "type": "Point",
+          "coordinates": [
+            74.350713,
+            31.557996
+          ]
+        },
+        "review_status": "reviewed"
+      },
+      "geometry_source": {
+        "title": "Lahore",
+        "author_or_institution": "GeoNames",
+        "source_type": "modern_gazetteer",
+        "source_classification": "geometry_reference",
+        "version_label": "GeoNames Lahore, accessed 2026-09-29",
+        "url_or_identifier": "https://www.geonames.org/advanced-search.html?q=Lahore&startRow=0",
+        "license_status": "GeoNames CC BY 4.0 database",
+        "redistribution_status": "coordinate with attribution"
+      },
+      "new_context_source": {
+        "title": "Contemporary Forms of Slavery in Pakistan",
+        "author_or_institution": "Human Rights Watch/Asia",
+        "source_type": "human_rights_field_report",
+        "source_classification": "secondary_with_direct_field_interviews",
+        "version_label": "Human Rights Watch/Asia, 1995",
+        "url_or_identifier": "https://www.hrw.org/reports/1995/Pakistan.htm",
+        "evidence_role": "bounded brick-kiln fieldwork locus/context",
+        "independence_group": "hrw-pakistan-1995-brick-kilns",
+        "directness": "direct field interviews and observation",
+        "direction": "supports",
+        "locator": "Investigation interviewed bonded labourers at brick-kilns on the outskirts of Lahore; detailed 'Gul' case at a Lahore-outskirts kiln.",
+        "claim_fitness": "Independent bounded corroboration for brick-kiln debt bondage near Lahore; not a national prevalence measure."
+      },
+      "locus_link": {
+        "role_text": "HRW Lahore-outskirts brick-kiln evidence context; modern Lahore point only",
+        "notes": "Exact kiln unnamed; city point is navigation proxy for the bounded source context."
+      },
+      "abstentions": [
+        "do not call Lahore point an exact brick-kiln coordinate",
+        "do not infer all Pakistan bonded labour occurs near Lahore",
+        "do not mechanically strengthen practice intensity from an added independent source"
+      ]
+    },
+    {
+      "target": "Brazil — rural debt bondage / forced labour, 2003–2005",
+      "case_key": "overnight-2026-09-27/brazil/rural-debt-bondage-2003-2005-v2",
+      "claim_id": "e0ed6573-235c-423d-befb-7b75630b5c35",
+      "target_spatial_entity_id": "2e7197e4-72bc-4de2-8f58-326adb43080f",
+      "disposition": "HOLD_PLACE_IDENTITY_BEFORE_GEOMETRY",
+      "semantic_role": "none",
+      "rationale": "The accepted ILO article repeatedly says 'Correntes' in Piauí, while IBGE's official municipality register identifies Corrente (PI), code 2202901. Brazilian Chamber material both lists Corrente as a recruitment municipality and elsewhere repeats 'município de Correntes'. The likely singular/plural identity relation is not sufficiently frozen to assign a coordinate without silently normalizing the source-native name.",
+      "identity_evidence": [
+        {
+          "source": "ILO — Waiting in Correntes: Forced labour in Brazil",
+          "url": "https://www.ilo.org/publications/waiting-correntes-forced-labour-brazil",
+          "finding": "source-native place label is Correntes, Piauí"
+        },
+        {
+          "source": "IBGE — Corrente (PI)",
+          "url": "https://www.ibge.gov.br/cidades-e-estados/pi/corrente.html",
+          "finding": "official municipality Corrente, code 2202901"
+        },
+        {
+          "source": "Brazilian Chamber / ILO office communication",
+          "url": "https://www.camara.leg.br/internet/comissao/index/perm/cdh/ultimos_informes/Mensagem%20recebida%20128.htm",
+          "finding": "recruitment list includes Corrente, Piauí"
+        }
+      ],
+      "reopen_condition": "authoritative project/source record explicitly binds the ILO article's Correntes label to municipality Corrente (PI), or a distinct Correntes locality is independently identified",
+      "forbidden_shortcut": "do not use Corrente coordinates merely because it is the closest plausible official municipality"
+    },
+    {
+      "target": "Nazi Germany — state forced labour, 1942–1944",
+      "case_key": "post-overnight-2026-09-27/nazi-germany/state-forced-labour-1942-1944-v2",
+      "claim_id": "51063cdb-f485-47c9-9056-e374476632dd",
+      "target_spatial_entity_id": "aba9b942-063a-4b8b-a21b-4232056f81cf",
+      "disposition": "ACCEPT_FOR_DISPOSABLE_REHEARSAL",
+      "semantic_role": "claim_evidence_locus_historical_site",
+      "rationale": "The current packet already includes GBI camp 75/76 Schöneweide as bounded site-level corroboration. Berlin's official monument database identifies the preserved forced-labour camp at Britzer Straße 5 / Köllnische Straße 1–17, dated 1943–1945, squarely within the claim interval.",
+      "new_locus_entity": {
+        "canonical_name": "GBI camp 75/76 Schöneweide",
+        "display_name": "GBI camp 75/76 Schöneweide",
+        "entity_type_code": "site",
+        "review_status": "reviewed",
+        "notes": "Preserved Nazi forced-labour camp / current documentation-centre site. Evidence locus for one bounded part of the broader state forced-labour system."
+      },
+      "geometry": {
+        "accuracy_status": "specialist",
+        "source_native_id": "Berlin monument object 09045213",
+        "resolution_method": "Use the official Berlin monument Geoportal marker for Fremdarbeiterlager Niederschöneweide I. The monument record fixes the historic site and 1943–1945 dating. The official map link encodes ETRS89/UTM33N marker E 399469.30568613, N 5812435.43555859; transformed to WGS84 for the Atlas point.",
+        "geojson": {
+          "type": "Point",
+          "coordinates": [
+            13.520601128,
+            52.4528400479
+          ]
+        },
+        "review_status": "reviewed"
+      },
+      "geometry_source": {
+        "title": "Fremdarbeiterlager Niederschöneweide I — monument object 09045213",
+        "author_or_institution": "Landesdenkmalamt Berlin",
+        "source_type": "official_heritage_register_and_geoportal",
+        "source_classification": "specialist_geometry_reference",
+        "version_label": "Berlin Denkmaldatenbank object 09045213, accessed 2026-09-29",
+        "url_or_identifier": "https://denkmaldatenbank.berlin.de/daobj.php?obj_dok_nr=09045213",
+        "license_status": "official public register; redistribution status not assumed",
+        "redistribution_status": "reference point only"
+      },
+      "existing_evidence_source": {
+        "note": "The current claim packet already contains the Nazi Forced Labour Documentation Centre's history of GBI camp 75/76 Schöneweide as bounded site-level corroboration; do not duplicate that evidence source merely to create geometry."
+      },
+      "locus_link": {
+        "role_text": "preserved GBI camp 75/76 Schöneweide forced-labour site; bounded evidence locus",
+        "notes": "One historically preserved camp within a much broader state-directed forced-labour system; not system extent."
+      },
+      "abstentions": [
+        "one camp does not map the geographic extent of Nazi forced labour",
+        "do not infer that every claimant population/status in the broad claim was held here",
+        "do not replace structural/systemic sources with this site evidence"
+      ]
+    }
+  ],
+  "qc": {
+    "accepted_for_rehearsal": 4,
+    "held": 1,
+    "historical_practice_polygons_added": 0,
+    "national_proxy_polygons_promoted": 0,
+    "existing_country_proxy_rows_to_modify": 0,
+    "expected_if_later_rehearsed": {
+      "spatial_entity_delta": 4,
+      "geometry_delta": 4,
+      "claim_evidence_locus_delta": 4,
+      "claim_source_delta": 2,
+      "source_version_delta_expected": 6,
+      "source_version_reuse_expected_min": 1,
+      "claim_delta": 0,
+      "release_claim_delta": 0,
+      "publication_status_changes": 0,
+      "p_level_changes": 0
+    },
+    "next_gate": "ADVERSARIAL_REVIEW_AND_DISPOSABLE_REHEARSAL_ONLY"
+  },
+  "release_effect": "none"
+}
