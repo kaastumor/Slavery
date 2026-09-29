@@ -24,12 +24,18 @@ from tools.add_research_case import ensure_source_version, ensure_spatial_entity
 REVIEW = ROOT / "data/research/geometry_reviews/population_100_100_closure_tranche_01.json"
 
 EXPECTED = {
-    "production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1":
-        "9f5397c7-8b7b-4218-ad10-b85abf56eae8",
-    "production-batch-2026-09-29/dahomey/royal-captive-allocation-sale-1727-v1":
-        "1567b140-eeba-4b32-b37d-f31dcb35e1dd",
-    "production-batch-2026-09-29/taghaza/slave-salt-mining-1352-v1":
-        "9d1ccd8e-ba6d-4dbe-aea8-6d3f2b98942c",
+    "production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1": {
+        "claim_kind": "legal_event",
+        "canonical_name": "Goryeo",
+    },
+    "production-batch-2026-09-29/dahomey/royal-captive-allocation-sale-1727-v1": {
+        "claim_kind": "territorial_practice",
+        "canonical_name": "Dahomey",
+    },
+    "production-batch-2026-09-29/taghaza/slave-salt-mining-1352-v1": {
+        "claim_kind": "territorial_practice",
+        "canonical_name": "Taghaza",
+    },
 }
 
 TRACKED = (
@@ -122,22 +128,46 @@ def source_parts(block: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]
     return source, version
 
 
-def verify_claims(conn) -> None:
+def verify_claims(conn) -> dict[str, dict[str, str]]:
+    """Resolve disposable IDs from immutable case keys and verify semantic identity.
+
+    Production UUIDs are intentionally not replay-stable. The case key plus claim kind,
+    canonical spatial identity and reviewed/unpublished state are the durable contract.
+    """
+    resolved: dict[str, dict[str, str]] = {}
     with conn.cursor() as cur:
-        for case_key, expected_claim in EXPECTED.items():
+        for case_key, expected in EXPECTED.items():
             row = cur.execute(
-                """select r.claim_id::text, c.review_status::text, c.publication_status::text
+                """select r.claim_id::text,
+                          c.claim_kind_code,
+                          c.review_status::text,
+                          c.publication_status::text,
+                          coalesce(t.spatial_entity_id, le.jurisdiction_spatial_entity_id)::text,
+                          se.canonical_name
                      from audit.research_case_ingest r
                      join atlas.claim c using(claim_id)
+                     left join atlas.territorial_practice_claim t using(claim_id)
+                     left join atlas.legal_event le using(claim_id)
+                     join atlas.spatial_entity se
+                       on se.spatial_entity_id =
+                          coalesce(t.spatial_entity_id, le.jurisdiction_spatial_entity_id)
                     where r.case_key=%s""",
                 (case_key,),
             ).fetchone()
             if row is None:
                 raise ClosureError(f"missing prerequisite case {case_key}")
-            if row[0] != expected_claim:
-                raise ClosureError(f"claim identity drift for {case_key}")
-            if row[1:] != ("reviewed", "unpublished"):
+            claim_id, claim_kind, review_status, publication_status, spatial_id, canonical_name = row
+            if claim_kind != expected["claim_kind"]:
+                raise ClosureError(f"claim-kind drift for {case_key}")
+            if canonical_name != expected["canonical_name"]:
+                raise ClosureError(f"spatial identity drift for {case_key}")
+            if (review_status, publication_status) != ("reviewed", "unpublished"):
                 raise ClosureError(f"prerequisite claim state drift for {case_key}")
+            resolved[case_key] = {
+                "claim_id": claim_id,
+                "spatial_entity_id": spatial_id,
+            }
+    return resolved
 
 
 def ensure_geometry(cur, spatial_id: str, geom: dict[str, Any], source_version_id: str) -> tuple[str, bool]:
@@ -258,17 +288,23 @@ def ensure_locus_link(cur, claim_id: str, spatial_id: str, block: dict[str, Any]
     return True
 
 
-def apply_once(conn, review: dict[str, Any]) -> dict[str, Any]:
+def apply_once(
+    conn,
+    review: dict[str, Any],
+    prerequisite_ids: dict[str, dict[str, str]],
+) -> dict[str, Any]:
     result: dict[str, Any] = {}
     with conn.cursor() as cur:
         for row in review["candidates"]:
-            claim_id = EXPECTED[row["case_key"]]
+            prerequisite = prerequisite_ids[row["case_key"]]
+            claim_id = prerequisite["claim_id"]
+            target_spatial_id = prerequisite["spatial_entity_id"]
 
             if row["target"].startswith("Goryeo"):
                 source, version = source_parts(row["geometry_source"])
                 sv = ensure_source_version(cur, source, version)
                 geom_id, inserted = ensure_geometry(
-                    cur, row["target_spatial_entity_id"], row["geometry"], sv
+                    cur, target_spatial_id, row["geometry"], sv
                 )
                 result[row["case_key"]] = {
                     "geometry_id": geom_id,
@@ -303,7 +339,7 @@ def apply_once(conn, review: dict[str, Any]) -> dict[str, Any]:
                 source, version = source_parts(row["geometry_source"])
                 sv = ensure_source_version(cur, source, version)
                 geom_id, inserted = ensure_geometry(
-                    cur, row["target_spatial_entity_id"], row["geometry"], sv
+                    cur, target_spatial_id, row["geometry"], sv
                 )
                 result[row["case_key"]] = {
                     "geometry_id": geom_id,
@@ -322,51 +358,69 @@ def assert_delta(before: dict[str, int], after: dict[str, int]) -> dict[str, int
     return delta
 
 
-def verify_semantics(conn) -> None:
+def verify_semantics(
+    conn,
+    prerequisite_ids: dict[str, dict[str, str]],
+) -> None:
+    goryeo_ids = prerequisite_ids[
+        "production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1"
+    ]
+    dahomey_ids = prerequisite_ids[
+        "production-batch-2026-09-29/dahomey/royal-captive-allocation-sale-1727-v1"
+    ]
+    taghaza_ids = prerequisite_ids[
+        "production-batch-2026-09-29/taghaza/slave-salt-mining-1352-v1"
+    ]
+    claim_ids = [item["claim_id"] for item in prerequisite_ids.values()]
+
     with conn.cursor() as cur:
         goryeo = cur.execute(
             """select count(*)
                  from atlas.geometry
-                where spatial_entity_id='02a48a15-b2f8-4694-84d5-aae8fcb664c0'
+                where spatial_entity_id=%s
                   and geometry_source_native_id='UNESCO WHC 1278rev-001'
                   and accuracy_status='modern_proxy'
-                  and GeometryType(geom)='POINT'"""
+                  and GeometryType(geom)='POINT'""",
+            (goryeo_ids["spatial_entity_id"],),
         ).fetchone()[0]
         dahomey = cur.execute(
             """select count(*)
                  from atlas.claim_evidence_locus cel
                  join atlas.spatial_entity se using(spatial_entity_id)
                  join atlas.geometry g using(spatial_entity_id)
-                where cel.claim_id='1567b140-eeba-4b32-b37d-f31dcb35e1dd'
+                where cel.claim_id=%s
                   and se.canonical_name='Jakin (Godomey)'
                   and g.accuracy_status='modern_proxy'
-                  and GeometryType(g.geom)='POINT'"""
+                  and GeometryType(g.geom)='POINT'""",
+            (dahomey_ids["claim_id"],),
         ).fetchone()[0]
         taghaza = cur.execute(
             """select count(*)
                  from atlas.geometry
-                where spatial_entity_id='6e4f7762-de45-4dcb-a179-2d5cb16ec39a'
+                where spatial_entity_id=%s
                   and geometry_source_native_id like 'NGA UFI -1075410%%'
                   and accuracy_status='modern_proxy'
-                  and GeometryType(geom)='POINT'"""
+                  and GeometryType(geom)='POINT'""",
+            (taghaza_ids["spatial_entity_id"],),
         ).fetchone()[0]
         unresolved_dahomey = cur.execute(
             """select count(*)
                  from atlas.geometry
-                where spatial_entity_id='1b61fd28-d089-4941-a203-13fcebb4e807'
-                  and accuracy_status='unresolved' and geom is null"""
+                where spatial_entity_id=%s
+                  and accuracy_status='unresolved' and geom is null""",
+            (dahomey_ids["spatial_entity_id"],),
         ).fetchone()[0]
         release_hits = cur.execute(
             """select count(*)
                  from audit.release_claim
                 where claim_id=any(%s::uuid[])""",
-            (list(EXPECTED.values()),),
+            (claim_ids,),
         ).fetchone()[0]
         non_null_p = cur.execute(
             """select count(*)
                  from atlas.territorial_practice_claim
                 where claim_id=any(%s::uuid[]) and practice_level is not null""",
-            (list(EXPECTED.values()),),
+            (claim_ids,),
         ).fetchone()[0]
     if (goryeo, dahomey, taghaza) != (1, 1, 1):
         raise ClosureError("expected exactly three reviewed mapped representations")
@@ -379,15 +433,15 @@ def verify_semantics(conn) -> None:
 
 
 def run(conn, review: dict[str, Any]) -> dict[str, Any]:
-    verify_claims(conn)
+    prerequisite_ids = verify_claims(conn)
     before = counts(conn)
     try:
-        first = apply_once(conn, review)
+        first = apply_once(conn, review, prerequisite_ids)
         after_first = counts(conn)
         delta = assert_delta(before, after_first)
-        verify_semantics(conn)
+        verify_semantics(conn, prerequisite_ids)
 
-        second = apply_once(conn, review)
+        second = apply_once(conn, review, prerequisite_ids)
         after_second = counts(conn)
         if after_second != after_first:
             raise ClosureError("unchanged replay altered tracked counts")
