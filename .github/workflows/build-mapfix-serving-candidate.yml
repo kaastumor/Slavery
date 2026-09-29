@@ -1,0 +1,66 @@
+name: build-mapfix-serving-candidate
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - tools/build_v081_mapfix_materialization.py
+      - tools/build_source_land_fidelity_candidates.py
+      - tests/test_v081_mapfix_candidate.py
+      - docs/08_DECISIONS_LOG.md
+      - data/serving/v0.8.1-public-mvp-v2/**
+      - web/public/release-geometries/v0.8.1-public-mvp-v2/**
+      - supabase/functions/atlas-data/v081_v2_payload.ts
+      - .github/workflows/build-mapfix-serving-candidate.yml
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'fix/p0-map-geometry-completeness'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install geometry dependencies
+        run: python -m pip install "shapely==2.1.2" "pyproj==3.7.2"
+      - name: Download exact canonical Natural Earth land fabric
+        run: |
+          python - <<'PY'
+          import hashlib
+          import urllib.request
+          from pathlib import Path
+          url="https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson"
+          out=Path("/tmp/ne_10m_land.geojson")
+          urllib.request.urlretrieve(url,out)
+          digest=hashlib.sha256(out.read_bytes()).hexdigest()
+          assert digest == "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416", digest
+          PY
+      - name: Rebuild immutable map-fix candidate at the exact PR head
+        run: |
+          python tools/build_v081_mapfix_materialization.py \
+            --land /tmp/ne_10m_land.geojson \
+            --write
+      - name: Run candidate contract tests
+        run: python -m unittest tests.test_v081_mapfix_candidate -v
+      - name: Verify committed candidate matches rebuilt bytes
+        run: |
+          paths=(
+            data/serving/v0.8.1-public-mvp-v2
+            web/public/release-geometries/v0.8.1-public-mvp-v2
+            supabase/functions/atlas-data/v081_v2_payload.ts
+          )
+          if [ -n "$(git status --porcelain -- "${paths[@]}")" ]; then
+            git status --short -- "${paths[@]}"
+            git diff --stat -- "${paths[@]}"
+            echo "Committed map-fix candidate differs from the exact-head rebuild."
+            exit 1
+          fi

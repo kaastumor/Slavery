@@ -3356,3 +3356,103 @@ prepared. That run produced no bundle because the credential lacked `database_re
 The frozen v0.8.2 selection is now also held until D-121 provenance closure is recorded;
 the builder rejects a release-ready selection unless the v3 policy and exact provenance
 closure are pinned. Neither gate mutates PostgreSQL, v0.8.1 or the public channel.
+
+
+## D-122 — Historical polygon rendering preserves source-covered canonical land
+**Date:** 2026-09-29
+**Status:** proposed / implementation candidate under P0 #365; no release effect yet
+
+**Trigger:** sponsor visual review found neutral land gaps and fragmented/unmarked areas
+inside otherwise coherent historical map coverage after D-116 solved ocean overflow.
+Upstream implementation review established that Seshat's world map renders its stored
+Cliopatria geometry directly for the selected year, while Atlas may transform the same
+source family through Chaikin smoothing, external standard-GIS preprocessing, coastal
+recovery and Natural Earth clipping. D-120 already records topology inflation for Roman
+6–8 CE (32 raw components versus 104 incumbent render components).
+
+**Decision candidate:** treat fidelity to the exact source footprint on canonical land as
+a hard render invariant.
+
+For any reviewed historical polygon used by a public serving adapter and the active canonical land fabric:
+
+`source_land = source_geometry ∩ canonical_land`
+
+A normal render-only transformation must not materially remove `source_land`. Physical
+coastline correction may add bounded canonical land where the coarse source clearly
+overhangs the coastline, but it may not move or erase the source's inland historical
+frontier merely to obtain a smoother picture.
+
+The first database policy is `cliopatria-source-land-fidelity-v1`; the same directional source-land invariant also applies to reviewed specialist substitutions such as the D-117 AWMC Roman polygon without changing that specialist source choice:
+
+1. no Chaikin or other inland/general-boundary smoothing;
+2. preserve the exact source geometry unchanged in the research layer;
+3. intersect with the exact canonical Natural Earth land fabric;
+4. use zero coastal recovery as the baseline; test at most a 25 km overhang-based
+   recovery candidate and accept it only when the additional canonical land is <=2% of
+   the zero-recovery source-land baseline; otherwise retain the exact source-land
+   baseline;
+5. require directional source-land-loss QC, not only symmetric difference, total area
+   delta or whole-geometry Hausdorff distance;
+6. treat component/ring inflation and interior-hole creation as explicit review triggers;
+7. compare representative Atlas output against the upstream Cliopatria/Seshat display
+   before accepting a serving artifact;
+8. specialist source substitutions remain separate D-055 historical decisions and are not silently forced back to Cliopatria; their public render may use the same source-land-fidelity invariant under a source-appropriate policy ID.
+
+**Why:** symmetric-difference and area gates can pass while a derived render removes
+locally conspicuous pieces of land. A directional preservation test matches the actual
+render contract: Natural Earth owns physical land/water, while Cliopatria owns the
+historical inland footprint unless a reviewed specialist source supersedes it.
+
+**Release effect:** none at proposal stage. v0.8.1 and
+`v0.8.1-public-mvp-v1` remain immutable. A validated correction should be delivered as
+a new immutable serving materialization or later successor release; never by replacing
+existing release bytes in place.
+
+Refs #365, PR #366, D-055, D-116, D-119, D-120, D-121.
+
+
+## D-123 — Neutral historical-polity context is not slavery evidence
+**Date:** 2026-09-29
+**Status:** proposed / bounded prototype under P0 #365; no public release effect yet
+
+**Trigger:** P0 map review separated two visually similar failure classes. Some neutral land is
+created by render transformation and is governed by D-122. Other neutral regions are legitimate
+contemporaneous polities present in the same pinned Cliopatria source but absent from the Atlas
+display because the public adapter currently draws only spatial entities with active
+territorial-practice claims. At 14 CE, for example, the pinned source independently returns the
+Kingdom of Cappadocia, Kingdom of Commagene and Kingdom of Armenia as top-level POLITY rows.
+Seshat's own default world-map mode renders active top-level polity shapes, so these regions read
+as political context rather than unexplained holes.
+
+**Decision candidate:** historical political context is a separate cartographic layer.
+
+1. Historical-context geometry never creates, strengthens, weakens or negates a slavery,
+   coerced-labour, legal-status, network-participation or research-coverage claim.
+2. The initial source is the exact pinned Cliopatria asset already used by the project. Every
+   emitted context feature preserves the pinned commit/blob/asset identity, source row ordinal,
+   deterministic feature SHA-256 and source-native temporal bounds.
+3. Selected-year translation follows D-059. The default polity-context view mirrors Seshat's
+   ordinary "one color per polity" semantics: active `Type=POLITY` rows with empty
+   `MemberOf`; RELATION rows and component-only views are not silently mixed into it.
+4. Context geometry is clipped only to the same canonical Natural Earth land fabric. Raw source
+   geometry remains unchanged. No source count, context coverage or polygon area may influence
+   territorial-practice intensity or P-level.
+5. The context layer must render beneath evidence geometry in a visually neutral style and be
+   explicitly labelled as historical-polity context. Evidence geometry and evidence colors
+   always take precedence.
+6. Clicking or inspecting context must say that it is cartographic context only and does not
+   indicate slavery presence, absence, prevalence or research status.
+7. Missing context is not historical absence. Source disagreements or known coarse temporal
+   slices remain visible as source limitations; they are not silently corrected by the UI.
+8. A specialist political-boundary substitution may override a context feature only through an
+   explicit reviewed, time-bounded provenance decision. It does not inherit authority from a
+   slavery claim.
+9. Production delivery must use a reviewed/published materialization or equivalent published
+   view. Raw staging tables are never exposed directly. The bounded prototype may emit
+   review-only selected-year GeoJSON snapshots; scalable production delivery may later use
+   vector tiles/PMTiles or a bounded published API without changing the semantic separation.
+
+**Release effect:** none at proposal stage. The prototype is cartographic review material only.
+v0.8.1 and `v0.8.1-public-mvp-v1` remain immutable.
+
+Refs #365, PR #366, D-016, D-036, D-046, D-059, D-116, D-122.

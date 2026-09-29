@@ -1,0 +1,72 @@
+name: historical-context-prototype
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - tools/build_historical_context_snapshot.py
+      - .github/workflows/historical-context-prototype.yml
+      - tests/test_historical_context_contract.py
+      - docs/08_DECISIONS_LOG.md
+
+permissions:
+  contents: read
+
+jobs:
+  snapshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install geometry dependency
+        run: python -m pip install "shapely==2.1.2"
+      - name: Download exact canonical Natural Earth land fabric
+        run: |
+          python - <<'PY'
+          import hashlib
+          import urllib.request
+          from pathlib import Path
+          url="https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson"
+          out=Path("/tmp/ne_10m_land.geojson")
+          urllib.request.urlretrieve(url,out)
+          digest=hashlib.sha256(out.read_bytes()).hexdigest()
+          assert digest == "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416", digest
+          PY
+      - name: Build bounded context snapshots
+        run: |
+          python tools/build_historical_context_snapshot.py \
+            --land /tmp/ne_10m_land.geojson \
+            --output-dir /tmp/historical-context \
+            --year 9 --year 14 --year 18 --year 22
+      - name: Verify context/evidence separation
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path("/tmp/historical-context")
+          for path in root.glob("context-*.geojson"):
+              payload=json.loads(path.read_text())
+              assert payload["_meta"]["claim_semantics"] == "none"
+              assert payload["_meta"]["publication_state"] == "review_only_prototype"
+              assert all(f["properties"]["claim_semantics"] == "none" for f in payload["features"])
+          y14=json.loads((root/"context-14.geojson").read_text())
+          names={f["properties"]["name"] for f in y14["features"]}
+          assert "Roman Empire" in names
+          assert "Kingdom of Cappadocia" in names
+          assert "Kingdom of Commagene" in names
+          assert "Kingdom of Armenia" in names
+          print("14 CE context:", sorted(n for n in names if n in {
+              "Roman Empire","Kingdom of Cappadocia","Kingdom of Commagene","Kingdom of Armenia"
+          }))
+          PY
+      - name: Upload context review artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: historical-context-prototype-${{ github.sha }}
+          path: /tmp/historical-context/**
+          if-no-files-found: error
+          retention-days: 14

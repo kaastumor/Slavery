@@ -13,11 +13,11 @@ from bootstrap_migration_ledger import (  # noqa: E402
 
 
 class BootstrapMigrationLedgerTests(unittest.TestCase):
-    def test_repository_inventory_is_exact_0001_to_0034(self):
+    def test_repository_inventory_is_exact_0001_to_0035(self):
         inventory = repository_inventory()
-        self.assertEqual(len(inventory), 34)
+        self.assertEqual(len(inventory), 35)
         self.assertEqual(inventory[0]["filename"], "0001_bootstrap.sql")
-        self.assertEqual(inventory[-1]["filename"], "0034_release_manifest_immutability.sql")
+        self.assertEqual(inventory[-1]["filename"], "0035_cliopatria_source_land_fidelity_render.sql")
         self.assertTrue(all(len(row["checksum_sha256"]) == 64 for row in inventory))
 
     def test_known_platform_history_irregularities_can_be_explicitly_accepted(self):
