@@ -65,6 +65,18 @@ class ProductionBatchCandidateTests(unittest.TestCase):
         self.assertIn("navigation proxy", spec["geometry"]["resolution_method"])
         self.assertIn("pawnship", spec["claim"]["notes"].lower())
 
+    def test_sitka_is_bounded_case_with_navigation_proxy_only(self):
+        spec = load_territorial(CAND / "06_sitka_sah_quah_1886_slavery.json", require_case_key=True)
+        plan = territorial_plan(spec)
+        self.assertEqual(plan["claim_interval"], [1886, 1886])
+        self.assertEqual(plan["practice_type"], "slavery_enslavement")
+        self.assertIsNone(plan["practice_level"])
+        self.assertEqual(plan["review_status"], "reviewed")
+        self.assertEqual(plan["geometry_accuracy"], "modern_proxy")
+        self.assertEqual(spec["geometry"]["geojson"]["type"], "Point")
+        self.assertIn("not the 1886 courtroom", spec["geometry"]["resolution_method"])
+        self.assertIn("test case", spec["claim"]["notes"].lower())
+
     def test_candidate_case_keys_are_unique(self):
         specs = [
             json.loads(p.read_text(encoding="utf-8"))
@@ -85,6 +97,7 @@ class ProductionBatchCandidateTests(unittest.TestCase):
                 "production-batch-2026-09-29/dahomey/royal-captive-allocation-sale-1727-v1",
                 "production-batch-2026-09-29/angkor/household-slavery-1296-1297-v1",
                 "production-batch-2026-09-29/asante/slavery-1807-1895-v1",
+                "production-batch-2026-09-29/sitka/sah-quah-slavery-1886-v1",
             ],
         )
         goryeo = load_legal(CAND / "01_goryeo_0956_legal_event.json", require_case_key=True)
@@ -96,11 +109,13 @@ class ProductionBatchCandidateTests(unittest.TestCase):
         self.assertEqual(manifest["accepted"][2]["content_sha256"], case_content_sha256(angkor))
         asante = load_territorial(CAND / "05_asante_1807_1895_slavery.json", require_case_key=True)
         self.assertEqual(manifest["accepted"][3]["content_sha256"], case_content_sha256(asante))
-        self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["claim"], 4)
-        self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["source_version"], 10)
+        sitka = load_territorial(CAND / "06_sitka_sah_quah_1886_slavery.json", require_case_key=True)
+        self.assertEqual(manifest["accepted"][4]["content_sha256"], case_content_sha256(sitka))
+        self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["claim"], 5)
+        self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["source_version"], 13)
         self.assertEqual(manifest["expected_database_delta_if_explicitly_ingested"]["release_claim"], 0)
-        self.assertEqual(manifest["map_coverage_effect"]["visible_geometry_additions"], 2)
-        self.assertEqual(manifest["map_coverage_effect"]["visible_targets"], ["Angkor", "Asante"])
+        self.assertEqual(manifest["map_coverage_effect"]["visible_geometry_additions"], 3)
+        self.assertEqual(manifest["map_coverage_effect"]["visible_targets"], ["Angkor", "Asante", "Sitka"])
         self.assertEqual(len(manifest["held_exclusions"]), 3)
 
 

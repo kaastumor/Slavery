@@ -72,3 +72,19 @@ Ashanti boundary polygon.
 The accepted staging subset is now **Goryeo + Dahomey + Angkor + Asante**:
 four new claims, two reviewed point proxies (Angkor and Kumasi), zero new
 shaded practice polygons, and no release/publication changes.
+
+
+## Sitka staging addition
+
+Sitka is now a reviewed bounded 1886 Sah Quah case candidate. The Federal
+Reporter decision is used for the case-level evidence and release order; Sidney
+Harring's legal-historical analysis is retained as a material qualifier because
+the proceeding was deliberately framed as an assimilationist test case and the
+hearing transcript complicates the asserted owner-slave relationship. The claim
+therefore does not become a Tlingit-wide or Alaska-wide prevalence assertion.
+
+The attached Census TIGERweb internal point for Sitka city and borough is an
+explicit modern navigation proxy only. It is not the 1886 courtroom, historic
+settlement boundary, Tlingit territory, or practice extent. Live read-only
+preflight found no exact entity/case/source-version/release collision. Production
+ingest, release membership and serving remain separate gates.

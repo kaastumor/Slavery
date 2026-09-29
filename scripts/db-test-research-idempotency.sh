@@ -98,3 +98,23 @@ asante_counts=$(docker compose exec -T db sh -lc "psql -At -F '|' -U \"$POSTGRES
 test "$asante_counts" = "1|1|1|1|1"
 
 echo "Asante candidate ingestion passed: reviewed 1807-1895 slavery claim idempotent with Kumasi navigation proxy and no P-level."
+
+
+sitka="data/research/recovery/production_batch_2026_09_29/candidates/06_sitka_sah_quah_1886_slavery.json"
+sitka_key="production-batch-2026-09-29/sitka/sah-quah-slavery-1886-v1"
+sitka_first=$(docker compose run --rm tooling python tools/add_research_case.py "$sitka" --apply)
+printf '%s\n' "$sitka_first"
+sitka_second=$(docker compose run --rm tooling python tools/add_research_case.py "$sitka" --apply)
+printf '%s\n' "$sitka_second"
+grep -q "NO-OP: research case already applied unchanged" <<<"$sitka_second"
+
+sitka_counts=$(docker compose exec -T db sh -lc "psql -At -F '|' -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\" -c \"select
+ (select count(*) from audit.research_case_ingest where case_key='$sitka_key'),
+ (select count(*) from atlas.claim c join audit.research_case_ingest r using(claim_id) where r.case_key='$sitka_key' and c.claim_kind_code='territorial_practice'),
+ (select count(*) from atlas.territorial_practice_claim t join audit.research_case_ingest r using(claim_id) where r.case_key='$sitka_key' and t.practice_level is null),
+ (select count(*) from atlas.geometry g join atlas.territorial_practice_claim t using(spatial_entity_id) join audit.research_case_ingest r on r.claim_id=t.claim_id where r.case_key='$sitka_key' and g.geom is not null and GeometryType(g.geom)='POINT'),
+ (select count(*) from atlas.geometry g join atlas.territorial_practice_claim t using(spatial_entity_id) join audit.research_case_ingest r on r.claim_id=t.claim_id where r.case_key='$sitka_key' and g.accuracy_status='modern_proxy');
+\"")
+test "$sitka_counts" = "1|1|1|1|1"
+
+echo "Sitka candidate ingestion passed: bounded Sah Quah 1886 claim idempotent with one modern-proxy navigation point and no P-level."
