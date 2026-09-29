@@ -17,7 +17,10 @@
         "interpretation": "exact India HRW source version already exists and must be reused"
       }
     ],
-    "serving_channel": "v0.8.1-public-mvp-v2"
+    "serving_channel": "v0.8.1-public-mvp-v2",
+    "new_candidate_source_url_hits": 0,
+    "new_candidate_identity_hits": 0,
+    "new_candidate_collision_observed_at": "2026-09-29T22:37:17.146659+00:00"
   },
   "candidates": [
     {
