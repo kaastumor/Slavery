@@ -212,3 +212,12 @@ docker compose run --rm -e CI=true tooling \
   python tools/rehearse_geometry_closure_tranche_01.py --apply --disposable-test-db
 
 echo "100/100 geometry closure tranche 1 rehearsal passed: Goryeo, Jakin/Godomey and Taghaza mapped roles are idempotent and rolled back."
+
+
+# #374: rehearse four reviewed evidence/navigation loci for existing successor claims.
+# The tool reconstructs the four prerequisite current-method claims inside its own
+# transaction, measures only the closure delta, excludes Brazil HOLD, and rolls back.
+docker compose run --rm -e CI=true tooling \
+  python tools/rehearse_geometry_closure_tranche_02.py --apply --disposable-test-db
+
+echo "100/100 geometry closure tranche 2 rehearsal passed: four case-linked loci are idempotent; Brazil remains HOLD; transaction rolled back."
