@@ -181,3 +181,19 @@ batch4_counts=$(docker compose exec -T db sh -lc "psql -At -F '|' -U \"$POSTGRES
 test "$batch4_counts" = "4|4|4"
 
 echo "Batch 4 candidate ingestion passed: Imerina, Zanzibar, Kongo and Khiva are idempotent, NULL-P-level claims with modern-proxy navigation points only."
+
+
+istanbul="data/research/recovery/production_batch_2026_09_29/candidates/13_istanbul_slavery_1590_1710.json"
+istanbul_key="production-batch-2026-09-29/istanbul/slavery-1590-1710-v1"
+istanbul_first=$(docker compose run --rm tooling python tools/add_research_case.py "$istanbul" --apply)
+printf '%s\n' "$istanbul_first"
+istanbul_second=$(docker compose run --rm tooling python tools/add_research_case.py "$istanbul" --apply)
+printf '%s\n' "$istanbul_second"
+grep -q "NO-OP: research case already applied unchanged" <<<"$istanbul_second"
+istanbul_counts=$(docker compose exec -T db sh -lc "psql -At -F '|' -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\" -c \"select
+ (select count(*) from audit.research_case_ingest where case_key='$istanbul_key'),
+ (select count(*) from atlas.territorial_practice_claim t join audit.research_case_ingest r using(claim_id) where r.case_key='$istanbul_key' and t.practice_level is null),
+ (select count(*) from atlas.geometry g join atlas.territorial_practice_claim t using(spatial_entity_id) join audit.research_case_ingest r on r.claim_id=t.claim_id where r.case_key='$istanbul_key' and g.geom is not null and GeometryType(g.geom)='POINT' and g.accuracy_status='modern_proxy');
+\"")
+test "$istanbul_counts" = "1|1|1"
+echo "Batch 5 Istanbul candidate ingestion passed: bounded archival urban claim idempotent with modern-proxy navigation point and no P-level."

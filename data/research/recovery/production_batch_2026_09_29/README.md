@@ -126,3 +126,18 @@ A read-only live preflight at 2026-09-29T17:33:31.360322+00:00 found no matching
 entity aliases, case keys, exact candidate source-version URLs or release-claim
 collisions for these four candidates. Exact-head disposable import/idempotency
 verification is required before they move from accepted staging to ingest-ready.
+
+
+## Batch 4/5 planning-boundary correction and Istanbul addition
+
+The original 5/5/5/4/4 target grouping is preserved explicitly. Batch 4 now
+records Imerina and Zanzibar as accepted staging candidates while Ayutthaya and
+Northern Haudenosaunee remain held for category/source-specific review. Kongo
+and Khiva belong to batch 5, not batch 4.
+
+Batch 5 additionally admits a bounded Istanbul 1590–1710 staging candidate
+grounded in specialist archival research on greater-Istanbul freedom suits and
+urban slave-market/legal praxis. Lawsuit counts and success rates are not used
+as prevalence. A UNESCO historic-area coordinate is navigation context only.
+Tonga remains held because the reviewed 1862 reform evidence concerns
+serfdom/vassalage and does not by itself justify a slavery classification.

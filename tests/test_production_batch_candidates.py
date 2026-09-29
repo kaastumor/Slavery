@@ -138,6 +138,16 @@ class ProductionBatchCandidateTests(unittest.TestCase):
         self.assertIn("not converted into prevalence", spec["claim"]["notes"].lower())
         self.assertIn("not the historical slave market", spec["geometry"]["resolution_method"].lower())
 
+    def test_istanbul_is_archival_urban_claim_with_proxy_point(self):
+        spec = load_territorial(CAND / "13_istanbul_slavery_1590_1710.json", require_case_key=True)
+        plan = territorial_plan(spec)
+        self.assertEqual(plan["claim_interval"], [1590, 1710])
+        self.assertEqual(plan["practice_type"], "slavery_enslavement")
+        self.assertIsNone(plan["practice_level"])
+        self.assertEqual(plan["geometry_accuracy"], "modern_proxy")
+        self.assertIn("litigation evidence", spec["claim"]["notes"].lower())
+        self.assertIn("not the historic slave-market location", spec["geometry"]["resolution_method"].lower())
+
     def test_candidate_case_keys_are_unique(self):
         specs = [
             json.loads(p.read_text(encoding="utf-8"))
