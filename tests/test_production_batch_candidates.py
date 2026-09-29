@@ -99,6 +99,45 @@ class ProductionBatchCandidateTests(unittest.TestCase):
         self.assertIn("site-level 1352", spec["claim"]["territorial_practice"]["notes"].lower())
         self.assertIn("no p-level", spec["claim"]["territorial_practice"]["notes"].lower())
 
+    def test_imerina_preserves_fanompoana_distinction_and_proxy_point(self):
+        spec = load_territorial(CAND / "09_imerina_slavery_1790_1861.json", require_case_key=True)
+        plan = territorial_plan(spec)
+        self.assertEqual(plan["claim_interval"], [1790, 1861])
+        self.assertEqual(plan["practice_type"], "slavery_enslavement")
+        self.assertIsNone(plan["practice_level"])
+        self.assertEqual(plan["geometry_accuracy"], "modern_proxy")
+        self.assertIn("fanompoana", spec["claim"]["notes"].lower())
+        self.assertIn("not a historical polity boundary", spec["geometry"]["resolution_method"].lower())
+
+    def test_zanzibar_is_slave_based_production_without_export_prevalence_inference(self):
+        spec = load_territorial(CAND / "10_zanzibar_slave_based_production_1859_1871.json", require_case_key=True)
+        plan = territorial_plan(spec)
+        self.assertEqual(plan["claim_interval"], [1859, 1871])
+        self.assertIsNone(plan["practice_level"])
+        self.assertEqual(plan["geometry_accuracy"], "modern_proxy")
+        self.assertIn("export-value", spec["claim"]["notes"].lower())
+        self.assertIn("not a slave-market point", spec["geometry"]["resolution_method"].lower())
+
+    def test_kongo_is_transformation_claim_with_capital_proxy_only(self):
+        spec = load_territorial(CAND / "11_kongo_slavery_transformation_1491_1800.json", require_case_key=True)
+        plan = territorial_plan(spec)
+        self.assertEqual(plan["claim_interval"], [1491, 1800])
+        self.assertEqual(plan["practice_type"], "slavery_enslavement")
+        self.assertIsNone(plan["practice_level"])
+        self.assertEqual(plan["geometry_accuracy"], "modern_proxy")
+        self.assertIn("changing status boundaries", spec["claim"]["territorial_practice"]["notes"].lower())
+        self.assertIn("not a kingdom of kongo boundary", spec["geometry"]["resolution_method"].lower())
+
+    def test_khiva_is_bounded_1873_transition_with_city_proxy_only(self):
+        spec = load_territorial(CAND / "12_khiva_slavery_1873.json", require_case_key=True)
+        plan = territorial_plan(spec)
+        self.assertEqual(plan["claim_interval"], [1873, 1873])
+        self.assertEqual(plan["practice_type"], "slavery_enslavement")
+        self.assertIsNone(plan["practice_level"])
+        self.assertEqual(plan["geometry_accuracy"], "modern_proxy")
+        self.assertIn("not converted into prevalence", spec["claim"]["notes"].lower())
+        self.assertIn("not the historical slave market", spec["geometry"]["resolution_method"].lower())
+
     def test_candidate_case_keys_are_unique(self):
         specs = [
             json.loads(p.read_text(encoding="utf-8"))

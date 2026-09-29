@@ -1,0 +1,87 @@
+{
+  "case_key": "production-batch-2026-09-29/kongo/slavery-transformation-1491-1800-v1",
+  "spatial_entity": {
+    "canonical_name": "Kingdom of Kongo",
+    "display_name": "Kingdom of Kongo",
+    "entity_type_code": "polity",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Historical polity identity. Mbanza Kongo point is capital/context navigation only, not a practice polygon."
+  },
+  "claim": {
+    "from_year": 1491,
+    "to_year": 1800,
+    "date_text_original": "specialist synthesis interval 1491–1800",
+    "temporal_precision": "broad_specialist_synthesis_interval",
+    "temporal_certainty": "high_for_synthesis_scope",
+    "spatial_precision": "Kingdom-level social and political synthesis; changing eligibility and local distribution remain explicit",
+    "summary": "Specialist scholarship documents slavery and enslavement in the Kingdom of Kongo from the late fifteenth through eighteenth centuries while emphasizing transformation in who could be enslaved. Early distinctions protected many freeborn Kongos while foreign-born captives could be enslaved and sold; later political conflict eroded those distinctions and expanded vulnerability to enslavement.",
+    "confidence": "high_for_presence_and_transformation",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "The claim records transformation of enslavement rules and vulnerability, not a constant prevalence level or uniform practice across the kingdom.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "reviewed_specialist_synthesis",
+      "notes": "Positive kingdom-level historical classification with changing status boundaries. Atlantic export/network participation remains analytically separable. No P-level."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Slavery and Its Transformation in the Kingdom of Kongo: 1491–1800",
+        "author_or_institution": "Linda M. Heywood",
+        "source_type": "peer_reviewed_journal_article",
+        "source_classification": "secondary_specialist_synthesis",
+        "language_code": "en",
+        "geographic_scope": "Kingdom of Kongo",
+        "temporal_scope": "1491–1800",
+        "independence_notes": "Single specialist synthesis of Kongo documentation; cited primary records are not mechanically counted as independent votes.",
+        "reliability_limitations": "Emphasizes changing legal/social eligibility and political fragmentation; does not provide a uniform spatial prevalence surface."
+      },
+      "version": {
+        "version_label": "Journal of African History 50(1), 2009, pp. 1–22",
+        "publication_year": 2009,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/slavery-and-its-transformation-in-the-kingdom-of-kongo-14911800/C13C2D3671AA721632D91B2F86B2A325",
+        "accessed_at": "2026-09-29T17:33:00Z"
+      },
+      "evidence_role": "specialist classification and historical transformation synthesis",
+      "independence_group": "heywood-kongo-slavery-transformation-2009",
+      "directness": "specialist historical synthesis",
+      "direction": "supports",
+      "locator": "Abstract and article scope, pp. 1–22: changing distinction between foreign-born captives, freeborn Kongos, and later expanded enslavement vulnerability."
+    }
+  ],
+  "geometry": {
+    "from_year": 1491,
+    "to_year": 1800,
+    "accuracy_status": "modern_proxy",
+    "resolution_method": "UNESCO Mbanza Kongo coordinate used as a capital/navigation point only. It is not a Kingdom of Kongo boundary, slave-trade route geometry, or territorial practice extent.",
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        14.24972,
+        -6.26889
+      ]
+    },
+    "source_native_id": "UNESCO WHC 1511",
+    "review_status": "reviewed",
+    "source": {
+      "title": "Mbanza Kongo, Vestiges of the Capital of the former Kingdom of Kongo — geographical data",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "source_type": "official_heritage_geodata",
+      "source_classification": "geometry_context",
+      "geographic_scope": "Mbanza Kongo, Angola",
+      "temporal_scope": "modern heritage property coordinate"
+    },
+    "version": {
+      "version_label": "UNESCO WHC 1511 maps/geographical data, accessed 2026-09-29",
+      "url_or_identifier": "https://whc.unesco.org/en/list/1511/maps/",
+      "accessed_at": "2026-09-29T17:33:00Z"
+    },
+    "notes": "Capital navigation proxy only; no practice-extent inference."
+  }
+}

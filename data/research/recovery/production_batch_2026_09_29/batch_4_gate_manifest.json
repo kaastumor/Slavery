@@ -1,0 +1,64 @@
+{
+  "record_kind": "population_batch_gate_manifest",
+  "version": 1,
+  "issue": 360,
+  "pr": 367,
+  "batch": 4,
+  "as_of": "2026-09-29",
+  "status": "FOUR_ACCEPTED_STAGING_PENDING_EXACT_HEAD_CI",
+  "live_preflight": {
+    "observed_at": "2026-09-29T17:33:31.360322+00:00",
+    "spatial_entity_hits": 0,
+    "research_case_ingest_hits": 0,
+    "exact_source_version_url_hits": 0,
+    "release_claim_hits": 0
+  },
+  "targets": [
+    {
+      "target": "Imerina (Merina kingdom)",
+      "disposition": "ACCEPTED_STAGING_REVIEWED_WITH_MODERN_PROXY_NAVIGATION_POINT",
+      "case_key": "production-batch-2026-09-29/imerina/slavery-1790-1861-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/09_imerina_slavery_1790_1861.json",
+      "geometry_status": "modern_proxy_navigation_context_only"
+    },
+    {
+      "target": "Zanzibar (Unguja and Pemba)",
+      "disposition": "ACCEPTED_STAGING_REVIEWED_WITH_MODERN_PROXY_NAVIGATION_POINT",
+      "case_key": "production-batch-2026-09-29/zanzibar/slave-based-plantation-production-1859-1871-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/10_zanzibar_slave_based_production_1859_1871.json",
+      "geometry_status": "modern_proxy_navigation_context_only"
+    },
+    {
+      "target": "Kingdom of Kongo",
+      "disposition": "ACCEPTED_STAGING_REVIEWED_WITH_MODERN_PROXY_NAVIGATION_POINT",
+      "case_key": "production-batch-2026-09-29/kongo/slavery-transformation-1491-1800-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/11_kongo_slavery_transformation_1491_1800.json",
+      "geometry_status": "modern_proxy_navigation_context_only"
+    },
+    {
+      "target": "Khiva",
+      "disposition": "ACCEPTED_STAGING_REVIEWED_WITH_MODERN_PROXY_NAVIGATION_POINT",
+      "case_key": "production-batch-2026-09-29/khiva/slavery-1873-v1",
+      "path": "data/research/recovery/production_batch_2026_09_29/candidates/12_khiva_slavery_1873.json",
+      "geometry_status": "modern_proxy_navigation_context_only"
+    }
+  ],
+  "accepted_case_keys": [
+    "production-batch-2026-09-29/imerina/slavery-1790-1861-v1",
+    "production-batch-2026-09-29/zanzibar/slave-based-plantation-production-1859-1871-v1",
+    "production-batch-2026-09-29/kongo/slavery-transformation-1491-1800-v1",
+    "production-batch-2026-09-29/khiva/slavery-1873-v1"
+  ],
+  "expected_new_claims_for_batch4_accepted": 4,
+  "expected_new_source_versions_for_batch4_accepted": 8,
+  "expected_resolved_navigation_points": 4,
+  "expected_release_membership_changes": 0,
+  "rules": [
+    "No P-levels",
+    "Navigation points are not practice extents",
+    "Fanompoana remains distinct from slavery",
+    "Export/value/count estimates do not become prevalence",
+    "Network and legal dimensions remain separate",
+    "Release/publication remains separate"
+  ]
+}

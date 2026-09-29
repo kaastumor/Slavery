@@ -105,3 +105,24 @@ review; Choson remains held for claim-level nobi classification and temporal
 scope; Ngapuhi evidence of raiding/captive enslavement belongs in an
 external-participation/captive-taking lane and is not inserted as home-territory
 practice merely to add map coverage.
+
+
+## Batch 4 accepted staging additions
+
+Imerina, Zanzibar (Unguja and Pemba), the Kingdom of Kongo and Khiva now have
+reviewed staging candidates grounded in specialist syntheses. Each candidate
+uses an official UNESCO coordinate only as a modern navigation/context point.
+None of those points is a historical practice extent or polity boundary.
+
+Imerina explicitly keeps fanompoana separate from slavery and preserves the
+specialist dispute over claims of total slave-labour dependence. Zanzibar's
+candidate records slave-based island production without converting export data
+into prevalence. Kongo records changing enslavement eligibility rather than a
+constant intensity. Khiva is bounded to the 1873 transition rather than turning
+variable historical population estimates into a long continuous prevalence
+claim.
+
+A read-only live preflight at 2026-09-29T17:33:31.360322+00:00 found no matching
+entity aliases, case keys, exact candidate source-version URLs or release-claim
+collisions for these four candidates. Exact-head disposable import/idempotency
+verification is required before they move from accepted staging to ingest-ready.

@@ -149,3 +149,35 @@ taghaza_counts=$(docker compose exec -T db sh -lc "psql -At -F '|' -U \"$POSTGRE
 test "$taghaza_counts" = "1|1|0"
 
 echo "Batch 3 candidate ingestion passed: Bukhara modern-proxy point + Taghaza unresolved site claim are idempotent with no P-levels."
+
+
+for candidate in   "09_imerina_slavery_1790_1861.json"   "10_zanzibar_slave_based_production_1859_1871.json"   "11_kongo_slavery_transformation_1491_1800.json"   "12_khiva_slavery_1873.json"
+do
+  path="data/research/recovery/production_batch_2026_09_29/candidates/$candidate"
+  first=$(docker compose run --rm tooling python tools/add_research_case.py "$path" --apply)
+  printf '%s\n' "$first"
+  second=$(docker compose run --rm tooling python tools/add_research_case.py "$path" --apply)
+  printf '%s\n' "$second"
+  grep -q "NO-OP: research case already applied unchanged" <<<"$second"
+done
+
+batch4_counts=$(docker compose exec -T db sh -lc "psql -At -F '|' -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\" -c \"select
+ (select count(*) from audit.research_case_ingest where case_key in (
+  'production-batch-2026-09-29/imerina/slavery-1790-1861-v1',
+  'production-batch-2026-09-29/zanzibar/slave-based-plantation-production-1859-1871-v1',
+  'production-batch-2026-09-29/kongo/slavery-transformation-1491-1800-v1',
+  'production-batch-2026-09-29/khiva/slavery-1873-v1')),
+ (select count(*) from atlas.territorial_practice_claim t join audit.research_case_ingest r using(claim_id) where r.case_key in (
+  'production-batch-2026-09-29/imerina/slavery-1790-1861-v1',
+  'production-batch-2026-09-29/zanzibar/slave-based-plantation-production-1859-1871-v1',
+  'production-batch-2026-09-29/kongo/slavery-transformation-1491-1800-v1',
+  'production-batch-2026-09-29/khiva/slavery-1873-v1') and t.practice_level is null),
+ (select count(*) from atlas.geometry g join atlas.territorial_practice_claim t using(spatial_entity_id) join audit.research_case_ingest r on r.claim_id=t.claim_id where r.case_key in (
+  'production-batch-2026-09-29/imerina/slavery-1790-1861-v1',
+  'production-batch-2026-09-29/zanzibar/slave-based-plantation-production-1859-1871-v1',
+  'production-batch-2026-09-29/kongo/slavery-transformation-1491-1800-v1',
+  'production-batch-2026-09-29/khiva/slavery-1873-v1') and g.geom is not null and GeometryType(g.geom)='POINT' and g.accuracy_status='modern_proxy');
+\"")
+test "$batch4_counts" = "4|4|4"
+
+echo "Batch 4 candidate ingestion passed: Imerina, Zanzibar, Kongo and Khiva are idempotent, NULL-P-level claims with modern-proxy navigation points only."
