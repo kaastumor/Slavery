@@ -102,8 +102,8 @@ not evidence that any specific island was or was not Roman.
 This audit does not validate other dates, source-to-record identity, or reviewed
 neighbor boundaries. The pinned GitHub polygon is still known to differ from
 the stored Seshat API record. The candidate therefore has **not** passed the
-integration gate. The evidence application continues to consume the unchanged
-released geometry; the fitted version remains a separately labeled preview.
+release gate. The evidence application uses unchanged released geometry by
+default; the fitted version remains a separately labeled preview.
 
 ### Constrained local candidate and adjacent-interval screen
 
@@ -127,11 +127,18 @@ to the GitHub features. The 14–22 CE release uses specialist AWMC geometry, so
 the GitHub interval is not a candidate replacement for it. This is a source-level
 screen, not visual acceptance or release source-to-record reconciliation.
 
+The evidence application can also show this local candidate at
+`web/index.html?coastal-preview=1`. That opt-in affects only the 6–8 CE Roman
+map fill when the served release is v0.8.1 and its land hash matches the pinned
+fabric. The release geometry record, evidence panel, default map, source data
+and immutable artifacts remain unchanged. A visible notice identifies the
+display experiment; failed or mismatched preview loading falls back to released
+geometry.
+
 The earlier 2% limit still is not met. The sponsor's local-candidate authorization
 does not promote the GitHub variant or the 25 km rule to released/canonical
 status. Broader dates, other regions, historical island/border review and the
-normal release gate remain open; the evidence application has no geometry
-substitution.
+normal release gate remain open.
 
 Rebuild:
 
