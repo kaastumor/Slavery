@@ -221,3 +221,13 @@ docker compose run --rm -e CI=true tooling \
   python tools/rehearse_geometry_closure_tranche_02.py --apply --disposable-test-db
 
 echo "100/100 geometry closure tranche 2 rehearsal passed: four case-linked loci are idempotent; Brazil remains HOLD; transaction rolled back."
+
+
+# #379: rehearse released ISIL/Yazidi Sinjar evidence-locus recovery.
+# The tool creates only the exact prerequisite v0.8.1 case fixture needed for
+# this test, applies one case-linked Sinjar locus, requires unchanged replay to
+# be a no-op, and rolls the entire transaction back. It has no production path.
+docker compose run --rm -e CI=true tooling \
+  python tools/rehearse_released_geo_recovery_tranche_03.py --apply --disposable-test-db
+
+echo "Released geo recovery tranche 3 rehearsal passed: Sinjar evidence locus is exact-idempotent and rolled back."
