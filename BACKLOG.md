@@ -9,7 +9,7 @@
 
 # CURRENT MODE — EXECUTION / CONSOLIDATION — 100/100 PROGRAMME (#369)
 
-**WIP = 1: #383 — Sogdiana / Afrosiab released-case geometry recovery review.**
+**WIP = 1: #383 — Sogdiana / Afrosiab recovery; rehearsal complete, database execution blocked.**
 
 The original #367 population batch is complete history: its 12 accepted cases were ingested to governed production research state and remain reviewed/unpublished. Production ingestion did not create release membership or move the serving channel.
 
@@ -40,15 +40,15 @@ Qualified recovery route:
 - use UNESCO WHC component `603rev-001` as a specialist archaeological-site locator;
 - preserve the later Oxford/Livshits 27 April 711 catalogue dating as a visible chronology tension without silently changing the immutable released 709–710 claim.
 
-The active checkpoint is review and disposable-rehearsal preparation only. No production write is authorized.
+Review #384, disposable rehearsal #386, and rehearsal receipt #387 are merged. Rehearsal foundation-ci run `36732127009` passed with the exact expected closure delta, exact no-op replay, and rollback. A fresh live preflight remained clean. The connected database mutation call was blocked before SQL execution, so no #383 live data change occurred.
 
 ## Execution order
 
-1. Materialize the #383 machine-readable review packet with exact claim/source/release identities and fresh live collision checks.
-2. Run the existing fail-closed disposable PostGIS rehearsal pattern: exact first-pass delta, unchanged replay = no-op, rollback restores counts.
-3. Only after that may a separate inert guarded production driver be prepared. A live write still requires explicit sponsor authorization specific to #383.
-4. Continue released-case geo recovery (Pre-Angkor inscription loci next when source-native coordinates are defensible).
-5. In parallel only after WIP reconciliation, continue semantic case reconciliation toward the 100-case numerator; do not count raw claims or scheduler packets.
+1. Keep #383 as WIP=1 at the database-execution boundary.
+2. Re-run the exact live preflight on an execution-capable surface before any mutation.
+3. Apply only the rehearsed Afrosiab locus/source/version/point/link delta and capture a durable receipt.
+4. Do not open the Pre-Angkor tranche until #383 is resolved.
+5. After #383 closes, continue released-case geo recovery and separately reconcile the 100-case numerator.
 
 ## Control-state reconciliation
 
