@@ -8,7 +8,7 @@
   "tested_head_sha": "9992a8ef2d009744377d92be2d9a3be995208dde",
   "workflow_run_id": 36641129910,
   "workflow_name": "foundation-ci",
-  "workflow_result": "PASS",
+  "workflow_result": "SUPERSEDED",
   "foundation_job_id": 109653494230,
   "mode": "DISPOSABLE_ROLLBACK",
   "accepted_geometry_cases": 4,
@@ -37,5 +37,8 @@
   },
   "replay": "PASS_EXACT_NOOP",
   "rollback_restored_counts": true,
-  "status": "PASS_DISPOSABLE_ROLLBACK_READY_FOR_EXPLICIT_PRODUCTION_GATE"
+  "status": "SUPERSEDED_PENDING_REVALIDATION_AFTER_MYANMAR_DEPENDENCE_CORRECTION",
+  "superseded_rehearsal_run_id": 36641129910,
+  "review_git_blob_sha": "53c2f0a1a4f59b392b671ca0fe5bbf3645fb3dd0",
+  "revalidation_required": "Fresh disposable foundation-ci rehearsal must pass with corrected Myanmar independence group before production gate can reopen."
 }
