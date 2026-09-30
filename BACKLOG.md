@@ -1,48 +1,64 @@
 # Historical Slavery Atlas — Backlog
 
-**Updated:** 2026-09-29
+**Updated:** 2026-09-30
 **Role:** canonical execution queue only; methodology, risks and value evidence remain in the existing project documents.
 **Canonical research authority:** governed PostgreSQL/PostGIS under D-109.
 **Canonical historical release:** `v0.8.1`, unchanged.
-**Observed live serving adapter:** `v0.8.1-public-mvp-v1`, unchanged at 2026-09-29 00:16 UTC.
+**Observed live serving adapter:** `v0.8.1-public-mvp-v2`, unchanged by the 100/100 preparation work.
 **Observed live schema head:** `0034`.
 
-# CURRENT MODE — EXECUTION / CONSOLIDATION — DEPLOYMENT-READY POPULATION (#360)
+# CURRENT MODE — EXECUTION / CONSOLIDATION — 100/100 PROGRAMME (#369)
 
-**WIP = 1: #360 — prepare the major evidence-backed production population batch.**
+**WIP = 1: #383 — Sogdiana / Afrosiab released-case geometry recovery review.**
 
-The sponsor explicitly accepts the current map candidate as good enough to proceed and defers remaining visual defects to a later Astra review. This supersedes the previous ordering that required further map refinement before batch preparation.
+The original #367 population batch is complete history: its 12 accepted cases were ingested to governed production research state and remain reviewed/unpublished. Production ingestion did not create release membership or move the serving channel.
 
-- #366 head `ecbc0e19aa4ac5d254e261d85f708879b8b9a983`: sponsor acceptance **ACCEPTED WITH KNOWN LIMITATIONS**; moved out of draft. Acceptance receipt: https://github.com/kaastumor/Slavery/pull/366#issuecomment-5881152185.
-- #365: remaining cartographic defects are **deferred**, not declared fixed. Do not resume snapping, smoothing, context-layer expansion or source-substitution experiments under this batch.
-- Technical merge/deployment checks remain distinct from visual acceptance. The generated-head workflows reported `action_required`; no passing check, merge, public cutover or exact screenshot/deployment identity is implied by sponsor acceptance.
-- #332 / #363 / D-121: existing source, claim and successor-authority prerequisites remain dependencies of publication, not reasons to postpone read-only batch preparation. Do not clear or close them by this priority change.
+## Current 100/100 checkpoint
 
-## Current population preparation checkpoint
+Strict released baseline remains:
+- **48 / 100** release-qualified territorial case clusters;
+- **16 / 100** released cases with direct accepted case-target geometry;
+- Mycenaean Greece already has reviewed Pylos/Knossos evidence loci and can raise the governed-successor mapped baseline to 17 without new historical research.
 
-Read `data/research/recovery/production_batch_2026_09_29/preflight.json` and issue #360.
+Prepared but **not live-written** geometry gates:
+- #370: Goryeo / Dahomey / Taghaza closure; review + disposable rehearsal + guarded production driver complete.
+- #379 / PR #382: Sinjar-town evidence locus for the released ISIL/Yazidi case; review + disposable rehearsal + guarded production driver complete.
 
-A connected, explicitly read-only Supabase census succeeded on 2026-09-29. The prior Management-API `database_read` failure must not be generalized to this interactive connector. This does not attest scheduled-worker or Actions access, full authority export or write permissions.
+If separately authorized and written cleanly, #370 would bring the 12-case #367 batch from 9 to 12 mapped candidates. Sinjar would add one further case-linked mapped representation to the released-corpus recovery pipeline. Neither gate changes immutable v0.8.1 membership or the public serving channel by itself.
 
-The census identified 11 tracked current-method territorial claims outside v0.8.1 membership. All are reviewed/unpublished with NULL practice level. Reuse their existing claim IDs rather than reinserting them. All 11 currently lack non-null, time-overlapping geometry directly attached to their target spatial entity. Separate evidence-locus relations were not tested by that count.
+## Active Sogdiana tranche — #383
 
-The 23 proposed new historical subjects have no canonical-name/display-name match under the explicitly checked aliases. This is not exhaustive identity resolution and does not establish that their complete packets are production-ready.
+Current released claim:
+- claim `63dda32b-6c3e-4b3e-9c5a-36596e6cdc1b`;
+- Early eighth-century Sogdiana, 709–710 CE;
+- existing target geometry remains reviewed + `unresolved` and must not be overwritten.
 
-## Execution order and deliverables
+Qualified recovery route:
+- reuse the existing Yakubovich / Encyclopaedia Iranica historical source version;
+- keep Mount Mugh as document findspot, not contract-execution place;
+- represent Afrosiab / ancient Samarkand only as the **probable legal-context evidence locus** inferred by the specialist editor;
+- use UNESCO WHC component `603rev-001` as a specialist archaeological-site locator;
+- preserve the later Oxford/Livshits 27 April 711 catalogue dating as a visible chronology tension without silently changing the immutable released 709–710 claim.
 
-1. Recover the complete first mixed five-subject packet set: Meroitic Kush/Hamadab, Goryeo, Dahomey, Mexica and Bagan/Pagan. Revalidate source editions, locators, dependencies, category and temporal/spatial scope. A fresh reconstruction must be labelled as new research, not the original lost packet.
-2. Reconcile the existing tracked claim packages and the 27 geometry-resolution targets against actual live identities. Do not add overlapping inventories together as new map coverage. Complete defensible geometry or evidence loci where that makes accepted evidence usable; unknown geometry remains unknown.
-3. Assemble explicit candidate IDs, exact source/packet fingerprints, geometry roles and expected database deltas. Report new claims, geometry-enriched existing claims, locus-only records, no-ops and held records separately.
-4. Run disposable-database dry-run and idempotent replay with dependency closure and exact before/after checks. Build a candidate map with working sources and evidence panels, not merely political background fill.
-5. Prepare immutable release/serving artifacts, changelog, QC summary, unresolved-issues register, staged rollout and rollback. Live admission/publication must satisfy the existing historical, provenance and technical gates; never select all reviewed rows.
+The active checkpoint is review and disposable-rehearsal preparation only. No production write is authorized.
 
-Remaining new-subject batches retain #360's 5/5/5/4/4 grouping. Batch size is a planning target, not permission to lower per-claim review requirements or pad accepted counts.
+## Execution order
+
+1. Materialize the #383 machine-readable review packet with exact claim/source/release identities and fresh live collision checks.
+2. Run the existing fail-closed disposable PostGIS rehearsal pattern: exact first-pass delta, unchanged replay = no-op, rollback restores counts.
+3. Only after that may a separate inert guarded production driver be prepared. A live write still requires explicit sponsor authorization specific to #383.
+4. Continue released-case geo recovery (Pre-Angkor inscription loci next when source-native coordinates are defensible).
+5. In parallel only after WIP reconciliation, continue semantic case reconciliation toward the 100-case numerator; do not count raw claims or scheduler packets.
+
+## Control-state reconciliation
+
+Legacy PR #363 was closed unmerged on 2026-09-30 as stale/diverged WIP. Its branch and evidence remain recoverable for selective current-method reconciliation; closing it promoted none of its content.
 
 ## Boundaries
 
-No new post-M1 P-levels, source-density prevalence, inferred nationality, false absence, unsupported modern proxies or evidence-locus-to-territory conversion. Preserve all canonical releases and source-native values. Public services consume reviewed/published materializations, not unrestricted drafts.
+No new post-M1 P-levels, source-density prevalence, inferred nationality, false absence, unsupported modern proxies, invented polygons, or evidence-locus-to-territory conversion. Preserve existing unresolved target geometry, source-native values, immutable releases and the publication boundary.
 
-No new schema, scheduled worker, credential expansion, paid service, parallel research horizon or generic platform work is authorized by this priority change. Preserve existing saved schedules and recovery mode. No background execution is implied by this queue.
+#370, #379 and any later production driver are **genuine sponsor gates**, not background work. No release/public serving movement without a separate explicit cutover authorization.
 
 ## Actions budget and standing protocols
 
