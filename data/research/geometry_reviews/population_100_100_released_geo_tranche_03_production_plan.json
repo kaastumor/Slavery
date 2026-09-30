@@ -1,0 +1,101 @@
+{
+  "record_kind": "released_geo_recovery_tranche_03_production_plan",
+  "version": 1,
+  "issue": 379,
+  "parent_issue": 369,
+  "status": "READY_FOR_EXPLICIT_PRODUCTION_WRITE_GATE_AFTER_PLAN_CI",
+  "reviewed_base_main_sha": "544e6caf88e2eb5c6dc83aae51520ac324571333",
+  "review_path": "data/research/geometry_reviews/population_100_100_released_geo_tranche_03_isil_sinjar.json",
+  "review_git_blob_sha": "248067822dcbc1d5e18c06c90bb056209d3c6a18",
+  "rehearsal_receipt": "data/research/geometry_reviews/population_100_100_released_geo_tranche_03_rehearsal_receipt.json",
+  "rehearsal_run_id": 36713803738,
+  "production_case": {
+    "target_spatial_entity_id": "c6edcdcd-0583-5d19-a54b-a1f3e1e32ffc",
+    "target_canonical_name": "Iraq/Syria under ISIL, especially Yazidi population from 2014",
+    "released_claim_ids": [
+      "88e48d2e-5b06-5b37-80bb-82e07db36a3f",
+      "b862e0a9-a857-57e0-8aa3-e37daf0844cf"
+    ],
+    "existing_historical_source_version_id": "dc410234-3f13-5e41-9ce9-4391a850cc23",
+    "action": "ADD_ONE_SINJAR_EVIDENCE_LOCUS_AND_LINK_TO_BOTH_RELEASED_CLAIM_FACETS"
+  },
+  "fresh_live_preflight": {
+    "observed_at": "2026-09-30T12:26:13.834105+00:00",
+    "claim_states": [
+      {
+        "claim_id": "88e48d2e-5b06-5b37-80bb-82e07db36a3f",
+        "practice_type": "slavery_enslavement",
+        "review_status": "reviewed",
+        "publication_status": "unpublished",
+        "practice_level": null
+      },
+      {
+        "claim_id": "b862e0a9-a857-57e0-8aa3-e37daf0844cf",
+        "practice_type": "sexual_slavery",
+        "review_status": "reviewed",
+        "publication_status": "unpublished",
+        "practice_level": null
+      }
+    ],
+    "sinjar_entity_hits": 0,
+    "sinjar_geometry_source_hits": 0,
+    "existing_locus_links": 0,
+    "broad_target_geometry_rows": 0,
+    "release_membership_hits": 2,
+    "release_geometry_for_target": 0,
+    "release_manifest_status": "published",
+    "unitad_source_version_id": "dc410234-3f13-5e41-9ce9-4391a850cc23",
+    "serving_channel": "v0.8.1-public-mvp-v2",
+    "before_counts": {
+      "atlas.spatial_entity": 75,
+      "atlas.source": 359,
+      "atlas.source_version": 359,
+      "atlas.claim": 116,
+      "atlas.claim_source": 170,
+      "atlas.geometry": 86,
+      "atlas.claim_evidence_locus": 2,
+      "audit.release_claim": 462,
+      "audit.release_geometry": 349,
+      "audit.release_channel": 1
+    }
+  },
+  "expected_live_delta": {
+    "atlas.spatial_entity": 1,
+    "atlas.source": 1,
+    "atlas.source_version": 1,
+    "atlas.claim": 0,
+    "atlas.territorial_practice_claim": 0,
+    "atlas.claim_source": 0,
+    "atlas.geometry": 1,
+    "atlas.claim_evidence_locus": 2,
+    "audit.release_manifest": 0,
+    "audit.release_claim": 0,
+    "audit.release_geometry": 0,
+    "audit.release_channel": 0
+  },
+  "production_apply_requirements": [
+    "explicit sponsor authorization specifically for #379 live Sinjar geometry closure",
+    "ATLAS_GEOMETRY_WRITE_AUTHORIZED=1",
+    "--production-write-authorized ISSUE-379-EXPLICIT",
+    "fresh --expected-main-sha equal to the exact checked-out main revision",
+    "current review blob must equal 248067822dcbc1d5e18c06c90bb056209d3c6a18",
+    "successful rehearsal receipt must remain bound to the same review blob",
+    "both released claim facets remain reviewed/unpublished with NULL P-levels",
+    "shared UNITAD source version remains dc410234-3f13-5e41-9ce9-4391a850cc23",
+    "Sinjar candidate entity/GeoNames source/locus-link collision preflight remains clean",
+    "broad Iraq/Syria analytical target remains without attached geometry",
+    "v0.8.1 membership remains exactly the two existing claim facets for this case cluster"
+  ],
+  "post_write_receipt_required": [
+    "generated Sinjar locus spatial-entity ID",
+    "generated GeoNames source and source-version IDs",
+    "generated Sinjar geometry ID",
+    "both claim-evidence-locus links",
+    "exact before/after tracked-table counts",
+    "unchanged UNITAD historical source linkage",
+    "zero historical claim/claim-source/release/release-geometry/channel/publication/P-level change",
+    "explicit confirmation that the Sinjar point is evidence/navigation context only and not practice extent"
+  ],
+  "release_boundary": "A production evidence-locus augmentation does not mutate immutable v0.8.1 membership or public serving. Any successor release selection and cutover remain separate explicit gates.",
+  "strategic_effect_if_successful": "Adds one defensible case-linked mapped representation to an already released case cluster for the #369 100/100 programme; does not create a new historical case."
+}
