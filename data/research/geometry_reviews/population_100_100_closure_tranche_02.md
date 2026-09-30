@@ -46,3 +46,14 @@ Adversarially review:
 
 Only the surviving subset may enter disposable PostGIS rehearsal. No production write is authorized.
 
+
+
+## Adversarial dependence correction
+
+A fresh adversarial review found one material source-independence defect before production gating:
+
+- the Myanmar witness-101 transcript is part of the **same 1998 ILO Commission of Inquiry evidence family** as the existing Myanmar inquiry claim source;
+- it must therefore reuse `independence_group = ilo-myanmar-commission-inquiry-1998`;
+- it may support a bounded testimony/location context, but it is **not** a second independent attestation.
+
+The previously successful disposable rehearsal is therefore superseded for production-gate purposes until the corrected review is rerun. India, Pakistan and Schöneweide survive the adversarial role check; Brazil remains HOLD.

@@ -1,0 +1,45 @@
+{
+  "record_kind": "geometry_closure_tranche_02_rehearsal_receipt",
+  "version": 1,
+  "issue": 374,
+  "parent_issue": 369,
+  "review_path": "data/research/geometry_reviews/population_100_100_closure_tranche_02.json",
+  "tested_pr": 376,
+  "tested_head_sha": "ab9c851a95c508af8122ba76a1ce21417d86f7d2",
+  "workflow_run_id": 36710366043,
+  "workflow_name": "foundation-ci",
+  "workflow_result": "PASS",
+  "foundation_job_id": 109870750836,
+  "mode": "DISPOSABLE_ROLLBACK",
+  "accepted_geometry_cases": 4,
+  "held_cases": [
+    "overnight-2026-09-27/brazil/rural-debt-bondage-2003-2005-v2"
+  ],
+  "tracked_closure_delta": {
+    "atlas.spatial_entity": 4,
+    "atlas.source": 6,
+    "atlas.source_version": 6,
+    "atlas.geometry": 4,
+    "atlas.claim_source": 2,
+    "atlas.claim_evidence_locus": 4,
+    "atlas.claim": 0,
+    "audit.release_claim": 0,
+    "audit.release_channel": 0
+  },
+  "semantic_checks": {
+    "case_linked_mapped_representations_after_apply": 4,
+    "historical_practice_polygons_added": 0,
+    "national_proxy_polygons_promoted": 0,
+    "claim_delta": 0,
+    "release_membership_delta": 0,
+    "publication_changes": 0,
+    "p_level_changes": 0
+  },
+  "replay": "PASS_EXACT_NOOP",
+  "rollback_restored_counts": true,
+  "status": "PASS_DISPOSABLE_ROLLBACK_READY_FOR_EXPLICIT_PRODUCTION_GATE",
+  "superseded_rehearsal_run_id": 36641129910,
+  "review_git_blob_sha": "53c2f0a1a4f59b392b671ca0fe5bbf3645fb3dd0",
+  "revalidation_required": null,
+  "adversarial_correction": "Myanmar witness-101 context now reuses independence_group ilo-myanmar-commission-inquiry-1998; fresh disposable rehearsal passed."
+}
