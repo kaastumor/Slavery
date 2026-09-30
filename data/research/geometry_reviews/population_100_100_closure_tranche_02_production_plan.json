@@ -3,9 +3,9 @@
   "version": 1,
   "issue": 374,
   "parent_issue": 369,
-  "status": "REHEARSAL_REVALIDATION_PENDING_AFTER_MYANMAR_DEPENDENCE_CORRECTION",
-  "reviewed_base_main_sha": "9c1f64f98695c412e06d2540aa283ab789a5466f",
-  "rehearsal_run_id": 36641129910,
+  "status": "READY_FOR_EXPLICIT_PRODUCTION_WRITE_GATE_AFTER_PLAN_CI",
+  "reviewed_base_main_sha": "528fdf641f8ab8913cebec4272d62676b677ce1f",
+  "rehearsal_run_id": 36710366043,
   "review_path": "data/research/geometry_reviews/population_100_100_closure_tranche_02.json",
   "rehearsal_receipt": "data/research/geometry_reviews/population_100_100_closure_tranche_02_rehearsal_receipt.json",
   "production_cases": [
@@ -84,6 +84,13 @@
     "zero claim/release/channel/publication/P-level change",
     "Brazil HOLD unchanged"
   ],
-  "release_boundary": "Production locus closure remains blocked until corrected source-dependence semantics are re-rehearsed; no production or serving authorization is implied.",
-  "review_git_blob_sha": "53c2f0a1a4f59b392b671ca0fe5bbf3645fb3dd0"
+  "release_boundary": "Production locus closure is not successor release membership or public serving authorization. Fresh live preflight is still mandatory at any authorized apply.",
+  "review_git_blob_sha": "53c2f0a1a4f59b392b671ca0fe5bbf3645fb3dd0",
+  "fresh_revalidation": {
+    "tested_head_sha": "ab9c851a95c508af8122ba76a1ce21417d86f7d2",
+    "workflow_run_id": 36710366043,
+    "foundation_job_id": 109870750836,
+    "result": "PASS",
+    "correction": "Myanmar testimony source dependence corrected and re-rehearsed"
+  }
 }
