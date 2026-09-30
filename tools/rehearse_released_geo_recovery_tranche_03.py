@@ -227,7 +227,7 @@ def insert_release_fixture(conn) -> None:
             """insert into audit.release_manifest(
                  release_version,schema_version,status,changelog,qc_summary,
                  unresolved_issues,manifest)
-               values (%s,'0034','published',%s,%s,%s,%s::jsonb)""",
+               values (%s,'0034','draft',%s,%s,%s,%s::jsonb)""",
             (
                 RELEASE_VERSION,
                 "Disposable v0.8.1 membership fixture for #379 only.",
@@ -243,6 +243,13 @@ def insert_release_fixture(conn) -> None:
                    values (%s,%s,%s,'captured_at_release')""",
                 (RELEASE_VERSION, claim_id, object_sha),
             )
+
+        cur.execute(
+            """update audit.release_manifest
+                  set status='published'
+                where release_version=%s""",
+            (RELEASE_VERSION,),
+        )
 
 
 def apply_once(conn, review: dict[str, Any]) -> dict[str, Any]:
