@@ -1,0 +1,147 @@
+{
+  "schema": "historical-slavery-atlas-100-100-released-geo-recovery-review-v1",
+  "issue": 383,
+  "parent_issue": 369,
+  "reviewed_against_main": "eee51caa6569e3b433af60bc9a7a33f5e04622ed",
+  "observed_live_preflight_at": "2026-09-30T13:47:18.505190+00:00",
+  "status": "INTERNAL_REVIEW_COMPLETE_READY_FOR_DISPOSABLE_REHEARSAL",
+  "scope": "released-case probable legal-context evidence-locus augmentation only; no claim, target-geometry replacement, P-level, publication, release-membership or serving-channel mutation",
+  "released_case": {
+    "spatial_entity_id": "a6718e1f-5683-48f4-90fb-cc35ad263ba5",
+    "canonical_name": "Early eighth-century Sogdiana",
+    "display_name": "Sogdiana",
+    "case_cluster_interval": [
+      709,
+      710
+    ],
+    "claim_facets": [
+      {
+        "claim_id": "63dda32b-6c3e-4b3e-9c5a-36596e6cdc1b",
+        "practice_type_code": "slavery_enslavement",
+        "practice_level": "P2",
+        "review_status": "reviewed",
+        "publication_status": "published",
+        "release_version": "v0.8.1",
+        "release_object_sha256": "e1c7a4977a11a9e1ba50f1287776adf7b0d4def3bf449d318d19b9d11dca6b55"
+      }
+    ]
+  },
+  "historical_evidence": {
+    "source_version_id": "cc49573e-8621-43d2-b054-a496c66cdcc8",
+    "title": "Marriage i. The Marriage Contract in the Pre-Islamic Period ii. Sogdian marriage contract.",
+    "author_or_institution": "Ilya Yakubovich; Encyclopaedia Iranica",
+    "url_or_identifier": "https://www.iranicaonline.org/articles/marriage-contract-in-the-pre-islamic-period/marriage-i-the-marriage-contract-in-the-pre-islamic-period-ii-sogdian-marriage-contract/",
+    "locator": "Nov. 3 lines 11-17; Nov. 4 lines 7-15; discussion dating the contract to ca. 709-710 CE and probably Samarkand",
+    "reuse_existing_source_version": true,
+    "spatial_interpretation": {
+      "probable_context": "Yakubovich states that the agreement was likely concluded in Samarkand.",
+      "document_findspot": "Nov. 3-4 were found at Mount Mugh, about one hundred kilometres east of Samarkand.",
+      "rule": "Keep probable contract setting and later document findspot distinct; neither is a Sogdiana territorial-practice extent."
+    },
+    "chronology_qualification": {
+      "immutable_release_date_text": "tenth regnal year of Tarkhun, king of Samarkand (ca. 709-710 CE)",
+      "later_catalogue_reference": "Oxford Invisible East catalogue, citing Livshits 2015, lists Nov. 3/4 as 27 April 711.",
+      "reference_url": "https://invisibleeast.site.ox.ac.uk/sogbacjudper",
+      "disposition": "PRESERVE_AS_REVIEW_NOTE_ONLY",
+      "rule": "Do not silently rewrite the immutable released claim interval. The catalogue is not added as a new historical claim-source relation in this geometry tranche."
+    }
+  },
+  "candidate": {
+    "disposition": "ACCEPT_FOR_DISPOSABLE_REHEARSAL",
+    "semantic_role": "claim_evidence_locus_probable_contract_setting",
+    "review_resolution": {
+      "entity_type_code": "site",
+      "accuracy_status": "specialist",
+      "rationale": "The mapped object is UNESCO WHC component 603rev-001, the Afrosiab Archaeological Area / ancient Samarkand. Existing Atlas precedent classifies authoritative UNESCO component site points as specialist geometry; uncertainty about whether this was the contract setting is carried by the claim-locus role, not by relabelling the component locator as a territorial extent."
+    },
+    "new_locus_entity": {
+      "canonical_name": "Afrosiab / ancient Samarkand — probable Sogdian contract setting",
+      "display_name": "Afrosiab (ancient Samarkand; probable Sogdian contract setting)",
+      "entity_type_code": "site",
+      "from_year": 709,
+      "to_year": 710,
+      "review_status": "reviewed",
+      "notes": "Historical-city/archaeological-site context for the specialist-inferred probable place of contract conclusion. Not the Mount Mugh findspot, not an exact building/room, and not a Sogdiana practice extent."
+    },
+    "geometry": {
+      "from_year": 709,
+      "to_year": 710,
+      "accuracy_status": "specialist",
+      "geometry_source_native_id": "UNESCO-WHC-603rev-001",
+      "resolution_method": "Use UNESCO World Heritage component 603rev-001 as an authoritative representative locator for Afrosiab, ancient Samarkand. The point anchors the probable Samarkand legal context inferred by the specialist editor; it is not an exact contract site, not the Mount Mugh findspot, and not a territorial-practice polygon.",
+      "geojson": {
+        "type": "Point",
+        "coordinates": [
+          66.9833333,
+          39.6666667
+        ]
+      },
+      "review_status": "reviewed"
+    },
+    "geometry_source": {
+      "title": "Samarkand – Crossroad of Cultures — Afrosiab Archaeological Area geographical data",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "source_type": "official_heritage_geodata",
+      "source_classification": "geometry_reference",
+      "geographic_scope": "Afrosiab / ancient Samarkand, Uzbekistan",
+      "temporal_scope": "Modern authoritative component locator for the enduring archaeological area of ancient Samarkand",
+      "independence_notes": "Geometry-only authority; independent of the historical slavery/status classification.",
+      "reliability_limitations": "The UNESCO component coordinate locates the 229 ha Afrosiab Archaeological Area. It does not identify the exact contract building or room and does not define Sogdiana territorial-practice extent.",
+      "version_label": "World Heritage List 603rev, component 603rev-001, maps/geographical data",
+      "url_or_identifier": "https://whc.unesco.org/en/list/603/maps/",
+      "license_status": "official_web_record_citation_only",
+      "redistribution_status": "single component coordinate recorded; no UNESCO map asset mirrored",
+      "source_native_coordinate": [
+        66.9833333,
+        39.6666667
+      ]
+    },
+    "locus_links": [
+      {
+        "claim_id": "63dda32b-6c3e-4b3e-9c5a-36596e6cdc1b",
+        "role_text": "probable Samarkand legal-context locus; contract location inferred by specialist editor",
+        "notes": "Yakubovich dates the contract to ca. 709-710 and says it was likely concluded in Samarkand. UNESCO component 603rev-001 locates Afrosiab/ancient Samarkand. This does not assert an exact contract site or territorial prevalence."
+      }
+    ]
+  },
+  "existing_target_geometry_to_preserve": {
+    "geometry_id": "ef33b27a-2b8f-4fc0-a523-885137706193",
+    "accuracy_status": "unresolved",
+    "from_year": 709,
+    "to_year": 710,
+    "geom_is_null": true,
+    "rule": "Must remain unchanged; the new locus augments the case rather than replacing unresolved Sogdiana target geometry."
+  },
+  "live_preflight": {
+    "candidate_entity_hits": 0,
+    "unesco_geometry_source_hits": 0,
+    "existing_locus_links_for_claim": 0,
+    "existing_target_geometry_rows": 1,
+    "existing_target_non_null_geometry_rows": 0,
+    "released_claim_in_v081": 1,
+    "existing_historical_source_version_id": "cc49573e-8621-43d2-b054-a496c66cdcc8",
+    "serving_channel": "v0.8.1-public-mvp-v2"
+  },
+  "qc": {
+    "accepted_for_rehearsal": 1,
+    "historical_practice_polygons_added": 0,
+    "target_geometry_rows_replaced": 0,
+    "historical_claim_delta": 0,
+    "expected_if_rehearsed": {
+      "spatial_entity_delta": 1,
+      "source_delta": 1,
+      "source_version_delta": 1,
+      "geometry_delta": 1,
+      "claim_evidence_locus_delta": 1,
+      "claim_source_delta": 0,
+      "claim_delta": 0,
+      "release_claim_delta": 0,
+      "release_geometry_delta": 0,
+      "release_channel_delta": 0,
+      "publication_status_changes": 0,
+      "p_level_changes": 0
+    },
+    "next_gate": "DISPOSABLE_POSTGIS_REHEARSAL_ONLY"
+  },
+  "release_effect": "none until explicit governed successor selection; v0.8.1 remains immutable"
+}
