@@ -3456,3 +3456,62 @@ as political context rather than unexplained holes.
 v0.8.1 and `v0.8.1-public-mvp-v1` remain immutable.
 
 Refs #365, PR #366, D-016, D-036, D-046, D-059, D-116, D-122.
+
+## D-124 — Bounded batch intake with one canonical mutation stream
+**Date:** 2026-10-01
+**Status:** sponsor-authorized operating amendment for #369; effective when merged to main
+
+**Problem:** The #369 100/100 programme needs case-level historical quality, but the
+global one-item interpretation of WIP=1 serializes read-only qualification behind
+review, PR, CI, rehearsal, sponsor gate and receipt work. #367 demonstrated a
+12-case atomic reviewed/unpublished ingest with 11 explicit HOLD exclusions; #383
+demonstrated that a single exceptional geometry case can require substantial
+interpretation and multiple PR boundaries. Neither example proves that all cases
+are routine or that screening volume equals release-qualified progress.
+
+**Decision:** For #369 only, interpret WIP=1 as one active integration/admission
+priority and one canonical repository/database mutation stream. Up to four bounded
+read-only qualifiers may work on distinct candidate identities inside that priority;
+one owner alone integrates reviews, controls the branch/PR and writes canonical
+state. Stop new scouting at eight unacknowledged packets or sooner if review debt
+outpaces reconciliation. This supersedes the blanket prohibition in D-091/D-092
+and `24_WAY_OF_WORKING.md` on any second item while a PR is open **only** for
+nonconflicting read-only #369 qualification. Other programmes retain WIP=1 as
+previously written. A saved schedule is not changed by this decision.
+
+Screen 20-40 candidates with stable identities, input revisions, source/version
+pointers and explicit `ACCEPT_FOR_BATCH`, `NEEDS_DEEP_REVIEW`, `HOLD` or
+`DUPLICATE` dispositions. Screening does not change reviewed/admitted state or
+the #369 numerators. Prefer the existing qualified funnel before fresh discovery
+and preserve global/period/evidence balance. The first routine batch is capped at
+five; later coherent batches may contain up to ten only within actual review
+capacity and after the prior batch is reconciled. These are caps, not targets.
+Material category, chronology, identity, source-independence, overlap, provenance
+or geometry-role ambiguity follows individual deep review and cannot be hidden
+inside a routine batch.
+
+Every admitted case retains an individual review of claim, exact source version
+and locator, dependency, temporal/spatial scope, HOLD state and geometry role.
+One preparation PR may combine the batch reviews, exact manifest/driver and
+disposable rehearsal evidence. Mechanical checks cover identity/collisions,
+source reuse, geometry-role constraints, exact deltas, no-op replay, rollback and
+receipt completeness; they do not decide historical meaning. Production requires
+separate sponsor authorization bound to the exact manifest digest and operation,
+fresh live preflight, one guarded transaction and independent post-write readback.
+Any drift or member failure aborts the transaction. A changed manifest needs new
+review and authorization. Record the live receipt and control-state change before
+the next canonical mutation batch; post-commit correction is separately reviewed.
+
+**Unchanged gates:** No P-level inference from counts, invented geometry,
+evidence-locus/practice-extent conflation, loss of source-native or exact-version
+provenance, conversion of unknown/HOLD into absence, or automatic admission from
+screening. Release selection, publication, serving cutover, merges and production
+writes retain their own scoped authorization and verification. Cross-batch
+reconciliation remains mandatory before sustained scaling or release. No schema,
+historical claim, geometry, canonical release or public-channel effect follows
+from this process amendment.
+
+**Reopen trigger:** A collision, source-dependency error, unsafe rollback, growing
+review debt or material historical misclassification in the pilot suspends fast-path
+admission until reviewed and corrected. Refs #367, #369, #383, PRs #384/#386/#387/#388,
+D-090/D-091/D-092/D-096/D-109/D-121.

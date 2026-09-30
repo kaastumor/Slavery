@@ -40,8 +40,9 @@ Choose by contribution to the project goal, evidence quality, focus, review capa
 complexity. Elapsed time alone is not a stop rule, but neither is unused time a reason to
 invent work.
 
-Keep WIP at **one active priority across workers**. WIP=1 limits concurrency; it does not
-require a continuous chain of experiments.
+Keep WIP at **one active priority across workers**. For #369 intake, D-124 permits
+bounded read-only qualification within that priority while one owner controls the
+canonical mutation stream. WIP=1 does not require a continuous chain of experiments.
 
 A method may become **operational within a declared scope** when it supports that task,
 its known failure modes have controls, and no unresolved method question blocks ordinary
@@ -84,8 +85,56 @@ For bounded delivery horizons use a lean Kanban-style flow:
 `READY -> IN PROGRESS -> PR/REVIEW -> DONE`
 
 Default WIP is **1 active priority across workers**. The item may be discovery, execution,
-consolidation, review/release or maintenance. Do not start a second work item while the
-first has an open branch/PR or unresolved repository-caused CI failure.
+consolidation, review/release or maintenance. Do not start a second canonical mutation
+item while the first has an open branch/PR or unresolved repository-caused CI failure.
+For #369 intake only, read-only qualification within the active priority may continue
+under the following D-124 contract; it does not create another repository/DB writer.
+
+### #369 intake fast path (D-124)
+
+- One integration owner controls the active batch, its branch/PR, manifest, review
+  decisions and all repository/DB writes. No overlapping writer or competing admission
+  batch is allowed. Up to four workers may qualify distinct candidates read-only when
+  the owner has review capacity. Each worker owns one bounded item per run; scheduled
+  timeboxes and packet rules remain in force. Stop new scouting at eight unacknowledged
+  packets or sooner if review debt grows faster than it closes.
+- Screen a bounded 20-40 candidate pool from the existing #369 funnel before fresh
+  discovery. In the owning issue or existing review artifact, record a stable candidate
+  key, source/version pointer, input revision and one disposition:
+  `ACCEPT_FOR_BATCH`, `NEEDS_DEEP_REVIEW`, `HOLD` or `DUPLICATE`, with a reason.
+  `ACCEPT_FOR_BATCH` means eligible for full case review, not admitted data or a 100/100
+  numerator increment. Preserve rejected, duplicate and HOLD evidence.
+- Select an initial routine batch of at most five cases; later batches may contain up
+  to ten when the owner can review every case and the previous batch has been
+  reconciled. These are caps, not quotas. Route material category, chronology,
+  identity, source-independence, overlap, provenance or geometry-role ambiguity to
+  deep review. An exception joins a batch only after its own dispute is resolved and
+  the manifest is reviewed again. Do not favor easy-to-map or archive-dense regions.
+- Each admitted case needs its own stable identity, substantive claim review,
+  exact source-version/locator and dependency record, bounded or explicitly uncertain
+  time/place, review outcome, and independent geometry-role decision. HOLD and
+  unresolved geometry remain explicit. A valid historical case without defensible
+  case-linked geometry cannot enter the geo numerator. No P-level follows from
+  document, voyage or citation counts.
+- Prepare one coherent PR for the batch review, exact manifest/driver and disposable
+  rehearsal. Pin case keys, source versions, expected inserts/reuse and zero-effect
+  boundaries to a manifest digest. Focused CI must check collisions, identity,
+  provenance, geometry role, expected deltas, unchanged replay, rollback and receipt
+  completeness. Human review owns historical meaning and source independence.
+- Merge the reviewed preparation only with scoped authorization. A later production
+  authorization may cover the entire **exact manifest**, not changed members or SQL.
+  Immediately before one guarded transaction, recheck current main, schema, live
+  identities/source reuse, release membership and serving state. Drift aborts. A
+  mismatch in any case rolls back the whole batch; removal or repair makes a newly
+  reviewed manifest requiring fresh authorization. Record generated IDs, per-case
+  results, exact before/after deltas and independent post-write readback in one
+  receipt/control-state PR before the next canonical mutation batch. After commit,
+  correction requires a separately reviewed compensating action, never an overwrite
+  of immutable release history.
+- Research ingestion does not authorize successor selection, publication or public
+  cutover. Those remain separate gates. Keep cross-batch identity/source/review
+  reconciliation before sustained scaling or release. Do not enable or alter a saved
+  schedule merely by changing this policy.
 
 ### Definition of Ready
 

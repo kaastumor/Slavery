@@ -12,7 +12,10 @@ Merge/deploy/publication and other consequential actions require explicit scoped
 authorization; a green PR is READY_FOR_REVIEW, not automatic permission to merge.
 
 Repository: `kaastumor/Slavery`. Active issue and next action: root `BACKLOG.md`.
-WIP: one active priority across workers. Operating rules: D-090, D-091, D-092, D-096.
+WIP: one canonical mutation stream within the active priority. Under D-124, #369
+read-only qualification may run concurrently within the packet cap; a scheduled run
+still owns one bounded item and has no autonomous admission or production authority.
+Operating rules: D-090, D-091, D-092, D-096, D-124.
 
 ## Scheduled execution boundary
 
@@ -33,6 +36,14 @@ to verify and land it without reconstructing chat or scheduler history:
 - deduplication comparison against accepted repository and database state;
 - intended repository/database changes, checks and release effect;
 - a stable packet identity or content fingerprint when available.
+
+For #369 screening, the packet also records `ACCEPT_FOR_BATCH`,
+`NEEDS_DEEP_REVIEW`, `HOLD` or `DUPLICATE` and the reason. `ACCEPT_FOR_BATCH` is a
+qualification recommendation, not reviewed/admitted state. The integration owner
+deduplicates and acknowledges packets before selecting the next batch. Stop new
+scouting at eight unacknowledged packets or sooner when review debt exceeds capacity.
+No saved task gains parallel execution, changed cadence, model, credentials or write
+authority from this runbook amendment; change and verify saved configuration separately.
 
 Interactive reconciliation owns any repository, database, release or public-channel
 mutation. It must compare the packet with current `main`, open work and live authority,
@@ -61,7 +72,8 @@ scheduled GitHub write permission alone may not.
 
 After a bounded item completes, reconcile it and select the next justified **mode**
 under D-096: discovery, execution, consolidation, review/release, maintenance, or no
-justified work. WIP=1 does not require another experiment. Do not invent work if the
+justified work. WIP=1 does not require another experiment. D-124 read-only #369
+screening remains subordinate to the active integration owner. Do not invent work if the
 useful modes are complete, blocked or unjustified. Evidence quality, focus, review
 capacity and complexity take priority. A timebox ends this run with a checkpoint;
 elapsed time alone does not terminate the research question or project.

@@ -16,9 +16,11 @@ and strategic reasoning. Neither chat output nor a scheduled-worker packet is ac
 truth until it has been reconciled into the repository through the normal evidence,
 review and CI gates.
 
-Preserve WIP=1 and inspect active ownership before editing. Routine implementation may
-proceed autonomously within the accepted contract; escalate genuine sponsor, evidence,
-credential, publication or irreversible gates.
+Preserve WIP=1 for the canonical mutation stream and inspect active ownership before
+editing. For the #369 intake programme, bounded read-only qualification may run in
+parallel under D-124; it creates candidates, never accepted research or permission to
+write. Routine implementation may proceed autonomously within the accepted contract;
+escalate genuine sponsor, evidence, credential, publication or irreversible gates.
 
 Do not promote methodology, schema, historical data, geometry or a release merely
 because a draft or newer artifact exists. Preserve historical releases and keep
