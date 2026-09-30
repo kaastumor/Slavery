@@ -1,0 +1,143 @@
+{
+  "schema": "historical-slavery-atlas-100-100-released-geo-recovery-review-v1",
+  "issue": 379,
+  "parent_issue": 369,
+  "reviewed_against_main": "9677a601003668404ca5630d0c0fdcc7546dce70",
+  "observed_live_preflight_at": "2026-09-30T12:07:23.207414+00:00",
+  "status": "INTERNAL_REVIEW_COMPLETE_READY_FOR_DISPOSABLE_REHEARSAL",
+  "scope": "released-case evidence-locus augmentation only; no claim, practice-extent, P-level, publication or release-membership mutation",
+  "released_case": {
+    "spatial_entity_id": "c6edcdcd-0583-5d19-a54b-a1f3e1e32ffc",
+    "canonical_name": "Iraq/Syria under ISIL, especially Yazidi population from 2014",
+    "case_cluster_interval": [
+      2014,
+      null
+    ],
+    "claim_facets": [
+      {
+        "claim_id": "88e48d2e-5b06-5b37-80bb-82e07db36a3f",
+        "practice_type_code": "slavery_enslavement",
+        "release_version": "v0.8.1"
+      },
+      {
+        "claim_id": "b862e0a9-a857-57e0-8aa3-e37daf0844cf",
+        "practice_type_code": "sexual_slavery",
+        "release_version": "v0.8.1"
+      }
+    ]
+  },
+  "historical_evidence": {
+    "source_version_id": "dc410234-3f13-5e41-9ce9-4391a850cc23",
+    "title": "The ISIL Attack on Sinjar in August 2014 and Subsequent Acts Committed Against the Yazidi Community in Iraq",
+    "author_or_institution": "UNITAD",
+    "url_or_identifier": "https://www.unitad.un.org/sites/www.unitad.un.org/files/sinjar_brief_public_updated_0_2.pdf",
+    "reuse_existing_source_version": true,
+    "independence_note": "This is the already accepted source family for both released claim facets. The geometry recovery adds no new independent historical attestation.",
+    "locators": [
+      {
+        "paragraph": 193,
+        "relevance": "Yazidis were captured across Sinjar, explicitly including Sinjar town; separation by age and gender began the organized slave-trade and enslavement system."
+      },
+      {
+        "paragraph": 195,
+        "relevance": "Women, boys and girls were taken to initial holding sites including Sinjar town before onward movement to Ba'aj, Mosul, Tal Afar and other sites."
+      },
+      {
+        "paragraph": 196,
+        "relevance": "Women and girls were selected from holding sites and distributed through lottery, sale or gift; use this only to contextualize Sinjar as an upstream holding-stage locus, not as the location of every later sexual-slavery act."
+      }
+    ]
+  },
+  "candidate": {
+    "disposition": "ACCEPT_FOR_DISPOSABLE_REHEARSAL",
+    "semantic_role": "claim_evidence_locus_capture_and_initial_holding_modern_proxy",
+    "new_locus_entity": {
+      "canonical_name": "Sinjar town — Yazidi capture/holding locus",
+      "display_name": "Sinjar town (2014 Yazidi capture/holding locus)",
+      "entity_type_code": "city",
+      "from_year": 2014,
+      "to_year": 2014,
+      "review_status": "reviewed",
+      "notes": "Named capture and initial-holding locus in UNITAD's 2014 Sinjar case assessment. This site identity does not define ISIL territorial control, regional practice extent or prevalence."
+    },
+    "geometry": {
+      "from_year": 2014,
+      "to_year": 2014,
+      "accuracy_status": "modern_proxy",
+      "source_native_id": "GeoNames 448149",
+      "resolution_method": "Use the modern GeoNames populated-place coordinate for Sinjar/Sinjar town as navigation geometry for the enduring named town. UNITAD explicitly identifies Sinjar town as both a capture location and an initial holding site in the 2014 enslavement system. The modern point is not a practice extent, not an ISIL boundary and not the coordinate of every act described in the case assessment.",
+      "geojson": {
+        "type": "Point",
+        "coordinates": [
+          41.876562,
+          36.320901
+        ]
+      },
+      "review_status": "reviewed"
+    },
+    "geometry_source": {
+      "title": "Sinjar (GeoNames 448149)",
+      "author_or_institution": "GeoNames",
+      "source_type": "modern_gazetteer",
+      "source_classification": "geometry_reference",
+      "version_label": "GeoNames feature 448149, accessed 2026-09-30",
+      "url_or_identifier": "https://www.geonames.org/448149/sinjar.html",
+      "license_status": "GeoNames CC BY 4.0 database",
+      "redistribution_status": "coordinate with attribution",
+      "source_native_coordinate": [
+        41.876562,
+        36.320901
+      ]
+    },
+    "locus_links": [
+      {
+        "claim_id": "88e48d2e-5b06-5b37-80bb-82e07db36a3f",
+        "role_text": "UNITAD-documented Yazidi capture and initial-holding locus in Sinjar town",
+        "notes": "UNITAD paras. 193 and 195. Evidence locus for the released enslavement facet; not territorial extent or prevalence."
+      },
+      {
+        "claim_id": "b862e0a9-a857-57e0-8aa3-e37daf0844cf",
+        "role_text": "UNITAD-documented initial-holding stage feeding the later distribution/sale system",
+        "notes": "UNITAD paras. 195–196. Sinjar town is an upstream holding-stage locus in the system; this does not assert that every later sexual-slavery act occurred in Sinjar town."
+      }
+    ]
+  },
+  "deferred": [
+    {
+      "target": "Kocho / Kojo / Kuju",
+      "disposition": "DEFER_COORDINATE_IDENTITY_REVIEW",
+      "reason": "UNITAD strongly supports Kocho as a capture site, but modern coordinate references conflict materially. Do not silently normalize competing Kocho/Kuju coordinates in this tranche."
+    }
+  ],
+  "live_preflight": {
+    "sinjar_entity_hits": 0,
+    "sinjar_geometry_source_hits": 0,
+    "existing_locus_links_for_claim_facets": 0,
+    "released_claim_facets_in_v081": 2,
+    "existing_unitad_source_version_id": "dc410234-3f13-5e41-9ce9-4391a850cc23",
+    "serving_channel": "v0.8.1-public-mvp-v2"
+  },
+  "qc": {
+    "accepted_for_rehearsal": 1,
+    "held_or_deferred_secondary_loci": 1,
+    "historical_practice_polygons_added": 0,
+    "national_or_regional_proxy_polygons_promoted": 0,
+    "historical_claim_delta": 0,
+    "expected_if_rehearsed": {
+      "spatial_entity_delta": 1,
+      "source_delta": 1,
+      "source_version_delta": 1,
+      "geometry_delta": 1,
+      "claim_evidence_locus_delta": 2,
+      "claim_source_delta": 0,
+      "claim_delta": 0,
+      "release_claim_delta": 0,
+      "release_geometry_delta": 0,
+      "release_channel_delta": 0,
+      "publication_status_changes": 0,
+      "p_level_changes": 0
+    },
+    "next_gate": "DISPOSABLE_POSTGIS_REHEARSAL_ONLY"
+  },
+  "release_effect": "none until explicit successor selection; v0.8.1 remains immutable"
+}
