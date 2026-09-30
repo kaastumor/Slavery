@@ -1,0 +1,160 @@
+{
+  "schema": "historical-slavery-atlas-100-100-released-geo-recovery-review-v1",
+  "issue": 383,
+  "parent_issue": 369,
+  "contract": "ATLAS_100_100_PIPELINE_V1_20260930",
+  "attempt": "ATLAS100-PROC-20260930T1341Z-SOGDIANA-02",
+  "reviewed_against_main": "eee51caa6569e3b433af60bc9a7a33f5e04622ed",
+  "reviewed_at": "2026-09-30T13:41:44Z",
+  "status": "INTERNAL_REVIEW_COMPLETE_LIVE_PREFLIGHT_REQUIRED",
+  "scope": "released-case probable legal-context evidence-locus review only; no claim, P-level, practice-extent, database, publication, release-membership or serving-channel mutation",
+  "released_case": {
+    "claim_id": "63dda32b-6c3e-4b3e-9c5a-36596e6cdc1b",
+    "spatial_entity_id": "a6718e1f-5683-48f4-90fb-cc35ad263ba5",
+    "canonical_name": "Early eighth-century Sogdiana",
+    "practice_type_code": "slavery_enslavement",
+    "release_version": "v0.8.1",
+    "accepted_interval": [
+      709,
+      710
+    ],
+    "accepted_valid_years": "[709,711)",
+    "existing_target_geometry_status": "unresolved",
+    "existing_target_geometry_mutation": "forbidden"
+  },
+  "historical_evidence": {
+    "source_version_id": "cc49573e-8621-43d2-b054-a496c66cdcc8",
+    "title": "MARRIAGE i. THE MARRIAGE CONTRACT IN THE PRE-ISLAMIC PERIOD ii. Sogdian marriage contract",
+    "author": "Ilya Yakubovich",
+    "publication": "Encyclopaedia Iranica",
+    "publication_year": 2005,
+    "last_updated": "2017-12-01",
+    "url_or_identifier": "https://www.iranicaonline.org/articles/marriage-contract-in-the-pre-islamic-period/marriage-i-the-marriage-contract-in-the-pre-islamic-period-ii-sogdian-marriage-contract/",
+    "reuse_existing_source_version": true,
+    "locators": [
+      {
+        "locator": "opening discussion",
+        "relevance": "Nov. 3-4 were found at Mount Mugh; the tenth regnal year of Tarkhun is dated ca. 709-710 CE; the agreement was likely concluded in Samarkand."
+      },
+      {
+        "locator": "Nov. 3 lines 11-17",
+        "relevance": "Becoming another person's slave is a recognized legal-status contingency distinguished from hostage, prisoner and dependent status."
+      },
+      {
+        "locator": "Nov. 4 lines 7-15",
+        "relevance": "Ot-tegin undertakes not to sell Chat, give her as hostage or tribute, or place her under another person's protection."
+      }
+    ],
+    "independence_note": "Geometry recovery reuses the already accepted historical source family and adds no independent historical attestation. The Oxford catalogue below is edition/catalogue lineage, not a second independent witness."
+  },
+  "chronology_dispute": {
+    "accepted_release_statement": "tenth regnal year of Tarkhun, ca. 709-710 CE",
+    "later_catalogue_statement": "27 April 711",
+    "later_catalogue_source": "Oxford Invisible East Sogdian documents catalogue",
+    "later_catalogue_url": "https://invisibleeast.site.ox.ac.uk/sogbacjudper",
+    "later_catalogue_locator": "Nov. 3 and Nov. 4 rows; Livshits 2015, pp. 17-37",
+    "disposition": "PRESERVE_WITHOUT_RECONCILIATION",
+    "constraint": "Do not change the immutable released claim interval in this geometry-recovery tranche; carry the discrepancy in review and implementation notes."
+  },
+  "geometry_reference": {
+    "title": "Samarkand - Crossroad of Cultures, Maps",
+    "author_or_institution": "UNESCO World Heritage Centre",
+    "source_type": "official_heritage_component_register",
+    "source_classification": "geometry_reference",
+    "version_label": "UNESCO WHC component 603rev-001, accessed 2026-09-30",
+    "url_or_identifier": "https://whc.unesco.org/en/list/603/maps/",
+    "source_native_id": "UNESCO WHC 603rev-001",
+    "source_native_name": "Afrosiab Archaeological Area",
+    "source_native_coordinate_dms": {
+      "latitude": "N39 40 0",
+      "longitude": "E66 58 60"
+    },
+    "normalized_wgs84_coordinate": [
+      66.9833333,
+      39.6666667
+    ],
+    "component_area_hectares": 229,
+    "license_status": "UNESCO page description is labelled CC BY-SA IGO 3.0; coordinate/database reuse terms were not independently resolved in this review",
+    "redistribution_status": "citation and coordinate-reference proposal only; confirm before database registration",
+    "release_bundle_collision_check": "No matching UNESCO maps URL, source-native ID or Afrosiab string in the v0.8.1 authority bundle; governed live database collision/reuse state remains UNKNOWN."
+  },
+  "candidate": {
+    "disposition": "ACCEPTED_STAGING",
+    "semantic_role": "claim_evidence_locus_probable_contract_setting",
+    "new_locus_entity": {
+      "canonical_name": "Afrosiab / ancient Samarkand — 709–710 legal context",
+      "display_name": "Afrosiab (ancient Samarkand; probable 709–710 legal context)",
+      "entity_type_code": "city",
+      "from_year": 709,
+      "to_year": 710,
+      "review_status": "reviewed",
+      "notes": "Historical-city context for the specialist editor's probable Samarkand place of conclusion. Not an exact building or room, document findspot, territorial-practice extent or prevalence indicator."
+    },
+    "geometry": {
+      "from_year": 709,
+      "to_year": 710,
+      "accuracy_status": "specialist",
+      "source_native_id": "UNESCO WHC 603rev-001",
+      "resolution_method": "Use the official UNESCO Afrosiab Archaeological Area component point for ancient Samarkand as bounded historical-city context. The historical source says the agreement was likely concluded in Samarkand; UNESCO identifies Afrosiab as ancient Samarkand. The coordinate is the registered component anchor, not the exact Foundation Hall or contract-execution site.",
+      "geojson": {
+        "type": "Point",
+        "coordinates": [
+          66.9833333,
+          39.6666667
+        ]
+      },
+      "review_status": "reviewed"
+    },
+    "locus_link": {
+      "claim_id": "63dda32b-6c3e-4b3e-9c5a-36596e6cdc1b",
+      "role_text": "probable Samarkand legal-context locus; contract location inferred by specialist editor",
+      "notes": "Yakubovich opening discussion. Afrosiab point identifies ancient Samarkand context only; it does not establish an exact contract site, practice extent or prevalence."
+    }
+  },
+  "findspot_separation": {
+    "place": "Mount Mugh",
+    "role": "document_findspot_only",
+    "included_as_claim_evidence_locus": false,
+    "reason": "The documents' later findspot is distinct from the specialist-inferred probable Samarkand contract context."
+  },
+  "live_preflight": {
+    "observed_live_database_at": null,
+    "database_read_available": false,
+    "source_collision_or_reuse_state": "UNKNOWN",
+    "spatial_entity_collision_state": "UNKNOWN",
+    "claim_locus_link_collision_state": "UNKNOWN",
+    "released_claim_verified_from_immutable_bundle": true,
+    "released_claim_existing_evidence_loci_in_bundle": 0,
+    "release_bundle_sha": "1b8f8b0c341728e63fc70b31202cceaffa954890",
+    "reentry_condition": "Fresh governed Postgres/PostGIS read-only collision/source/release preflight."
+  },
+  "explicit_abstentions": [
+    "Do not treat Afrosiab as Sogdiana territorial-practice extent.",
+    "Do not use the UNESCO property boundary as claim geometry.",
+    "Do not claim the Foundation Hall or exact contract site is geolocated.",
+    "Do not substitute Mount Mugh for the probable Samarkand context.",
+    "Do not delete or overwrite the unresolved Sogdiana target-geometry row.",
+    "Do not strengthen or recalculate P2 from geometry.",
+    "Do not silently reconcile ca. 709-710 with the 27 April 711 catalogue date."
+  ],
+  "qc": {
+    "accepted_staging": 1,
+    "historical_claim_delta": 0,
+    "historical_claim_source_delta": 0,
+    "practice_polygon_delta": 0,
+    "p_level_delta": 0,
+    "release_membership_delta": 0,
+    "release_geometry_delta": 0,
+    "publication_delta": 0,
+    "serving_channel_delta": 0,
+    "expected_if_later_rehearsed": {
+      "spatial_entity_delta": 1,
+      "geometry_source_delta": 1,
+      "geometry_source_version_delta": 1,
+      "geometry_delta": 1,
+      "claim_evidence_locus_delta": 1
+    },
+    "next_gate": "FRESH_LIVE_PREFLIGHT_THEN_DISPOSABLE_POSTGIS_REHEARSAL_ONLY"
+  },
+  "release_effect": "none; v0.8.1 remains immutable"
+}
