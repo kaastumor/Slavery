@@ -9,10 +9,11 @@
 
 # CURRENT MODE — EXECUTION / CONSOLIDATION — 100/100 PROGRAMME (#369)
 
-**WIP = 1 canonical mutation stream: #383 — reconcile the authorized Sogdiana /
-Afrosiab production write into a repository receipt and control state.** D-124
-permits bounded read-only #369 qualification inside this priority after its
-amendment is accepted; it does not open another admission or DB-write stream.
+**WIP = 1 canonical mutation stream: #369 — bounded read-only screening of the
+existing qualified funnel under D-124.** The initial screen is 20–40 candidate
+identities with explicit dispositions; it is not an admission or database write.
+The first reviewed routine batch is capped at five cases. #383 is ready to close
+once its independently checked production receipt is merged with this checkpoint.
 
 The original #367 population batch is complete history: its 12 accepted cases were ingested to governed production research state and remain reviewed/unpublished. Production ingestion did not create release membership or move the serving channel.
 
@@ -29,7 +30,7 @@ Prepared but **not live-written** geometry gates:
 
 If separately authorized and written cleanly, #370 would bring the 12-case #367 batch from 9 to 12 mapped candidates. Sinjar would add one further case-linked mapped representation to the released-corpus recovery pipeline. Neither gate changes immutable v0.8.1 membership or the public serving channel by itself.
 
-## Active Sogdiana tranche — #383
+## Sogdiana research-state augmentation — #383
 
 Current released claim:
 - claim `63dda32b-6c3e-4b3e-9c5a-36596e6cdc1b`;
@@ -48,23 +49,30 @@ reconciliation #388 are merged. Rehearsal foundation-ci run `36732127009`
 passed with the exact expected closure delta, exact no-op replay, and rollback.
 The earlier connected database mutation attempt was blocked before SQL execution.
 The later [#383 sponsor-authorized production-write comment](https://github.com/kaastumor/Slavery/issues/383#issuecomment-5920705914)
-records an atomic live write on 2026-09-30 and independent post-write readback:
-+1 locus entity, +1 source/version, +1 specialist point, +1 locus link; zero
-claim, P-level, release, publication, historical-practice-polygon or serving
-change. This repository checkpoint has not independently rerun governed DB
-readback and does not yet contain the generated-ID production receipt.
+reports an atomic live write on 2026-09-30: +1 locus entity, +1 source/version,
++1 specialist point and +1 locus link, with zero claim, P-level, release,
+publication, historical-practice-polygon or serving change. A fresh governed
+read-only query independently found the exact generated rows and link, the
+unchanged released 709–710/P2 claim and three historical source links, the
+preserved NULL/unresolved Sogdiana target geometry, zero new release-geometry
+membership, and serving `v0.8.1-public-mvp-v2`. The direct readback and its
+limits are recorded in
+`data/research/geometry_reviews/population_100_100_released_geo_tranche_04_production_receipt.json`.
+This remains a research-state evidence locus; strict released 100/100 counters
+and immutable v0.8.1 membership do not change through this write.
 
 ## Execution order
 
-1. Reconcile the #383 live-write comment against governed DB state on an
-   execution-capable surface, then record generated identities and exact deltas
-   in a durable repository production receipt. Do not replay the write.
-2. Close #383 only after its receipt and control state agree with the live result.
-3. Then select the next justified #369 gate from fresh main. Under D-124, pilot
-   a read-only screen of the existing funnel and at most five routine cases in
-   one reviewed batch; do not treat the screen as admission or a 100/100 count.
-4. Separately reconcile the case and geo numerators. No release or public move
-   follows from research-state geometry recovery.
+1. After the receipt PR is merged, close #383 against its exact readback; do not
+   replay the production write.
+2. Under D-124, screen 20–40 identities from the existing #369 funnel read-only
+   and record `ACCEPT_FOR_BATCH`, `NEEDS_DEEP_REVIEW`, `HOLD` or `DUPLICATE`
+   with reasons. Do not count screens as admitted or mapped cases.
+3. Select at most five routine cases for the first reviewed batch within actual
+   reconciliation capacity. Keep exception cases and #370/#379 production gates
+   separate; each production write requires its own exact sponsor authority.
+4. Reconcile the case and geo numerators separately before successor selection.
+   No release or public move follows from research-state geometry recovery.
 
 ## Control-state reconciliation
 
