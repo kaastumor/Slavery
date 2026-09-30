@@ -1,6 +1,6 @@
 # Historical Slavery Atlas — Backlog
 
-**Updated:** 2026-09-30
+**Updated:** 2026-10-01
 **Role:** canonical execution queue only; methodology, risks and value evidence remain in the existing project documents.
 **Canonical research authority:** governed PostgreSQL/PostGIS under D-109.
 **Canonical historical release:** `v0.8.1`, unchanged.
@@ -9,7 +9,10 @@
 
 # CURRENT MODE — EXECUTION / CONSOLIDATION — 100/100 PROGRAMME (#369)
 
-**WIP = 1: #383 — Sogdiana / Afrosiab recovery; rehearsal complete, database execution blocked.**
+**WIP = 1 canonical mutation stream: #383 — reconcile the authorized Sogdiana /
+Afrosiab production write into a repository receipt and control state.** D-124
+permits bounded read-only #369 qualification inside this priority after its
+amendment is accepted; it does not open another admission or DB-write stream.
 
 The original #367 population batch is complete history: its 12 accepted cases were ingested to governed production research state and remain reviewed/unpublished. Production ingestion did not create release membership or move the serving channel.
 
@@ -40,15 +43,28 @@ Qualified recovery route:
 - use UNESCO WHC component `603rev-001` as a specialist archaeological-site locator;
 - preserve the later Oxford/Livshits 27 April 711 catalogue dating as a visible chronology tension without silently changing the immutable released 709–710 claim.
 
-Review #384, disposable rehearsal #386, and rehearsal receipt #387 are merged. Rehearsal foundation-ci run `36732127009` passed with the exact expected closure delta, exact no-op replay, and rollback. A fresh live preflight remained clean. The connected database mutation call was blocked before SQL execution, so no #383 live data change occurred.
+Review #384, disposable rehearsal #386, rehearsal receipt #387, and gate-status
+reconciliation #388 are merged. Rehearsal foundation-ci run `36732127009`
+passed with the exact expected closure delta, exact no-op replay, and rollback.
+The earlier connected database mutation attempt was blocked before SQL execution.
+The later [#383 sponsor-authorized production-write comment](https://github.com/kaastumor/Slavery/issues/383#issuecomment-5920705914)
+records an atomic live write on 2026-09-30 and independent post-write readback:
++1 locus entity, +1 source/version, +1 specialist point, +1 locus link; zero
+claim, P-level, release, publication, historical-practice-polygon or serving
+change. This repository checkpoint has not independently rerun governed DB
+readback and does not yet contain the generated-ID production receipt.
 
 ## Execution order
 
-1. Keep #383 as WIP=1 at the database-execution boundary.
-2. Re-run the exact live preflight on an execution-capable surface before any mutation.
-3. Apply only the rehearsed Afrosiab locus/source/version/point/link delta and capture a durable receipt.
-4. Do not open the Pre-Angkor tranche until #383 is resolved.
-5. After #383 closes, continue released-case geo recovery and separately reconcile the 100-case numerator.
+1. Reconcile the #383 live-write comment against governed DB state on an
+   execution-capable surface, then record generated identities and exact deltas
+   in a durable repository production receipt. Do not replay the write.
+2. Close #383 only after its receipt and control state agree with the live result.
+3. Then select the next justified #369 gate from fresh main. Under D-124, pilot
+   a read-only screen of the existing funnel and at most five routine cases in
+   one reviewed batch; do not treat the screen as admission or a 100/100 count.
+4. Separately reconcile the case and geo numerators. No release or public move
+   follows from research-state geometry recovery.
 
 ## Control-state reconciliation
 
@@ -62,7 +78,15 @@ No new post-M1 P-levels, source-density prevalence, inferred nationality, false 
 
 ## Actions budget and standing protocols
 
-Batch one coherent checkpoint per PR. Run the smallest relevant local checks and sanitation first. Do not rerun unchanged successful jobs or add heavy geometry sweeps. Public health remains weekly/manual. Use `AGENTS.md`, `docs/PROJECT_INSTRUCTIONS.md`, `docs/24_WAY_OF_WORKING.md`, the existing task/verification contracts and D-096. Discovery follows `docs/discovery/DISCOVERY_EXECUTION.md` and `RUN_PROMPT.md` only when a concrete evidence/representation question justifies it.
+Batch one coherent checkpoint per PR. For #369, D-124 allows one preparation
+PR to hold individual reviews, the exact batch manifest/driver and disposable
+rehearsal, followed by one production receipt/control-state PR after an
+authorized write. Run the smallest relevant local checks and sanitation first.
+Do not rerun unchanged successful jobs or add heavy geometry sweeps. Public
+health remains weekly/manual. Use `AGENTS.md`, `docs/PROJECT_INSTRUCTIONS.md`,
+`docs/24_WAY_OF_WORKING.md`, the existing task/verification contracts and
+D-096/D-124. Discovery follows `docs/discovery/DISCOVERY_EXECUTION.md` and
+`RUN_PROMPT.md` only when a concrete evidence/representation question justifies it.
 
 # PARKED / trigger-bound
 
