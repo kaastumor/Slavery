@@ -1,0 +1,62 @@
+{
+  "record_kind": "released_geo_recovery_tranche_03_rehearsal_receipt",
+  "version": 1,
+  "issue": 379,
+  "parent_issue": 369,
+  "review_path": "data/research/geometry_reviews/population_100_100_released_geo_tranche_03_isil_sinjar.json",
+  "review_git_blob_sha": "248067822dcbc1d5e18c06c90bb056209d3c6a18",
+  "tested_pr": 381,
+  "tested_head_sha": "004146c0ff8e456ee0e1789b54642b0558c5ba02",
+  "workflow_run_id": 36713803738,
+  "workflow_name": "foundation-ci",
+  "workflow_result": "PASS",
+  "foundation_job_id": 109883014902,
+  "mode": "DISPOSABLE_ROLLBACK",
+  "prerequisite_fixture": {
+    "release_version": "v0.8.1",
+    "exact_claim_ids": [
+      "88e48d2e-5b06-5b37-80bb-82e07db36a3f",
+      "b862e0a9-a857-57e0-8aa3-e37daf0844cf"
+    ],
+    "shared_unitad_source_version_id": "dc410234-3f13-5e41-9ce9-4391a850cc23",
+    "release_lifecycle": "draft -> exact membership -> published",
+    "purpose": "reproduce only the exact released identities required to verify a geometry-only augmentation"
+  },
+  "first_pass": {
+    "locus_created": true,
+    "geometry_inserted": true,
+    "claim_evidence_locus_links_inserted": 2
+  },
+  "second_pass": {
+    "locus_created": false,
+    "geometry_inserted": false,
+    "claim_evidence_locus_links_inserted": 0,
+    "exact_noop": true
+  },
+  "tracked_closure_delta": {
+    "atlas.spatial_entity": 1,
+    "atlas.source": 1,
+    "atlas.source_version": 1,
+    "atlas.claim": 0,
+    "atlas.territorial_practice_claim": 0,
+    "atlas.claim_source": 0,
+    "atlas.geometry": 1,
+    "atlas.claim_evidence_locus": 2,
+    "audit.release_manifest": 0,
+    "audit.release_claim": 0,
+    "audit.release_geometry": 0,
+    "audit.release_channel": 0
+  },
+  "semantic_checks": {
+    "released_case_linked_mapped_representations_added": 1,
+    "historical_claim_source_delta": 0,
+    "historical_practice_polygons_added": 0,
+    "broad_target_geometry_delta": 0,
+    "release_membership_delta": 0,
+    "release_geometry_delta": 0,
+    "publication_changes": 0,
+    "p_level_changes": 0
+  },
+  "rollback_restored_counts": true,
+  "status": "PASS_DISPOSABLE_ROLLBACK_READY_FOR_EXPLICIT_PRODUCTION_GATE"
+}
