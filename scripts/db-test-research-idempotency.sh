@@ -240,3 +240,13 @@ docker compose run --rm tooling \
   python tools/apply_released_geo_recovery_tranche_03.py
 
 echo "Released geo recovery tranche 3 production gate dry-run passed: explicit authorization still required."
+
+
+# #383: rehearse released Sogdiana / Afrosiab probable legal-context evidence locus.
+# The tool recreates the minimum exact released claim/source/release fixture,
+# preserves the existing unresolved target-geometry row, applies one specialist
+# Afrosiab locus, requires unchanged replay to be a no-op, and rolls back.
+docker compose run --rm -e CI=true tooling \
+  python tools/rehearse_released_geo_recovery_tranche_04.py --apply --disposable-test-db
+
+echo "Released geo recovery tranche 4 rehearsal passed: Sogdiana/Afrosiab probable legal-context locus is exact-idempotent and rolled back."
