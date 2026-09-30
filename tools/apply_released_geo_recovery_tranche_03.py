@@ -16,6 +16,7 @@ public serving channel.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -65,19 +66,20 @@ EXPECTED_PRACTICE_TYPES = {
 
 
 def git_blob_sha(path: Path) -> str:
+    """Compute the exact Git blob object ID without requiring a git binary."""
     try:
-        rel = path.relative_to(ROOT)
-        return subprocess.check_output(
-            ["git", "hash-object", str(rel)],
-            cwd=ROOT,
-            text=True,
-            stderr=subprocess.DEVNULL,
-        ).strip()
-    except (OSError, subprocess.CalledProcessError, ValueError) as exc:
-        raise ClosureError(f"cannot verify git blob identity for {path}") from exc
+        data = path.read_bytes()
+    except OSError as exc:
+        raise ClosureError(f"cannot read review artifact for blob verification: {path}") from exc
+    header = f"blob {len(data)}\0".encode("ascii")
+    return hashlib.sha1(header + data).hexdigest()
 
 
 def git_head() -> str:
+    """Resolve the checked-out revision from an explicit runtime attestation or git."""
+    attested = os.environ.get("ATLAS_CHECKED_OUT_GIT_SHA")
+    if attested:
+        return attested.strip()
     try:
         return subprocess.check_output(
             ["git", "rev-parse", "HEAD"],
@@ -86,7 +88,10 @@ def git_head() -> str:
             stderr=subprocess.DEVNULL,
         ).strip()
     except (OSError, subprocess.CalledProcessError) as exc:
-        raise ClosureError("cannot verify checked-out git revision") from exc
+        raise ClosureError(
+            "cannot verify checked-out git revision; provide ATLAS_CHECKED_OUT_GIT_SHA "
+            "from the authenticated deployment/runtime context"
+        ) from exc
 
 
 def load_plan(path: Path = PLAN) -> dict[str, Any]:
