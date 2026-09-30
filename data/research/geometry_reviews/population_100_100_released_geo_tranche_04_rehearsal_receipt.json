@@ -1,0 +1,51 @@
+{
+  "record_kind": "released_geo_recovery_tranche_04_rehearsal_receipt",
+  "version": 1,
+  "issue": 383,
+  "parent_issue": 369,
+  "review_path": "data/research/geometry_reviews/population_100_100_released_geo_tranche_04_sogdiana_samarkand.json",
+  "review_git_blob_sha": "9650a79acb89ceaf86bd6444d2efaa90ce0e6c3f",
+  "tested_pr": 386,
+  "tested_head_sha": "0c9050d73120879786284c6dbbf2b2e18de7e817",
+  "workflow_run_id": 36732127009,
+  "workflow_name": "foundation-ci",
+  "workflow_result": "PASS",
+  "foundation_job_id": 109944427781,
+  "mode": "DISPOSABLE_ROLLBACK",
+  "tracked_closure_delta": {
+    "atlas.spatial_entity": 1,
+    "atlas.source": 1,
+    "atlas.source_version": 1,
+    "atlas.claim": 0,
+    "atlas.territorial_practice_claim": 0,
+    "atlas.claim_source": 0,
+    "atlas.geometry": 1,
+    "atlas.claim_evidence_locus": 1,
+    "audit.release_manifest": 0,
+    "audit.release_claim": 0,
+    "audit.release_geometry": 0,
+    "audit.release_channel": 0
+  },
+  "first_pass": {
+    "locus_created": true,
+    "geometry_inserted": true,
+    "claim_evidence_locus_link_inserted": true
+  },
+  "second_pass": {
+    "locus_created": false,
+    "geometry_inserted": false,
+    "claim_evidence_locus_link_inserted": false,
+    "exact_noop": true
+  },
+  "semantic_checks": {
+    "historical_claim_source_delta": 0,
+    "historical_practice_polygons_added": 0,
+    "target_geometry_rows_replaced": 0,
+    "release_membership_delta": 0,
+    "release_geometry_delta": 0,
+    "publication_changes": 0,
+    "p_level_changes": 0
+  },
+  "rollback_restored_counts": true,
+  "status": "PASS_DISPOSABLE_ROLLBACK_READY_FOR_EXPLICIT_PRODUCTION_GATE"
+}
