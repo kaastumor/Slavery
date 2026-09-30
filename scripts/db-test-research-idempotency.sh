@@ -231,3 +231,12 @@ docker compose run --rm -e CI=true tooling \
   python tools/rehearse_released_geo_recovery_tranche_03.py --apply --disposable-test-db
 
 echo "Released geo recovery tranche 3 rehearsal passed: Sinjar evidence locus is exact-idempotent and rolled back."
+
+
+# #379 production gate remains inert by default. Dry-run validates that the
+# production plan + successful rehearsal receipt are bound to the exact
+# reviewed Sinjar artifact without opening a database write path.
+docker compose run --rm tooling \
+  python tools/apply_released_geo_recovery_tranche_03.py
+
+echo "Released geo recovery tranche 3 production gate dry-run passed: explicit authorization still required."
