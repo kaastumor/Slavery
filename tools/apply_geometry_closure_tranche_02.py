@@ -76,14 +76,31 @@ NEW_IDENTITIES = (
 )
 
 
+def git_blob_sha(path: Path) -> str:
+    try:
+        rel = path.relative_to(ROOT)
+        return subprocess.check_output(
+            ["git", "hash-object", str(rel)],
+            cwd=ROOT,
+            text=True,
+            stderr=subprocess.DEVNULL,
+        ).strip()
+    except (OSError, subprocess.CalledProcessError, ValueError) as exc:
+        raise ClosureError(f"cannot verify git blob identity for {path}") from exc
+
+
 def load_plan(path: Path = PLAN) -> dict[str, Any]:
     value = json.loads(path.read_text(encoding="utf-8"))
     if value.get("record_kind") != "geometry_closure_tranche_02_production_plan":
         raise ClosureError("unexpected production plan")
     if value.get("issue") != 374:
         raise ClosureError("production plan issue drift")
+    if value.get("status") != "READY_FOR_EXPLICIT_PRODUCTION_WRITE_GATE_AFTER_PLAN_CI":
+        raise ClosureError("production plan is not at explicit write gate")
     if value.get("expected_live_delta") != STRICT_DELTA:
         raise ClosureError("production plan delta drift")
+    if value.get("review_git_blob_sha") != git_blob_sha(REVIEW):
+        raise ClosureError("production plan is not bound to the current review blob")
     return value
 
 
@@ -99,6 +116,8 @@ def load_receipt(path: Path = RECEIPT) -> dict[str, Any]:
         raise ClosureError("rehearsal delta differs from production contract")
     if not value.get("rollback_restored_counts"):
         raise ClosureError("rehearsal rollback did not restore counts")
+    if value.get("review_git_blob_sha") != git_blob_sha(REVIEW):
+        raise ClosureError("rehearsal receipt is not bound to the current review blob")
     return value
 
 
