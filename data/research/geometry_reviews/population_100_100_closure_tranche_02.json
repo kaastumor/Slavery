@@ -4,7 +4,7 @@
   "parent_issue": 369,
   "reviewed_against_main": "521ae2d9b5d3e31390d7025492bb18335752c6df",
   "observed_live_preflight_at": "2026-09-29T22:35:23.281238+00:00",
-  "status": "INTERNAL_REVIEW_COMPLETE_4_ACCEPT_1_HOLD_READY_FOR_DISPOSABLE_REHEARSAL_DESIGN",
+  "status": "INTERNAL_REVIEW_COMPLETE_4_ACCEPT_1_HOLD_ADVERSARIAL_DEPENDENCE_CORRECTED_READY_FOR_DISPOSABLE_REHEARSAL",
   "scope": "case-linked evidence/navigation loci only; no practice-extent or claim-strength inflation",
   "live_preflight": {
     "release_membership_hits": 0,
@@ -83,7 +83,7 @@
       "target_spatial_entity_id": "91c7f969-f47a-465c-a304-57328b59d052",
       "disposition": "ACCEPT_FOR_DISPOSABLE_REHEARSAL",
       "semantic_role": "claim_evidence_context_modern_admin_proxy",
-      "rationale": "The ILO Commission testimony is explicitly anchored to Daw Taku, Shadaw Township, and describes forced labour before and after forced relocation to Shadaw. Exact Daw Taku geometry is not frozen, so the township reference is accepted only as modern testimony/navigation context.",
+      "rationale": "The ILO Commission testimony is explicitly anchored to Daw Taku, Shadaw Township, and describes forced labour before and after forced relocation to Shadaw. Exact Daw Taku geometry is not frozen, so the township reference is accepted only as modern testimony/navigation context. Adversarial review confirmed this witness transcript belongs to the same ILO Commission evidence family as the existing 1998 inquiry source, so it must reuse that independence group rather than count as an additional independent attestation.",
       "new_locus_entity": {
         "canonical_name": "Shadaw Township — Daw Taku testimony context",
         "display_name": "Shadaw Township (Daw Taku testimony context)",
@@ -122,11 +122,11 @@
         "version_label": "ILO Governing Body GB.273/MYANMA8C; 2 July 1998",
         "url_or_identifier": "https://files.ilo.org/public/english/standards/relm/gb/docs/gb273/myanma8c.htm",
         "evidence_role": "claim-specific testimony locus/context",
-        "independence_group": "ilo-coi-myanmar-witness-101",
+        "independence_group": "ilo-myanmar-commission-inquiry-1998",
         "directness": "official recorded witness testimony",
         "direction": "supports",
         "locator": "Witness 101: from Daw Taku, Shadaw township, Kayah State; forced labour before and after relocation to Shadaw; two battalions at Shadaw.",
-        "claim_fitness": "Direct support for bounded forced-labour testimony and location context; not a national prevalence estimate."
+        "claim_fitness": "Direct support for bounded forced-labour testimony and location context within the same ILO Commission evidence family as the existing national inquiry finding; not an independent attestation and not a national prevalence estimate."
       },
       "locus_link": {
         "role_text": "ILO witness-101 testimony context; Shadaw Township modern proxy, not exact Daw Taku",
@@ -298,7 +298,16 @@
       "publication_status_changes": 0,
       "p_level_changes": 0
     },
-    "next_gate": "ADVERSARIAL_REVIEW_AND_DISPOSABLE_REHEARSAL_ONLY"
+    "next_gate": "ADVERSARIAL_REVIEW_AND_DISPOSABLE_REHEARSAL_ONLY",
+    "adversarial_review": {
+      "result": "PASS_WITH_CORRECTION",
+      "correction": "Myanmar witness-101 context reuses independence_group ilo-myanmar-commission-inquiry-1998",
+      "india": "PASS — HRW explicitly visited Ramanagaram/Channapatna; GeoNames 1258744 carries Ramanagaram as alias at the reviewed coordinate",
+      "myanmar": "PASS_AS_CONTEXT_ONLY — Daw Taku/Shadaw testimony is source-grounded; township point is not exact incident/village geometry",
+      "pakistan": "PASS_AS_CONTEXT_ONLY — HRW interviewed bonded labourers at brick kilns on Lahore outskirts; Lahore point is navigation context, not kiln coordinates",
+      "nazi_germany": "PASS — Berlin monument object 09045213 is a 1943–1945 forced-labour camp; Geoportal marker transform independently checked",
+      "brazil": "HOLD_PRESERVED — ILO source-native Correntes vs official IBGE Corrente identity remains unresolved"
+    }
   },
   "release_effect": "none"
 }
