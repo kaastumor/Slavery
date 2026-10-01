@@ -72,7 +72,7 @@ class RehearsalError(RuntimeError):
 
 
 def git_blob_sha1(path: Path) -> str:
-    raw = path.read_bytes()
+    raw = path.read_bytes().replace(b'\r\n', b'\n')
     header = f"blob {len(raw)}\0".encode("ascii")
     return hashlib.sha1(header + raw).hexdigest()
 

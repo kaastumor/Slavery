@@ -7,7 +7,17 @@
 **Observed live serving adapter:** `v0.8.1-public-mvp-v2`, unchanged by the 100/100 preparation work.
 **Observed live schema head:** `0034`.
 
-# CURRENT MODE — EXECUTION / CONSOLIDATION — 100/100 PROGRAMME (#369)
+# CURRENT MODE - EXECUTION / CONSOLIDATION - 100/100 PROGRAMME (#369)
+
+Sponsor steering on 2026-10-02 authorizes a new release and live cutover for the
+48 released territorial case clusters, the exact 12 admitted research packets,
+and the exact five staged pilot packets. One integration owner reconciles this
+scope in `release/selections/v0.8.2-requested-corpus.json`: expected dimensions
+are 61 territorial cases, one legal event and three external/network cases.
+This request supplies publication/cutover authority; it does not clear evidence,
+source-feature/time provenance, exact pilot admission or package validation.
+Preserve v0.8.1 and rollback target v0.8.1-public-mvp-v2. The existing successor
+lane remains v0.8.2; no public-channel movement has occurred at this checkpoint.
 
 **WIP = 1 canonical mutation stream: #369 — exact five-case D-124 pilot at its production-admission gate.** PR #396 merged the five repository-staging packets and passed the disposable atomic rehearsal: Samarkand 1404 and Timbuktu c.1509–1512 are territorial candidates; Swahili, Viking/Rūs and Andaman are external-participation candidates. The manifest is exact, and the rehearsal driver has no production path. None of the five is admitted to governed production or counted toward 100/100. Live admission still requires a separately authorized, exact-manifest production driver, fresh preflight and independent readback. Do not open a sixth staging/admission packet while this gate is unresolved.
 
