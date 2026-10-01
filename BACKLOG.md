@@ -22,6 +22,11 @@ Strict released baseline remains:
 
 Prepared but **not live-written** geometry gates:
 - #370: Goryeo / Dahomey / Taghaza closure; review + disposable rehearsal + guarded production driver complete.
+  Connected SQL transport preparation reuses reviewed insert helpers and protects
+  the exact unresolved Dahomey row plus Goryeo legal-event state. Scope and
+  disposable CI controls are owned by
+  `data/research/geometry_reviews/population_100_100_closure_tranche_01_connected_sql.md`.
+  No #370 live write is authorized by this preparation.
 - #379 / PR #382: Sinjar-town evidence locus for the released ISIL/Yazidi case; review + disposable rehearsal + guarded production driver complete.
 
 If separately authorized and written cleanly, #370 would bring the 12-case #367 batch from 9 to 12 mapped candidates. Sinjar would add one further case-linked mapped representation to the released-corpus recovery pipeline. Neither gate changes immutable v0.8.1 membership or the public serving channel by itself.
