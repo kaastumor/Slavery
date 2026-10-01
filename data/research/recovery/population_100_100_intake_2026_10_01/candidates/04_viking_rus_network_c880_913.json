@@ -1,0 +1,172 @@
+{
+  "case_key": "atlas-100x100/viking-rus-network/slave-trade-c880-913-v1",
+  "claim_kind": "external_participation",
+  "spatial_entity": {
+    "canonical_name": "Viking/Rūs mobile trade and raiding network (analytical frame)",
+    "display_name": "Viking/Rūs trade network",
+    "entity_type_code": "region",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Analytical mobile-network frame spanning heterogeneous raiding, riverine and market connections. It is not one polity, ethnicity, nationality, jurisdiction, or territorial-practice extent."
+  },
+  "claim": {
+    "from_year": 880,
+    "to_year": 913,
+    "date_text_original": "late ninth to early tenth century; near-anchor Ibn Rustah account composed c. 903–913 with independent ninth-century western captive-taking context",
+    "temporal_precision": "broad_near_anchor_network_period",
+    "temporal_certainty": "moderate",
+    "spatial_precision": "mobile network of routes, groups and market nodes rather than one territory",
+    "summary": "Near the 900 CE horizon, Ibn Rustah describes Rūs groups raiding by ship, taking people identified as Saqaliba captive, transporting them to Khazar and Volga Bulgar markets, and selling them. Specialist source-critical work independently situates extensive ninth-century Viking captive-taking and a broader northern/eastern European slave-trade system around the same period. This supports bounded external slave-trade-network participation, not one Viking polity, one homogeneous people, or territorial slavery across connected regions.",
+    "confidence": "high_for_bounded_network_capture_transport_sale_moderate_for_network_extent",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "external_participation": {
+      "participation_type_code": "slave_trade_network",
+      "role_text": "Documented capture, transport and sale of people within parts of the Viking/Rūs mobile trade-raiding network near the 900 CE horizon.",
+      "notes": "No territorial P-level applies. Saqaliba and Rūs are source categories, not modern nationality labels. Capture, ransom, enslavement and sale remain distinct where the sources do not establish the same outcome."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Kitāb al-aʿlāq al-nafīsa — description of the Rūs",
+        "author_or_institution": "Ibn Rustah",
+        "source_type": "primary_geographical_account_translation",
+        "source_classification": "primary_translation",
+        "language_code": "modern_translation_of_arabic",
+        "geographic_scope": "Rūs riverine activity, Saqaliba regions, Khazar and Volga Bulgar market connections",
+        "temporal_scope": "Account composed approximately 903–913 CE",
+        "independence_notes": "Primary textual chain for the near-anchor capture-transport-sale sequence. Modern translations and later quotations are one source family, not multiple attestations.",
+        "reliability_limitations": "Geographical/ethnographic account rather than a merchant ledger. The broad labels Rūs and Saqaliba do not map mechanically to modern nationality or one homogeneous ethnic population."
+      },
+      "version": {
+        "version_label": "IbnRustah:c903-913:modern-translation-chain",
+        "url_or_identifier": "https://danmarkshistorien.lex.dk/Ibn_Rustah_om_vikingerne_%28russerne%29",
+        "accessed_at": "2026-10-01"
+      },
+      "evidence_role": "near-anchor direct textual support for capture, transport and sale across a mobile network",
+      "independence_group": "ibn-rustah-rus-chain",
+      "directness": "translated primary geographical account",
+      "direction": "supports",
+      "locator": "Description of the Rūs: ship-borne attacks on Saqaliba, captives carried to Khazar/Bulgar markets and sold",
+      "notes": "Principal claim-specific support. It does not establish exact numbers, all-route participation, or territorial practice at the captives' places of origin."
+    },
+    {
+      "source": {
+        "title": "Bound in captivity: intersections of viking raiding, slaving, and settlement in Western Europe during the ninth century CE",
+        "author_or_institution": "Ben Raffield",
+        "source_type": "journal_article",
+        "source_classification": "secondary_specialist",
+        "language_code": "en",
+        "geographic_scope": "Western Europe and Viking raiding zones",
+        "temporal_scope": "ninth century CE",
+        "independence_notes": "Specialist synthesis of western annal traditions and archaeological/historical context; later synthesis does not multiply the underlying primary entries.",
+        "reliability_limitations": "Strong for captive-taking, detention and transport; the fate of every captive is not known and capture cannot automatically be normalized to slave sale."
+      },
+      "version": {
+        "version_label": "Scandinavian Journal of History 47.4 (2022), pp. 414–437",
+        "publication_year": 2022,
+        "url_or_identifier": "https://doi.org/10.1080/03468755.2022.2091017",
+        "accessed_at": "2026-10-01"
+      },
+      "evidence_role": "independent western captive-taking context near the network anchor",
+      "independence_group": "western-viking-captive-sources",
+      "directness": "specialist source-critical synthesis",
+      "direction": "context",
+      "locator": "Ninth-century western captive-taking and detention/transport discussion",
+      "notes": "Used to show geographically separate capture practices, not to claim that every western captive entered the same sale network."
+    },
+    {
+      "source": {
+        "title": "What Does the Slave Trade in the Saqaliba Tell Us about Early Islamic Slavery?",
+        "author_or_institution": "Marek Jankowiak",
+        "source_type": "journal_article",
+        "source_classification": "secondary_specialist",
+        "language_code": "en",
+        "geographic_scope": "Northern/eastern Europe and Islamic-world slave trade",
+        "temporal_scope": "ninth to eleventh centuries CE",
+        "independence_notes": "Specialist synthesis combining written and numismatic evidence. Coin flows are proxy economic context rather than direct records for individual enslaved persons.",
+        "reliability_limitations": "Supports a substantial long-distance trade component but cannot turn dirham volume into enslaved-person counts or define one unified Viking pipeline."
+      },
+      "version": {
+        "version_label": "International Journal of Middle East Studies 49 (2017)",
+        "publication_year": 2017,
+        "url_or_identifier": "https://www.cambridge.org/core/journals/international-journal-of-middle-east-studies/article/what-does-the-slave-trade-in-the-saqaliba-tell-us-about-early-islamic-slavery/EDDD35D8FD593AB8D576D11550CF62C6",
+        "accessed_at": "2026-10-01"
+      },
+      "evidence_role": "specialist long-distance slave-trade structure and scale context",
+      "independence_group": "saqaliba-trade-synthesis",
+      "directness": "specialist historical synthesis",
+      "direction": "context",
+      "locator": "Article argument on the Saqaliba trade and early Islamic slavery",
+      "notes": "Economic/network context only; source and coin density are not prevalence or headcount metrics."
+    },
+    {
+      "source": {
+        "title": "The slave markets of the Viking world",
+        "author_or_institution": "Ben Raffield",
+        "source_type": "journal_article",
+        "source_classification": "secondary_specialist",
+        "language_code": "en",
+        "geographic_scope": "Viking-world trade nodes including Birka, Hedeby and Dublin",
+        "temporal_scope": "Viking Age",
+        "independence_notes": "Synthesizes many written sources and archaeological finds already represented in related literature; not a new independent event count.",
+        "reliability_limitations": "Probable shackles/collars and node concentrations are compatible with captive movement/sale but individually ambiguous and do not prove dedicated slave markets at every site."
+      },
+      "version": {
+        "version_label": "Slavery & Abolition 40.4 (2019), pp. 682–705",
+        "publication_year": 2019,
+        "url_or_identifier": "https://doi.org/10.1080/0144039X.2019.1592976",
+        "accessed_at": "2026-10-01"
+      },
+      "evidence_role": "archaeological and comparative market-node qualification",
+      "independence_group": "viking-slaving-synthesis",
+      "directness": "specialist synthesis",
+      "direction": "qualifies",
+      "locator": "Comparative discussion of slave markets and restraint objects at Viking-age trading nodes",
+      "notes": "Prevents converting connected ports or ambiguous restraints into exact sale-locus or volume claims."
+    },
+    {
+      "source": {
+        "title": "Thraldom: A History of Slavery in the Viking Age",
+        "author_or_institution": "Stefan Brink",
+        "source_type": "specialist_monograph",
+        "source_classification": "secondary_specialist",
+        "language_code": "en",
+        "geographic_scope": "Scandinavia and the Viking world",
+        "temporal_scope": "Viking Age with later textual traditions",
+        "independence_notes": "Broad synthesis and terminology/source-criticism layer; not an independent c.900 event attestation.",
+        "reliability_limitations": "Later Scandinavian law and saga evidence illuminate thraldom but must not be projected uncritically into a mobile-network claim at 900 CE."
+      },
+      "version": {
+        "version_label": "Oxford University Press, 2021",
+        "publication_year": 2021,
+        "url_or_identifier": "https://academic.oup.com/book/39861",
+        "accessed_at": "2026-10-01"
+      },
+      "evidence_role": "terminology and retrospective-source criticism",
+      "independence_group": "viking-thraldom-literature",
+      "directness": "specialist synthesis",
+      "direction": "qualifies",
+      "locator": "Source-criticism and thraldom chapters/accessible summaries",
+      "notes": "Used to constrain later þræll/thrall evidence and avoid back-projecting later legal/literary material."
+    }
+  ],
+  "geometry": {
+    "from_year": 880,
+    "to_year": 913,
+    "accuracy_status": "unresolved",
+    "resolution_method": "No single polygon, route line or set of modern state boundaries can represent the heterogeneous Viking/Rūs mobile network without implying false territorial unity or route completeness. Keep network geometry unresolved; future route/node representations require separate case-linked review.",
+    "geojson": null,
+    "review_status": "reviewed",
+    "notes": "No giant 'Viking territory' and no automatic slave-market point for connected ports. This unresolved network geometry earns no 100/100 geo increment."
+  },
+  "guardrails": {
+    "territorial_practice_inferred": false,
+    "practice_level_assigned": false,
+    "nationality_inferred": false,
+    "modern_geometry_substituted": false,
+    "absence_inferred": false
+  }
+}
