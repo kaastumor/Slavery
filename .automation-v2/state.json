@@ -2,7 +2,12 @@
   "archive_ref": null,
   "checkpoint": null,
   "contract": "AUTOMATION_CONTROL_V2_20261001",
-  "effects": [],
+  "effects": [
+    {
+      "id": "ATLAS100-D124-ADMISSION-POSTMERGE-CHECKPOINT-01",
+      "output_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5942802534"
+    }
+  ],
   "failure_count": 0,
   "failure_key": null,
   "generation": 4,
@@ -11,8 +16,8 @@
     "expected_head": "811e7d91a341ba8ed6b209817842484490d3fa54",
     "id": "ATLAS100-D124-ADMISSION-POSTMERGE-CHECKPOINT-01",
     "kind": "issue_checkpoint",
-    "output_ref": null,
-    "status": "INTENDED",
+    "output_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5942802534",
+    "status": "VERIFIED",
     "target_ref": "issue/369"
   },
   "owner_attempt": "ATLAS100-PROC-20261001T2338Z-D124-POSTMERGE-01",
@@ -48,5 +53,5 @@
     "task": 369
   },
   "state": "ACTIVE",
-  "updated_at": 1790898010
+  "updated_at": 1790898080
 }
