@@ -1,0 +1,148 @@
+{
+  "case_key": "atlas-100x100/andaman/colonial-captivity-c1789-1796-v1",
+  "claim_kind": "external_participation",
+  "spatial_entity": {
+    "canonical_name": "Andaman Islands communities (analytical region)",
+    "display_name": "Andaman Islands communities",
+    "entity_type_code": "region",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Analytical region/community frame covering multiple distinct indigenous island communities. It is not one people, one polity, one jurisdiction, or a claim of uniform social practice across the archipelago."
+  },
+  "claim": {
+    "from_year": 1789,
+    "to_year": 1796,
+    "date_text_original": "late-eighteenth-century experimental colonial contact/settlement phase around the East India Company settlement of 1789–1796; individual captive events are not asserted for every year",
+    "temporal_precision": "near_anchor_colonial_contact_phase",
+    "temporal_certainty": "moderate",
+    "spatial_precision": "external colonial contact/captivity affecting Andamanese people; indigenous community territories and exact captive loci vary and are not collapsed",
+    "summary": "Specialist historical research on the first British colonial encounters with the Andaman Islands documents kidnap, capture and confinement of indigenous islanders as deliberate contact and knowledge-making practices during the late-eighteenth-century experimental colonial phase near the 1800 anchor. This supports a bounded external colonial-coercion claim. It does not establish an indigenous Andamanese slavery or servile-labour institution, one homogeneous 'Andamanese' society, or continuous captive removal in every year of 1789–1796.",
+    "confidence": "moderate_high_for_external_colonial_captivity_low_for_exact_event_identity",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "external_participation": {
+      "participation_type_code": "other",
+      "role_text": "British colonial kidnap/capture/confinement of indigenous Andamanese people during the late-eighteenth-century contact and settlement phase.",
+      "notes": "This is an externally imposed coercion/captivity dimension. It is not evidence that indigenous Andaman communities practiced slavery, not a slave-trade volume claim, and not a substitute for the source-native archival verification still needed for the specific 1790 Calcutta removal."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Colonization, kidnap and confinement in the Andamans penal colony, 1771–1864",
+        "author_or_institution": "Clare Anderson",
+        "source_type": "journal_article",
+        "source_classification": "secondary_specialist",
+        "language_code": "en",
+        "geographic_scope": "Andaman Islands and British colonial contact/settlement",
+        "temporal_scope": "1771–1864, including the late-eighteenth-century experimental colonial phase",
+        "independence_notes": "Principal specialist synthesis for the colonial kidnap/capture/confinement claim. Institutional pages or later summaries repeating its argument are not independent evidence.",
+        "reliability_limitations": "The article supports colonial coercive practices across a broad period; it does not make every captive event exact at 1800, identify every indigenous community involved, or establish indigenous internal slavery."
+      },
+      "version": {
+        "version_label": "Journal of Historical Geography 37.1 (2011), pp. 68–81",
+        "publication_year": 2011,
+        "url_or_identifier": "https://doi.org/10.1016/j.jhg.2010.07.001",
+        "accessed_at": "2026-10-01"
+      },
+      "evidence_role": "specialist support for late-eighteenth-century colonial kidnap/capture/confinement as contact practice",
+      "independence_group": "andaman-colonial-captivity",
+      "directness": "specialist archival historical synthesis",
+      "direction": "supports",
+      "locator": "Article argument covering colonization, kidnap and confinement from the late-eighteenth-century experimental phase onward",
+      "notes": "Principal claim-specific support. The packet does not convert broad-period specialist evidence into one exact 1800 event."
+    },
+    {
+      "source": {
+        "title": "Writing Indigenous Women's Lives in the Bay of Bengal: Cultures of Empire in the Andaman Islands, 1789–1906",
+        "author_or_institution": "Clare Anderson",
+        "source_type": "journal_article",
+        "source_classification": "secondary_specialist",
+        "language_code": "en",
+        "geographic_scope": "Andaman Islands",
+        "temporal_scope": "1789–1906",
+        "independence_notes": "Overlaps Anderson's wider archival research and is therefore context within the same broad specialist research family, not an independent anchor event.",
+        "reliability_limitations": "Useful for first-settlement chronology and gendered colonial-contact context; not evidence of indigenous slavery and not a separate event count."
+      },
+      "version": {
+        "version_label": "Journal of Social History 45.2 (2011), pp. 480–496",
+        "publication_year": 2011,
+        "url_or_identifier": "https://doi.org/10.1093/jsh/shr054",
+        "accessed_at": "2026-10-01"
+      },
+      "evidence_role": "first-settlement chronology and gendered colonial-contact context",
+      "independence_group": "andaman-colonial-captivity",
+      "directness": "specialist archival synthesis",
+      "direction": "context",
+      "locator": "1789 settlement onward; cultures of empire and indigenous contact",
+      "notes": "Same broad Anderson research lineage; not counted as independent corroboration."
+    },
+    {
+      "source": {
+        "title": "Jarawa Tribal Reserve dossier — historical contact compilation",
+        "author_or_institution": "Manish Chandi / historical-contact compilation",
+        "source_type": "secondary_compilation",
+        "source_classification": "secondary",
+        "language_code": "en",
+        "geographic_scope": "Andaman Islands",
+        "temporal_scope": "Historical contact chronology including 1790",
+        "independence_notes": "Compilation/recovery lead pointing to historical records; not treated as a source-native archival event record.",
+        "reliability_limitations": "The 1790 removal-to-Calcutta entry requires source-native archival verification before event-level promotion; community identity is not made certain from the compilation."
+      },
+      "version": {
+        "version_label": "Jarawa Tribal Reserve dossier, 2010 contact table",
+        "publication_year": 2010,
+        "url_or_identifier": "https://assets.survivalinternational.org/documents/346/Jarawa_reserve_dossier.pdf",
+        "accessed_at": "2026-10-01"
+      },
+      "evidence_role": "near-anchor recovery lead for a specific removal event",
+      "independence_group": "andaman-1790-contact-chain",
+      "directness": "secondary historical contact compilation",
+      "direction": "qualifies",
+      "locator": "Contact table entry for 1790 removal to Calcutta/Fort William",
+      "notes": "Recorded as a lead only. The packet does not use this source to assert a canonical 1790 event or a specific community identity."
+    },
+    {
+      "source": {
+        "title": "The Andaman Islanders",
+        "author_or_institution": "A. R. Radcliffe-Brown",
+        "source_type": "historical_ethnography",
+        "source_classification": "secondary_historical_ethnography",
+        "language_code": "en",
+        "geographic_scope": "primarily Great Andaman social organization",
+        "temporal_scope": "Retrospective reconstruction published 1922 after major colonial disruption",
+        "independence_notes": "Independent ethnographic source family for indigenous social organization, but temporally retrospective and mainly Great Andaman rather than all island communities.",
+        "reliability_limitations": "Post-contact reconstruction after severe demographic/social disruption; silence on slavery is not evidence of absence and cannot be generalized to Jarawa, Onge, Sentinelese or every island community."
+      },
+      "version": {
+        "version_label": "Cambridge University Press 1922; Project Gutenberg edition",
+        "publication_year": 1922,
+        "url_or_identifier": "https://www.gutenberg.org/ebooks/78356",
+        "accessed_at": "2026-10-01"
+      },
+      "evidence_role": "indigenous social-context qualification and anti-homogenization boundary",
+      "independence_group": "great-andaman-ethnography",
+      "directness": "retrospective historical ethnography",
+      "direction": "qualifies",
+      "locator": "Chapter I social organization and autonomous local groups",
+      "notes": "Used specifically to preserve indigenous-internal practice as unassessed; ethnographic non-mention must not become an absence claim."
+    }
+  ],
+  "geometry": {
+    "from_year": 1789,
+    "to_year": 1796,
+    "accuracy_status": "unresolved",
+    "resolution_method": "Do not substitute a modern Andaman administrative/archipelago polygon for indigenous community territories, a colonial-contact zone, or a captive-removal route. The positive claim concerns externally imposed colonial captivity across variable contact settings; geometry remains unresolved pending event- or community-specific review.",
+    "geojson": null,
+    "review_status": "reviewed",
+    "notes": "The specific 1790 removal to Calcutta is not promoted to a route/point without source-native archival verification. No 100/100 geo increment follows."
+  },
+  "guardrails": {
+    "territorial_practice_inferred": false,
+    "practice_level_assigned": false,
+    "nationality_inferred": false,
+    "modern_geometry_substituted": false,
+    "absence_inferred": false
+  }
+}
