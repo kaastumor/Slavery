@@ -33,6 +33,6 @@
     "name": "review-pr-401-374-production-receipt",
     "task": 374
   },
-  "state": "CLAIMED",
-  "updated_at": 1790894320
+  "state": "ACTIVE",
+  "updated_at": 1790894350
 }
