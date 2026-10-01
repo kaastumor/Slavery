@@ -1,6 +1,11 @@
 {
   "archive_ref": null,
-  "checkpoint": null,
+  "checkpoint": {
+    "disposition": "SEE_CANONICAL_OWNER",
+    "next_action": "Interactive review PR #397; scheduled worker must not merge. Any later Angkor packet waits for the exact five-case production gate and fresh source, interval, collision and geo-role checks.",
+    "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5932892490",
+    "verification": "PR/head receipt PASS; 2-file diff; checks+foundation PASS; UNESCO ID/coordinate PASS; no DB/merge; telemetry UNKNOWN"
+  },
   "contract": "AUTOMATION_CONTROL_V2_20261001",
   "effects": [
     {
@@ -11,7 +16,7 @@
   "failure_count": 0,
   "failure_key": null,
   "generation": 1,
-  "lease_until": 1790864570,
+  "lease_until": null,
   "operation": {
     "expected_head": "fe42fcf9e8f0cfe2de15460baa353d8e64b0c342",
     "id": "ATLAS100-PR397-CHECKPOINT-01",
@@ -20,8 +25,16 @@
     "status": "VERIFIED",
     "target_ref": "refs/pull/397/head"
   },
-  "owner_attempt": "ATLAS100-PROC-20261001T1346Z-PR397-REVIEW-01",
-  "receipts": [],
+  "owner_attempt": null,
+  "receipts": [
+    {
+      "at": 1790863500,
+      "attempt": "ATLAS100-PROC-20261001T1346Z-PR397-REVIEW-01",
+      "key": "3d3e05802d5ccaf701575ea3333f525902de2be24408bde5bef8ce30807f5f76",
+      "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5932892490",
+      "state": "COMPLETE"
+    }
+  ],
   "repository": "kaastumor/Slavery",
   "schema": 2,
   "stage": {
@@ -30,6 +43,6 @@
     "name": "review-pr-397-angkor-paired",
     "task": 397
   },
-  "state": "ACTIVE",
-  "updated_at": 1790863400
+  "state": "COMPLETE",
+  "updated_at": 1790863500
 }
