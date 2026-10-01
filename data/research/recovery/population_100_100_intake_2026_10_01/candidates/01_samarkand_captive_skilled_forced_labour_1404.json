@@ -157,9 +157,9 @@
     },
     "version": {
       "version_label": "World Heritage List 603rev, component 603rev-002, source-native N39 38 60 / E66 58 0; accessed 2026-10-01",
-      "url_or_identifier": "https://whc.unesco.org/en/list/603/maps/",
+      "url_or_identifier": "https://whc.unesco.org/en/list/603/maps/#603rev-002",
       "accessed_at": "2026-10-01T01:39:00Z"
     },
-    "notes": "Role: modern_proxy/navigation_context. Source-native coordinate and explicit normalization retained."
+    "notes": "Role: modern_proxy/navigation_context. Source-native coordinate and explicit normalization retained. The component-qualified URL identifier prevents accidental reuse of the live 603rev-001 Afrosiab source version, whose base maps-page URL is otherwise identical."
   }
 }

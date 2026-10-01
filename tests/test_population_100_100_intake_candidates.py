@@ -59,6 +59,10 @@ class Population100100IntakeCandidateTests(unittest.TestCase):
             "UNESCO-WHC-603rev-002",
         )
         self.assertEqual(
+            geometry["version"]["url_or_identifier"],
+            "https://whc.unesco.org/en/list/603/maps/#603rev-002",
+        )
+        self.assertEqual(
             geometry["geojson"],
             {"type": "Point", "coordinates": [66.9666667, 39.65]},
         )
