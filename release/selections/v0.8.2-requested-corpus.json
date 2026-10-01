@@ -1,0 +1,589 @@
+{
+  "request_schema": "atlas-successor-release-integration-request-v1",
+  "release_version": "v0.8.2",
+  "predecessor": "v0.8.1",
+  "sponsor_instruction": "take these 48 + 12 + 5 and push this to new release and push it to live",
+  "authorized_scope": {
+    "new_release": true,
+    "live_cutover": true,
+    "necessary_exact_pilot_admission": true,
+    "prior_release_overwrite": false
+  },
+  "requested_case_slots": 65,
+  "expected_dimensions": {
+    "territorial_practice": 61,
+    "legal_event": 1,
+    "external_participation": 3
+  },
+  "inherited_case_groups": [
+    {
+      "to_year": -493,
+      "claim_ids": [
+        "cfd709dd-55ad-4f92-a6ec-f6c7910b3fe1",
+        "dda25043-a5a8-4564-8531-afb1f3f57722"
+      ],
+      "from_year": -508,
+      "canonical_name": "Achaemenid Persis/Elam royal economy",
+      "spatial_entity_id": "037cd4aa-7cd8-432c-9fc6-b8b66278684b"
+    },
+    {
+      "to_year": 699,
+      "claim_ids": [
+        "12befe4d-3438-4989-b576-51581c470db0"
+      ],
+      "from_year": 299,
+      "canonical_name": "Aksumite kingdom (late-antique core and dependencies)",
+      "spatial_entity_id": "28073034-dd0d-4cf5-b590-49eaad0a2e0c"
+    },
+    {
+      "to_year": 999,
+      "claim_ids": [
+        "450469cf-fe27-5e94-89c9-4d397be4b305"
+      ],
+      "from_year": 500,
+      "canonical_name": "Anglo-Saxon England / Northern Europe",
+      "spatial_entity_id": "4fa7a54c-a0ed-56ea-9747-cca4bb7cb404"
+    },
+    {
+      "to_year": 369,
+      "claim_ids": [
+        "3b04340f-b830-48d1-9879-0f1b804e26c8"
+      ],
+      "from_year": 369,
+      "canonical_name": "Baekje",
+      "spatial_entity_id": "0ea143e3-cf01-42a0-836e-352d9354d2a4"
+    },
+    {
+      "to_year": null,
+      "claim_ids": [
+        "b06daff8-0930-567e-980b-202df86b66ce"
+      ],
+      "from_year": 1900,
+      "canonical_name": "Brazil",
+      "spatial_entity_id": "be7b5f74-58c7-5125-bcde-0af4262cff41"
+    },
+    {
+      "to_year": 999,
+      "claim_ids": [
+        "65963a31-a310-572c-9c58-2a0533f90fb5"
+      ],
+      "from_year": 500,
+      "canonical_name": "Carolingian Empire",
+      "spatial_entity_id": "a23451aa-c487-5f58-9993-a06282cb0baf"
+    },
+    {
+      "to_year": -329,
+      "claim_ids": [
+        "dde79d87-898c-4c57-902a-b3d3fd65c9bb"
+      ],
+      "from_year": -549,
+      "canonical_name": "Classical Athens",
+      "spatial_entity_id": "23298daf-6dbe-4f82-8ea6-dbe43bf6e548"
+    },
+    {
+      "to_year": null,
+      "claim_ids": [
+        "b78c06ce-5f27-5e85-a4d1-f8188b555820"
+      ],
+      "from_year": 1900,
+      "canonical_name": "DPRK",
+      "spatial_entity_id": "2563a4cf-c65f-5a5b-bf58-926e20fe96d3"
+    },
+    {
+      "to_year": 710,
+      "claim_ids": [
+        "63dda32b-6c3e-4b3e-9c5a-36596e6cdc1b"
+      ],
+      "from_year": 709,
+      "canonical_name": "Early eighth-century Sogdiana",
+      "spatial_entity_id": "a6718e1f-5683-48f4-90fb-cc35ad263ba5"
+    },
+    {
+      "to_year": null,
+      "claim_ids": [
+        "bf9a8677-9964-563c-acd1-b5de285d3518"
+      ],
+      "from_year": 1900,
+      "canonical_name": "Europe and Central Asia, contemporary",
+      "spatial_entity_id": "9f626011-5520-59f6-93d1-c3410708371f"
+    },
+    {
+      "to_year": 500,
+      "claim_ids": [
+        "a0e592c2-aa47-4e55-8b62-c4923f7de6f2"
+      ],
+      "from_year": 228,
+      "canonical_name": "Funan (Chinese-source lower Mekong polity)",
+      "spatial_entity_id": "40058995-6cfb-41d9-a196-9ae5670d5a73"
+    },
+    {
+      "to_year": -2028,
+      "claim_ids": [
+        "ee0b6f5b-7825-4d51-a9ff-f0ca6ef522fd"
+      ],
+      "from_year": -2036,
+      "canonical_name": "Garshana construction project (Ur III)",
+      "spatial_entity_id": "c50a0da2-4920-478a-88bb-75e82b554805"
+    },
+    {
+      "to_year": 1799,
+      "claim_ids": [
+        "60f28ab3-2f20-4490-843b-c03a727d2c1d"
+      ],
+      "from_year": 1750,
+      "canonical_name": "Hawaiian Islands (late precontact/contact-era social system)",
+      "spatial_entity_id": "7224c8ef-e858-47bd-bfa9-467897068d04"
+    },
+    {
+      "to_year": -1199,
+      "claim_ids": [
+        "b9e7f3bf-8182-487c-a1d3-2648eb0f0975",
+        "da121ea7-b251-42ae-bdd1-c1393a6db632"
+      ],
+      "from_year": -1399,
+      "canonical_name": "Hittite central Anatolia",
+      "spatial_entity_id": "f1b4d966-a605-459f-9d7b-8c33e75cbca3"
+    },
+    {
+      "to_year": null,
+      "claim_ids": [
+        "88e48d2e-5b06-5b37-80bb-82e07db36a3f",
+        "b862e0a9-a857-57e0-8aa3-e37daf0844cf"
+      ],
+      "from_year": 2014,
+      "canonical_name": "Iraq/Syria under ISIL, especially Yazidi population from 2014",
+      "spatial_entity_id": "c6edcdcd-0583-5d19-a54b-a1f3e1e32ffc"
+    },
+    {
+      "to_year": -1800,
+      "claim_ids": [
+        "7b467073-fd7f-4c58-b525-0b12c93cf8b4"
+      ],
+      "from_year": -1899,
+      "canonical_name": "Kanesh/Kültepe Old Assyrian colony",
+      "spatial_entity_id": "d86cdc82-26ed-4fe0-b1ab-7e902bafabdf"
+    },
+    {
+      "to_year": 781,
+      "claim_ids": [
+        "b3daddee-5d65-4ef4-b3b6-b4de1f32a0d8"
+      ],
+      "from_year": 342,
+      "canonical_name": "Late Antique Bactria",
+      "spatial_entity_id": "0b4c5b45-6972-44b1-8f67-d5c57733c5be"
+    },
+    {
+      "to_year": -329,
+      "claim_ids": [
+        "7d503f54-1342-4ff8-a44d-f6a0f243df28"
+      ],
+      "from_year": -663,
+      "canonical_name": "Late Period Egypt (664–330 BCE)",
+      "spatial_entity_id": "b7cd8af1-2744-4653-a033-231d1b3d1929"
+    },
+    {
+      "to_year": -2000,
+      "claim_ids": [
+        "5ed542f3-bb66-567d-9e3a-1235f48e7881"
+      ],
+      "from_year": -2999,
+      "canonical_name": "Late Proto-Indo-European / Early Bronze Age Europe",
+      "spatial_entity_id": "d9296221-e69c-5516-8a9b-051bfa0f5959"
+    },
+    {
+      "to_year": -184,
+      "claim_ids": [
+        "5ceb9d5c-9766-4663-a12b-d663186293dc"
+      ],
+      "from_year": -317,
+      "canonical_name": "Mauryan Empire (318–185 BCE mapped slice)",
+      "spatial_entity_id": "9b0b993d-02c9-4a3e-83b9-d3bf694fe303"
+    },
+    {
+      "to_year": -299,
+      "claim_ids": [
+        "a5d0b3fd-c20f-4f48-a84a-5ed8859bbfd0"
+      ],
+      "from_year": -599,
+      "canonical_name": "Middle Ganga valley state-transition zone",
+      "spatial_entity_id": "0fa1c0a9-957d-43d4-bf0f-42c1e6183f4b"
+    },
+    {
+      "to_year": -1000,
+      "claim_ids": [
+        "8691d038-1683-5331-bccb-e7a189cdd229"
+      ],
+      "from_year": -1999,
+      "canonical_name": "Mycenaean Greece (Pylos/Knossos)",
+      "spatial_entity_id": "4775db5e-658f-5c62-ac7d-42d6e453780f"
+    },
+    {
+      "to_year": -1199,
+      "claim_ids": [
+        "94a4cb96-0300-4dbc-ae79-27318e71a50b"
+      ],
+      "from_year": -1399,
+      "canonical_name": "Mycenaean mainland Linear B archives",
+      "spatial_entity_id": "53c8af46-d912-44c8-a26a-122fefc36d0b"
+    },
+    {
+      "to_year": 1945,
+      "claim_ids": [
+        "85bb684d-0aad-5410-a466-d3aad7f49c6f"
+      ],
+      "from_year": 1933,
+      "canonical_name": "Nazi Germany and occupied Europe, 1933–1945",
+      "spatial_entity_id": "976d2f39-75d6-58a3-b945-430b216e35cd"
+    },
+    {
+      "to_year": -695,
+      "claim_ids": [
+        "8077abf3-f506-4bb1-908a-4aa5abd12369"
+      ],
+      "from_year": -695,
+      "canonical_name": "Neo-Assyrian Nineveh",
+      "spatial_entity_id": "6b3fd57f-4d30-44d2-9d15-427e41b6cd47"
+    },
+    {
+      "to_year": -538,
+      "claim_ids": [
+        "a65d95f3-9681-4001-8ae3-b8bad002465f"
+      ],
+      "from_year": -599,
+      "canonical_name": "Neo-Babylonian Babylonia",
+      "spatial_entity_id": "dfc20c35-3467-484a-aa7d-95728f6b1b3a"
+    },
+    {
+      "to_year": -500,
+      "claim_ids": [
+        "bcf72f2e-6c95-4257-8ebe-c3d459191353"
+      ],
+      "from_year": -599,
+      "canonical_name": "Neo-Babylonian temple households",
+      "spatial_entity_id": "2f69664e-173d-4759-8280-31ec331cfca7"
+    },
+    {
+      "to_year": -1069,
+      "claim_ids": [
+        "bcd7f1d7-a192-4bcd-880d-16a899dc11ff"
+      ],
+      "from_year": -1549,
+      "canonical_name": "New Kingdom Egypt",
+      "spatial_entity_id": "d6e8bcfe-cf5f-4fdb-884d-7bb7228f43df"
+    },
+    {
+      "to_year": -1739,
+      "claim_ids": [
+        "e66638b2-f022-4bca-b173-5c128f3a3739"
+      ],
+      "from_year": -1741,
+      "canonical_name": "Old Babylonian Uruk",
+      "spatial_entity_id": "faaf62eb-da15-44f4-99b1-8da60b426358"
+    },
+    {
+      "to_year": 1899,
+      "claim_ids": [
+        "1420ab66-9065-58c2-a5a8-edb94ddf16f0"
+      ],
+      "from_year": 1800,
+      "canonical_name": "Ottoman Middle East",
+      "spatial_entity_id": "e611e914-428a-58ee-9731-cfac756dca90"
+    },
+    {
+      "to_year": null,
+      "claim_ids": [
+        "344f8c6d-b81f-5f2b-9c05-d764cfb25e08"
+      ],
+      "from_year": 1900,
+      "canonical_name": "People's Republic of China, early decades",
+      "spatial_entity_id": "d149f94d-174e-5ab4-b1f9-7635736bc034"
+    },
+    {
+      "to_year": null,
+      "claim_ids": [
+        "fb925d85-2465-535e-9e7d-fd0c06c39e86"
+      ],
+      "from_year": 1900,
+      "canonical_name": "Peruvian Amazon",
+      "spatial_entity_id": "5b54dab9-28c9-5d39-bebd-d57f04092194"
+    },
+    {
+      "to_year": 699,
+      "claim_ids": [
+        "8f853ded-eb39-432e-97c6-0715feaec950"
+      ],
+      "from_year": 611,
+      "canonical_name": "Pre-Angkor Cambodian epigraphic region (7th century)",
+      "spatial_entity_id": "b0c8a98a-ac45-4344-914e-f782e9a75cc1"
+    },
+    {
+      "to_year": 599,
+      "claim_ids": [
+        "e19a68ee-d41c-4f22-b8ca-eb2b65d885ef"
+      ],
+      "from_year": -799,
+      "canonical_name": "Pre-Islamic South Arabia (first-millennium epigraphic corpus)",
+      "spatial_entity_id": "ea501054-d38b-4147-ba02-41e1fa68598e"
+    },
+    {
+      "to_year": -146,
+      "claim_ids": [
+        "70fb14f7-9fe0-4470-b53d-e42b7e98e5bd"
+      ],
+      "from_year": -399,
+      "canonical_name": "Punic Carthage",
+      "spatial_entity_id": "c6cc6f7f-d919-4bb0-93e8-3201151bc538"
+    },
+    {
+      "to_year": -208,
+      "claim_ids": [
+        "1f865a88-6b27-4aa6-900f-813839856e6b"
+      ],
+      "from_year": -220,
+      "canonical_name": "Qin Empire (221–209 BCE slice)",
+      "spatial_entity_id": "90e94c09-0463-48d6-ad26-cd7bfacc724c"
+    },
+    {
+      "to_year": 22,
+      "claim_ids": [
+        "53405178-e879-4ef2-a12d-3cfcc0ad55f6"
+      ],
+      "from_year": 1,
+      "canonical_name": "Roman Empire — early Principate",
+      "spatial_entity_id": "ae1111c0-98bf-4bef-a1b2-98736f618aa3"
+    },
+    {
+      "to_year": 651,
+      "claim_ids": [
+        "be78a54f-7a2b-4e47-97db-da01818be73c"
+      ],
+      "from_year": 224,
+      "canonical_name": "Sasanian Iran",
+      "spatial_entity_id": "cd86a49d-66d6-4e73-8282-ee543c6f8e5e"
+    },
+    {
+      "to_year": -1000,
+      "claim_ids": [
+        "2945d4c3-d786-549a-baf9-fdfba54a978e",
+        "85ed4143-2d4a-5baf-989c-d4c94897d527"
+      ],
+      "from_year": -1999,
+      "canonical_name": "Shang China",
+      "spatial_entity_id": "f4266476-7403-572e-923a-65f19cfbbe70"
+    },
+    {
+      "to_year": 819,
+      "claim_ids": [
+        "dac1fdbe-8a72-411e-a43c-6180e3d24298"
+      ],
+      "from_year": 695,
+      "canonical_name": "Silla Village Register villages (Sŏwŏn-gyŏng area)",
+      "spatial_entity_id": "9b65dae3-45fe-49fb-9087-9fc74540219c"
+    },
+    {
+      "to_year": 1499,
+      "claim_ids": [
+        "4897a70a-0286-4281-9b65-68901135c993"
+      ],
+      "from_year": 1400,
+      "canonical_name": "Songo Mnara (15th-century Swahili stone town)",
+      "spatial_entity_id": "3ae61b11-1cf4-4fe5-9b4d-faf0ec4da757"
+    },
+    {
+      "to_year": 899,
+      "claim_ids": [
+        "04cdf6ea-5b43-4f44-94a4-04b720ac7a2a"
+      ],
+      "from_year": 600,
+      "canonical_name": "Southern Maya Lowlands (Late Classic captive-taking corpus)",
+      "spatial_entity_id": "0de79e9b-3be0-4783-87bd-785259fec4ea"
+    },
+    {
+      "to_year": null,
+      "claim_ids": [
+        "ef5d2b8e-2a49-53c3-94c3-d6a2e5b6fac9"
+      ],
+      "from_year": 1900,
+      "canonical_name": "Soviet Kazakhstan / Central Asia",
+      "spatial_entity_id": "82886ee2-e0d5-5b39-87fa-553e36c22d4d"
+    },
+    {
+      "to_year": 792,
+      "claim_ids": [
+        "687bed4f-281e-4821-bc23-1e75cb65dd99"
+      ],
+      "from_year": 751,
+      "canonical_name": "Tōdai-ji (Nara-period temple institution)",
+      "spatial_entity_id": "419fb1f9-225b-44e8-9518-acae207e82ac"
+    },
+    {
+      "to_year": -1000,
+      "claim_ids": [
+        "58d69227-01e8-5d47-aba4-f3f96cea4230"
+      ],
+      "from_year": -1999,
+      "canonical_name": "Vedic-period South Asia",
+      "spatial_entity_id": "60e51cf6-08cd-5544-b4c2-127f8f9c3201"
+    },
+    {
+      "to_year": 5,
+      "claim_ids": [
+        "0fa340fd-b595-4c48-aee6-71e5e235212e"
+      ],
+      "from_year": -201,
+      "canonical_name": "Western Han China (202 BCE–5 CE slice)",
+      "spatial_entity_id": "94c19677-c24a-4c9a-a717-d7a038a69920"
+    },
+    {
+      "to_year": null,
+      "claim_ids": [
+        "e36cf6d2-1dbe-5879-bde2-0b5eac52b635"
+      ],
+      "from_year": 1900,
+      "canonical_name": "Xinjiang / China",
+      "spatial_entity_id": "06d648d2-6a5b-5972-a3a4-aa9097fdb1d2"
+    },
+    {
+      "to_year": -1379,
+      "claim_ids": [
+        "896a3720-d871-495e-b23e-c24d7dde3039",
+        "abf43c9e-4689-4620-8418-fbf92e7725cc"
+      ],
+      "from_year": -1426,
+      "canonical_name": "Zhengzhou Shang City (Early Shang)",
+      "spatial_entity_id": "82d69be3-6159-4655-82a7-db3e4a5b68b6"
+    }
+  ],
+  "research_claims": [
+    {
+      "to_year": 1297,
+      "case_key": "production-batch-2026-09-29/angkor/household-slavery-1296-1297-v1",
+      "claim_id": "3bee5470-4873-4ac9-9ada-a1e99ece9082",
+      "from_year": 1296,
+      "target_id": "d7706a1e-f121-4e0d-acad-116bdded5233",
+      "claim_kind_code": "territorial_practice",
+      "supersedes_claim_id": null
+    },
+    {
+      "to_year": 1895,
+      "case_key": "production-batch-2026-09-29/asante/slavery-1807-1895-v1",
+      "claim_id": "547845cc-d6f3-487e-b912-6f6ce7573b47",
+      "from_year": 1807,
+      "target_id": "bf3f977c-7498-4d8e-be54-9a5ef6b70929",
+      "claim_kind_code": "territorial_practice",
+      "supersedes_claim_id": null
+    },
+    {
+      "to_year": 1820,
+      "case_key": "production-batch-2026-09-29/bukhara/persian-slavery-1820-v1",
+      "claim_id": "e9c09ee1-3f29-4180-9f11-eec30d8c2caf",
+      "from_year": 1820,
+      "target_id": "0befe05f-62bd-4aed-8e8c-89e13a24f827",
+      "claim_kind_code": "territorial_practice",
+      "supersedes_claim_id": null
+    },
+    {
+      "to_year": 1727,
+      "case_key": "production-batch-2026-09-29/dahomey/royal-captive-allocation-sale-1727-v1",
+      "claim_id": "1567b140-eeba-4b32-b37d-f31dcb35e1dd",
+      "from_year": 1727,
+      "target_id": "1b61fd28-d089-4941-a203-13fcebb4e807",
+      "claim_kind_code": "territorial_practice",
+      "supersedes_claim_id": null
+    },
+    {
+      "to_year": 956,
+      "case_key": "production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1",
+      "claim_id": "9f5397c7-8b7b-4218-ad10-b85abf56eae8",
+      "from_year": 956,
+      "target_id": "02a48a15-b2f8-4694-84d5-aae8fcb664c0",
+      "claim_kind_code": "legal_event",
+      "supersedes_claim_id": null
+    },
+    {
+      "to_year": 1861,
+      "case_key": "production-batch-2026-09-29/imerina/slavery-1790-1861-v1",
+      "claim_id": "742aaf09-dbe5-4066-b6e6-8ee1d0ce780c",
+      "from_year": 1790,
+      "target_id": "8e74a51e-8e5e-4e1f-b83b-0863f940e2c3",
+      "claim_kind_code": "territorial_practice",
+      "supersedes_claim_id": null
+    },
+    {
+      "to_year": 1710,
+      "case_key": "production-batch-2026-09-29/istanbul/slavery-1590-1710-v1",
+      "claim_id": "d03f578b-783c-4836-b708-42c65b46a3d2",
+      "from_year": 1590,
+      "target_id": "61c47482-c413-4a2d-a810-d46ceabf585b",
+      "claim_kind_code": "territorial_practice",
+      "supersedes_claim_id": null
+    },
+    {
+      "to_year": 1873,
+      "case_key": "production-batch-2026-09-29/khiva/slavery-1873-v1",
+      "claim_id": "cfa9f81e-414b-4dd2-92c5-4b6b3f7e7071",
+      "from_year": 1873,
+      "target_id": "deffb277-c0ca-43b6-aa45-d7db45033677",
+      "claim_kind_code": "territorial_practice",
+      "supersedes_claim_id": null
+    },
+    {
+      "to_year": 1800,
+      "case_key": "production-batch-2026-09-29/kongo/slavery-transformation-1491-1800-v1",
+      "claim_id": "6875d0fa-2e9f-4369-9100-b076f8d9024c",
+      "from_year": 1491,
+      "target_id": "11316b42-a7cd-44ff-ad12-382452043bab",
+      "claim_kind_code": "territorial_practice",
+      "supersedes_claim_id": null
+    },
+    {
+      "to_year": 1886,
+      "case_key": "production-batch-2026-09-29/sitka/sah-quah-slavery-1886-v1",
+      "claim_id": "9643daa5-cf4f-462d-b700-3fb693a830a0",
+      "from_year": 1886,
+      "target_id": "322a8e66-1ca3-4f5f-aeac-1aed9a3d8727",
+      "claim_kind_code": "territorial_practice",
+      "supersedes_claim_id": null
+    },
+    {
+      "to_year": 1352,
+      "case_key": "production-batch-2026-09-29/taghaza/slave-salt-mining-1352-v1",
+      "claim_id": "9d1ccd8e-ba6d-4dbe-aea8-6d3f2b98942c",
+      "from_year": 1352,
+      "target_id": "6e4f7762-de45-4dcb-a179-2d5cb16ec39a",
+      "claim_kind_code": "territorial_practice",
+      "supersedes_claim_id": null
+    },
+    {
+      "to_year": 1871,
+      "case_key": "production-batch-2026-09-29/zanzibar/slave-based-plantation-production-1859-1871-v1",
+      "claim_id": "fea13b9b-d548-44f4-9fb4-b50f1aaaa59d",
+      "from_year": 1859,
+      "target_id": "1bfe10e3-b2d0-44b8-839e-8ec1d16eddab",
+      "claim_kind_code": "territorial_practice",
+      "supersedes_claim_id": null
+    }
+  ],
+  "pilot_case_keys": [
+    "atlas-100x100/samarkand/captive-skilled-forced-labour-1404-v1",
+    "atlas-100x100/timbuktu/slavery-c1509-1512-v1",
+    "atlas-100x100/swahili-coast/slave-trade-network-c1300-1400-v1",
+    "atlas-100x100/viking-rus-network/slave-trade-c880-913-v1",
+    "atlas-100x100/andaman/colonial-captivity-c1789-1796-v1"
+  ],
+  "status": "RECONCILING_NOT_YET_RELEASE_READY",
+  "remaining_checks": [
+    "exact pilot production admission and readback",
+    "D-121 all inherited geometry source bindings, including eight non-API geometries",
+    "immutable authority and source dependency closure",
+    "typed public evidence/map rendering and end-to-end browser verification",
+    "published package checksums and compare-and-set serving cutover"
+  ],
+  "rollback_target": "v0.8.1-public-mvp-v2",
+  "count_rules": [
+    "75 predecessor claims represent 48 territorial case clusters plus supporting dimensions; raw claims are not cases",
+    "new legal/network cases remain separate from territorial practice",
+    "existing release remains immutable",
+    "unresolved geometry does not imply absence"
+  ]
+}

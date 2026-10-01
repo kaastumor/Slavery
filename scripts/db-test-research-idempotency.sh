@@ -215,6 +215,10 @@ docker compose run --rm -e CI=true tooling \
 
 echo "100/100 D-124 pilot batch rehearsal passed: five reviewed packets replay exactly and rollback cleanly."
 
+# Exact pilot helpers through the connected SQL transport; disposable only.
+docker compose run --rm -e CI=true tooling \
+  python tools/test_100_100_pilot_sql.py --disposable-test-db
+
 
 # #370: rehearse three reviewed case-linked mapped representations only after
 # the full #367 population set exists in this disposable database. The tool
