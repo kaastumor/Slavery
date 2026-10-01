@@ -9,17 +9,7 @@
 
 # CURRENT MODE — EXECUTION / CONSOLIDATION — 100/100 PROGRAMME (#369)
 
-**WIP = 1 canonical mutation stream: #369 — D-124 first-pilot batch
-consolidation and disposable rehearsal.** The five merged repository-staging packets
-are Samarkand 1404, Timbuktu c.1509–1512, Swahili maritime network c.1300–1400,
-Viking/Rūs network c.880–913 and Andaman external colonial captivity c.1789–1796.
-This reaches the D-124 first routine-batch cap of five. None is governed-DB admission
-or a 100/100 increment. The pilot now binds exact packet blobs, adds only the missing
-external-participation ingestion tooling already supported by schema 0011, and rehearses
-all five atomically in disposable PostGIS with exact no-op replay and rollback.
-There is **no production path in the rehearsal driver**. Sumerian City-States 2000 BCE
-remains `NEEDS_DEEP_REVIEW / REPRESENTATION_PATH_REQUIRED`; Pre-Angkor and
-Tenochtitlan HOLDs remain in force.
+**WIP = 1 canonical mutation stream: #369 — exact five-case D-124 pilot at its production-admission gate.** PR #396 merged the five repository-staging packets and passed the disposable atomic rehearsal: Samarkand 1404 and Timbuktu c.1509–1512 are territorial candidates; Swahili, Viking/Rūs and Andaman are external-participation candidates. The manifest is exact, and the rehearsal driver has no production path. None of the five is admitted to governed production or counted toward 100/100. Live admission still requires a separately authorized, exact-manifest production driver, fresh preflight and independent readback. Do not open a sixth staging/admission packet while this gate is unresolved.
 
 The original #367 population batch is complete history: its 12 accepted cases were ingested to governed production research state and remain reviewed/unpublished. Production ingestion did not create release membership or move the serving channel.
 
@@ -32,6 +22,7 @@ Strict released baseline remains:
 
 Prepared but **not live-written** geometry gates:
 - #370: Goryeo / Dahomey / Taghaza closure; review + disposable rehearsal + guarded production driver complete.
+- #374: India / Myanmar / Pakistan / Nazi Germany case-linked loci; corrected review + disposable rehearsal + guarded production driver complete; Brazil remains HOLD on Correntes/Corrente identity.
 - #379 / PR #382: Sinjar-town evidence locus for the released ISIL/Yazidi case; review + disposable rehearsal + guarded production driver complete.
 
 If separately authorized and written cleanly, #370 would bring the 12-case #367 batch from 9 to 12 mapped candidates. Sinjar would add one further case-linked mapped representation to the released-corpus recovery pipeline. Neither gate changes immutable v0.8.1 membership or the public serving channel by itself.
@@ -67,25 +58,20 @@ limits are recorded in
 This remains a research-state evidence locus; strict released 100/100 counters
 and immutable v0.8.1 membership do not change through this write.
 
+## Paired case + geometry priority
+
+Sponsor direction: after the exact five-case gate is reconciled, prefer the strongest historically defensible candidates that can also gain a reviewed, non-null, case-linked representation. Historical fitness, source independence, identity and scope are decided first; mapability breaks ties among surviving candidates. A mapped role must be explicit: practice/inference geometry, historical site point, evidence locus, or navigation/context proxy. A modern-country polygon, unlinked/raw row, unresolved geometry, or render variant does not count. A site/navigation point never becomes territorial practice extent. Count distinct case identities once, even where several claim facets or points exist. Maintain released and governed-successor planning numerators separately.
+
+The D-124 read-only screen is complete at 34 identities/results. The corrected live issue checkpoints move Yaghan to HOLD; later deep reviews narrow Ethiopian/Gondar, Central Tibetan relay labour, and Lithuanian court/domain candidates to bounded territorial propositions while leaving their geometry unresolved. Māori remains HOLD. Mayapán is a bounded case candidate with unresolved coordinate provenance. Angkor ~1200 is distinct from the 1296–1297 household case after source/interval review; Khmer ~1300 reuses the latter rather than adding a third case. Pre-Angkor K.493 and Tenochtitlan/Mexica HOLDs remain. These are dispositions, not database admissions or counter increments.
+
+The first review-only paired slice is Angkor ~1200: use the existing Angkor site identity and independently reviewed UNESCO component 668-001 point solely as a navigation/context locator for the earlier temple/royal evidence, subject to source/version, time and claim-link review. Do not copy the 1296–1297 claim's time bounds, import its Zhou evidence into the earlier case, or use the World Heritage boundary as a practice polygon. The exact proposal is in data/research/geometry_reviews/population_100_100_angkor_1200_paired_review.md. No new case or geometry is admitted by this review.
+
 ## Execution order
 
-1. Reconcile the exact five staged packets through the D-124 pilot manifest. Preserve
-   the 2 territorial / 3 external claim-kind split, source-version reuse, NULL P-levels,
-   unresolved external/network geometry and all individual historical abstentions.
-2. Run the pilot only in disposable PostGIS. Required evidence: exact packet-blob
-   binding, +5 claims, +2 territorial subtypes, +3 external subtypes, +21 claim-source
-   links, 2 modern-proxy points, 3 unresolved geometry rows, exact unchanged replay,
-   zero release/serving deltas and full rollback.
-3. If exact-head CI passes, merge the preparation/rehearsal PR and record the durable
-   receipt/checkpoint. Do not create a production mutation merely because rehearsal
-   passes.
-4. Production admission of this exact manifest requires a **separate explicit sponsor
-   authorization**, fresh governed collision/source/release/serving preflight, one
-   guarded transaction and independent post-write readback. A changed member or packet
-   invalidates the gate.
-5. Do not open a sixth canonical staging/admission packet until the five-case pilot is
-   reconciled. Read-only screening remains governed by D-124 but must not create a
-   competing writer or hide review debt.
+1. Keep the merged five-case pilot frozen. Its production admission requires explicit sponsor authority for the exact manifest, a fresh governed preflight, guarded atomic write, replay/rollback evidence and independent readback. No production write follows from this priority change.
+2. Review the Angkor ~1200 paired proposal and its negative controls without opening a sixth packet. A later packet must freeze a source-justified interval and exact source-version links, then establish a separate case-linked navigation role for the existing site point.
+3. Reconcile the eight potentially distinct current-method successor cases and three replacements at case identity level. Continue #370, #374 and #379 geometry gates only under their own sponsor authorizations; do not replay or silently merge their manifests.
+4. After the pilot gate clears, select the next bounded batch from historically qualified paired candidates. Carry unresolved geometry and HOLDs explicitly; recompute both case-level numerators before any successor selection. D-121 still holds v0.8.2. Publication and public-channel movement require separate gates.
 
 ## Control-state reconciliation
 
@@ -95,7 +81,7 @@ Legacy PR #363 was closed unmerged on 2026-09-30 as stale/diverged WIP. Its bran
 
 No new post-M1 P-levels, source-density prevalence, inferred nationality, false absence, unsupported modern proxies, invented polygons, or evidence-locus-to-territory conversion. Preserve existing unresolved target geometry, source-native values, immutable releases and the publication boundary.
 
-#370, #379 and any later production driver are **genuine sponsor gates**, not background work. No release/public serving movement without a separate explicit cutover authorization.
+#370, #374, #379 and any later production driver are **genuine sponsor gates**, not background work. No release/public serving movement without a separate explicit cutover authorization.
 
 ## Actions budget and standing protocols
 
