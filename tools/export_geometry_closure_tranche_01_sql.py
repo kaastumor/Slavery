@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import subprocess
@@ -38,8 +39,9 @@ class ClosureCollector(InsertCollector):
 
 def load_inputs():
     for path, expected in PINNED_INPUTS.items():
-        actual = subprocess.check_output(['git', 'hash-object', str(path.relative_to(ROOT))],
-                                         cwd=ROOT, text=True).strip()
+        # Match the pinned Git blob without requiring Git in the DB test image.
+        payload = path.read_bytes().replace(b'\r\n', b'\n')
+        actual = hashlib.sha1(b'blob ' + str(len(payload)).encode('ascii') + b'\0' + payload).hexdigest()
         if actual != expected:
             raise rehearsal.ClosureError(f'pinned #370 input drift: {path.name}')
     return rehearsal.load_review(), production.load_plan(), production.load_rehearsal_receipt()
