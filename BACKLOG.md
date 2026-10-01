@@ -9,7 +9,7 @@
 
 # CURRENT MODE - EXECUTION / CONSOLIDATION - 100/100 PROGRAMME (#369)
 
-Sponsor steering on 2026-10-02 authorizes a new release and live cutover for the
+Sponsor steering on 2026-10-01 authorizes a new release and live cutover for the
 48 released territorial case clusters, the exact 12 admitted research packets,
 and the exact five staged pilot packets. One integration owner reconciles this
 scope in `release/selections/v0.8.2-requested-corpus.json`: expected dimensions
@@ -19,7 +19,7 @@ source-feature/time provenance, exact pilot admission or package validation.
 Preserve v0.8.1 and rollback target v0.8.1-public-mvp-v2. The existing successor
 lane remains v0.8.2; no public-channel movement has occurred at this checkpoint.
 
-**WIP = 1 canonical mutation stream: #369 — exact five-case D-124 pilot at its production-admission gate.** PR #396 merged the five repository-staging packets and passed the disposable atomic rehearsal: Samarkand 1404 and Timbuktu c.1509–1512 are territorial candidates; Swahili, Viking/Rūs and Andaman are external-participation candidates. The manifest is exact, and the rehearsal driver has no production path. None of the five is admitted to governed production or counted toward 100/100. Live admission still requires a separately authorized, exact-manifest production driver, fresh preflight and independent readback. Do not open a sixth staging/admission packet while this gate is unresolved.
+**WIP = 1 canonical mutation stream: #369 - exact requested v0.8.2 release integration.** The five D-124 pilot packets committed atomically on 2026-10-01 at 23:17:26 UTC after fresh preflight and exact-head disposable CI (run `36939558938`). Samarkand 1404 and Timbuktu c.1509-1512 are territorial claims; Swahili, Viking/Rus and Andaman are external-participation claims. Independent readback passed 494 field assertions. All five remain reviewed/unpublished; release membership and serving remain unchanged. The receipt is `data/research/recovery/population_100_100_intake_2026_10_01/production_admission_receipt.json`. Do not replay the committed write or open a sixth admission packet during this integration.
 
 The original #367 population batch is complete history: its 12 accepted cases were ingested to governed production research state and remain reviewed/unpublished. Production ingestion did not create release membership or move the serving channel.
 
@@ -103,10 +103,10 @@ The Uzbekistan 2019 / Mauritania 2009 review freezes two exact Natural Earth 1:1
 
 ## Execution order
 
-1. Keep the merged five-case pilot frozen. Its production admission requires explicit sponsor authority for the exact manifest, a fresh governed preflight, guarded atomic write, replay/rollback evidence and independent readback. No production write follows from this priority change.
+1. Preserve the committed pilot and its independently verified receipt. Close D-121 source bindings and freeze the exact 48 + 12 + 5 corpus for v0.8.2; publication and live cutover are sponsor-authorized subject to package and serving checks.
 2. Preserve the accepted Angkor ~1200 and Gondar review-only proposals. Continue Nepal's bounded subnational geometry qualification from exact ILO fieldwork locators; carry modern-context temporal limits for Uzbekistan/Mauritania explicitly. Do not open a sixth staging/admission packet.
 3. Reconcile the eight potentially distinct current-method successor cases and three replacements at case identity level. Preserve the committed #374 receipt; continue #370 and #379 geometry gates only under their own sponsor authorizations; do not replay or silently merge their manifests.
-4. After the pilot gate clears, select the next bounded batch from historically qualified paired candidates. Carry unresolved geometry and HOLDs explicitly; recompute both case-level numerators before any successor selection. D-121 still holds v0.8.2. Publication and public-channel movement require separate gates.
+4. Complete the requested release before opening another research batch. Carry unresolved geometry and HOLDs explicitly; recompute case-level numerators from frozen typed membership. D-121 remains a release check until every selected inherited geometry has verified source binding.
 
 ## Control-state reconciliation
 
@@ -116,7 +116,7 @@ Legacy PR #363 was closed unmerged on 2026-09-30 as stale/diverged WIP. Its bran
 
 No new post-M1 P-levels, source-density prevalence, inferred nationality, false absence, unsupported modern proxies, invented polygons, or evidence-locus-to-territory conversion. Preserve existing unresolved target geometry, source-native values, immutable releases and the publication boundary.
 
-#370, #379 and any later production driver are **genuine sponsor gates**, not background work. #374 was explicitly authorized and committed; that authority does not cover another batch. No release/public serving movement without a separate explicit cutover authorization.
+#370 and #379 retain their distinct manifests and are not silently folded into this release integration. #374 and the five-case pilot were explicitly authorized and committed. The 48 + 12 + 5 instruction supplies explicit release/public cutover authorization; unrelated research admissions remain outside scope.
 
 ## Actions budget and standing protocols
 
