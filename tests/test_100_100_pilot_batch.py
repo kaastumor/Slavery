@@ -1,5 +1,6 @@
 from pathlib import Path
 import sys
+import subprocess
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -64,6 +65,22 @@ class PilotBatchManifestTests(unittest.TestCase):
                 self.assertEqual(geometry["accuracy_status"], "modern_proxy")
                 self.assertEqual(geometry["geojson"]["type"], "Point")
         self.assertEqual((resolved, unresolved), (2, 3))
+
+    def test_pilot_apply_without_disposable_flag_is_rejected(self):
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(ROOT / "tools/rehearse_100_100_pilot_batch.py"),
+                "--apply",
+            ],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("NO production apply path", result.stdout + result.stderr)
+
 
 
 if __name__ == "__main__":
