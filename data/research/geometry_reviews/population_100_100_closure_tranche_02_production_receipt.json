@@ -1,0 +1,710 @@
+{
+  "record_kind": "geometry_closure_tranche_02_production_receipt",
+  "version": 1,
+  "issue": 374,
+  "parent_issue": 369,
+  "status": "PASS_ATOMIC_COMMIT_INDEPENDENT_READBACK_VERIFIED",
+  "mode": "PRODUCTION_COMMIT",
+  "git_revision": "2f701e32717d3cfc0fe3f13275427679192fddcf",
+  "transport": "connected_sql",
+  "committed_at": "2026-10-01T22:29:35.691636+00:00",
+  "authorization": {
+    "source": "Sponsor explicitly approved merging PR #400 and applying #374's exact four reviewed loci in the interactive session on 2026-10-01 UTC.",
+    "scope": "India/Myanmar/Pakistan/Nazi Germany geometry/evidence loci only; Brazil HOLD preserved; no publication or release/serving authorization.",
+    "local_database_url_required": false
+  },
+  "implementation": {
+    "merged_pr": 400,
+    "reviewed_head": "bda9d4f5cc845f286a79980b842fe830fc22e956",
+    "review_git_blob_sha": "53c2f0a1a4f59b392b671ca0fe5bbf3645fb3dd0",
+    "plan_git_blob_sha": "4988acb7f453f574477f218fc3018b5fac55e53d",
+    "authorized_sql_sha256": "90d600f9d0f657b06fd649053d7fe5eb35715f7dfb6ebe09300cc36b1a7db228",
+    "ci_run_id": 36934521554,
+    "ci_result": "PASS_CHECKS_AND_FOUNDATION",
+    "production_submit_count": 1
+  },
+  "transaction_receipt": {
+    "issue": 374,
+    "transport": "connected_sql",
+    "checked_at": "2026-10-01T22:29:35.691636+00:00",
+    "first_pass": {
+      "overnight-2026-09-27/india/bonded-labour-v2": {
+        "claim_id": "1d707382-b0b8-479d-81e3-efcea01c4ab0",
+        "geometry_id": "58924252-e4ee-431e-9f82-05d472bac6c2",
+        "locus_created": true,
+        "geometry_inserted": true,
+        "locus_link_inserted": true,
+        "locus_spatial_entity_id": "f00a126a-41d1-485e-bca4-bb68e2527183",
+        "context_source_version_id": null,
+        "geometry_source_version_id": "fc72c316-b3c8-49e3-b8a0-a2ad752687d9",
+        "context_claim_source_inserted": false
+      },
+      "overnight-2026-09-27/pakistan/bonded-labour-v2": {
+        "claim_id": "47175a77-76bb-4a92-ac3c-cb22b7a8131f",
+        "geometry_id": "f1a51a10-ea3c-4639-830b-68655f46dd19",
+        "locus_created": true,
+        "geometry_inserted": true,
+        "locus_link_inserted": true,
+        "locus_spatial_entity_id": "8a5f7da3-4d04-4076-a116-69d3998545bd",
+        "context_source_version_id": "c740864f-53fa-4d86-8cec-29a0ffec5827",
+        "geometry_source_version_id": "6a8334af-fa39-40e0-9235-9de834d479fc",
+        "context_claim_source_inserted": true
+      },
+      "overnight-2026-09-27/myanmar/state-forced-labour-v2": {
+        "claim_id": "365e6258-f03f-4677-b775-cd5a9f18414a",
+        "geometry_id": "1804ef95-075e-4f40-a759-6df5693ed7c8",
+        "locus_created": true,
+        "geometry_inserted": true,
+        "locus_link_inserted": true,
+        "locus_spatial_entity_id": "61bb8b65-5191-4ce2-bcf0-d43a0081b3f7",
+        "context_source_version_id": "2cf9a9fc-1af5-4ac1-905d-0b18bbb0d431",
+        "geometry_source_version_id": "9947c1c7-ec0c-4f25-b4b2-d77c4947ae97",
+        "context_claim_source_inserted": true
+      },
+      "post-overnight-2026-09-27/nazi-germany/state-forced-labour-1942-1944-v2": {
+        "claim_id": "51063cdb-f485-47c9-9056-e374476632dd",
+        "geometry_id": "6f5be672-28ef-4294-b2d5-f005f8c5f874",
+        "locus_created": true,
+        "geometry_inserted": true,
+        "locus_link_inserted": true,
+        "locus_spatial_entity_id": "e6f9274a-af17-4fb2-acbe-a5dc4320473f",
+        "context_source_version_id": null,
+        "geometry_source_version_id": "a969801b-ee0b-46d7-962e-31db63666fdd",
+        "context_claim_source_inserted": false
+      }
+    },
+    "after_counts": {
+      "atlas.claim": 116,
+      "atlas.source": 366,
+      "atlas.geometry": 91,
+      "atlas.claim_source": 172,
+      "audit.release_claim": 462,
+      "atlas.source_version": 366,
+      "atlas.spatial_entity": 80,
+      "audit.release_channel": 1,
+      "atlas.claim_evidence_locus": 7
+    },
+    "git_revision": "2f701e32717d3cfc0fe3f13275427679192fddcf",
+    "before_counts": {
+      "atlas.claim": 116,
+      "atlas.source": 360,
+      "atlas.geometry": 87,
+      "atlas.claim_source": 170,
+      "audit.release_claim": 462,
+      "atlas.source_version": 360,
+      "atlas.spatial_entity": 76,
+      "audit.release_channel": 1,
+      "atlas.claim_evidence_locus": 3
+    },
+    "held_cases_unchanged": [
+      "overnight-2026-09-27/brazil/rural-debt-bondage-2003-2005-v2"
+    ]
+  },
+  "tracked_closure_delta": {
+    "atlas.claim": 0,
+    "atlas.source": 6,
+    "atlas.geometry": 4,
+    "atlas.claim_source": 2,
+    "audit.release_claim": 0,
+    "atlas.source_version": 6,
+    "atlas.spatial_entity": 4,
+    "audit.release_channel": 0,
+    "atlas.claim_evidence_locus": 4
+  },
+  "mapped_representations_added": 4,
+  "claim_delta": 0,
+  "release_membership_delta": 0,
+  "serving_channel_delta": 0,
+  "publication_changes": 0,
+  "p_level_changes": 0,
+  "historical_practice_polygons_added": 0,
+  "national_proxy_polygons_promoted": 0,
+  "held_cases_unchanged": [
+    "overnight-2026-09-27/brazil/rural-debt-bondage-2003-2005-v2"
+  ],
+  "replay_evidence": {
+    "scope": "Disposable PostGIS only. No production replay submitted.",
+    "run_id": 36934521554,
+    "reviewed_python_replay": "PASS_EXACT_NO_OP",
+    "duplicate_sql_submission": "PASS_REJECTED",
+    "late_failure_atomic_rollback": "PASS",
+    "rollback_restored_counts": true
+  },
+  "independent_readback": {
+    "method": "Separate read-only SQL through connected Supabase project Historical Slavery Atlas",
+    "status": "PASS",
+    "field_assertions": 257,
+    "geometry_coordinate_tolerance": 1e-12,
+    "readback_checked_at": "2026-10-01 22:31:06.493087+00",
+    "observed": {
+      "checked_at": "2026-10-01 22:31:06.493087+00",
+      "cases": [
+        {
+          "claim": {
+            "notes": "Reconciles legacy claim 854c88ef-1237-4f9e-8383-0ce4c5b6e401 into current post-M1 semantics. No new P-level is assigned. Legacy geometry d8f804ee-9f3e-4784-90aa-f9fa5203fc79 is an explicit modern/navigation proxy and is not promoted as this claim's historical/practice inference extent.",
+            "summary": "A 2005 ILO review found bonded labour persisting across many sectors and Indian states despite legal abolition, while independent Human Rights Watch field research documented bonded child labour in the silk industry in Karnataka, Tamil Nadu and Uttar Pradesh. The atlas records a positive debt-bondage claim for this 2003–2005 evidence window while preserving strong regional, sectoral and population heterogeneity.",
+            "to_year": 2005,
+            "claim_id": "1d707382-b0b8-479d-81e3-efcea01c4ab0",
+            "from_year": 2003,
+            "confidence": "high_bounded",
+            "created_at": "2026-09-27T11:29:44.071627+00:00",
+            "valid_years": "[2003,2006)",
+            "review_status": "reviewed",
+            "claim_kind_code": "territorial_practice",
+            "spatial_precision": "multiple states/sectors with independently documented bounded examples; no national prevalence surface",
+            "date_text_original": "HRW field report 2003 and ILO national review 2005",
+            "publication_status": "unpublished",
+            "temporal_certainty": "high",
+            "temporal_precision": "bounded_multi_source_window",
+            "supersedes_claim_id": null,
+            "temporal_applicability_mode": null
+          },
+          "entity": {
+            "notes": "Modern city identity for an HRW fieldwork/evidence locus. It does not define the geographic extent of bonded labour in India or even all silk-industry bondage.",
+            "to_year": null,
+            "from_year": null,
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "valid_years": null,
+            "display_name": "Ramanagaram silk-reeling fieldwork locus",
+            "review_status": "reviewed",
+            "canonical_name": "Ramanagaram",
+            "entity_type_code": "city",
+            "spatial_entity_id": "f00a126a-41d1-485e-bca4-bb68e2527183"
+          },
+          "geometry": {
+            "srid": 4326,
+            "notes": null,
+            "valid": true,
+            "geojson": {
+              "type": "Point",
+              "coordinates": [
+                77.281493,
+                12.721809
+              ]
+            },
+            "to_year": null,
+            "from_year": null,
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "geometry_id": "58924252-e4ee-431e-9f82-05d472bac6c2",
+            "valid_years": null,
+            "review_status": "reviewed",
+            "accuracy_status": "modern_proxy",
+            "resolution_method": "Use the modern Ramanagaram/Closepet populated-place point as navigation geometry for the HRW fieldwork locus. HRW explicitly visited Ramanagaram; the point does not locate each workshop or define a practice extent.",
+            "spatial_entity_id": "f00a126a-41d1-485e-bca4-bb68e2527183",
+            "geometry_source_native_id": "GeoNames 1258744",
+            "geometry_source_version_id": "fc72c316-b3c8-49e3-b8a0-a2ad752687d9"
+          },
+          "locus_link": {
+            "notes": "Evidence locus for one bounded component of the India claim; not India-wide inference extent.",
+            "claim_id": "1d707382-b0b8-479d-81e3-efcea01c4ab0",
+            "role_text": "HRW silk-industry fieldwork locus; modern Ramanagaram point only",
+            "spatial_entity_id": "f00a126a-41d1-485e-bca4-bb68e2527183"
+          },
+          "territorial": {
+            "notes": "Positive bounded classification only. Do not infer national prevalence, uniform territorial distribution, legal status, or a country-wide practice polygon beyond what the evidence directly supports.",
+            "claim_id": "1d707382-b0b8-479d-81e3-efcea01c4ab0",
+            "assertion_form": null,
+            "practice_level": null,
+            "research_stage": null,
+            "prevalence_scope": null,
+            "spatial_entity_id": "4c0cf106-f55e-4e98-901a-63cd5cce5bc7",
+            "interpretive_basis": null,
+            "occurrence_pattern": null,
+            "practice_type_code": "debt_bondage",
+            "attestation_pattern": null,
+            "coverage_state_code": "classified",
+            "institutionalization": null,
+            "classification_status": "reviewed_reconciled_post_m1",
+            "classification_outcome": null,
+            "structural_significance": null
+          },
+          "geometry_source": {
+            "notes": null,
+            "title": "Closepet / Ramanagaram",
+            "source_id": "0a1c3e1b-b105-4ac6-9253-6bf11d3c8cd9",
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "source_type": "modern_gazetteer",
+            "language_code": null,
+            "temporal_scope": null,
+            "geographic_scope": null,
+            "independence_notes": null,
+            "author_or_institution": "GeoNames",
+            "source_classification": "geometry_reference",
+            "reliability_limitations": null
+          },
+          "release_memberships": 0,
+          "geometry_source_version": {
+            "notes": null,
+            "source_id": "0a1c3e1b-b105-4ac6-9253-6bf11d3c8cd9",
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "accessed_at": "2026-10-01T22:29:35.181563+00:00",
+            "version_label": "GeoNames 1258744, accessed 2026-09-29",
+            "license_status": "GeoNames CC BY 4.0 database",
+            "publication_year": null,
+            "source_version_id": "fc72c316-b3c8-49e3-b8a0-a2ad752687d9",
+            "url_or_identifier": "https://www.geonames.org/1258744/closepet.html",
+            "redistribution_status": "coordinate with attribution",
+            "publication_or_creation_date_text": null
+          }
+        },
+        {
+          "claim": {
+            "notes": "Reconciles legacy claim 295db38e-3b6d-41b8-8563-721ec6757328 into current post-M1 semantics. No new P-level is assigned. Legacy geometry 26675f14-f67f-4ff4-a1e7-00c3ca71fc20 is an explicit modern/navigation proxy and is not promoted as this claim's historical/practice inference extent.",
+            "summary": "The ILO Commission of Inquiry concluded in 1998 that forced or compulsory labour was imposed in Myanmar in a widespread and systematic manner, particularly by government officials and the military. The atlas records a strong positive state-forced-labour claim for 1998 while preserving the distinction between the Commission's national institutional finding and any finer-grained spatial distribution.",
+            "to_year": 1998,
+            "claim_id": "365e6258-f03f-4677-b775-cd5a9f18414a",
+            "from_year": 1998,
+            "confidence": "high_bounded",
+            "created_at": "2026-09-27T11:29:52.012142+00:00",
+            "valid_years": "[1998,1999)",
+            "review_status": "reviewed",
+            "claim_kind_code": "territorial_practice",
+            "spatial_precision": "widespread/systematic state and military practice documented nationally, without converting that wording into a prevalence polygon",
+            "date_text_original": "ILO Commission of Inquiry report, August 1998",
+            "publication_status": "unpublished",
+            "temporal_certainty": "high",
+            "temporal_precision": "bounded_source_interval",
+            "supersedes_claim_id": null,
+            "temporal_applicability_mode": null
+          },
+          "entity": {
+            "notes": "Modern administrative context for ILO witness 101 from Daw Taku, Shadaw Township. The geometry is not an exact Daw Taku village point and not a nationwide forced-labour extent.",
+            "to_year": null,
+            "from_year": null,
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "valid_years": null,
+            "display_name": "Shadaw Township (Daw Taku testimony context)",
+            "review_status": "reviewed",
+            "canonical_name": "Shadaw Township — Daw Taku testimony context",
+            "entity_type_code": "region",
+            "spatial_entity_id": "61bb8b65-5191-4ce2-bcf0-d43a0081b3f7"
+          },
+          "geometry": {
+            "srid": 4326,
+            "notes": null,
+            "valid": true,
+            "geojson": {
+              "type": "Point",
+              "coordinates": [
+                97.6391812845,
+                19.5032048539
+              ]
+            },
+            "to_year": null,
+            "from_year": null,
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "geometry_id": "1804ef95-075e-4f40-a759-6df5693ed7c8",
+            "valid_years": null,
+            "review_status": "reviewed",
+            "accuracy_status": "modern_proxy",
+            "resolution_method": "Use the modern Shadaw Township reference coordinate as navigation/testimony context because the ILO source fixes the witness to Daw Taku within Shadaw Township but exact Daw Taku geometry is not independently frozen. The point is not an incident centroid or national practice surface.",
+            "spatial_entity_id": "61bb8b65-5191-4ce2-bcf0-d43a0081b3f7",
+            "geometry_source_native_id": "GeoNames 11154185",
+            "geometry_source_version_id": "9947c1c7-ec0c-4f25-b4b2-d77c4947ae97"
+          },
+          "locus_link": {
+            "notes": "Evidence context only. The Commission's national systemic conclusion remains analytically separate.",
+            "claim_id": "365e6258-f03f-4677-b775-cd5a9f18414a",
+            "role_text": "ILO witness-101 testimony context; Shadaw Township modern proxy, not exact Daw Taku",
+            "spatial_entity_id": "61bb8b65-5191-4ce2-bcf0-d43a0081b3f7"
+          },
+          "territorial": {
+            "notes": "Positive bounded classification only. Do not infer national prevalence, uniform territorial distribution, legal status, or a country-wide practice polygon beyond what the evidence directly supports.",
+            "claim_id": "365e6258-f03f-4677-b775-cd5a9f18414a",
+            "assertion_form": null,
+            "practice_level": null,
+            "research_stage": null,
+            "prevalence_scope": null,
+            "spatial_entity_id": "91c7f969-f47a-465c-a304-57328b59d052",
+            "interpretive_basis": null,
+            "occurrence_pattern": null,
+            "practice_type_code": "state_forced_labour",
+            "attestation_pattern": null,
+            "coverage_state_code": "classified",
+            "institutionalization": null,
+            "classification_status": "reviewed_reconciled_post_m1",
+            "classification_outcome": null,
+            "structural_significance": null
+          },
+          "geometry_source": {
+            "notes": null,
+            "title": "Shadaw Township",
+            "source_id": "fec045d0-ddd5-40ed-ab10-90eb416c418c",
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "source_type": "modern_gazetteer",
+            "language_code": null,
+            "temporal_scope": null,
+            "geographic_scope": null,
+            "independence_notes": null,
+            "author_or_institution": "GeoNames",
+            "source_classification": "geometry_reference",
+            "reliability_limitations": null
+          },
+          "release_memberships": 0,
+          "geometry_source_version": {
+            "notes": null,
+            "source_id": "fec045d0-ddd5-40ed-ab10-90eb416c418c",
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "accessed_at": "2026-10-01T22:29:35.181563+00:00",
+            "version_label": "GeoNames 11154185, accessed 2026-09-29",
+            "license_status": "GeoNames CC BY 4.0 database",
+            "publication_year": null,
+            "source_version_id": "9947c1c7-ec0c-4f25-b4b2-d77c4947ae97",
+            "url_or_identifier": "https://www.geonames.org/11154185/shadaw.html",
+            "redistribution_status": "coordinate with attribution",
+            "publication_or_creation_date_text": null
+          }
+        },
+        {
+          "claim": {
+            "notes": "Reconciles legacy claim 47e403f5-f44b-4ec1-a362-cdc01972dd1c into current post-M1 semantics. No new P-level is assigned. Legacy geometry 5aebf61e-cd1f-44e9-9495-b6f7969eeaeb is an explicit modern/navigation proxy and is not promoted as this claim's historical/practice inference extent.",
+            "summary": "An ILO working paper documented continuing debt bondage in Pakistan during the 1990s despite national legislation banning the practice, including evidence from agriculture and brick kilns. The atlas records a positive debt-bondage claim for the 1990s without inferring a uniform national prevalence or practice polygon.",
+            "to_year": 1999,
+            "claim_id": "47175a77-76bb-4a92-ac3c-cb22b7a8131f",
+            "from_year": 1990,
+            "confidence": "high_bounded",
+            "created_at": "2026-09-27T11:30:00.024301+00:00",
+            "valid_years": "[1990,2000)",
+            "review_status": "reviewed",
+            "claim_kind_code": "territorial_practice",
+            "spatial_precision": "documented sectors including agriculture and brick kilns; country entity is index only",
+            "date_text_original": "1990s evidence synthesized in ILO working paper published 2001",
+            "publication_status": "unpublished",
+            "temporal_certainty": "high",
+            "temporal_precision": "bounded_source_interval",
+            "supersedes_claim_id": null,
+            "temporal_applicability_mode": null
+          },
+          "entity": {
+            "notes": "Bounded modern navigation identity for HRW's Lahore-outskirts brick-kiln evidence. It is not an exact kiln location and not Pakistan-wide practice extent.",
+            "to_year": null,
+            "from_year": null,
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "valid_years": null,
+            "display_name": "Lahore outskirts brick-kiln evidence context",
+            "review_status": "reviewed",
+            "canonical_name": "Lahore outskirts brick-kiln evidence context",
+            "entity_type_code": "city",
+            "spatial_entity_id": "8a5f7da3-4d04-4076-a116-69d3998545bd"
+          },
+          "geometry": {
+            "srid": 4326,
+            "notes": null,
+            "valid": true,
+            "geojson": {
+              "type": "Point",
+              "coordinates": [
+                74.350713,
+                31.557996
+              ]
+            },
+            "to_year": null,
+            "from_year": null,
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "geometry_id": "f1a51a10-ea3c-4639-830b-68655f46dd19",
+            "valid_years": null,
+            "review_status": "reviewed",
+            "accuracy_status": "modern_proxy",
+            "resolution_method": "Use the modern Lahore city point only as a navigation proxy for HRW's explicitly described brick-kilns on the outskirts of Lahore. Exact kiln coordinates are not supplied by the report.",
+            "spatial_entity_id": "8a5f7da3-4d04-4076-a116-69d3998545bd",
+            "geometry_source_native_id": "GeoNames Lahore",
+            "geometry_source_version_id": "6a8334af-fa39-40e0-9235-9de834d479fc"
+          },
+          "locus_link": {
+            "notes": "Exact kiln unnamed; city point is navigation proxy for the bounded source context.",
+            "claim_id": "47175a77-76bb-4a92-ac3c-cb22b7a8131f",
+            "role_text": "HRW Lahore-outskirts brick-kiln evidence context; modern Lahore point only",
+            "spatial_entity_id": "8a5f7da3-4d04-4076-a116-69d3998545bd"
+          },
+          "territorial": {
+            "notes": "Positive bounded classification only. Do not infer national prevalence, uniform territorial distribution, legal status, or a country-wide practice polygon beyond what the evidence directly supports.",
+            "claim_id": "47175a77-76bb-4a92-ac3c-cb22b7a8131f",
+            "assertion_form": null,
+            "practice_level": null,
+            "research_stage": null,
+            "prevalence_scope": null,
+            "spatial_entity_id": "da4f5a3d-316b-4afb-90e3-53db83af3f10",
+            "interpretive_basis": null,
+            "occurrence_pattern": null,
+            "practice_type_code": "debt_bondage",
+            "attestation_pattern": null,
+            "coverage_state_code": "classified",
+            "institutionalization": null,
+            "classification_status": "reviewed_reconciled_post_m1",
+            "classification_outcome": null,
+            "structural_significance": null
+          },
+          "geometry_source": {
+            "notes": null,
+            "title": "Lahore",
+            "source_id": "f1e8c22d-b615-4e5c-b9e8-070974ef1d74",
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "source_type": "modern_gazetteer",
+            "language_code": null,
+            "temporal_scope": null,
+            "geographic_scope": null,
+            "independence_notes": null,
+            "author_or_institution": "GeoNames",
+            "source_classification": "geometry_reference",
+            "reliability_limitations": null
+          },
+          "release_memberships": 0,
+          "geometry_source_version": {
+            "notes": null,
+            "source_id": "f1e8c22d-b615-4e5c-b9e8-070974ef1d74",
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "accessed_at": "2026-10-01T22:29:35.181563+00:00",
+            "version_label": "GeoNames Lahore, accessed 2026-09-29",
+            "license_status": "GeoNames CC BY 4.0 database",
+            "publication_year": null,
+            "source_version_id": "6a8334af-fa39-40e0-9235-9de834d479fc",
+            "url_or_identifier": "https://www.geonames.org/advanced-search.html?q=Lahore&startRow=0",
+            "redistribution_status": "coordinate with attribution",
+            "publication_or_creation_date_text": null
+          }
+        },
+        {
+          "claim": {
+            "notes": "Reconciles legacy research-prototype claim ab1f826b-aecf-4f2b-a88a-bccf1eea4f9a into current post-M1 semantics. Related broader workbook-migrated claim 85bb684d-0aad-5410-a466-d3aad7f49c6f remains separate lineage. No new P-level is assigned. Generic Reich/modern-country practice polygon is rejected; authoritative forced-labour sites are eligible as evidence loci and historically dated jurisdiction geometry requires separate review.",
+            "summary": "From 1942 through 1944, Nazi Germany operated a centrally directed, racially differentiated forced-labour system drawing on deported foreign civilians, prisoners of war, concentration-camp prisoners and other persecuted groups. The 21 March 1942 decree centralized labour deployment under Fritz Sauckel, specialist scholarship documents the mass foreign-labour regime, and USHMM synthesis records more than 7.5 million non-German workers registered in the Reich in August 1944, the overwhelming majority forced labourers. The atlas records a strong positive state-forced-labour claim without converting workforce totals into territorial prevalence or equating every coerced status with chattel slavery.",
+            "to_year": 1944,
+            "claim_id": "51063cdb-f485-47c9-9056-e374476632dd",
+            "from_year": 1942,
+            "confidence": "high",
+            "created_at": "2026-09-27T17:10:46.424529+00:00",
+            "valid_years": "[1942,1945)",
+            "review_status": "reviewed",
+            "claim_kind_code": "territorial_practice",
+            "spatial_precision": "state-directed system with heterogeneous sites, populations and occupied-territory linkages",
+            "date_text_original": "Sauckel centralization decree of 21 March 1942 through the August 1944 peak of registered non-German labour in the Reich",
+            "publication_status": "unpublished",
+            "temporal_certainty": "high",
+            "temporal_precision": "bounded_institutional_wartime_interval",
+            "supersedes_claim_id": null,
+            "temporal_applicability_mode": null
+          },
+          "entity": {
+            "notes": "Preserved Nazi forced-labour camp / current documentation-centre site. Evidence locus for one bounded part of the broader state forced-labour system.",
+            "to_year": null,
+            "from_year": null,
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "valid_years": null,
+            "display_name": "GBI camp 75/76 Schöneweide",
+            "review_status": "reviewed",
+            "canonical_name": "GBI camp 75/76 Schöneweide",
+            "entity_type_code": "site",
+            "spatial_entity_id": "e6f9274a-af17-4fb2-acbe-a5dc4320473f"
+          },
+          "geometry": {
+            "srid": 4326,
+            "notes": null,
+            "valid": true,
+            "geojson": {
+              "type": "Point",
+              "coordinates": [
+                13.520601128,
+                52.4528400479
+              ]
+            },
+            "to_year": null,
+            "from_year": null,
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "geometry_id": "6f5be672-28ef-4294-b2d5-f005f8c5f874",
+            "valid_years": null,
+            "review_status": "reviewed",
+            "accuracy_status": "specialist",
+            "resolution_method": "Use the official Berlin monument Geoportal marker for Fremdarbeiterlager Niederschöneweide I. The monument record fixes the historic site and 1943–1945 dating. The official map link encodes ETRS89/UTM33N marker E 399469.30568613, N 5812435.43555859; transformed to WGS84 for the Atlas point.",
+            "spatial_entity_id": "e6f9274a-af17-4fb2-acbe-a5dc4320473f",
+            "geometry_source_native_id": "Berlin monument object 09045213",
+            "geometry_source_version_id": "a969801b-ee0b-46d7-962e-31db63666fdd"
+          },
+          "locus_link": {
+            "notes": "One historically preserved camp within a much broader state-directed forced-labour system; not system extent.",
+            "claim_id": "51063cdb-f485-47c9-9056-e374476632dd",
+            "role_text": "preserved GBI camp 75/76 Schöneweide forced-labour site; bounded evidence locus",
+            "spatial_entity_id": "e6f9274a-af17-4fb2-acbe-a5dc4320473f"
+          },
+          "territorial": {
+            "notes": "Positive bounded classification for a centrally organized wartime forced-labour system. Do not infer uniform territorial prevalence, a single labour status, or one practice polygon from aggregate worker counts.",
+            "claim_id": "51063cdb-f485-47c9-9056-e374476632dd",
+            "assertion_form": null,
+            "practice_level": null,
+            "research_stage": null,
+            "prevalence_scope": null,
+            "spatial_entity_id": "aba9b942-063a-4b8b-a21b-4232056f81cf",
+            "interpretive_basis": null,
+            "occurrence_pattern": null,
+            "practice_type_code": "state_forced_labour",
+            "attestation_pattern": null,
+            "coverage_state_code": "classified",
+            "institutionalization": null,
+            "classification_status": "reviewed_reconciled_post_m1",
+            "classification_outcome": null,
+            "structural_significance": null
+          },
+          "geometry_source": {
+            "notes": null,
+            "title": "Fremdarbeiterlager Niederschöneweide I — monument object 09045213",
+            "source_id": "89fd3b4a-dfe9-468b-a9a4-1698b544a793",
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "source_type": "official_heritage_register_and_geoportal",
+            "language_code": null,
+            "temporal_scope": null,
+            "geographic_scope": null,
+            "independence_notes": null,
+            "author_or_institution": "Landesdenkmalamt Berlin",
+            "source_classification": "specialist_geometry_reference",
+            "reliability_limitations": null
+          },
+          "release_memberships": 0,
+          "geometry_source_version": {
+            "notes": null,
+            "source_id": "89fd3b4a-dfe9-468b-a9a4-1698b544a793",
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "accessed_at": "2026-10-01T22:29:35.181563+00:00",
+            "version_label": "Berlin Denkmaldatenbank object 09045213, accessed 2026-09-29",
+            "license_status": "official public register; redistribution status not assumed",
+            "publication_year": null,
+            "source_version_id": "a969801b-ee0b-46d7-962e-31db63666fdd",
+            "url_or_identifier": "https://denkmaldatenbank.berlin.de/daobj.php?obj_dok_nr=09045213",
+            "redistribution_status": "reference point only",
+            "publication_or_creation_date_text": null
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "link": {
+            "notes": null,
+            "locator": "Witness 101: from Daw Taku, Shadaw township, Kayah State; forced labour before and after relocation to Shadaw; two battalions at Shadaw.",
+            "claim_id": "365e6258-f03f-4677-b775-cd5a9f18414a",
+            "direction": "supports",
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "directness": "official recorded witness testimony",
+            "claim_fitness": "Direct support for bounded forced-labour testimony and location context within the same ILO Commission evidence family as the existing national inquiry finding; not an independent attestation and not a national prevalence estimate.",
+            "evidence_role": "claim-specific testimony locus/context",
+            "claim_source_id": "e94b3ff6-e932-426f-82a2-c39fce156f09",
+            "source_version_id": "2cf9a9fc-1af5-4ac1-905d-0b18bbb0d431",
+            "independence_group": "ilo-myanmar-commission-inquiry-1998"
+          },
+          "source": {
+            "notes": null,
+            "title": "Forced labour in Myanmar (Burma) — Commission of Inquiry, Appendix VII, witness 101",
+            "source_id": "87598f9f-837f-4ee7-85e1-fb5aeb5bbff6",
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "source_type": "official_commission_testimony",
+            "language_code": null,
+            "temporal_scope": null,
+            "geographic_scope": null,
+            "independence_notes": null,
+            "author_or_institution": "International Labour Organization",
+            "source_classification": "primary_testimony_in_official_inquiry",
+            "reliability_limitations": null
+          },
+          "version": {
+            "notes": null,
+            "source_id": "87598f9f-837f-4ee7-85e1-fb5aeb5bbff6",
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "accessed_at": "2026-10-01T22:29:35.181563+00:00",
+            "version_label": "ILO Governing Body GB.273/MYANMA8C; 2 July 1998",
+            "license_status": null,
+            "publication_year": null,
+            "source_version_id": "2cf9a9fc-1af5-4ac1-905d-0b18bbb0d431",
+            "url_or_identifier": "https://files.ilo.org/public/english/standards/relm/gb/docs/gb273/myanma8c.htm",
+            "redistribution_status": null,
+            "publication_or_creation_date_text": null
+          }
+        },
+        {
+          "link": {
+            "notes": null,
+            "locator": "Investigation interviewed bonded labourers at brick-kilns on the outskirts of Lahore; detailed 'Gul' case at a Lahore-outskirts kiln.",
+            "claim_id": "47175a77-76bb-4a92-ac3c-cb22b7a8131f",
+            "direction": "supports",
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "directness": "direct field interviews and observation",
+            "claim_fitness": "Independent bounded corroboration for brick-kiln debt bondage near Lahore; not a national prevalence measure.",
+            "evidence_role": "bounded brick-kiln fieldwork locus/context",
+            "claim_source_id": "528341b6-d1b2-40f9-a847-846e1b5cd016",
+            "source_version_id": "c740864f-53fa-4d86-8cec-29a0ffec5827",
+            "independence_group": "hrw-pakistan-1995-brick-kilns"
+          },
+          "source": {
+            "notes": null,
+            "title": "Contemporary Forms of Slavery in Pakistan",
+            "source_id": "873dd352-df88-4eff-b7c1-0515f1954e21",
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "source_type": "human_rights_field_report",
+            "language_code": null,
+            "temporal_scope": null,
+            "geographic_scope": null,
+            "independence_notes": null,
+            "author_or_institution": "Human Rights Watch/Asia",
+            "source_classification": "secondary_with_direct_field_interviews",
+            "reliability_limitations": null
+          },
+          "version": {
+            "notes": null,
+            "source_id": "873dd352-df88-4eff-b7c1-0515f1954e21",
+            "created_at": "2026-10-01T22:29:35.181563+00:00",
+            "accessed_at": "2026-10-01T22:29:35.181563+00:00",
+            "version_label": "Human Rights Watch/Asia, 1995",
+            "license_status": null,
+            "publication_year": null,
+            "source_version_id": "c740864f-53fa-4d86-8cec-29a0ffec5827",
+            "url_or_identifier": "https://www.hrw.org/reports/1995/Pakistan.htm",
+            "redistribution_status": null,
+            "publication_or_creation_date_text": null
+          }
+        }
+      ],
+      "brazil_hold": {
+        "claim": {
+          "notes": "Reconciles legacy claim 0f505cf4-e90d-4ce5-a07e-c06db42176f4 into current post-M1 semantics. No new P-level is assigned. Legacy geometry 8d71c221-d188-4890-8a63-3c7f5eb8e157 is an explicit modern/navigation proxy and is not promoted as this claim's historical/practice inference extent.",
+          "summary": "ILO documentation in 2004 described rural forced labour in Brazil as involving debt bondage and coercion in remote agricultural settings, while the ILO's 2005 Global Report documented national enforcement activity against forced labour. The atlas records a bounded 2003–2005 debt-bondage/forced-labour evidence window without converting estimates, rescues or administrative proceedings into prevalence, and without treating Brazil's national boundary as the practice extent.",
+          "to_year": 2005,
+          "claim_id": "e0ed6573-235c-423d-befb-7b75630b5c35",
+          "from_year": 2003,
+          "confidence": "high_bounded",
+          "created_at": "2026-09-27T11:30:12.497264+00:00",
+          "valid_years": "[2003,2006)",
+          "review_status": "reviewed",
+          "claim_kind_code": "territorial_practice",
+          "spatial_precision": "remote rural/agricultural labour settings and enforcement cases; no Brazil-wide practice polygon",
+          "date_text_original": "ILO rural forced-labour evidence and enforcement reporting, 2003–2005",
+          "publication_status": "unpublished",
+          "temporal_certainty": "high",
+          "temporal_precision": "bounded_multi_source_window",
+          "supersedes_claim_id": null,
+          "temporal_applicability_mode": null
+        },
+        "p_level": null,
+        "locus_links": 0
+      },
+      "hrw_reuse": [
+        "43eaef18-4b5e-489c-84a5-5c035d433cfc"
+      ],
+      "serving_release": "v0.8.1-public-mvp-v2",
+      "counts": {
+        "atlas.claim": 116,
+        "atlas.source": 366,
+        "atlas.geometry": 91,
+        "atlas.claim_source": 172,
+        "audit.release_claim": 462,
+        "atlas.source_version": 366,
+        "atlas.spatial_entity": 80,
+        "audit.release_channel": 1,
+        "atlas.claim_evidence_locus": 7
+      }
+    }
+  },
+  "release_boundary": {
+    "canonical": "v0.8.1",
+    "serving": "v0.8.1-public-mvp-v2",
+    "released_case_baseline": 48,
+    "direct_released_mapped_baseline": 16,
+    "strict_released_counter_increment": 0,
+    "d121": "HOLD",
+    "other_production_gates": "#370/#379 and five-case D-124 admission remain separately gated"
+  }
+}

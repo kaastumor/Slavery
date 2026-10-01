@@ -1,5 +1,21 @@
 # #374 connected SQL transport - pending execution gate
 
+## Sponsor-authorized execution checkpoint - 2026-10-01 UTC
+
+The preparation below records the earlier gate. The sponsor subsequently approved
+merge #400 and the exact four-locus #374 live write. #400 merged as
+`2f701e32717d3cfc0fe3f13275427679192fddcf`. Exact-head foundation CI
+`36934521554` passed checks and disposable PostGIS. Fresh live preflight passed,
+and one connected transaction committed at 22:29:35 UTC. A separate read-only
+query verified all four generated point/link packages and both context sources,
+including the Myanmar dependency correction, with 257 field assertions. Brazil
+HOLD, claims, NULL P-levels, release membership and serving were unchanged.
+The full transaction and independent readback are frozen in
+`population_100_100_closure_tranche_02_production_receipt.json`. No local DSN was
+configured. Do not replay this completed batch.
+
+## Preparation contract (historical)
+
 The sponsor questioned the newly requested private local DATABASE_URL and
 authorized preparation using the existing connection. Connected Supabase read
 access succeeded on 2026-10-01 at 22:08:59 UTC; serving remained
