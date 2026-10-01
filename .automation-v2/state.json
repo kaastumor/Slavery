@@ -1,6 +1,11 @@
 {
   "archive_ref": null,
-  "checkpoint": null,
+  "checkpoint": {
+    "disposition": "SEE_CANONICAL_OWNER",
+    "next_action": "Keep five-case gate WAITING_EXTERNAL; no sixth packet. Continue only eligible nonconflicting read-only qualification; future Angkor/Gondar packets require fresh source, interval, collision, geo-role and guarded-write gates.",
+    "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5939252383",
+    "verification": "main/readback PASS; PR397+PR398 exact-head CI PASS; 2 canonical review blobs PASS; no DB/merge/release effect; telemetry UNKNOWN"
+  },
   "contract": "AUTOMATION_CONTROL_V2_20261001",
   "effects": [
     {
@@ -11,7 +16,7 @@
   "failure_count": 0,
   "failure_key": null,
   "generation": 2,
-  "lease_until": 1790885667,
+  "lease_until": null,
   "operation": {
     "expected_head": "161e606ab5909557f7875fd8ddff87b6d1a195fc",
     "id": "ATLAS100-PAIRED-POSTMERGE-CHECKPOINT-01",
@@ -20,13 +25,20 @@
     "status": "VERIFIED",
     "target_ref": "issue/369"
   },
-  "owner_attempt": "ATLAS100-PROC-20261001T1943Z-PAIRED-POSTMERGE-01",
+  "owner_attempt": null,
   "receipts": [
     {
       "at": 1790863500,
       "attempt": "ATLAS100-PROC-20261001T1346Z-PR397-REVIEW-01",
       "key": "3d3e05802d5ccaf701575ea3333f525902de2be24408bde5bef8ce30807f5f76",
       "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5932892490",
+      "state": "COMPLETE"
+    },
+    {
+      "at": 1790884029,
+      "attempt": "ATLAS100-PROC-20261001T1943Z-PAIRED-POSTMERGE-01",
+      "key": "f4d1e4efac4fd532baadd059ee35cf95c9db32a08fa0269d9d7ad2810c0b25f4",
+      "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5939252383",
       "state": "COMPLETE"
     }
   ],
@@ -38,6 +50,6 @@
     "name": "reconcile-paired-reviews-postmerge",
     "task": 369
   },
-  "state": "ACTIVE",
-  "updated_at": 1790884004
+  "state": "COMPLETE",
+  "updated_at": 1790884029
 }
