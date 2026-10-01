@@ -23,6 +23,10 @@ Strict released baseline remains:
 Prepared but **not live-written** geometry gates:
 - #370: Goryeo / Dahomey / Taghaza closure; review + disposable rehearsal + guarded production driver complete.
 - #374: India / Myanmar / Pakistan / Nazi Germany case-linked loci; corrected review + disposable rehearsal + guarded production driver complete; Brazil remains HOLD on Correntes/Corrente identity.
+  Connected SQL transport preparation reuses those insertion helpers to avoid a
+  local DATABASE_URL. Its disposable tests and remaining CI/review/write gate are
+  owned by `data/research/geometry_reviews/population_100_100_closure_tranche_02_connected_sql.md`.
+  Transport preparation does not authorize or apply the production write.
 - #379 / PR #382: Sinjar-town evidence locus for the released ISIL/Yazidi case; review + disposable rehearsal + guarded production driver complete.
 
 If separately authorized and written cleanly, #370 would bring the 12-case #367 batch from 9 to 12 mapped candidates. Sinjar would add one further case-linked mapped representation to the released-corpus recovery pipeline. Neither gate changes immutable v0.8.1 membership or the public serving channel by itself.

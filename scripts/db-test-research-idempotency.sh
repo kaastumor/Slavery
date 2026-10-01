@@ -233,6 +233,12 @@ docker compose run --rm -e CI=true tooling \
 
 echo "100/100 geometry closure tranche 2 rehearsal passed: four case-linked loci are idempotent; Brazil remains HOLD; transaction rolled back."
 
+# #374: validate the connected SQL transport against the SAME Python helpers.
+# Always disposable: authorization rejection, late-failure atomic rollback,
+# exact generated-ID readback, Python no-op replay and duplicate-run rejection.
+docker compose run --rm -e CI=true tooling \
+  python tools/test_geometry_closure_tranche_02_sql.py --disposable-test-db
+
 
 # #379: rehearse released ISIL/Yazidi Sinjar evidence-locus recovery.
 # The tool creates only the exact prerequisite v0.8.1 case fixture needed for
