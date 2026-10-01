@@ -2,7 +2,12 @@
   "archive_ref": null,
   "checkpoint": null,
   "contract": "AUTOMATION_CONTROL_V2_20261001",
-  "effects": [],
+  "effects": [
+    {
+      "id": "ATLAS100-PR401-REVIEW-CHECKPOINT-01",
+      "output_ref": "https://github.com/kaastumor/Slavery/pull/401#issuecomment-5942131854"
+    }
+  ],
   "failure_count": 0,
   "failure_key": null,
   "generation": 3,
@@ -11,8 +16,8 @@
     "expected_head": "9e13b6f987de87a0ddfa049d1a9b09ea7e2986bf",
     "id": "ATLAS100-PR401-REVIEW-CHECKPOINT-01",
     "kind": "issue_checkpoint",
-    "output_ref": null,
-    "status": "INTENDED",
+    "output_ref": "https://github.com/kaastumor/Slavery/pull/401#issuecomment-5942131854",
+    "status": "VERIFIED",
     "target_ref": "pull/401"
   },
   "owner_attempt": "ATLAS100-PROC-20261001T2240Z-PR401-REVIEW-01",
@@ -41,5 +46,5 @@
     "task": 374
   },
   "state": "ACTIVE",
-  "updated_at": 1790894390
+  "updated_at": 1790894470
 }
