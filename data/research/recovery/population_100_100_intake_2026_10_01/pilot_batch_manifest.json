@@ -1,0 +1,187 @@
+{
+  "record_kind": "atlas_100_100_pilot_batch_manifest",
+  "version": 1,
+  "issue": 369,
+  "decision": "D-124",
+  "status": "READY_FOR_DISPOSABLE_REHEARSAL_ONLY_NOT_PRODUCTION_AUTHORIZED",
+  "prepared_on": "2026-10-01",
+  "authority": {
+    "github_main_before_batch_prep": "3faa2e1e780f54ebf90e1240b403b52703a95b90",
+    "canonical_research_authority": "governed PostgreSQL/PostGIS",
+    "canonical_release": "v0.8.1",
+    "public_serving_channel": "v0.8.1-public-mvp-v2",
+    "schema_head": "0034",
+    "production_write_authorized": false,
+    "release_selection_authorized": false,
+    "public_cutover_authorized": false
+  },
+  "batch_contract": {
+    "member_count": 5,
+    "first_batch_cap": 5,
+    "all_members_reviewed_staging": true,
+    "all_members_unpublished": true,
+    "p_levels_assigned": 0,
+    "production_mode": "none_in_this_driver",
+    "replay_requirement": "exact_no_op",
+    "rollback_requirement": "restore_all_tracked_counts",
+    "drift_policy": "abort_entire_batch"
+  },
+  "members": [
+    {
+      "target": "Samarkand — captive skilled forced labour, 1404",
+      "case_key": "atlas-100x100/samarkand/captive-skilled-forced-labour-1404-v1",
+      "path": "data/research/recovery/population_100_100_intake_2026_10_01/candidates/01_samarkand_captive_skilled_forced_labour_1404.json",
+      "git_blob_sha1": "133861097a0652e2d426ad9b49c24ae25ca0f1b3",
+      "importer": "tools/add_research_case.py",
+      "claim_kind": "territorial_practice",
+      "subtype": "forced_labour",
+      "interval": [
+        1404,
+        1404
+      ],
+      "geometry_role": "modern_proxy_navigation_context",
+      "geometry_expected": "resolved_point",
+      "admission_state": "REVIEWED_STAGING",
+      "safeguards": [
+        "source-native captives terminology retained",
+        "Floor shares Clavijo event lineage",
+        "no chattel-status strengthening",
+        "no city-wide or polity-wide prevalence",
+        "no P-level"
+      ]
+    },
+    {
+      "target": "Timbuktu — bounded city slavery account, c.1509–1512",
+      "case_key": "atlas-100x100/timbuktu/slavery-c1509-1512-v1",
+      "path": "data/research/recovery/population_100_100_intake_2026_10_01/candidates/02_timbuktu_slavery_c1509_1512.json",
+      "git_blob_sha1": "7e8644b846a6aca9991abb5396428138e95108ae",
+      "importer": "tools/add_research_case.py",
+      "claim_kind": "territorial_practice",
+      "subtype": "slavery_enslavement",
+      "interval": [
+        1509,
+        1512
+      ],
+      "geometry_role": "modern_proxy_navigation_context",
+      "geometry_expected": "resolved_point",
+      "admission_state": "REVIEWED_STAGING",
+      "safeguards": [
+        "approximate disputed visit window",
+        "one Leo textual lineage",
+        "no exact 1512 eyewitness assertion",
+        "no physical slave-market locus",
+        "no P-level"
+      ]
+    },
+    {
+      "target": "Swahili maritime network — slave-trade participation around 1400",
+      "case_key": "atlas-100x100/swahili-coast/slave-trade-network-c1300-1400-v1",
+      "path": "data/research/recovery/population_100_100_intake_2026_10_01/candidates/03_swahili_maritime_network_1400.json",
+      "git_blob_sha1": "98a0265fb45d9e2563f7060a42f0271ce861acb7",
+      "importer": "tools/add_external_participation_case.py",
+      "claim_kind": "external_participation",
+      "subtype": "slave_trade_network",
+      "interval": [
+        1300,
+        1400
+      ],
+      "geometry_role": "unresolved_network",
+      "geometry_expected": "null",
+      "admission_state": "REVIEWED_STAGING",
+      "safeguards": [
+        "network participation is not coast-wide territorial practice",
+        "node evidence remains bounded",
+        "source count is not prevalence or volume",
+        "no inferred participation by every port",
+        "no P-level"
+      ]
+    },
+    {
+      "target": "Viking/Rūs mobile network — capture, transport and sale near 900",
+      "case_key": "atlas-100x100/viking-rus-network/slave-trade-c880-913-v1",
+      "path": "data/research/recovery/population_100_100_intake_2026_10_01/candidates/04_viking_rus_network_c880_913.json",
+      "git_blob_sha1": "16c950af7509e63605708a3331b0070e50ff3804",
+      "importer": "tools/add_external_participation_case.py",
+      "claim_kind": "external_participation",
+      "subtype": "slave_trade_network",
+      "interval": [
+        880,
+        913
+      ],
+      "geometry_role": "unresolved_network",
+      "geometry_expected": "null",
+      "admission_state": "REVIEWED_STAGING",
+      "safeguards": [
+        "Rus and Saqaliba remain source categories",
+        "no nationality inference",
+        "capture is not automatically sale",
+        "no giant Viking territorial polygon",
+        "no P-level"
+      ]
+    },
+    {
+      "target": "Andaman Islands communities — external colonial captivity near 1800",
+      "case_key": "atlas-100x100/andaman/colonial-captivity-c1789-1796-v1",
+      "path": "data/research/recovery/population_100_100_intake_2026_10_01/candidates/05_andaman_colonial_captivity_c1789_1796.json",
+      "git_blob_sha1": "4a938133acec0fbbd3d29a8114d087ed24385537",
+      "importer": "tools/add_external_participation_case.py",
+      "claim_kind": "external_participation",
+      "subtype": "other",
+      "interval": [
+        1789,
+        1796
+      ],
+      "geometry_role": "unresolved_external_context",
+      "geometry_expected": "null",
+      "admission_state": "REVIEWED_STAGING",
+      "safeguards": [
+        "external colonial coercion is not indigenous Andamanese slavery",
+        "indigenous internal practice remains unassessed",
+        "1790 Calcutta removal remains a recovery lead",
+        "ethnographic silence is not absence",
+        "no P-level"
+      ]
+    }
+  ],
+  "expected_disposable_core_delta": {
+    "atlas.spatial_entity": 5,
+    "atlas.claim": 5,
+    "atlas.territorial_practice_claim": 2,
+    "atlas.external_participation_claim": 3,
+    "atlas.claim_source": 21,
+    "atlas.geometry": 5,
+    "audit.research_case_ingest": 5,
+    "audit.release_claim": 0,
+    "audit.release_geometry": 0,
+    "audit.release_channel": 0
+  },
+  "expected_geometry_composition": {
+    "resolved_modern_proxy_points": 2,
+    "unresolved_null_geometry_rows": 3,
+    "historical_practice_polygons": 0
+  },
+  "source_reuse_policy": {
+    "exact_url_or_identifier_reuse": true,
+    "source_and_source_version_delta": "variable_by_fixture_state",
+    "duplicate_url_match": "abort",
+    "source_count_never_used_for_prevalence": true
+  },
+  "screened_not_in_batch": [
+    {
+      "target": "Sumerian City-States — 2000 BCE",
+      "disposition": "NEEDS_DEEP_REVIEW / REPRESENTATION_PATH_REQUIRED",
+      "reason": "reviewed multi-locus polity aggregate cannot safely be forced through one territorial spatial target"
+    },
+    {
+      "target": "Pre-Angkor Cambodia — K.493/K.557-600",
+      "disposition": "HOLD",
+      "reason": "claim-specific authoritative geometry/source-version reconciliation remains unresolved"
+    },
+    {
+      "target": "Tenochtitlan/Mexica — c.1500",
+      "disposition": "HOLD_RECONCILIATION_REQUIRED",
+      "reason": "identity/time/category acceptance remains unresolved"
+    }
+  ],
+  "next_gate": "DISPOSABLE_REHEARSAL_PASS_THEN_EXPLICIT_SPONSOR_PRODUCTION_GATE_REQUIRED"
+}

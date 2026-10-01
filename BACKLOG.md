@@ -9,14 +9,17 @@
 
 # CURRENT MODE — EXECUTION / CONSOLIDATION — 100/100 PROGRAMME (#369)
 
-**WIP = 1 canonical mutation stream: #369 — Andaman Islands communities around
-1800 current-method external-participation reconstruction under D-124.** Samarkand,
-Timbuktu, Swahili and Viking/Rūs are merged repository-staging packets only; none is
-governed-DB admission or a 100/100 increment. Sumerian City-States 2000 BCE remains
-`NEEDS_DEEP_REVIEW / REPRESENTATION_PATH_REQUIRED`. Andaman preserves the internally
-reviewed split: British colonial kidnap/capture/confinement is positive external
-coercion near the anchor, while indigenous internal slavery/servile dependency remains
-unassessed. No P-level and no modern archipelago practice geometry.
+**WIP = 1 canonical mutation stream: #369 — D-124 first-pilot batch
+consolidation and disposable rehearsal.** The five merged repository-staging packets
+are Samarkand 1404, Timbuktu c.1509–1512, Swahili maritime network c.1300–1400,
+Viking/Rūs network c.880–913 and Andaman external colonial captivity c.1789–1796.
+This reaches the D-124 first routine-batch cap of five. None is governed-DB admission
+or a 100/100 increment. The pilot now binds exact packet blobs, adds only the missing
+external-participation ingestion tooling already supported by schema 0011, and rehearses
+all five atomically in disposable PostGIS with exact no-op replay and rollback.
+There is **no production path in the rehearsal driver**. Sumerian City-States 2000 BCE
+remains `NEEDS_DEEP_REVIEW / REPRESENTATION_PATH_REQUIRED`; Pre-Angkor and
+Tenochtitlan HOLDs remain in force.
 
 The original #367 population batch is complete history: its 12 accepted cases were ingested to governed production research state and remain reviewed/unpublished. Production ingestion did not create release membership or move the serving channel.
 
@@ -66,18 +69,23 @@ and immutable v0.8.1 membership do not change through this write.
 
 ## Execution order
 
-1. Review the Andaman reconstruction as an external colonial-captivity packet:
-   preserve the external-positive / indigenous-internal-unassessed split, keep the 1790
-   removal as a source-recovery lead only, and leave community/route geometry unresolved.
-   Repository staging does not admit a case or alter either 100/100 counter.
-2. Under D-124, screen 20–40 identities from the existing #369 funnel read-only
-   and record `ACCEPT_FOR_BATCH`, `NEEDS_DEEP_REVIEW`, `HOLD` or `DUPLICATE`
-   with reasons. Do not count screens as admitted or mapped cases.
-3. Select at most five routine cases for the first reviewed batch within actual
-   reconciliation capacity. Keep exception cases and #370/#379 production gates
-   separate; each production write requires its own exact sponsor authority.
-4. Reconcile the case and geo numerators separately before successor selection.
-   No release or public move follows from research-state geometry recovery.
+1. Reconcile the exact five staged packets through the D-124 pilot manifest. Preserve
+   the 2 territorial / 3 external claim-kind split, source-version reuse, NULL P-levels,
+   unresolved external/network geometry and all individual historical abstentions.
+2. Run the pilot only in disposable PostGIS. Required evidence: exact packet-blob
+   binding, +5 claims, +2 territorial subtypes, +3 external subtypes, +21 claim-source
+   links, 2 modern-proxy points, 3 unresolved geometry rows, exact unchanged replay,
+   zero release/serving deltas and full rollback.
+3. If exact-head CI passes, merge the preparation/rehearsal PR and record the durable
+   receipt/checkpoint. Do not create a production mutation merely because rehearsal
+   passes.
+4. Production admission of this exact manifest requires a **separate explicit sponsor
+   authorization**, fresh governed collision/source/release/serving preflight, one
+   guarded transaction and independent post-write readback. A changed member or packet
+   invalidates the gate.
+5. Do not open a sixth canonical staging/admission packet until the five-case pilot is
+   reconciled. Read-only screening remains governed by D-124 but must not create a
+   competing writer or hide review debt.
 
 ## Control-state reconciliation
 
