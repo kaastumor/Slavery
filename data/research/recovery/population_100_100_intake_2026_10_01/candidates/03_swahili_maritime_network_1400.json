@@ -1,0 +1,148 @@
+{
+  "case_key": "atlas-100x100/swahili-coast/slave-trade-network-c1300-1400-v1",
+  "claim_kind": "external_participation",
+  "spatial_entity": {
+    "canonical_name": "Swahili coast (medieval analytical region)",
+    "display_name": "Swahili maritime network",
+    "entity_type_code": "region",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "Analytical coastal/network frame for heterogeneous Swahili towns and maritime links. It is not one polity, one jurisdiction, a claim of uniform participation by every port, or a territorial-practice extent."
+  },
+  "claim": {
+    "from_year": 1300,
+    "to_year": 1400,
+    "date_text_original": "near the 1400 horizon; thirteenth- and fourteenth-century maritime evidence with medieval specialist synthesis",
+    "temporal_precision": "broad_near_anchor_period",
+    "temporal_certainty": "approximate",
+    "spatial_precision": "analytical maritime/coastal network with heterogeneous nodes",
+    "summary": "Open specialist synthesis of Rasulid-Yemeni customs and shipping evidence describes regular thirteenth- and fourteenth-century trade linking Mogadishu and the southern Swahili coast to Arabia, with enslaved people among traded commodities. This supports a bounded external slave-trade-network participation claim around the 1400 horizon. It does not establish participation by every Swahili port, coast-wide territorial slavery, an exact network-wide volume, or a single Swahili political regime.",
+    "confidence": "moderate_to_high_for_bounded_network_participation",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "external_participation": {
+      "participation_type_code": "slave_trade_network",
+      "role_text": "Documented medieval maritime-network participation in movement/trade of enslaved people between parts of the Swahili coast and Arabian ports.",
+      "notes": "Network participation is analytically separate from territorial practice. Existing node-level evidence at Kilwa and Songo Mnara remains separate and must not be generalized to all coastlands or every network node."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "When Did the Swahili Become Maritime?",
+        "author_or_institution": "Jeffrey Fleisher et al.",
+        "source_type": "journal_article",
+        "source_classification": "secondary_specialist",
+        "language_code": "en",
+        "geographic_scope": "Swahili coast and western Indian Ocean",
+        "temporal_scope": "first and second millennia CE, with explicit thirteenth- and fourteenth-century maritime evidence",
+        "independence_notes": "Open specialist synthesis of archaeological and historical evidence. Its specific Rasulid/customs statements depend on underlying Yemeni source scholarship and are not treated as an independent primary archive.",
+        "reliability_limitations": "Strong for regular maritime structure and the inclusion of enslaved people among traded commodities; it does not prove that every Swahili town or every voyage participated, nor does it quantify network-wide slave-trade volume."
+      },
+      "version": {
+        "version_label": "American Anthropologist 117.1 (2015), pp. 100-115",
+        "publication_year": 2015,
+        "url_or_identifier": "https://doi.org/10.1111/aman.12171",
+        "accessed_at": "2026-10-01"
+      },
+      "evidence_role": "near-anchor specialist synthesis of regular East Africa-Arabia maritime trade including enslaved people among traded commodities",
+      "independence_group": "rasulid-yemen-customs-synthesis",
+      "directness": "specialist synthesis citing Rasulid customs and late-fourteenth-century shipping evidence",
+      "direction": "supports",
+      "locator": "Background to Swahili archaeology; paragraph beginning 'explicit documentation of long-distance eastern African navigation', including Rasulid customs, Qadi Masud, and Kilwa-to-Aden evidence",
+      "notes": "This is the principal claim-specific support for external/network participation; maritime connectivity by itself is not treated as slave-trade evidence."
+    },
+    {
+      "source": {
+        "title": "Slave Trade and Urban Slavery on the Swahili Coast from Medieval Times to Abolition",
+        "author_or_institution": "Thomas Vernet-Habasque",
+        "source_type": "specialist_reference_article",
+        "source_classification": "secondary_specialist",
+        "language_code": "en",
+        "geographic_scope": "Swahili coast",
+        "temporal_scope": "medieval period through abolition",
+        "independence_notes": "Later specialist synthesis that overlaps earlier Swahili and Indian Ocean scholarship; not an independent direct event attestation.",
+        "reliability_limitations": "Useful for classification and long-run scale/context, but the public publisher abstract alone does not provide port-by-port medieval proof and must not be used to infer uniform coast-wide prevalence."
+      },
+      "version": {
+        "version_label": "Oxford Research Encyclopedia of African History, published 17 April 2024",
+        "publication_year": 2024,
+        "url_or_identifier": "https://doi.org/10.1093/acrefore/9780190277734.013.887",
+        "accessed_at": "2026-10-01"
+      },
+      "evidence_role": "specialist contextualization and scale boundary for Swahili slave trade and urban slavery",
+      "independence_group": "swahili-medieval-slavery-synthesis",
+      "directness": "specialist synthesis",
+      "direction": "context",
+      "locator": "Publisher abstract and article-level medieval-to-abolition scope; prior reviewed project relation SWA-VERNET-HABASQUE-2024 retains the deeper medieval synthesis locator",
+      "notes": "Context only in this packet; the claim does not rely on counting Vernet and Fleisher as independent event attestations."
+    },
+    {
+      "source": {
+        "title": "Ibn Battuta on slaves at Kilwa",
+        "author_or_institution": "Ibn Battuta; English translation in G. S. P. Freeman-Grenville",
+        "source_type": "primary_text_translation",
+        "source_classification": "primary_translation",
+        "language_code": "en-ar",
+        "geographic_scope": "Kilwa",
+        "temporal_scope": "1331 CE",
+        "independence_notes": "One primary textual chain. The modern teaching reproduction and Freeman-Grenville translation are not separate witnesses.",
+        "reliability_limitations": "Supports bounded local enslaved presence, transfer and reported raiding at Kilwa; it does not independently establish network-wide export volume or participation by other Swahili nodes."
+      },
+      "version": {
+        "version_label": "Freeman-Grenville, The East African Coast, 2nd ed. (1975), pp. 31-32; modern teaching reproduction",
+        "publication_year": 1975,
+        "url_or_identifier": "https://medievalslavery.org/africa/source-kilwa-slavery-on-the-east-african-coast/source-ibn-ba%E1%B9%AD%E1%B9%ADu%E1%B9%ADa-on-slaves-at-kilwa/",
+        "accessed_at": "2026-10-01"
+      },
+      "evidence_role": "bounded Kilwa node context for local slavery and captive-taking near the network horizon",
+      "independence_group": "ibn-battuta-kilwa-1331-chain",
+      "directness": "translated primary travel account",
+      "direction": "context",
+      "locator": "Freeman-Grenville 2nd ed. pp. 31-32",
+      "notes": "Kept separate from the external-participation proposition; node-level territorial evidence does not transfer to the full Swahili coast."
+    },
+    {
+      "source": {
+        "title": "Traces of Clay: Exploring Slave and Migrant Identities in Medieval Swahili Zanzibar",
+        "author_or_institution": "Henriette Rødland",
+        "source_type": "journal_article",
+        "source_classification": "secondary_specialist",
+        "language_code": "en",
+        "geographic_scope": "Tumbatu and Mkokotoni, northern Zanzibar",
+        "temporal_scope": "eleventh to fifteenth centuries CE; excavated occupation broadly c. 1000-1400",
+        "independence_notes": "Separate archaeological dataset, while its broad historical interpretation overlaps earlier Swahili slavery scholarship.",
+        "reliability_limitations": "Material culture can suggest enslaved or migrant identities but cannot prove the status of individual potters or establish network-wide prevalence."
+      },
+      "version": {
+        "version_label": "Cambridge Archaeological Journal 36.3 (2026), pp. 342-355; published online 22 December 2025",
+        "publication_year": 2026,
+        "url_or_identifier": "https://doi.org/10.1017/S0959774325100292",
+        "accessed_at": "2026-10-01"
+      },
+      "evidence_role": "exact-horizon archaeological qualification on local heterogeneity, migration and slavery",
+      "independence_group": "zanzibar-medieval-archaeology-rodland-2025",
+      "directness": "specialist archaeological interpretation",
+      "direction": "qualifies",
+      "locator": "Abstract; Introduction; Tumbatu and Mkokotoni discussion",
+      "notes": "Used to constrain local-status and scale inferences, not to strengthen the network claim through source count."
+    }
+  ],
+  "geometry": {
+    "from_year": 1300,
+    "to_year": 1400,
+    "accuracy_status": "unresolved",
+    "resolution_method": "No single point, route line, heritage boundary, or coast polygon can represent this mobile maritime network without implying false territorial or route completeness. Keep the network geometry unresolved. Kilwa, Songo Mnara, Tumbatu, and Mkokotoni may only be handled as separately reviewed node/evidence loci.",
+    "geojson": null,
+    "review_status": "reviewed",
+    "notes": "The 100/100 geo numerator does not advance through this unresolved network geometry. Existing released Songo Mnara geometry and any future node loci remain separate case/evidence objects."
+  },
+  "guardrails": {
+    "territorial_practice_inferred": false,
+    "practice_level_assigned": false,
+    "nationality_inferred": false,
+    "modern_geometry_substituted": false,
+    "absence_inferred": false
+  }
+}
