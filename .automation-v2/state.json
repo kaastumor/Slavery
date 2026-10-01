@@ -1,18 +1,23 @@
 {
-  "schema": 2,
-  "contract": "AUTOMATION_CONTROL_V2_20261001",
-  "repository": "kaastumor/Slavery",
-  "generation": 0,
-  "state": "UNCLAIMED",
-  "owner_attempt": null,
-  "lease_until": null,
-  "updated_at": 1790859547,
-  "stage": null,
-  "checkpoint": null,
-  "operation": null,
-  "effects": [],
-  "receipts": [],
   "archive_ref": null,
+  "checkpoint": null,
+  "contract": "AUTOMATION_CONTROL_V2_20261001",
+  "effects": [],
   "failure_count": 0,
-  "failure_key": null
+  "failure_key": null,
+  "generation": 1,
+  "lease_until": 1790864570,
+  "operation": null,
+  "owner_attempt": "ATLAS100-PROC-20261001T1346Z-PR397-REVIEW-01",
+  "receipts": [],
+  "repository": "kaastumor/Slavery",
+  "schema": 2,
+  "stage": {
+    "input_revision": "fe42fcf9e8f0cfe2de15460baa353d8e64b0c342",
+    "key": "3d3e05802d5ccaf701575ea3333f525902de2be24408bde5bef8ce30807f5f76",
+    "name": "review-pr-397-angkor-paired",
+    "task": 397
+  },
+  "state": "CLAIMED",
+  "updated_at": 1790862770
 }
