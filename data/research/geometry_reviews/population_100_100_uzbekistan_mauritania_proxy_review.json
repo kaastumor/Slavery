@@ -1,0 +1,139 @@
+{
+  "review_date": "2026-10-01",
+  "input_main": "161e606ab5909557f7875fd8ddff87b6d1a195fc",
+  "parent_issue": 369,
+  "disposition": "REVIEW_ONLY_SOURCE_EXTRACTION_NO_PROMOTION",
+  "source": {
+    "repository": "nvkelso/natural-earth-vector",
+    "commit": "ca96624a56bd078437bca8184e78163e5039ad19",
+    "asset_path": "geojson/ne_110m_admin_0_countries.geojson",
+    "asset_git_blob": "1e6ab74c7042f97013be69ceec798be8e1aff27d",
+    "asset_byte_count": 838726,
+    "asset_sha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f",
+    "repository_version_file": "5.2.0-pre",
+    "license": "public_domain",
+    "license_locator": "LICENSE.md at the same commit",
+    "feature_hash_rule": "SHA-256 of UTF-8 JSON: ensure_ascii=false, sort_keys=true, separators=(',',':'), allow_nan=false, no final LF; source arrays and numeric values retained."
+  },
+  "preferred_10m": {
+    "asset_path": "geojson/ne_10m_admin_0_countries.geojson",
+    "asset_git_blob": "5ebc66e25fc1af01edaebe9375c546655e04cf1e",
+    "asset_byte_count": 13287234,
+    "disposition": "UNFROZEN_ACCESS_BLOCKED",
+    "reason": "GitHub connector response exceeds 8388608 bytes; file reader returns empty content. Shell network unavailable. No exact feature, ordinal or fingerprint recovered; retain independently verified 110m fallback."
+  },
+  "candidates": [
+    {
+      "case_key": "overnight-2026-09-27/uzbekistan/cotton-forced-labour-2019-v2",
+      "claim_id": "2b456d9f-be09-4844-8899-286bd13464cb",
+      "claim_interval": [
+        2019,
+        2019
+      ],
+      "legacy_geometry_id": "053f546e-089e-4f03-aab7-3d2187c835ce",
+      "feature_ordinal_zero_based": 6,
+      "source_native_ids": {
+        "ADMIN": "Uzbekistan",
+        "ADM0_A3": "UZB",
+        "ISO_A3": "UZB",
+        "UN_A3": "860",
+        "NE_ID": 1159321405
+      },
+      "source_metadata": {
+        "POP_YEAR": 2019,
+        "GDP_YEAR": 2019
+      },
+      "feature_file": "data/research/geometry_reviews/population_100_100_uzbekistan_ne110_source_feature.geojson",
+      "feature_file_sha256": "75bf7dabc18038c8269c4dfc625e045a711250d0364143b43e0f10bf742edaaf",
+      "feature_file_bytes": 4652,
+      "canonical_feature_sha256": "165f50bbf0992183623dfd35e5a34d10c7ce868981517ae93b7d1e655c84b5f2",
+      "bbox": [
+        55.928917,
+        37.144994,
+        73.055417,
+        45.586804
+      ],
+      "postgis_qc": {
+        "valid": true,
+        "empty": false,
+        "geometry_type": "POLYGON",
+        "vertices": 54,
+        "components": 1
+      },
+      "disposition": "ACCEPT_FROZEN_FALLBACK_FOR_FUTURE_NAVIGATION_REVIEW"
+    },
+    {
+      "case_key": "overnight-2026-09-27/mauritania/de-facto-slavery-v2",
+      "claim_id": "7f573935-45c9-4746-ac6a-6afe47bafbdd",
+      "claim_interval": [
+        2009,
+        2009
+      ],
+      "legacy_geometry_id": "d966c564-f79e-4fc7-9bee-0c5ea4b935e8",
+      "feature_ordinal_zero_based": 53,
+      "source_native_ids": {
+        "ADMIN": "Mauritania",
+        "ADM0_A3": "MRT",
+        "ISO_A3": "MRT",
+        "UN_A3": "478",
+        "NE_ID": 1159321075
+      },
+      "source_metadata": {
+        "POP_YEAR": 2019,
+        "GDP_YEAR": 2019
+      },
+      "feature_file": "data/research/geometry_reviews/population_100_100_mauritania_ne110_source_feature.geojson",
+      "feature_file_sha256": "3df4994b6397109c2fb8ccb36f6f10314284f72bbf485c8cc2c5cdf3169eb784",
+      "feature_file_bytes": 4345,
+      "canonical_feature_sha256": "0a17d04395fe635126dbea26040522281fb8692b38f1c0f97f8a6613e219a803",
+      "bbox": [
+        -17.063423,
+        14.616834,
+        -4.923337,
+        27.395744
+      ],
+      "postgis_qc": {
+        "valid": true,
+        "empty": false,
+        "geometry_type": "POLYGON",
+        "vertices": 39,
+        "components": 1
+      },
+      "disposition": "ACCEPT_FROZEN_MODERN_NAVIGATION_CANDIDATE_CONTEMPORANEOUS_BOUNDARY_UNVERIFIED"
+    }
+  ],
+  "role": {
+    "accuracy_status": "modern_proxy",
+    "proposed_role": "navigation_context",
+    "practice_extent": false,
+    "evidence_locus": false,
+    "geometry_validity_interval": null,
+    "temporal_limit": "POP_YEAR/GDP_YEAR date statistics, not boundary validity. No contemporary boundary assertion for 2009 or 2019; no historical valid_years invented. A later explicit navigation-context temporal/case-link review is mandatory before counting."
+  },
+  "live_observation": {
+    "read_only": true,
+    "both_claims_reviewed_unpublished": true,
+    "source_links_per_claim": 1,
+    "legacy_geometry_release_memberships_per_candidate": 0,
+    "serving": "v0.8.1-public-mvp-v2",
+    "new_feature_ingested": false
+  },
+  "effects": {
+    "historical_claim_changes": 0,
+    "production_geometry_changes": 0,
+    "release_membership_changes": 0,
+    "released_case_numerator_delta": 0,
+    "released_geo_numerator_delta": 0
+  },
+  "closed_gates": [
+    "exact five-case D-124 pilot production admission",
+    "#370 production geometry",
+    "#374 production geometry",
+    "#379 production geometry",
+    "any future proxy production write",
+    "successor selection",
+    "release publication",
+    "public-serving cutover",
+    "v0.8.2 D-121 HOLD"
+  ]
+}
