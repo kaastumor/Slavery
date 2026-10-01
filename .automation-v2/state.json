@@ -1,31 +1,14 @@
 {
   "archive_ref": null,
-  "checkpoint": {
-    "disposition": "SEE_CANONICAL_OWNER",
-    "next_action": "Keep five-case gate WAITING_EXTERNAL; no sixth packet. Continue only eligible nonconflicting read-only qualification; future Angkor/Gondar packets require fresh source, interval, collision, geo-role and guarded-write gates.",
-    "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5939252383",
-    "verification": "main/readback PASS; PR397+PR398 exact-head CI PASS; 2 canonical review blobs PASS; no DB/merge/release effect; telemetry UNKNOWN"
-  },
+  "checkpoint": null,
   "contract": "AUTOMATION_CONTROL_V2_20261001",
-  "effects": [
-    {
-      "id": "ATLAS100-PAIRED-POSTMERGE-CHECKPOINT-01",
-      "output_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5939252383"
-    }
-  ],
+  "effects": [],
   "failure_count": 0,
   "failure_key": null,
-  "generation": 2,
-  "lease_until": null,
-  "operation": {
-    "expected_head": "161e606ab5909557f7875fd8ddff87b6d1a195fc",
-    "id": "ATLAS100-PAIRED-POSTMERGE-CHECKPOINT-01",
-    "kind": "issue_checkpoint",
-    "output_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5939252383",
-    "status": "VERIFIED",
-    "target_ref": "issue/369"
-  },
-  "owner_attempt": null,
+  "generation": 3,
+  "lease_until": 1790896120,
+  "operation": null,
+  "owner_attempt": "ATLAS100-PROC-20261001T2240Z-PR401-REVIEW-01",
   "receipts": [
     {
       "at": 1790863500,
@@ -45,11 +28,11 @@
   "repository": "kaastumor/Slavery",
   "schema": 2,
   "stage": {
-    "input_revision": "161e606ab5909557f7875fd8ddff87b6d1a195fc",
-    "key": "f4d1e4efac4fd532baadd059ee35cf95c9db32a08fa0269d9d7ad2810c0b25f4",
-    "name": "reconcile-paired-reviews-postmerge",
-    "task": 369
+    "input_revision": "9e13b6f987de87a0ddfa049d1a9b09ea7e2986bf",
+    "key": "7611bca70409d12a6d8ed6959ab1ee43a08190ce8fb8bb1e3e654a5cd70748b5",
+    "name": "review-pr-401-374-production-receipt",
+    "task": 374
   },
-  "state": "COMPLETE",
-  "updated_at": 1790884029
+  "state": "CLAIMED",
+  "updated_at": 1790894320
 }
