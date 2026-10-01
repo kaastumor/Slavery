@@ -205,6 +205,17 @@ test "$istanbul_counts" = "1|1|1"
 echo "Batch 5 Istanbul candidate ingestion passed: bounded archival urban claim idempotent with modern-proxy navigation point and no P-level."
 
 
+
+# #369 / D-124: rehearse the first five-case pilot as one atomic reviewed batch.
+# The driver binds exact packet Git blobs, supports territorial + external claims,
+# requires unchanged replay to be an exact no-op, and ALWAYS rolls back. It has
+# deliberately no production apply path.
+docker compose run --rm -e CI=true tooling \
+  python tools/rehearse_100_100_pilot_batch.py --apply --disposable-test-db
+
+echo "100/100 D-124 pilot batch rehearsal passed: five reviewed packets replay exactly and rollback cleanly."
+
+
 # #370: rehearse three reviewed case-linked mapped representations only after
 # the full #367 population set exists in this disposable database. The tool
 # has no production commit path and rolls back all closure amendments.
