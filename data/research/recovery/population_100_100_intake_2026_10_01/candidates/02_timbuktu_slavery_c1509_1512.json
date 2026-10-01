@@ -1,0 +1,160 @@
+{
+  "case_key": "atlas-100x100/timbuktu/slavery-c1509-1512-v1",
+  "spatial_entity": {
+    "canonical_name": "Timbuktu",
+    "display_name": "Timbuktu / Tombutto",
+    "entity_type_code": "city",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "City-node identity only. The account's 'king of Timbuktu' refers to the Songhay askiya in Hunwick's annotation; this entity is neither the Songhay polity nor its territorial extent."
+  },
+  "claim": {
+    "from_year": 1509,
+    "to_year": 1512,
+    "date_text_original": "Leo Africanus's Timbuktu description, completed in 1526; possible visit around winter 1509-10, with an alleged second visit around 1512",
+    "temporal_precision": "approximate_disputed_visit_window",
+    "temporal_certainty": "low_for_visit_year_and_eyewitness_status",
+    "spatial_precision": "Timbuktu city in the textual account; no household, street, market, or practice extent located",
+    "summary": "Leo Africanus's early-sixteenth-century description of Timbuktu reports enslaved men and women serving townspeople and enslaved women selling provisions. This is one bounded city-level textual tradition for slavery or enslavement, with uncertain visit chronology and disputed eyewitness status.",
+    "confidence": "moderate_for_bounded_textual_report_low_for_visit_date_or_prevalence",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "The 1509-1512 interval is an approximate research window, not four attested annual observations or a continuous practice claim. Hunwick considers personal observation likely; Masonen questions the second visit and whether Leo crossed the Sahara. Pory, Hunwick and Fordham transmit one Leo account, not independent witnesses. Hunwick renders captive sale 'in Timbuktu' (p. 281), Pory says 'unto the merchants of Tombuto' (pp. 287-288), and Fordham says 'in the market at Timbuktu'. Preserve that location variance as a separate trade lead; do not assert a physical Timbuktu market or add a formal network facet from this packet. No population share, intensity, chattel/property status, polity-wide generalization, or continuity is inferred.",
+    "territorial_practice": {
+      "practice_type_code": "slavery_enslavement",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "processor_self_reviewed_bounded_single_textual_tradition",
+      "notes": "Classifies the reported city-level presence of enslaved residents and service only. P-level, prevalence, duration, precise place of sale, and Songhay territorial practice remain unassigned."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Timbuktu and the Songhay Empire: Leo Africanus's Description of the Middle Niger, Hausaland and Bornu",
+        "author_or_institution": "Leo Africanus / al-Hasan al-Wazzan; translated and edited by John O. Hunwick; Brill",
+        "source_type": "edited_primary_translation_with_specialist_annotation",
+        "source_classification": "primary_translation",
+        "language_code": "en-it",
+        "geographic_scope": "Timbuktu city and Middle Niger textual descriptions",
+        "temporal_scope": "Description completed 1526, printed by Ramusio 1550; possible Timbuktu observations in the early sixteenth century",
+        "independence_notes": "A translation and annotation of the Leo Africanus tradition, not independent testimony from Pory or Fordham. Hunwick translates Ramusio 1550 and compares Epaulard's 1956 French translation based on two Rome manuscripts.",
+        "reliability_limitations": "Hunwick regards Timbuktu personal observation as plausible but allows inherited geographical material and uncertain journeys. The text contains other errors corrected in his notes; no exact visit year or population share follows."
+      },
+      "version": {
+        "version_label": "Brill 2003 paperback, ISBN 90-04-12822-0; Leo section pp. 272-291; inspected PDF SHA-256 c70170ffbb84e447f21395f3d0c40eb00f1431d816d63c2ee231e683f6811996",
+        "publication_year": 2003,
+        "url_or_identifier": "https://www.degruyterbrill.com/document/isbn/9789004491137/html",
+        "accessed_at": "2026-10-01T10:39:00Z"
+      },
+      "evidence_role": "direct translated city-level textual report and specialist transmission notes",
+      "independence_group": "leo-africanus-timbuktu-description",
+      "directness": "edited translation of a sixteenth-century account; eyewitness status disputed",
+      "direction": "supports",
+      "locator": "Printed pp. 272-273 (transmission and visit caveats), 279-282 (Timbuktu), especially p. 280 (enslaved provision sellers), p. 281 (captives sold in Timbuktu), p. 282 (enslaved men and women in service); inspected PDF pp. 341-342 and 348-351.",
+      "notes": "Primary claim relies on pp. 280 and 282. The p. 281 sale wording is retained as a variant, not a separately established market location."
+    },
+    {
+      "source": {
+        "title": "A Geographical Historie of Africa: Of the Kingdome of Tombuto",
+        "author_or_institution": "Leo Africanus / al-Hasan al-Wazzan; translated by John Pory; London 1600; Text Creation Partnership encoding",
+        "source_type": "early_english_translation_transcription",
+        "source_classification": "primary_translation",
+        "language_code": "en-la-it",
+        "geographic_scope": "Tombuto / Timbuktu city",
+        "temporal_scope": "1600 English publication of Leo's earlier sixteenth-century description",
+        "independence_notes": "Pory translates through the Latin transmission, whereas Hunwick translates Ramusio 1550 against Epaulard; both are versions of one Leo textual tradition.",
+        "reliability_limitations": "A mediated early English version. 'Unto the merchants of Tombuto' establishes the named merchants as buyers but does not securely place a sale in a particular Timbuktu market."
+      },
+      "version": {
+        "version_label": "London 1600, TCP A05331 keyed/proofread EEBO encoding, commit 0ee12603bee43d01811c12f5769cc1c2adb314bd, XML blob bb5c9be0114e438e5e713ecddd00239d570cc5fc",
+        "publication_year": 1600,
+        "url_or_identifier": "https://github.com/textcreationpartnership/A05331/tree/0ee12603bee43d01811c12f5769cc1c2adb314bd",
+        "accessed_at": "2026-10-01T10:39:00Z"
+      },
+      "evidence_role": "early transmission comparison and bounded trade-language lead",
+      "independence_group": "leo-africanus-timbuktu-description",
+      "directness": "translated primary account, dependent textual lineage",
+      "direction": "qualifies",
+      "locator": "Of the Kingdome of Tombuto, printed pp. 287-288; sentence on captives sold 'unto the merchants of Tombuto' and later sentence on enslaved men and women serving citizens.",
+      "notes": "Confirms the service passage's lineage but cautions against converting the sale passage into a precise physical market claim."
+    },
+    {
+      "source": {
+        "title": "Leo Africanus: The Man with Many Names",
+        "author_or_institution": "Pekka Masonen",
+        "source_type": "specialist_source_critique",
+        "source_classification": "secondary_specialist",
+        "language_code": "en",
+        "geographic_scope": "Leo Africanus's travels and descriptions, including Timbuktu",
+        "temporal_scope": "Early sixteenth-century itinerary and later textual transmission",
+        "independence_notes": "Independent specialist critique of Leo's itinerary and eyewitness claim; not a second observation of Timbuktu slavery.",
+        "reliability_limitations": "Chronology and travel criticism, not a direct reclassification of the pp. 280-282 slavery statements."
+      },
+      "version": {
+        "version_label": "Author-hosted PDF, inspected 2026-10-01",
+        "url_or_identifier": "https://www.leoafricanus.com/pictures/bibliography/Masonen/Masonen.pdf",
+        "accessed_at": "2026-10-01T10:39:00Z"
+      },
+      "evidence_role": "adverse chronology and eyewitness-status test",
+      "independence_group": "masonen-leo-itinerary-critique",
+      "directness": "specialist interpretation",
+      "direction": "qualifies",
+      "locator": "PDF pp. 4-5, especially winter 1509-10 mission, alleged 1512 second visit, and note 23 on the office-holder chronology.",
+      "notes": "Masonen questions the second visit and the personal-observation assumption. That dispute prevents exact 1512 dating or multiple independent attestations."
+    },
+    {
+      "source": {
+        "title": "Leo Africanus: Description of Timbuktu",
+        "author_or_institution": "Paul Brians, translator/editor; Internet Medieval Sourcebook, Fordham University",
+        "source_type": "modern_abridged_translation",
+        "source_classification": "derivative_translation",
+        "language_code": "en",
+        "geographic_scope": "Timbuktu city",
+        "temporal_scope": "Modern excerpt of Leo Africanus's sixteenth-century account",
+        "independence_notes": "Derivative of the same Leo account; the page's 'probably in 1512' is an editorial note, not an independently attested visit date.",
+        "reliability_limitations": "The wording 'in the market at Timbuktu' is stronger in spatial specificity than Pory's 'unto the merchants of Tombuto'. It must not set the claim's sale locus."
+      },
+      "version": {
+        "version_label": "Internet Medieval Sourcebook, Timbuktu excerpt translated by Paul Brians; accessed 2026-10-01",
+        "url_or_identifier": "https://sourcebooks.web.fordham.edu/med/leo_afri.asp",
+        "accessed_at": "2026-10-01T10:39:00Z"
+      },
+      "evidence_role": "dependent translation comparison and date-footnote audit",
+      "independence_group": "leo-africanus-timbuktu-description",
+      "directness": "modern derivative excerpt",
+      "direction": "qualifies",
+      "locator": "Timbuktu excerpt, paragraphs on enslaved provision sellers, captive sale, enslaved residents; editorial note 8 'Probably in 1512'.",
+      "notes": "Recorded for source-lineage and translation variance; no extra attestation counted."
+    }
+  ],
+  "geometry": {
+    "from_year": 1509,
+    "to_year": 1512,
+    "accuracy_status": "modern_proxy",
+    "resolution_method": "Normalize UNESCO WHC 119rev source-native N16 46 24 / W2 59 58 to POINT(-2.9994444 16.7733333). Use the heritage-property coordinate only for modern navigation/context for Timbuktu. It is not a sixteenth-century city boundary, household, provision sale location, captive-sale locus, practice extent, or Songhay polygon.",
+    "geojson": {
+      "type": "Point",
+      "coordinates": [-2.9994444, 16.7733333]
+    },
+    "source_native_id": "UNESCO-WHC-119rev",
+    "review_status": "reviewed",
+    "source": {
+      "title": "Timbuktu geographical data, World Heritage List 119rev",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "source_type": "official_heritage_geodata",
+      "source_classification": "geometry_context",
+      "geographic_scope": "Timbuktu, Mali; property 119rev",
+      "temporal_scope": "Modern heritage-property navigation coordinate",
+      "independence_notes": "Geometry/context provenance only; independent of the historical slavery classification.",
+      "reliability_limitations": "The representative coordinate does not establish a sixteenth-century city extent or the location of any reported household or sale."
+    },
+    "version": {
+      "version_label": "World Heritage List 119rev, source-native N16 46 24 / W2 59 58; accessed 2026-10-01",
+      "url_or_identifier": "https://whc.unesco.org/en/list/119/maps/#119rev",
+      "accessed_at": "2026-10-01T10:39:00Z"
+    },
+    "notes": "Role: modern_proxy/navigation_context only; source-native coordinate retained."
+  }
+}
