@@ -573,7 +573,7 @@
   ],
   "status": "RECONCILING_NOT_YET_RELEASE_READY",
   "remaining_checks": [
-    "D-121 all inherited geometry source bindings, including eight non-API geometries",
+    "Verify frozen D-121 inherited source bindings and explicit three-geometry HOLD at package validation",
     "immutable authority and source dependency closure",
     "typed public evidence/map rendering and end-to-end browser verification",
     "published package checksums and compare-and-set serving cutover"
@@ -596,5 +596,36 @@
     "status": "COMMITTED_INDEPENDENT_READBACK_VERIFIED",
     "receipt": "data/research/recovery/population_100_100_intake_2026_10_01/production_admission_receipt.json",
     "readback_assertions": 494
+  },
+  "geometry_selection": {
+    "decision": "D-125",
+    "exact_additions": [
+      "0a357f84-d90f-4fa5-ba59-fd7d4b7ea8d9",
+      "16ce896f-2f26-4b98-837f-1387e9331bb1",
+      "1e43e40c-bc27-4918-831f-1c2e8c8a2d9e",
+      "1ed3c8d1-c39b-4d7b-8a44-ba8a74b535b1",
+      "4a91d9c4-2bb1-418c-8080-f315825f5b38",
+      "5bc5b562-ecf2-465a-840e-417a42806ead",
+      "60c88b26-dbdd-4f4b-bd14-9aaffe958254",
+      "78627165-cc6d-4a42-9f4c-3431944526c8",
+      "824cf9ab-5bfd-4d84-8fb6-8c137033424d",
+      "91e6ac1a-03ca-45ad-a78c-7fe16c97f6c9",
+      "92ed36be-4240-41f2-87a4-a12dc75eee36",
+      "97c0b98f-f796-4937-af05-68a41e69e929",
+      "a6112bf8-63fa-4795-a9cb-91138852a245",
+      "a7cb071b-b564-4c96-b4b1-f5bda5e05890",
+      "bdab64f1-cc36-4771-8224-00b199d16c15",
+      "cb4c4215-b508-4776-b8f0-5fcb654b899b",
+      "e36c9342-8d84-41cd-9d3c-f1982255eb1b",
+      "ebd25567-92db-483c-b935-70fd2d7fdabc"
+    ],
+    "withheld_inherited_geometry_ids": [
+      "21c9c493-14f8-4c13-9845-0e8a738c9110",
+      "65f31d95-3e05-49f6-9f74-43f2a3717728",
+      "b81dd8d2-3956-4060-856c-7ab2ca72fde7"
+    ],
+    "expected_geometry_count": 61,
+    "api_bindings": "data/research/geometry_reviews/v082_exact_api_source_bindings.json.gz",
+    "non_api_bindings": "data/research/geometry_reviews/v082_non_api_source_bindings.json"
   }
 }
