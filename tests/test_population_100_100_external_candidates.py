@@ -57,6 +57,39 @@ class Population100100ExternalCandidateTests(unittest.TestCase):
         )
         self.assertEqual(evidence[3]["direction"], "qualifies")
 
+    def test_viking_packet_validates_as_external_network_without_nationality_inference(self):
+        path = (
+            ROOT
+            / "data/research/recovery/population_100_100_intake_2026_10_01/candidates"
+            / "04_viking_rus_network_c880_913.json"
+        )
+        case = json.loads(path.read_text(encoding="utf-8"))
+        validate(copy.deepcopy(case))
+        self.assertEqual(case["claim_kind"], "external_participation")
+        self.assertEqual(
+            case["claim"]["external_participation"]["participation_type_code"],
+            "slave_trade_network",
+        )
+        self.assertFalse(case["guardrails"]["nationality_inferred"])
+        self.assertNotIn("territorial_practice", case["claim"])
+        self.assertNotIn("practice_level", case["claim"])
+
+    def test_viking_packet_keeps_primary_chain_and_geometry_bounded(self):
+        path = (
+            ROOT
+            / "data/research/recovery/population_100_100_intake_2026_10_01/candidates"
+            / "04_viking_rus_network_c880_913.json"
+        )
+        case = json.loads(path.read_text(encoding="utf-8"))
+        evidence = case["evidence"]
+        supports = [row for row in evidence if row["direction"] == "supports"]
+        self.assertEqual(len(supports), 1)
+        self.assertEqual(supports[0]["independence_group"], "ibn-rustah-rus-chain")
+        self.assertIn("Saqaliba", case["claim"]["summary"])
+        self.assertIn("not modern nationality", case["claim"]["external_participation"]["notes"])
+        self.assertEqual(case["geometry"]["accuracy_status"], "unresolved")
+        self.assertIsNone(case["geometry"]["geojson"])
+
 
 if __name__ == "__main__":
     unittest.main()
