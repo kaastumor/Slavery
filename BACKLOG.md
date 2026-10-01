@@ -9,14 +9,14 @@
 
 # CURRENT MODE — EXECUTION / CONSOLIDATION — 100/100 PROGRAMME (#369)
 
-**WIP = 1 canonical mutation stream: #369 — Viking/Rūs mobile network around
-900 CE current-method external-participation reconstruction under D-124.** Samarkand,
-Timbuktu and Swahili are merged repository-staging packets only; none is governed-DB
-admission or a 100/100 increment. Sumerian City-States 2000 BCE is
-`NEEDS_DEEP_REVIEW` because its reviewed multi-locus aggregate cannot safely be forced
-through the single-target territorial importer. Viking reconstructs the earlier
-internally accepted evidence state as `external_participation / slave_trade_network`,
-with no P-level and unresolved network geometry.
+**WIP = 1 canonical mutation stream: #369 — Andaman Islands communities around
+1800 current-method external-participation reconstruction under D-124.** Samarkand,
+Timbuktu, Swahili and Viking/Rūs are merged repository-staging packets only; none is
+governed-DB admission or a 100/100 increment. Sumerian City-States 2000 BCE remains
+`NEEDS_DEEP_REVIEW / REPRESENTATION_PATH_REQUIRED`. Andaman preserves the internally
+reviewed split: British colonial kidnap/capture/confinement is positive external
+coercion near the anchor, while indigenous internal slavery/servile dependency remains
+unassessed. No P-level and no modern archipelago practice geometry.
 
 The original #367 population batch is complete history: its 12 accepted cases were ingested to governed production research state and remain reviewed/unpublished. Production ingestion did not create release membership or move the serving channel.
 
@@ -66,10 +66,10 @@ and immutable v0.8.1 membership do not change through this write.
 
 ## Execution order
 
-1. Review the Viking/Rūs reconstruction as an external/network participation packet:
-   preserve the mobile-network frame, source-native Rūs/Saqaliba labels and capture-vs-sale
-   distinction; leave route/network geometry unresolved. Repository staging does not
-   admit a case or alter either 100/100 counter.
+1. Review the Andaman reconstruction as an external colonial-captivity packet:
+   preserve the external-positive / indigenous-internal-unassessed split, keep the 1790
+   removal as a source-recovery lead only, and leave community/route geometry unresolved.
+   Repository staging does not admit a case or alter either 100/100 counter.
 2. Under D-124, screen 20–40 identities from the existing #369 funnel read-only
    and record `ACCEPT_FOR_BATCH`, `NEEDS_DEEP_REVIEW`, `HOLD` or `DUPLICATE`
    with reasons. Do not count screens as admitted or mapped cases.
