@@ -9,12 +9,14 @@
 
 # CURRENT MODE — EXECUTION / CONSOLIDATION — 100/100 PROGRAMME (#369)
 
-**WIP = 1 canonical mutation stream: #369 — Timbuktu c.1509–1512 current-method
-review packet under D-124.** Samarkand 1404's packet is merged in PR #391 but
-remains repository staging only. The Timbuktu packet is likewise staging for review,
-not admission or a database write. The initial existing-funnel screen still requires
-20–40 candidate identities with explicit dispositions; the first reviewed routine
-batch remains capped at five. #383's independently checked receipt is merged.
+**WIP = 1 canonical mutation stream: #369 — Swahili maritime network 1400
+current-method external-participation reconstruction under D-124.** Samarkand 1404
+and Timbuktu c.1509–1512 are merged repository-staging packets only; neither is
+governed-database admission or a 100/100 increment. Swahili reconstructs the earlier
+internally accepted Stage-2 evidence state as `external_participation /
+slave_trade_network`, with no P-level and unresolved network geometry. The initial
+existing-funnel screen still requires 20–40 explicit dispositions; the first reviewed
+routine batch remains capped at five. #383's independently checked receipt is merged.
 
 The original #367 population batch is complete history: its 12 accepted cases were ingested to governed production research state and remain reviewed/unpublished. Production ingestion did not create release membership or move the serving channel.
 
@@ -64,9 +66,10 @@ and immutable v0.8.1 membership do not change through this write.
 
 ## Execution order
 
-1. Review the Timbuktu packet's approximate chronology, single Leo textual lineage,
-   disputed eyewitness status, translation variance, and navigation-only geometry.
-   Its repository staging does not admit a case or alter either 100/100 counter.
+1. Review the Swahili reconstruction as an external/network participation packet:
+   reuse existing source-version lineages, preserve the mobile-network frame, keep
+   node-level territorial evidence separate, and leave network geometry unresolved.
+   Repository staging does not admit a case or alter either 100/100 counter.
 2. Under D-124, screen 20–40 identities from the existing #369 funnel read-only
    and record `ACCEPT_FOR_BATCH`, `NEEDS_DEEP_REVIEW`, `HOLD` or `DUPLICATE`
    with reasons. Do not count screens as admitted or mapped cases.
