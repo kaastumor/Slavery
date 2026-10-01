@@ -1,31 +1,14 @@
 {
   "archive_ref": null,
-  "checkpoint": {
-    "disposition": "SEE_CANONICAL_OWNER",
-    "next_action": "Interactive review PR #397; scheduled worker must not merge. Any later Angkor packet waits for the exact five-case production gate and fresh source, interval, collision and geo-role checks.",
-    "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5932892490",
-    "verification": "PR/head receipt PASS; 2-file diff; checks+foundation PASS; UNESCO ID/coordinate PASS; no DB/merge; telemetry UNKNOWN"
-  },
+  "checkpoint": null,
   "contract": "AUTOMATION_CONTROL_V2_20261001",
-  "effects": [
-    {
-      "id": "ATLAS100-PR397-CHECKPOINT-01",
-      "output_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5932892490"
-    }
-  ],
+  "effects": [],
   "failure_count": 0,
   "failure_key": null,
-  "generation": 1,
-  "lease_until": null,
-  "operation": {
-    "expected_head": "fe42fcf9e8f0cfe2de15460baa353d8e64b0c342",
-    "id": "ATLAS100-PR397-CHECKPOINT-01",
-    "kind": "issue_checkpoint",
-    "output_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5932892490",
-    "status": "VERIFIED",
-    "target_ref": "refs/pull/397/head"
-  },
-  "owner_attempt": null,
+  "generation": 2,
+  "lease_until": 1790885667,
+  "operation": null,
+  "owner_attempt": "ATLAS100-PROC-20261001T1943Z-PAIRED-POSTMERGE-01",
   "receipts": [
     {
       "at": 1790863500,
@@ -38,11 +21,11 @@
   "repository": "kaastumor/Slavery",
   "schema": 2,
   "stage": {
-    "input_revision": "fe42fcf9e8f0cfe2de15460baa353d8e64b0c342",
-    "key": "3d3e05802d5ccaf701575ea3333f525902de2be24408bde5bef8ce30807f5f76",
-    "name": "review-pr-397-angkor-paired",
-    "task": 397
+    "input_revision": "161e606ab5909557f7875fd8ddff87b6d1a195fc",
+    "key": "f4d1e4efac4fd532baadd059ee35cf95c9db32a08fa0269d9d7ad2810c0b25f4",
+    "name": "reconcile-paired-reviews-postmerge",
+    "task": 369
   },
-  "state": "COMPLETE",
-  "updated_at": 1790863500
+  "state": "CLAIMED",
+  "updated_at": 1790883867
 }
