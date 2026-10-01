@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
-"""Insert one reviewed external/network participation research case.
+"""Validate and provide controlled insertion for one external participation case.
 
-The input remains claim-centric and unpublished. This loader exists because the
-canonical schema already models external/network participation separately from
-territorial practice. Run without --apply to validate and print a plan.
+The canonical schema already models external/network participation separately from
+territorial practice. The standalone CLI is deliberately dry-run only; reviewed
+batch drivers may import insert_case() and provide their own explicit write gates.
 """
 from __future__ import annotations
 
 import argparse
 import json
-import os
 from pathlib import Path
 import sys
 from typing import Any
@@ -203,12 +202,10 @@ def insert_case(
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("case_file", type=Path)
-    parser.add_argument("--dsn", default=os.environ.get("DATABASE_URL"))
-    parser.add_argument("--apply", action="store_true", help="commit the case to PostgreSQL")
     parser.add_argument(
-        "--git-revision",
-        default=os.environ.get("GITHUB_SHA"),
-        help="optional repository revision recorded in the ingestion ledger",
+        "--apply",
+        action="store_true",
+        help="rejected for standalone use; controlled batch drivers own write gates",
     )
     args = parser.parse_args()
 
@@ -218,34 +215,13 @@ def main() -> int:
         raise SystemExit(f"invalid external participation case: {exc}") from exc
 
     print(json.dumps(plan(spec), indent=2, ensure_ascii=False))
-    if not args.apply:
-        print("DRY RUN: no database changes made")
-        return 0
-    if not args.dsn:
-        parser.error("--dsn or DATABASE_URL is required with --apply")
+    if args.apply:
+        raise SystemExit(
+            "standalone external participation importer has no database commit path; "
+            "use a reviewed batch driver with an explicit write gate"
+        )
 
-    try:
-        import psycopg
-    except ImportError as exc:
-        raise SystemExit("psycopg is required; install requirements.txt") from exc
-
-    with psycopg.connect(args.dsn, autocommit=False) as conn:
-        try:
-            with conn.transaction():
-                claim_id, inserted = insert_case(
-                    conn,
-                    spec,
-                    source_path=str(args.case_file),
-                    git_revision=args.git_revision,
-                )
-        except Exception:
-            conn.rollback()
-            raise
-
-    if inserted:
-        print(f"inserted unpublished external-participation claim {claim_id}")
-    else:
-        print(f"NO-OP: external participation case already applied unchanged as claim {claim_id}")
+    print("DRY RUN: no database changes made")
     return 0
 
 
