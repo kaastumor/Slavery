@@ -1,6 +1,11 @@
 {
   "archive_ref": null,
-  "checkpoint": null,
+  "checkpoint": {
+    "disposition": "SEE_CANONICAL_OWNER",
+    "next_action": "Release integration owner completes D-121 bindings, authority/dependency closure, typed browser checks, package checksums and CAS cutover. Scheduled identity must not release, merge or serve; #370/#379 remain separate.",
+    "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5942802534",
+    "verification": "main receipt/selection/readback PASS; deltas exact; CI 36940962150 PASS; comment readback PASS; no DB/merge/release effect; telemetry UNKNOWN"
+  },
   "contract": "AUTOMATION_CONTROL_V2_20261001",
   "effects": [
     {
@@ -11,7 +16,7 @@
   "failure_count": 0,
   "failure_key": null,
   "generation": 4,
-  "lease_until": 1790899750,
+  "lease_until": null,
   "operation": {
     "expected_head": "811e7d91a341ba8ed6b209817842484490d3fa54",
     "id": "ATLAS100-D124-ADMISSION-POSTMERGE-CHECKPOINT-01",
@@ -20,7 +25,7 @@
     "status": "VERIFIED",
     "target_ref": "issue/369"
   },
-  "owner_attempt": "ATLAS100-PROC-20261001T2338Z-D124-POSTMERGE-01",
+  "owner_attempt": null,
   "receipts": [
     {
       "at": 1790863500,
@@ -42,6 +47,13 @@
       "key": "7611bca70409d12a6d8ed6959ab1ee43a08190ce8fb8bb1e3e654a5cd70748b5",
       "receipt_ref": "https://github.com/kaastumor/Slavery/pull/401#issuecomment-5942131854",
       "state": "COMPLETE"
+    },
+    {
+      "at": 1790898123,
+      "attempt": "ATLAS100-PROC-20261001T2338Z-D124-POSTMERGE-01",
+      "key": "be72d226ac7325fe70adfe3d584d04639c63a8597af22a9d530ccc5d4e165175",
+      "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5942802534",
+      "state": "COMPLETE"
     }
   ],
   "repository": "kaastumor/Slavery",
@@ -52,6 +64,6 @@
     "name": "reconcile-five-case-admission-postmerge",
     "task": 369
   },
-  "state": "ACTIVE",
-  "updated_at": 1790898080
+  "state": "COMPLETE",
+  "updated_at": 1790898123
 }
