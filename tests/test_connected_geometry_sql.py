@@ -3,6 +3,9 @@ from uuid import NAMESPACE_URL, uuid5
 
 from tools import export_geometry_closure_tranche_02_sql as exporter
 from tools import rehearse_geometry_closure_tranche_02 as rehearsal
+from tools import export_geometry_closure_tranche_01_sql as first_exporter
+from tools import rehearse_geometry_closure_tranche_01 as first_rehearsal
+from tools import apply_geometry_closure_tranche_01 as first_production
 from tools.rehearse_geometry_closure_tranche_01 import ClosureError
 
 
@@ -27,6 +30,23 @@ class ConnectedSqlExportTests(unittest.TestCase):
         statement = collector.statements[0]
         self.assertIn("source''s", statement)
         self.assertIn('INTO generated_0', statement)
+
+    def test_first_tranche_export_is_inert_and_keeps_its_distinct_roles(self):
+        statement = first_exporter.render(first_rehearsal.load_review(),
+                                         first_production.load_plan(), revision='UNIT_TEST')
+        self.assertIn("IF NOT (false) THEN RAISE EXCEPTION '#370", statement)
+        self.assertLess(statement.index('authorization absent'), statement.index('insert into'))
+        self.assertIn('Dahomey unresolved geometry changed', statement)
+        self.assertIn('protected rows changed: atlas.legal_event', statement)
+        self.assertIn(first_exporter.UNRESOLVED_ID, statement)
+        self.assertNotIn('COMMIT', statement)
+
+    def test_first_tranche_collector_does_not_broaden_second_tranche(self):
+        query = ('select evidence_role, direction::text, locator, claim_fitness '
+                 'from atlas.claim_source where claim_id=%s and source_version_id=%s and evidence_role=%s')
+        self.assertEqual(first_exporter.ClosureCollector().execute(query).fetchall(), [])
+        with self.assertRaises(ClosureError):
+            exporter.InsertCollector().execute(query)
 
 
 if __name__ == '__main__':

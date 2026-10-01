@@ -224,6 +224,11 @@ docker compose run --rm -e CI=true tooling \
 
 echo "100/100 geometry closure tranche 1 rehearsal passed: Goryeo, Jakin/Godomey and Taghaza mapped roles are idempotent and rolled back."
 
+# #370 connected transport: exact Python parity, late failure rollback, unchanged
+# Dahomey unresolved row and legal-event state. Never uses a production DSN.
+docker compose run --rm -e CI=true tooling \
+  python tools/test_geometry_closure_tranche_01_sql.py --disposable-test-db
+
 
 # #374: rehearse four reviewed evidence/navigation loci for existing successor claims.
 # The tool reconstructs the four prerequisite current-method claims inside its own
