@@ -1,0 +1,165 @@
+{
+  "case_key": "atlas-100x100/samarkand/captive-skilled-forced-labour-1404-v1",
+  "spatial_entity": {
+    "canonical_name": "Samarkand",
+    "display_name": "Samarkand / Samarqand",
+    "entity_type_code": "city",
+    "from_year": null,
+    "to_year": null,
+    "review_status": "reviewed",
+    "notes": "City-node identity for the bounded 1404 observation. It is not the Timurid polity, a regional territory, or a claim that the reported castle workforce represented city-wide prevalence."
+  },
+  "claim": {
+    "from_year": 1404,
+    "to_year": 1404,
+    "date_text_original": "Clavijo's 1404 description of Samarkand",
+    "temporal_precision": "bounded_observation_year",
+    "temporal_certainty": "high_for_reported_observation_year",
+    "spatial_precision": "Samarkand city castle context; exact castle location unknown",
+    "summary": "In his 1404 description of Samarkand, Clavijo reports that the city castle held roughly one thousand captives who were skilled workers and were compelled to labour throughout the year making helmets or headpieces, bows, and arrows. The candidate records forced labour at this bounded city-node context without inferring city-wide prevalence, polity-wide practice, or individualized chattel/property status.",
+    "confidence": "high_for_bounded_report_and_forced_labour_interpretation",
+    "review_status": "reviewed",
+    "publication_status": "unpublished",
+    "notes": "Retain Clavijo's source-native term 'captives'. Floor supplies specialist slavery classification but depends on the same passage. Perry and Subtelny support the wider deportation structure, not the exact castle workforce. Do not infer saleability, ownership, heredity, continuity beyond 1404, or a common status for all deported artisans.",
+    "territorial_practice": {
+      "practice_type_code": "forced_labour",
+      "practice_level": null,
+      "coverage_state_code": "classified",
+      "classification_status": "processor_self_reviewed_bounded_primary_plus_specialist_interpretation",
+      "notes": "Positive bounded city-node classification from captives compelled to skilled labour year-round. No P-level, population share, polity-wide inference, or generic slavery/property-status strengthening."
+    }
+  },
+  "evidence": [
+    {
+      "source": {
+        "title": "Narrative of the Embassy of Ruy Gonzalez de Clavijo to the Court of Timour at Samarcand, A.D. 1403-6",
+        "author_or_institution": "Ruy González de Clavijo; translated and edited by Clements R. Markham; Hakluyt Society",
+        "source_type": "translated_eyewitness_account",
+        "source_classification": "primary_translation",
+        "language_code": "en-es",
+        "geographic_scope": "Samarkand city and Timurid court",
+        "temporal_scope": "Eyewitness embassy, 1403-1406; bounded Samarkand observation in 1404",
+        "independence_notes": "Direct primary evidentiary base for the castle/workforce observation. Floor's later quotation and interpretation are dependent on this same passage.",
+        "reliability_limitations": "Nineteenth-century English translation of a fifteenth-century embassy narrative. The reported approximate workforce count is not a census and the source-native term 'captives' does not by itself establish individualized property status."
+      },
+      "version": {
+        "version_label": "Hakluyt Society First Series 26, London, 1859; Internet Archive item dli.granth.75154 / Wikimedia Commons PDF",
+        "publication_year": 1859,
+        "url_or_identifier": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Narrative_of_the_Embassy_of_Ruy_Gonzalez_de_Clavijo_to_the_Court_of_Timour_at_Samarcand_A._D._1403-6_%28IA_dli.granth.75154%29.pdf",
+        "accessed_at": "2026-10-01T01:39:00Z"
+      },
+      "evidence_role": "primary bounded observation of captive skilled workers compelled to labour in the Samarkand castle",
+      "independence_group": "clavijo-samarkand-1404-castle-workforce",
+      "directness": "translated eyewitness account",
+      "direction": "supports",
+      "locator": "Printed p. 172; PDF p. 240; OCR lines 7420-7427. Adjacent population/transfer context: printed p. 171, PDF pp. 238-239.",
+      "notes": "Use for the exact reported castle/workforce facts and bounded 1404 claim, not city-wide prevalence or polity-wide continuity."
+    },
+    {
+      "source": {
+        "title": "BARDA and BARDA-DĀRI iv. From the Mongols to the abolition of slavery",
+        "author_or_institution": "Willem M. Floor; Encyclopaedia Iranica",
+        "source_type": "specialist_encyclopaedia_article",
+        "source_classification": "secondary_specialist",
+        "language_code": "en",
+        "geographic_scope": "Iranian and adjacent Islamic lands, including Timurid Samarkand",
+        "temporal_scope": "Mongol period through abolition",
+        "independence_notes": "Specialist category interpretation of the exact Clavijo p. 172 passage; not an independent event attestation.",
+        "reliability_limitations": "The Samarkand observation is quoted from Clavijo, so it must not be counted as a second direct observation."
+      },
+      "version": {
+        "version_label": "Encyclopaedia Iranica, Vol. III, Fasc. 7, pp. 768-774; published 1988, updated 2013",
+        "publication_year": 1988,
+        "url_or_identifier": "https://www.iranicaonline.org/articles/barda-iv/",
+        "accessed_at": "2026-10-01T01:39:00Z"
+      },
+      "evidence_role": "specialist slavery-context interpretation of the primary passage",
+      "independence_group": "clavijo-samarkand-1404-castle-workforce",
+      "directness": "specialist interpretation dependent on primary passage",
+      "direction": "supports",
+      "locator": "Section 'Sources of supply', web lines 35-38; quotation and discussion of Clavijo p. 172.",
+      "notes": "Supports classification while preserving the primary text's narrower 'captives' terminology."
+    },
+    {
+      "source": {
+        "title": "DEPORTATIONS iii. In the Islamic period",
+        "author_or_institution": "John R. Perry; Encyclopaedia Iranica",
+        "source_type": "specialist_encyclopaedia_article",
+        "source_classification": "secondary_specialist",
+        "language_code": "en",
+        "geographic_scope": "Islamic-period deportation systems, including Timurid Samarqand",
+        "temporal_scope": "Islamic period; specific Timurid deportation discussion",
+        "independence_notes": "Independent structural context for systematic Timurid deportation and transfer of artisans; does not independently attest the exact castle workforce.",
+        "reliability_limitations": "Broad synthesis. Its account may share earlier specialist lineages with other Timurid scholarship and cannot be treated as an independent observation of Clavijo's castle scene."
+      },
+      "version": {
+        "version_label": "Encyclopaedia Iranica, Vol. VII, Fasc. 3, pp. 297-312; published 1994, updated 2018",
+        "publication_year": 1994,
+        "url_or_identifier": "https://www.iranicaonline.org/articles/deportations/deportations-iii-in-the-islamic-period/",
+        "accessed_at": "2026-10-01T01:39:00Z"
+      },
+      "evidence_role": "independent structural context for forced transfer of settled populations and artisans to Samarqand",
+      "independence_group": "iranica-timurid-deportation-synthesis",
+      "directness": "specialist structural synthesis",
+      "direction": "context",
+      "locator": "Section 'Tīmūr's deportations', web lines 48-57.",
+      "notes": "Context only for the broader coercive transfer structure; not direct corroboration of the exact castle workforce."
+    },
+    {
+      "source": {
+        "title": "ECONOMY vi. In the Timurid period",
+        "author_or_institution": "Maria Eva Subtelny; Encyclopaedia Iranica",
+        "source_type": "specialist_encyclopaedia_article",
+        "source_classification": "secondary_specialist",
+        "language_code": "en",
+        "geographic_scope": "Timurid economy, including Samarkand",
+        "temporal_scope": "Timurid period",
+        "independence_notes": "Corroborating specialist economic context for deportation of skilled classes and artisans to Samarkand; not an independent attestation of the exact castle workforce.",
+        "reliability_limitations": "Broad economic synthesis that may share earlier scholarly lineages with Perry. It must not be counted as a separate direct observation or used for prevalence."
+      },
+      "version": {
+        "version_label": "Encyclopaedia Iranica; published 1997, updated 2016",
+        "publication_year": 1997,
+        "url_or_identifier": "https://www.iranicaonline.org/articles/economy-vi-in-the-timurid-period/",
+        "accessed_at": "2026-10-01T01:39:00Z"
+      },
+      "evidence_role": "corroborating specialist economic context for Timurid transfer of skilled labour",
+      "independence_group": "iranica-timurid-deportation-synthesis",
+      "directness": "specialist structural synthesis",
+      "direction": "context",
+      "locator": "Web lines 36-45; discussion of deported skilled classes and large numbers of artisans brought to Samarkand.",
+      "notes": "Context only; not direct corroboration of the exact castle workforce."
+    }
+  ],
+  "geometry": {
+    "from_year": 1404,
+    "to_year": 1404,
+    "accuracy_status": "modern_proxy",
+    "resolution_method": "Use UNESCO World Heritage property 603rev component 603rev-002, 'Medieval Timurid and European Cities', only as a modern navigation/context point for the medieval Timurid city component. Normalize the source-native N39 38 60 / E66 58 0 by carrying 60 seconds into the next minute, yielding POINT(66.9666667 39.65). This is not the exact 1404 castle, a claim evidence locus, a practice extent, or a Timurid polity polygon.",
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        66.9666667,
+        39.65
+      ]
+    },
+    "source_native_id": "UNESCO-WHC-603rev-002",
+    "review_status": "reviewed",
+    "source": {
+      "title": "Samarkand – Crossroad of Cultures — Medieval Timurid and European Cities geographical data",
+      "author_or_institution": "UNESCO World Heritage Centre",
+      "source_type": "official_heritage_geodata",
+      "source_classification": "geometry_context",
+      "geographic_scope": "Samarkand, Uzbekistan; component 603rev-002",
+      "temporal_scope": "Modern authoritative heritage-component locator for the medieval Timurid and European city area",
+      "independence_notes": "Geometry/context provenance only; independent of the historical forced-labour classification.",
+      "reliability_limitations": "The 841.5 ha heritage component and representative coordinate do not locate the exact 1404 castle, workforce, or practice extent."
+    },
+    "version": {
+      "version_label": "World Heritage List 603rev, component 603rev-002, source-native N39 38 60 / E66 58 0; accessed 2026-10-01",
+      "url_or_identifier": "https://whc.unesco.org/en/list/603/maps/#603rev-002",
+      "accessed_at": "2026-10-01T01:39:00Z"
+    },
+    "notes": "Role: modern_proxy/navigation_context. Source-native coordinate and explicit normalization retained. The component-qualified URL identifier prevents accidental reuse of the live 603rev-001 Afrosiab source version, whose base maps-page URL is otherwise identical."
+  }
+}
