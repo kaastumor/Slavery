@@ -1,6 +1,11 @@
 {
   "archive_ref": null,
-  "checkpoint": null,
+  "checkpoint": {
+    "disposition": "SEE_CANONICAL_OWNER",
+    "next_action": "Interactive acceptance of PR401; scheduled identity must not merge. After any external merge, reconcile canonical main once. Keep #370/#379, D-124 admission, D-121, release and serving separately gated.",
+    "receipt_ref": "https://github.com/kaastumor/Slavery/pull/401#issuecomment-5942131854",
+    "verification": "PR401 head/blob/readback/count deltas PASS; CI 36935899088 PASS; comment readback PASS; no DB/merge/release effect by review; telemetry UNKNOWN"
+  },
   "contract": "AUTOMATION_CONTROL_V2_20261001",
   "effects": [
     {
@@ -11,7 +16,7 @@
   "failure_count": 0,
   "failure_key": null,
   "generation": 3,
-  "lease_until": 1790896120,
+  "lease_until": null,
   "operation": {
     "expected_head": "9e13b6f987de87a0ddfa049d1a9b09ea7e2986bf",
     "id": "ATLAS100-PR401-REVIEW-CHECKPOINT-01",
@@ -20,7 +25,7 @@
     "status": "VERIFIED",
     "target_ref": "pull/401"
   },
-  "owner_attempt": "ATLAS100-PROC-20261001T2240Z-PR401-REVIEW-01",
+  "owner_attempt": null,
   "receipts": [
     {
       "at": 1790863500,
@@ -35,6 +40,13 @@
       "key": "f4d1e4efac4fd532baadd059ee35cf95c9db32a08fa0269d9d7ad2810c0b25f4",
       "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5939252383",
       "state": "COMPLETE"
+    },
+    {
+      "at": 1790894498,
+      "attempt": "ATLAS100-PROC-20261001T2240Z-PR401-REVIEW-01",
+      "key": "7611bca70409d12a6d8ed6959ab1ee43a08190ce8fb8bb1e3e654a5cd70748b5",
+      "receipt_ref": "https://github.com/kaastumor/Slavery/pull/401#issuecomment-5942131854",
+      "state": "COMPLETE"
     }
   ],
   "repository": "kaastumor/Slavery",
@@ -45,6 +57,6 @@
     "name": "review-pr-401-374-production-receipt",
     "task": 374
   },
-  "state": "ACTIVE",
-  "updated_at": 1790894470
+  "state": "COMPLETE",
+  "updated_at": 1790894498
 }
