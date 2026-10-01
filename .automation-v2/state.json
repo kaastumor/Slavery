@@ -1,0 +1,18 @@
+{
+  "schema": 2,
+  "contract": "AUTOMATION_CONTROL_V2_20261001",
+  "repository": "kaastumor/Slavery",
+  "generation": 0,
+  "state": "UNCLAIMED",
+  "owner_attempt": null,
+  "lease_until": null,
+  "updated_at": 1790859547,
+  "stage": null,
+  "checkpoint": null,
+  "operation": null,
+  "effects": [],
+  "receipts": [],
+  "archive_ref": null,
+  "failure_count": 0,
+  "failure_key": null
+}
