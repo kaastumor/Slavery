@@ -66,6 +66,8 @@ The D-124 read-only screen is complete at 34 identities/results. The corrected l
 
 The first review-only paired slice is Angkor ~1200: use the existing Angkor site identity and independently reviewed UNESCO component 668-001 point solely as a navigation/context locator for the earlier temple/royal evidence, subject to source/version, time and claim-link review. Do not copy the 1296–1297 claim's time bounds, import its Zhou evidence into the earlier case, or use the World Heritage boundary as a practice polygon. The exact proposal is in data/research/geometry_reviews/population_100_100_angkor_1200_paired_review.md. No new case or geometry is admitted by this review.
 
+The second review-only paired slice is Ethiopia ~1800 narrowed to Gondar/northern-central court-household slavery. UNESCO property 19 (Fasil Ghebbi, Gondar Region) supplies a provenance-safe Gondar site/navigation locator, but not a household/worksite, slave-market location, imperial boundary or practice extent. Dixan–Massawa / Red Sea captive-export evidence remains a separate external dimension. The exact proposal is in `data/research/geometry_reviews/population_100_100_ethiopia_gondar_paired_review.md`. No case or geometry is admitted by this review.
+
 ## Execution order
 
 1. Keep the merged five-case pilot frozen. Its production admission requires explicit sponsor authority for the exact manifest, a fresh governed preflight, guarded atomic write, replay/rollback evidence and independent readback. No production write follows from this priority change.
