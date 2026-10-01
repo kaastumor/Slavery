@@ -3515,3 +3515,54 @@ from this process amendment.
 review debt or material historical misclassification in the pilot suspends fast-path
 admission until reviewed and corrected. Refs #367, #369, #383, PRs #384/#386/#387/#388,
 D-090/D-091/D-092/D-096/D-109/D-121.
+
+## D-125 - Exact requested 48 + 12 + 5 successor release
+**Date:** 2026-10-01
+**Status:** accepted implementation of the sponsor's explicit release/live instruction; effective when merged
+
+**Scope:** Create v0.8.2 from the immutable v0.8.1 authority's 75 claims, the exact
+12 admitted #367 packets and the exact five committed D-124 pilot packets.
+These are 65 requested case slots: 61 territorial, one legal event and three
+external/network cases. Raw claim count is 92 because predecessor supporting
+dimensions remain preserved. Do not admit the separate legacy 11-case successor
+selection or discover additional membership from all reviewed rows.
+
+**Geometry:** Apply D-121 to geometry reuse individually. The 38 inherited
+Cliopatria API features have independently frozen feature IDs, content fingerprints
+and native-year translations. Five other inherited geometries have bounded native
+source bindings. Athens, Nineveh and Uruk legacy points lack a reproduced exact
+upstream binding and are withheld from successor geometry membership. Their
+historical claims and predecessor releases remain intact. This implements D-121's
+existing per-geometry HOLD; it does not lower provenance gates. No replacement
+coordinates or polygons are invented. Modern site coordinates are navigation/site
+locators, with no source-native historical boundary-validity dates; Atlas claim
+horizons must not be presented as such dates. The Rome A.D. 14 specialist source
+retains D-117's bounded approximate use and CC-BY-NC lineage. Record the measured
+submillimetre coordinate-serialization discrepancy rather than asserting byte or
+topological equality with the raw upstream union.
+
+**Preservation:** All predecessor objects must match governed readback except the
+already committed, explicitly bounded Mycenaean (Pylos/Knossos) and Sogdiana
+(probable Samarkand context) evidence-locus additions. The three held geometry
+objects are omitted only from the new release. Preserve exact new target/site
+geometry identities and source dependency closure. New territorial claims retain
+NULL P-levels. No schema, historical classification or intensity change follows.
+
+**Public adapter:** Freeze a typed immutable materialization. Show the new legal
+event and external cases as distinct evidence cards; never turn them into
+territorial shading or P-levels. Point locators do not establish extent. Preserve
+the neutral land fabric, accepted inherited render assets and geometry-specific
+licences. Register canonical and serving manifests separately; deploy the payload
+before compare-and-set channel movement. Keep v0.8.1-public-mvp-v2 available for
+rollback. Verify exact package checksums, serving payload hash, all 65 case slots
+and browser evidence flows before reporting live completion.
+
+**Authority:** The sponsor's instruction, "take these 48 + 12 + 5 and push this to
+new release and push it to live", authorizes the necessary exact admission,
+release registration, deployment and cutover. Evidence, provenance, immutable
+package and readback checks remain mandatory. Independent historical reviews
+remain zero. The new package includes changelog, QC and unresolved issues.
+
+Refs #369, #367, PRs #403/#404, D-109/D-117/D-121/D-124;
+`release/selections/v0.8.2-requested-corpus.json` and
+`data/research/geometry_reviews/v082_non_api_source_bindings.json`.
