@@ -573,7 +573,6 @@
   ],
   "status": "RECONCILING_NOT_YET_RELEASE_READY",
   "remaining_checks": [
-    "exact pilot production admission and readback",
     "D-121 all inherited geometry source bindings, including eight non-API geometries",
     "immutable authority and source dependency closure",
     "typed public evidence/map rendering and end-to-end browser verification",
@@ -585,5 +584,17 @@
     "new legal/network cases remain separate from territorial practice",
     "existing release remains immutable",
     "unresolved geometry does not imply absence"
-  ]
+  ],
+  "pilot_claim_ids": {
+    "atlas-100x100/timbuktu/slavery-c1509-1512-v1": "5c41ce26-6861-4d96-9ecf-d47121a21895",
+    "atlas-100x100/andaman/colonial-captivity-c1789-1796-v1": "be797e18-cb49-4d34-872f-4b2aa28fe116",
+    "atlas-100x100/viking-rus-network/slave-trade-c880-913-v1": "9188aaf2-4fbd-4548-9231-fe4c86f9c4fc",
+    "atlas-100x100/samarkand/captive-skilled-forced-labour-1404-v1": "c3084bb0-f281-4f59-93c4-a4672c9b272b",
+    "atlas-100x100/swahili-coast/slave-trade-network-c1300-1400-v1": "81534456-fd05-481e-8782-44a2528b3f73"
+  },
+  "pilot_admission": {
+    "status": "COMMITTED_INDEPENDENT_READBACK_VERIFIED",
+    "receipt": "data/research/recovery/population_100_100_intake_2026_10_01/production_admission_receipt.json",
+    "readback_assertions": 494
+  }
 }
