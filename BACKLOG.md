@@ -22,14 +22,26 @@ Strict released baseline remains:
 
 Prepared but **not live-written** geometry gates:
 - #370: Goryeo / Dahomey / Taghaza closure; review + disposable rehearsal + guarded production driver complete.
-- #374: India / Myanmar / Pakistan / Nazi Germany case-linked loci; corrected review + disposable rehearsal + guarded production driver complete; Brazil remains HOLD on Correntes/Corrente identity.
-  Connected SQL transport preparation reuses those insertion helpers to avoid a
-  local DATABASE_URL. Its disposable tests and remaining CI/review/write gate are
-  owned by `data/research/geometry_reviews/population_100_100_closure_tranche_02_connected_sql.md`.
-  Transport preparation does not authorize or apply the production write.
 - #379 / PR #382: Sinjar-town evidence locus for the released ISIL/Yazidi case; review + disposable rehearsal + guarded production driver complete.
 
 If separately authorized and written cleanly, #370 would bring the 12-case #367 batch from 9 to 12 mapped candidates. Sinjar would add one further case-linked mapped representation to the released-corpus recovery pipeline. Neither gate changes immutable v0.8.1 membership or the public serving channel by itself.
+
+## #374 committed - four successor evidence/navigation loci
+
+The sponsor explicitly approved merging #400 and applying the exact #374 batch.
+On 2026-10-01 at 22:29:35 UTC the guarded connected SQL transaction committed
+India/Ramanagaram, Myanmar/Shadaw testimony context, Pakistan/Lahore outskirts
+context and Nazi Germany/Schoneweide site loci. Exact deltas were +4 entities,
++6 sources/versions, +4 points/links and +2 context evidence relations. A separate
+read-only query verified generated IDs, geometry/source/link metadata and the
+corrected Myanmar source-dependency group against the frozen review (257 field
+assertions). Claims remain reviewed/unpublished with NULL P-level; Brazil remains
+HOLD with zero locus links. No claim, immutable release membership, publication,
+practice polygon, serving-channel or strict released 48/16 counter change.
+
+Receipt: `data/research/geometry_reviews/population_100_100_closure_tranche_02_production_receipt.json`.
+The existing connection required no local DATABASE_URL. Do not resubmit the SQL:
+committed rows must be independently inspected before any proposed correction.
 
 ## Sogdiana research-state augmentation — #383
 
@@ -78,7 +90,7 @@ The Uzbekistan 2019 / Mauritania 2009 review freezes two exact Natural Earth 1:1
 
 1. Keep the merged five-case pilot frozen. Its production admission requires explicit sponsor authority for the exact manifest, a fresh governed preflight, guarded atomic write, replay/rollback evidence and independent readback. No production write follows from this priority change.
 2. Preserve the accepted Angkor ~1200 and Gondar review-only proposals. Continue Nepal's bounded subnational geometry qualification from exact ILO fieldwork locators; carry modern-context temporal limits for Uzbekistan/Mauritania explicitly. Do not open a sixth staging/admission packet.
-3. Reconcile the eight potentially distinct current-method successor cases and three replacements at case identity level. Continue #370, #374 and #379 geometry gates only under their own sponsor authorizations; do not replay or silently merge their manifests.
+3. Reconcile the eight potentially distinct current-method successor cases and three replacements at case identity level. Preserve the committed #374 receipt; continue #370 and #379 geometry gates only under their own sponsor authorizations; do not replay or silently merge their manifests.
 4. After the pilot gate clears, select the next bounded batch from historically qualified paired candidates. Carry unresolved geometry and HOLDs explicitly; recompute both case-level numerators before any successor selection. D-121 still holds v0.8.2. Publication and public-channel movement require separate gates.
 
 ## Control-state reconciliation
@@ -89,7 +101,7 @@ Legacy PR #363 was closed unmerged on 2026-09-30 as stale/diverged WIP. Its bran
 
 No new post-M1 P-levels, source-density prevalence, inferred nationality, false absence, unsupported modern proxies, invented polygons, or evidence-locus-to-territory conversion. Preserve existing unresolved target geometry, source-native values, immutable releases and the publication boundary.
 
-#370, #374, #379 and any later production driver are **genuine sponsor gates**, not background work. No release/public serving movement without a separate explicit cutover authorization.
+#370, #379 and any later production driver are **genuine sponsor gates**, not background work. #374 was explicitly authorized and committed; that authority does not cover another batch. No release/public serving movement without a separate explicit cutover authorization.
 
 ## Actions budget and standing protocols
 
