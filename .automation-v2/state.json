@@ -7,7 +7,14 @@
   "failure_key": null,
   "generation": 1,
   "lease_until": 1790864570,
-  "operation": null,
+  "operation": {
+    "expected_head": "fe42fcf9e8f0cfe2de15460baa353d8e64b0c342",
+    "id": "ATLAS100-PR397-CHECKPOINT-01",
+    "kind": "issue_checkpoint",
+    "output_ref": null,
+    "status": "INTENDED",
+    "target_ref": "refs/pull/397/head"
+  },
   "owner_attempt": "ATLAS100-PROC-20261001T1346Z-PR397-REVIEW-01",
   "receipts": [],
   "repository": "kaastumor/Slavery",
@@ -19,5 +26,5 @@
     "task": 397
   },
   "state": "ACTIVE",
-  "updated_at": 1790862900
+  "updated_at": 1790863150
 }
