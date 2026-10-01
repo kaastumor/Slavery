@@ -9,11 +9,12 @@
 
 # CURRENT MODE — EXECUTION / CONSOLIDATION — 100/100 PROGRAMME (#369)
 
-**WIP = 1 canonical mutation stream: #369 — bounded read-only screening of the
-existing qualified funnel under D-124.** The initial screen is 20–40 candidate
-identities with explicit dispositions; it is not an admission or database write.
-The first reviewed routine batch is capped at five cases. #383 is ready to close
-once its independently checked production receipt is merged with this checkpoint.
+**WIP = 1 canonical mutation stream: #369 — Timbuktu c.1509–1512 current-method
+review packet under D-124.** Samarkand 1404's packet is merged in PR #391 but
+remains repository staging only. The Timbuktu packet is likewise staging for review,
+not admission or a database write. The initial existing-funnel screen still requires
+20–40 candidate identities with explicit dispositions; the first reviewed routine
+batch remains capped at five. #383's independently checked receipt is merged.
 
 The original #367 population batch is complete history: its 12 accepted cases were ingested to governed production research state and remain reviewed/unpublished. Production ingestion did not create release membership or move the serving channel.
 
@@ -63,8 +64,9 @@ and immutable v0.8.1 membership do not change through this write.
 
 ## Execution order
 
-1. After the receipt PR is merged, close #383 against its exact readback; do not
-   replay the production write.
+1. Review the Timbuktu packet's approximate chronology, single Leo textual lineage,
+   disputed eyewitness status, translation variance, and navigation-only geometry.
+   Its repository staging does not admit a case or alter either 100/100 counter.
 2. Under D-124, screen 20–40 identities from the existing #369 funnel read-only
    and record `ACCEPT_FOR_BATCH`, `NEEDS_DEEP_REVIEW`, `HOLD` or `DUPLICATE`
    with reasons. Do not count screens as admitted or mapped cases.

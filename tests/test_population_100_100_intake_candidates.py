@@ -11,6 +11,11 @@ CANDIDATE = (
     / "data/research/recovery/population_100_100_intake_2026_10_01/candidates"
     / "01_samarkand_captive_skilled_forced_labour_1404.json"
 )
+TIMBUKTU_CANDIDATE = (
+    ROOT
+    / "data/research/recovery/population_100_100_intake_2026_10_01/candidates"
+    / "02_timbuktu_slavery_c1509_1512.json"
+)
 
 
 class Population100100IntakeCandidateTests(unittest.TestCase):
@@ -70,6 +75,29 @@ class Population100100IntakeCandidateTests(unittest.TestCase):
         self.assertIn("not the exact 1404 castle", geometry["resolution_method"])
         self.assertIn("do not locate the exact 1404 castle",
                       geometry["source"]["reliability_limitations"])
+
+    def test_timbuktu_keeps_uncertain_time_single_lineage_and_navigation_role(self):
+        spec = load_spec(TIMBUKTU_CANDIDATE, require_case_key=True)
+        candidate_plan = plan(spec)
+
+        self.assertEqual(candidate_plan["claim_interval"], [1509, 1512])
+        self.assertEqual(candidate_plan["practice_type"], "slavery_enslavement")
+        self.assertIsNone(candidate_plan["practice_level"])
+        self.assertEqual(candidate_plan["publication_status"], "unpublished")
+        self.assertEqual(spec["claim"]["temporal_precision"],
+                         "approximate_disputed_visit_window")
+        self.assertEqual(
+            {spec["evidence"][i]["independence_group"] for i in (0, 1, 3)},
+            {"leo-africanus-timbuktu-description"},
+        )
+        self.assertEqual(spec["evidence"][2]["direction"], "qualifies")
+        self.assertIn("not a separately established market location",
+                      spec["evidence"][0]["notes"])
+        self.assertEqual(candidate_plan["geometry_accuracy"], "modern_proxy")
+        self.assertEqual(spec["geometry"]["geojson"]["coordinates"],
+                         [-2.9994444, 16.7733333])
+        self.assertIn("not a sixteenth-century city boundary",
+                      spec["geometry"]["resolution_method"])
 
 
 if __name__ == "__main__":
