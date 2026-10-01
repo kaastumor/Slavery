@@ -1,31 +1,14 @@
 {
   "archive_ref": null,
-  "checkpoint": {
-    "disposition": "SEE_CANONICAL_OWNER",
-    "next_action": "Interactive acceptance of PR401; scheduled identity must not merge. After any external merge, reconcile canonical main once. Keep #370/#379, D-124 admission, D-121, release and serving separately gated.",
-    "receipt_ref": "https://github.com/kaastumor/Slavery/pull/401#issuecomment-5942131854",
-    "verification": "PR401 head/blob/readback/count deltas PASS; CI 36935899088 PASS; comment readback PASS; no DB/merge/release effect by review; telemetry UNKNOWN"
-  },
+  "checkpoint": null,
   "contract": "AUTOMATION_CONTROL_V2_20261001",
-  "effects": [
-    {
-      "id": "ATLAS100-PR401-REVIEW-CHECKPOINT-01",
-      "output_ref": "https://github.com/kaastumor/Slavery/pull/401#issuecomment-5942131854"
-    }
-  ],
+  "effects": [],
   "failure_count": 0,
   "failure_key": null,
-  "generation": 3,
-  "lease_until": null,
-  "operation": {
-    "expected_head": "9e13b6f987de87a0ddfa049d1a9b09ea7e2986bf",
-    "id": "ATLAS100-PR401-REVIEW-CHECKPOINT-01",
-    "kind": "issue_checkpoint",
-    "output_ref": "https://github.com/kaastumor/Slavery/pull/401#issuecomment-5942131854",
-    "status": "VERIFIED",
-    "target_ref": "pull/401"
-  },
-  "owner_attempt": null,
+  "generation": 4,
+  "lease_until": 1790899750,
+  "operation": null,
+  "owner_attempt": "ATLAS100-PROC-20261001T2338Z-D124-POSTMERGE-01",
   "receipts": [
     {
       "at": 1790863500,
@@ -52,11 +35,11 @@
   "repository": "kaastumor/Slavery",
   "schema": 2,
   "stage": {
-    "input_revision": "9e13b6f987de87a0ddfa049d1a9b09ea7e2986bf",
-    "key": "7611bca70409d12a6d8ed6959ab1ee43a08190ce8fb8bb1e3e654a5cd70748b5",
-    "name": "review-pr-401-374-production-receipt",
-    "task": 374
+    "input_revision": "811e7d91a341ba8ed6b209817842484490d3fa54",
+    "key": "be72d226ac7325fe70adfe3d584d04639c63a8597af22a9d530ccc5d4e165175",
+    "name": "reconcile-five-case-admission-postmerge",
+    "task": 369
   },
-  "state": "COMPLETE",
-  "updated_at": 1790894498
+  "state": "CLAIMED",
+  "updated_at": 1790897950
 }
