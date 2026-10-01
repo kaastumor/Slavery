@@ -14,13 +14,22 @@ from pathlib import Path
 import sys
 from typing import Any
 
-from add_research_case import (
-    case_content_sha256,
-    ensure_source_version,
-    ensure_spatial_entity,
-    existing_case_ingest,
-)
-from validate_external_case import SpecError, load as load_spec
+try:
+    from .add_research_case import (
+        case_content_sha256,
+        ensure_source_version,
+        ensure_spatial_entity,
+        existing_case_ingest,
+    )
+    from .validate_external_case import SpecError, load as load_spec
+except ImportError:
+    from add_research_case import (
+        case_content_sha256,
+        ensure_source_version,
+        ensure_spatial_entity,
+        existing_case_ingest,
+    )
+    from validate_external_case import SpecError, load as load_spec
 
 
 def plan(spec: dict[str, Any]) -> dict[str, Any]:
