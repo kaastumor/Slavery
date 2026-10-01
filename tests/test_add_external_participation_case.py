@@ -1,6 +1,7 @@
 from pathlib import Path
 import copy
 import json
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -90,6 +91,31 @@ class ExternalParticipationImporterTests(unittest.TestCase):
             path.write_text(json.dumps(valid_external_case()), encoding="utf-8")
             loaded = load_external_spec(path)
             self.assertEqual(loaded["case_key"], "test/example-network-v1")
+
+    def test_standalone_apply_is_rejected_before_database_access(self):
+        case_path = (
+            ROOT
+            / "data/research/recovery/population_100_100_intake_2026_10_01/candidates"
+            / "05_andaman_colonial_captivity_c1789_1796.json"
+        )
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(ROOT / "tools/add_external_participation_case.py"),
+                str(case_path),
+                "--apply",
+            ],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn(
+            "standalone external participation importer has no database commit path",
+            result.stdout + result.stderr,
+        )
+
 
 
 if __name__ == "__main__":
