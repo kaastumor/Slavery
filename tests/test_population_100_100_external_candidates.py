@@ -90,6 +90,37 @@ class Population100100ExternalCandidateTests(unittest.TestCase):
         self.assertEqual(case["geometry"]["accuracy_status"], "unresolved")
         self.assertIsNone(case["geometry"]["geojson"])
 
+    def test_andaman_packet_preserves_external_positive_internal_unassessed_split(self):
+        path = (
+            ROOT
+            / "data/research/recovery/population_100_100_intake_2026_10_01/candidates"
+            / "05_andaman_colonial_captivity_c1789_1796.json"
+        )
+        case = json.loads(path.read_text(encoding="utf-8"))
+        validate(copy.deepcopy(case))
+        self.assertEqual(case["claim_kind"], "external_participation")
+        self.assertEqual(case["claim"]["external_participation"]["participation_type_code"], "other")
+        self.assertFalse(case["guardrails"]["territorial_practice_inferred"])
+        self.assertFalse(case["guardrails"]["absence_inferred"])
+        self.assertNotIn("territorial_practice", case["claim"])
+        self.assertIn("does not establish an indigenous Andamanese slavery", case["claim"]["summary"])
+
+    def test_andaman_packet_does_not_promote_1790_lead_or_modern_archipelago_geometry(self):
+        path = (
+            ROOT
+            / "data/research/recovery/population_100_100_intake_2026_10_01/candidates"
+            / "05_andaman_colonial_captivity_c1789_1796.json"
+        )
+        case = json.loads(path.read_text(encoding="utf-8"))
+        evidence = case["evidence"]
+        supports = [row for row in evidence if row["direction"] == "supports"]
+        self.assertEqual(len(supports), 1)
+        self.assertEqual(supports[0]["independence_group"], "andaman-colonial-captivity")
+        self.assertEqual(evidence[2]["direction"], "qualifies")
+        self.assertIn("lead only", evidence[2]["notes"])
+        self.assertEqual(case["geometry"]["accuracy_status"], "unresolved")
+        self.assertIsNone(case["geometry"]["geojson"])
+
 
 if __name__ == "__main__":
     unittest.main()
