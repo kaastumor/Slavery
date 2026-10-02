@@ -1,6 +1,11 @@
 {
   "archive_ref": null,
-  "checkpoint": null,
+  "checkpoint": {
+    "disposition": "SEE_CANONICAL_OWNER",
+    "next_action": "Build one review-only Nineveh point proposal pinned to Pleiades 874621 and the exact released IDs; validate version, location, date, accuracy, licence and role. Keep unresolved if source-native retrieval is unavailable.",
+    "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5945278683",
+    "verification": "live inventory, three-case comparison, lease/head/duplicate fences and owner-comment readback PASS; no geometry, DB, release, serving or merge effect"
+  },
   "contract": "AUTOMATION_CONTROL_V2_20261001",
   "effects": [
     {
@@ -11,7 +16,7 @@
   "failure_count": 0,
   "failure_key": null,
   "generation": 8,
-  "lease_until": 1790914766,
+  "lease_until": null,
   "operation": {
     "expected_head": "494ea31f1d259653c02b14ac64890eaa561de4e0",
     "id": "ATLAS100-NINEVEH-GEO-QUALIFY-CHECKPOINT-01",
@@ -20,7 +25,7 @@
     "status": "VERIFIED",
     "target_ref": "issue/369"
   },
-  "owner_attempt": "ATLAS100-PROC-20261002T0344Z-NINEVEH-QUALIFY-01",
+  "owner_attempt": null,
   "receipts": [
     {
       "at": 1790863500,
@@ -70,6 +75,13 @@
       "key": "588eb74fa531375d11d0c119ac107573a365eafa239e64b4908050e3f7d7d2ad",
       "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5944618978",
       "state": "COMPLETE"
+    },
+    {
+      "at": 1790913097,
+      "attempt": "ATLAS100-PROC-20261002T0344Z-NINEVEH-QUALIFY-01",
+      "key": "d3afbfb9002ea4bb16afed61e0ba37e83ae9802d1f7564a6f8f773d2bd5fae08",
+      "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5945278683",
+      "state": "COMPLETE"
     }
   ],
   "repository": "kaastumor/Slavery",
@@ -80,6 +92,6 @@
     "name": "qualify-nineveh-released-geometry-readonly",
     "task": 369
   },
-  "state": "ACTIVE",
-  "updated_at": 1790913096
+  "state": "COMPLETE",
+  "updated_at": 1790913097
 }
