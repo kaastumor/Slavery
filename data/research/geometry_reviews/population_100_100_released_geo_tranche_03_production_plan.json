@@ -58,7 +58,32 @@
       "audit.release_geometry": 471,
       "audit.release_channel": 1
     },
-    "v082_release_memberships": []
+    "v082_release_memberships": [
+      {
+        "release_version": "v0.8.2",
+        "claim_id": "88e48d2e-5b06-5b37-80bb-82e07db36a3f",
+        "object_sha256": "fdbcae720fcfc2030bf168d09c6458fa4bd6e9b47249fe6021bdcef9e381deed",
+        "capture_status": "captured_at_release"
+      },
+      {
+        "release_version": "v0.8.2",
+        "claim_id": "b862e0a9-a857-57e0-8aa3-e37daf0844cf",
+        "object_sha256": "f6a7143cf1cfd17688b23716ab67708f6e20d9e71e0c33fed3d0fe44e46ce69f",
+        "capture_status": "captured_at_release"
+      },
+      {
+        "release_version": "v0.8.2-public-mvp-v1",
+        "claim_id": "88e48d2e-5b06-5b37-80bb-82e07db36a3f",
+        "object_sha256": "fdbcae720fcfc2030bf168d09c6458fa4bd6e9b47249fe6021bdcef9e381deed",
+        "capture_status": "captured_at_release"
+      },
+      {
+        "release_version": "v0.8.2-public-mvp-v1",
+        "claim_id": "b862e0a9-a857-57e0-8aa3-e37daf0844cf",
+        "object_sha256": "f6a7143cf1cfd17688b23716ab67708f6e20d9e71e0c33fed3d0fe44e46ce69f",
+        "capture_status": "captured_at_release"
+      }
+    ]
   },
   "expected_live_delta": {
     "atlas.spatial_entity": 1,
