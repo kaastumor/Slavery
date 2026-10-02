@@ -1,39 +1,14 @@
 {
   "archive_ref": null,
-  "checkpoint": {
-    "disposition": "SEE_CANONICAL_OWNER",
-    "next_action": "Review PR #410; after fresh governed DB collision/source/release preflight only, prepare a disposable rollback-proven rehearsal. Keep #370/#379 and production/release/serving gates untouched.",
-    "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5945842639",
-    "verification": "focused unittest 3/3, JSON parse, diff-check and PR head/base/draft readback PASS; no DB, release, serving, merge or production effect"
-  },
+  "checkpoint": null,
   "contract": "AUTOMATION_CONTROL_V2_20261001",
-  "effects": [
-    {
-      "id": "ATLAS100-NINEVEH-GEO-REVIEW-BRANCH-01",
-      "output_ref": "https://github.com/kaastumor/Slavery/commit/d56e1086fe477682aa169b2470c807a80c4c37fe"
-    },
-    {
-      "id": "ATLAS100-NINEVEH-GEO-REVIEW-DRAFT-PR-01",
-      "output_ref": "https://github.com/kaastumor/Slavery/pull/410"
-    },
-    {
-      "id": "ATLAS100-NINEVEH-GEO-REVIEW-CHECKPOINT-01",
-      "output_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5945842639"
-    }
-  ],
+  "effects": [],
   "failure_count": 0,
   "failure_key": null,
-  "generation": 9,
-  "lease_until": null,
-  "operation": {
-    "expected_head": "494ea31f1d259653c02b14ac64890eaa561de4e0",
-    "id": "ATLAS100-NINEVEH-GEO-REVIEW-CHECKPOINT-01",
-    "kind": "issue_checkpoint",
-    "output_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5945842639",
-    "status": "VERIFIED",
-    "target_ref": "issue/369"
-  },
-  "owner_attempt": null,
+  "generation": 10,
+  "lease_until": 1790921228,
+  "operation": null,
+  "owner_attempt": "ATLAS100-PROC-20261002T0536Z-PR410-REVIEW-01",
   "receipts": [
     {
       "at": 1790863500,
@@ -102,11 +77,11 @@
   "repository": "kaastumor/Slavery",
   "schema": 2,
   "stage": {
-    "input_revision": "494ea31f1d259653c02b14ac64890eaa561de4e0",
-    "key": "4506e3f4b2ef0de787e84de24ef4522255ff37b63b9e496224aab4383a053e09",
-    "name": "prepare-nineveh-released-geometry-review",
-    "task": 369
+    "input_revision": "d56e1086fe477682aa169b2470c807a80c4c37fe",
+    "key": "7049c2eae26cc04c4676112f44d1dc76a0a0d67965feba44184a085f7b8e925c",
+    "name": "review-pr-410-nineveh-geometry",
+    "task": 410
   },
-  "state": "COMPLETE",
-  "updated_at": 1790917420
+  "state": "CLAIMED",
+  "updated_at": 1790919428
 }
