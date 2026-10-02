@@ -1,0 +1,22 @@
+{
+  "release_version": "v0.8.2",
+  "materialization_id": "v0.8.2-public-mvp-v1",
+  "published_transaction_time": "2026-10-02T00:57:45.219765+00:00",
+  "case_count": 65,
+  "case_dimensions": {
+    "territorial_practice": 61,
+    "legal_event": 1,
+    "external_participation": 3
+  },
+  "map_coverage": {
+    "cases_with_polygons": 9,
+    "cases_with_points_only": 17,
+    "cases_without_geometry": 39,
+    "cases_with_geometry": 26,
+    "count_scope": "all released case horizons, not the current year"
+  },
+  "payload_sha256": "607157c2a23e296a2d955c0532a806909790f8934beb3fd57d261b6f30302371",
+  "api_url": "https://dilnayfllygkplsdymel.supabase.co/functions/v1/atlas-data",
+  "rollback_materialization_id": "v0.8.1-public-mvp-v2",
+  "receipt": "reviews/releases/v0.8.2-live-cutover-receipt.json"
+}

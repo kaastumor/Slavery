@@ -1,0 +1,253 @@
+{
+  "receipt_schema": "atlas-canonical-and-public-serving-cutover-receipt-v1",
+  "decision": "D-125",
+  "status": "COMMITTED_INDEPENDENT_READBACK_VERIFIED",
+  "release_version": "v0.8.2",
+  "serving_materialization_id": "v0.8.2-public-mvp-v1",
+  "rollback_target": "v0.8.1-public-mvp-v2",
+  "requested_case_slots": 65,
+  "case_dimensions": {
+    "territorial_practice": 61,
+    "legal_event": 1,
+    "external_participation": 3
+  },
+  "release_commit": "1492f95fa24d49ef9cfdb4ffc48a9fb2c0250766",
+  "reviewed_head": "b3844bad91b1a7e23a32a73651ffffecc4b654a2",
+  "publication_sql_sha256": "5e2f74f23af5b8dedbc863fea5912c28e6759f9ef47ec82e06bfbd51da1fcdd1",
+  "execution_route": "Sponsor reported executing the supplied guarded SQL after connected execution attempts were declined; independent governed readback confirms the exact registered release and cutover. Do not replay.",
+  "ci": {
+    "foundation_run": 36945955471,
+    "web_run": 36945955469,
+    "browser_run": 36945955464,
+    "conclusion": "success"
+  },
+  "edge_deployment": {
+    "function": "atlas-data",
+    "version": 15,
+    "status": "ACTIVE",
+    "all_seven_files_independently_matched": true,
+    "bundle_sha256": "30b2fc40ca7a4b14c23cf5008b569ecc51d76769673d3ed43d52b4a358b8539f"
+  },
+  "readback": {
+    "status": "COMMITTED_INDEPENDENT_READBACK_VERIFIED",
+    "observed_at": "2026-10-02T00:59:22.478713+00:00",
+    "field_assertions": 2223,
+    "membership_counts": {
+      "v0.8.2": {
+        "actor_ids": 11,
+        "claim_ids": 92,
+        "voyage_ids": 8,
+        "geometry_ids": 61,
+        "source_version_ids": 335,
+        "spatial_entity_ids": 70,
+        "coverage_assessment_ids": 99,
+        "research_target_result_ids": 26
+      },
+      "v0.8.2-public-mvp-v1": {
+        "actor_ids": 0,
+        "claim_ids": 70,
+        "voyage_ids": 0,
+        "geometry_ids": 61,
+        "source_version_ids": 155,
+        "spatial_entity_ids": 68,
+        "coverage_assessment_ids": 0,
+        "research_target_result_ids": 0
+      }
+    },
+    "artifact_counts": {
+      "v0.8.2": 9,
+      "v0.8.2-public-mvp-v1": 2
+    },
+    "governed_state_matches": {
+      "actor_ids": true,
+      "claim_ids": true,
+      "voyage_ids": true,
+      "cartography": true,
+      "geometry_ids": true,
+      "source_version_ids": true,
+      "spatial_entity_ids": true,
+      "coverage_assessment_ids": true,
+      "research_target_result_ids": true
+    },
+    "preserved_legacy_registry": {
+      "audit.release_actor": {
+        "count": 33,
+        "sha256": "6d201df2b9248291471fef53f8745175041b27deccae3bedb7b5a570a149d825"
+      },
+      "audit.release_claim": {
+        "count": 462,
+        "sha256": "57be5bbc11764795bd457c60bced618af0d6702614bbdac8daf75c4dea92f8b3"
+      },
+      "audit.release_voyage": {
+        "count": 24,
+        "sha256": "7f84f26e0d5b87f42ff2d234199ce08d050363495703c69550af4f1da84970f2"
+      },
+      "audit.release_artifact": {
+        "count": 40,
+        "sha256": "6d86f5bf6158ef82092c886b9ce5ed0c09d0ae33ac2b763489d537678404a543"
+      },
+      "audit.release_geometry": {
+        "count": 349,
+        "sha256": "217a533d3ed60b80c56dddaa653c50402d8281c7a5cf0ffff509643a353fd9b6"
+      },
+      "audit.release_manifest": {
+        "count": 11,
+        "sha256": "3e0be74cebaa583c04eaf921ad68cfab9013a3166be4be7f21ce88b79666af04"
+      },
+      "audit.release_source_version": {
+        "count": 1289,
+        "sha256": "f54589723d6d3eb2f4f7af16ff88998426f2e2e724fd6ce6dd21a71892a88efb"
+      },
+      "audit.release_spatial_entity": {
+        "count": 361,
+        "sha256": "5b9ebf18212b758a6b490cb79d0fd426728605ba784473a81c7dfdd582a4ffa5"
+      },
+      "audit.release_coverage_assessment": {
+        "count": 297,
+        "sha256": "218a8ec772b7f66ed0440495d4c460e3c2916de87285da69451c39583503ae35"
+      },
+      "audit.release_research_target_result": {
+        "count": 78,
+        "sha256": "34ea25e447f8eec8160533a881ace2844abd4518e55b599d1f1d7cb80b389f51"
+      }
+    },
+    "public_channel": {
+      "note": "Exact 65 requested cases; verified immutable v0.8.2 payload; rollback v0.8.1-public-mvp-v2",
+      "updated_at": "2026-10-02T00:57:45.219765+00:00",
+      "updated_by": "sponsor-authorized D125 release integration",
+      "channel_code": "public_mvp_preview",
+      "release_version": "v0.8.2-public-mvp-v1"
+    },
+    "published_manifests": {
+      "v0.8.2": {
+        "schema_version": "0034",
+        "status": "published",
+        "published_at": null
+      },
+      "v0.8.2-public-mvp-v1": {
+        "schema_version": "0034",
+        "status": "published",
+        "published_at": null
+      }
+    },
+    "raw_readback_sha256": "df7f8f463662e12f468285b7af60cc56b12e094a8bf636648462daf042c354c8"
+  },
+  "public_api": {
+    "api": {
+      "release_version": "v0.8.2",
+      "materialization_id": "v0.8.2-public-mvp-v1",
+      "canonical": true,
+      "place_count": 65,
+      "claim_count": 70,
+      "case_count": 65,
+      "payload_sha256": "607157c2a23e296a2d955c0532a806909790f8934beb3fd57d261b6f30302371",
+      "payload_bytes": 250809,
+      "etag": "W/\"607157c2a23e296a2d955c0532a806909790f8934beb3fd57d261b6f30302371\"",
+      "materialization_header": "v0.8.2-public-mvp-v1",
+      "neutral_land": "natural-earth-ne_10m_land-v5.1.1-ca96624",
+      "claim_dimensions": {
+        "external_participation": 3,
+        "territorial_practice": 66,
+        "legal_event": 1
+      }
+    },
+    "observed_at": "2026-10-02T00:59:46.059598+00:00"
+  },
+  "map_coverage": {
+    "total_cases": 65,
+    "polygon_cases": [
+      "Achaemenid Persis/Elam royal economy",
+      "Baekje",
+      "Hittite central Anatolia",
+      "Mauryan Empire (318–185 BCE mapped slice)",
+      "Neo-Babylonian Babylonia",
+      "New Kingdom Egypt",
+      "Qin Empire (221–209 BCE slice)",
+      "Roman Empire — early Principate",
+      "Western Han China (202 BCE–5 CE slice)"
+    ],
+    "point_only_cases": [
+      "Angkor",
+      "Asante",
+      "Bukhara",
+      "Early eighth-century Sogdiana",
+      "Imerina",
+      "Istanbul",
+      "Kanesh/Kültepe Old Assyrian colony",
+      "Khiva",
+      "Kingdom of Kongo",
+      "Mycenaean Greece (Pylos/Knossos)",
+      "Samarkand",
+      "Sitka",
+      "Songo Mnara (15th-century Swahili stone town)",
+      "Timbuktu",
+      "Tōdai-ji (Nara-period temple institution)",
+      "Zanzibar Islands (Unguja and Pemba)",
+      "Zhengzhou Shang City (Early Shang)"
+    ],
+    "unmapped_cases": [
+      "Aksumite kingdom (late-antique core and dependencies)",
+      "Andaman Islands communities (analytical region)",
+      "Anglo-Saxon England / Northern Europe",
+      "Brazil",
+      "Carolingian Empire",
+      "Classical Athens",
+      "DPRK",
+      "Dahomey",
+      "Europe and Central Asia, contemporary",
+      "Funan (Chinese-source lower Mekong polity)",
+      "Garshana construction project (Ur III)",
+      "Goryeo",
+      "Hawaiian Islands (late precontact/contact-era social system)",
+      "Iraq/Syria under ISIL, especially Yazidi population from 2014",
+      "Late Antique Bactria",
+      "Late Period Egypt (664–330 BCE)",
+      "Late Proto-Indo-European / Early Bronze Age Europe",
+      "Middle Ganga valley state-transition zone",
+      "Mycenaean mainland Linear B archives",
+      "Nazi Germany and occupied Europe, 1933–1945",
+      "Neo-Assyrian Nineveh",
+      "Neo-Babylonian temple households",
+      "Old Babylonian Uruk",
+      "Ottoman Middle East",
+      "People's Republic of China, early decades",
+      "Peruvian Amazon",
+      "Pre-Angkor Cambodian epigraphic region (7th century)",
+      "Pre-Islamic South Arabia (first-millennium epigraphic corpus)",
+      "Punic Carthage",
+      "Sasanian Iran",
+      "Shang China",
+      "Silla Village Register villages (Sŏwŏn-gyŏng area)",
+      "Southern Maya Lowlands (Late Classic captive-taking corpus)",
+      "Soviet Kazakhstan / Central Asia",
+      "Swahili coast (medieval analytical region)",
+      "Taghaza",
+      "Vedic-period South Asia",
+      "Viking/Rūs mobile trade and raiding network (analytical frame)",
+      "Xinjiang / China"
+    ],
+    "nonoverlapping_geometry_cases": [],
+    "counts": {
+      "polygon_cases": 9,
+      "point_only_cases": 17,
+      "unmapped_cases": 39,
+      "nonoverlapping_geometry_cases": 0
+    },
+    "geometry_records": 61,
+    "nonnull_geometry_records": 57
+  },
+  "geometry_limits": [
+    "65 cases are not 65 mapped cases. 26 have a released non-null map representation: nine have polygon assets and 17 have only points. 39 have no representation.",
+    "Counts cover all case horizons; the selected year generally has fewer active mapped cases.",
+    "57 non-null geometry records include multiple snapshots for some cases; records must not be counted as cases.",
+    "Navigation and evidence-locus points do not establish territorial practice extent.",
+    "Three inherited unbound points remain withheld; old releases remain immutable."
+  ],
+  "browser_observations": [
+    "Public site badge v0.8.2 / 65 cases verified after cutover.",
+    "Samarkand 1404 evidence card exposes bounded primary and specialist source locators and unassigned P-level.",
+    "Viking/Rus 900 is labelled external participation and unresolved geometry.",
+    "Earlier release-head browser CI verified legacy live API and v0.7.0 API/static-fallback behaviour."
+  ],
+  "completion_note": "Final receipt/UI commit triggers a fresh GitHub Pages snapshot of the now-published API. Its post-deployment payload hash is checked separately."
+}
