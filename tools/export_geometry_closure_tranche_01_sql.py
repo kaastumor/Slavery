@@ -84,13 +84,17 @@ def render(review, plan, *, revision, authorized=False, unresolved_id=UNRESOLVED
     dahomey = next(v for k, v in resolved.items() if '/dahomey/' in k)
     claim_ids = literal([r['claim_id'] for r in resolved.values()])
     urls = literal(list(production.CLOSURE_SOURCE_URLS))
-    membership_checks = ' and '.join(
-        f"""exists(select 1 from audit.release_claim
-             where release_version={literal(version)}
-               and claim_id={literal(claim_id)}::uuid
-               and object_sha256={literal(object_sha)}
-               and capture_status={literal(capture_status)})"""
-        for version, claim_id, object_sha, capture_status in expected_release_memberships
+    membership_checks = (
+        ' and '.join(
+            f"""exists(select 1 from audit.release_claim
+                 where release_version={literal(version)}
+                   and claim_id={literal(claim_id)}::uuid
+                   and object_sha256={literal(object_sha)}
+                   and capture_status={literal(capture_status)})"""
+            for version, claim_id, object_sha, capture_status in expected_release_memberships
+        )
+        if expected_release_memberships
+        else 'true'
     )
     body += [require("not exists(select 1 from atlas.spatial_entity where canonical_name='Jakin (Godomey)')", 'Jakin identity collision'),
              require(f'not exists(select 1 from atlas.source_version where url_or_identifier=any({urls}::text[]))', 'new source URL collision'),
