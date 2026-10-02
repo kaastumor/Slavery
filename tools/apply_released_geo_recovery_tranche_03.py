@@ -71,6 +71,8 @@ def git_blob_sha(path: Path) -> str:
         data = path.read_bytes()
     except OSError as exc:
         raise ClosureError(f"cannot read review artifact for blob verification: {path}") from exc
+    # Normalize checkout line endings so the hash matches Git's canonical blob bytes.
+    data = data.replace(b"\r\n", b"\n")
     header = f"blob {len(data)}\0".encode("ascii")
     return hashlib.sha1(header + data).hexdigest()
 
