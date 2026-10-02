@@ -1,6 +1,11 @@
 {
   "archive_ref": null,
-  "checkpoint": null,
+  "checkpoint": {
+    "disposition": "SEE_CANONICAL_OWNER",
+    "next_action": "Review PR #410; after fresh governed DB collision/source/release preflight only, prepare a disposable rollback-proven rehearsal. Keep #370/#379 and production/release/serving gates untouched.",
+    "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5945842639",
+    "verification": "focused unittest 3/3, JSON parse, diff-check and PR head/base/draft readback PASS; no DB, release, serving, merge or production effect"
+  },
   "contract": "AUTOMATION_CONTROL_V2_20261001",
   "effects": [
     {
@@ -19,7 +24,7 @@
   "failure_count": 0,
   "failure_key": null,
   "generation": 9,
-  "lease_until": 1790918302,
+  "lease_until": null,
   "operation": {
     "expected_head": "494ea31f1d259653c02b14ac64890eaa561de4e0",
     "id": "ATLAS100-NINEVEH-GEO-REVIEW-CHECKPOINT-01",
@@ -28,7 +33,7 @@
     "status": "VERIFIED",
     "target_ref": "issue/369"
   },
-  "owner_attempt": "ATLAS100-PROC-20261002T0442Z-NINEVEH-REVIEW-01",
+  "owner_attempt": null,
   "receipts": [
     {
       "at": 1790863500,
@@ -85,6 +90,13 @@
       "key": "d3afbfb9002ea4bb16afed61e0ba37e83ae9802d1f7564a6f8f773d2bd5fae08",
       "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5945278683",
       "state": "COMPLETE"
+    },
+    {
+      "at": 1790917420,
+      "attempt": "ATLAS100-PROC-20261002T0442Z-NINEVEH-REVIEW-01",
+      "key": "4506e3f4b2ef0de787e84de24ef4522255ff37b63b9e496224aab4383a053e09",
+      "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5945842639",
+      "state": "COMPLETE"
     }
   ],
   "repository": "kaastumor/Slavery",
@@ -95,6 +107,6 @@
     "name": "prepare-nineveh-released-geometry-review",
     "task": 369
   },
-  "state": "ACTIVE",
-  "updated_at": 1790917400
+  "state": "COMPLETE",
+  "updated_at": 1790917420
 }
