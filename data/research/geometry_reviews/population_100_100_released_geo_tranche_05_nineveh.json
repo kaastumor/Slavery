@@ -1,0 +1,117 @@
+{
+  "schema": "historical-slavery-atlas-100-100-released-geo-recovery-review-v1",
+  "issue": 369,
+  "parent_issue": 369,
+  "reviewed_against_main": "494ea31f1d259653c02b14ac64890eaa561de4e0",
+  "status": "REVIEW_COMPLETE_GOVERNED_DB_PREFLIGHT_REQUIRED",
+  "scope": "review-only released-case site locator proposal; no claim, P-level, publication, database, release-membership or serving-channel mutation",
+  "released_case": {
+    "spatial_entity_id": "6b3fd57f-4d30-44d2-9d15-427e41b6cd47",
+    "canonical_name": "Neo-Assyrian Nineveh",
+    "display_name": "Neo-Assyrian Nineveh",
+    "entity_type_code": "city",
+    "claim_id": "8077abf3-f506-4bb1-908a-4aa5abd12369",
+    "claim_kind": "territorial_practice",
+    "practice_type": "slavery_enslavement",
+    "from_year": -695,
+    "to_year": -695,
+    "practice_level": null,
+    "publication_status": "unpublished",
+    "release_version": "v0.8.2",
+    "current_geometry_count": 0
+  },
+  "historical_evidence_boundary": {
+    "bounded_proposition": "A dated Neo-Assyrian sale transaction and specialist legal interpretation support the already-released slavery claim at Nineveh in 695 BCE.",
+    "geometry_dependence": "The Pleiades record identifies the historical city site only and is independent of the claim's historical evidence sources.",
+    "abstentions": [
+      "The point does not establish the territorial extent or intensity of slavery.",
+      "The point is not the exact findspot, archive room, household or transaction location for SAA 06 128.",
+      "The Pleiades representative point and OpenStreetMap-derived perimeter are not substituted for the selected source-native DARE point.",
+      "No P-level, publication status, release membership or serving-channel change is proposed."
+    ]
+  },
+  "candidate": {
+    "disposition": "ACCEPTED_STAGING",
+    "semantic_role": "site_navigation_locator",
+    "target_entity_action": "augment_existing_released_spatial_entity",
+    "geometry": {
+      "from_year": -695,
+      "to_year": -695,
+      "accuracy_status": "specialist",
+      "geometry_role": "site_navigation_locator",
+      "geometry_source_native_id": "pleiades-874621-dare-location",
+      "resolution_method": "Use the source-native DARE point published by Pleiades for Nineveh/Ninos, clipped to the released claim interval. This is a historical-city site locator only, not a practice extent or exact transaction locus.",
+      "geojson": {
+        "type": "Point",
+        "coordinates": [
+          43.155403,
+          36.366841
+        ]
+      },
+      "review_status": "reviewed"
+    },
+    "geometry_source": {
+      "title": "Nineveh/Ninos — DARE Location",
+      "author_or_institution": "Pleiades; Digital Atlas of the Roman Empire",
+      "source_type": "specialist_historical_gazetteer",
+      "source_classification": "geometry_reference",
+      "place_uri": "https://pleiades.stoa.org/places/874621",
+      "location_uri": "https://pleiades.stoa.org/places/874621/dare-location",
+      "source_native_place_id": "874621",
+      "source_native_location_id": "dare-location",
+      "source_native_coordinate": [
+        43.155403,
+        36.366841
+      ],
+      "source_native_interval": {
+        "start": -750,
+        "end": 640
+      },
+      "source_native_accuracy_m": 10,
+      "source_native_accuracy_uri": "https://pleiades.stoa.org/features/metadata/dare-3",
+      "provenance": "Digital Atlas of the Roman Empire (2012-10-15)",
+      "snapshot_repository": "isawnyu/pleiades.datasets",
+      "snapshot_commit": "a7b17570094a6544017290cbb6d780d2769dd112",
+      "snapshot_path": "data/json/8/7/4/6/874621.json",
+      "snapshot_blob_sha": "646d909e88c4913213eb2d00fdf70188a1c67ca8",
+      "record_last_modified": "2026-02-17T23:05:04Z",
+      "license_status": "Creative Commons Attribution 3.0 (CC BY 3.0)",
+      "independence_notes": "Geometry-only authority; it does not depend on the SAA transaction edition or Radner's legal interpretation.",
+      "reliability_limitations": "The selected DARE coordinate is a scholarly representative point for Nineveh. It does not define the archaeological perimeter, city boundary, transaction locus or slavery-practice extent."
+    }
+  },
+  "rejected_alternatives": [
+    {
+      "candidate": "Pleiades place-level reprPoint [43.159936889690734, 36.36076152375775]",
+      "reason": "Derived representative point across published locations; less source-native than the dated DARE location."
+    },
+    {
+      "candidate": "Pleiades OpenStreetMap-derived archaeological-site LineString/perimeter",
+      "reason": "Modern OSM archaeological feature with no historical interval; it must not become a historical city or practice polygon."
+    },
+    {
+      "candidate": "Pleiades CIGS location [43.1621, 36.3583]",
+      "reason": "Useful corroborating locator but lacks the selected location's explicit source-native temporal interval."
+    }
+  ],
+  "governed_db_preflight": {
+    "status": "NOT_RUN_RUNTIME_ACCESS_UNAVAILABLE",
+    "required_before_rehearsal": [
+      "Confirm the released spatial entity and claim IDs still match governed PostgreSQL.",
+      "Confirm no geometry or equivalent Pleiades source-version row was added concurrently.",
+      "Confirm exact source/version and target-geometry collision counts are zero.",
+      "Preserve immutable v0.8.2 membership and all production, release and serving gates."
+    ]
+  },
+  "qc": {
+    "historical_practice_polygons_added": 0,
+    "historical_claim_delta": 0,
+    "claim_source_delta": 0,
+    "publication_status_changes": 0,
+    "p_level_changes": 0,
+    "release_membership_delta": 0,
+    "serving_channel_delta": 0,
+    "next_gate": "FRESH_GOVERNED_DB_COLLISION_PREFLIGHT_THEN_DISPOSABLE_REHEARSAL_ONLY"
+  },
+  "release_effect": "none; v0.8.2 remains immutable"
+}
