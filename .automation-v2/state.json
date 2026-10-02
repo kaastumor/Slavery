@@ -2,7 +2,12 @@
   "archive_ref": null,
   "checkpoint": null,
   "contract": "AUTOMATION_CONTROL_V2_20261001",
-  "effects": [],
+  "effects": [
+    {
+      "id": "ATLAS100-NINEVEH-GEO-REVIEW-BRANCH-01",
+      "output_ref": "https://github.com/kaastumor/Slavery/commit/d56e1086fe477682aa169b2470c807a80c4c37fe"
+    }
+  ],
   "failure_count": 0,
   "failure_key": null,
   "generation": 9,
@@ -11,8 +16,8 @@
     "expected_head": "494ea31f1d259653c02b14ac64890eaa561de4e0",
     "id": "ATLAS100-NINEVEH-GEO-REVIEW-BRANCH-01",
     "kind": "branch_edit",
-    "output_ref": null,
-    "status": "INTENDED",
+    "output_ref": "https://github.com/kaastumor/Slavery/commit/d56e1086fe477682aa169b2470c807a80c4c37fe",
+    "status": "VERIFIED",
     "target_ref": "refs/heads/atlas100/nineveh-geometry-review"
   },
   "owner_attempt": "ATLAS100-PROC-20261002T0442Z-NINEVEH-REVIEW-01",
@@ -83,5 +88,5 @@
     "task": 369
   },
   "state": "ACTIVE",
-  "updated_at": 1790916900
+  "updated_at": 1790917050
 }
