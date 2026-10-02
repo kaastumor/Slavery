@@ -373,7 +373,7 @@ def run_production(
                  from audit.release_channel
                 where channel_code='public_mvp_preview'"""
         ).fetchone()
-        if channel != ("public_mvp_preview", "v0.8.1-public-mvp-v2"):
+        if channel != ("public_mvp_preview", "v0.8.2-public-mvp-v1"):
             raise ClosureError("production augmentation altered public serving channel")
 
     return {
