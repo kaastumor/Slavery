@@ -29,12 +29,12 @@ def inputs(revision):
     if sha256_file(directory/'atlas-data.json')!=manifest['payload_sha256'] or manifest['canonical_source_authority_sha256']!=sha256_file(release/'authority-state.json'):
         raise ValueError('serving payload/source checksum drift')
     claims=sorted({c['claim_id'] for p in payload['places'] for c in p['claims']})
-    spatial=sorted({p['spatial_entity_id'] for p in payload['places']})
     geometry=sorted({g['geometry_id'] for p in payload['places'] for g in p['geometries']})
+    spatial=sorted({p['spatial_entity_id'] for p in payload['places']}|{data['authority']['objects']['geometries'][gid]['spatial_entity_id'] for gid in geometry})
     sources=sorted({s['source_version_id'] for p in payload['places'] for c in p['claims'] for s in c['sources']}|{data['authority']['objects']['geometries'][gid]['geometry_source_version_id'] for gid in geometry if data['authority']['objects']['geometries'][gid]['geometry_source_version_id']})
     membership={k:[] for k in data['authority']['membership']}
     membership.update(claim_ids=claims,spatial_entity_ids=spatial,geometry_ids=geometry,source_version_ids=sources)
-    if len(spatial)!=65 or len(claims)!=70 or any(not set(ids)<=set(data['authority']['membership'][key]) for key,ids in membership.items()):
+    if len(payload['places'])!=65 or len(spatial)!=68 or len(claims)!=70 or any(not set(ids)<=set(data['authority']['membership'][key]) for key,ids in membership.items()):
         raise ValueError('serving exact membership mismatch')
     dbmanifest={'purpose':'public_mvp_preview','canonical':False,'canonical_source_release':'v0.8.2','display_scope':payload['display_scope'],**membership,'source_membership_sha256':data['authority']['membership_sha256'],
         'serving_materialization':{'materialization_id':SERVING,'canonical_source_release':'v0.8.2','canonical_source_release_manifest_sha256':manifest['canonical_source_release_manifest_sha256'],'payload_sha256':manifest['payload_sha256'],'payload_bytes':manifest['payload_bytes'],'materialization_manifest_sha256':sha256_file(directory/'materialization-manifest.json')},'release_dimensions':payload['release_dimensions']}

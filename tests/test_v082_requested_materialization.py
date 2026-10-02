@@ -21,6 +21,9 @@ class RequestedMaterializationTests(unittest.TestCase):
         selection=exporter.load(exporter.ROOT/'release/selections/v0.8.2-requested-corpus.json')
         self.assertTrue(geometry_ids.isdisjoint(selection['geometry_selection']['withheld_inherited_geometry_ids']))
         self.assertEqual(geometry_ids,set(authority['membership']['geometry_ids']))
+        canonical,serving=exporter.inputs('UNIT_TEST')
+        owners={authority['objects']['geometries'][gid]['spatial_entity_id'] for gid in geometry_ids}
+        self.assertTrue(owners<=set(serving['authority']['membership']['spatial_entity_ids']))
 
     def test_export_is_inert_and_preflight_mismatch_rejected(self):
         receipt=exporter.load(exporter.ROOT/'data/research/release_candidates/v082_requested_publication_preflight.json')
