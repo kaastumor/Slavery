@@ -11,12 +11,14 @@ REVIEW = (
     / "geometry_reviews"
     / "population_100_100_released_geo_tranche_05_nineveh.json"
 )
+SERVING = ROOT / "data" / "serving" / "v0.8.2-public-mvp-v1" / "atlas-data.json"
 
 
 class NinevehReleasedGeometryReviewTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.review = json.loads(REVIEW.read_text(encoding="utf-8"))
+        cls.serving = json.loads(SERVING.read_text(encoding="utf-8"))
 
     def test_exact_released_identity_is_preserved(self) -> None:
         case = self.review["released_case"]
@@ -28,6 +30,32 @@ class NinevehReleasedGeometryReviewTests(unittest.TestCase):
         self.assertEqual((case["from_year"], case["to_year"]), (-695, -695))
         self.assertIsNone(case["practice_level"])
         self.assertEqual(case["current_geometry_count"], 0)
+
+    def test_released_identity_matches_immutable_v082_materialization(self) -> None:
+        case = self.review["released_case"]
+        places = [
+            place
+            for place in self.serving["places"]
+            if place["spatial_entity_id"] == case["spatial_entity_id"]
+        ]
+        self.assertEqual(len(places), 1)
+        place = places[0]
+        self.assertEqual(place["display_name"], case["display_name"])
+        self.assertEqual(place["entity_type_code"], case["entity_type_code"])
+        self.assertEqual(place["geometries"], [])
+
+        claims = [claim for claim in place["claims"] if claim["claim_id"] == case["claim_id"]]
+        self.assertEqual(len(claims), 1)
+        claim = claims[0]
+        for field in (
+            "claim_kind",
+            "practice_type",
+            "from_year",
+            "to_year",
+            "practice_level",
+            "publication_status",
+        ):
+            self.assertEqual(claim[field], case[field])
 
     def test_candidate_is_a_source_pinned_point_only(self) -> None:
         candidate = self.review["candidate"]
@@ -47,6 +75,8 @@ class NinevehReleasedGeometryReviewTests(unittest.TestCase):
             source["snapshot_blob_sha"], "646d909e88c4913213eb2d00fdf70188a1c67ca8"
         )
         self.assertEqual(source["source_native_interval"], {"start": -750, "end": 640})
+        self.assertLessEqual(source["source_native_interval"]["start"], geometry["from_year"])
+        self.assertGreaterEqual(source["source_native_interval"]["end"], geometry["to_year"])
 
     def test_review_is_fail_closed_and_has_no_release_effect(self) -> None:
         self.assertEqual(
