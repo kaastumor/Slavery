@@ -1,6 +1,11 @@
 {
   "archive_ref": null,
-  "checkpoint": null,
+  "checkpoint": {
+    "disposition": "SEE_CANONICAL_OWNER",
+    "next_action": "Maintainer review/merge of PR #410 only; after any merge, reconcile main. Before disposable geometry rehearsal, run fresh governed DB collision/source/release preflight.",
+    "receipt_ref": "https://github.com/kaastumor/Slavery/pull/410",
+    "verification": "exact-head checks and foundation jobs PASS; focused unittest 4/4 and immutable-v0.8.2 cross-check PASS; PR ready/unmerged readback PASS"
+  },
   "contract": "AUTOMATION_CONTROL_V2_20261001",
   "effects": [
     {
@@ -15,7 +20,7 @@
   "failure_count": 0,
   "failure_key": null,
   "generation": 11,
-  "lease_until": 1790925094,
+  "lease_until": null,
   "operation": {
     "expected_head": "329e82de72724ea8e2d09c5bc5c2476ef8e49fa6",
     "id": "ATLAS100-PR410-MARK-READY-01",
@@ -24,7 +29,7 @@
     "status": "VERIFIED",
     "target_ref": "pull/410"
   },
-  "owner_attempt": "ATLAS100-PROC-20261002T0641Z-PR410-REVIEW-02",
+  "owner_attempt": null,
   "receipts": [
     {
       "at": 1790863500,
@@ -95,6 +100,13 @@
       "key": "7049c2eae26cc04c4676112f44d1dc76a0a0d67965feba44184a085f7b8e925c",
       "receipt_ref": "https://github.com/kaastumor/Slavery/pull/410",
       "state": "CHECKPOINTED"
+    },
+    {
+      "at": 1790923373,
+      "attempt": "ATLAS100-PROC-20261002T0641Z-PR410-REVIEW-02",
+      "key": "7049c2eae26cc04c4676112f44d1dc76a0a0d67965feba44184a085f7b8e925c",
+      "receipt_ref": "https://github.com/kaastumor/Slavery/pull/410",
+      "state": "COMPLETE"
     }
   ],
   "repository": "kaastumor/Slavery",
@@ -105,6 +117,6 @@
     "name": "review-pr-410-nineveh-geometry",
     "task": 410
   },
-  "state": "ACTIVE",
-  "updated_at": 1790923371
+  "state": "COMPLETE",
+  "updated_at": 1790923373
 }
