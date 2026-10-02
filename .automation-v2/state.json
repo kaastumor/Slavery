@@ -1,31 +1,14 @@
 {
   "archive_ref": null,
-  "checkpoint": {
-    "disposition": "SEE_CANONICAL_OWNER",
-    "next_action": "Release integration owner completes D-121 bindings, authority/dependency closure, typed browser checks, package checksums and CAS cutover. Scheduled identity must not release, merge or serve; #370/#379 remain separate.",
-    "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5942802534",
-    "verification": "main receipt/selection/readback PASS; deltas exact; CI 36940962150 PASS; comment readback PASS; no DB/merge/release effect; telemetry UNKNOWN"
-  },
+  "checkpoint": null,
   "contract": "AUTOMATION_CONTROL_V2_20261001",
-  "effects": [
-    {
-      "id": "ATLAS100-D124-ADMISSION-POSTMERGE-CHECKPOINT-01",
-      "output_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5942802534"
-    }
-  ],
+  "effects": [],
   "failure_count": 0,
   "failure_key": null,
-  "generation": 4,
-  "lease_until": null,
-  "operation": {
-    "expected_head": "811e7d91a341ba8ed6b209817842484490d3fa54",
-    "id": "ATLAS100-D124-ADMISSION-POSTMERGE-CHECKPOINT-01",
-    "kind": "issue_checkpoint",
-    "output_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5942802534",
-    "status": "VERIFIED",
-    "target_ref": "issue/369"
-  },
-  "owner_attempt": null,
+  "generation": 5,
+  "lease_until": 1790903605,
+  "operation": null,
+  "owner_attempt": "ATLAS100-PROC-20261002T0041Z-V082-POSTMERGE-01",
   "receipts": [
     {
       "at": 1790863500,
@@ -59,11 +42,11 @@
   "repository": "kaastumor/Slavery",
   "schema": 2,
   "stage": {
-    "input_revision": "811e7d91a341ba8ed6b209817842484490d3fa54",
-    "key": "be72d226ac7325fe70adfe3d584d04639c63a8597af22a9d530ccc5d4e165175",
-    "name": "reconcile-five-case-admission-postmerge",
+    "input_revision": "1492f95fa24d49ef9cfdb4ffc48a9fb2c0250766",
+    "key": "f6fd821cae468fc0da78e4f133ca8277963fba36161f3b4fc114b944dbc9cdb7",
+    "name": "reconcile-v082-package-postmerge",
     "task": 369
   },
-  "state": "COMPLETE",
-  "updated_at": 1790898123
+  "state": "CLAIMED",
+  "updated_at": 1790901805
 }
