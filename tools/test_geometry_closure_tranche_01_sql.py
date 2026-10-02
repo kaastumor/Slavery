@@ -33,8 +33,11 @@ def run(conn):
         unresolved_id = conn.execute("select geometry_id::text from atlas.geometry where spatial_entity_id=%s and geom is null and accuracy_status='unresolved'",
                                      (dahomey['spatial_entity_id'],)).fetchone()[0]
         statement = exporter.render(review, plan, revision='DISPOSABLE_SQL_FIXTURE',
-                                    authorized=True, unresolved_id=unresolved_id)
-        inert = exporter.render(review, plan, revision='DISPOSABLE_SQL_FIXTURE', unresolved_id=unresolved_id)
+                                    authorized=True, unresolved_id=unresolved_id,
+                                    expected_release_memberships=[])
+        inert = exporter.render(review, plan, revision='DISPOSABLE_SQL_FIXTURE',
+                                unresolved_id=unresolved_id,
+                                expected_release_memberships=[])
         expect_rejection(conn, inert, '#370 explicit production authorization absent')
         controls.append('unauthorized_export_rejected')
         wrong_id = statement.replace(resolved[next(iter(resolved))]['claim_id'],
