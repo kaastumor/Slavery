@@ -47,7 +47,12 @@ def load_inputs():
     return rehearsal.load_review(), production.load_plan(), production.load_rehearsal_receipt()
 
 
-def render(review, plan, *, revision, authorized=False, unresolved_id=UNRESOLVED_ID):
+def render(review, plan, *, revision, authorized=False, unresolved_id=UNRESOLVED_ID, expected_release_memberships=None):
+    expected_release_memberships = (
+        production.EXPECTED_RELEASE_MEMBERSHIPS
+        if expected_release_memberships is None
+        else expected_release_memberships
+    )
     resolved = {r['case_key']: {'claim_id': r['production_claim_id'],
                                'spatial_entity_id': r['production_spatial_entity_id']}
                 for r in plan['production_cases']}
@@ -85,12 +90,12 @@ def render(review, plan, *, revision, authorized=False, unresolved_id=UNRESOLVED
                and claim_id={literal(claim_id)}::uuid
                and object_sha256={literal(object_sha)}
                and capture_status={literal(capture_status)})"""
-        for version, claim_id, object_sha, capture_status in production.EXPECTED_RELEASE_MEMBERSHIPS
+        for version, claim_id, object_sha, capture_status in expected_release_memberships
     )
     body += [require("not exists(select 1 from atlas.spatial_entity where canonical_name='Jakin (Godomey)')", 'Jakin identity collision'),
              require(f'not exists(select 1 from atlas.source_version where url_or_identifier=any({urls}::text[]))', 'new source URL collision'),
              require(f'not exists(select 1 from atlas.claim_evidence_locus where claim_id=any({claim_ids}::uuid[]))', 'existing locus links'),
-             require(f'({membership_checks}) and (select count(*) from audit.release_claim where claim_id=any({claim_ids}::uuid[]))={len(production.EXPECTED_RELEASE_MEMBERSHIPS)}', 'v0.8.2 release membership drift'),
+             require(f'({membership_checks}) and (select count(*) from audit.release_claim where claim_id=any({claim_ids}::uuid[]))={len(expected_release_memberships)}', 'v0.8.2 release membership drift'),
              require(f"""(select count(*)=1 from atlas.geometry where spatial_entity_id={literal(dahomey['spatial_entity_id'])}::uuid)
                and exists(select 1 from atlas.geometry where geometry_id={literal(unresolved_id)}::uuid
                  and spatial_entity_id={literal(dahomey['spatial_entity_id'])}::uuid
