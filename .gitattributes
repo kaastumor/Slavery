@@ -10,3 +10,7 @@
 *.zip binary
 *.dump binary
 *.bundle.json binary
+data/releases/v0.8.2/** text eol=lf
+data/serving/v0.8.2-public-mvp-v1/** text eol=lf
+data/research/release_candidates/v082_requested_corpus_authority.json text eol=lf
+supabase/functions/atlas-data/v082_payload.ts text eol=lf

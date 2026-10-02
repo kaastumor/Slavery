@@ -32,6 +32,7 @@ type SourceRef = {
 };
 
 type Claim = {
+  claim_kind?: "territorial_practice" | "legal_event" | "external_participation";
   claim_id: string;
   from_year: number | null;
   to_year: number | null;
@@ -89,6 +90,7 @@ type CartographyFabric = {
 };
 
 type ApiResponse = {
+  case_count?: number;
   status: string;
   release_version: string;
   schema_version: string;
@@ -152,8 +154,8 @@ let releaseBadgeBase = "";
 
 async function loadCoastalPreview(apiResponse: ApiResponse): Promise<void> {
   if (!coastalFitEnabled) return;
-  if (apiResponse.release_version !== "v0.8.1" ||
-      apiResponse.cartography?.content_sha256 !== coastalPreviewLandSha256) {
+  if (apiResponse.release_version !== "v0.8.1") return;
+  if (apiResponse.cartography?.content_sha256 !== coastalPreviewLandSha256) {
     coastalFitUnavailable = "Temporary coast fit unavailable for this release or land fabric; showing released geometry.";
     return;
   }
@@ -343,7 +345,7 @@ function buildEvidenceCollections(year: number): { polygons: FeatureCollection; 
   const points: Feature[] = [];
 
   for (const place of places) {
-    const claims = activeClaims(place, year);
+    const claims = activeClaims(place, year).filter((claim) => !claim.claim_kind || claim.claim_kind === "territorial_practice");
     if (claims.length === 0) continue;
 
     const geometry = geometryForYear(place, year);
@@ -420,7 +422,7 @@ function claimHtml(claim: Claim): string {
     <article class="claim-card">
       <div class="claim-heading">
         <h3>${escapeHtml(labelize(claim.practice_type))}</h3>
-        <span class="practice-level">${escapeHtml(claim.practice_level ?? "P-level unassigned")}</span>
+        <span class="practice-level">${escapeHtml(claim.claim_kind && claim.claim_kind !== "territorial_practice" ? labelize(claim.claim_kind) : claim.practice_level ?? "P-level unassigned")}</span>
       </div>
 
       <div class="claim-tags">
@@ -472,7 +474,7 @@ function renderPlace(place: Place, year: number): void {
     <div class="panel-body">
       ${claims.length
         ? claims.map(claimHtml).join("")
-        : `<div class="empty-state">No published territorial-practice claim is active here in ${formatYear(year)}.</div>`}
+        : `<div class="empty-state">No released case evidence is active here in ${formatYear(year)}.</div>`}
 
       <details class="geometry-details">
         <summary>Historical geometry</summary>
@@ -523,7 +525,8 @@ function renderOverview(year: number): void {
         const level = highestPracticeLevel(claims);
         const label = claims.map((claim) => {
           const suffix = claim.coverage_state === "disputed" ? " · disputed" : "";
-          return `${labelize(claim.practice_type)}${suffix}`;
+          const dimension = claim.claim_kind && claim.claim_kind !== "territorial_practice" ? `${labelize(claim.claim_kind)}: ` : "";
+          return `${dimension}${labelize(claim.practice_type)}${suffix}`;
         }).join(" · ");
 
         return `
@@ -538,13 +541,13 @@ function renderOverview(year: number): void {
           </button>
         `;
       }).join("")
-    : `<div class="empty-state">No published territorial-practice evidence is active for ${formatYear(year)}.</div>`;
+    : `<div class="empty-state">No released case evidence is active for ${formatYear(year)}.</div>`;
 
   panel.innerHTML = `
     <div class="panel-header">
       <div class="panel-kicker">Year overview</div>
       <h2>${formatYear(year)}</h2>
-      <div class="panel-subhead">${release?.canonical ? "Canonical-release" : "Published preview"} territorial-practice evidence active in the selected year.</div>
+      <div class="panel-subhead">${release?.canonical ? "Canonical-release" : "Published preview"} case evidence active in the selected year. Legal and network cases are labelled separately.</div>
     </div>
 
     <div class="panel-body">
@@ -801,6 +804,10 @@ async function boot(): Promise<void> {
 
     releaseBadgeBase = `${apiResponse.release_version}${apiResponse.canonical ? "" : " · preview"}${servingMode === "static_fallback" ? " · static fallback" : ""}`;
     releaseBadge.textContent = releaseBadgeBase;
+    if (apiResponse.case_count) {
+      releaseBadgeBase += ` · ${apiResponse.case_count} cases`;
+      releaseBadge.textContent = releaseBadgeBase;
+    }
     releaseBadge.classList.toggle("preview", !apiResponse.canonical);
     releaseBadge.title =
       `Schema ${apiResponse.schema_version} · ${apiResponse.data_boundary}` +

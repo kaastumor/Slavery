@@ -510,7 +510,7 @@ def write_sums(output_dir: Path) -> None:
         for filename in sorted(filenames)
     ]
     (output_dir / "SHA256SUMS.txt").write_text(
-        "\n".join(lines) + "\n", encoding="utf-8"
+        "\n".join(lines) + "\n", encoding="utf-8", newline="\n"
     )
 
 
@@ -532,17 +532,17 @@ def build_package(
     shutil.copyfile(authority_path, output_dir / AUTHORITY_FILENAME)
     shutil.copyfile(cartography_path, output_dir / CARTOGRAPHY_FILENAME)
     (output_dir / "RELEASE.md").write_text(
-        release_md(spec, authority), encoding="utf-8"
+        release_md(spec, authority), encoding="utf-8", newline="\n"
     )
-    (output_dir / "CHANGELOG.md").write_text(changelog_md(spec), encoding="utf-8")
+    (output_dir / "CHANGELOG.md").write_text(changelog_md(spec), encoding="utf-8", newline="\n")
     (output_dir / "QC_SUMMARY.md").write_text(
-        qc_md(spec, authority), encoding="utf-8"
+        qc_md(spec, authority), encoding="utf-8", newline="\n"
     )
     (output_dir / "UNRESOLVED_ISSUES.md").write_text(
-        unresolved_md(spec), encoding="utf-8"
+        unresolved_md(spec), encoding="utf-8", newline="\n"
     )
     (output_dir / "MIGRATION_RECONCILIATION.md").write_text(
-        migration_md(spec), encoding="utf-8"
+        migration_md(spec), encoding="utf-8", newline="\n"
     )
 
     manifest = build_manifest(spec, authority, output_dir)

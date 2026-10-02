@@ -5,6 +5,7 @@ import { V080_MATERIALIZATION_ID, V080_PAYLOAD, V080_PAYLOAD_SHA256 } from "./v0
 import { V080_V2_MATERIALIZATION_ID, V080_V2_PAYLOAD, V080_V2_PAYLOAD_SHA256 } from "./v080_v2_payload.ts";
 import { V081_MATERIALIZATION_ID, V081_PAYLOAD, V081_PAYLOAD_SHA256 } from "./v081_payload.ts";
 import { V081_V2_MATERIALIZATION_ID, V081_V2_PAYLOAD, V081_V2_PAYLOAD_SHA256 } from "./v081_v2_payload.ts";
+import { V082_MATERIALIZATION_ID, V082_PAYLOAD, V082_PAYLOAD_SHA256 } from "./v082_payload.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -39,6 +40,12 @@ Deno.serve(async (req) => {
     const release = releases[0];
 
     const servingMaterialization = release.manifest?.serving_materialization;
+    if (servingMaterialization?.materialization_id === V082_MATERIALIZATION_ID) {
+      if (servingMaterialization.canonical_source_release !== "v0.8.2" || servingMaterialization.payload_sha256 !== V082_PAYLOAD_SHA256) {
+        return new Response(JSON.stringify({ error: "Serving metadata does not match the immutable v0.8.2 payload" }), { status: 503, headers: { ...corsHeaders, "content-type": "application/json; charset=utf-8" } });
+      }
+      return new Response(V082_PAYLOAD, { headers: { ...corsHeaders, "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=60", "etag": `"${V082_PAYLOAD_SHA256}"`, "x-atlas-materialization": V082_MATERIALIZATION_ID } });
+    }
     if (servingMaterialization?.materialization_id === V081_V2_MATERIALIZATION_ID) {
       if (servingMaterialization.canonical_source_release !== "v0.8.1" || servingMaterialization.payload_sha256 !== V081_V2_PAYLOAD_SHA256) {
         return new Response(JSON.stringify({ error: "Serving materialization metadata does not match deployed immutable v0.8.1 v2 payload" }), { status: 503, headers: { ...corsHeaders, "content-type": "application/json; charset=utf-8" } });

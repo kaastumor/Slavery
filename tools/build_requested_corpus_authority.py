@@ -126,7 +126,7 @@ def build(snapshot_dir, source_git_sha):
     state={'bundle_schema':BUNDLE_SCHEMA,'schema_version':'0034','membership':membership,'object_digests':digests,'cartography_sha256':sha256_value(cartography)}
     result={'bundle_schema':BUNDLE_SCHEMA,'candidate_sha256':sha256_value(selection),'source_git_sha':source_git_sha,
         'release':{'release_version':'v0.8.2-requested-corpus-authority-v1','schema_version':'0034','canonical':False,'purpose':'canonical_research_state_proof',
-        'canonical_predecessor_version':'v0.8.1','canonical_predecessor_artifact_sha256':hashlib.sha256((ROOT/'data/releases/v0.8.1/manifest.json').read_bytes()).hexdigest(),
+        'canonical_predecessor_version':'v0.8.1','canonical_predecessor_artifact_sha256':hashlib.sha256((ROOT/'data/releases/v0.8.1/manifest.json').read_bytes().replace(b'\r\n',b'\n')).hexdigest(),
         'reviewed_candidate_id':'v0.8.2-requested-48-12-5',
         'changelog':'Exact requested corpus: preserve 75 predecessor claims; add 17 reviewed claims representing 13 territorial, one legal and three external cases. Preserve bounded Mycenaean and Sogdiana evidence-locus augmentations.',
         'qc_summary':'65 requested case slots (61 territorial, one legal, three external); exact IDs and source closure; no new P-levels; verified predecessor objects and geometry bytes; neutral cartography unchanged.',

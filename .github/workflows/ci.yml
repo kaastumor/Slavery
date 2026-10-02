@@ -105,6 +105,9 @@ jobs:
       - name: Gate 3 fresh-database logical recovery
         run: bash ./scripts/db-test-gate3-logical-recovery.sh
 
+      - name: Exact v0.8.2 registration rehearsal
+        run: bash ./scripts/db-test-v082-requested-publication.sh
+
       - name: Prototype map sanity
         run: |
           python -m json.tool prototype/map/data/world-land.geojson >/dev/null
