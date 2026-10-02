@@ -71,6 +71,8 @@ def git_blob_sha(path: Path) -> str:
         data = path.read_bytes()
     except OSError as exc:
         raise ClosureError(f"cannot read review artifact for blob verification: {path}") from exc
+    # Normalize checkout line endings so the hash matches Git's canonical blob bytes.
+    data = data.replace(b"\r\n", b"\n")
     header = f"blob {len(data)}\0".encode("ascii")
     return hashlib.sha1(header + data).hexdigest()
 
@@ -373,7 +375,7 @@ def run_production(
                  from audit.release_channel
                 where channel_code='public_mvp_preview'"""
         ).fetchone()
-        if channel != ("public_mvp_preview", "v0.8.1-public-mvp-v2"):
+        if channel != ("public_mvp_preview", "v0.8.2-public-mvp-v1"):
             raise ClosureError("production augmentation altered public serving channel")
 
     return {

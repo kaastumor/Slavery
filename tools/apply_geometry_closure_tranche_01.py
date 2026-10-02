@@ -47,6 +47,15 @@ CLOSURE_SOURCE_URLS = (
     "https://geographic.org/geographic_names/name.php?c=mali&fid=3915&uni=-1595671",
 )
 
+EXPECTED_RELEASE_MEMBERSHIPS = [
+    ("v0.8.2", "1567b140-eeba-4b32-b37d-f31dcb35e1dd", "ae657d3350163b988ef9a502bf1202112ec807f2ccce410053c7b7f1b10df164", "captured_at_release"),
+    ("v0.8.2", "9d1ccd8e-ba6d-4dbe-aea8-6d3f2b98942c", "8d6c0fd554a4d5b74f2681086a2c0900b5f5d407c19499d81b4dbc85ccfffd3b", "captured_at_release"),
+    ("v0.8.2", "9f5397c7-8b7b-4218-ad10-b85abf56eae8", "7a5d4fe4af98b4635d69836b26db9c5a7dd43c58eeb951b0025af10542c2b7f9", "captured_at_release"),
+    ("v0.8.2-public-mvp-v1", "1567b140-eeba-4b32-b37d-f31dcb35e1dd", "ae657d3350163b988ef9a502bf1202112ec807f2ccce410053c7b7f1b10df164", "captured_at_release"),
+    ("v0.8.2-public-mvp-v1", "9d1ccd8e-ba6d-4dbe-aea8-6d3f2b98942c", "8d6c0fd554a4d5b74f2681086a2c0900b5f5d407c19499d81b4dbc85ccfffd3b", "captured_at_release"),
+    ("v0.8.2-public-mvp-v1", "9f5397c7-8b7b-4218-ad10-b85abf56eae8", "7a5d4fe4af98b4635d69836b26db9c5a7dd43c58eeb951b0025af10542c2b7f9", "captured_at_release"),
+]
+
 
 def load_plan(path: Path = PLAN) -> dict[str, Any]:
     value = json.loads(path.read_text(encoding="utf-8"))
@@ -173,6 +182,13 @@ def live_preflight(conn, prerequisite_ids: dict[str, dict[str, str]]) -> dict[st
                  from audit.release_channel
                 where channel_code='public_mvp_preview'"""
         ).fetchone()
+        release_memberships = cur.execute(
+            """select release_version,claim_id::text,object_sha256,capture_status
+                 from audit.release_claim
+                where claim_id=any(%s::uuid[])
+                order by release_version,claim_id::text""",
+            ([item["claim_id"] for item in prerequisite_ids.values()],),
+        ).fetchall()
 
     observed = {
         "jakin_entity_hits": jakin,
@@ -182,6 +198,7 @@ def live_preflight(conn, prerequisite_ids: dict[str, dict[str, str]]) -> dict[st
         "dahomey_locus_links": dahomey_loci,
         "dahomey_unresolved_geometry_rows": dahomey_unresolved,
         "release_channel": list(channel) if channel else None,
+        "release_memberships": release_memberships,
     }
     expected = {
         "jakin_entity_hits": 0,
@@ -196,6 +213,12 @@ def live_preflight(conn, prerequisite_ids: dict[str, dict[str, str]]) -> dict[st
             raise ClosureError(
                 f"live preflight drift for {key}: {observed[key]} != {wanted}"
             )
+    if channel != ("public_mvp_preview", "v0.8.2-public-mvp-v1"):
+        raise ClosureError(f"public serving channel drift: {channel}")
+    if release_memberships != EXPECTED_RELEASE_MEMBERSHIPS:
+        raise ClosureError(
+            "v0.8.2 and serving membership/object identities drifted"
+        )
     return observed
 
 
@@ -225,7 +248,11 @@ def run_production(
     first = apply_once(conn, review, prerequisite_ids)
     after_first = counts(conn)
     delta = assert_delta(before, after_first)
-    verify_semantics(conn, prerequisite_ids)
+    verify_semantics(
+        conn,
+        prerequisite_ids,
+        expected_release_memberships=EXPECTED_RELEASE_MEMBERSHIPS,
+    )
 
     second = apply_once(conn, review, prerequisite_ids)
     if counts(conn) != after_first:

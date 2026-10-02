@@ -7,7 +7,7 @@
   "review_path": "data/research/geometry_reviews/population_100_100_closure_tranche_01.json",
   "rehearsal_receipt": "data/research/geometry_reviews/population_100_100_closure_tranche_01_rehearsal_receipt.json",
   "rehearsal_run_id": 36639243352,
-  "reviewed_base_main_sha": "7c7165c61c8baaed618354658fc9f5611b2e9672",
+  "reviewed_base_main_sha": "184e41dc9ca15a16f92f1c58097c2be6d0d95b6b",
   "production_cases": [
     {
       "case_key": "production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1",
@@ -29,14 +29,55 @@
     }
   ],
   "fresh_live_preflight": {
-    "observed_at": "2026-09-29T22:26:28.95549+00:00",
+    "observed_at": "2026-10-02T02:08:42.890Z",
     "jakin_entity_hits": 0,
     "closure_source_url_hits": 0,
     "goryeo_geometry_hits": 0,
     "taghaza_geometry_hits": 0,
     "dahomey_locus_links": 0,
     "dahomey_unresolved_geometry_rows": 1,
-    "serving_channel": "v0.8.1-public-mvp-v2"
+    "release_memberships": [
+      {
+        "release_version": "v0.8.2",
+        "claim_id": "1567b140-eeba-4b32-b37d-f31dcb35e1dd",
+        "object_sha256": "ae657d3350163b988ef9a502bf1202112ec807f2ccce410053c7b7f1b10df164",
+        "capture_status": "captured_at_release"
+      },
+      {
+        "release_version": "v0.8.2",
+        "claim_id": "9d1ccd8e-ba6d-4dbe-aea8-6d3f2b98942c",
+        "object_sha256": "8d6c0fd554a4d5b74f2681086a2c0900b5f5d407c19499d81b4dbc85ccfffd3b",
+        "capture_status": "captured_at_release"
+      },
+      {
+        "release_version": "v0.8.2",
+        "claim_id": "9f5397c7-8b7b-4218-ad10-b85abf56eae8",
+        "object_sha256": "7a5d4fe4af98b4635d69836b26db9c5a7dd43c58eeb951b0025af10542c2b7f9",
+        "capture_status": "captured_at_release"
+      },
+      {
+        "release_version": "v0.8.2-public-mvp-v1",
+        "claim_id": "1567b140-eeba-4b32-b37d-f31dcb35e1dd",
+        "object_sha256": "ae657d3350163b988ef9a502bf1202112ec807f2ccce410053c7b7f1b10df164",
+        "capture_status": "captured_at_release"
+      },
+      {
+        "release_version": "v0.8.2-public-mvp-v1",
+        "claim_id": "9d1ccd8e-ba6d-4dbe-aea8-6d3f2b98942c",
+        "object_sha256": "8d6c0fd554a4d5b74f2681086a2c0900b5f5d407c19499d81b4dbc85ccfffd3b",
+        "capture_status": "captured_at_release"
+      },
+      {
+        "release_version": "v0.8.2-public-mvp-v1",
+        "claim_id": "9f5397c7-8b7b-4218-ad10-b85abf56eae8",
+        "object_sha256": "7a5d4fe4af98b4635d69836b26db9c5a7dd43c58eeb951b0025af10542c2b7f9",
+        "capture_status": "captured_at_release"
+      }
+    ],
+    "serving_channel": [
+      "public_mvp_preview",
+      "v0.8.2-public-mvp-v1"
+    ]
   },
   "expected_live_delta": {
     "atlas.spatial_entity": 1,
@@ -56,7 +97,8 @@
     "fresh --expected-main-sha equal to the exact checked-out main revision",
     "fresh live collision preflight remains clean",
     "the three prerequisite production case identities remain reviewed/unpublished",
-    "existing Dahomey unresolved target geometry remains present and untouched"
+    "existing Dahomey unresolved target geometry remains present and untouched",
+    "all six immutable v0.8.2 and serving-materialization memberships/object hashes match the exact frozen baseline"
   ],
   "post_write_receipt_required": [
     "generated Goryeo and Taghaza geometry IDs",

@@ -361,6 +361,7 @@ def assert_delta(before: dict[str, int], after: dict[str, int]) -> dict[str, int
 def verify_semantics(
     conn,
     prerequisite_ids: dict[str, dict[str, str]],
+    expected_release_memberships: list[tuple[str, str, str, str]] | None = None,
 ) -> None:
     goryeo_ids = prerequisite_ids[
         "production-batch-2026-09-29/goryeo/nobi-status-review-0956-v1"
@@ -410,12 +411,13 @@ def verify_semantics(
                   and accuracy_status='unresolved' and geom is null""",
             (dahomey_ids["spatial_entity_id"],),
         ).fetchone()[0]
-        release_hits = cur.execute(
-            """select count(*)
+        release_memberships = cur.execute(
+            """select release_version,claim_id::text,object_sha256,capture_status
                  from audit.release_claim
-                where claim_id=any(%s::uuid[])""",
+                where claim_id=any(%s::uuid[])
+                order by release_version,claim_id::text""",
             (claim_ids,),
-        ).fetchone()[0]
+        ).fetchall()
         non_null_p = cur.execute(
             """select count(*)
                  from atlas.territorial_practice_claim
@@ -426,8 +428,11 @@ def verify_semantics(
         raise ClosureError("expected exactly three reviewed mapped representations")
     if unresolved_dahomey != 1:
         raise ClosureError("Dahomey unresolved target geometry was altered")
-    if release_hits != 0:
-        raise ClosureError("closure candidates unexpectedly entered release membership")
+    expected_memberships = expected_release_memberships or []
+    if release_memberships != expected_memberships:
+        raise ClosureError(
+            "closure candidates release membership/object identity drift"
+        )
     if non_null_p != 0:
         raise ClosureError("closure rehearsal introduced a P-level")
 
