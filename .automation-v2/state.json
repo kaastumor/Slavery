@@ -1,31 +1,14 @@
 {
   "archive_ref": null,
-  "checkpoint": {
-    "disposition": "SEE_CANONICAL_OWNER",
-    "next_action": "Authorized integration owner registers exact v0.8.2 bytes, deploys immutable adapter, verifies payload/UI, then CAS-cuts over from v0.8.1-public-mvp-v2 with release/channel/rollback readback.",
-    "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5943459541",
-    "verification": "main package/spec/preflight readback PASS; 3 exact-head workflows PASS; issue receipt PASS; no production, release, deploy, cutover or merge effect"
-  },
+  "checkpoint": null,
   "contract": "AUTOMATION_CONTROL_V2_20261001",
-  "effects": [
-    {
-      "id": "ATLAS100-V082-PACKAGE-POSTMERGE-CHECKPOINT-01",
-      "output_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5943459541"
-    }
-  ],
+  "effects": [],
   "failure_count": 0,
   "failure_key": null,
-  "generation": 5,
-  "lease_until": null,
-  "operation": {
-    "expected_head": "1492f95fa24d49ef9cfdb4ffc48a9fb2c0250766",
-    "id": "ATLAS100-V082-PACKAGE-POSTMERGE-CHECKPOINT-01",
-    "kind": "issue_checkpoint",
-    "output_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5943459541",
-    "status": "VERIFIED",
-    "target_ref": "issue/369"
-  },
-  "owner_attempt": null,
+  "generation": 6,
+  "lease_until": 1790907116,
+  "operation": null,
+  "owner_attempt": "ATLAS100-PROC-20261002T0140Z-V082-LIVE-POSTMERGE-01",
   "receipts": [
     {
       "at": 1790863500,
@@ -66,11 +49,11 @@
   "repository": "kaastumor/Slavery",
   "schema": 2,
   "stage": {
-    "input_revision": "1492f95fa24d49ef9cfdb4ffc48a9fb2c0250766",
-    "key": "f6fd821cae468fc0da78e4f133ca8277963fba36161f3b4fc114b944dbc9cdb7",
-    "name": "reconcile-v082-package-postmerge",
+    "input_revision": "184e41dc9ca15a16f92f1c58097c2be6d0d95b6b",
+    "key": "211a28d2afb086c58e5301cadb76152f5648776207b3bdc25e7dca2b90afec43",
+    "name": "reconcile-v082-live-cutover-postmerge",
     "task": 369
   },
-  "state": "COMPLETE",
-  "updated_at": 1790902022
+  "state": "CLAIMED",
+  "updated_at": 1790905316
 }
