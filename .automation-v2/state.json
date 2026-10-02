@@ -1,6 +1,11 @@
 {
   "archive_ref": null,
-  "checkpoint": null,
+  "checkpoint": {
+    "disposition": "SEE_CANONICAL_OWNER",
+    "next_action": "Rank existing source-bound proposals for the 39 unmapped released cases and select one read-only qualification stage; keep #370/#379 production gates separate and preserve geometry roles.",
+    "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5944029408",
+    "verification": "live receipt/BACKLOG/release marker readback PASS; 2223 assertions recorded; 3 exact-head workflows PASS; no production or merge effect"
+  },
   "contract": "AUTOMATION_CONTROL_V2_20261001",
   "effects": [
     {
@@ -11,7 +16,7 @@
   "failure_count": 0,
   "failure_key": null,
   "generation": 6,
-  "lease_until": 1790907116,
+  "lease_until": null,
   "operation": {
     "expected_head": "184e41dc9ca15a16f92f1c58097c2be6d0d95b6b",
     "id": "ATLAS100-V082-LIVE-POSTMERGE-CHECKPOINT-01",
@@ -20,7 +25,7 @@
     "status": "VERIFIED",
     "target_ref": "issue/369"
   },
-  "owner_attempt": "ATLAS100-PROC-20261002T0140Z-V082-LIVE-POSTMERGE-01",
+  "owner_attempt": null,
   "receipts": [
     {
       "at": 1790863500,
@@ -56,6 +61,13 @@
       "key": "f6fd821cae468fc0da78e4f133ca8277963fba36161f3b4fc114b944dbc9cdb7",
       "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5943459541",
       "state": "COMPLETE"
+    },
+    {
+      "at": 1790905481,
+      "attempt": "ATLAS100-PROC-20261002T0140Z-V082-LIVE-POSTMERGE-01",
+      "key": "211a28d2afb086c58e5301cadb76152f5648776207b3bdc25e7dca2b90afec43",
+      "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5944029408",
+      "state": "COMPLETE"
     }
   ],
   "repository": "kaastumor/Slavery",
@@ -66,6 +78,6 @@
     "name": "reconcile-v082-live-cutover-postmerge",
     "task": 369
   },
-  "state": "ACTIVE",
-  "updated_at": 1790905457
+  "state": "COMPLETE",
+  "updated_at": 1790905481
 }
