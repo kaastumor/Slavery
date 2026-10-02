@@ -342,6 +342,23 @@
       "run_id": "slavery-1790941491-5dd766ea",
       "started_at": 1790941491,
       "task_id": "6ab725934774819199a54678f44deae1"
+    },
+    {
+      "canonical_owner": "https://github.com/kaastumor/Slavery/pull/410",
+      "checks": [
+        "live_inventory",
+        "canonical_gate",
+        "target_readback",
+        "lease_fence"
+      ],
+      "control_ref": "4b73ceb56f71973a79bdcfd7d67bfd693369b721",
+      "evidence_kind": "WORKER_SELF_REPORT",
+      "finished_at": 1790944866,
+      "main_head": "494ea31f1d259653c02b14ac64890eaa561de4e0",
+      "outcome": "GATED",
+      "run_id": "slavery-1790944840-220177d6",
+      "started_at": 1790944840,
+      "task_id": "6ab725934774819199a54678f44deae1"
     }
   ],
   "schema": 1
