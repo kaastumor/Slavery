@@ -1,31 +1,47 @@
 # Historical Slavery Atlas — Backlog
 
-**Updated:** 2026-10-01
+**Updated:** 2026-10-02
 **Role:** canonical execution queue only; methodology, risks and value evidence remain in the existing project documents.
 **Canonical research authority:** governed PostgreSQL/PostGIS under D-109.
-**Canonical historical release:** `v0.8.1`, unchanged.
-**Observed live serving adapter:** `v0.8.1-public-mvp-v2`, unchanged by the 100/100 preparation work.
+**Canonical historical release:** `v0.8.2`, published; `v0.8.1` preserved.
+**Observed live serving adapter:** `v0.8.2-public-mvp-v1`; rollback `v0.8.1-public-mvp-v2`.
 **Observed live schema head:** `0034`.
 
-# CURRENT MODE - EXECUTION / CONSOLIDATION - 100/100 PROGRAMME (#369)
+# CURRENT MODE - GEOMETRY COVERAGE / CONSOLIDATION - 100/100 PROGRAMME (#369)
 
-Sponsor steering on 2026-10-01 authorizes a new release and live cutover for the
-48 released territorial case clusters, the exact 12 admitted research packets,
-and the exact five staged pilot packets. One integration owner reconciles this
-scope in `release/selections/v0.8.2-requested-corpus.json`: expected dimensions
-are 61 territorial cases, one legal event and three external/network cases.
-This request supplies publication/cutover authority; it does not clear evidence,
-source-feature/time provenance, exact pilot admission or package validation.
-Preserve v0.8.1 and rollback target v0.8.1-public-mvp-v2. The existing successor
-lane remains v0.8.2; no public-channel movement has occurred at this checkpoint.
+The sponsor's exact 48 + 12 + 5 release request is complete. Canonical v0.8.2
+and typed serving v0.8.2-public-mvp-v1 were registered and the public channel
+changed atomically on 2026-10-02 at 00:57:45 UTC. Connected writes were declined;
+the sponsor executed the supplied reviewed transaction. Independent readback
+passed 2,223 assertions over exact typed membership, artifacts and manifests,
+all nine governed-state groups and ten unchanged historical release registries.
+The public API hash matches the frozen 65-case payload. Schema remains 0034.
 
-**WIP = 1 canonical mutation stream: #369 - exact requested v0.8.2 release integration.** The five D-124 pilot packets committed atomically on 2026-10-01 at 23:17:26 UTC after fresh preflight and exact-head disposable CI (run `36939558938`). Samarkand 1404 and Timbuktu c.1509-1512 are territorial claims; Swahili, Viking/Rus and Andaman are external-participation claims. Independent readback passed 494 field assertions. All five remain reviewed/unpublished; release membership and serving remain unchanged. The receipt is `data/research/recovery/population_100_100_intake_2026_10_01/production_admission_receipt.json`. Do not replay the committed write or open a sixth admission packet during this integration.
+**Released cases: 65 total = 61 territorial + one legal + three external/network.**
+**Map coverage across all case horizons: 26 / 65 = nine cases with polygons +
+17 with points only; 39 have no released map representation.** These are separate
+counters. 61 geometry records / 57 non-null representations are not case counts;
+multiple historical snapshots can belong to one case. Point locators do not
+establish territorial practice extent, and any selected year has fewer active cases.
+
+Next product priority is improving defensible geometry coverage of the existing
+released corpus and making the gap visible, rather than treating new case
+admissions as equivalent to mapped progress. Existing #370/#379 and other
+geometry proposals keep their own source/role/admission gates; this receipt
+does not authorize their production writes. Do not invent country-wide practice
+polygons to fill the map. Preserve the neutral land outline and all old releases.
+
+**WIP = 1:** geometry coverage consolidation under #369; completed v0.8.2
+publication must not be replayed. Receipt:
+`reviews/releases/v0.8.2-live-cutover-receipt.json`.
+The five committed pilot claims remain reviewed/unpublished in research tables;
+their immutable release membership and public materialization are now published.
 
 The original #367 population batch is complete history: its 12 accepted cases were ingested to governed production research state and remain reviewed/unpublished. Production ingestion did not create release membership or move the serving channel.
 
-## Current 100/100 checkpoint
+## Historical pre-integration 100/100 checkpoint
 
-Strict released baseline remains:
+Before the v0.8.2 integration, the baseline was:
 - **48 / 100** release-qualified territorial case clusters;
 - **16 / 100** released cases with direct accepted case-target geometry;
 - Mycenaean Greece already has reviewed Pylos/Knossos evidence loci and can raise the governed-successor mapped baseline to 17 without new historical research.

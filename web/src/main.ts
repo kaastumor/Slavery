@@ -805,7 +805,8 @@ async function boot(): Promise<void> {
     releaseBadgeBase = `${apiResponse.release_version}${apiResponse.canonical ? "" : " · preview"}${servingMode === "static_fallback" ? " · static fallback" : ""}`;
     releaseBadge.textContent = releaseBadgeBase;
     if (apiResponse.case_count) {
-      releaseBadgeBase += ` · ${apiResponse.case_count} cases`;
+      const mappedCases = places.filter(place => place.geometries.some(geometry => geometry.geometry || geometry.geometry_asset)).length;
+      releaseBadgeBase += ` · ${apiResponse.case_count} cases · ${mappedCases} with map geometry`;
       releaseBadge.textContent = releaseBadgeBase;
     }
     releaseBadge.classList.toggle("preview", !apiResponse.canonical);
