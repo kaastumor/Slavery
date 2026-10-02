@@ -7,7 +7,14 @@
   "failure_key": null,
   "generation": 5,
   "lease_until": 1790903605,
-  "operation": null,
+  "operation": {
+    "expected_head": "1492f95fa24d49ef9cfdb4ffc48a9fb2c0250766",
+    "id": "ATLAS100-V082-PACKAGE-POSTMERGE-CHECKPOINT-01",
+    "kind": "issue_checkpoint",
+    "output_ref": null,
+    "status": "INTENDED",
+    "target_ref": "issue/369"
+  },
   "owner_attempt": "ATLAS100-PROC-20261002T0041Z-V082-POSTMERGE-01",
   "receipts": [
     {
@@ -48,5 +55,5 @@
     "task": 369
   },
   "state": "ACTIVE",
-  "updated_at": 1790901867
+  "updated_at": 1790901925
 }
