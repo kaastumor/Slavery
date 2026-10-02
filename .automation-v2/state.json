@@ -1,6 +1,11 @@
 {
   "archive_ref": null,
-  "checkpoint": null,
+  "checkpoint": {
+    "disposition": "SEE_CANONICAL_OWNER",
+    "next_action": "Recheck foundation-ci run 36969867202 on exact head 329e82de72724ea8e2d09c5bc5c2476ef8e49fa6; if green, complete review and make PR #410 reviewable without merging.",
+    "receipt_ref": "https://github.com/kaastumor/Slavery/pull/410",
+    "verification": "immutable v0.8.2 cross-check added; focused unittest 4/4 and checks job PASS; foundation job still in progress; remote head readback PASS"
+  },
   "contract": "AUTOMATION_CONTROL_V2_20261001",
   "effects": [
     {
@@ -11,7 +16,7 @@
   "failure_count": 0,
   "failure_key": null,
   "generation": 10,
-  "lease_until": 1790921228,
+  "lease_until": null,
   "operation": {
     "expected_head": "d56e1086fe477682aa169b2470c807a80c4c37fe",
     "id": "ATLAS100-PR410-IMMUTABLE-CROSSCHECK-01",
@@ -20,7 +25,7 @@
     "status": "VERIFIED",
     "target_ref": "refs/heads/atlas100/nineveh-geometry-review"
   },
-  "owner_attempt": "ATLAS100-PROC-20261002T0536Z-PR410-REVIEW-01",
+  "owner_attempt": null,
   "receipts": [
     {
       "at": 1790863500,
@@ -84,6 +89,13 @@
       "key": "4506e3f4b2ef0de787e84de24ef4522255ff37b63b9e496224aab4383a053e09",
       "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5945842639",
       "state": "COMPLETE"
+    },
+    {
+      "at": 1790919602,
+      "attempt": "ATLAS100-PROC-20261002T0536Z-PR410-REVIEW-01",
+      "key": "7049c2eae26cc04c4676112f44d1dc76a0a0d67965feba44184a085f7b8e925c",
+      "receipt_ref": "https://github.com/kaastumor/Slavery/pull/410",
+      "state": "CHECKPOINTED"
     }
   ],
   "repository": "kaastumor/Slavery",
@@ -94,6 +106,6 @@
     "name": "review-pr-410-nineveh-geometry",
     "task": 410
   },
-  "state": "ACTIVE",
-  "updated_at": 1790919538
+  "state": "CHECKPOINTED",
+  "updated_at": 1790919602
 }
