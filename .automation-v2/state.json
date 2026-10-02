@@ -12,7 +12,14 @@
   "failure_key": null,
   "generation": 11,
   "lease_until": 1790925094,
-  "operation": null,
+  "operation": {
+    "expected_head": "329e82de72724ea8e2d09c5bc5c2476ef8e49fa6",
+    "id": "ATLAS100-PR410-MARK-READY-01",
+    "kind": "draft_pr",
+    "output_ref": null,
+    "status": "INTENDED",
+    "target_ref": "pull/410"
+  },
   "owner_attempt": "ATLAS100-PROC-20261002T0641Z-PR410-REVIEW-02",
   "receipts": [
     {
@@ -95,5 +102,5 @@
     "task": 410
   },
   "state": "ACTIVE",
-  "updated_at": 1790923296
+  "updated_at": 1790923339
 }
