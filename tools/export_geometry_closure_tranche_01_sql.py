@@ -21,7 +21,7 @@ from tools.export_geometry_closure_tranche_02_sql import (
 
 PINNED_INPUTS = {
     rehearsal.REVIEW: '2a63035c0ed670a69194a00e03dd3a45feeff3e8',
-    production.PLAN: '3db5c88ae0ccd6adfa25e01cce36803071ae91af',
+    production.PLAN: 'cb5191dd9b54a6dc90cc5c9187f6283f1a56b748',
     production.RECEIPT: '62cde2de0e6d334b6b9d4855a18e0e90e613e27e',
 }
 UNRESOLVED_ID = 'bdab64f1-cc36-4771-8224-00b199d16c15'
@@ -79,10 +79,18 @@ def render(review, plan, *, revision, authorized=False, unresolved_id=UNRESOLVED
     dahomey = next(v for k, v in resolved.items() if '/dahomey/' in k)
     claim_ids = literal([r['claim_id'] for r in resolved.values()])
     urls = literal(list(production.CLOSURE_SOURCE_URLS))
+    membership_checks = ' and '.join(
+        f"""exists(select 1 from audit.release_claim
+             where release_version={literal(version)}
+               and claim_id={literal(claim_id)}::uuid
+               and object_sha256={literal(object_sha)}
+               and capture_status={literal(capture_status)})"""
+        for version, claim_id, object_sha, capture_status in production.EXPECTED_RELEASE_MEMBERSHIPS
+    )
     body += [require("not exists(select 1 from atlas.spatial_entity where canonical_name='Jakin (Godomey)')", 'Jakin identity collision'),
              require(f'not exists(select 1 from atlas.source_version where url_or_identifier=any({urls}::text[]))', 'new source URL collision'),
              require(f'not exists(select 1 from atlas.claim_evidence_locus where claim_id=any({claim_ids}::uuid[]))', 'existing locus links'),
-             require(f'not exists(select 1 from audit.release_claim where claim_id=any({claim_ids}::uuid[]))', 'unexpected release membership'),
+             require(f'({membership_checks}) and (select count(*) from audit.release_claim where claim_id=any({claim_ids}::uuid[]))={len(production.EXPECTED_RELEASE_MEMBERSHIPS)}', 'v0.8.2 release membership drift'),
              require(f"""(select count(*)=1 from atlas.geometry where spatial_entity_id={literal(dahomey['spatial_entity_id'])}::uuid)
                and exists(select 1 from atlas.geometry where geometry_id={literal(unresolved_id)}::uuid
                  and spatial_entity_id={literal(dahomey['spatial_entity_id'])}::uuid
