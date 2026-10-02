@@ -6,6 +6,10 @@
     {
       "id": "ATLAS100-PR410-IMMUTABLE-CROSSCHECK-01",
       "output_ref": "https://github.com/kaastumor/Slavery/commit/329e82de72724ea8e2d09c5bc5c2476ef8e49fa6"
+    },
+    {
+      "id": "ATLAS100-PR410-MARK-READY-01",
+      "output_ref": "https://github.com/kaastumor/Slavery/pull/410"
     }
   ],
   "failure_count": 0,
@@ -16,8 +20,8 @@
     "expected_head": "329e82de72724ea8e2d09c5bc5c2476ef8e49fa6",
     "id": "ATLAS100-PR410-MARK-READY-01",
     "kind": "draft_pr",
-    "output_ref": null,
-    "status": "INTENDED",
+    "output_ref": "https://github.com/kaastumor/Slavery/pull/410",
+    "status": "VERIFIED",
     "target_ref": "pull/410"
   },
   "owner_attempt": "ATLAS100-PROC-20261002T0641Z-PR410-REVIEW-02",
@@ -102,5 +106,5 @@
     "task": 410
   },
   "state": "ACTIVE",
-  "updated_at": 1790923339
+  "updated_at": 1790923371
 }
