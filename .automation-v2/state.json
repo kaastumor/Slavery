@@ -1,6 +1,11 @@
 {
   "archive_ref": null,
-  "checkpoint": null,
+  "checkpoint": {
+    "disposition": "SEE_CANONICAL_OWNER",
+    "next_action": "#370/#379 await separate sponsor authorization and fresh preflight; otherwise select one nonconflicting read-only qualification from 39 unmapped released cases under #369.",
+    "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5944618978",
+    "verification": "PR408/409 exact-head foundation PASS; plans/drivers/comment readback PASS; no DB, release, serving, merge or geometry effect"
+  },
   "contract": "AUTOMATION_CONTROL_V2_20261001",
   "effects": [
     {
@@ -11,7 +16,7 @@
   "failure_count": 0,
   "failure_key": null,
   "generation": 7,
-  "lease_until": 1790910622,
+  "lease_until": null,
   "operation": {
     "expected_head": "494ea31f1d259653c02b14ac64890eaa561de4e0",
     "id": "ATLAS100-V082-GEO-GATES-POSTMERGE-CHECKPOINT-01",
@@ -20,7 +25,7 @@
     "status": "VERIFIED",
     "target_ref": "issue/369"
   },
-  "owner_attempt": "ATLAS100-PROC-20261002T0237Z-GEO-GATES-POSTMERGE-01",
+  "owner_attempt": null,
   "receipts": [
     {
       "at": 1790863500,
@@ -63,6 +68,13 @@
       "key": "211a28d2afb086c58e5301cadb76152f5648776207b3bdc25e7dca2b90afec43",
       "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5944029408",
       "state": "COMPLETE"
+    },
+    {
+      "at": 1790909006,
+      "attempt": "ATLAS100-PROC-20261002T0237Z-GEO-GATES-POSTMERGE-01",
+      "key": "588eb74fa531375d11d0c119ac107573a365eafa239e64b4908050e3f7d7d2ad",
+      "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5944618978",
+      "state": "COMPLETE"
     }
   ],
   "repository": "kaastumor/Slavery",
@@ -73,6 +85,6 @@
     "name": "reconcile-v082-geometry-gates-postmerge",
     "task": 369
   },
-  "state": "ACTIVE",
-  "updated_at": 1790908976
+  "state": "COMPLETE",
+  "updated_at": 1790909006
 }
