@@ -251,6 +251,22 @@ def live_preflight(conn) -> dict[str, Any]:
         if membership != expected_membership:
             raise ClosureError("immutable v0.8.1 membership/object identity drift")
 
+        expected_v082_membership = [
+            (version, claim_id, EXPECTED_RELEASE_OBJECTS[claim_id], "captured_at_release")
+            for version in ("v0.8.2", "v0.8.2-public-mvp-v1")
+            for claim_id in sorted(CLAIMS)
+        ]
+        v082_membership = cur.execute(
+            """select release_version,claim_id::text,object_sha256,capture_status
+                 from audit.release_claim
+                where release_version=any(%s::text[])
+                  and claim_id=any(%s::uuid[])
+                order by release_version,claim_id::text""",
+            (["v0.8.2", "v0.8.2-public-mvp-v1"], list(CLAIMS)),
+        ).fetchall()
+        if v082_membership != expected_v082_membership:
+            raise ClosureError("immutable v0.8.2 membership/object identity drift")
+
         manifest_status = cur.execute(
             "select status from audit.release_manifest where release_version=%s",
             (RELEASE_VERSION,),
@@ -295,6 +311,7 @@ def live_preflight(conn) -> dict[str, Any]:
         "existing_locus_links": locus_links,
         "broad_target_geometry_rows": target_geometry_rows,
         "release_membership_hits": len(membership),
+        "v082_release_memberships": [list(row) for row in v082_membership],
         "release_target_geometry_rows": release_target_geometry,
         "release_manifest_status": manifest_status[0],
         "serving_channel": list(channel),
