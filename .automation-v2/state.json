@@ -7,7 +7,14 @@
   "failure_key": null,
   "generation": 8,
   "lease_until": 1790914766,
-  "operation": null,
+  "operation": {
+    "expected_head": "494ea31f1d259653c02b14ac64890eaa561de4e0",
+    "id": "ATLAS100-NINEVEH-GEO-QUALIFY-CHECKPOINT-01",
+    "kind": "issue_checkpoint",
+    "output_ref": null,
+    "status": "INTENDED",
+    "target_ref": "issue/369"
+  },
   "owner_attempt": "ATLAS100-PROC-20261002T0344Z-NINEVEH-QUALIFY-01",
   "receipts": [
     {
@@ -69,5 +76,5 @@
     "task": 369
   },
   "state": "ACTIVE",
-  "updated_at": 1790913009
+  "updated_at": 1790913010
 }
