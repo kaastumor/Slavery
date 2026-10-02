@@ -52,11 +52,49 @@ def verify_source_bindings(old, audit=None):
             if any(abs(a-b)>1e-9 for a,b in zip(coords,list(stored.coords)[0])):
                 raise ValueError('native point translation differs')
         else:
+            if hashlib.sha256(canonical(row['source_asset'])).hexdigest()!=row['source_asset_canonical_sha256']:
+                raise ValueError('source asset fingerprint drift')
             native=unary_union([make_valid(shape(f['geometry'])) for f in row['source_asset']['features']])
             if native.hausdorff_distance(stored)>1e-8 or native.symmetric_difference(stored).area>1e-8:
                 raise ValueError('Rome pinned source geometry differs')
             if [row['source_native_from'],row['source_native_to'],row['atlas_interval']] != [14,14,[14,22]]:
                 raise ValueError('Rome native time differs')
+
+def verify_selected_point_bindings(bundle, audit=None):
+    audit=audit if audit is not None else load(ROOT/'data/research/geometry_reviews/v082_selected_point_source_bindings.json')
+    selection=load(ROOT/'release/selections/v0.8.2-requested-corpus.json')
+    rows=audit['rows']; unresolved=audit['unresolved']
+    ids=[r['geometry_id'] for r in rows+unresolved]
+    if len(rows)!=14 or len(unresolved)!=4 or len(set(ids))!=18 or set(ids)!=set(selection['geometry_selection']['exact_additions']):
+        raise ValueError('selected point source membership drift')
+    for row in rows+unresolved:
+        g=bundle['objects']['geometries'][row['geometry_id']]
+        if row['source_version_id']!=g['geometry_source_version_id'] or row['atlas_interval']!=[g['from_year'],g['to_year']]:
+            raise ValueError('selected point source or Atlas interval differs')
+        if row in unresolved:
+            if g['geom_ewkb_hex'] is not None:raise ValueError('unresolved geometry acquired coordinates')
+            continue
+        if row['source_native_from'] is not None or row['source_native_to'] is not None:
+            raise ValueError('modern locator acquired historical source interval')
+        record=row['source_record']
+        if hashlib.sha256(canonical(record)).hexdigest()!=row['source_record_sha256']:
+            raise ValueError('selected point source record fingerprint drift')
+        if 'latitude_dms' in record:
+            def dms(v):return (1 if v[0]>=0 else -1)*(abs(v[0])+v[1]/60+v[2]/3600)
+            precision=row['coordinate_decimal_places']
+            if not 5<=precision<=10:raise ValueError('native coordinate precision differs')
+            coords=[round(dms(record['longitude_dms']),precision),round(dms(record['latitude_dms']),precision)]
+        elif 'statement' in record:
+            native=record['statement']['mainsnak']['datavalue']['value']
+            if native['globe']!='http://www.wikidata.org/entity/Q2':raise ValueError('point globe differs')
+            coords=[round(native['longitude'],6),round(native['latitude'],6)]
+        elif 'internal_point_longitude' in record:
+            coords=[record['internal_point_longitude'],record['internal_point_latitude']]
+        else:
+            coords=[round(record['longitude'],2),round(record['latitude'],2)]
+        stored=from_wkb(bytes.fromhex(g['geom_ewkb_hex']))
+        if stored.geom_type!='Point' or any(abs(a-b)>1e-9 for a,b in zip(coords,list(stored.coords)[0])):
+            raise ValueError('selected native point translation differs '+row['geometry_id']+' '+str(coords)+' '+str(list(stored.coords)))
 
 def build(snapshot_dir, source_git_sha):
     old = load(ROOT/'data/releases/v0.8.1/authority-state.json')
@@ -134,6 +172,7 @@ def build(snapshot_dir, source_git_sha):
         'membership':membership,'membership_sha256':sha256_value(membership),'cartography':cartography,'cartography_sha256':sha256_value(cartography),
         'objects':objects,'object_digests':digests,'database_state_sha256':sha256_value(state)}
     validate_bundle(result)
+    verify_selected_point_bindings(result)
     return result
 
 def main():
