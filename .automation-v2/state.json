@@ -1,6 +1,11 @@
 {
   "archive_ref": null,
-  "checkpoint": null,
+  "checkpoint": {
+    "disposition": "SEE_CANONICAL_OWNER",
+    "next_action": "Authorized integration owner registers exact v0.8.2 bytes, deploys immutable adapter, verifies payload/UI, then CAS-cuts over from v0.8.1-public-mvp-v2 with release/channel/rollback readback.",
+    "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5943459541",
+    "verification": "main package/spec/preflight readback PASS; 3 exact-head workflows PASS; issue receipt PASS; no production, release, deploy, cutover or merge effect"
+  },
   "contract": "AUTOMATION_CONTROL_V2_20261001",
   "effects": [
     {
@@ -11,7 +16,7 @@
   "failure_count": 0,
   "failure_key": null,
   "generation": 5,
-  "lease_until": 1790903605,
+  "lease_until": null,
   "operation": {
     "expected_head": "1492f95fa24d49ef9cfdb4ffc48a9fb2c0250766",
     "id": "ATLAS100-V082-PACKAGE-POSTMERGE-CHECKPOINT-01",
@@ -20,7 +25,7 @@
     "status": "VERIFIED",
     "target_ref": "issue/369"
   },
-  "owner_attempt": "ATLAS100-PROC-20261002T0041Z-V082-POSTMERGE-01",
+  "owner_attempt": null,
   "receipts": [
     {
       "at": 1790863500,
@@ -49,6 +54,13 @@
       "key": "be72d226ac7325fe70adfe3d584d04639c63a8597af22a9d530ccc5d4e165175",
       "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5942802534",
       "state": "COMPLETE"
+    },
+    {
+      "at": 1790902022,
+      "attempt": "ATLAS100-PROC-20261002T0041Z-V082-POSTMERGE-01",
+      "key": "f6fd821cae468fc0da78e4f133ca8277963fba36161f3b4fc114b944dbc9cdb7",
+      "receipt_ref": "https://github.com/kaastumor/Slavery/issues/369#issuecomment-5943459541",
+      "state": "COMPLETE"
     }
   ],
   "repository": "kaastumor/Slavery",
@@ -59,6 +71,6 @@
     "name": "reconcile-v082-package-postmerge",
     "task": 369
   },
-  "state": "ACTIVE",
-  "updated_at": 1790901993
+  "state": "COMPLETE",
+  "updated_at": 1790902022
 }
