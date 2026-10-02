@@ -547,7 +547,7 @@ function renderOverview(year: number): void {
     <div class="panel-header">
       <div class="panel-kicker">Year overview</div>
       <h2>${formatYear(year)}</h2>
-      <div class="panel-subhead">${release?.canonical ? "Canonical-release" : "Published preview"} case evidence active in the selected year. Legal and network cases are labelled separately.</div>
+      <div class="panel-subhead">${release?.canonical ? "Canonical-release" : "Published preview"} ${release?.case_count ? "case evidence active in the selected year. Legal and network cases are labelled separately." : "territorial-practice evidence active in the selected year."}</div>
     </div>
 
     <div class="panel-body">
