@@ -4,7 +4,7 @@
   "issue": 379,
   "parent_issue": 369,
   "status": "READY_FOR_EXPLICIT_PRODUCTION_WRITE_GATE_AFTER_PLAN_CI",
-  "reviewed_base_main_sha": "544e6caf88e2eb5c6dc83aae51520ac324571333",
+  "reviewed_base_main_sha": "184e41dc9ca15a16f92f1c58097c2be6d0d95b6b",
   "review_path": "data/research/geometry_reviews/population_100_100_released_geo_tranche_03_isil_sinjar.json",
   "review_git_blob_sha": "248067822dcbc1d5e18c06c90bb056209d3c6a18",
   "rehearsal_receipt": "data/research/geometry_reviews/population_100_100_released_geo_tranche_03_rehearsal_receipt.json",
@@ -20,7 +20,7 @@
     "action": "ADD_ONE_SINJAR_EVIDENCE_LOCUS_AND_LINK_TO_BOTH_RELEASED_CLAIM_FACETS"
   },
   "fresh_live_preflight": {
-    "observed_at": "2026-09-30T12:26:13.834105+00:00",
+    "observed_at": "2026-10-02T02:08:44.163Z",
     "claim_states": [
       {
         "claim_id": "88e48d2e-5b06-5b37-80bb-82e07db36a3f",
@@ -45,19 +45,20 @@
     "release_geometry_for_target": 0,
     "release_manifest_status": "published",
     "unitad_source_version_id": "dc410234-3f13-5e41-9ce9-4391a850cc23",
-    "serving_channel": "v0.8.1-public-mvp-v2",
+    "serving_channel": "v0.8.2-public-mvp-v1",
     "before_counts": {
-      "atlas.spatial_entity": 75,
-      "atlas.source": 359,
-      "atlas.source_version": 359,
-      "atlas.claim": 116,
-      "atlas.claim_source": 170,
-      "atlas.geometry": 86,
-      "atlas.claim_evidence_locus": 2,
-      "audit.release_claim": 462,
-      "audit.release_geometry": 349,
+      "atlas.spatial_entity": 85,
+      "atlas.source": 376,
+      "atlas.source_version": 376,
+      "atlas.claim": 121,
+      "atlas.claim_source": 193,
+      "atlas.geometry": 96,
+      "atlas.claim_evidence_locus": 7,
+      "audit.release_claim": 624,
+      "audit.release_geometry": 471,
       "audit.release_channel": 1
-    }
+    },
+    "v082_release_memberships": []
   },
   "expected_live_delta": {
     "atlas.spatial_entity": 1,
@@ -84,7 +85,8 @@
     "shared UNITAD source version remains dc410234-3f13-5e41-9ce9-4391a850cc23",
     "Sinjar candidate entity/GeoNames source/locus-link collision preflight remains clean",
     "broad Iraq/Syria analytical target remains without attached geometry",
-    "v0.8.1 membership remains exactly the two existing claim facets for this case cluster"
+    "v0.8.1 membership remains exactly the two existing claim facets for this case cluster",
+    "both exact Sinjar claim objects remain members of immutable v0.8.2 and v0.8.2-public-mvp-v1"
   ],
   "post_write_receipt_required": [
     "generated Sinjar locus spatial-entity ID",
